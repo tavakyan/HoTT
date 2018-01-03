@@ -698,12 +698,12 @@
           
 
             i = 136;
-            data = "1 subgoal (ID 116)	  	  X : Type	  ============================	  {A : Type & {r : X -> A & {s : A -> X & (fun x : A => r (s x)) == idmap}}} <~>	  RetractOf X	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 117)		subgoal 1 (ID 117) is:	 {A : Type &	 {rs : (X -> A) * (A -> X) & (fun x : A => fst rs (snd rs x)) == idmap}} <~>	 {A : Type & {r : X -> A & {s : A -> X & (fun x : A => r (s x)) == idmap}}}	";
+            data = "1 subgoal (ID 116)	  	  X : Type	  ============================	  {A : Type & {r : X -> A & {s : A -> X & (fun x : A => r (s x)) == idmap}}} <~>	  RetractOf X	";
             responses[i]=data;
           
 
             i = 137;
-            data = "1 subgoal (ID 117)	  	  X : Type	  ============================	  {A : Type &	  {rs : (X -> A) * (A -> X) & (fun x : A => fst rs (snd rs x)) == idmap}} <~>	  {A : Type & {r : X -> A & {s : A -> X & (fun x : A => r (s x)) == idmap}}}	1 subgoal (ID 174)	  	  X : Type	  A : Type	  ============================	  {rs : (X -> A) * (A -> X) & (fun x : A => fst rs (snd rs x)) == idmap} <~>	  {r : X -> 1%equiv A &	  {s : 1%equiv A -> X & (fun x : 1%equiv A => r (s x)) == idmap}}	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 117)		subgoal 1 (ID 117) is:	 {A : Type &	 {rs : (X -> A) * (A -> X) & (fun x : A => fst rs (snd rs x)) == idmap}} <~>	 {A : Type & {r : X -> A & {s : A -> X & (fun x : A => r (s x)) == idmap}}}	1 subgoal (ID 117)	  	  X : Type	  ============================	  {A : Type &	  {rs : (X -> A) * (A -> X) & (fun x : A => fst rs (snd rs x)) == idmap}} <~>	  {A : Type & {r : X -> A & {s : A -> X & (fun x : A => r (s x)) == idmap}}}	1 subgoal (ID 174)	  	  X : Type	  A : Type	  ============================	  {rs : (X -> A) * (A -> X) & (fun x : A => fst rs (snd rs x)) == idmap} <~>	  {r : X -> 1%equiv A &	  {s : 1%equiv A -> X & (fun x : 1%equiv A => r (s x)) == idmap}}	";
             responses[i]=data;
           
 
@@ -1978,12 +1978,12 @@
           
 
             i = 392;
-            data = "1 subgoal (ID 283)	  	  X : Type	  f : PreIdempotent X	  ss : forall x : X, Collapsible (f x = x)	  ============================	  (fun x : X =>	   (f x; collapse (isidem f x); wconst (collapse (isidem f x)) (isidem f x)))	  o pr1 == idmap	";
+            data = "1 subgoal (ID 283)	  	  X : Type	  f : PreIdempotent X	  ss : forall x : X, Collapsible (f x = x)	  ============================	  (fun x : X =>	   (f x; collapse (isidem f x); wconst (collapse (isidem f x)) (isidem f x)))	  o pr1 == idmap	1 subgoal (ID 310)	  	  X : Type	  f : PreIdempotent X	  ss : forall x : X, Collapsible (f x = x)	  x : X	  p : f x = x	  q : collapse p = p	  ============================	  (f x; collapse (isidem f x); wconst (collapse (isidem f x)) (isidem f x)) =	  (x; p; q)	";
             responses[i]=data;
           
 
             i = 393;
-            data = "1 subgoal (ID 310)	  	  X : Type	  f : PreIdempotent X	  ss : forall x : X, Collapsible (f x = x)	  x : X	  p : f x = x	  q : collapse p = p	  ============================	  (f x; collapse (isidem f x); wconst (collapse (isidem f x)) (isidem f x)) =	  (x; p; q)	1 subgoal (ID 315)	  	  X : Type	  f : PreIdempotent X	  ss : forall x : X, Collapsible (f x = x)	  x : X	  p : f x = x	  q : collapse p = p	  ============================	  transport (fun x0 : X => FixedBy collapse) p	    (f x; collapse (isidem f x); wconst (collapse (isidem f x)) (isidem f x)).2 =	  (x; p; q).2	";
+            data = "1 subgoal (ID 315)	  	  X : Type	  f : PreIdempotent X	  ss : forall x : X, Collapsible (f x = x)	  x : X	  p : f x = x	  q : collapse p = p	  ============================	  transport (fun x0 : X => FixedBy collapse) p	    (f x; collapse (isidem f x); wconst (collapse (isidem f x)) (isidem f x)).2 =	  (x; p; q).2	";
             responses[i]=data;
           
 
