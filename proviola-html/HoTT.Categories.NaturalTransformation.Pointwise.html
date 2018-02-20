@@ -443,7 +443,7 @@
           
 
             i = 85;
-            data = "1 subgoal (ID 43)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  C' : PreCategory	  D' : PreCategory	  F, G : Functor C D	  T : NaturalTransformation F G	  F' : Functor C' D'	  ============================	  forall (s d : (D -> C')%category) (m : morphism (D -> C') s d),	  (F' o d oL T o (pointwise F F') _1 m)%morphism =	  ((pointwise G F') _1 m o (F' o s oL T))%morphism	";
+            data = "1 subgoal (ID 43)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  C' : PreCategory	  D' : PreCategory	  F, G : Functor C D	  T : NaturalTransformation F G	  F' : Functor C' D'	  ============================	  forall (s d : (D -> C').(object)) (m : (D -> C').(morphism) s d),	  (C -> D').(Category.Core.compose) ((pointwise F F').(object_of) s)	    ((pointwise F F').(object_of) d) ((pointwise G F').(object_of) d)	    (F' o d oL T) ((pointwise F F').(morphism_of) s d m) =	  (C -> D').(Category.Core.compose) ((pointwise F F').(object_of) s)	    ((pointwise G F').(object_of) s) ((pointwise G F').(object_of) d)	    ((pointwise G F').(morphism_of) s d m) (F' o s oL T)	";
             responses[i]=data;
           
 
@@ -503,7 +503,7 @@
           
 
             i = 97;
-            data = "1 subgoal (ID 64)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  C' : PreCategory	  D' : PreCategory	  F : Functor C D	  F', G' : Functor C' D'	  T' : NaturalTransformation F' G'	  ============================	  forall (s d : (D -> C')%category) (m : morphism (D -> C') s d),	  (T' oR d oR F o (pointwise F F') _1 m)%morphism =	  ((pointwise F G') _1 m o (T' oR s oR F))%morphism	";
+            data = "1 subgoal (ID 64)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  C' : PreCategory	  D' : PreCategory	  F : Functor C D	  F', G' : Functor C' D'	  T' : NaturalTransformation F' G'	  ============================	  forall (s d : (D -> C').(object)) (m : (D -> C').(morphism) s d),	  (C -> D').(Category.Core.compose) ((pointwise F F').(object_of) s)	    ((pointwise F F').(object_of) d) ((pointwise F G').(object_of) d)	    (T' oR d oR F) ((pointwise F F').(morphism_of) s d m) =	  (C -> D').(Category.Core.compose) ((pointwise F F').(object_of) s)	    ((pointwise F G').(object_of) s) ((pointwise F G').(object_of) d)	    ((pointwise F G').(morphism_of) s d m) (T' oR s oR F)	";
             responses[i]=data;
           
 

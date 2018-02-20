@@ -313,12 +313,12 @@
           
 
             i = 59;
-            data = "1 subgoal (ID 57)	  	  C : PreCategory	  s, d : C	  m : morphism C s d	  m_inv0, m_inv1 : morphism C d s	  left_inverse_0 : m_inv0 o m = 1	  right_inverse_1 : m o m_inv1 = 1	  ============================	  m_inv0 = m_inv1	";
+            data = "1 subgoal (ID 45)	  	  C : PreCategory	  s, d : C.(object)	  m : C.(morphism) s d	  m_inv0, m_inv1 : C.(morphism) d s	  left_inverse_0 : C.(compose) s d s m_inv0 m = C.(identity) s	  right_inverse_1 : C.(compose) d s d m m_inv1 = C.(identity) d	  ============================	  m_inv0 = m_inv1	";
             responses[i]=data;
           
 
             i = 60;
-            data = "1 subgoal (ID 57)	  	  C : PreCategory	  s, d : C	  m : morphism C s d	  m_inv0, m_inv1 : morphism C d s	  left_inverse_0 : m_inv0 o m = 1	  right_inverse_1 : m o m_inv1 = 1	  ============================	  m_inv0 = m_inv1	";
+            data = "1 subgoal (ID 45)	  	  C : PreCategory	  s, d : C.(object)	  m : C.(morphism) s d	  m_inv0, m_inv1 : C.(morphism) d s	  left_inverse_0 : C.(compose) s d s m_inv0 m = C.(identity) s	  right_inverse_1 : C.(compose) d s d m m_inv1 = C.(identity) d	  ============================	  m_inv0 = m_inv1	";
             responses[i]=data;
           
 
@@ -368,12 +368,12 @@
           
 
             i = 70;
-            data = "1 subgoal (ID 81)	  	  C : PreCategory	  s, d : C	  m : morphism C s d	  ============================	  {inverse : morphism C d s & {_ : inverse o m = 1 & m o inverse = 1}} <~>	  IsIsomorphism m	";
+            data = "1 subgoal (ID 69)	  	  C : PreCategory	  s, d : C.(object)	  m : C.(morphism) s d	  ============================	  {inverse : C.(morphism) d s &	  {_ : C.(compose) s d s inverse m = C.(identity) s &	  C.(compose) d s d m inverse = C.(identity) d}} <~> 	  IsIsomorphism m	";
             responses[i]=data;
           
 
             i = 71;
-            data = "1 subgoal (ID 81)	  	  C : PreCategory	  s, d : C	  m : morphism C s d	  ============================	  {inverse : morphism C d s & {_ : inverse o m = 1 & m o inverse = 1}} <~>	  IsIsomorphism m	";
+            data = "1 subgoal (ID 69)	  	  C : PreCategory	  s, d : C.(object)	  m : C.(morphism) s d	  ============================	  {inverse : C.(morphism) d s &	  {_ : C.(compose) s d s inverse m = C.(identity) s &	  C.(compose) d s d m inverse = C.(identity) d}} <~> 	  IsIsomorphism m	";
             responses[i]=data;
           
 
@@ -428,27 +428,27 @@
           
 
             i = 82;
-            data = "1 subgoal (ID 85)	  	  C : PreCategory	  s, d : C	  m : morphism C s d	  ============================	  IsHProp (IsIsomorphism m)	";
+            data = "1 subgoal (ID 73)	  	  C : PreCategory	  s, d : C.(object)	  m : C.(morphism) s d	  ============================	  IsHProp (IsIsomorphism m)	";
             responses[i]=data;
           
 
             i = 83;
-            data = "1 subgoal (ID 88)	  	  C : PreCategory	  s, d : C	  m : morphism C s d	  ============================	  IsHProp	    {inverse : morphism C d s & {_ : inverse o m = 1 & m o inverse = 1}}	";
+            data = "1 subgoal (ID 76)	  	  C : PreCategory	  s, d : C.(object)	  m : C.(morphism) s d	  ============================	  IsHProp	    {inverse : C.(morphism) d s &	    {_ : C.(compose) s d s inverse m = C.(identity) s &	    C.(compose) d s d m inverse = C.(identity) d}}	";
             responses[i]=data;
           
 
             i = 84;
-            data = "1 subgoal (ID 89)	  	  C : PreCategory	  s, d : C	  m : morphism C s d	  ============================	  forall	  x y : {inverse : morphism C d s & {_ : inverse o m = 1 & m o inverse = 1}},	  x = y	";
+            data = "1 subgoal (ID 77)	  	  C : PreCategory	  s, d : C.(object)	  m : C.(morphism) s d	  ============================	  forall	  x	   y : {inverse : C.(morphism) d s &	       {_ : C.(compose) s d s inverse m = C.(identity) s &	       C.(compose) d s d m inverse = C.(identity) d}}, 	  x = y	";
             responses[i]=data;
           
 
             i = 85;
-            data = "1 subgoal (ID 107)	  	  C : PreCategory	  s, d : C	  m : morphism C s d	  x : morphism C d s	  proj1_sig : x o m = 1	  proj2_sig : m o x = 1	  y : morphism C d s	  proj1_sig0 : y o m = 1	  proj2_sig0 : m o y = 1	  ============================	  (x; proj1_sig; proj2_sig) = (y; proj1_sig0; proj2_sig0)	";
+            data = "1 subgoal (ID 95)	  	  C : PreCategory	  s, d : C.(object)	  m : C.(morphism) s d	  x : C.(morphism) d s	  proj1_sig : C.(compose) s d s x m = C.(identity) s	  proj2_sig : C.(compose) d s d m x = C.(identity) d	  y : C.(morphism) d s	  proj1_sig0 : C.(compose) s d s y m = C.(identity) s	  proj2_sig0 : C.(compose) d s d m y = C.(identity) d	  ============================	  (x; proj1_sig; proj2_sig) = (y; proj1_sig0; proj2_sig0)	";
             responses[i]=data;
           
 
             i = 86;
-            data = "1 subgoal (ID 125)	  	  C : PreCategory	  s, d : C	  m : morphism C s d	  x : morphism C d s	  proj1_sig : x o m = 1	  proj2_sig : m o x = 1	  proj1_sig0 : x o m = 1	  proj2_sig0 : m o x = 1	  ============================	  (x; proj1_sig; proj2_sig) = (x; proj1_sig0; proj2_sig0)	";
+            data = "1 subgoal (ID 113)	  	  C : PreCategory	  s, d : C.(object)	  m : C.(morphism) s d	  x : C.(morphism) d s	  proj1_sig : C.(compose) s d s x m = C.(identity) s	  proj2_sig : C.(compose) d s d m x = C.(identity) d	  proj1_sig0 : C.(compose) s d s x m = C.(identity) s	  proj2_sig0 : C.(compose) d s d m x = C.(identity) d	  ============================	  (x; proj1_sig; proj2_sig) = (x; proj1_sig0; proj2_sig0)	";
             responses[i]=data;
           
 
@@ -508,12 +508,12 @@
           
 
             i = 98;
-            data = "1 subgoal (ID 38)	  	  C : PreCategory	  s, d : C	  ============================	  {m : morphism C s d & IsIsomorphism m} <~> s <~=~> d	";
+            data = "1 subgoal (ID 26)	  	  C : PreCategory	  s, d : C.(object)	  ============================	  {m : C.(morphism) s d & IsIsomorphism m} <~> s <~=~> d	";
             responses[i]=data;
           
 
             i = 99;
-            data = "1 subgoal (ID 38)	  	  C : PreCategory	  s, d : C	  ============================	  {m : morphism C s d & IsIsomorphism m} <~> s <~=~> d	";
+            data = "1 subgoal (ID 26)	  	  C : PreCategory	  s, d : C.(object)	  ============================	  {m : C.(morphism) s d & IsIsomorphism m} <~> s <~=~> d	";
             responses[i]=data;
           
 
@@ -613,12 +613,12 @@
           
 
             i = 119;
-            data = "1 subgoal (ID 68)	  	  C : PreCategory	  s, d : C	  ============================	  IsHSet (s <~=~> d)	";
+            data = "1 subgoal (ID 56)	  	  C : PreCategory	  s, d : C.(object)	  ============================	  IsHSet (s <~=~> d)	";
             responses[i]=data;
           
 
             i = 120;
-            data = "1 subgoal (ID 71)	  	  C : PreCategory	  s, d : C	  ============================	  IsHSet {m : morphism C s d & IsIsomorphism m}	";
+            data = "1 subgoal (ID 59)	  	  C : PreCategory	  s, d : C.(object)	  ============================	  IsHSet {m : C.(morphism) s d & IsIsomorphism m}	";
             responses[i]=data;
           
 
@@ -668,27 +668,27 @@
           
 
             i = 130;
-            data = "1 subgoal (ID 89)	  	  C : PreCategory	  s, d : C	  i, j : s <~=~> d	  ============================	  i = j -> i = j	";
+            data = "1 subgoal (ID 77)	  	  C : PreCategory	  s, d : C.(object)	  i, j : s <~=~> d	  ============================	  i.(morphism_isomorphic) = j.(morphism_isomorphic) -> i = j	";
             responses[i]=data;
           
 
             i = 131;
-            data = "1 subgoal (ID 89)	  	  C : PreCategory	  s, d : C	  i, j : s <~=~> d	  ============================	  i = j -> i = j	";
+            data = "1 subgoal (ID 77)	  	  C : PreCategory	  s, d : C.(object)	  i, j : s <~=~> d	  ============================	  i.(morphism_isomorphic) = j.(morphism_isomorphic) -> i = j	";
             responses[i]=data;
           
 
             i = 132;
-            data = "1 subgoal (ID 102)	  	  C : PreCategory	  s, d : C	  morphism_isomorphic0 : morphism C s d	  isisomorphism_isomorphic0 : IsIsomorphism morphism_isomorphic0	  morphism_isomorphic1 : morphism C s d	  isisomorphism_isomorphic1 : IsIsomorphism morphism_isomorphic1	  ============================	  morphism_isomorphic0 = morphism_isomorphic1 ->	  {|	  morphism_isomorphic := morphism_isomorphic0;	  isisomorphism_isomorphic := isisomorphism_isomorphic0 |} =	  {|	  morphism_isomorphic := morphism_isomorphic1;	  isisomorphism_isomorphic := isisomorphism_isomorphic1 |}	";
+            data = "1 subgoal (ID 90)	  	  C : PreCategory	  s, d : C.(object)	  morphism_isomorphic0 : C.(morphism) s d	  isisomorphism_isomorphic0 : IsIsomorphism morphism_isomorphic0	  morphism_isomorphic1 : C.(morphism) s d	  isisomorphism_isomorphic1 : IsIsomorphism morphism_isomorphic1	  ============================	  morphism_isomorphic0 = morphism_isomorphic1 ->	  {|	  morphism_isomorphic := morphism_isomorphic0;	  isisomorphism_isomorphic := isisomorphism_isomorphic0 |} =	  {|	  morphism_isomorphic := morphism_isomorphic1;	  isisomorphism_isomorphic := isisomorphism_isomorphic1 |}	";
             responses[i]=data;
           
 
             i = 133;
-            data = "1 subgoal (ID 111)	  	  C : PreCategory	  s, d : C	  morphism_isomorphic0 : morphism C s d	  isisomorphism_isomorphic0,	  isisomorphism_isomorphic1 : IsIsomorphism morphism_isomorphic0	  ============================	  {|	  morphism_isomorphic := morphism_isomorphic0;	  isisomorphism_isomorphic := isisomorphism_isomorphic0 |} =	  {|	  morphism_isomorphic := morphism_isomorphic0;	  isisomorphism_isomorphic := isisomorphism_isomorphic1 |}	";
+            data = "1 subgoal (ID 99)	  	  C : PreCategory	  s, d : C.(object)	  morphism_isomorphic0 : C.(morphism) s d	  isisomorphism_isomorphic0,	  isisomorphism_isomorphic1 : IsIsomorphism morphism_isomorphic0	  ============================	  {|	  morphism_isomorphic := morphism_isomorphic0;	  isisomorphism_isomorphic := isisomorphism_isomorphic0 |} =	  {|	  morphism_isomorphic := morphism_isomorphic0;	  isisomorphism_isomorphic := isisomorphism_isomorphic1 |}	";
             responses[i]=data;
           
 
             i = 134;
-            data = "1 subgoal (ID 117)	  	  C : PreCategory	  s, d : C	  morphism_isomorphic0 : morphism C s d	  isisomorphism_isomorphic0,	  isisomorphism_isomorphic1 : IsIsomorphism morphism_isomorphic0	  ============================	  isisomorphism_isomorphic0 = isisomorphism_isomorphic1	";
+            data = "1 subgoal (ID 105)	  	  C : PreCategory	  s, d : C.(object)	  morphism_isomorphic0 : C.(morphism) s d	  isisomorphism_isomorphic0,	  isisomorphism_isomorphic1 : IsIsomorphism morphism_isomorphic0	  ============================	  isisomorphism_isomorphic0 = isisomorphism_isomorphic1	";
             responses[i]=data;
           
 
@@ -738,22 +738,22 @@
           
 
             i = 144;
-            data = "1 subgoal (ID 108)	  	  C : PreCategory	  s, d : C	  i, j : s <~=~> d	  p : i = j	  ============================	  ap (@morphism_isomorphic C s d) (path_isomorphic i j p) = p	";
+            data = "1 subgoal (ID 96)	  	  C : PreCategory	  s, d : C.(object)	  i, j : s <~=~> d	  p : i.(morphism_isomorphic) = j.(morphism_isomorphic)	  ============================	  ap (@morphism_isomorphic C s d) (path_isomorphic i j p) = p	";
             responses[i]=data;
           
 
             i = 145;
-            data = "1 subgoal (ID 108)	  	  C : PreCategory	  s, d : C	  i, j : s <~=~> d	  p : i = j	  ============================	  ap (@morphism_isomorphic C s d) (path_isomorphic i j p) = p	";
+            data = "1 subgoal (ID 96)	  	  C : PreCategory	  s, d : C.(object)	  i, j : s <~=~> d	  p : i.(morphism_isomorphic) = j.(morphism_isomorphic)	  ============================	  ap (@morphism_isomorphic C s d) (path_isomorphic i j p) = p	";
             responses[i]=data;
           
 
             i = 146;
-            data = "1 subgoal (ID 109)	  	  C : PreCategory	  s, d : C	  i, j : s <~=~> d	  p : i = j	  ============================	  ap (@morphism_isomorphic C s d)	    (paths_rect (morphism C s d) i	       (fun (morphism_isomorphic1 : morphism C s d)	          (_ : i = morphism_isomorphic1) =>	        forall	        isisomorphism_isomorphic1 : IsIsomorphism morphism_isomorphic1,	        {| morphism_isomorphic := i; isisomorphism_isomorphic := i |} =	        {|	        morphism_isomorphic := morphism_isomorphic1;	        isisomorphism_isomorphic := isisomorphism_isomorphic1 |})	       (fun isisomorphism_isomorphic1 : IsIsomorphism i => ap11 1 (center _))	       j p j) = p	";
+            data = "1 subgoal (ID 97)	  	  C : PreCategory	  s, d : C.(object)	  i, j : s <~=~> d	  p : i.(morphism_isomorphic) = j.(morphism_isomorphic)	  ============================	  ap (@morphism_isomorphic C s d)	    (paths_rect (C.(morphism) s d) i.(morphism_isomorphic)	       (fun (morphism_isomorphic1 : C.(morphism) s d)	          (_ : i.(morphism_isomorphic) = morphism_isomorphic1) =>	        forall	        isisomorphism_isomorphic1 : IsIsomorphism morphism_isomorphic1,	        {|	        morphism_isomorphic := i.(morphism_isomorphic);	        isisomorphism_isomorphic := i.(isisomorphism_isomorphic) |} =	        {|	        morphism_isomorphic := morphism_isomorphic1;	        isisomorphism_isomorphic := isisomorphism_isomorphic1 |})	       (fun isisomorphism_isomorphic1 : IsIsomorphism i.(morphism_isomorphic)	        =>	        ap11 1	          (istrunc_paths (IsIsomorphism i.(morphism_isomorphic)) 	             -2 i.(isisomorphism_isomorphic) isisomorphism_isomorphic1)	          .(center)) j.(morphism_isomorphic) p j.(isisomorphism_isomorphic)) =	  p	";
             responses[i]=data;
           
 
             i = 147;
-            data = "1 subgoal (ID 127)	  	  C : PreCategory	  s, d : C	  morphism_isomorphic0 : morphism C s d	  isisomorphism_isomorphic0 : IsIsomorphism morphism_isomorphic0	  morphism_isomorphic1 : morphism C s d	  isisomorphism_isomorphic1 : IsIsomorphism morphism_isomorphic1	  p : {|	      morphism_isomorphic := morphism_isomorphic0;	      isisomorphism_isomorphic := isisomorphism_isomorphic0 |} =	      {|	      morphism_isomorphic := morphism_isomorphic1;	      isisomorphism_isomorphic := isisomorphism_isomorphic1 |}	  ============================	  ap (@morphism_isomorphic C s d)	    (paths_rect (morphism C s d) morphism_isomorphic0	       (fun (morphism_isomorphic2 : morphism C s d)	          (_ : morphism_isomorphic0 = morphism_isomorphic2) =>	        forall	        isisomorphism_isomorphic2 : IsIsomorphism morphism_isomorphic2,	        {|	        morphism_isomorphic := morphism_isomorphic0;	        isisomorphism_isomorphic := isisomorphism_isomorphic0 |} =	        {|	        morphism_isomorphic := morphism_isomorphic2;	        isisomorphism_isomorphic := isisomorphism_isomorphic2 |})	       (fun isisomorphism_isomorphic2 : IsIsomorphism morphism_isomorphic0 =>	        ap11 1 (center _)) morphism_isomorphic1 p isisomorphism_isomorphic1) =	  p	";
+            data = "1 subgoal (ID 115)	  	  C : PreCategory	  s, d : C.(object)	  morphism_isomorphic0 : C.(morphism) s d	  isisomorphism_isomorphic0 : IsIsomorphism morphism_isomorphic0	  morphism_isomorphic1 : C.(morphism) s d	  isisomorphism_isomorphic1 : IsIsomorphism morphism_isomorphic1	  p : {|	      morphism_isomorphic := morphism_isomorphic0;	      isisomorphism_isomorphic := isisomorphism_isomorphic0 |}	      .(morphism_isomorphic) =	      {|	      morphism_isomorphic := morphism_isomorphic1;	      isisomorphism_isomorphic := isisomorphism_isomorphic1 |}	      .(morphism_isomorphic)	  ============================	  ap (@morphism_isomorphic C s d)	    (paths_rect (C.(morphism) s d) morphism_isomorphic0	       (fun (morphism_isomorphic2 : C.(morphism) s d)	          (_ : morphism_isomorphic0 = morphism_isomorphic2) =>	        forall	        isisomorphism_isomorphic2 : IsIsomorphism morphism_isomorphic2,	        {|	        morphism_isomorphic := morphism_isomorphic0;	        isisomorphism_isomorphic := isisomorphism_isomorphic0 |} =	        {|	        morphism_isomorphic := morphism_isomorphic2;	        isisomorphism_isomorphic := isisomorphism_isomorphic2 |})	       (fun isisomorphism_isomorphic2 : IsIsomorphism morphism_isomorphic0 =>	        ap11 1	          (istrunc_paths (IsIsomorphism morphism_isomorphic0) 	             -2 isisomorphism_isomorphic0 isisomorphism_isomorphic2).(	          center)) morphism_isomorphic1 p isisomorphism_isomorphic1) = p	";
             responses[i]=data;
           
 
@@ -768,12 +768,12 @@
           
 
             i = 150;
-            data = "1 subgoal (ID 129)	  	  C : PreCategory	  s, d : C	  i, j : s <~=~> d	  p : i = j	  q : (fun e : s <~=~> d => _^-1) i = (fun e : s <~=~> d => _^-1) j	  ============================	  ap (fun e : s <~=~> d => _^-1) (path_isomorphic i j p) = q	";
+            data = "1 subgoal (ID 117)	  	  C : PreCategory	  s, d : C.(object)	  i, j : s <~=~> d	  p : i.(morphism_isomorphic) = j.(morphism_isomorphic)	  q : (fun e : s <~=~> d => e.(isisomorphism_isomorphic).(morphism_inverse))	        i =	      (fun e : s <~=~> d => e.(isisomorphism_isomorphic).(morphism_inverse))	        j	  ============================	  ap (fun e : s <~=~> d => e.(isisomorphism_isomorphic).(morphism_inverse))	    (path_isomorphic i j p) = q	";
             responses[i]=data;
           
 
             i = 151;
-            data = "1 subgoal (ID 129)	  	  C : PreCategory	  s, d : C	  i, j : s <~=~> d	  p : i = j	  q : (fun e : s <~=~> d => _^-1) i = (fun e : s <~=~> d => _^-1) j	  ============================	  ap (fun e : s <~=~> d => _^-1) (path_isomorphic i j p) = q	";
+            data = "1 subgoal (ID 117)	  	  C : PreCategory	  s, d : C.(object)	  i, j : s <~=~> d	  p : i.(morphism_isomorphic) = j.(morphism_isomorphic)	  q : (fun e : s <~=~> d => e.(isisomorphism_isomorphic).(morphism_inverse))	        i =	      (fun e : s <~=~> d => e.(isisomorphism_isomorphic).(morphism_inverse))	        j	  ============================	  ap (fun e : s <~=~> d => e.(isisomorphism_isomorphic).(morphism_inverse))	    (path_isomorphic i j p) = q	";
             responses[i]=data;
           
 
@@ -828,12 +828,12 @@
           
 
             i = 162;
-            data = "1 subgoal (ID 134)	  	  C : PreCategory	  s, d : C	  ============================	  forall i j : s <~=~> d, IsEquiv (path_isomorphic i j)	";
+            data = "1 subgoal (ID 122)	  	  C : PreCategory	  s, d : C.(object)	  ============================	  forall i j : s <~=~> d, IsEquiv (path_isomorphic i j)	";
             responses[i]=data;
           
 
             i = 163;
-            data = "1 subgoal (ID 136)	  	  C : PreCategory	  s, d : C	  i, j : s <~=~> d	  ============================	  IsEquiv (path_isomorphic i j)	";
+            data = "1 subgoal (ID 124)	  	  C : PreCategory	  s, d : C.(object)	  i, j : s <~=~> d	  ============================	  IsEquiv (path_isomorphic i j)	";
             responses[i]=data;
           
 
@@ -988,7 +988,7 @@
           
 
             i = 194;
-            data = "1 subgoal (ID 95)	  	  C : PreCategory	  y, z : C	  m0 : morphism C y z	  H : IsIsomorphism m0	  x : C	  m1 : morphism C x y	  H0 : IsIsomorphism m1	  ============================	  IsIsomorphism (m0 o m1)	";
+            data = "1 subgoal (ID 83)	  	  C : PreCategory	  y, z : C.(object)	  m0 : C.(morphism) y z	  H : IsIsomorphism m0	  x : C.(object)	  m1 : C.(morphism) x y	  H0 : IsIsomorphism m1	  ============================	  IsIsomorphism (C.(compose) x y z m0 m1)	";
             responses[i]=data;
           
 
@@ -1628,7 +1628,7 @@
           
 
             i = 322;
-            data = "1 subgoal (ID 64)	  	  C : PreCategory	  x : C	  ============================	  IsEpimorphism 1	";
+            data = "1 subgoal (ID 26)	  	  C : PreCategory	  x : C.(object)	  ============================	  IsEpimorphism (C.(identity) x)	";
             responses[i]=data;
           
 
@@ -1683,7 +1683,7 @@
           
 
             i = 333;
-            data = "1 subgoal (ID 70)	  	  C : PreCategory	  x : C	  ============================	  IsMonomorphism 1	";
+            data = "1 subgoal (ID 32)	  	  C : PreCategory	  x : C.(object)	  ============================	  IsMonomorphism (C.(identity) x)	";
             responses[i]=data;
           
 
@@ -1738,17 +1738,17 @@
           
 
             i = 344;
-            data = "1 subgoal (ID 96)	  	  C : PreCategory	  s, d, d' : C	  m0 : morphism C d d'	  m1 : morphism C s d	  ============================	  IsEpimorphism m0 -> IsEpimorphism m1 -> IsEpimorphism (m0 o m1)	";
+            data = "1 subgoal (ID 58)	  	  C : PreCategory	  s, d, d' : C.(object)	  m0 : C.(morphism) d d'	  m1 : C.(morphism) s d	  ============================	  IsEpimorphism m0 ->	  IsEpimorphism m1 -> IsEpimorphism (C.(compose) s d d' m0 m1)	";
             responses[i]=data;
           
 
             i = 345;
-            data = "1 subgoal (ID 103)	  	  C : PreCategory	  s, d, d' : C	  m0 : morphism C d d'	  m1 : morphism C s d	  X : IsEpimorphism m0	  X0 : IsEpimorphism m1	  z : C	  m2, m3 : morphism C d' z	  X1 : m2 o (m0 o m1) = m3 o (m0 o m1)	  ============================	  m2 = m3	";
+            data = "1 subgoal (ID 65)	  	  C : PreCategory	  s, d, d' : C.(object)	  m0 : C.(morphism) d d'	  m1 : C.(morphism) s d	  X : IsEpimorphism m0	  X0 : IsEpimorphism m1	  z : C.(object)	  m2, m3 : C.(morphism) d' z	  X1 : C.(compose) s d' z m2 (C.(compose) s d d' m0 m1) =	       C.(compose) s d' z m3 (C.(compose) s d d' m0 m1)	  ============================	  m2 = m3	";
             responses[i]=data;
           
 
             i = 346;
-            data = "1 subgoal (ID 107)	  	  C : PreCategory	  s, d, d' : C	  m0 : morphism C d d'	  m1 : morphism C s d	  X : IsEpimorphism m0	  X0 : IsEpimorphism m1	  z : C	  m2, m3 : morphism C d' z	  X1 : m2 o m0 o m1 = m3 o m0 o m1	  ============================	  m2 = m3	";
+            data = "1 subgoal (ID 69)	  	  C : PreCategory	  s, d, d' : C.(object)	  m0 : C.(morphism) d d'	  m1 : C.(morphism) s d	  X : IsEpimorphism m0	  X0 : IsEpimorphism m1	  z : C.(object)	  m2, m3 : C.(morphism) d' z	  X1 : C.(compose) s d z (C.(compose) d d' z m2 m0) m1 =	       C.(compose) s d z (C.(compose) d d' z m3 m0) m1	  ============================	  m2 = m3	";
             responses[i]=data;
           
 
@@ -1803,17 +1803,17 @@
           
 
             i = 357;
-            data = "1 subgoal (ID 122)	  	  C : PreCategory	  s, d, d' : C	  m0 : morphism C d d'	  m1 : morphism C s d	  ============================	  IsMonomorphism m0 -> IsMonomorphism m1 -> IsMonomorphism (m0 o m1)	";
+            data = "1 subgoal (ID 84)	  	  C : PreCategory	  s, d, d' : C.(object)	  m0 : C.(morphism) d d'	  m1 : C.(morphism) s d	  ============================	  IsMonomorphism m0 ->	  IsMonomorphism m1 -> IsMonomorphism (C.(compose) s d d' m0 m1)	";
             responses[i]=data;
           
 
             i = 358;
-            data = "1 subgoal (ID 129)	  	  C : PreCategory	  s, d, d' : C	  m0 : morphism C d d'	  m1 : morphism C s d	  X : IsMonomorphism m0	  X0 : IsMonomorphism m1	  z : C	  m2, m3 : morphism C z s	  X1 : m0 o m1 o m2 = m0 o m1 o m3	  ============================	  m2 = m3	";
+            data = "1 subgoal (ID 91)	  	  C : PreCategory	  s, d, d' : C.(object)	  m0 : C.(morphism) d d'	  m1 : C.(morphism) s d	  X : IsMonomorphism m0	  X0 : IsMonomorphism m1	  z : C.(object)	  m2, m3 : C.(morphism) z s	  X1 : C.(compose) z s d' (C.(compose) s d d' m0 m1) m2 =	       C.(compose) z s d' (C.(compose) s d d' m0 m1) m3	  ============================	  m2 = m3	";
             responses[i]=data;
           
 
             i = 359;
-            data = "1 subgoal (ID 133)	  	  C : PreCategory	  s, d, d' : C	  m0 : morphism C d d'	  m1 : morphism C s d	  X : IsMonomorphism m0	  X0 : IsMonomorphism m1	  z : C	  m2, m3 : morphism C z s	  X1 : m0 o (m1 o m2) = m0 o (m1 o m3)	  ============================	  m2 = m3	";
+            data = "1 subgoal (ID 95)	  	  C : PreCategory	  s, d, d' : C.(object)	  m0 : C.(morphism) d d'	  m1 : C.(morphism) s d	  X : IsMonomorphism m0	  X0 : IsMonomorphism m1	  z : C.(object)	  m2, m3 : C.(morphism) z s	  X1 : C.(compose) z d d' m0 (C.(compose) z s d m1 m2) =	       C.(compose) z d d' m0 (C.(compose) z s d m1 m3)	  ============================	  m2 = m3	";
             responses[i]=data;
           
 
@@ -1948,17 +1948,17 @@
           
 
             i = 386;
-            data = "1 subgoal (ID 71)	  	  C : PreCategory	  x, y : C	  s : morphism C x y	  r : morphism C y x	  H : IsSectionOf s r	  ============================	  IsEpimorphism r	";
+            data = "1 subgoal (ID 33)	  	  C : PreCategory	  x, y : C.(object)	  s : C.(morphism) x y	  r : C.(morphism) y x	  H : IsSectionOf s r	  ============================	  IsEpimorphism r	";
             responses[i]=data;
           
 
             i = 387;
-            data = "1 subgoal (ID 76)	  	  C : PreCategory	  x, y : C	  s : morphism C x y	  r : morphism C y x	  H : IsSectionOf s r	  z : C	  m1, m2 : morphism C x z	  X : m1 o r = m2 o r	  ============================	  m1 = m2	";
+            data = "1 subgoal (ID 38)	  	  C : PreCategory	  x, y : C.(object)	  s : C.(morphism) x y	  r : C.(morphism) y x	  H : IsSectionOf s r	  z : C.(object)	  m1, m2 : C.(morphism) x z	  X : C.(compose) y x z m1 r = C.(compose) y x z m2 r	  ============================	  m1 = m2	";
             responses[i]=data;
           
 
             i = 388;
-            data = "1 subgoal (ID 87)	  	  C : PreCategory	  x, y : C	  s : morphism C x y	  r : morphism C y x	  H : r o s = 1	  z : C	  m1, m2 : morphism C x z	  X : m1 o r = m2 o r	  ============================	  m1 = m2	";
+            data = "1 subgoal (ID 49)	  	  C : PreCategory	  x, y : C.(object)	  s : C.(morphism) x y	  r : C.(morphism) y x	  H : C.(compose) x y x r s = C.(identity) x	  z : C.(object)	  m1, m2 : C.(morphism) x z	  X : C.(compose) y x z m1 r = C.(compose) y x z m2 r	  ============================	  m1 = m2	";
             responses[i]=data;
           
 
@@ -2013,12 +2013,12 @@
           
 
             i = 399;
-            data = "1 subgoal (ID 84)	  	  C : PreCategory	  x, y : C	  s : morphism C x y	  r : morphism C y x	  H : IsSectionOf s r	  ============================	  IsMonomorphism s	";
+            data = "1 subgoal (ID 46)	  	  C : PreCategory	  x, y : C.(object)	  s : C.(morphism) x y	  r : C.(morphism) y x	  H : IsSectionOf s r	  ============================	  IsMonomorphism s	";
             responses[i]=data;
           
 
             i = 400;
-            data = "1 subgoal (ID 89)	  	  C : PreCategory	  x, y : C	  s : morphism C x y	  r : morphism C y x	  H : IsSectionOf s r	  z : C	  m1, m2 : morphism C z x	  X : s o m1 = s o m2	  ============================	  m1 = m2	";
+            data = "1 subgoal (ID 51)	  	  C : PreCategory	  x, y : C.(object)	  s : C.(morphism) x y	  r : C.(morphism) y x	  H : IsSectionOf s r	  z : C.(object)	  m1, m2 : C.(morphism) z x	  X : C.(compose) z x y s m1 = C.(compose) z x y s m2	  ============================	  m1 = m2	";
             responses[i]=data;
           
 
@@ -2228,12 +2228,12 @@
           
 
             i = 442;
-            data = "1 subgoal (ID 111)	  	  C : PreCategory	  D : PreCategory	  s, d : C	  m1, m2 : morphism C s d	  p : m1 = m2	  s', d' : morphism C s d -> D	  u : morphism D (s' m1) (d' m1)	  ============================	  transport (fun m : morphism C s d => morphism D (s' m) (d' m)) p u =	  idtoiso D (ap d' p) o u o _^-1	";
+            data = "1 subgoal (ID 73)	  	  C : PreCategory	  D : PreCategory	  s, d : C.(object)	  m1, m2 : C.(morphism) s d	  p : m1 = m2	  s', d' : C.(morphism) s d -> D.(object)	  u : D.(morphism) (s' m1) (d' m1)	  ============================	  transport (fun m : C.(morphism) s d => D.(morphism) (s' m) (d' m)) p u =	  D.(compose) (s' m2) (s' m1) (d' m2)	    (D.(compose) (s' m1) (d' m1) (d' m2)	       (idtoiso D (ap d' p)).(morphism_isomorphic) u)	    (idtoiso D (ap s' p)).(isisomorphism_isomorphic).(morphism_inverse)	";
             responses[i]=data;
           
 
             i = 443;
-            data = "1 subgoal (ID 111)	  	  C : PreCategory	  D : PreCategory	  s, d : C	  m1, m2 : morphism C s d	  p : m1 = m2	  s', d' : morphism C s d -> D	  u : morphism D (s' m1) (d' m1)	  ============================	  transport (fun m : morphism C s d => morphism D (s' m) (d' m)) p u =	  idtoiso D (ap d' p) o u o _^-1	";
+            data = "1 subgoal (ID 73)	  	  C : PreCategory	  D : PreCategory	  s, d : C.(object)	  m1, m2 : C.(morphism) s d	  p : m1 = m2	  s', d' : C.(morphism) s d -> D.(object)	  u : D.(morphism) (s' m1) (d' m1)	  ============================	  transport (fun m : C.(morphism) s d => D.(morphism) (s' m) (d' m)) p u =	  D.(compose) (s' m2) (s' m1) (d' m2)	    (D.(compose) (s' m1) (d' m1) (d' m2)	       (idtoiso D (ap d' p)).(morphism_isomorphic) u)	    (idtoiso D (ap s' p)).(isisomorphism_isomorphic).(morphism_inverse)	";
             responses[i]=data;
           
 
@@ -2283,12 +2283,12 @@
           
 
             i = 453;
-            data = "1 subgoal (ID 135)	  	  C : PreCategory	  s, d : C	  p : s = d	  ============================	  _^-1 = idtoiso C p^	";
+            data = "1 subgoal (ID 97)	  	  C : PreCategory	  s, d : C.(object)	  p : s = d	  ============================	  (idtoiso C p).(isisomorphism_isomorphic).(morphism_inverse) =	  (idtoiso C p^).(morphism_isomorphic)	";
             responses[i]=data;
           
 
             i = 454;
-            data = "1 subgoal (ID 135)	  	  C : PreCategory	  s, d : C	  p : s = d	  ============================	  _^-1 = idtoiso C p^	";
+            data = "1 subgoal (ID 97)	  	  C : PreCategory	  s, d : C.(object)	  p : s = d	  ============================	  (idtoiso C p).(isisomorphism_isomorphic).(morphism_inverse) =	  (idtoiso C p^).(morphism_isomorphic)	";
             responses[i]=data;
           
 
@@ -2338,12 +2338,12 @@
           
 
             i = 464;
-            data = "1 subgoal (ID 168)	  	  C : PreCategory	  s, d, d' : C	  m1 : d = d'	  m2 : s = d	  ============================	  idtoiso C m1 o idtoiso C m2 = idtoiso C (m2 @ m1)	";
+            data = "1 subgoal (ID 130)	  	  C : PreCategory	  s, d, d' : C.(object)	  m1 : d = d'	  m2 : s = d	  ============================	  C.(compose) s d d' (idtoiso C m1).(morphism_isomorphic)	    (idtoiso C m2).(morphism_isomorphic) =	  (idtoiso C (m2 @ m1)).(morphism_isomorphic)	";
             responses[i]=data;
           
 
             i = 465;
-            data = "1 subgoal (ID 168)	  	  C : PreCategory	  s, d, d' : C	  m1 : d = d'	  m2 : s = d	  ============================	  idtoiso C m1 o idtoiso C m2 = idtoiso C (m2 @ m1)	";
+            data = "1 subgoal (ID 130)	  	  C : PreCategory	  s, d, d' : C.(object)	  m1 : d = d'	  m2 : s = d	  ============================	  C.(compose) s d d' (idtoiso C m1).(morphism_isomorphic)	    (idtoiso C m2).(morphism_isomorphic) =	  (idtoiso C (m2 @ m1)).(morphism_isomorphic)	";
             responses[i]=data;
           
 
@@ -2388,12 +2388,12 @@
           
 
             i = 474;
-            data = "1 subgoal (ID 217)	  	  C : PreCategory	  s, d, d', d'' : C	  m0 : d' = d''	  m1 : d = d'	  m2 : s = d	  ============================	  idtoiso C m0 o (idtoiso C m1 o idtoiso C m2) = idtoiso C ((m2 @ m1) @ m0)	";
+            data = "1 subgoal (ID 179)	  	  C : PreCategory	  s, d, d', d'' : C.(object)	  m0 : d' = d''	  m1 : d = d'	  m2 : s = d	  ============================	  C.(compose) s d' d'' (idtoiso C m0).(morphism_isomorphic)	    (C.(compose) s d d' (idtoiso C m1).(morphism_isomorphic)	       (idtoiso C m2).(morphism_isomorphic)) =	  (idtoiso C ((m2 @ m1) @ m0)).(morphism_isomorphic)	";
             responses[i]=data;
           
 
             i = 475;
-            data = "1 subgoal (ID 217)	  	  C : PreCategory	  s, d, d', d'' : C	  m0 : d' = d''	  m1 : d = d'	  m2 : s = d	  ============================	  idtoiso C m0 o (idtoiso C m1 o idtoiso C m2) = idtoiso C ((m2 @ m1) @ m0)	";
+            data = "1 subgoal (ID 179)	  	  C : PreCategory	  s, d, d', d'' : C.(object)	  m0 : d' = d''	  m1 : d = d'	  m2 : s = d	  ============================	  C.(compose) s d' d'' (idtoiso C m0).(morphism_isomorphic)	    (C.(compose) s d d' (idtoiso C m1).(morphism_isomorphic)	       (idtoiso C m2).(morphism_isomorphic)) =	  (idtoiso C ((m2 @ m1) @ m0)).(morphism_isomorphic)	";
             responses[i]=data;
           
 
@@ -2408,12 +2408,12 @@
           
 
             i = 478;
-            data = "1 subgoal (ID 266)	  	  C : PreCategory	  s, d, d', d'' : C	  m0 : d' = d''	  m1 : d = d'	  m2 : s = d	  ============================	  idtoiso C m0 o idtoiso C m1 o idtoiso C m2 = idtoiso C (m2 @ (m1 @ m0))	";
+            data = "1 subgoal (ID 228)	  	  C : PreCategory	  s, d, d', d'' : C.(object)	  m0 : d' = d''	  m1 : d = d'	  m2 : s = d	  ============================	  C.(compose) s d d''	    (C.(compose) d d' d'' (idtoiso C m0).(morphism_isomorphic)	       (idtoiso C m1).(morphism_isomorphic))	    (idtoiso C m2).(morphism_isomorphic) =	  (idtoiso C (m2 @ (m1 @ m0))).(morphism_isomorphic)	";
             responses[i]=data;
           
 
             i = 479;
-            data = "1 subgoal (ID 266)	  	  C : PreCategory	  s, d, d', d'' : C	  m0 : d' = d''	  m1 : d = d'	  m2 : s = d	  ============================	  idtoiso C m0 o idtoiso C m1 o idtoiso C m2 = idtoiso C (m2 @ (m1 @ m0))	";
+            data = "1 subgoal (ID 228)	  	  C : PreCategory	  s, d, d', d'' : C.(object)	  m0 : d' = d''	  m1 : d = d'	  m2 : s = d	  ============================	  C.(compose) s d d''	    (C.(compose) d d' d'' (idtoiso C m0).(morphism_isomorphic)	       (idtoiso C m1).(morphism_isomorphic))	    (idtoiso C m2).(morphism_isomorphic) =	  (idtoiso C (m2 @ (m1 @ m0))).(morphism_isomorphic)	";
             responses[i]=data;
           
 
@@ -2428,12 +2428,12 @@
           
 
             i = 482;
-            data = "1 subgoal (ID 331)	  	  C : PreCategory	  s, d, d', d'', d''' : C	  m0 : d'' = d'''	  m1 : d' = d''	  m2 : d = d'	  m3 : s = d	  ============================	  idtoiso C m0 o (idtoiso C m1 o (idtoiso C m2 o idtoiso C m3)) =	  idtoiso C (((m3 @ m2) @ m1) @ m0)	";
+            data = "1 subgoal (ID 293)	  	  C : PreCategory	  s, d, d', d'', d''' : C.(object)	  m0 : d'' = d'''	  m1 : d' = d''	  m2 : d = d'	  m3 : s = d	  ============================	  C.(compose) s d'' d''' (idtoiso C m0).(morphism_isomorphic)	    (C.(compose) s d' d'' (idtoiso C m1).(morphism_isomorphic)	       (C.(compose) s d d' (idtoiso C m2).(morphism_isomorphic)	          (idtoiso C m3).(morphism_isomorphic))) =	  (idtoiso C (((m3 @ m2) @ m1) @ m0)).(morphism_isomorphic)	";
             responses[i]=data;
           
 
             i = 483;
-            data = "1 subgoal (ID 331)	  	  C : PreCategory	  s, d, d', d'', d''' : C	  m0 : d'' = d'''	  m1 : d' = d''	  m2 : d = d'	  m3 : s = d	  ============================	  idtoiso C m0 o (idtoiso C m1 o (idtoiso C m2 o idtoiso C m3)) =	  idtoiso C (((m3 @ m2) @ m1) @ m0)	";
+            data = "1 subgoal (ID 293)	  	  C : PreCategory	  s, d, d', d'', d''' : C.(object)	  m0 : d'' = d'''	  m1 : d' = d''	  m2 : d = d'	  m3 : s = d	  ============================	  C.(compose) s d'' d''' (idtoiso C m0).(morphism_isomorphic)	    (C.(compose) s d' d'' (idtoiso C m1).(morphism_isomorphic)	       (C.(compose) s d d' (idtoiso C m2).(morphism_isomorphic)	          (idtoiso C m3).(morphism_isomorphic))) =	  (idtoiso C (((m3 @ m2) @ m1) @ m0)).(morphism_isomorphic)	";
             responses[i]=data;
           
 
@@ -2448,12 +2448,12 @@
           
 
             i = 486;
-            data = "1 subgoal (ID 396)	  	  C : PreCategory	  s, d, d', d'', d''' : C	  m0 : d'' = d'''	  m1 : d' = d''	  m2 : d = d'	  m3 : s = d	  ============================	  idtoiso C m0 o idtoiso C m1 o idtoiso C m2 o idtoiso C m3 =	  idtoiso C (m3 @ (m2 @ (m1 @ m0)))	";
+            data = "1 subgoal (ID 358)	  	  C : PreCategory	  s, d, d', d'', d''' : C.(object)	  m0 : d'' = d'''	  m1 : d' = d''	  m2 : d = d'	  m3 : s = d	  ============================	  C.(compose) s d d'''	    (C.(compose) d d' d'''	       (C.(compose) d' d'' d''' (idtoiso C m0).(morphism_isomorphic)	          (idtoiso C m1).(morphism_isomorphic))	       (idtoiso C m2).(morphism_isomorphic))	    (idtoiso C m3).(morphism_isomorphic) =	  (idtoiso C (m3 @ (m2 @ (m1 @ m0)))).(morphism_isomorphic)	";
             responses[i]=data;
           
 
             i = 487;
-            data = "1 subgoal (ID 396)	  	  C : PreCategory	  s, d, d', d'', d''' : C	  m0 : d'' = d'''	  m1 : d' = d''	  m2 : d = d'	  m3 : s = d	  ============================	  idtoiso C m0 o idtoiso C m1 o idtoiso C m2 o idtoiso C m3 =	  idtoiso C (m3 @ (m2 @ (m1 @ m0)))	";
+            data = "1 subgoal (ID 358)	  	  C : PreCategory	  s, d, d', d'', d''' : C.(object)	  m0 : d'' = d'''	  m1 : d' = d''	  m2 : d = d'	  m3 : s = d	  ============================	  C.(compose) s d d'''	    (C.(compose) d d' d'''	       (C.(compose) d' d'' d''' (idtoiso C m0).(morphism_isomorphic)	          (idtoiso C m1).(morphism_isomorphic))	       (idtoiso C m2).(morphism_isomorphic))	    (idtoiso C m3).(morphism_isomorphic) =	  (idtoiso C (m3 @ (m2 @ (m1 @ m0)))).(morphism_isomorphic)	";
             responses[i]=data;
           
 
@@ -2468,12 +2468,12 @@
           
 
             i = 490;
-            data = "1 subgoal (ID 477)	  	  C : PreCategory	  s, d, d', d'', d''', d'''' : C	  m0 : d''' = d''''	  m1 : d'' = d'''	  m2 : d' = d''	  m3 : d = d'	  m4 : s = d	  ============================	  idtoiso C m0	  o (idtoiso C m1 o (idtoiso C m2 o (idtoiso C m3 o idtoiso C m4))) =	  idtoiso C ((((m4 @ m3) @ m2) @ m1) @ m0)	";
+            data = "1 subgoal (ID 439)	  	  C : PreCategory	  s, d, d', d'', d''', d'''' : C.(object)	  m0 : d''' = d''''	  m1 : d'' = d'''	  m2 : d' = d''	  m3 : d = d'	  m4 : s = d	  ============================	  C.(compose) s d''' d'''' (idtoiso C m0).(morphism_isomorphic)	    (C.(compose) s d'' d''' (idtoiso C m1).(morphism_isomorphic)	       (C.(compose) s d' d'' (idtoiso C m2).(morphism_isomorphic)	          (C.(compose) s d d' (idtoiso C m3).(morphism_isomorphic)	             (idtoiso C m4).(morphism_isomorphic)))) =	  (idtoiso C ((((m4 @ m3) @ m2) @ m1) @ m0)).(morphism_isomorphic)	";
             responses[i]=data;
           
 
             i = 491;
-            data = "1 subgoal (ID 477)	  	  C : PreCategory	  s, d, d', d'', d''', d'''' : C	  m0 : d''' = d''''	  m1 : d'' = d'''	  m2 : d' = d''	  m3 : d = d'	  m4 : s = d	  ============================	  idtoiso C m0	  o (idtoiso C m1 o (idtoiso C m2 o (idtoiso C m3 o idtoiso C m4))) =	  idtoiso C ((((m4 @ m3) @ m2) @ m1) @ m0)	";
+            data = "1 subgoal (ID 439)	  	  C : PreCategory	  s, d, d', d'', d''', d'''' : C.(object)	  m0 : d''' = d''''	  m1 : d'' = d'''	  m2 : d' = d''	  m3 : d = d'	  m4 : s = d	  ============================	  C.(compose) s d''' d'''' (idtoiso C m0).(morphism_isomorphic)	    (C.(compose) s d'' d''' (idtoiso C m1).(morphism_isomorphic)	       (C.(compose) s d' d'' (idtoiso C m2).(morphism_isomorphic)	          (C.(compose) s d d' (idtoiso C m3).(morphism_isomorphic)	             (idtoiso C m4).(morphism_isomorphic)))) =	  (idtoiso C ((((m4 @ m3) @ m2) @ m1) @ m0)).(morphism_isomorphic)	";
             responses[i]=data;
           
 
@@ -2488,12 +2488,12 @@
           
 
             i = 494;
-            data = "1 subgoal (ID 558)	  	  C : PreCategory	  s, d, d', d'', d''', d'''' : C	  m0 : d''' = d''''	  m1 : d'' = d'''	  m2 : d' = d''	  m3 : d = d'	  m4 : s = d	  ============================	  idtoiso C m0 o idtoiso C m1 o idtoiso C m2 o idtoiso C m3 o idtoiso C m4 =	  idtoiso C (m4 @ (m3 @ (m2 @ (m1 @ m0))))	";
+            data = "1 subgoal (ID 520)	  	  C : PreCategory	  s, d, d', d'', d''', d'''' : C.(object)	  m0 : d''' = d''''	  m1 : d'' = d'''	  m2 : d' = d''	  m3 : d = d'	  m4 : s = d	  ============================	  C.(compose) s d d''''	    (C.(compose) d d' d''''	       (C.(compose) d' d'' d''''	          (C.(compose) d'' d''' d'''' (idtoiso C m0).(morphism_isomorphic)	             (idtoiso C m1).(morphism_isomorphic))	          (idtoiso C m2).(morphism_isomorphic))	       (idtoiso C m3).(morphism_isomorphic))	    (idtoiso C m4).(morphism_isomorphic) =	  (idtoiso C (m4 @ (m3 @ (m2 @ (m1 @ m0))))).(morphism_isomorphic)	";
             responses[i]=data;
           
 
             i = 495;
-            data = "1 subgoal (ID 558)	  	  C : PreCategory	  s, d, d', d'', d''', d'''' : C	  m0 : d''' = d''''	  m1 : d'' = d'''	  m2 : d' = d''	  m3 : d = d'	  m4 : s = d	  ============================	  idtoiso C m0 o idtoiso C m1 o idtoiso C m2 o idtoiso C m3 o idtoiso C m4 =	  idtoiso C (m4 @ (m3 @ (m2 @ (m1 @ m0))))	";
+            data = "1 subgoal (ID 520)	  	  C : PreCategory	  s, d, d', d'', d''', d'''' : C.(object)	  m0 : d''' = d''''	  m1 : d'' = d'''	  m2 : d' = d''	  m3 : d = d'	  m4 : s = d	  ============================	  C.(compose) s d d''''	    (C.(compose) d d' d''''	       (C.(compose) d' d'' d''''	          (C.(compose) d'' d''' d'''' (idtoiso C m0).(morphism_isomorphic)	             (idtoiso C m1).(morphism_isomorphic))	          (idtoiso C m2).(morphism_isomorphic))	       (idtoiso C m3).(morphism_isomorphic))	    (idtoiso C m4).(morphism_isomorphic) =	  (idtoiso C (m4 @ (m3 @ (m2 @ (m1 @ m0))))).(morphism_isomorphic)	";
             responses[i]=data;
           
 
@@ -2543,12 +2543,12 @@
           
 
             i = 505;
-            data = "1 subgoal (ID 587)	  	  C : PreCategory	  D : PreCategory	  s, d : C	  m : s = d	  F : Functor C D	  ============================	  F _1 (idtoiso C m) = idtoiso D (ap F m)	";
+            data = "1 subgoal (ID 549)	  	  C : PreCategory	  D : PreCategory	  s, d : C.(object)	  m : s = d	  F : Functor C D	  ============================	  F.(morphism_of) s d (idtoiso C m).(morphism_isomorphic) =	  (idtoiso D (ap F.(object_of) m)).(morphism_isomorphic)	";
             responses[i]=data;
           
 
             i = 506;
-            data = "1 subgoal (ID 587)	  	  C : PreCategory	  D : PreCategory	  s, d : C	  m : s = d	  F : Functor C D	  ============================	  F _1 (idtoiso C m) = idtoiso D (ap F m)	";
+            data = "1 subgoal (ID 549)	  	  C : PreCategory	  D : PreCategory	  s, d : C.(object)	  m : s = d	  F : Functor C D	  ============================	  F.(morphism_of) s d (idtoiso C m).(morphism_isomorphic) =	  (idtoiso D (ap F.(object_of) m)).(morphism_isomorphic)	";
             responses[i]=data;
           
 
@@ -2603,17 +2603,17 @@
           
 
             i = 517;
-            data = "1 subgoal (ID 607)	  	  C : PreCategory	  D : PreCategory	  F : Functor C D	  s, d : C	  m : morphism C s d	  H : IsIsomorphism m	  ============================	  IsIsomorphism (F _1 m)	";
+            data = "1 subgoal (ID 569)	  	  C : PreCategory	  D : PreCategory	  F : Functor C D	  s, d : C.(object)	  m : C.(morphism) s d	  H : IsIsomorphism m	  ============================	  IsIsomorphism (F.(morphism_of) s d m)	";
             responses[i]=data;
           
 
             i = 518;
-            data = "2 subgoals (ID 628)	  	  C : PreCategory	  D : PreCategory	  F : Functor C D	  s, d : C	  m : morphism C s d	  H : IsIsomorphism m	  ============================	  F _1 _^-1 o F _1 m = 1		subgoal 2 (ID 629) is:	 F _1 m o F _1 _^-1 = 1	";
+            data = "2 subgoals (ID 590)	  	  C : PreCategory	  D : PreCategory	  F : Functor C D	  s, d : C.(object)	  m : C.(morphism) s d	  H : IsIsomorphism m	  ============================	  D.(compose) (F.(object_of) s) (F.(object_of) d) 	    (F.(object_of) s) (F.(morphism_of) d s H.(morphism_inverse))	    (F.(morphism_of) s d m) = D.(identity) (F.(object_of) s)		subgoal 2 (ID 591) is:	 D.(compose) (F.(object_of) d) (F.(object_of) s) (F.(object_of) d)	   (F.(morphism_of) s d m) (F.(morphism_of) d s H.(morphism_inverse)) =	 D.(identity) (F.(object_of) d)	";
             responses[i]=data;
           
 
             i = 519;
-            data = "1 subgoal (ID 629)	  	  C : PreCategory	  D : PreCategory	  F : Functor C D	  s, d : C	  m : morphism C s d	  H : IsIsomorphism m	  ============================	  F _1 m o F _1 _^-1 = 1	";
+            data = "1 subgoal (ID 591)	  	  C : PreCategory	  D : PreCategory	  F : Functor C D	  s, d : C.(object)	  m : C.(morphism) s d	  H : IsIsomorphism m	  ============================	  D.(compose) (F.(object_of) d) (F.(object_of) s) 	    (F.(object_of) d) (F.(morphism_of) s d m)	    (F.(morphism_of) d s H.(morphism_inverse)) =	  D.(identity) (F.(object_of) d)	";
             responses[i]=data;
           
 
@@ -2718,12 +2718,12 @@
           
 
             i = 540;
-            data = "1 subgoal (ID 151)	  	  C : PreCategory	  y, z : C	  p : morphism C y z	  H : IsIsomorphism p	  x : C	  q : morphism C x y	  ============================	  _^-1 o (p o q) = q	";
+            data = "1 subgoal (ID 113)	  	  C : PreCategory	  y, z : C.(object)	  p : C.(morphism) y z	  H : IsIsomorphism p	  x : C.(object)	  q : C.(morphism) x y	  ============================	  C.(compose) x z y H.(morphism_inverse) (C.(compose) x y z p q) = q	";
             responses[i]=data;
           
 
             i = 541;
-            data = "1 subgoal (ID 151)	  	  C : PreCategory	  y, z : C	  p : morphism C y z	  H : IsIsomorphism p	  x : C	  q : morphism C x y	  ============================	  _^-1 o (p o q) = q	";
+            data = "1 subgoal (ID 113)	  	  C : PreCategory	  y, z : C.(object)	  p : C.(morphism) y z	  H : IsIsomorphism p	  x : C.(object)	  q : C.(morphism) x y	  ============================	  C.(compose) x z y H.(morphism_inverse) (C.(compose) x y z p q) = q	";
             responses[i]=data;
           
 
@@ -2738,12 +2738,12 @@
           
 
             i = 544;
-            data = "1 subgoal (ID 176)	  	  C : PreCategory	  x, z : C	  p : morphism C x z	  H : IsIsomorphism p	  y : C	  q : morphism C y z	  ============================	  p o (_^-1 o q) = q	";
+            data = "1 subgoal (ID 138)	  	  C : PreCategory	  x, z : C.(object)	  p : C.(morphism) x z	  H : IsIsomorphism p	  y : C.(object)	  q : C.(morphism) y z	  ============================	  C.(compose) y x z p (C.(compose) y z x H.(morphism_inverse) q) = q	";
             responses[i]=data;
           
 
             i = 545;
-            data = "1 subgoal (ID 176)	  	  C : PreCategory	  x, z : C	  p : morphism C x z	  H : IsIsomorphism p	  y : C	  q : morphism C y z	  ============================	  p o (_^-1 o q) = q	";
+            data = "1 subgoal (ID 138)	  	  C : PreCategory	  x, z : C.(object)	  p : C.(morphism) x z	  H : IsIsomorphism p	  y : C.(object)	  q : C.(morphism) y z	  ============================	  C.(compose) y x z p (C.(compose) y z x H.(morphism_inverse) q) = q	";
             responses[i]=data;
           
 
@@ -2758,12 +2758,12 @@
           
 
             i = 548;
-            data = "1 subgoal (ID 201)	  	  C : PreCategory	  y, z : C	  p : morphism C y z	  x : C	  q : morphism C x y	  H : IsIsomorphism q	  ============================	  p o q o _^-1 = p	";
+            data = "1 subgoal (ID 163)	  	  C : PreCategory	  y, z : C.(object)	  p : C.(morphism) y z	  x : C.(object)	  q : C.(morphism) x y	  H : IsIsomorphism q	  ============================	  C.(compose) y x z (C.(compose) x y z p q) H.(morphism_inverse) = p	";
             responses[i]=data;
           
 
             i = 549;
-            data = "1 subgoal (ID 201)	  	  C : PreCategory	  y, z : C	  p : morphism C y z	  x : C	  q : morphism C x y	  H : IsIsomorphism q	  ============================	  p o q o _^-1 = p	";
+            data = "1 subgoal (ID 163)	  	  C : PreCategory	  y, z : C.(object)	  p : C.(morphism) y z	  x : C.(object)	  q : C.(morphism) x y	  H : IsIsomorphism q	  ============================	  C.(compose) y x z (C.(compose) x y z p q) H.(morphism_inverse) = p	";
             responses[i]=data;
           
 
@@ -2778,12 +2778,12 @@
           
 
             i = 552;
-            data = "1 subgoal (ID 226)	  	  C : PreCategory	  x, z : C	  p : morphism C x z	  y : C	  q : morphism C x y	  H : IsIsomorphism q	  ============================	  p o _^-1 o q = p	";
+            data = "1 subgoal (ID 188)	  	  C : PreCategory	  x, z : C.(object)	  p : C.(morphism) x z	  y : C.(object)	  q : C.(morphism) x y	  H : IsIsomorphism q	  ============================	  C.(compose) x y z (C.(compose) y x z p H.(morphism_inverse)) q = p	";
             responses[i]=data;
           
 
             i = 553;
-            data = "1 subgoal (ID 226)	  	  C : PreCategory	  x, z : C	  p : morphism C x z	  y : C	  q : morphism C x y	  H : IsIsomorphism q	  ============================	  p o _^-1 o q = p	";
+            data = "1 subgoal (ID 188)	  	  C : PreCategory	  x, z : C.(object)	  p : C.(morphism) x z	  y : C.(object)	  q : C.(morphism) x y	  H : IsIsomorphism q	  ============================	  C.(compose) x y z (C.(compose) y x z p H.(morphism_inverse)) q = p	";
             responses[i]=data;
           
 
@@ -2798,12 +2798,12 @@
           
 
             i = 556;
-            data = "1 subgoal (ID 281)	  	  C : PreCategory	  y, z : C	  p : morphism C y z	  H : IsIsomorphism p	  x : C	  q : morphism C x y	  H0 : IsIsomorphism q	  ============================	  _^-1 = _^-1 o _^-1	";
+            data = "1 subgoal (ID 243)	  	  C : PreCategory	  y, z : C.(object)	  p : C.(morphism) y z	  H : IsIsomorphism p	  x : C.(object)	  q : C.(morphism) x y	  H0 : IsIsomorphism q	  ============================	  (isisomorphism_compose H H0).(morphism_inverse) =	  C.(compose) z y x H0.(morphism_inverse) H.(morphism_inverse)	";
             responses[i]=data;
           
 
             i = 557;
-            data = "1 subgoal (ID 281)	  	  C : PreCategory	  y, z : C	  p : morphism C y z	  H : IsIsomorphism p	  x : C	  q : morphism C x y	  H0 : IsIsomorphism q	  ============================	  _^-1 = _^-1 o _^-1	";
+            data = "1 subgoal (ID 243)	  	  C : PreCategory	  y, z : C.(object)	  p : C.(morphism) y z	  H : IsIsomorphism p	  x : C.(object)	  q : C.(morphism) x y	  H0 : IsIsomorphism q	  ============================	  (isisomorphism_compose H H0).(morphism_inverse) =	  C.(compose) z y x H0.(morphism_inverse) H.(morphism_inverse)	";
             responses[i]=data;
           
 
@@ -2818,12 +2818,12 @@
           
 
             i = 560;
-            data = "1 subgoal (ID 345)	  	  C : PreCategory	  y, z : C	  p : morphism C y z	  H : IsIsomorphism p	  x : C	  q : morphism C x z	  H0 : IsIsomorphism q	  ============================	  _^-1 = _^-1 o p	";
+            data = "1 subgoal (ID 307)	  	  C : PreCategory	  y, z : C.(object)	  p : C.(morphism) y z	  H : IsIsomorphism p	  x : C.(object)	  q : C.(morphism) x z	  H0 : IsIsomorphism q	  ============================	  (isisomorphism_compose (isisomorphism_inverse H) H0).(morphism_inverse) =	  C.(compose) y z x H0.(morphism_inverse) p	";
             responses[i]=data;
           
 
             i = 561;
-            data = "1 subgoal (ID 345)	  	  C : PreCategory	  y, z : C	  p : morphism C y z	  H : IsIsomorphism p	  x : C	  q : morphism C x z	  H0 : IsIsomorphism q	  ============================	  _^-1 = _^-1 o p	";
+            data = "1 subgoal (ID 307)	  	  C : PreCategory	  y, z : C.(object)	  p : C.(morphism) y z	  H : IsIsomorphism p	  x : C.(object)	  q : C.(morphism) x z	  H0 : IsIsomorphism q	  ============================	  (isisomorphism_compose (isisomorphism_inverse H) H0).(morphism_inverse) =	  C.(compose) y z x H0.(morphism_inverse) p	";
             responses[i]=data;
           
 
@@ -2838,12 +2838,12 @@
           
 
             i = 564;
-            data = "1 subgoal (ID 409)	  	  C : PreCategory	  x, y : C	  p : morphism C x y	  H : IsIsomorphism p	  z : C	  q : morphism C x z	  H0 : IsIsomorphism q	  ============================	  _^-1 = q o _^-1	";
+            data = "1 subgoal (ID 371)	  	  C : PreCategory	  x, y : C.(object)	  p : C.(morphism) x y	  H : IsIsomorphism p	  z : C.(object)	  q : C.(morphism) x z	  H0 : IsIsomorphism q	  ============================	  (isisomorphism_compose H (isisomorphism_inverse H0)).(morphism_inverse) =	  C.(compose) y x z q H.(morphism_inverse)	";
             responses[i]=data;
           
 
             i = 565;
-            data = "1 subgoal (ID 409)	  	  C : PreCategory	  x, y : C	  p : morphism C x y	  H : IsIsomorphism p	  z : C	  q : morphism C x z	  H0 : IsIsomorphism q	  ============================	  _^-1 = q o _^-1	";
+            data = "1 subgoal (ID 371)	  	  C : PreCategory	  x, y : C.(object)	  p : C.(morphism) x y	  H : IsIsomorphism p	  z : C.(object)	  q : C.(morphism) x z	  H0 : IsIsomorphism q	  ============================	  (isisomorphism_compose H (isisomorphism_inverse H0)).(morphism_inverse) =	  C.(compose) y x z q H.(morphism_inverse)	";
             responses[i]=data;
           
 
@@ -2858,12 +2858,12 @@
           
 
             i = 568;
-            data = "1 subgoal (ID 482)	  	  C : PreCategory	  x, y : C	  p : morphism C x y	  H : IsIsomorphism p	  z : C	  q : morphism C y z	  H0 : IsIsomorphism q	  ============================	  _^-1 = q o p	";
+            data = "1 subgoal (ID 444)	  	  C : PreCategory	  x, y : C.(object)	  p : C.(morphism) x y	  H : IsIsomorphism p	  z : C.(object)	  q : C.(morphism) y z	  H0 : IsIsomorphism q	  ============================	  (isisomorphism_compose (isisomorphism_inverse H) (isisomorphism_inverse H0))	  .(morphism_inverse) = C.(compose) x y z q p	";
             responses[i]=data;
           
 
             i = 569;
-            data = "1 subgoal (ID 482)	  	  C : PreCategory	  x, y : C	  p : morphism C x y	  H : IsIsomorphism p	  z : C	  q : morphism C y z	  H0 : IsIsomorphism q	  ============================	  _^-1 = q o p	";
+            data = "1 subgoal (ID 444)	  	  C : PreCategory	  x, y : C.(object)	  p : C.(morphism) x y	  H : IsIsomorphism p	  z : C.(object)	  q : C.(morphism) y z	  H0 : IsIsomorphism q	  ============================	  (isisomorphism_compose (isisomorphism_inverse H) (isisomorphism_inverse H0))	  .(morphism_inverse) = C.(compose) x y z q p	";
             responses[i]=data;
           
 
@@ -2878,12 +2878,12 @@
           
 
             i = 572;
-            data = "1 subgoal (ID 510)	  	  C : PreCategory	  x, y : C	  p : morphism C x y	  z : C	  q : morphism C x z	  r : morphism C y z	  H : IsIsomorphism r	  ============================	  p = _^-1 o q -> r o p = q	";
+            data = "1 subgoal (ID 472)	  	  C : PreCategory	  x, y : C.(object)	  p : C.(morphism) x y	  z : C.(object)	  q : C.(morphism) x z	  r : C.(morphism) y z	  H : IsIsomorphism r	  ============================	  p = C.(compose) x z y H.(morphism_inverse) q -> C.(compose) x y z r p = q	";
             responses[i]=data;
           
 
             i = 573;
-            data = "1 subgoal (ID 510)	  	  C : PreCategory	  x, y : C	  p : morphism C x y	  z : C	  q : morphism C x z	  r : morphism C y z	  H : IsIsomorphism r	  ============================	  p = _^-1 o q -> r o p = q	";
+            data = "1 subgoal (ID 472)	  	  C : PreCategory	  x, y : C.(object)	  p : C.(morphism) x y	  z : C.(object)	  q : C.(morphism) x z	  r : C.(morphism) y z	  H : IsIsomorphism r	  ============================	  p = C.(compose) x z y H.(morphism_inverse) q -> C.(compose) x y z r p = q	";
             responses[i]=data;
           
 
@@ -2898,12 +2898,12 @@
           
 
             i = 576;
-            data = "1 subgoal (ID 538)	  	  C : PreCategory	  x, y : C	  p : morphism C x y	  H : IsIsomorphism p	  z : C	  q : morphism C x z	  r : morphism C y z	  ============================	  r = q o _^-1 -> r o p = q	";
+            data = "1 subgoal (ID 500)	  	  C : PreCategory	  x, y : C.(object)	  p : C.(morphism) x y	  H : IsIsomorphism p	  z : C.(object)	  q : C.(morphism) x z	  r : C.(morphism) y z	  ============================	  r = C.(compose) y x z q H.(morphism_inverse) -> C.(compose) x y z r p = q	";
             responses[i]=data;
           
 
             i = 577;
-            data = "1 subgoal (ID 538)	  	  C : PreCategory	  x, y : C	  p : morphism C x y	  H : IsIsomorphism p	  z : C	  q : morphism C x z	  r : morphism C y z	  ============================	  r = q o _^-1 -> r o p = q	";
+            data = "1 subgoal (ID 500)	  	  C : PreCategory	  x, y : C.(object)	  p : C.(morphism) x y	  H : IsIsomorphism p	  z : C.(object)	  q : C.(morphism) x z	  r : C.(morphism) y z	  ============================	  r = C.(compose) y x z q H.(morphism_inverse) -> C.(compose) x y z r p = q	";
             responses[i]=data;
           
 
@@ -2918,12 +2918,12 @@
           
 
             i = 580;
-            data = "1 subgoal (ID 566)	  	  C : PreCategory	  x, y : C	  p : morphism C x y	  z : C	  q : morphism C x z	  r : morphism C z y	  H : IsIsomorphism r	  ============================	  p = r o q -> _^-1 o p = q	";
+            data = "1 subgoal (ID 528)	  	  C : PreCategory	  x, y : C.(object)	  p : C.(morphism) x y	  z : C.(object)	  q : C.(morphism) x z	  r : C.(morphism) z y	  H : IsIsomorphism r	  ============================	  p = C.(compose) x z y r q -> C.(compose) x y z H.(morphism_inverse) p = q	";
             responses[i]=data;
           
 
             i = 581;
-            data = "1 subgoal (ID 566)	  	  C : PreCategory	  x, y : C	  p : morphism C x y	  z : C	  q : morphism C x z	  r : morphism C z y	  H : IsIsomorphism r	  ============================	  p = r o q -> _^-1 o p = q	";
+            data = "1 subgoal (ID 528)	  	  C : PreCategory	  x, y : C.(object)	  p : C.(morphism) x y	  z : C.(object)	  q : C.(morphism) x z	  r : C.(morphism) z y	  H : IsIsomorphism r	  ============================	  p = C.(compose) x z y r q -> C.(compose) x y z H.(morphism_inverse) p = q	";
             responses[i]=data;
           
 
@@ -2938,12 +2938,12 @@
           
 
             i = 584;
-            data = "1 subgoal (ID 594)	  	  C : PreCategory	  x, y : C	  p : morphism C x y	  H : IsIsomorphism p	  z : C	  q : morphism C y z	  r : morphism C x z	  ============================	  r = q o p -> r o _^-1 = q	";
+            data = "1 subgoal (ID 556)	  	  C : PreCategory	  x, y : C.(object)	  p : C.(morphism) x y	  H : IsIsomorphism p	  z : C.(object)	  q : C.(morphism) y z	  r : C.(morphism) x z	  ============================	  r = C.(compose) x y z q p -> C.(compose) y x z r H.(morphism_inverse) = q	";
             responses[i]=data;
           
 
             i = 585;
-            data = "1 subgoal (ID 594)	  	  C : PreCategory	  x, y : C	  p : morphism C x y	  H : IsIsomorphism p	  z : C	  q : morphism C y z	  r : morphism C x z	  ============================	  r = q o p -> r o _^-1 = q	";
+            data = "1 subgoal (ID 556)	  	  C : PreCategory	  x, y : C.(object)	  p : C.(morphism) x y	  H : IsIsomorphism p	  z : C.(object)	  q : C.(morphism) y z	  r : C.(morphism) x z	  ============================	  r = C.(compose) x y z q p -> C.(compose) y x z r H.(morphism_inverse) = q	";
             responses[i]=data;
           
 
@@ -2958,12 +2958,12 @@
           
 
             i = 588;
-            data = "1 subgoal (ID 622)	  	  C : PreCategory	  x, y : C	  p : morphism C x y	  z : C	  q : morphism C x z	  r : morphism C y z	  H : IsIsomorphism r	  ============================	  _^-1 o q = p -> q = r o p	";
+            data = "1 subgoal (ID 584)	  	  C : PreCategory	  x, y : C.(object)	  p : C.(morphism) x y	  z : C.(object)	  q : C.(morphism) x z	  r : C.(morphism) y z	  H : IsIsomorphism r	  ============================	  C.(compose) x z y H.(morphism_inverse) q = p -> q = C.(compose) x y z r p	";
             responses[i]=data;
           
 
             i = 589;
-            data = "1 subgoal (ID 622)	  	  C : PreCategory	  x, y : C	  p : morphism C x y	  z : C	  q : morphism C x z	  r : morphism C y z	  H : IsIsomorphism r	  ============================	  _^-1 o q = p -> q = r o p	";
+            data = "1 subgoal (ID 584)	  	  C : PreCategory	  x, y : C.(object)	  p : C.(morphism) x y	  z : C.(object)	  q : C.(morphism) x z	  r : C.(morphism) y z	  H : IsIsomorphism r	  ============================	  C.(compose) x z y H.(morphism_inverse) q = p -> q = C.(compose) x y z r p	";
             responses[i]=data;
           
 
@@ -2978,12 +2978,12 @@
           
 
             i = 592;
-            data = "1 subgoal (ID 650)	  	  C : PreCategory	  x, y : C	  p : morphism C x y	  H : IsIsomorphism p	  z : C	  q : morphism C x z	  r : morphism C y z	  ============================	  q o _^-1 = r -> q = r o p	";
+            data = "1 subgoal (ID 612)	  	  C : PreCategory	  x, y : C.(object)	  p : C.(morphism) x y	  H : IsIsomorphism p	  z : C.(object)	  q : C.(morphism) x z	  r : C.(morphism) y z	  ============================	  C.(compose) y x z q H.(morphism_inverse) = r -> q = C.(compose) x y z r p	";
             responses[i]=data;
           
 
             i = 593;
-            data = "1 subgoal (ID 650)	  	  C : PreCategory	  x, y : C	  p : morphism C x y	  H : IsIsomorphism p	  z : C	  q : morphism C x z	  r : morphism C y z	  ============================	  q o _^-1 = r -> q = r o p	";
+            data = "1 subgoal (ID 612)	  	  C : PreCategory	  x, y : C.(object)	  p : C.(morphism) x y	  H : IsIsomorphism p	  z : C.(object)	  q : C.(morphism) x z	  r : C.(morphism) y z	  ============================	  C.(compose) y x z q H.(morphism_inverse) = r -> q = C.(compose) x y z r p	";
             responses[i]=data;
           
 
@@ -2998,12 +2998,12 @@
           
 
             i = 596;
-            data = "1 subgoal (ID 686)	  	  C : PreCategory	  x, y : C	  p : morphism C x y	  z : C	  q : morphism C x z	  r : morphism C z y	  H : IsIsomorphism r	  ============================	  r o q = p -> q = _^-1 o p	";
+            data = "1 subgoal (ID 648)	  	  C : PreCategory	  x, y : C.(object)	  p : C.(morphism) x y	  z : C.(object)	  q : C.(morphism) x z	  r : C.(morphism) z y	  H : IsIsomorphism r	  ============================	  C.(compose) x z y r q = p -> q = C.(compose) x y z H.(morphism_inverse) p	";
             responses[i]=data;
           
 
             i = 597;
-            data = "1 subgoal (ID 686)	  	  C : PreCategory	  x, y : C	  p : morphism C x y	  z : C	  q : morphism C x z	  r : morphism C z y	  H : IsIsomorphism r	  ============================	  r o q = p -> q = _^-1 o p	";
+            data = "1 subgoal (ID 648)	  	  C : PreCategory	  x, y : C.(object)	  p : C.(morphism) x y	  z : C.(object)	  q : C.(morphism) x z	  r : C.(morphism) z y	  H : IsIsomorphism r	  ============================	  C.(compose) x z y r q = p -> q = C.(compose) x y z H.(morphism_inverse) p	";
             responses[i]=data;
           
 
@@ -3018,12 +3018,12 @@
           
 
             i = 600;
-            data = "1 subgoal (ID 715)	  	  C : PreCategory	  x, y : C	  p : morphism C x y	  H : IsIsomorphism p	  z : C	  q : morphism C y z	  r : morphism C x z	  ============================	  q o p = r -> q = r o _^-1	";
+            data = "1 subgoal (ID 677)	  	  C : PreCategory	  x, y : C.(object)	  p : C.(morphism) x y	  H : IsIsomorphism p	  z : C.(object)	  q : C.(morphism) y z	  r : C.(morphism) x z	  ============================	  C.(compose) x y z q p = r -> q = C.(compose) y x z r H.(morphism_inverse)	";
             responses[i]=data;
           
 
             i = 601;
-            data = "1 subgoal (ID 715)	  	  C : PreCategory	  x, y : C	  p : morphism C x y	  H : IsIsomorphism p	  z : C	  q : morphism C y z	  r : morphism C x z	  ============================	  q o p = r -> q = r o _^-1	";
+            data = "1 subgoal (ID 677)	  	  C : PreCategory	  x, y : C.(object)	  p : C.(morphism) x y	  H : IsIsomorphism p	  z : C.(object)	  q : C.(morphism) y z	  r : C.(morphism) x z	  ============================	  C.(compose) x y z q p = r -> q = C.(compose) y x z r H.(morphism_inverse)	";
             responses[i]=data;
           
 
@@ -3038,12 +3038,12 @@
           
 
             i = 604;
-            data = "1 subgoal (ID 739)	  	  C : PreCategory	  x, y : C	  p, q : morphism C x y	  H : IsIsomorphism q	  ============================	  p o _^-1 = 1 -> p = q	";
+            data = "1 subgoal (ID 701)	  	  C : PreCategory	  x, y : C.(object)	  p, q : C.(morphism) x y	  H : IsIsomorphism q	  ============================	  C.(compose) y x y p H.(morphism_inverse) = C.(identity) y -> p = q	";
             responses[i]=data;
           
 
             i = 605;
-            data = "1 subgoal (ID 739)	  	  C : PreCategory	  x, y : C	  p, q : morphism C x y	  H : IsIsomorphism q	  ============================	  p o _^-1 = 1 -> p = q	";
+            data = "1 subgoal (ID 701)	  	  C : PreCategory	  x, y : C.(object)	  p, q : C.(morphism) x y	  H : IsIsomorphism q	  ============================	  C.(compose) y x y p H.(morphism_inverse) = C.(identity) y -> p = q	";
             responses[i]=data;
           
 
@@ -3058,12 +3058,12 @@
           
 
             i = 608;
-            data = "1 subgoal (ID 763)	  	  C : PreCategory	  x, y : C	  p, q : morphism C x y	  H : IsIsomorphism q	  ============================	  _^-1 o p = 1 -> p = q	";
+            data = "1 subgoal (ID 725)	  	  C : PreCategory	  x, y : C.(object)	  p, q : C.(morphism) x y	  H : IsIsomorphism q	  ============================	  C.(compose) x y x H.(morphism_inverse) p = C.(identity) x -> p = q	";
             responses[i]=data;
           
 
             i = 609;
-            data = "1 subgoal (ID 763)	  	  C : PreCategory	  x, y : C	  p, q : morphism C x y	  H : IsIsomorphism q	  ============================	  _^-1 o p = 1 -> p = q	";
+            data = "1 subgoal (ID 725)	  	  C : PreCategory	  x, y : C.(object)	  p, q : C.(morphism) x y	  H : IsIsomorphism q	  ============================	  C.(compose) x y x H.(morphism_inverse) p = C.(identity) x -> p = q	";
             responses[i]=data;
           
 
@@ -3078,12 +3078,12 @@
           
 
             i = 612;
-            data = "1 subgoal (ID 787)	  	  C : PreCategory	  x, y : C	  p : morphism C x y	  q : morphism C y x	  H : IsIsomorphism q	  ============================	  p o q = 1 -> p = _^-1	";
+            data = "1 subgoal (ID 749)	  	  C : PreCategory	  x, y : C.(object)	  p : C.(morphism) x y	  q : C.(morphism) y x	  H : IsIsomorphism q	  ============================	  C.(compose) y x y p q = C.(identity) y -> p = H.(morphism_inverse)	";
             responses[i]=data;
           
 
             i = 613;
-            data = "1 subgoal (ID 787)	  	  C : PreCategory	  x, y : C	  p : morphism C x y	  q : morphism C y x	  H : IsIsomorphism q	  ============================	  p o q = 1 -> p = _^-1	";
+            data = "1 subgoal (ID 749)	  	  C : PreCategory	  x, y : C.(object)	  p : C.(morphism) x y	  q : C.(morphism) y x	  H : IsIsomorphism q	  ============================	  C.(compose) y x y p q = C.(identity) y -> p = H.(morphism_inverse)	";
             responses[i]=data;
           
 
@@ -3098,12 +3098,12 @@
           
 
             i = 616;
-            data = "1 subgoal (ID 811)	  	  C : PreCategory	  x, y : C	  p : morphism C x y	  q : morphism C y x	  H : IsIsomorphism q	  ============================	  q o p = 1 -> p = _^-1	";
+            data = "1 subgoal (ID 773)	  	  C : PreCategory	  x, y : C.(object)	  p : C.(morphism) x y	  q : C.(morphism) y x	  H : IsIsomorphism q	  ============================	  C.(compose) x y x q p = C.(identity) x -> p = H.(morphism_inverse)	";
             responses[i]=data;
           
 
             i = 617;
-            data = "1 subgoal (ID 811)	  	  C : PreCategory	  x, y : C	  p : morphism C x y	  q : morphism C y x	  H : IsIsomorphism q	  ============================	  q o p = 1 -> p = _^-1	";
+            data = "1 subgoal (ID 773)	  	  C : PreCategory	  x, y : C.(object)	  p : C.(morphism) x y	  q : C.(morphism) y x	  H : IsIsomorphism q	  ============================	  C.(compose) x y x q p = C.(identity) x -> p = H.(morphism_inverse)	";
             responses[i]=data;
           
 
@@ -3118,12 +3118,12 @@
           
 
             i = 620;
-            data = "1 subgoal (ID 837)	  	  C : PreCategory	  x, y : C	  p : morphism C x y	  H : IsIsomorphism p	  q : morphism C x y	  ============================	  1 = _^-1 o q -> p = q	";
+            data = "1 subgoal (ID 799)	  	  C : PreCategory	  x, y : C.(object)	  p : C.(morphism) x y	  H : IsIsomorphism p	  q : C.(morphism) x y	  ============================	  C.(identity) x = C.(compose) x y x H.(morphism_inverse) q -> p = q	";
             responses[i]=data;
           
 
             i = 621;
-            data = "1 subgoal (ID 837)	  	  C : PreCategory	  x, y : C	  p : morphism C x y	  H : IsIsomorphism p	  q : morphism C x y	  ============================	  1 = _^-1 o q -> p = q	";
+            data = "1 subgoal (ID 799)	  	  C : PreCategory	  x, y : C.(object)	  p : C.(morphism) x y	  H : IsIsomorphism p	  q : C.(morphism) x y	  ============================	  C.(identity) x = C.(compose) x y x H.(morphism_inverse) q -> p = q	";
             responses[i]=data;
           
 
@@ -3138,12 +3138,12 @@
           
 
             i = 624;
-            data = "1 subgoal (ID 865)	  	  C : PreCategory	  x, y : C	  p : morphism C x y	  H : IsIsomorphism p	  q : morphism C x y	  ============================	  1 = q o _^-1 -> p = q	";
+            data = "1 subgoal (ID 827)	  	  C : PreCategory	  x, y : C.(object)	  p : C.(morphism) x y	  H : IsIsomorphism p	  q : C.(morphism) x y	  ============================	  C.(identity) y = C.(compose) y x y q H.(morphism_inverse) -> p = q	";
             responses[i]=data;
           
 
             i = 625;
-            data = "1 subgoal (ID 865)	  	  C : PreCategory	  x, y : C	  p : morphism C x y	  H : IsIsomorphism p	  q : morphism C x y	  ============================	  1 = q o _^-1 -> p = q	";
+            data = "1 subgoal (ID 827)	  	  C : PreCategory	  x, y : C.(object)	  p : C.(morphism) x y	  H : IsIsomorphism p	  q : C.(morphism) x y	  ============================	  C.(identity) y = C.(compose) y x y q H.(morphism_inverse) -> p = q	";
             responses[i]=data;
           
 
@@ -3158,12 +3158,12 @@
           
 
             i = 628;
-            data = "1 subgoal (ID 893)	  	  C : PreCategory	  x, y : C	  p : morphism C x y	  H : IsIsomorphism p	  q : morphism C y x	  ============================	  1 = q o p -> _^-1 = q	";
+            data = "1 subgoal (ID 855)	  	  C : PreCategory	  x, y : C.(object)	  p : C.(morphism) x y	  H : IsIsomorphism p	  q : C.(morphism) y x	  ============================	  C.(identity) x = C.(compose) x y x q p -> H.(morphism_inverse) = q	";
             responses[i]=data;
           
 
             i = 629;
-            data = "1 subgoal (ID 893)	  	  C : PreCategory	  x, y : C	  p : morphism C x y	  H : IsIsomorphism p	  q : morphism C y x	  ============================	  1 = q o p -> _^-1 = q	";
+            data = "1 subgoal (ID 855)	  	  C : PreCategory	  x, y : C.(object)	  p : C.(morphism) x y	  H : IsIsomorphism p	  q : C.(morphism) y x	  ============================	  C.(identity) x = C.(compose) x y x q p -> H.(morphism_inverse) = q	";
             responses[i]=data;
           
 
@@ -3178,12 +3178,12 @@
           
 
             i = 632;
-            data = "1 subgoal (ID 919)	  	  C : PreCategory	  x, y : C	  p : morphism C x y	  H : IsIsomorphism p	  q : morphism C y x	  ============================	  1 = p o q -> _^-1 = q	";
+            data = "1 subgoal (ID 881)	  	  C : PreCategory	  x, y : C.(object)	  p : C.(morphism) x y	  H : IsIsomorphism p	  q : C.(morphism) y x	  ============================	  C.(identity) y = C.(compose) y x y p q -> H.(morphism_inverse) = q	";
             responses[i]=data;
           
 
             i = 633;
-            data = "1 subgoal (ID 919)	  	  C : PreCategory	  x, y : C	  p : morphism C x y	  H : IsIsomorphism p	  q : morphism C y x	  ============================	  1 = p o q -> _^-1 = q	";
+            data = "1 subgoal (ID 881)	  	  C : PreCategory	  x, y : C.(object)	  p : C.(morphism) x y	  H : IsIsomorphism p	  q : C.(morphism) y x	  ============================	  C.(identity) y = C.(compose) y x y p q -> H.(morphism_inverse) = q	";
             responses[i]=data;
           
 
@@ -3403,12 +3403,12 @@
           
 
             i = 677;
-            data = "1 subgoal (ID 115)	  	  C : PreCategory	  x0, x1, x2, x3, x4 : C	  a : morphism C x3 x4	  b : morphism C x2 x3	  c : morphism C x1 x2	  d : morphism C x0 x1	  ============================	  a o b o c o d = a o (b o c o d)	";
+            data = "1 subgoal (ID 77)	  	  C : PreCategory	  x0, x1, x2, x3, x4 : C.(object)	  a : C.(morphism) x3 x4	  b : C.(morphism) x2 x3	  c : C.(morphism) x1 x2	  d : C.(morphism) x0 x1	  ============================	  C.(compose) x0 x1 x4 (C.(compose) x1 x2 x4 (C.(compose) x2 x3 x4 a b) c) d =	  C.(compose) x0 x3 x4 a (C.(compose) x0 x1 x3 (C.(compose) x1 x2 x3 b c) d)	";
             responses[i]=data;
           
 
             i = 678;
-            data = "1 subgoal (ID 115)	  	  C : PreCategory	  x0, x1, x2, x3, x4 : C	  a : morphism C x3 x4	  b : morphism C x2 x3	  c : morphism C x1 x2	  d : morphism C x0 x1	  ============================	  a o b o c o d = a o (b o c o d)	";
+            data = "1 subgoal (ID 77)	  	  C : PreCategory	  x0, x1, x2, x3, x4 : C.(object)	  a : C.(morphism) x3 x4	  b : C.(morphism) x2 x3	  c : C.(morphism) x1 x2	  d : C.(morphism) x0 x1	  ============================	  C.(compose) x0 x1 x4 (C.(compose) x1 x2 x4 (C.(compose) x2 x3 x4 a b) c) d =	  C.(compose) x0 x3 x4 a (C.(compose) x0 x1 x3 (C.(compose) x1 x2 x3 b c) d)	";
             responses[i]=data;
           
 

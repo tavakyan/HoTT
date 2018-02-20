@@ -93,17 +93,17 @@
           
 
             i = 15;
-            data = "1 subgoal (ID 19)	  	  H : Univalence	  F : Type -> Type	  FF : Functorish F	  A : Type	  B : Type	  f : A -> B	  H0 : IsEquiv f	  ============================	  IsEquiv (fmap _ f)	";
+            data = "1 subgoal (ID 16)	  	  H : Univalence	  F : Type -> Type	  FF : Functorish F	  A : Type	  B : Type	  f : A -> B	  H0 : IsEquiv f	  ============================	  IsEquiv (FF.(fmap) A B f)	";
             responses[i]=data;
           
 
             i = 16;
-            data = "1 subgoal (ID 19)	  	  H : Univalence	  F : Type -> Type	  FF : Functorish F	  A : Type	  B : Type	  f : A -> B	  H0 : IsEquiv f	  ============================	  IsEquiv (fmap _ f)	";
+            data = "1 subgoal (ID 16)	  	  H : Univalence	  F : Type -> Type	  FF : Functorish F	  A : Type	  B : Type	  f : A -> B	  H0 : IsEquiv f	  ============================	  IsEquiv (FF.(fmap) A B f)	";
             responses[i]=data;
           
 
             i = 17;
-            data = "1 subgoal (ID 39)	  	  H : Univalence	  F : Type -> Type	  FF : Functorish F	  A : Type	  B : Type	  f : A -> B	  H0 : IsEquiv f	  ============================	  IsEquiv (fmap _ 1%equiv)	";
+            data = "1 subgoal (ID 36)	  	  H : Univalence	  F : Type -> Type	  FF : Functorish F	  A : Type	  B : Type	  f : A -> B	  H0 : IsEquiv f	  ============================	  IsEquiv (FF.(fmap) A A 1%equiv.(equiv_fun))	";
             responses[i]=data;
           
 
@@ -118,37 +118,37 @@
           
 
             i = 20;
-            data = "1 subgoal (ID 47)	  	  H : Univalence	  F : Type -> Type	  FF : Functorish F	  A : Type	  B : Type	  f : A -> B	  H0 : IsEquiv f	  ============================	  fmap _ f = equiv_path (F A) (F B) (ap F (path_universe f))	";
+            data = "1 subgoal (ID 44)	  	  H : Univalence	  F : Type -> Type	  FF : Functorish F	  A : Type	  B : Type	  f : A -> B	  H0 : IsEquiv f	  ============================	  FF.(fmap) A B f =	  (equiv_path (F A) (F B) (ap F (path_universe f))).(equiv_fun)	";
             responses[i]=data;
           
 
             i = 21;
-            data = "1 subgoal (ID 47)	  	  H : Univalence	  F : Type -> Type	  FF : Functorish F	  A : Type	  B : Type	  f : A -> B	  H0 : IsEquiv f	  ============================	  fmap _ f = equiv_path (F A) (F B) (ap F (path_universe f))	";
+            data = "1 subgoal (ID 44)	  	  H : Univalence	  F : Type -> Type	  FF : Functorish F	  A : Type	  B : Type	  f : A -> B	  H0 : IsEquiv f	  ============================	  FF.(fmap) A B f =	  (equiv_path (F A) (F B) (ap F (path_universe f))).(equiv_fun)	";
             responses[i]=data;
           
 
             i = 22;
-            data = "1 subgoal (ID 91)	  	  H : Univalence	  F : Type -> Type	  FF : Functorish F	  A : Type	  B : Type	  f : A -> B	  H0 : IsEquiv f	  ============================	  fmap _ 1%equiv = equiv_path (F A) (F A) (ap F (path_universe 1%equiv))	";
+            data = "1 subgoal (ID 88)	  	  H : Univalence	  F : Type -> Type	  FF : Functorish F	  A : Type	  B : Type	  f : A -> B	  H0 : IsEquiv f	  ============================	  FF.(fmap) A A 1%equiv.(equiv_fun) =	  (equiv_path (F A) (F A) (ap F (path_universe 1%equiv.(equiv_fun))))	  .(equiv_fun)	";
             responses[i]=data;
           
 
             i = 23;
-            data = "2 subgoals (ID 111)	  	  H : Univalence	  F : Type -> Type	  FF : Functorish F	  A : Type	  B : Type	  f : A -> B	  H0 : IsEquiv f	  ============================	  fmap _ 1%equiv = (idmap : F A -> F A)		subgoal 2 (ID 112) is:	 (idmap : F A -> F A) = equiv_path (F A) (F A) (ap F (path_universe 1%equiv))	";
+            data = "2 subgoals (ID 108)	  	  H : Univalence	  F : Type -> Type	  FF : Functorish F	  A : Type	  B : Type	  f : A -> B	  H0 : IsEquiv f	  ============================	  FF.(fmap) A A 1%equiv.(equiv_fun) = (idmap : F A -> F A)		subgoal 2 (ID 109) is:	 (idmap : F A -> F A) =	 (equiv_path (F A) (F A) (ap F (path_universe 1%equiv.(equiv_fun))))	 .(equiv_fun)	";
             responses[i]=data;
           
 
             i = 24;
-            data = "1 subgoal (ID 112)	  	  H : Univalence	  F : Type -> Type	  FF : Functorish F	  A : Type	  B : Type	  f : A -> B	  H0 : IsEquiv f	  ============================	  (idmap : F A -> F A) =	  equiv_path (F A) (F A) (ap F (path_universe 1%equiv))	";
+            data = "1 subgoal (ID 109)	  	  H : Univalence	  F : Type -> Type	  FF : Functorish F	  A : Type	  B : Type	  f : A -> B	  H0 : IsEquiv f	  ============================	  (idmap : F A -> F A) =	  (equiv_path (F A) (F A) (ap F (path_universe 1%equiv.(equiv_fun))))	  .(equiv_fun)	";
             responses[i]=data;
           
 
             i = 25;
-            data = "1 subgoal (ID 117)	  	  H : Univalence	  F : Type -> Type	  FF : Functorish F	  A : Type	  B : Type	  f : A -> B	  H0 : IsEquiv f	  ============================	  (idmap : F A -> F A) =	  equiv_path (F A) (F A) (ap F (path_universe (equiv_path A A 1)))	";
+            data = "1 subgoal (ID 114)	  	  H : Univalence	  F : Type -> Type	  FF : Functorish F	  A : Type	  B : Type	  f : A -> B	  H0 : IsEquiv f	  ============================	  (idmap : F A -> F A) =	  (equiv_path (F A) (F A)	     (ap F (path_universe (equiv_path A A 1).(equiv_fun)))).(	  equiv_fun)	";
             responses[i]=data;
           
 
             i = 26;
-            data = "1 subgoal (ID 122)	  	  H : Univalence	  F : Type -> Type	  FF : Functorish F	  A : Type	  B : Type	  f : A -> B	  H0 : IsEquiv f	  ============================	  idmap = equiv_path (F A) (F A) (ap F 1)	";
+            data = "1 subgoal (ID 119)	  	  H : Univalence	  F : Type -> Type	  FF : Functorish F	  A : Type	  B : Type	  f : A -> B	  H0 : IsEquiv f	  ============================	  idmap = (equiv_path (F A) (F A) (ap F 1)).(equiv_fun)	";
             responses[i]=data;
           
 

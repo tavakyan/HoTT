@@ -268,17 +268,17 @@
           
 
             i = 50;
-            data = "1 subgoal (ID 14)	  	  C : PreCategory	  D : PreCategory	  E : PreCategory	  F : Functor (C * D) E	  s, d : C	  m : morphism C s d	  ============================	  NaturalTransformation (induced_snd F s) (induced_snd F d)	";
+            data = "1 subgoal (ID 14)	  	  C : PreCategory	  D : PreCategory	  E : PreCategory	  F : Functor (C * D) E	  s, d : C.(object)	  m : C.(morphism) s d	  ============================	  NaturalTransformation (induced_snd F s) (induced_snd F d)	";
             responses[i]=data;
           
 
             i = 51;
-            data = "1 subgoal (ID 14)	  	  C : PreCategory	  D : PreCategory	  E : PreCategory	  F : Functor (C * D) E	  s, d : C	  m : morphism C s d	  ============================	  NaturalTransformation (induced_snd F s) (induced_snd F d)	";
+            data = "1 subgoal (ID 14)	  	  C : PreCategory	  D : PreCategory	  E : PreCategory	  F : Functor (C * D) E	  s, d : C.(object)	  m : C.(morphism) s d	  ============================	  NaturalTransformation (induced_snd F s) (induced_snd F d)	";
             responses[i]=data;
           
 
             i = 52;
-            data = "1 subgoal (ID 38)	  	  C : PreCategory	  D : PreCategory	  E : PreCategory	  F : Functor (C * D) E	  s, d : C	  m : morphism C s d	  ============================	  forall (s0 d0 : D) (m0 : morphism D s0 d0),	  (F _1 (m, 1) o (induced_snd F s) _1 m0)%morphism =	  ((induced_snd F d) _1 m0 o F _1 (m, 1))%morphism	";
+            data = "1 subgoal (ID 38)	  	  C : PreCategory	  D : PreCategory	  E : PreCategory	  F : Functor (C * D) E	  s, d : C.(object)	  m : C.(morphism) s d	  ============================	  forall (s0 d0 : D.(object)) (m0 : D.(morphism) s0 d0),	  E.(compose) ((induced_snd F s).(object_of) s0)	    ((induced_snd F s).(object_of) d0) ((induced_snd F d).(object_of) d0)	    (F.(morphism_of) (s, d0) (d, d0) (m, D.(identity) d0))	    ((induced_snd F s).(morphism_of) s0 d0 m0) =	  E.(compose) ((induced_snd F s).(object_of) s0)	    ((induced_snd F d).(object_of) s0) ((induced_snd F d).(object_of) d0)	    ((induced_snd F d).(morphism_of) s0 d0 m0)	    (F.(morphism_of) (s, s0) (d, s0) (m, D.(identity) s0))	";
             responses[i]=data;
           
 
@@ -293,17 +293,17 @@
           
 
             i = 55;
-            data = "1 subgoal (ID 28)	  	  C : PreCategory	  D : PreCategory	  E : PreCategory	  F : Functor (C * D) E	  s, d : D	  m : morphism D s d	  ============================	  NaturalTransformation (Core.induced_fst F s) (Core.induced_fst F d)	";
+            data = "1 subgoal (ID 28)	  	  C : PreCategory	  D : PreCategory	  E : PreCategory	  F : Functor (C * D) E	  s, d : D.(object)	  m : D.(morphism) s d	  ============================	  NaturalTransformation (Core.induced_fst F s) (Core.induced_fst F d)	";
             responses[i]=data;
           
 
             i = 56;
-            data = "1 subgoal (ID 28)	  	  C : PreCategory	  D : PreCategory	  E : PreCategory	  F : Functor (C * D) E	  s, d : D	  m : morphism D s d	  ============================	  NaturalTransformation (Core.induced_fst F s) (Core.induced_fst F d)	";
+            data = "1 subgoal (ID 28)	  	  C : PreCategory	  D : PreCategory	  E : PreCategory	  F : Functor (C * D) E	  s, d : D.(object)	  m : D.(morphism) s d	  ============================	  NaturalTransformation (Core.induced_fst F s) (Core.induced_fst F d)	";
             responses[i]=data;
           
 
             i = 57;
-            data = "1 subgoal (ID 52)	  	  C : PreCategory	  D : PreCategory	  E : PreCategory	  F : Functor (C * D) E	  s, d : D	  m : morphism D s d	  ============================	  forall (s0 d0 : C) (m0 : morphism C s0 d0),	  (F _1 (1, m) o (Core.induced_fst F s) _1 m0)%morphism =	  ((Core.induced_fst F d) _1 m0 o F _1 (1, m))%morphism	";
+            data = "1 subgoal (ID 52)	  	  C : PreCategory	  D : PreCategory	  E : PreCategory	  F : Functor (C * D) E	  s, d : D.(object)	  m : D.(morphism) s d	  ============================	  forall (s0 d0 : C.(object)) (m0 : C.(morphism) s0 d0),	  E.(compose) ((Core.induced_fst F s).(object_of) s0)	    ((Core.induced_fst F s).(object_of) d0)	    ((Core.induced_fst F d).(object_of) d0)	    (F.(morphism_of) (d0, s) (d0, d) (C.(identity) d0, m))	    ((Core.induced_fst F s).(morphism_of) s0 d0 m0) =	  E.(compose) ((Core.induced_fst F s).(object_of) s0)	    ((Core.induced_fst F d).(object_of) s0)	    ((Core.induced_fst F d).(object_of) d0)	    ((Core.induced_fst F d).(morphism_of) s0 d0 m0)	    (F.(morphism_of) (s0, s) (s0, d) (C.(identity) s0, m))	";
             responses[i]=data;
           
 

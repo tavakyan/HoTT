@@ -403,7 +403,7 @@
           
 
             i = 77;
-            data = "1 subgoal (ID 124)	  	  H : Univalence	  z : Int	  ============================	  transport idmap (path_universe _^-1) z = pred_int z	";
+            data = "1 subgoal (ID 124)	  	  H : Univalence	  z : Int	  ============================	  transport idmap (path_universe isequiv_succ_int.(equiv_inv)) z = pred_int z	";
             responses[i]=data;
           
 
@@ -678,37 +678,37 @@
           
 
             i = 132;
-            data = "2 subgoals (ID 123)	  	  H : Univalence	  ============================	  merely S1		subgoal 2 (ID 124) is:	 forall x y : S1, merely (x = y)	";
+            data = "2 subgoals (ID 123)	  	  H : Univalence	  ============================	  (merely S1).(trunctype_type)		subgoal 2 (ID 124) is:	 forall x y : S1, (merely (x = y)).(trunctype_type)	";
             responses[i]=data;
           
 
             i = 133;
-            data = "1 subgoal (ID 123)	  	  H : Univalence	  ============================	  merely S1	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 124)		subgoal 1 (ID 124) is:	 forall x y : S1, merely (x = y)	";
+            data = "1 subgoal (ID 123)	  	  H : Univalence	  ============================	  (merely S1).(trunctype_type)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 124)		subgoal 1 (ID 124) is:	 forall x y : S1, (merely (x = y)).(trunctype_type)	";
             responses[i]=data;
           
 
             i = 134;
-            data = "1 subgoal (ID 124)	  	  H : Univalence	  ============================	  forall x y : S1, merely (x = y)	2 subgoals (ID 132)	  	  H : Univalence	  ============================	  (fun x : S1 => forall y : S1, merely (x = y)) base		subgoal 2 (ID 134) is:	 transport (fun x : S1 => forall y : S1, merely (x = y)) loop ?b = ?b	";
+            data = "1 subgoal (ID 124)	  	  H : Univalence	  ============================	  forall x y : S1, (merely (x = y)).(trunctype_type)	2 subgoals (ID 132)	  	  H : Univalence	  ============================	  (fun x : S1 => forall y : S1, (merely (x = y)).(trunctype_type)) base		subgoal 2 (ID 134) is:	 transport (fun x : S1 => forall y : S1, (merely (x = y)).(trunctype_type))	   loop ?b = ?b	";
             responses[i]=data;
           
 
             i = 135;
-            data = "1 subgoal (ID 132)	  	  H : Univalence	  ============================	  (fun x : S1 => forall y : S1, merely (x = y)) base	2 subgoals (ID 138)	  	  H : Univalence	  ============================	  (fun x : S1 => trunctype_type (merely (base = x))) base		subgoal 2 (ID 140) is:	 transport (fun x : S1 => merely (base = x)) loop ?b = ?b	";
+            data = "1 subgoal (ID 132)	  	  H : Univalence	  ============================	  (fun x : S1 => forall y : S1, (merely (x = y)).(trunctype_type)) base	2 subgoals (ID 138)	  	  H : Univalence	  ============================	  (fun x : S1 => (merely (base = x)).(trunctype_type)) base		subgoal 2 (ID 140) is:	 transport (fun x : S1 => (merely (base = x)).(trunctype_type)) loop ?b = ?b	";
             responses[i]=data;
           
 
             i = 136;
-            data = "1 subgoal (ID 138)	  	  H : Univalence	  ============================	  (fun x : S1 => trunctype_type (merely (base = x))) base	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	2 subgoals (ID 140)		subgoal 1 (ID 140) is:	 transport (fun x : S1 => merely (base = x)) loop (tr 1) = tr 1	subgoal 2 (ID 134) is:	 transport (fun x : S1 => forall y : S1, merely (x = y)) loop	   (S1_ind (fun x : S1 => merely (base = x)) (tr 1) ?l0) =	 S1_ind (fun x : S1 => merely (base = x)) (tr 1) ?l0	";
+            data = "1 subgoal (ID 138)	  	  H : Univalence	  ============================	  (fun x : S1 => (merely (base = x)).(trunctype_type)) base	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	";
             responses[i]=data;
           
 
             i = 137;
-            data = "1 subgoal (ID 140)	  	  H : Univalence	  ============================	  transport (fun x : S1 => merely (base = x)) loop (tr 1) = tr 1	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 134)		subgoal 1 (ID 134) is:	 transport (fun x : S1 => forall y : S1, merely (x = y)) loop	   (S1_ind (fun x : S1 => merely (base = x)) (tr 1)	      (path_ishprop (transport (fun x : S1 => merely (base = x)) loop (tr 1))	         (tr 1))) =	 S1_ind (fun x : S1 => merely (base = x)) (tr 1)	   (path_ishprop (transport (fun x : S1 => merely (base = x)) loop (tr 1))	      (tr 1))	";
+            data = "2 subgoals (ID 140)		subgoal 1 (ID 140) is:	 transport (fun x : S1 => (merely (base = x)).(trunctype_type)) loop (tr 1) =	 tr 1	subgoal 2 (ID 134) is:	 transport (fun x : S1 => forall y : S1, (merely (x = y)).(trunctype_type))	   loop	   (S1_ind (fun x : S1 => (merely (base = x)).(trunctype_type)) (tr 1) ?l0) =	 S1_ind (fun x : S1 => (merely (base = x)).(trunctype_type)) (tr 1) ?l0	1 subgoal (ID 140)	  	  H : Univalence	  ============================	  transport (fun x : S1 => (merely (base = x)).(trunctype_type)) loop (tr 1) =	  tr 1	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 134)		subgoal 1 (ID 134) is:	 transport (fun x : S1 => forall y : S1, (merely (x = y)).(trunctype_type))	   loop	   (S1_ind (fun x : S1 => (merely (base = x)).(trunctype_type)) 	      (tr 1)	      (path_ishprop	         (transport (fun x : S1 => (merely (base = x)).(trunctype_type)) loop	            (tr 1)) (tr 1))) =	 S1_ind (fun x : S1 => (merely (base = x)).(trunctype_type)) 	   (tr 1)	   (path_ishprop	      (transport (fun x : S1 => (merely (base = x)).(trunctype_type)) loop	         (tr 1)) (tr 1))	";
             responses[i]=data;
           
 
             i = 138;
-            data = "1 subgoal (ID 134)	  	  H : Univalence	  ============================	  transport (fun x : S1 => forall y : S1, merely (x = y)) loop	    (S1_ind (fun x : S1 => merely (base = x)) (tr 1)	       (path_ishprop	          (transport (fun x : S1 => merely (base = x)) loop (tr 1)) 	          (tr 1))) =	  S1_ind (fun x : S1 => merely (base = x)) (tr 1)	    (path_ishprop (transport (fun x : S1 => merely (base = x)) loop (tr 1))	       (tr 1))	No more subgoals.	";
+            data = "1 subgoal (ID 134)	  	  H : Univalence	  ============================	  transport (fun x : S1 => forall y : S1, (merely (x = y)).(trunctype_type))	    loop	    (S1_ind (fun x : S1 => (merely (base = x)).(trunctype_type)) 	       (tr 1)	       (path_ishprop	          (transport (fun x : S1 => (merely (base = x)).(trunctype_type))	             loop (tr 1)) (tr 1))) =	  S1_ind (fun x : S1 => (merely (base = x)).(trunctype_type)) 	    (tr 1)	    (path_ishprop	       (transport (fun x : S1 => (merely (base = x)).(trunctype_type)) loop	          (tr 1)) (tr 1))	No more subgoals.	";
             responses[i]=data;
           
 
@@ -753,12 +753,12 @@
           
 
             i = 147;
-            data = "1 subgoal (ID 131)	  	  H : Univalence	  x, y : S1	  p : merely (base = x)	  ============================	  IsTrunc_internal 0 (x = y)	";
+            data = "1 subgoal (ID 131)	  	  H : Univalence	  x, y : S1	  p : (merely (base = x)).(trunctype_type)	  ============================	  IsTrunc_internal 0 (x = y)	";
             responses[i]=data;
           
 
             i = 148;
-            data = "1 subgoal (ID 136)	  	  H : Univalence	  x, y : S1	  p : merely (base = x)	  q : merely (base = y)	  ============================	  IsTrunc_internal 0 (x = y)	";
+            data = "1 subgoal (ID 136)	  	  H : Univalence	  x, y : S1	  p : (merely (base = x)).(trunctype_type)	  q : (merely (base = y)).(trunctype_type)	  ============================	  IsTrunc_internal 0 (x = y)	";
             responses[i]=data;
           
 
@@ -968,47 +968,47 @@
           
 
             i = 190;
-            data = "1 subgoal (ID 163)	  	  H : Univalence	  X : Type	  f : X <~> X	  n : Int	  x : X	  ============================	  transport (S1_rec Type X (path_universe f)) (_^-1 n) x = iter_int f n x	";
+            data = "1 subgoal (ID 163)	  	  H : Univalence	  X : Type	  f : X <~> X	  n : Int	  x : X	  ============================	  transport (S1_rec Type X (path_universe f.(equiv_fun)))	    (equiv_loopS1_int.(equiv_isequiv).(equiv_inv) n) x =	  iter_int f.(equiv_fun) n x	";
             responses[i]=data;
           
 
             i = 191;
-            data = "1 subgoal (ID 163)	  	  H : Univalence	  X : Type	  f : X <~> X	  n : Int	  x : X	  ============================	  transport (S1_rec Type X (path_universe f)) (_^-1 n) x = iter_int f n x	";
+            data = "1 subgoal (ID 163)	  	  H : Univalence	  X : Type	  f : X <~> X	  n : Int	  x : X	  ============================	  transport (S1_rec Type X (path_universe f.(equiv_fun)))	    (equiv_loopS1_int.(equiv_isequiv).(equiv_inv) n) x =	  iter_int f.(equiv_fun) n x	";
             responses[i]=data;
           
 
             i = 192;
-            data = "1 subgoal (ID 178)	  	  H : Univalence	  X : Type	  f : X <~> X	  n : Int	  x : X	  ============================	  transport (S1_rec Type X (path_universe f)) (_^-1 n) x =	  transport idmap (loopexp (path_universe f) n) x	";
+            data = "1 subgoal (ID 178)	  	  H : Univalence	  X : Type	  f : X <~> X	  n : Int	  x : X	  ============================	  transport (S1_rec Type X (path_universe f.(equiv_fun)))	    (equiv_loopS1_int.(equiv_isequiv).(equiv_inv) n) x =	  transport idmap (loopexp (path_universe f.(equiv_fun)) n) x	";
             responses[i]=data;
           
 
             i = 193;
-            data = "1 subgoal (ID 196)	  	  H : Univalence	  X : Type	  f : X <~> X	  n : Int	  x : X	  ============================	  transport idmap (ap (S1_rec Type X (path_universe f)) (_^-1 n)) x =	  transport idmap (loopexp (path_universe f) n) x	";
+            data = "1 subgoal (ID 196)	  	  H : Univalence	  X : Type	  f : X <~> X	  n : Int	  x : X	  ============================	  transport idmap	    (ap (S1_rec Type X (path_universe f.(equiv_fun)))	       (equiv_loopS1_int.(equiv_isequiv).(equiv_inv) n)) x =	  transport idmap (loopexp (path_universe f.(equiv_fun)) n) x	";
             responses[i]=data;
           
 
             i = 194;
-            data = "1 subgoal (ID 210)	  	  H : Univalence	  X : Type	  f : X <~> X	  n : Int	  x : X	  ============================	  ap (S1_rec Type X (path_universe f)) (_^-1 n) = loopexp (path_universe f) n	";
+            data = "1 subgoal (ID 210)	  	  H : Univalence	  X : Type	  f : X <~> X	  n : Int	  x : X	  ============================	  ap (S1_rec Type X (path_universe f.(equiv_fun)))	    (equiv_loopS1_int.(equiv_isequiv).(equiv_inv) n) =	  loopexp (path_universe f.(equiv_fun)) n	";
             responses[i]=data;
           
 
             i = 195;
-            data = "1 subgoal (ID 212)	  	  H : Univalence	  X : Type	  f : X <~> X	  n : Int	  x : X	  ============================	  ap (S1_rec Type X (path_universe f)) (S1_decode base n) =	  loopexp (path_universe f) n	";
+            data = "1 subgoal (ID 212)	  	  H : Univalence	  X : Type	  f : X <~> X	  n : Int	  x : X	  ============================	  ap (S1_rec Type X (path_universe f.(equiv_fun))) (S1_decode base n) =	  loopexp (path_universe f.(equiv_fun)) n	";
             responses[i]=data;
           
 
             i = 196;
-            data = "1 subgoal (ID 214)	  	  H : Univalence	  X : Type	  f : X <~> X	  n : Int	  x : X	  ============================	  ap (S1_rec Type X (path_universe f)) (loopexp loop n) =	  loopexp (path_universe f) n	";
+            data = "1 subgoal (ID 214)	  	  H : Univalence	  X : Type	  f : X <~> X	  n : Int	  x : X	  ============================	  ap (S1_rec Type X (path_universe f.(equiv_fun))) (loopexp loop n) =	  loopexp (path_universe f.(equiv_fun)) n	";
             responses[i]=data;
           
 
             i = 197;
-            data = "1 subgoal (ID 217)	  	  H : Univalence	  X : Type	  f : X <~> X	  n : Int	  x : X	  ============================	  loopexp (ap (S1_rec Type X (path_universe f)) loop) n =	  loopexp (path_universe f) n	";
+            data = "1 subgoal (ID 217)	  	  H : Univalence	  X : Type	  f : X <~> X	  n : Int	  x : X	  ============================	  loopexp (ap (S1_rec Type X (path_universe f.(equiv_fun))) loop) n =	  loopexp (path_universe f.(equiv_fun)) n	";
             responses[i]=data;
           
 
             i = 198;
-            data = "1 subgoal (ID 231)	  	  H : Univalence	  X : Type	  f : X <~> X	  n : Int	  x : X	  ============================	  ap (S1_rec Type X (path_universe f)) loop = path_universe f	";
+            data = "1 subgoal (ID 231)	  	  H : Univalence	  X : Type	  f : X <~> X	  n : Int	  x : X	  ============================	  ap (S1_rec Type X (path_universe f.(equiv_fun))) loop =	  path_universe f.(equiv_fun)	";
             responses[i]=data;
           
 

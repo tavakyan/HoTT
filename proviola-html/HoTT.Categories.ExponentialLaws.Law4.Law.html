@@ -188,17 +188,17 @@
           
 
             i = 34;
-            data = "1 subgoal (ID 9)	  	  H : Funext	  C1 : PreCategory	  C2 : PreCategory	  D : PreCategory	  c : Core.functor_category (Prod.prod C1 C2) D	  ============================	  (functor C1 C2 D) ((inverse C1 C2 D) c) = c	";
+            data = "1 subgoal (ID 9)	  	  H : Funext	  C1 : PreCategory	  C2 : PreCategory	  D : PreCategory	  c : (Core.functor_category (Prod.prod C1 C2) D).(object)	  ============================	  (functor C1 C2 D).(object_of) ((inverse C1 C2 D).(object_of) c) = c	";
             responses[i]=data;
           
 
             i = 35;
-            data = "1 subgoal (ID 9)	  	  H : Funext	  C1 : PreCategory	  C2 : PreCategory	  D : PreCategory	  c : Core.functor_category (Prod.prod C1 C2) D	  ============================	  (functor C1 C2 D) ((inverse C1 C2 D) c) = c	";
+            data = "1 subgoal (ID 9)	  	  H : Funext	  C1 : PreCategory	  C2 : PreCategory	  D : PreCategory	  c : (Core.functor_category (Prod.prod C1 C2) D).(object)	  ============================	  (functor C1 C2 D).(object_of) ((inverse C1 C2 D).(object_of) c) = c	";
             responses[i]=data;
           
 
             i = 36;
-            data = "1 subgoal (ID 39)	  	  H : Funext	  C1 : PreCategory	  C2 : PreCategory	  D : PreCategory	  c : Core.functor_category (Prod.prod C1 C2) D	  ============================	  transport	    (fun GO : C1 * C2 -> D =>	     forall s d : C1 * C2,	     morphism C1 (Datatypes.fst s) (Datatypes.fst d) *	     morphism C2 (Datatypes.snd s) (Datatypes.snd d) ->	     morphism D (GO s) (GO d)) 1	    (fun (s d : C1 * C2)	       (m : morphism C1 (Datatypes.fst s) (Datatypes.fst d) *	            morphism C2 (Datatypes.snd s) (Datatypes.snd d)) =>	     (c _1 (1, Datatypes.snd m)%core o c _1 (Datatypes.fst m, 1)%core)%morphism) =	  morphism_of c	";
+            data = "1 subgoal (ID 39)	  	  H : Funext	  C1 : PreCategory	  C2 : PreCategory	  D : PreCategory	  c : (Core.functor_category (Prod.prod C1 C2) D).(object)	  ============================	  transport	    (fun GO : C1.(object) * C2.(object) -> D.(object) =>	     forall s d : C1.(object) * C2.(object),	     C1.(morphism) s.(Datatypes.fst) d.(Datatypes.fst) *	     C2.(morphism) s.(Datatypes.snd) d.(Datatypes.snd) ->	     D.(morphism) (GO s) (GO d)) 1	    (fun (s d : C1.(object) * C2.(object))	       (m : C1.(morphism) s.(Datatypes.fst) d.(Datatypes.fst) *	            C2.(morphism) s.(Datatypes.snd) d.(Datatypes.snd)) =>	     D.(Category.Core.compose)	       (c.(object_of) (s.(Datatypes.fst), s.(Datatypes.snd))%core)	       (c.(object_of) (d.(Datatypes.fst), s.(Datatypes.snd))%core)	       (c.(object_of) (d.(Datatypes.fst), d.(Datatypes.snd))%core)	       (c.(morphism_of) (d.(Datatypes.fst), s.(Datatypes.snd))%core	          (d.(Datatypes.fst), d.(Datatypes.snd))%core	          (C1.(Core.identity) d.(Datatypes.fst), m.(Datatypes.snd))%core)	       (c.(morphism_of) (s.(Datatypes.fst), s.(Datatypes.snd))%core	          (d.(Datatypes.fst), s.(Datatypes.snd))%core	          (m.(Datatypes.fst), C2.(Core.identity) s.(Datatypes.snd))%core)) =	  c.(morphism_of)	";
             responses[i]=data;
           
 
@@ -213,17 +213,17 @@
           
 
             i = 39;
-            data = "1 subgoal (ID 20)	  	  H : Funext	  C1 : PreCategory	  C2 : PreCategory	  D : PreCategory	  c : Core.functor_category C1 (Core.functor_category C2 D)	  x : C1	  ============================	  ((inverse C1 C2 D) ((functor C1 C2 D) c)) x = c x	";
+            data = "1 subgoal (ID 20)	  	  H : Funext	  C1 : PreCategory	  C2 : PreCategory	  D : PreCategory	  c : (Core.functor_category C1 (Core.functor_category C2 D)).(object)	  x : C1.(object)	  ============================	  ((inverse C1 C2 D).(object_of) ((functor C1 C2 D).(object_of) c))	  .(object_of) x = c.(object_of) x	";
             responses[i]=data;
           
 
             i = 40;
-            data = "1 subgoal (ID 20)	  	  H : Funext	  C1 : PreCategory	  C2 : PreCategory	  D : PreCategory	  c : Core.functor_category C1 (Core.functor_category C2 D)	  x : C1	  ============================	  ((inverse C1 C2 D) ((functor C1 C2 D) c)) x = c x	";
+            data = "1 subgoal (ID 20)	  	  H : Funext	  C1 : PreCategory	  C2 : PreCategory	  D : PreCategory	  c : (Core.functor_category C1 (Core.functor_category C2 D)).(object)	  x : C1.(object)	  ============================	  ((inverse C1 C2 D).(object_of) ((functor C1 C2 D).(object_of) c))	  .(object_of) x = c.(object_of) x	";
             responses[i]=data;
           
 
             i = 41;
-            data = "1 subgoal (ID 52)	  	  H : Funext	  C1 : PreCategory	  C2 : PreCategory	  D : PreCategory	  c : Core.functor_category C1 (Core.functor_category C2 D)	  x : C1	  ============================	  transport	    (fun GO : C2 -> D =>	     forall s d : C2, morphism C2 s d -> morphism D (GO s) (GO d)) 1	    (fun (s2 d2 : C2) (m2 : morphism C2 s2 d2) =>	     ((c x) _1 m2 o (c _1 1) s2)%morphism) = morphism_of (c x)	";
+            data = "1 subgoal (ID 52)	  	  H : Funext	  C1 : PreCategory	  C2 : PreCategory	  D : PreCategory	  c : (Core.functor_category C1 (Core.functor_category C2 D)).(object)	  x : C1.(object)	  ============================	  transport	    (fun GO : C2.(object) -> D.(object) =>	     forall s d : C2.(object),	     C2.(morphism) s d -> D.(morphism) (GO s) (GO d)) 1	    (fun (s2 d2 : C2.(object)) (m2 : C2.(morphism) s2 d2) =>	     D.(Category.Core.compose) ((c.(object_of) x).(object_of) s2)	       ((c.(object_of) x).(object_of) s2) ((c.(object_of) x).(object_of) d2)	       ((c.(object_of) x).(morphism_of) s2 d2 m2)	       ((c.(morphism_of) x x (C1.(Core.identity) x)).(components_of) s2)) =	  (c.(object_of) x).(morphism_of)	";
             responses[i]=data;
           
 
@@ -238,22 +238,22 @@
           
 
             i = 44;
-            data = "1 subgoal (ID 29)	  	  H : Funext	  C1 : PreCategory	  C2 : PreCategory	  D : PreCategory	  c : Core.functor_category C1 (Core.functor_category C2 D)	  ============================	  (inverse C1 C2 D) ((functor C1 C2 D) c) = c	";
+            data = "1 subgoal (ID 29)	  	  H : Funext	  C1 : PreCategory	  C2 : PreCategory	  D : PreCategory	  c : (Core.functor_category C1 (Core.functor_category C2 D)).(object)	  ============================	  (inverse C1 C2 D).(object_of) ((functor C1 C2 D).(object_of) c) = c	";
             responses[i]=data;
           
 
             i = 45;
-            data = "1 subgoal (ID 29)	  	  H : Funext	  C1 : PreCategory	  C2 : PreCategory	  D : PreCategory	  c : Core.functor_category C1 (Core.functor_category C2 D)	  ============================	  (inverse C1 C2 D) ((functor C1 C2 D) c) = c	";
+            data = "1 subgoal (ID 29)	  	  H : Funext	  C1 : PreCategory	  C2 : PreCategory	  D : PreCategory	  c : (Core.functor_category C1 (Core.functor_category C2 D)).(object)	  ============================	  (inverse C1 C2 D).(object_of) ((functor C1 C2 D).(object_of) c) = c	";
             responses[i]=data;
           
 
             i = 46;
-            data = "1 subgoal (ID 51)	  	  H : Funext	  C1 : PreCategory	  C2 : PreCategory	  D : PreCategory	  c : Core.functor_category C1 (Core.functor_category C2 D)	  ============================	  {HO : inverse_object_of_object_of (functor_object_of c) = c &	  transport	    (fun GO : C1 -> Functor C2 D =>	     forall s d : C1, morphism C1 s d -> NaturalTransformation (GO s) (GO d))	    HO (inverse_object_of_morphism_of (functor_object_of c)) = 	  morphism_of c}	";
+            data = "1 subgoal (ID 51)	  	  H : Funext	  C1 : PreCategory	  C2 : PreCategory	  D : PreCategory	  c : (Core.functor_category C1 (Core.functor_category C2 D)).(object)	  ============================	  {HO : inverse_object_of_object_of (functor_object_of c) = c.(object_of) &	  transport	    (fun GO : C1.(object) -> Functor C2 D =>	     forall s d : C1.(object),	     C1.(morphism) s d -> NaturalTransformation (GO s) (GO d)) HO	    (inverse_object_of_morphism_of (functor_object_of c)) = 	  c.(morphism_of)}	";
             responses[i]=data;
           
 
             i = 47;
-            data = "1 subgoal (ID 67)	  	  H : Funext	  C1 : PreCategory	  C2 : PreCategory	  D : PreCategory	  c : Core.functor_category C1 (Core.functor_category C2 D)	  ============================	  transport	    (fun GO : C1 -> Functor C2 D =>	     forall s d : C1, morphism C1 s d -> NaturalTransformation (GO s) (GO d))	    (path_forall ((inverse C1 C2 D) ((functor C1 C2 D) c)) c	       (helper2_helper c))	    (inverse_object_of_morphism_of (functor_object_of c)) = 	  morphism_of c	";
+            data = "1 subgoal (ID 67)	  	  H : Funext	  C1 : PreCategory	  C2 : PreCategory	  D : PreCategory	  c : (Core.functor_category C1 (Core.functor_category C2 D)).(object)	  ============================	  transport	    (fun GO : C1.(object) -> Functor C2 D =>	     forall s d : C1.(object),	     C1.(morphism) s d -> NaturalTransformation (GO s) (GO d))	    (path_forall	       ((inverse C1 C2 D).(object_of) ((functor C1 C2 D).(object_of) c))	       .(object_of) c.(object_of) (helper2_helper c))	    (inverse_object_of_morphism_of (functor_object_of c)) = 	  c.(morphism_of)	";
             responses[i]=data;
           
 

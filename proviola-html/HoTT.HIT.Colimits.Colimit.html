@@ -243,62 +243,62 @@
           
 
             i = 45;
-            data = "1 subgoal (ID 118)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  C1, C2 : cocone D X	  eq1 : forall i : G, C1 i == C2 i	  eq2 : forall (i j : G) (g : G i j) (x : D i),	        qq C1 i j g x @ eq1 i x = eq1 j ((D _f g) x) @ qq C2 i j g x	  ============================	  C1 = C2	";
+            data = "1 subgoal (ID 113)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  C1, C2 : cocone D X	  eq1 : forall i : G.(graph0), C1.(q) i == C2.(q) i	  eq2 : forall (i j : G.(graph0)) (g : G.(graph1) i j) 	        (x : D.(diagram0) i),	        C1.(qq) i j g x @ eq1 i x =	        eq1 j (D.(diagram1) i j g x) @ C2.(qq) i j g x	  ============================	  C1 = C2	";
             responses[i]=data;
           
 
             i = 46;
-            data = "1 subgoal (ID 118)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  C1, C2 : cocone D X	  eq1 : forall i : G, C1 i == C2 i	  eq2 : forall (i j : G) (g : G i j) (x : D i),	        qq C1 i j g x @ eq1 i x = eq1 j ((D _f g) x) @ qq C2 i j g x	  ============================	  C1 = C2	";
+            data = "1 subgoal (ID 113)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  C1, C2 : cocone D X	  eq1 : forall i : G.(graph0), C1.(q) i == C2.(q) i	  eq2 : forall (i j : G.(graph0)) (g : G.(graph1) i j) 	        (x : D.(diagram0) i),	        C1.(qq) i j g x @ eq1 i x =	        eq1 j (D.(diagram1) i j g x) @ C2.(qq) i j g x	  ============================	  C1 = C2	";
             responses[i]=data;
           
 
             i = 47;
-            data = "1 subgoal (ID 140)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  q : forall i : G, D i -> X	  pp_q : forall (i j : G) (g : G i j) (x : D i), q j ((D _f g) x) = q i x	  r : forall i : G, D i -> X	  pp_r : forall (i j : G) (g : G i j) (x : D i), r j ((D _f g) x) = r i x	  eq1 : forall i : G,	        {| q := q; qq := pp_q |} i == {| q := r; qq := pp_r |} i	  eq2 : forall (i j : G) (g : G i j) (x : D i),	        qq {| q := q; qq := pp_q |} i j g x @ eq1 i x =	        eq1 j ((D _f g) x) @ qq {| q := r; qq := pp_r |} i j g x	  ============================	  {| q := q; qq := pp_q |} = {| q := r; qq := pp_r |}	";
+            data = "1 subgoal (ID 135)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  q : forall i : G.(graph0), D.(diagram0) i -> X	  pp_q : forall (i j : G.(graph0)) (g : G.(graph1) i j) 	         (x : D.(diagram0) i), q j (D.(diagram1) i j g x) = q i x	  r : forall i : G.(graph0), D.(diagram0) i -> X	  pp_r : forall (i j : G.(graph0)) (g : G.(graph1) i j) 	         (x : D.(diagram0) i), r j (D.(diagram1) i j g x) = r i x	  eq1 : forall i : G.(graph0),	        {| q := q; qq := pp_q |}.(q) i == {| q := r; qq := pp_r |}.(q) i	  eq2 : forall (i j : G.(graph0)) (g : G.(graph1) i j) 	        (x : D.(diagram0) i),	        {| q := q; qq := pp_q |}.(qq) i j g x @ eq1 i x =	        eq1 j (D.(diagram1) i j g x) @ {| q := r; qq := pp_r |}.(qq) i j g x	  ============================	  {| q := q; qq := pp_q |} = {| q := r; qq := pp_r |}	";
             responses[i]=data;
           
 
             i = 48;
-            data = "1 subgoal (ID 160)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  q : forall i : G, D i -> X	  pp_q : forall (i j : G) (g : G i j) (x : D i), q j ((D _f g) x) = q i x	  r : forall i : G, D i -> X	  pp_r : forall (i j : G) (g : G i j) (x : D i), r j ((D _f g) x) = r i x	  eq1 : forall i : G,	        {| q := q; qq := pp_q |} i == {| q := r; qq := pp_r |} i	  eq2 : forall (i j : G) (g : G i j) (x : D i),	        qq {| q := q; qq := pp_q |} i j g x @ eq1 i x =	        eq1 j ((D _f g) x) @ qq {| q := r; qq := pp_r |} i j g x	  ============================	  transport	    (fun q' : forall x : G, D x -> X =>	     forall (i j : G) (g : G i j) (x : D i), q' j ((D _f g) x) = q' i x)	    (path_forall {| q := q; qq := pp_q |} {| q := r; qq := pp_r |}	       (fun i : G =>	        path_forall ({| q := q; qq := pp_q |} i) ({| q := r; qq := pp_r |} i)	          (eq1 i))) (qq {| q := q; qq := pp_q |}) =	  qq {| q := r; qq := pp_r |}	";
+            data = "1 subgoal (ID 155)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  q : forall i : G.(graph0), D.(diagram0) i -> X	  pp_q : forall (i j : G.(graph0)) (g : G.(graph1) i j) 	         (x : D.(diagram0) i), q j (D.(diagram1) i j g x) = q i x	  r : forall i : G.(graph0), D.(diagram0) i -> X	  pp_r : forall (i j : G.(graph0)) (g : G.(graph1) i j) 	         (x : D.(diagram0) i), r j (D.(diagram1) i j g x) = r i x	  eq1 : forall i : G.(graph0),	        {| q := q; qq := pp_q |}.(q) i == {| q := r; qq := pp_r |}.(q) i	  eq2 : forall (i j : G.(graph0)) (g : G.(graph1) i j) 	        (x : D.(diagram0) i),	        {| q := q; qq := pp_q |}.(qq) i j g x @ eq1 i x =	        eq1 j (D.(diagram1) i j g x) @ {| q := r; qq := pp_r |}.(qq) i j g x	  ============================	  transport	    (fun q' : forall x : G.(graph0), D.(diagram0) x -> X =>	     forall (i j : G.(graph0)) (g : G.(graph1) i j) 	     (x : D.(diagram0) i), q' j (D.(diagram1) i j g x) = q' i x)	    (path_forall {| q := q; qq := pp_q |}.(q) {| q := r; qq := pp_r |}.(q)	       (fun i : G.(graph0) =>	        path_forall ({| q := q; qq := pp_q |}.(q) i)	          ({| q := r; qq := pp_r |}.(q) i) (eq1 i)))	    {| q := q; qq := pp_q |}.(qq) = {| q := r; qq := pp_r |}.(qq)	";
             responses[i]=data;
           
 
             i = 49;
-            data = "1 subgoal (ID 161)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  q : forall i : G, D i -> X	  pp_q : forall (i j : G) (g : G i j) (x : D i), q j ((D _f g) x) = q i x	  r : forall i : G, D i -> X	  pp_r : forall (i j : G) (g : G i j) (x : D i), r j ((D _f g) x) = r i x	  eq1 : forall i : G,	        {| q := q; qq := pp_q |} i == {| q := r; qq := pp_r |} i	  eq2 : forall (i j : G) (g : G i j) (x : D i),	        qq {| q := q; qq := pp_q |} i j g x @ eq1 i x =	        eq1 j ((D _f g) x) @ qq {| q := r; qq := pp_r |} i j g x	  ============================	  transport	    (fun q' : forall x : G, D x -> X =>	     forall (i j : G) (g : G i j) (x : D i), q' j ((D _f g) x) = q' i x)	    (path_forall q r (fun i : G => path_forall (q i) (r i) (eq1 i))) pp_q =	  pp_r	";
+            data = "1 subgoal (ID 156)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  q : forall i : G.(graph0), D.(diagram0) i -> X	  pp_q : forall (i j : G.(graph0)) (g : G.(graph1) i j) 	         (x : D.(diagram0) i), q j (D.(diagram1) i j g x) = q i x	  r : forall i : G.(graph0), D.(diagram0) i -> X	  pp_r : forall (i j : G.(graph0)) (g : G.(graph1) i j) 	         (x : D.(diagram0) i), r j (D.(diagram1) i j g x) = r i x	  eq1 : forall i : G.(graph0),	        {| q := q; qq := pp_q |}.(q) i == {| q := r; qq := pp_r |}.(q) i	  eq2 : forall (i j : G.(graph0)) (g : G.(graph1) i j) 	        (x : D.(diagram0) i),	        {| q := q; qq := pp_q |}.(qq) i j g x @ eq1 i x =	        eq1 j (D.(diagram1) i j g x) @ {| q := r; qq := pp_r |}.(qq) i j g x	  ============================	  transport	    (fun q' : forall x : G.(graph0), D.(diagram0) x -> X =>	     forall (i j : G.(graph0)) (g : G.(graph1) i j) 	     (x : D.(diagram0) i), q' j (D.(diagram1) i j g x) = q' i x)	    (path_forall q r (fun i : G.(graph0) => path_forall (q i) (r i) (eq1 i)))	    pp_q = pp_r	";
             responses[i]=data;
           
 
             i = 50;
-            data = "1 subgoal (ID 185)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  q : forall i : G, D i -> X	  pp_q : forall (i j : G) (g : G i j) (x : D i), q j ((D _f g) x) = q i x	  r : forall i : G, D i -> X	  pp_r : forall (i j : G) (g : G i j) (x : D i), r j ((D _f g) x) = r i x	  eq1 : forall i : G,	        {| q := q; qq := pp_q |} i == {| q := r; qq := pp_r |} i	  eq2 : forall (i j : G) (g : G i j) (x : D i),	        qq {| q := q; qq := pp_q |} i j g x @ eq1 i x =	        eq1 j ((D _f g) x) @ qq {| q := r; qq := pp_r |} i j g x	  i, j : G	  f : G i j	  x : D i	  ============================	  transport	    (fun q' : forall x0 : G, D x0 -> X =>	     forall (i0 j0 : G) (g : G i0 j0) (x0 : D i0),	     q' j0 ((D _f g) x0) = q' i0 x0)	    (path_forall q r (fun i0 : G => path_forall (q i0) (r i0) (eq1 i0))) pp_q	    i j f x = pp_r i j f x	";
+            data = "1 subgoal (ID 180)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  q : forall i : G.(graph0), D.(diagram0) i -> X	  pp_q : forall (i j : G.(graph0)) (g : G.(graph1) i j) 	         (x : D.(diagram0) i), q j (D.(diagram1) i j g x) = q i x	  r : forall i : G.(graph0), D.(diagram0) i -> X	  pp_r : forall (i j : G.(graph0)) (g : G.(graph1) i j) 	         (x : D.(diagram0) i), r j (D.(diagram1) i j g x) = r i x	  eq1 : forall i : G.(graph0),	        {| q := q; qq := pp_q |}.(q) i == {| q := r; qq := pp_r |}.(q) i	  eq2 : forall (i j : G.(graph0)) (g : G.(graph1) i j) 	        (x : D.(diagram0) i),	        {| q := q; qq := pp_q |}.(qq) i j g x @ eq1 i x =	        eq1 j (D.(diagram1) i j g x) @ {| q := r; qq := pp_r |}.(qq) i j g x	  i, j : G.(graph0)	  f : G.(graph1) i j	  x : D.(diagram0) i	  ============================	  transport	    (fun q' : forall x0 : G.(graph0), D.(diagram0) x0 -> X =>	     forall (i0 j0 : G.(graph0)) (g : G.(graph1) i0 j0)	     (x0 : D.(diagram0) i0), q' j0 (D.(diagram1) i0 j0 g x0) = q' i0 x0)	    (path_forall q r	       (fun i0 : G.(graph0) => path_forall (q i0) (r i0) (eq1 i0))) pp_q i j	    f x = pp_r i j f x	";
             responses[i]=data;
           
 
             i = 51;
-            data = "1 subgoal (ID 232)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  q : forall i : G, D i -> X	  pp_q : forall (i j : G) (g : G i j) (x : D i), q j ((D _f g) x) = q i x	  r : forall i : G, D i -> X	  pp_r : forall (i j : G) (g : G i j) (x : D i), r j ((D _f g) x) = r i x	  eq1 : forall i : G,	        {| q := q; qq := pp_q |} i == {| q := r; qq := pp_r |} i	  eq2 : forall (i j : G) (g : G i j) (x : D i),	        qq {| q := q; qq := pp_q |} i j g x @ eq1 i x =	        eq1 j ((D _f g) x) @ qq {| q := r; qq := pp_r |} i j g x	  i, j : G	  f : G i j	  x : D i	  ============================	  transport (fun x0 : forall x0 : G, D x0 -> X => x0 j ((D _f f) x) = x0 i x)	    (path_forall q r (fun i0 : G => path_forall (q i0) (r i0) (eq1 i0)))	    (pp_q i j f x) = pp_r i j f x	";
+            data = "1 subgoal (ID 227)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  q : forall i : G.(graph0), D.(diagram0) i -> X	  pp_q : forall (i j : G.(graph0)) (g : G.(graph1) i j) 	         (x : D.(diagram0) i), q j (D.(diagram1) i j g x) = q i x	  r : forall i : G.(graph0), D.(diagram0) i -> X	  pp_r : forall (i j : G.(graph0)) (g : G.(graph1) i j) 	         (x : D.(diagram0) i), r j (D.(diagram1) i j g x) = r i x	  eq1 : forall i : G.(graph0),	        {| q := q; qq := pp_q |}.(q) i == {| q := r; qq := pp_r |}.(q) i	  eq2 : forall (i j : G.(graph0)) (g : G.(graph1) i j) 	        (x : D.(diagram0) i),	        {| q := q; qq := pp_q |}.(qq) i j g x @ eq1 i x =	        eq1 j (D.(diagram1) i j g x) @ {| q := r; qq := pp_r |}.(qq) i j g x	  i, j : G.(graph0)	  f : G.(graph1) i j	  x : D.(diagram0) i	  ============================	  transport	    (fun x0 : forall x0 : G.(graph0), D.(diagram0) x0 -> X =>	     x0 j (D.(diagram1) i j f x) = x0 i x)	    (path_forall q r	       (fun i0 : G.(graph0) => path_forall (q i0) (r i0) (eq1 i0)))	    (pp_q i j f x) = pp_r i j f x	";
             responses[i]=data;
           
 
             i = 52;
-            data = "1 subgoal (ID 251)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  q : forall i : G, D i -> X	  pp_q : forall (i j : G) (g : G i j) (x : D i), q j ((D _f g) x) = q i x	  r : forall i : G, D i -> X	  pp_r : forall (i j : G) (g : G i j) (x : D i), r j ((D _f g) x) = r i x	  eq1 : forall i : G,	        {| q := q; qq := pp_q |} i == {| q := r; qq := pp_r |} i	  eq2 : forall (i j : G) (g : G i j) (x : D i),	        qq {| q := q; qq := pp_q |} i j g x @ eq1 i x =	        eq1 j ((D _f g) x) @ qq {| q := r; qq := pp_r |} i j g x	  i, j : G	  f : G i j	  x : D i	  ============================	  ((ap (fun x0 : forall x0 : G, D x0 -> X => x0 j ((D _f f) x))	      (path_forall q r (fun i0 : G => path_forall (q i0) (r i0) (eq1 i0))))^ @	   pp_q i j f x) @	  ap (fun x0 : forall x0 : G, D x0 -> X => x0 i x)	    (path_forall q r (fun i0 : G => path_forall (q i0) (r i0) (eq1 i0))) =	  pp_r i j f x	";
+            data = "1 subgoal (ID 246)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  q : forall i : G.(graph0), D.(diagram0) i -> X	  pp_q : forall (i j : G.(graph0)) (g : G.(graph1) i j) 	         (x : D.(diagram0) i), q j (D.(diagram1) i j g x) = q i x	  r : forall i : G.(graph0), D.(diagram0) i -> X	  pp_r : forall (i j : G.(graph0)) (g : G.(graph1) i j) 	         (x : D.(diagram0) i), r j (D.(diagram1) i j g x) = r i x	  eq1 : forall i : G.(graph0),	        {| q := q; qq := pp_q |}.(q) i == {| q := r; qq := pp_r |}.(q) i	  eq2 : forall (i j : G.(graph0)) (g : G.(graph1) i j) 	        (x : D.(diagram0) i),	        {| q := q; qq := pp_q |}.(qq) i j g x @ eq1 i x =	        eq1 j (D.(diagram1) i j g x) @ {| q := r; qq := pp_r |}.(qq) i j g x	  i, j : G.(graph0)	  f : G.(graph1) i j	  x : D.(diagram0) i	  ============================	  ((ap	      (fun x0 : forall x0 : G.(graph0), D.(diagram0) x0 -> X =>	       x0 j (D.(diagram1) i j f x))	      (path_forall q r	         (fun i0 : G.(graph0) => path_forall (q i0) (r i0) (eq1 i0))))^ @	   pp_q i j f x) @	  ap (fun x0 : forall x0 : G.(graph0), D.(diagram0) x0 -> X => x0 i x)	    (path_forall q r	       (fun i0 : G.(graph0) => path_forall (q i0) (r i0) (eq1 i0))) =	  pp_r i j f x	";
             responses[i]=data;
           
 
             i = 53;
-            data = "1 subgoal (ID 263)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  q : forall i : G, D i -> X	  pp_q : forall (i j : G) (g : G i j) (x : D i), q j ((D _f g) x) = q i x	  r : forall i : G, D i -> X	  pp_r : forall (i j : G) (g : G i j) (x : D i), r j ((D _f g) x) = r i x	  eq1 : forall i : G,	        {| q := q; qq := pp_q |} i == {| q := r; qq := pp_r |} i	  eq2 : forall (i j : G) (g : G i j) (x : D i),	        qq {| q := q; qq := pp_q |} i j g x @ eq1 i x =	        eq1 j ((D _f g) x) @ qq {| q := r; qq := pp_r |} i j g x	  i, j : G	  f : G i j	  x : D i	  ============================	  (ap (fun x0 : forall x0 : G, D x0 -> X => x0 j ((D _f f) x))	     (path_forall q r (fun i0 : G => path_forall (q i0) (r i0) (eq1 i0))))^ @	  (pp_q i j f x @	   ap (fun x0 : forall x0 : G, D x0 -> X => x0 i x)	     (path_forall q r (fun i0 : G => path_forall (q i0) (r i0) (eq1 i0)))) =	  pp_r i j f x	";
+            data = "1 subgoal (ID 258)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  q : forall i : G.(graph0), D.(diagram0) i -> X	  pp_q : forall (i j : G.(graph0)) (g : G.(graph1) i j) 	         (x : D.(diagram0) i), q j (D.(diagram1) i j g x) = q i x	  r : forall i : G.(graph0), D.(diagram0) i -> X	  pp_r : forall (i j : G.(graph0)) (g : G.(graph1) i j) 	         (x : D.(diagram0) i), r j (D.(diagram1) i j g x) = r i x	  eq1 : forall i : G.(graph0),	        {| q := q; qq := pp_q |}.(q) i == {| q := r; qq := pp_r |}.(q) i	  eq2 : forall (i j : G.(graph0)) (g : G.(graph1) i j) 	        (x : D.(diagram0) i),	        {| q := q; qq := pp_q |}.(qq) i j g x @ eq1 i x =	        eq1 j (D.(diagram1) i j g x) @ {| q := r; qq := pp_r |}.(qq) i j g x	  i, j : G.(graph0)	  f : G.(graph1) i j	  x : D.(diagram0) i	  ============================	  (ap	     (fun x0 : forall x0 : G.(graph0), D.(diagram0) x0 -> X =>	      x0 j (D.(diagram1) i j f x))	     (path_forall q r	        (fun i0 : G.(graph0) => path_forall (q i0) (r i0) (eq1 i0))))^ @	  (pp_q i j f x @	   ap (fun x0 : forall x0 : G.(graph0), D.(diagram0) x0 -> X => x0 i x)	     (path_forall q r	        (fun i0 : G.(graph0) => path_forall (q i0) (r i0) (eq1 i0)))) =	  pp_r i j f x	";
             responses[i]=data;
           
 
             i = 54;
-            data = "1 subgoal (ID 273)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  q : forall i : G, D i -> X	  pp_q : forall (i j : G) (g : G i j) (x : D i), q j ((D _f g) x) = q i x	  r : forall i : G, D i -> X	  pp_r : forall (i j : G) (g : G i j) (x : D i), r j ((D _f g) x) = r i x	  eq1 : forall i : G,	        {| q := q; qq := pp_q |} i == {| q := r; qq := pp_r |} i	  eq2 : forall (i j : G) (g : G i j) (x : D i),	        qq {| q := q; qq := pp_q |} i j g x @ eq1 i x =	        eq1 j ((D _f g) x) @ qq {| q := r; qq := pp_r |} i j g x	  i, j : G	  f : G i j	  x : D i	  ============================	  pp_q i j f x @	  ap (fun x0 : forall x0 : G, D x0 -> X => x0 i x)	    (path_forall q r (fun i0 : G => path_forall (q i0) (r i0) (eq1 i0))) =	  ap (fun x0 : forall x0 : G, D x0 -> X => x0 j ((D _f f) x))	    (path_forall q r (fun i0 : G => path_forall (q i0) (r i0) (eq1 i0))) @	  pp_r i j f x	";
+            data = "1 subgoal (ID 268)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  q : forall i : G.(graph0), D.(diagram0) i -> X	  pp_q : forall (i j : G.(graph0)) (g : G.(graph1) i j) 	         (x : D.(diagram0) i), q j (D.(diagram1) i j g x) = q i x	  r : forall i : G.(graph0), D.(diagram0) i -> X	  pp_r : forall (i j : G.(graph0)) (g : G.(graph1) i j) 	         (x : D.(diagram0) i), r j (D.(diagram1) i j g x) = r i x	  eq1 : forall i : G.(graph0),	        {| q := q; qq := pp_q |}.(q) i == {| q := r; qq := pp_r |}.(q) i	  eq2 : forall (i j : G.(graph0)) (g : G.(graph1) i j) 	        (x : D.(diagram0) i),	        {| q := q; qq := pp_q |}.(qq) i j g x @ eq1 i x =	        eq1 j (D.(diagram1) i j g x) @ {| q := r; qq := pp_r |}.(qq) i j g x	  i, j : G.(graph0)	  f : G.(graph1) i j	  x : D.(diagram0) i	  ============================	  pp_q i j f x @	  ap (fun x0 : forall x0 : G.(graph0), D.(diagram0) x0 -> X => x0 i x)	    (path_forall q r	       (fun i0 : G.(graph0) => path_forall (q i0) (r i0) (eq1 i0))) =	  ap	    (fun x0 : forall x0 : G.(graph0), D.(diagram0) x0 -> X =>	     x0 j (D.(diagram1) i j f x))	    (path_forall q r	       (fun i0 : G.(graph0) => path_forall (q i0) (r i0) (eq1 i0))) @	  pp_r i j f x	";
             responses[i]=data;
           
 
             i = 55;
-            data = "1 subgoal (ID 299)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  q : forall i : G, D i -> X	  pp_q : forall (i j : G) (g : G i j) (x : D i), q j ((D _f g) x) = q i x	  r : forall i : G, D i -> X	  pp_r : forall (i j : G) (g : G i j) (x : D i), r j ((D _f g) x) = r i x	  eq1 : forall i : G,	        {| q := q; qq := pp_q |} i == {| q := r; qq := pp_r |} i	  eq2 : forall (i j : G) (g : G i j) (x : D i),	        qq {| q := q; qq := pp_q |} i j g x @ eq1 i x =	        eq1 j ((D _f g) x) @ qq {| q := r; qq := pp_r |} i j g x	  i, j : G	  f : G i j	  x : D i	  ============================	  pp_q i j f x @	  apD10	    (apD10	       (path_forall q r (fun i0 : G => path_forall (q i0) (r i0) (eq1 i0))) i)	    x =	  apD10	    (apD10	       (path_forall q r (fun i0 : G => path_forall (q i0) (r i0) (eq1 i0))) j)	    ((D _f f) x) @ pp_r i j f x	";
+            data = "1 subgoal (ID 294)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  q : forall i : G.(graph0), D.(diagram0) i -> X	  pp_q : forall (i j : G.(graph0)) (g : G.(graph1) i j) 	         (x : D.(diagram0) i), q j (D.(diagram1) i j g x) = q i x	  r : forall i : G.(graph0), D.(diagram0) i -> X	  pp_r : forall (i j : G.(graph0)) (g : G.(graph1) i j) 	         (x : D.(diagram0) i), r j (D.(diagram1) i j g x) = r i x	  eq1 : forall i : G.(graph0),	        {| q := q; qq := pp_q |}.(q) i == {| q := r; qq := pp_r |}.(q) i	  eq2 : forall (i j : G.(graph0)) (g : G.(graph1) i j) 	        (x : D.(diagram0) i),	        {| q := q; qq := pp_q |}.(qq) i j g x @ eq1 i x =	        eq1 j (D.(diagram1) i j g x) @ {| q := r; qq := pp_r |}.(qq) i j g x	  i, j : G.(graph0)	  f : G.(graph1) i j	  x : D.(diagram0) i	  ============================	  pp_q i j f x @	  apD10	    (apD10	       (path_forall q r	          (fun i0 : G.(graph0) => path_forall (q i0) (r i0) (eq1 i0))) i) x =	  apD10	    (apD10	       (path_forall q r	          (fun i0 : G.(graph0) => path_forall (q i0) (r i0) (eq1 i0))) j)	    (D.(diagram1) i j f x) @ pp_r i j f x	";
             responses[i]=data;
           
 
             i = 56;
-            data = "1 subgoal (ID 338)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  q : forall i : G, D i -> X	  pp_q : forall (i j : G) (g : G i j) (x : D i), q j ((D _f g) x) = q i x	  r : forall i : G, D i -> X	  pp_r : forall (i j : G) (g : G i j) (x : D i), r j ((D _f g) x) = r i x	  eq1 : forall i : G,	        {| q := q; qq := pp_q |} i == {| q := r; qq := pp_r |} i	  eq2 : forall (i j : G) (g : G i j) (x : D i),	        qq {| q := q; qq := pp_q |} i j g x @ eq1 i x =	        eq1 j ((D _f g) x) @ qq {| q := r; qq := pp_r |} i j g x	  i, j : G	  f : G i j	  x : D i	  ============================	  pp_q i j f x @ eq1 i x = eq1 j ((D _f f) x) @ pp_r i j f x	";
+            data = "1 subgoal (ID 333)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  q : forall i : G.(graph0), D.(diagram0) i -> X	  pp_q : forall (i j : G.(graph0)) (g : G.(graph1) i j) 	         (x : D.(diagram0) i), q j (D.(diagram1) i j g x) = q i x	  r : forall i : G.(graph0), D.(diagram0) i -> X	  pp_r : forall (i j : G.(graph0)) (g : G.(graph1) i j) 	         (x : D.(diagram0) i), r j (D.(diagram1) i j g x) = r i x	  eq1 : forall i : G.(graph0),	        {| q := q; qq := pp_q |}.(q) i == {| q := r; qq := pp_r |}.(q) i	  eq2 : forall (i j : G.(graph0)) (g : G.(graph1) i j) 	        (x : D.(diagram0) i),	        {| q := q; qq := pp_q |}.(qq) i j g x @ eq1 i x =	        eq1 j (D.(diagram1) i j g x) @ {| q := r; qq := pp_r |}.(qq) i j g x	  i, j : G.(graph0)	  f : G.(graph1) i j	  x : D.(diagram0) i	  ============================	  pp_q i j f x @ eq1 i x = eq1 j (D.(diagram1) i j f x) @ pp_r i j f x	";
             responses[i]=data;
           
 
@@ -393,37 +393,37 @@
           
 
             i = 75;
-            data = "1 subgoal (ID 123)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  Y : Type	  ============================	  (X -> Y) -> cocone D Y	";
+            data = "1 subgoal (ID 118)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  Y : Type	  ============================	  (X -> Y) -> cocone D Y	";
             responses[i]=data;
           
 
             i = 76;
-            data = "1 subgoal (ID 123)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  Y : Type	  ============================	  (X -> Y) -> cocone D Y	";
+            data = "1 subgoal (ID 118)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  Y : Type	  ============================	  (X -> Y) -> cocone D Y	";
             responses[i]=data;
           
 
             i = 77;
-            data = "1 subgoal (ID 124)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  Y : Type	  f : X -> Y	  ============================	  cocone D Y	";
+            data = "1 subgoal (ID 119)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  Y : Type	  f : X -> Y	  ============================	  cocone D Y	";
             responses[i]=data;
           
 
             i = 78;
-            data = "2 subgoals (ID 129)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  Y : Type	  f : X -> Y	  ============================	  forall i : G, D i -> Y		subgoal 2 (ID 131) is:	 forall (i j : G) (g : G i j) (x : D i), ?q j ((D _f g) x) = ?q i x	";
+            data = "2 subgoals (ID 124)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  Y : Type	  f : X -> Y	  ============================	  forall i : G.(graph0), D.(diagram0) i -> Y		subgoal 2 (ID 126) is:	 forall (i j : G.(graph0)) (g : G.(graph1) i j) (x : D.(diagram0) i),	 ?q j (D.(diagram1) i j g x) = ?q i x	";
             responses[i]=data;
           
 
             i = 79;
-            data = "1 subgoal (ID 129)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  Y : Type	  f : X -> Y	  ============================	  forall i : G, D i -> Y	1 subgoal (ID 132)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  Y : Type	  f : X -> Y	  i : G	  ============================	  D i -> Y	";
+            data = "1 subgoal (ID 124)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  Y : Type	  f : X -> Y	  ============================	  forall i : G.(graph0), D.(diagram0) i -> Y	1 subgoal (ID 127)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  Y : Type	  f : X -> Y	  i : G.(graph0)	  ============================	  D.(diagram0) i -> Y	";
             responses[i]=data;
           
 
             i = 80;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 131)		subgoal 1 (ID 131) is:	 forall (i j : G) (g : G i j) (x : D i),	 (fun i0 : G => f o C i0) j ((D _f g) x) = (fun i0 : G => f o C i0) i x	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 126)		subgoal 1 (ID 126) is:	 forall (i j : G.(graph0)) (g : G.(graph1) i j) (x : D.(diagram0) i),	 (fun i0 : G.(graph0) => f o C.(q) i0) j (D.(diagram1) i j g x) =	 (fun i0 : G.(graph0) => f o C.(q) i0) i x	";
             responses[i]=data;
           
 
             i = 81;
-            data = "1 subgoal (ID 131)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  Y : Type	  f : X -> Y	  ============================	  forall (i j : G) (g : G i j) (x : D i),	  (fun i0 : G => f o C i0) j ((D _f g) x) = (fun i0 : G => f o C i0) i x	1 subgoal (ID 145)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  Y : Type	  f : X -> Y	  i, j : G	  g : G i j	  x : D i	  ============================	  (fun i0 : G => f o C i0) j ((D _f g) x) = (fun i0 : G => f o C i0) i x	";
+            data = "1 subgoal (ID 126)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  Y : Type	  f : X -> Y	  ============================	  forall (i j : G.(graph0)) (g : G.(graph1) i j) (x : D.(diagram0) i),	  (fun i0 : G.(graph0) => f o C.(q) i0) j (D.(diagram1) i j g x) =	  (fun i0 : G.(graph0) => f o C.(q) i0) i x	1 subgoal (ID 140)	  	  H : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  Y : Type	  f : X -> Y	  i, j : G.(graph0)	  g : G.(graph1) i j	  x : D.(diagram0) i	  ============================	  (fun i0 : G.(graph0) => f o C.(q) i0) j (D.(diagram1) i j g x) =	  (fun i0 : G.(graph0) => f o C.(q) i0) i x	";
             responses[i]=data;
           
 
@@ -893,27 +893,27 @@
           
 
             i = 175;
-            data = "1 subgoal (ID 99)	  	  G : graph	  D : diagram G	  P : Type	  C : cocone D P	  ============================	  colimit D -> P	";
+            data = "1 subgoal (ID 89)	  	  G : graph	  D : diagram G	  P : Type	  C : cocone D P	  ============================	  colimit D -> P	";
             responses[i]=data;
           
 
             i = 176;
-            data = "1 subgoal (ID 99)	  	  G : graph	  D : diagram G	  P : Type	  C : cocone D P	  ============================	  colimit D -> P	";
+            data = "1 subgoal (ID 89)	  	  G : graph	  D : diagram G	  P : Type	  C : cocone D P	  ============================	  colimit D -> P	";
             responses[i]=data;
           
 
             i = 177;
-            data = "2 subgoals (ID 105)	  	  G : graph	  D : diagram G	  P : Type	  C : cocone D P	  ============================	  forall (i : G) (x : D i), (fun _ : colimit D => P) (colim i x)		subgoal 2 (ID 107) is:	 forall (i j : G) (g : G i j) (x : D i),	 transport (fun _ : colimit D => P) (colimp i j g x) (?q j ((D _f g) x)) =	 ?q i x	";
+            data = "2 subgoals (ID 95)	  	  G : graph	  D : diagram G	  P : Type	  C : cocone D P	  ============================	  forall (i : G.(graph0)) (x : D.(diagram0) i),	  (fun _ : colimit D => P) (colim i x)		subgoal 2 (ID 97) is:	 forall (i j : G.(graph0)) (g : G.(graph1) i j) (x : D.(diagram0) i),	 transport (fun _ : colimit D => P) (colimp i j g x)	   (?q j (D.(diagram1) i j g x)) = ?q i x	";
             responses[i]=data;
           
 
             i = 178;
-            data = "1 subgoal (ID 105)	  	  G : graph	  D : diagram G	  P : Type	  C : cocone D P	  ============================	  forall (i : G) (x : D i), (fun _ : colimit D => P) (colim i x)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 107)		subgoal 1 (ID 107) is:	 forall (i j : G) (g : G i j) (x : D i),	 transport (fun _ : colimit D => P) (colimp i j g x) (C j ((D _f g) x)) =	 C i x	";
+            data = "1 subgoal (ID 95)	  	  G : graph	  D : diagram G	  P : Type	  C : cocone D P	  ============================	  forall (i : G.(graph0)) (x : D.(diagram0) i),	  (fun _ : colimit D => P) (colim i x)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 97)		subgoal 1 (ID 97) is:	 forall (i j : G.(graph0)) (g : G.(graph1) i j) (x : D.(diagram0) i),	 transport (fun _ : colimit D => P) (colimp i j g x)	   (C.(q) j (D.(diagram1) i j g x)) = C.(q) i x	";
             responses[i]=data;
           
 
             i = 179;
-            data = "1 subgoal (ID 107)	  	  G : graph	  D : diagram G	  P : Type	  C : cocone D P	  ============================	  forall (i j : G) (g : G i j) (x : D i),	  transport (fun _ : colimit D => P) (colimp i j g x) (C j ((D _f g) x)) =	  C i x	1 subgoal (ID 111)	  	  G : graph	  D : diagram G	  P : Type	  C : cocone D P	  i, j : G	  g : G i j	  x : D i	  ============================	  transport (fun _ : colimit D => P) (colimp i j g x) (C j ((D _f g) x)) =	  C i x	";
+            data = "1 subgoal (ID 97)	  	  G : graph	  D : diagram G	  P : Type	  C : cocone D P	  ============================	  forall (i j : G.(graph0)) (g : G.(graph1) i j) (x : D.(diagram0) i),	  transport (fun _ : colimit D => P) (colimp i j g x)	    (C.(q) j (D.(diagram1) i j g x)) = C.(q) i x	1 subgoal (ID 101)	  	  G : graph	  D : diagram G	  P : Type	  C : cocone D P	  i, j : G.(graph0)	  g : G.(graph1) i j	  x : D.(diagram0) i	  ============================	  transport (fun _ : colimit D => P) (colimp i j g x)	    (C.(q) j (D.(diagram1) i j g x)) = C.(q) i x	";
             responses[i]=data;
           
 
@@ -928,27 +928,27 @@
           
 
             i = 182;
-            data = "1 subgoal (ID 122)	  	  G : graph	  D : diagram G	  P : Type	  C : cocone D P	  i, j : G	  g : G i j	  x : D i	  ============================	  ap (colimit_rec P C) (colimp i j g x) = qq C i j g x	";
+            data = "1 subgoal (ID 112)	  	  G : graph	  D : diagram G	  P : Type	  C : cocone D P	  i, j : G.(graph0)	  g : G.(graph1) i j	  x : D.(diagram0) i	  ============================	  ap (colimit_rec P C) (colimp i j g x) = C.(qq) i j g x	";
             responses[i]=data;
           
 
             i = 183;
-            data = "1 subgoal (ID 122)	  	  G : graph	  D : diagram G	  P : Type	  C : cocone D P	  i, j : G	  g : G i j	  x : D i	  ============================	  ap (colimit_rec P C) (colimp i j g x) = qq C i j g x	";
+            data = "1 subgoal (ID 112)	  	  G : graph	  D : diagram G	  P : Type	  C : cocone D P	  i, j : G.(graph0)	  g : G.(graph1) i j	  x : D.(diagram0) i	  ============================	  ap (colimit_rec P C) (colimp i j g x) = C.(qq) i j g x	";
             responses[i]=data;
           
 
             i = 184;
-            data = "1 subgoal (ID 123)	  	  G : graph	  D : diagram G	  P : Type	  C : cocone D P	  i, j : G	  g : G i j	  x : D i	  ============================	  ap	    (fun w : colimit D =>	     match w with	     | colim i0 a =>	         fun	           _ : forall (i1 j0 : G) (g0 : G i1 j0) (x0 : D i1),	               transport (fun _ : colimit D => P) 	                 (colimp i1 j0 g0 x0) (C j0 ((D _f g0) x0)) = 	               C i1 x0 => C i0 a	     end	       (fun (i0 j0 : G) (g0 : G i0 j0) (x0 : D i0) =>	        transport_const (colimp i0 j0 g0 x0) (C j0 ((D _f g0) x0)) @	        qq C i0 j0 g0 x0)) (colimp i j g x) = qq C i j g x	";
+            data = "1 subgoal (ID 113)	  	  G : graph	  D : diagram G	  P : Type	  C : cocone D P	  i, j : G.(graph0)	  g : G.(graph1) i j	  x : D.(diagram0) i	  ============================	  ap	    (fun w : colimit D =>	     match w with	     | colim i0 a =>	         fun	           _ : forall (i1 j0 : G.(graph0)) (g0 : G.(graph1) i1 j0)	               (x0 : D.(diagram0) i1),	               transport (fun _ : colimit D => P) 	                 (colimp i1 j0 g0 x0) (C.(q) j0 (D.(diagram1) i1 j0 g0 x0)) =	               C.(q) i1 x0 => C.(q) i0 a	     end	       (fun (i0 j0 : G.(graph0)) (g0 : G.(graph1) i0 j0)	          (x0 : D.(diagram0) i0) =>	        transport_const (colimp i0 j0 g0 x0)	          (C.(q) j0 (D.(diagram1) i0 j0 g0 x0)) @ 	        C.(qq) i0 j0 g0 x0)) (colimp i j g x) = C.(qq) i j g x	";
             responses[i]=data;
           
 
             i = 185;
-            data = "1 subgoal (ID 136)	  	  G : graph	  D : diagram G	  P : Type	  C : cocone D P	  i, j : G	  g : G i j	  x : D i	  ============================	  transport_const (colimp i j g x) (C j ((D _f g) x)) @	  ap	    (fun w : colimit D =>	     match w with	     | colim i0 a =>	         fun	           _ : forall (i1 j0 : G) (g0 : G i1 j0) (x0 : D i1),	               transport (fun _ : colimit D => P) 	                 (colimp i1 j0 g0 x0) (C j0 ((D _f g0) x0)) = 	               C i1 x0 => C i0 a	     end	       (fun (i0 j0 : G) (g0 : G i0 j0) (x0 : D i0) =>	        transport_const (colimp i0 j0 g0 x0) (C j0 ((D _f g0) x0)) @	        qq C i0 j0 g0 x0)) (colimp i j g x) =	  transport_const (colimp i j g x) (C j ((D _f g) x)) @ qq C i j g x	";
+            data = "1 subgoal (ID 126)	  	  G : graph	  D : diagram G	  P : Type	  C : cocone D P	  i, j : G.(graph0)	  g : G.(graph1) i j	  x : D.(diagram0) i	  ============================	  transport_const (colimp i j g x) (C.(q) j (D.(diagram1) i j g x)) @	  ap	    (fun w : colimit D =>	     match w with	     | colim i0 a =>	         fun	           _ : forall (i1 j0 : G.(graph0)) (g0 : G.(graph1) i1 j0)	               (x0 : D.(diagram0) i1),	               transport (fun _ : colimit D => P) 	                 (colimp i1 j0 g0 x0) (C.(q) j0 (D.(diagram1) i1 j0 g0 x0)) =	               C.(q) i1 x0 => C.(q) i0 a	     end	       (fun (i0 j0 : G.(graph0)) (g0 : G.(graph1) i0 j0)	          (x0 : D.(diagram0) i0) =>	        transport_const (colimp i0 j0 g0 x0)	          (C.(q) j0 (D.(diagram1) i0 j0 g0 x0)) @ 	        C.(qq) i0 j0 g0 x0)) (colimp i j g x) =	  transport_const (colimp i j g x) (C.(q) j (D.(diagram1) i j g x)) @	  C.(qq) i j g x	";
             responses[i]=data;
           
 
             i = 186;
-            data = "1 subgoal (ID 156)	  	  G : graph	  D : diagram G	  P : Type	  C : cocone D P	  i, j : G	  g : G i j	  x : D i	  ============================	  apD	    (colimit_ind (fun _ : colimit D => P) C	       (fun (i0 j0 : G) (g0 : G i0 j0) (x0 : D i0) =>	        transport_const (colimp i0 j0 g0 x0) (C j0 ((D _f g0) x0)) @	        qq C i0 j0 g0 x0)) (colimp i j g x) =	  transport_const (colimp i j g x) (C j ((D _f g) x)) @ qq C i j g x	";
+            data = "1 subgoal (ID 146)	  	  G : graph	  D : diagram G	  P : Type	  C : cocone D P	  i, j : G.(graph0)	  g : G.(graph1) i j	  x : D.(diagram0) i	  ============================	  apD	    (colimit_ind (fun _ : colimit D => P) C.(q)	       (fun (i0 j0 : G.(graph0)) (g0 : G.(graph1) i0 j0)	          (x0 : D.(diagram0) i0) =>	        transport_const (colimp i0 j0 g0 x0)	          (C.(q) j0 (D.(diagram1) i0 j0 g0 x0)) @ 	        C.(qq) i0 j0 g0 x0)) (colimp i j g x) =	  transport_const (colimp i j g x) (C.(q) j (D.(diagram1) i j g x)) @	  C.(qq) i j g x	";
             responses[i]=data;
           
 
@@ -993,107 +993,107 @@
           
 
             i = 195;
-            data = "1 subgoal (ID 41)	  	  H : Funext	  G : graph	  D : diagram G	  ============================	  is_universal (cocone_colimit D)	";
+            data = "1 subgoal (ID 31)	  	  H : Funext	  G : graph	  D : diagram G	  ============================	  is_universal (cocone_colimit D)	";
             responses[i]=data;
           
 
             i = 196;
-            data = "1 subgoal (ID 41)	  	  H : Funext	  G : graph	  D : diagram G	  ============================	  is_universal (cocone_colimit D)	";
+            data = "1 subgoal (ID 31)	  	  H : Funext	  G : graph	  D : diagram G	  ============================	  is_universal (cocone_colimit D)	";
             responses[i]=data;
           
 
             i = 197;
-            data = "1 subgoal (ID 44)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  ============================	  IsEquiv (postcompose_cocone (cocone_colimit D))	";
+            data = "1 subgoal (ID 34)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  ============================	  IsEquiv (postcompose_cocone (cocone_colimit D))	";
             responses[i]=data;
           
 
             i = 198;
-            data = "2 subgoals (ID 52)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  ============================	  Sect (colimit_rec Y) (postcompose_cocone (cocone_colimit D))		subgoal 2 (ID 54) is:	 Sect (postcompose_cocone (cocone_colimit D)) (colimit_rec Y)	";
+            data = "2 subgoals (ID 42)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  ============================	  Sect (colimit_rec Y) (postcompose_cocone (cocone_colimit D))		subgoal 2 (ID 44) is:	 Sect (postcompose_cocone (cocone_colimit D)) (colimit_rec Y)	";
             responses[i]=data;
           
 
             i = 199;
-            data = "1 subgoal (ID 52)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  ============================	  Sect (colimit_rec Y) (postcompose_cocone (cocone_colimit D))	1 subgoal (ID 56)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  C : cocone D Y	  ============================	  postcompose_cocone (cocone_colimit D) (colimit_rec Y C) = C	";
+            data = "1 subgoal (ID 42)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  ============================	  Sect (colimit_rec Y) (postcompose_cocone (cocone_colimit D))	1 subgoal (ID 46)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  C : cocone D Y	  ============================	  postcompose_cocone (cocone_colimit D) (colimit_rec Y C) = C	";
             responses[i]=data;
           
 
             i = 200;
-            data = "2 subgoals (ID 64)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  C : cocone D Y	  ============================	  forall i : G,	  (postcompose_cocone (cocone_colimit D) (colimit_rec Y C)) i == C i		subgoal 2 (ID 66) is:	 forall (i j : G) (g : G i j) (x : D i),	 qq (postcompose_cocone (cocone_colimit D) (colimit_rec Y C)) i j g x @	 ?eq1 i x = ?eq1 j ((D _f g) x) @ qq C i j g x	";
+            data = "2 subgoals (ID 54)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  C : cocone D Y	  ============================	  forall i : G.(graph0),	  (postcompose_cocone (cocone_colimit D) (colimit_rec Y C)).(q) i == C.(q) i		subgoal 2 (ID 56) is:	 forall (i j : G.(graph0)) (g : G.(graph1) i j) (x : D.(diagram0) i),	 (postcompose_cocone (cocone_colimit D) (colimit_rec Y C)).(qq) i j g x @	 ?eq1 i x = ?eq1 j (D.(diagram1) i j g x) @ C.(qq) i j g x	";
             responses[i]=data;
           
 
             i = 201;
-            data = "2 subgoals (ID 69)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  C : cocone D Y	  i : G	  x : D i	  ============================	  (postcompose_cocone (cocone_colimit D) (colimit_rec Y C)) i x = C i x		subgoal 2 (ID 66) is:	 forall (i j : G) (g : G i j) (x : D i),	 qq (postcompose_cocone (cocone_colimit D) (colimit_rec Y C)) i j g x @	 (fun (i0 : G) (x0 : D i0) => ?Goal@{i:=i0; x:=x0}) i x =	 (fun (i0 : G) (x0 : D i0) => ?Goal@{i:=i0; x:=x0}) j ((D _f g) x) @	 qq C i j g x	";
+            data = "2 subgoals (ID 59)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  C : cocone D Y	  i : G.(graph0)	  x : D.(diagram0) i	  ============================	  (postcompose_cocone (cocone_colimit D) (colimit_rec Y C)).(q) i x =	  C.(q) i x		subgoal 2 (ID 56) is:	 forall (i j : G.(graph0)) (g : G.(graph1) i j) (x : D.(diagram0) i),	 (postcompose_cocone (cocone_colimit D) (colimit_rec Y C)).(qq) i j g x @	 (fun (i0 : G.(graph0)) (x0 : D.(diagram0) i0) => ?Goal@{i:=i0; x:=x0}) i x =	 (fun (i0 : G.(graph0)) (x0 : D.(diagram0) i0) => ?Goal@{i:=i0; x:=x0}) j	   (D.(diagram1) i j g x) @ C.(qq) i j g x	";
             responses[i]=data;
           
 
             i = 202;
-            data = "1 subgoal (ID 66)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  C : cocone D Y	  ============================	  forall (i j : G) (g : G i j) (x : D i),	  qq (postcompose_cocone (cocone_colimit D) (colimit_rec Y C)) i j g x @	  (fun (i0 : G) (x0 : D i0) => 1) i x =	  (fun (i0 : G) (x0 : D i0) => 1) j ((D _f g) x) @ qq C i j g x	";
+            data = "1 subgoal (ID 56)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  C : cocone D Y	  ============================	  forall (i j : G.(graph0)) (g : G.(graph1) i j) (x : D.(diagram0) i),	  (postcompose_cocone (cocone_colimit D) (colimit_rec Y C)).(qq) i j g x @	  (fun (i0 : G.(graph0)) (x0 : D.(diagram0) i0) => 1) i x =	  (fun (i0 : G.(graph0)) (x0 : D.(diagram0) i0) => 1) j	    (D.(diagram1) i j g x) @ C.(qq) i j g x	";
             responses[i]=data;
           
 
             i = 203;
-            data = "1 subgoal (ID 74)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  C : cocone D Y	  i, j : G	  f : G i j	  x : D i	  ============================	  qq (postcompose_cocone (cocone_colimit D) (colimit_rec Y C)) i j f x @	  (fun (i0 : G) (x0 : D i0) => 1) i x =	  (fun (i0 : G) (x0 : D i0) => 1) j ((D _f f) x) @ qq C i j f x	";
+            data = "1 subgoal (ID 64)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  C : cocone D Y	  i, j : G.(graph0)	  f : G.(graph1) i j	  x : D.(diagram0) i	  ============================	  (postcompose_cocone (cocone_colimit D) (colimit_rec Y C)).(qq) i j f x @	  (fun (i0 : G.(graph0)) (x0 : D.(diagram0) i0) => 1) i x =	  (fun (i0 : G.(graph0)) (x0 : D.(diagram0) i0) => 1) j	    (D.(diagram1) i j f x) @ C.(qq) i j f x	";
             responses[i]=data;
           
 
             i = 204;
-            data = "1 subgoal (ID 75)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  C : cocone D Y	  i, j : G	  f : G i j	  x : D i	  ============================	  ap (colimit_rec Y C) (colimp i j f x) @ 1 = 1 @ qq C i j f x	";
+            data = "1 subgoal (ID 65)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  C : cocone D Y	  i, j : G.(graph0)	  f : G.(graph1) i j	  x : D.(diagram0) i	  ============================	  ap (colimit_rec Y C) (colimp i j f x) @ 1 = 1 @ C.(qq) i j f x	";
             responses[i]=data;
           
 
             i = 205;
-            data = "1 subgoal (ID 77)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  C : cocone D Y	  i, j : G	  f : G i j	  x : D i	  ============================	  ap (colimit_rec Y C) (colimp i j f x) = qq C i j f x	";
+            data = "1 subgoal (ID 67)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  C : cocone D Y	  i, j : G.(graph0)	  f : G.(graph1) i j	  x : D.(diagram0) i	  ============================	  ap (colimit_rec Y C) (colimp i j f x) = C.(qq) i j f x	";
             responses[i]=data;
           
 
             i = 206;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 54)		subgoal 1 (ID 54) is:	 Sect (postcompose_cocone (cocone_colimit D)) (colimit_rec Y)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 44)		subgoal 1 (ID 44) is:	 Sect (postcompose_cocone (cocone_colimit D)) (colimit_rec Y)	";
             responses[i]=data;
           
 
             i = 207;
-            data = "1 subgoal (ID 54)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  ============================	  Sect (postcompose_cocone (cocone_colimit D)) (colimit_rec Y)	1 subgoal (ID 194)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  f : colimit D -> Y	  ============================	  colimit_rec Y (postcompose_cocone (cocone_colimit D) f) = f	";
+            data = "1 subgoal (ID 44)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  ============================	  Sect (postcompose_cocone (cocone_colimit D)) (colimit_rec Y)	1 subgoal (ID 184)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  f : colimit D -> Y	  ============================	  colimit_rec Y (postcompose_cocone (cocone_colimit D) f) = f	";
             responses[i]=data;
           
 
             i = 208;
-            data = "1 subgoal (ID 198)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  f : colimit D -> Y	  ============================	  colimit_rec Y (postcompose_cocone (cocone_colimit D) f) == f	";
+            data = "1 subgoal (ID 188)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  f : colimit D -> Y	  ============================	  colimit_rec Y (postcompose_cocone (cocone_colimit D) f) == f	";
             responses[i]=data;
           
 
             i = 209;
-            data = "2 subgoals (ID 204)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  f : colimit D -> Y	  ============================	  forall (i : G) (x : D i),	  (fun w : colimit D =>	   colimit_rec Y (postcompose_cocone (cocone_colimit D) f) w = f w)	    (colim i x)		subgoal 2 (ID 206) is:	 forall (i j : G) (g : G i j) (x : D i),	 transport	   (fun w : colimit D =>	    colimit_rec Y (postcompose_cocone (cocone_colimit D) f) w = f w)	   (colimp i j g x) (?q j ((D _f g) x)) = ?q i x	";
+            data = "2 subgoals (ID 194)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  f : colimit D -> Y	  ============================	  forall (i : G.(graph0)) (x : D.(diagram0) i),	  (fun w : colimit D =>	   colimit_rec Y (postcompose_cocone (cocone_colimit D) f) w = f w)	    (colim i x)		subgoal 2 (ID 196) is:	 forall (i j : G.(graph0)) (g : G.(graph1) i j) (x : D.(diagram0) i),	 transport	   (fun w : colimit D =>	    colimit_rec Y (postcompose_cocone (cocone_colimit D) f) w = f w)	   (colimp i j g x) (?q j (D.(diagram1) i j g x)) = 	 ?q i x	";
             responses[i]=data;
           
 
             i = 210;
-            data = "2 subgoals (ID 208)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  f : colimit D -> Y	  i : G	  x : D i	  ============================	  (fun w : colimit D =>	   colimit_rec Y (postcompose_cocone (cocone_colimit D) f) w = f w)	    (colim i x)		subgoal 2 (ID 206) is:	 forall (i j : G) (g : G i j) (x : D i),	 transport	   (fun w : colimit D =>	    colimit_rec Y (postcompose_cocone (cocone_colimit D) f) w = f w)	   (colimp i j g x)	   ((fun (i0 : G) (x0 : D i0) => ?Goal@{i:=i0; x:=x0}) j ((D _f g) x)) =	 (fun (i0 : G) (x0 : D i0) => ?Goal@{i:=i0; x:=x0}) i x	";
+            data = "2 subgoals (ID 198)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  f : colimit D -> Y	  i : G.(graph0)	  x : D.(diagram0) i	  ============================	  (fun w : colimit D =>	   colimit_rec Y (postcompose_cocone (cocone_colimit D) f) w = f w)	    (colim i x)		subgoal 2 (ID 196) is:	 forall (i j : G.(graph0)) (g : G.(graph1) i j) (x : D.(diagram0) i),	 transport	   (fun w : colimit D =>	    colimit_rec Y (postcompose_cocone (cocone_colimit D) f) w = f w)	   (colimp i j g x)	   ((fun (i0 : G.(graph0)) (x0 : D.(diagram0) i0) => ?Goal@{i:=i0; x:=x0}) j	      (D.(diagram1) i j g x)) =	 (fun (i0 : G.(graph0)) (x0 : D.(diagram0) i0) => ?Goal@{i:=i0; x:=x0}) i x	";
             responses[i]=data;
           
 
             i = 211;
-            data = "1 subgoal (ID 206)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  f : colimit D -> Y	  ============================	  forall (i j : G) (g : G i j) (x : D i),	  transport	    (fun w : colimit D =>	     colimit_rec Y (postcompose_cocone (cocone_colimit D) f) w = f w)	    (colimp i j g x) ((fun (i0 : G) (x0 : D i0) => 1) j ((D _f g) x)) =	  (fun (i0 : G) (x0 : D i0) => 1) i x	";
+            data = "1 subgoal (ID 196)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  f : colimit D -> Y	  ============================	  forall (i j : G.(graph0)) (g : G.(graph1) i j) (x : D.(diagram0) i),	  transport	    (fun w : colimit D =>	     colimit_rec Y (postcompose_cocone (cocone_colimit D) f) w = f w)	    (colimp i j g x)	    ((fun (i0 : G.(graph0)) (x0 : D.(diagram0) i0) => 1) j	       (D.(diagram1) i j g x)) =	  (fun (i0 : G.(graph0)) (x0 : D.(diagram0) i0) => 1) i x	";
             responses[i]=data;
           
 
             i = 212;
-            data = "1 subgoal (ID 213)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  f : colimit D -> Y	  i, j : G	  g : G i j	  x : D i	  ============================	  transport	    (fun w : colimit D =>	     colimit_rec Y (postcompose_cocone (cocone_colimit D) f) w = f w)	    (colimp i j g x) ((fun (i0 : G) (x0 : D i0) => 1) j ((D _f g) x)) =	  (fun (i0 : G) (x0 : D i0) => 1) i x	";
+            data = "1 subgoal (ID 203)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  f : colimit D -> Y	  i, j : G.(graph0)	  g : G.(graph1) i j	  x : D.(diagram0) i	  ============================	  transport	    (fun w : colimit D =>	     colimit_rec Y (postcompose_cocone (cocone_colimit D) f) w = f w)	    (colimp i j g x)	    ((fun (i0 : G.(graph0)) (x0 : D.(diagram0) i0) => 1) j	       (D.(diagram1) i j g x)) =	  (fun (i0 : G.(graph0)) (x0 : D.(diagram0) i0) => 1) i x	";
             responses[i]=data;
           
 
             i = 213;
-            data = "1 subgoal (ID 214)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  f : colimit D -> Y	  i, j : G	  g : G i j	  x : D i	  ============================	  transport	    (fun w : colimit D =>	     colimit_rec Y (postcompose_cocone (cocone_colimit D) f) w = f w)	    (colimp i j g x) 1 = 1	";
+            data = "1 subgoal (ID 204)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  f : colimit D -> Y	  i, j : G.(graph0)	  g : G.(graph1) i j	  x : D.(diagram0) i	  ============================	  transport	    (fun w : colimit D =>	     colimit_rec Y (postcompose_cocone (cocone_colimit D) f) w = f w)	    (colimp i j g x) 1 = 1	";
             responses[i]=data;
           
 
             i = 214;
-            data = "1 subgoal (ID 221)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  f : colimit D -> Y	  i, j : G	  g : G i j	  x : D i	  ============================	  ((ap (colimit_rec Y (postcompose_cocone (cocone_colimit D) f))	      (colimp i j g x))^ @ 1) @ ap f (colimp i j g x) = 1	";
+            data = "1 subgoal (ID 211)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  f : colimit D -> Y	  i, j : G.(graph0)	  g : G.(graph1) i j	  x : D.(diagram0) i	  ============================	  ((ap (colimit_rec Y (postcompose_cocone (cocone_colimit D) f))	      (colimp i j g x))^ @ 1) @ ap f (colimp i j g x) = 1	";
             responses[i]=data;
           
 
             i = 215;
-            data = "1 subgoal (ID 230)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  f : colimit D -> Y	  i, j : G	  g : G i j	  x : D i	  ============================	  ((qq (postcompose_cocone (cocone_colimit D) f) i j g x)^ @ 1) @	  ap f (colimp i j g x) = 1	";
+            data = "1 subgoal (ID 220)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  f : colimit D -> Y	  i, j : G.(graph0)	  g : G.(graph1) i j	  x : D.(diagram0) i	  ============================	  (((postcompose_cocone (cocone_colimit D) f).(qq) i j g x)^ @ 1) @	  ap f (colimp i j g x) = 1	";
             responses[i]=data;
           
 
@@ -1213,22 +1213,22 @@
           
 
             i = 239;
-            data = "1 subgoal (ID 63)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  ============================	  postcompose_cocone C idmap = C	";
+            data = "1 subgoal (ID 53)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  ============================	  postcompose_cocone C idmap = C	";
             responses[i]=data;
           
 
             i = 240;
-            data = "1 subgoal (ID 63)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  ============================	  postcompose_cocone C idmap = C	";
+            data = "1 subgoal (ID 53)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  ============================	  postcompose_cocone C idmap = C	";
             responses[i]=data;
           
 
             i = 241;
-            data = "2 subgoals (ID 71)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  ============================	  forall i : G, (postcompose_cocone C idmap) i == C i		subgoal 2 (ID 73) is:	 forall (i j : G) (g : G i j) (x : D i),	 qq (postcompose_cocone C idmap) i j g x @ ?eq1 i x =	 ?eq1 j ((D _f g) x) @ qq C i j g x	";
+            data = "2 subgoals (ID 61)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  ============================	  forall i : G.(graph0), (postcompose_cocone C idmap).(q) i == C.(q) i		subgoal 2 (ID 63) is:	 forall (i j : G.(graph0)) (g : G.(graph1) i j) (x : D.(diagram0) i),	 (postcompose_cocone C idmap).(qq) i j g x @ ?eq1 i x =	 ?eq1 j (D.(diagram1) i j g x) @ C.(qq) i j g x	";
             responses[i]=data;
           
 
             i = 242;
-            data = "1 subgoal (ID 73)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  ============================	  forall (i j : G) (g : G i j) (x : D i),	  qq (postcompose_cocone C idmap) i j g x @	  (fun (i0 : G) (x0 : D i0) => 1) i x =	  (fun (i0 : G) (x0 : D i0) => 1) j ((D _f g) x) @ qq C i j g x	";
+            data = "1 subgoal (ID 63)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  ============================	  forall (i j : G.(graph0)) (g : G.(graph1) i j) (x : D.(diagram0) i),	  (postcompose_cocone C idmap).(qq) i j g x @	  (fun (i0 : G.(graph0)) (x0 : D.(diagram0) i0) => 1) i x =	  (fun (i0 : G.(graph0)) (x0 : D.(diagram0) i0) => 1) j	    (D.(diagram1) i j g x) @ C.(qq) i j g x	";
             responses[i]=data;
           
 
@@ -1243,27 +1243,27 @@
           
 
             i = 245;
-            data = "1 subgoal (ID 98)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X -> Y	  Z : Type	  g : Y -> Z	  C : cocone D X	  ============================	  postcompose_cocone C (g o f) =	  postcompose_cocone (postcompose_cocone C f) g	";
+            data = "1 subgoal (ID 88)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X -> Y	  Z : Type	  g : Y -> Z	  C : cocone D X	  ============================	  postcompose_cocone C (g o f) =	  postcompose_cocone (postcompose_cocone C f) g	";
             responses[i]=data;
           
 
             i = 246;
-            data = "1 subgoal (ID 98)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X -> Y	  Z : Type	  g : Y -> Z	  C : cocone D X	  ============================	  postcompose_cocone C (g o f) =	  postcompose_cocone (postcompose_cocone C f) g	";
+            data = "1 subgoal (ID 88)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X -> Y	  Z : Type	  g : Y -> Z	  C : cocone D X	  ============================	  postcompose_cocone C (g o f) =	  postcompose_cocone (postcompose_cocone C f) g	";
             responses[i]=data;
           
 
             i = 247;
-            data = "2 subgoals (ID 106)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X -> Y	  Z : Type	  g : Y -> Z	  C : cocone D X	  ============================	  forall i : G,	  (postcompose_cocone C (g o f)) i ==	  (postcompose_cocone (postcompose_cocone C f) g) i		subgoal 2 (ID 108) is:	 forall (i j : G) (g0 : G i j) (x : D i),	 qq (postcompose_cocone C (g o f)) i j g0 x @ ?eq1 i x =	 ?eq1 j ((D _f g0) x) @	 qq (postcompose_cocone (postcompose_cocone C f) g) i j g0 x	";
+            data = "2 subgoals (ID 96)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X -> Y	  Z : Type	  g : Y -> Z	  C : cocone D X	  ============================	  forall i : G.(graph0),	  (postcompose_cocone C (g o f)).(q) i ==	  (postcompose_cocone (postcompose_cocone C f) g).(q) i		subgoal 2 (ID 98) is:	 forall (i j : G.(graph0)) (g0 : G.(graph1) i j) (x : D.(diagram0) i),	 (postcompose_cocone C (g o f)).(qq) i j g0 x @ ?eq1 i x =	 ?eq1 j (D.(diagram1) i j g0 x) @	 (postcompose_cocone (postcompose_cocone C f) g).(qq) i j g0 x	";
             responses[i]=data;
           
 
             i = 248;
-            data = "1 subgoal (ID 108)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X -> Y	  Z : Type	  g : Y -> Z	  C : cocone D X	  ============================	  forall (i j : G) (g0 : G i j) (x : D i),	  qq (postcompose_cocone C (g o f)) i j g0 x @	  (fun (i0 : G) (x0 : D i0) => 1) i x =	  (fun (i0 : G) (x0 : D i0) => 1) j ((D _f g0) x) @	  qq (postcompose_cocone (postcompose_cocone C f) g) i j g0 x	";
+            data = "1 subgoal (ID 98)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X -> Y	  Z : Type	  g : Y -> Z	  C : cocone D X	  ============================	  forall (i j : G.(graph0)) (g0 : G.(graph1) i j) 	  (x : D.(diagram0) i),	  (postcompose_cocone C (g o f)).(qq) i j g0 x @	  (fun (i0 : G.(graph0)) (x0 : D.(diagram0) i0) => 1) i x =	  (fun (i0 : G.(graph0)) (x0 : D.(diagram0) i0) => 1) j	    (D.(diagram1) i j g0 x) @	  (postcompose_cocone (postcompose_cocone C f) g).(qq) i j g0 x	";
             responses[i]=data;
           
 
             i = 249;
-            data = "1 subgoal (ID 119)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X -> Y	  Z : Type	  g : Y -> Z	  C : cocone D X	  i, j : G	  h : G i j	  x : D i	  ============================	  ap (fun x0 : X => g (f x0)) (qq C i j h x) = ap g (ap f (qq C i j h x))	";
+            data = "1 subgoal (ID 109)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X -> Y	  Z : Type	  g : Y -> Z	  C : cocone D X	  i, j : G.(graph0)	  h : G.(graph1) i j	  x : D.(diagram0) i	  ============================	  ap (fun x0 : X => g (f x0)) (C.(qq) i j h x) = ap g (ap f (C.(qq) i j h x))	";
             responses[i]=data;
           
 
@@ -1383,57 +1383,57 @@
           
 
             i = 273;
-            data = "1 subgoal (ID 106)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  ============================	  cocone D2 X -> cocone D1 X	";
+            data = "1 subgoal (ID 96)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  ============================	  cocone D2 X -> cocone D1 X	";
             responses[i]=data;
           
 
             i = 274;
-            data = "1 subgoal (ID 106)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  ============================	  cocone D2 X -> cocone D1 X	";
+            data = "1 subgoal (ID 96)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  ============================	  cocone D2 X -> cocone D1 X	";
             responses[i]=data;
           
 
             i = 275;
-            data = "1 subgoal (ID 107)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  C : cocone D2 X	  ============================	  cocone D1 X	";
+            data = "1 subgoal (ID 97)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  C : cocone D2 X	  ============================	  cocone D1 X	";
             responses[i]=data;
           
 
             i = 276;
-            data = "2 subgoals (ID 112)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  C : cocone D2 X	  ============================	  forall i : G, D1 i -> X		subgoal 2 (ID 114) is:	 forall (i j : G) (g : G i j) (x : D1 i), ?q j ((D1 _f g) x) = ?q i x	";
+            data = "2 subgoals (ID 102)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  C : cocone D2 X	  ============================	  forall i : G.(graph0), D1.(diagram0) i -> X		subgoal 2 (ID 104) is:	 forall (i j : G.(graph0)) (g : G.(graph1) i j) (x : D1.(diagram0) i),	 ?q j (D1.(diagram1) i j g x) = ?q i x	";
             responses[i]=data;
           
 
             i = 277;
-            data = "2 subgoals (ID 116)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  C : cocone D2 X	  i : G	  x : D1 i	  ============================	  X		subgoal 2 (ID 114) is:	 forall (i j : G) (g : G i j) (x : D1 i),	 (fun (i0 : G) (x0 : D1 i0) => ?Goal@{i:=i0; x:=x0}) j ((D1 _f g) x) =	 (fun (i0 : G) (x0 : D1 i0) => ?Goal@{i:=i0; x:=x0}) i x	";
+            data = "2 subgoals (ID 106)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  C : cocone D2 X	  i : G.(graph0)	  x : D1.(diagram0) i	  ============================	  X		subgoal 2 (ID 104) is:	 forall (i j : G.(graph0)) (g : G.(graph1) i j) (x : D1.(diagram0) i),	 (fun (i0 : G.(graph0)) (x0 : D1.(diagram0) i0) => ?Goal@{i:=i0; x:=x0}) j	   (D1.(diagram1) i j g x) =	 (fun (i0 : G.(graph0)) (x0 : D1.(diagram0) i0) => ?Goal@{i:=i0; x:=x0}) i x	";
             responses[i]=data;
           
 
             i = 278;
-            data = "1 subgoal (ID 114)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  C : cocone D2 X	  ============================	  forall (i j : G) (g : G i j) (x : D1 i),	  (fun (i0 : G) (x0 : D1 i0) => C i0 (m i0 x0)) j ((D1 _f g) x) =	  (fun (i0 : G) (x0 : D1 i0) => C i0 (m i0 x0)) i x	";
+            data = "1 subgoal (ID 104)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  C : cocone D2 X	  ============================	  forall (i j : G.(graph0)) (g : G.(graph1) i j) (x : D1.(diagram0) i),	  (fun (i0 : G.(graph0)) (x0 : D1.(diagram0) i0) =>	   C.(q) i0 (m.(diagram_map_obj) i0 x0)) j (D1.(diagram1) i j g x) =	  (fun (i0 : G.(graph0)) (x0 : D1.(diagram0) i0) =>	   C.(q) i0 (m.(diagram_map_obj) i0 x0)) i x	";
             responses[i]=data;
           
 
             i = 279;
-            data = "1 subgoal (ID 121)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  C : cocone D2 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  C j (m j ((D1 _f g) x)) = C i (m i x)	";
+            data = "1 subgoal (ID 111)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  C : cocone D2 X	  i, j : G.(graph0)	  g : G.(graph1) i j	  x : D1.(diagram0) i	  ============================	  C.(q) j (m.(diagram_map_obj) j (D1.(diagram1) i j g x)) =	  C.(q) i (m.(diagram_map_obj) i x)	";
             responses[i]=data;
           
 
             i = 280;
-            data = "2 focused subgoals	(shelved: 1) (ID 160)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  C : cocone D2 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  C j (m j ((D1 _f g) x)) = ?Goal		subgoal 2 (ID 161) is:	 ?Goal = C i (m i x)	";
+            data = "2 focused subgoals	(shelved: 1) (ID 150)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  C : cocone D2 X	  i, j : G.(graph0)	  g : G.(graph1) i j	  x : D1.(diagram0) i	  ============================	  C.(q) j (m.(diagram_map_obj) j (D1.(diagram1) i j g x)) = ?Goal		subgoal 2 (ID 151) is:	 ?Goal = C.(q) i (m.(diagram_map_obj) i x)	";
             responses[i]=data;
           
 
             i = 281;
-            data = "2 focused subgoals	(shelved: 1) (ID 165)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  C : cocone D2 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  m j ((D1 _f g) x) = ?y		subgoal 2 (ID 161) is:	 C j ?y = C i (m i x)	";
+            data = "2 focused subgoals	(shelved: 1) (ID 155)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  C : cocone D2 X	  i, j : G.(graph0)	  g : G.(graph1) i j	  x : D1.(diagram0) i	  ============================	  m.(diagram_map_obj) j (D1.(diagram1) i j g x) = ?y		subgoal 2 (ID 151) is:	 C j ?y = C.(q) i (m.(diagram_map_obj) i x)	";
             responses[i]=data;
           
 
             i = 282;
-            data = "2 focused subgoals	(shelved: 1) (ID 197)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  C : cocone D2 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  ?y = m j ((D1 _f g) x)		subgoal 2 (ID 161) is:	 C j ?y = C i (m i x)	";
+            data = "2 focused subgoals	(shelved: 1) (ID 187)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  C : cocone D2 X	  i, j : G.(graph0)	  g : G.(graph1) i j	  x : D1.(diagram0) i	  ============================	  ?y = m.(diagram_map_obj) j (D1.(diagram1) i j g x)		subgoal 2 (ID 151) is:	 C j ?y = C.(q) i (m.(diagram_map_obj) i x)	";
             responses[i]=data;
           
 
             i = 283;
-            data = "1 subgoal (ID 161)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  C : cocone D2 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  C j ((D2 _f g) (m i x)) = C i (m i x)	";
+            data = "1 subgoal (ID 151)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  C : cocone D2 X	  i, j : G.(graph0)	  g : G.(graph1) i j	  x : D1.(diagram0) i	  ============================	  C j (D2.(diagram1) i j g (m.(diagram_map_obj) i x)) =	  C.(q) i (m.(diagram_map_obj) i x)	";
             responses[i]=data;
           
 
@@ -1468,32 +1468,32 @@
           
 
             i = 290;
-            data = "1 subgoal (ID 115)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  ============================	  precompose_cocone (diagram_idmap D) == idmap	";
+            data = "1 subgoal (ID 105)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  ============================	  precompose_cocone (diagram_idmap D) == idmap	";
             responses[i]=data;
           
 
             i = 291;
-            data = "1 subgoal (ID 118)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  ============================	  precompose_cocone (diagram_idmap D) C = C	";
+            data = "1 subgoal (ID 108)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  ============================	  precompose_cocone (diagram_idmap D) C = C	";
             responses[i]=data;
           
 
             i = 292;
-            data = "2 subgoals (ID 126)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  ============================	  forall i : G, (precompose_cocone (diagram_idmap D) C) i == C i		subgoal 2 (ID 128) is:	 forall (i j : G) (g : G i j) (x : D i),	 qq (precompose_cocone (diagram_idmap D) C) i j g x @ ?eq1 i x =	 ?eq1 j ((D _f g) x) @ qq C i j g x	";
+            data = "2 subgoals (ID 116)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  ============================	  forall i : G.(graph0),	  (precompose_cocone (diagram_idmap D) C).(q) i == C.(q) i		subgoal 2 (ID 118) is:	 forall (i j : G.(graph0)) (g : G.(graph1) i j) (x : D.(diagram0) i),	 (precompose_cocone (diagram_idmap D) C).(qq) i j g x @ ?eq1 i x =	 ?eq1 j (D.(diagram1) i j g x) @ C.(qq) i j g x	";
             responses[i]=data;
           
 
             i = 293;
-            data = "2 subgoals (ID 131)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  i : G	  x : D i	  ============================	  (precompose_cocone (diagram_idmap D) C) i x = C i x		subgoal 2 (ID 128) is:	 forall (i j : G) (g : G i j) (x : D i),	 qq (precompose_cocone (diagram_idmap D) C) i j g x @	 (fun (i0 : G) (x0 : D i0) => ?Goal@{i:=i0; x:=x0}) i x =	 (fun (i0 : G) (x0 : D i0) => ?Goal@{i:=i0; x:=x0}) j ((D _f g) x) @	 qq C i j g x	";
+            data = "2 subgoals (ID 121)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  i : G.(graph0)	  x : D.(diagram0) i	  ============================	  (precompose_cocone (diagram_idmap D) C).(q) i x = C.(q) i x		subgoal 2 (ID 118) is:	 forall (i j : G.(graph0)) (g : G.(graph1) i j) (x : D.(diagram0) i),	 (precompose_cocone (diagram_idmap D) C).(qq) i j g x @	 (fun (i0 : G.(graph0)) (x0 : D.(diagram0) i0) => ?Goal@{i:=i0; x:=x0}) i x =	 (fun (i0 : G.(graph0)) (x0 : D.(diagram0) i0) => ?Goal@{i:=i0; x:=x0}) j	   (D.(diagram1) i j g x) @ C.(qq) i j g x	";
             responses[i]=data;
           
 
             i = 294;
-            data = "1 subgoal (ID 128)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  ============================	  forall (i j : G) (g : G i j) (x : D i),	  qq (precompose_cocone (diagram_idmap D) C) i j g x @	  (fun (i0 : G) (x0 : D i0) => 1) i x =	  (fun (i0 : G) (x0 : D i0) => 1) j ((D _f g) x) @ qq C i j g x	";
+            data = "1 subgoal (ID 118)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  ============================	  forall (i j : G.(graph0)) (g : G.(graph1) i j) (x : D.(diagram0) i),	  (precompose_cocone (diagram_idmap D) C).(qq) i j g x @	  (fun (i0 : G.(graph0)) (x0 : D.(diagram0) i0) => 1) i x =	  (fun (i0 : G.(graph0)) (x0 : D.(diagram0) i0) => 1) j	    (D.(diagram1) i j g x) @ C.(qq) i j g x	";
             responses[i]=data;
           
 
             i = 295;
-            data = "1 subgoal (ID 137)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  i, j : G	  g : G i j	  x : D i	  ============================	  (1 @ qq C i j g x) @ 1 = 1 @ qq C i j g x	";
+            data = "1 subgoal (ID 127)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  i, j : G.(graph0)	  g : G.(graph1) i j	  x : D.(diagram0) i	  ============================	  (1 @ qq C i j g x) @ 1 = 1 @ C.(qq) i j g x	";
             responses[i]=data;
           
 
@@ -1508,77 +1508,77 @@
           
 
             i = 298;
-            data = "1 subgoal (ID 149)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  ============================	  precompose_cocone m1 o precompose_cocone m2 ==	  precompose_cocone (diagram_comp m2 m1)	";
+            data = "1 subgoal (ID 139)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  ============================	  precompose_cocone m1 o precompose_cocone m2 ==	  precompose_cocone (diagram_comp m2 m1)	";
             responses[i]=data;
           
 
             i = 299;
-            data = "1 subgoal (ID 149)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  ============================	  precompose_cocone m1 o precompose_cocone m2 ==	  precompose_cocone (diagram_comp m2 m1)	";
+            data = "1 subgoal (ID 139)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  ============================	  precompose_cocone m1 o precompose_cocone m2 ==	  precompose_cocone (diagram_comp m2 m1)	";
             responses[i]=data;
           
 
             i = 300;
-            data = "1 subgoal (ID 152)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  ============================	  precompose_cocone m1 (precompose_cocone m2 C) =	  precompose_cocone (diagram_comp m2 m1) C	";
+            data = "1 subgoal (ID 142)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  ============================	  precompose_cocone m1 (precompose_cocone m2 C) =	  precompose_cocone (diagram_comp m2 m1) C	";
             responses[i]=data;
           
 
             i = 301;
-            data = "2 subgoals (ID 160)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  ============================	  forall i : G,	  (precompose_cocone m1 (precompose_cocone m2 C)) i ==	  (precompose_cocone (diagram_comp m2 m1) C) i		subgoal 2 (ID 162) is:	 forall (i j : G) (g : G i j) (x : D1 i),	 qq (precompose_cocone m1 (precompose_cocone m2 C)) i j g x @ ?eq1 i x =	 ?eq1 j ((D1 _f g) x) @ qq (precompose_cocone (diagram_comp m2 m1) C) i j g x	";
+            data = "2 subgoals (ID 150)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  ============================	  forall i : G.(graph0),	  (precompose_cocone m1 (precompose_cocone m2 C)).(q) i ==	  (precompose_cocone (diagram_comp m2 m1) C).(q) i		subgoal 2 (ID 152) is:	 forall (i j : G.(graph0)) (g : G.(graph1) i j) (x : D1.(diagram0) i),	 (precompose_cocone m1 (precompose_cocone m2 C)).(qq) i j g x @ ?eq1 i x =	 ?eq1 j (D1.(diagram1) i j g x) @	 (precompose_cocone (diagram_comp m2 m1) C).(qq) i j g x	";
             responses[i]=data;
           
 
             i = 302;
-            data = "2 subgoals (ID 165)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  i : G	  x : D1 i	  ============================	  (precompose_cocone m1 (precompose_cocone m2 C)) i x =	  (precompose_cocone (diagram_comp m2 m1) C) i x		subgoal 2 (ID 162) is:	 forall (i j : G) (g : G i j) (x : D1 i),	 qq (precompose_cocone m1 (precompose_cocone m2 C)) i j g x @	 (fun (i0 : G) (x0 : D1 i0) => ?Goal@{i:=i0; x:=x0}) i x =	 (fun (i0 : G) (x0 : D1 i0) => ?Goal@{i:=i0; x:=x0}) j ((D1 _f g) x) @	 qq (precompose_cocone (diagram_comp m2 m1) C) i j g x	";
+            data = "2 subgoals (ID 155)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  i : G.(graph0)	  x : D1.(diagram0) i	  ============================	  (precompose_cocone m1 (precompose_cocone m2 C)).(q) i x =	  (precompose_cocone (diagram_comp m2 m1) C).(q) i x		subgoal 2 (ID 152) is:	 forall (i j : G.(graph0)) (g : G.(graph1) i j) (x : D1.(diagram0) i),	 (precompose_cocone m1 (precompose_cocone m2 C)).(qq) i j g x @	 (fun (i0 : G.(graph0)) (x0 : D1.(diagram0) i0) => ?Goal@{i:=i0; x:=x0}) i x =	 (fun (i0 : G.(graph0)) (x0 : D1.(diagram0) i0) => ?Goal@{i:=i0; x:=x0}) j	   (D1.(diagram1) i j g x) @	 (precompose_cocone (diagram_comp m2 m1) C).(qq) i j g x	";
             responses[i]=data;
           
 
             i = 303;
-            data = "1 subgoal (ID 162)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  ============================	  forall (i j : G) (g : G i j) (x : D1 i),	  qq (precompose_cocone m1 (precompose_cocone m2 C)) i j g x @	  (fun (i0 : G) (x0 : D1 i0) => 1) i x =	  (fun (i0 : G) (x0 : D1 i0) => 1) j ((D1 _f g) x) @	  qq (precompose_cocone (diagram_comp m2 m1) C) i j g x	";
+            data = "1 subgoal (ID 152)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  ============================	  forall (i j : G.(graph0)) (g : G.(graph1) i j) (x : D1.(diagram0) i),	  (precompose_cocone m1 (precompose_cocone m2 C)).(qq) i j g x @	  (fun (i0 : G.(graph0)) (x0 : D1.(diagram0) i0) => 1) i x =	  (fun (i0 : G.(graph0)) (x0 : D1.(diagram0) i0) => 1) j	    (D1.(diagram1) i j g x) @	  (precompose_cocone (diagram_comp m2 m1) C).(qq) i j g x	";
             responses[i]=data;
           
 
             i = 304;
-            data = "1 subgoal (ID 170)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  qq (precompose_cocone m1 (precompose_cocone m2 C)) i j g x @	  (fun (i0 : G) (x0 : D1 i0) => 1) i x =	  (fun (i0 : G) (x0 : D1 i0) => 1) j ((D1 _f g) x) @	  qq (precompose_cocone (diagram_comp m2 m1) C) i j g x	";
+            data = "1 subgoal (ID 160)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  i, j : G.(graph0)	  g : G.(graph1) i j	  x : D1.(diagram0) i	  ============================	  (precompose_cocone m1 (precompose_cocone m2 C)).(qq) i j g x @	  (fun (i0 : G.(graph0)) (x0 : D1.(diagram0) i0) => 1) i x =	  (fun (i0 : G.(graph0)) (x0 : D1.(diagram0) i0) => 1) j	    (D1.(diagram1) i j g x) @	  (precompose_cocone (diagram_comp m2 m1) C).(qq) i j g x	";
             responses[i]=data;
           
 
             i = 305;
-            data = "1 subgoal (ID 171)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  (ap (fun x0 : D2 j => C j (m2 j x0)) (diagram_map_comm m1 g x)^ @	   (ap (C j) (diagram_map_comm m2 g (m1 i x))^ @ qq C i j g (m2 i (m1 i x)))) @	  1 =	  1 @	  (ap (C j)	     (CommutativeSquares.comm_square_comp (diagram_map_comm m2 g)	        (diagram_map_comm m1 g) x)^ @ qq C i j g (m2 i (m1 i x)))	";
+            data = "1 subgoal (ID 161)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  i, j : G.(graph0)	  g : G.(graph1) i j	  x : D1.(diagram0) i	  ============================	  (ap (fun x0 : D2.(diagram0) j => C.(q) j (m2.(diagram_map_obj) j x0))	     (diagram_map_comm m1 g x)^ @	   (ap (C j) (diagram_map_comm m2 g (m1.(diagram_map_obj) i x))^ @	    qq C i j g (m2.(diagram_map_obj) i (m1.(diagram_map_obj) i x)))) @ 1 =	  1 @	  (ap (C j)	     (CommutativeSquares.comm_square_comp (m2.(diagram_map_comm) i j g)	        (m1.(diagram_map_comm) i j g) x)^ @	   qq C i j g (m2.(diagram_map_obj) i (m1.(diagram_map_obj) i x)))	";
             responses[i]=data;
           
 
             i = 306;
-            data = "1 subgoal (ID 175)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  (ap (fun x0 : D2 j => C j (m2 j x0)) (diagram_map_comm m1 g x)^ @	   ap (C j) (diagram_map_comm m2 g (m1 i x))^) @ qq C i j g (m2 i (m1 i x)) =	  ap (C j)	    (CommutativeSquares.comm_square_comp (diagram_map_comm m2 g)	       (diagram_map_comm m1 g) x)^ @ qq C i j g (m2 i (m1 i x))	";
+            data = "1 subgoal (ID 165)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  i, j : G.(graph0)	  g : G.(graph1) i j	  x : D1.(diagram0) i	  ============================	  (ap (fun x0 : D2.(diagram0) j => C.(q) j (m2.(diagram_map_obj) j x0))	     (diagram_map_comm m1 g x)^ @	   ap (C j) (diagram_map_comm m2 g (m1.(diagram_map_obj) i x))^) @	  qq C i j g (m2.(diagram_map_obj) i (m1.(diagram_map_obj) i x)) =	  ap (C j)	    (CommutativeSquares.comm_square_comp (m2.(diagram_map_comm) i j g)	       (m1.(diagram_map_comm) i j g) x)^ @	  qq C i j g (m2.(diagram_map_obj) i (m1.(diagram_map_obj) i x))	";
             responses[i]=data;
           
 
             i = 307;
-            data = "1 subgoal (ID 341)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  concat	    (ap (fun x0 : D2 j => C j (m2 j x0)) (diagram_map_comm m1 g x)^ @	     ap (C j) (diagram_map_comm m2 g (m1 i x))^) =	  concat	    (ap (C j)	       (CommutativeSquares.comm_square_comp (diagram_map_comm m2 g)	          (diagram_map_comm m1 g) x)^)	";
+            data = "1 subgoal (ID 331)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  i, j : G.(graph0)	  g : G.(graph1) i j	  x : D1.(diagram0) i	  ============================	  concat	    (ap (fun x0 : D2.(diagram0) j => C.(q) j (m2.(diagram_map_obj) j x0))	       (diagram_map_comm m1 g x)^ @	     ap (C j) (diagram_map_comm m2 g (m1.(diagram_map_obj) i x))^) =	  concat	    (ap (C j)	       (CommutativeSquares.comm_square_comp (m2.(diagram_map_comm) i j g)	          (m1.(diagram_map_comm) i j g) x)^)	";
             responses[i]=data;
           
 
             i = 308;
-            data = "1 subgoal (ID 344)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  ap (fun x0 : D2 j => C j (m2 j x0)) (diagram_map_comm m1 g x)^ @	  ap (C j) (diagram_map_comm m2 g (m1 i x))^ =	  ap (C j)	    (CommutativeSquares.comm_square_comp (diagram_map_comm m2 g)	       (diagram_map_comm m1 g) x)^	";
+            data = "1 subgoal (ID 334)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  i, j : G.(graph0)	  g : G.(graph1) i j	  x : D1.(diagram0) i	  ============================	  ap (fun x0 : D2.(diagram0) j => C.(q) j (m2.(diagram_map_obj) j x0))	    (diagram_map_comm m1 g x)^ @	  ap (C j) (diagram_map_comm m2 g (m1.(diagram_map_obj) i x))^ =	  ap (C j)	    (CommutativeSquares.comm_square_comp (m2.(diagram_map_comm) i j g)	       (m1.(diagram_map_comm) i j g) x)^	";
             responses[i]=data;
           
 
             i = 309;
-            data = "1 subgoal (ID 345)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  ap (fun x0 : D2 j => C j (m2 j x0)) (diagram_map_comm m1 g x)^ @	  ap (C j) (diagram_map_comm m2 g (m1 i x))^ =	  ap (C j)	    (diagram_map_comm m2 g (m1 i x) @ ap (m2 j) (diagram_map_comm m1 g x))^	";
+            data = "1 subgoal (ID 335)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  i, j : G.(graph0)	  g : G.(graph1) i j	  x : D1.(diagram0) i	  ============================	  ap (fun x0 : D2.(diagram0) j => C.(q) j (m2.(diagram_map_obj) j x0))	    (diagram_map_comm m1 g x)^ @	  ap (C j) (diagram_map_comm m2 g (m1.(diagram_map_obj) i x))^ =	  ap (C j)	    (m2.(diagram_map_comm) i j g (m1.(diagram_map_obj) i x) @	     ap (m2.(diagram_map_obj) j) (m1.(diagram_map_comm) i j g x))^	";
             responses[i]=data;
           
 
             i = 310;
-            data = "1 subgoal (ID 350)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  ap (fun x0 : D2 j => C j (m2 j x0)) (diagram_map_comm m1 g x)^ @	  ap (C j) (diagram_map_comm m2 g (m1 i x))^ =	  ap (C j)	    ((ap (m2 j) (diagram_map_comm m1 g x))^ @	     (diagram_map_comm m2 g (m1 i x))^)	";
+            data = "1 subgoal (ID 340)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  i, j : G.(graph0)	  g : G.(graph1) i j	  x : D1.(diagram0) i	  ============================	  ap (fun x0 : D2.(diagram0) j => C.(q) j (m2.(diagram_map_obj) j x0))	    (diagram_map_comm m1 g x)^ @	  ap (C j) (diagram_map_comm m2 g (m1.(diagram_map_obj) i x))^ =	  ap (C j)	    ((ap (m2.(diagram_map_obj) j) (m1.(diagram_map_comm) i j g x))^ @	     (m2.(diagram_map_comm) i j g (m1.(diagram_map_obj) i x))^)	";
             responses[i]=data;
           
 
             i = 311;
-            data = "1 subgoal (ID 357)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  ap (fun x0 : D2 j => C j (m2 j x0)) (diagram_map_comm m1 g x)^ @	  ap (C j) (diagram_map_comm m2 g (m1 i x))^ =	  ap (C j) (ap (m2 j) (diagram_map_comm m1 g x))^ @	  ap (C j) (diagram_map_comm m2 g (m1 i x))^	";
+            data = "1 subgoal (ID 347)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  i, j : G.(graph0)	  g : G.(graph1) i j	  x : D1.(diagram0) i	  ============================	  ap (fun x0 : D2.(diagram0) j => C.(q) j (m2.(diagram_map_obj) j x0))	    (diagram_map_comm m1 g x)^ @	  ap (C j) (diagram_map_comm m2 g (m1.(diagram_map_obj) i x))^ =	  ap (C j) (ap (m2.(diagram_map_obj) j) (m1.(diagram_map_comm) i j g x))^ @	  ap (C j) (m2.(diagram_map_comm) i j g (m1.(diagram_map_obj) i x))^	";
             responses[i]=data;
           
 
             i = 312;
-            data = "1 subgoal (ID 363)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  ap (C j) (ap (m2 j) (diagram_map_comm m1 g x)^) @	  ap (C j) (diagram_map_comm m2 g (m1 i x))^ =	  ap (C j) (ap (m2 j) (diagram_map_comm m1 g x))^ @	  ap (C j) (diagram_map_comm m2 g (m1 i x))^	";
+            data = "1 subgoal (ID 353)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  i, j : G.(graph0)	  g : G.(graph1) i j	  x : D1.(diagram0) i	  ============================	  ap (C j) (ap (m2.(diagram_map_obj) j) (diagram_map_comm m1 g x)^) @	  ap (C j) (diagram_map_comm m2 g (m1.(diagram_map_obj) i x))^ =	  ap (C j) (ap (m2.(diagram_map_obj) j) (m1.(diagram_map_comm) i j g x))^ @	  ap (C j) (m2.(diagram_map_comm) i j g (m1.(diagram_map_obj) i x))^	";
             responses[i]=data;
           
 
@@ -1613,52 +1613,52 @@
           
 
             i = 319;
-            data = "1 subgoal (ID 177)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  Y : Type	  f : X -> Y	  C : cocone D2 X	  ============================	  postcompose_cocone (precompose_cocone m C) f =	  precompose_cocone m (postcompose_cocone C f)	";
+            data = "1 subgoal (ID 167)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  Y : Type	  f : X -> Y	  C : cocone D2 X	  ============================	  postcompose_cocone (precompose_cocone m C) f =	  precompose_cocone m (postcompose_cocone C f)	";
             responses[i]=data;
           
 
             i = 320;
-            data = "1 subgoal (ID 177)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  Y : Type	  f : X -> Y	  C : cocone D2 X	  ============================	  postcompose_cocone (precompose_cocone m C) f =	  precompose_cocone m (postcompose_cocone C f)	";
+            data = "1 subgoal (ID 167)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  Y : Type	  f : X -> Y	  C : cocone D2 X	  ============================	  postcompose_cocone (precompose_cocone m C) f =	  precompose_cocone m (postcompose_cocone C f)	";
             responses[i]=data;
           
 
             i = 321;
-            data = "2 subgoals (ID 185)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  Y : Type	  f : X -> Y	  C : cocone D2 X	  ============================	  forall i : G,	  (postcompose_cocone (precompose_cocone m C) f) i ==	  (precompose_cocone m (postcompose_cocone C f)) i		subgoal 2 (ID 187) is:	 forall (i j : G) (g : G i j) (x : D1 i),	 qq (postcompose_cocone (precompose_cocone m C) f) i j g x @ ?eq1 i x =	 ?eq1 j ((D1 _f g) x) @	 qq (precompose_cocone m (postcompose_cocone C f)) i j g x	";
+            data = "2 subgoals (ID 175)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  Y : Type	  f : X -> Y	  C : cocone D2 X	  ============================	  forall i : G.(graph0),	  (postcompose_cocone (precompose_cocone m C) f).(q) i ==	  (precompose_cocone m (postcompose_cocone C f)).(q) i		subgoal 2 (ID 177) is:	 forall (i j : G.(graph0)) (g : G.(graph1) i j) (x : D1.(diagram0) i),	 (postcompose_cocone (precompose_cocone m C) f).(qq) i j g x @ ?eq1 i x =	 ?eq1 j (D1.(diagram1) i j g x) @	 (precompose_cocone m (postcompose_cocone C f)).(qq) i j g x	";
             responses[i]=data;
           
 
             i = 322;
-            data = "1 subgoal (ID 185)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  Y : Type	  f : X -> Y	  C : cocone D2 X	  ============================	  forall i : G,	  (postcompose_cocone (precompose_cocone m C) f) i ==	  (precompose_cocone m (postcompose_cocone C f)) i	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 187)		subgoal 1 (ID 187) is:	 forall (i j : G) (g : G i j) (x : D1 i),	 qq (postcompose_cocone (precompose_cocone m C) f) i j g x @	 (fun (i0 : G) (x0 : D1 i0) => 1) i x =	 (fun (i0 : G) (x0 : D1 i0) => 1) j ((D1 _f g) x) @	 qq (precompose_cocone m (postcompose_cocone C f)) i j g x	";
+            data = "1 subgoal (ID 175)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  Y : Type	  f : X -> Y	  C : cocone D2 X	  ============================	  forall i : G.(graph0),	  (postcompose_cocone (precompose_cocone m C) f).(q) i ==	  (precompose_cocone m (postcompose_cocone C f)).(q) i	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 177)		subgoal 1 (ID 177) is:	 forall (i j : G.(graph0)) (g : G.(graph1) i j) (x : D1.(diagram0) i),	 (postcompose_cocone (precompose_cocone m C) f).(qq) i j g x @	 (fun (i0 : G.(graph0)) (x0 : D1.(diagram0) i0) => 1) i x =	 (fun (i0 : G.(graph0)) (x0 : D1.(diagram0) i0) => 1) j	   (D1.(diagram1) i j g x) @	 (precompose_cocone m (postcompose_cocone C f)).(qq) i j g x	";
             responses[i]=data;
           
 
             i = 323;
-            data = "1 subgoal (ID 187)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  Y : Type	  f : X -> Y	  C : cocone D2 X	  ============================	  forall (i j : G) (g : G i j) (x : D1 i),	  qq (postcompose_cocone (precompose_cocone m C) f) i j g x @	  (fun (i0 : G) (x0 : D1 i0) => 1) i x =	  (fun (i0 : G) (x0 : D1 i0) => 1) j ((D1 _f g) x) @	  qq (precompose_cocone m (postcompose_cocone C f)) i j g x	";
+            data = "1 subgoal (ID 177)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  Y : Type	  f : X -> Y	  C : cocone D2 X	  ============================	  forall (i j : G.(graph0)) (g : G.(graph1) i j) (x : D1.(diagram0) i),	  (postcompose_cocone (precompose_cocone m C) f).(qq) i j g x @	  (fun (i0 : G.(graph0)) (x0 : D1.(diagram0) i0) => 1) i x =	  (fun (i0 : G.(graph0)) (x0 : D1.(diagram0) i0) => 1) j	    (D1.(diagram1) i j g x) @	  (precompose_cocone m (postcompose_cocone C f)).(qq) i j g x	";
             responses[i]=data;
           
 
             i = 324;
-            data = "1 subgoal (ID 199)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  Y : Type	  f : X -> Y	  C : cocone D2 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  ap f (ap (C j) (diagram_map_comm m g x)^ @ qq C i j g (m i x)) =	  ap (fun x0 : D2 j => f (C j x0)) (diagram_map_comm m g x)^ @	  ap f (qq C i j g (m i x))	2 focused subgoals	(shelved: 1) (ID 403)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  Y : Type	  f : X -> Y	  C : cocone D2 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  ap f (ap (C j) (diagram_map_comm m g x)^ @ qq C i j g (m i x)) = ?Goal		subgoal 2 (ID 404) is:	 ?Goal =	 ap (fun x0 : D2 j => f (C j x0)) (diagram_map_comm m g x)^ @	 ap f (qq C i j g (m i x))	";
+            data = "1 subgoal (ID 189)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  Y : Type	  f : X -> Y	  C : cocone D2 X	  i, j : G.(graph0)	  g : G.(graph1) i j	  x : D1.(diagram0) i	  ============================	  ap f	    (ap (C j) (diagram_map_comm m g x)^ @	     qq C i j g (m.(diagram_map_obj) i x)) =	  ap (fun x0 : D2.(diagram0) j => f (C.(q) j x0)) (diagram_map_comm m g x)^ @	  ap f (C.(qq) i j g (m.(diagram_map_obj) i x))	2 focused subgoals	(shelved: 1) (ID 393)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  Y : Type	  f : X -> Y	  C : cocone D2 X	  i, j : G.(graph0)	  g : G.(graph1) i j	  x : D1.(diagram0) i	  ============================	  ap f	    (ap (C j) (diagram_map_comm m g x)^ @	     qq C i j g (m.(diagram_map_obj) i x)) = ?Goal		subgoal 2 (ID 394) is:	 ?Goal =	 ap (fun x0 : D2.(diagram0) j => f (C.(q) j x0)) (diagram_map_comm m g x)^ @	 ap f (C.(qq) i j g (m.(diagram_map_obj) i x))	";
             responses[i]=data;
           
 
             i = 325;
-            data = "1 subgoal (ID 404)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  Y : Type	  f : X -> Y	  C : cocone D2 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  ap f (ap (C j) (diagram_map_comm m g x)^) @ ap f (qq C i j g (m i x)) =	  ap (fun x0 : D2 j => f (C j x0)) (diagram_map_comm m g x)^ @	  ap f (qq C i j g (m i x))	";
+            data = "1 subgoal (ID 394)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  Y : Type	  f : X -> Y	  C : cocone D2 X	  i, j : G.(graph0)	  g : G.(graph1) i j	  x : D1.(diagram0) i	  ============================	  ap f (ap (C j) (diagram_map_comm m g x)^) @	  ap f (qq C i j g (m.(diagram_map_obj) i x)) =	  ap (fun x0 : D2.(diagram0) j => f (C.(q) j x0)) (diagram_map_comm m g x)^ @	  ap f (C.(qq) i j g (m.(diagram_map_obj) i x))	";
             responses[i]=data;
           
 
             i = 326;
-            data = "1 subgoal (ID 411)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  Y : Type	  f : X -> Y	  C : cocone D2 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  concat (ap f (ap (C j) (diagram_map_comm m g x)^)) =	  concat (ap (fun x0 : D2 j => f (C j x0)) (diagram_map_comm m g x)^)	";
+            data = "1 subgoal (ID 401)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  Y : Type	  f : X -> Y	  C : cocone D2 X	  i, j : G.(graph0)	  g : G.(graph1) i j	  x : D1.(diagram0) i	  ============================	  concat (ap f (ap (C j) (diagram_map_comm m g x)^)) =	  concat	    (ap (fun x0 : D2.(diagram0) j => f (C.(q) j x0))	       (diagram_map_comm m g x)^)	";
             responses[i]=data;
           
 
             i = 327;
-            data = "1 subgoal (ID 414)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  Y : Type	  f : X -> Y	  C : cocone D2 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  ap f (ap (C j) (diagram_map_comm m g x)^) =	  ap (fun x0 : D2 j => f (C j x0)) (diagram_map_comm m g x)^	";
+            data = "1 subgoal (ID 404)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  Y : Type	  f : X -> Y	  C : cocone D2 X	  i, j : G.(graph0)	  g : G.(graph1) i j	  x : D1.(diagram0) i	  ============================	  ap f (ap (C j) (diagram_map_comm m g x)^) =	  ap (fun x0 : D2.(diagram0) j => f (C.(q) j x0)) (diagram_map_comm m g x)^	";
             responses[i]=data;
           
 
             i = 328;
-            data = "1 subgoal (ID 450)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  Y : Type	  f : X -> Y	  C : cocone D2 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  ap (fun x0 : D2 j => f (C j x0)) (diagram_map_comm m g x)^ =	  ap f (ap (C j) (diagram_map_comm m g x)^)	";
+            data = "1 subgoal (ID 440)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  Y : Type	  f : X -> Y	  C : cocone D2 X	  i, j : G.(graph0)	  g : G.(graph1) i j	  x : D1.(diagram0) i	  ============================	  ap (fun x0 : D2.(diagram0) j => f (C.(q) j x0)) (diagram_map_comm m g x)^ =	  ap f (ap (C j) (diagram_map_comm m g x)^)	";
             responses[i]=data;
           
 
@@ -1693,62 +1693,62 @@
           
 
             i = 335;
-            data = "1 subgoal (ID 187)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  ============================	  IsEquiv (precompose_cocone m)	";
+            data = "1 subgoal (ID 177)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  ============================	  IsEquiv (precompose_cocone m.(diag_equiv_map))	";
             responses[i]=data;
           
 
             i = 336;
-            data = "1 subgoal (ID 187)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  ============================	  IsEquiv (precompose_cocone m)	";
+            data = "1 subgoal (ID 177)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  ============================	  IsEquiv (precompose_cocone m.(diag_equiv_map))	";
             responses[i]=data;
           
 
             i = 337;
-            data = "2 subgoals (ID 199)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  ============================	  Sect (precompose_cocone (diagram_equiv_inv m)) (precompose_cocone m)		subgoal 2 (ID 201) is:	 Sect (precompose_cocone m) (precompose_cocone (diagram_equiv_inv m))	";
+            data = "2 subgoals (ID 189)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  ============================	  Sect (precompose_cocone (diagram_equiv_inv m))	    (precompose_cocone m.(diag_equiv_map))		subgoal 2 (ID 191) is:	 Sect (precompose_cocone m.(diag_equiv_map))	   (precompose_cocone (diagram_equiv_inv m))	";
             responses[i]=data;
           
 
             i = 338;
-            data = "1 subgoal (ID 199)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  ============================	  Sect (precompose_cocone (diagram_equiv_inv m)) (precompose_cocone m)	1 subgoal (ID 203)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D1 X	  ============================	  precompose_cocone m (precompose_cocone (diagram_equiv_inv m) C) = C	";
+            data = "1 subgoal (ID 189)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  ============================	  Sect (precompose_cocone (diagram_equiv_inv m))	    (precompose_cocone m.(diag_equiv_map))	1 subgoal (ID 193)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D1 X	  ============================	  precompose_cocone m.(diag_equiv_map)	    (precompose_cocone (diagram_equiv_inv m) C) = C	";
             responses[i]=data;
           
 
             i = 339;
-            data = "2 focused subgoals	(shelved: 1) (ID 226)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D1 X	  ============================	  precompose_cocone m (precompose_cocone (diagram_equiv_inv m) C) = ?Goal		subgoal 2 (ID 227) is:	 ?Goal = C	";
+            data = "2 focused subgoals	(shelved: 1) (ID 216)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D1 X	  ============================	  precompose_cocone m.(diag_equiv_map)	    (precompose_cocone (diagram_equiv_inv m) C) = 	  ?Goal		subgoal 2 (ID 217) is:	 ?Goal = C	";
             responses[i]=data;
           
 
             i = 340;
-            data = "1 subgoal (ID 227)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D1 X	  ============================	  precompose_cocone (diagram_comp (diagram_equiv_inv m) m) C = C	";
+            data = "1 subgoal (ID 217)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D1 X	  ============================	  precompose_cocone (diagram_comp (diagram_equiv_inv m) m.(diag_equiv_map)) C =	  C	";
             responses[i]=data;
           
 
             i = 341;
-            data = "1 subgoal (ID 235)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D1 X	  ============================	  precompose_cocone (diagram_idmap D1) C = C	";
+            data = "1 subgoal (ID 225)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D1 X	  ============================	  precompose_cocone (diagram_idmap D1) C = C	";
             responses[i]=data;
           
 
             i = 342;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 201)		subgoal 1 (ID 201) is:	 Sect (precompose_cocone m) (precompose_cocone (diagram_equiv_inv m))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 191)		subgoal 1 (ID 191) is:	 Sect (precompose_cocone m.(diag_equiv_map))	   (precompose_cocone (diagram_equiv_inv m))	";
             responses[i]=data;
           
 
             i = 343;
-            data = "1 subgoal (ID 201)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  ============================	  Sect (precompose_cocone m) (precompose_cocone (diagram_equiv_inv m))	1 subgoal (ID 241)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D2 X	  ============================	  precompose_cocone (diagram_equiv_inv m) (precompose_cocone m C) = C	";
+            data = "1 subgoal (ID 191)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  ============================	  Sect (precompose_cocone m.(diag_equiv_map))	    (precompose_cocone (diagram_equiv_inv m))	1 subgoal (ID 231)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D2 X	  ============================	  precompose_cocone (diagram_equiv_inv m)	    (precompose_cocone m.(diag_equiv_map) C) = C	";
             responses[i]=data;
           
 
             i = 344;
-            data = "2 focused subgoals	(shelved: 1) (ID 264)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D2 X	  ============================	  precompose_cocone (diagram_equiv_inv m) (precompose_cocone m C) = ?Goal		subgoal 2 (ID 265) is:	 ?Goal = C	";
+            data = "2 focused subgoals	(shelved: 1) (ID 254)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D2 X	  ============================	  precompose_cocone (diagram_equiv_inv m)	    (precompose_cocone m.(diag_equiv_map) C) = ?Goal		subgoal 2 (ID 255) is:	 ?Goal = C	";
             responses[i]=data;
           
 
             i = 345;
-            data = "1 subgoal (ID 265)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D2 X	  ============================	  precompose_cocone (diagram_comp m (diagram_equiv_inv m)) C = C	";
+            data = "1 subgoal (ID 255)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D2 X	  ============================	  precompose_cocone (diagram_comp m.(diag_equiv_map) (diagram_equiv_inv m)) C =	  C	";
             responses[i]=data;
           
 
             i = 346;
-            data = "1 subgoal (ID 273)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D2 X	  ============================	  precompose_cocone (diagram_idmap D2) C = C	";
+            data = "1 subgoal (ID 263)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D2 X	  ============================	  precompose_cocone (diagram_idmap D2) C = C	";
             responses[i]=data;
           
 
@@ -1783,87 +1783,87 @@
           
 
             i = 353;
-            data = "1 subgoal (ID 201)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  ============================	  IsEquiv (fun C : cocone D X => postcompose_cocone C f)	";
+            data = "1 subgoal (ID 191)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  ============================	  IsEquiv (fun C : cocone D X => postcompose_cocone C f.(equiv_fun))	";
             responses[i]=data;
           
 
             i = 354;
-            data = "1 subgoal (ID 201)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  ============================	  IsEquiv (fun C : cocone D X => postcompose_cocone C f)	";
+            data = "1 subgoal (ID 191)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  ============================	  IsEquiv (fun C : cocone D X => postcompose_cocone C f.(equiv_fun))	";
             responses[i]=data;
           
 
             i = 355;
-            data = "3 subgoals (ID 227)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  ============================	  cocone D Y -> cocone D X		subgoal 2 (ID 229) is:	 Sect ?g (fun C : cocone D X => postcompose_cocone C f)	subgoal 3 (ID 231) is:	 Sect (fun C : cocone D X => postcompose_cocone C f) ?g	";
+            data = "3 subgoals (ID 217)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  ============================	  cocone D Y -> cocone D X		subgoal 2 (ID 219) is:	 Sect ?g (fun C : cocone D X => postcompose_cocone C f.(equiv_fun))	subgoal 3 (ID 221) is:	 Sect (fun C : cocone D X => postcompose_cocone C f.(equiv_fun)) ?g	";
             responses[i]=data;
           
 
             i = 356;
-            data = "1 subgoal (ID 227)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  ============================	  cocone D Y -> cocone D X	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 229)		subgoal 1 (ID 229) is:	 Sect (fun C : cocone D Y => postcompose_cocone C _^-1)	   (fun C : cocone D X => postcompose_cocone C f)	subgoal 2 (ID 231) is:	 Sect (fun C : cocone D X => postcompose_cocone C f)	   (fun C : cocone D Y => postcompose_cocone C _^-1)	";
+            data = "1 subgoal (ID 217)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  ============================	  cocone D Y -> cocone D X	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 219)		subgoal 1 (ID 219) is:	 Sect	   (fun C : cocone D Y => postcompose_cocone C f.(equiv_isequiv).(equiv_inv))	   (fun C : cocone D X => postcompose_cocone C f.(equiv_fun))	subgoal 2 (ID 221) is:	 Sect (fun C : cocone D X => postcompose_cocone C f.(equiv_fun))	   (fun C : cocone D Y => postcompose_cocone C f.(equiv_isequiv).(equiv_inv))	";
             responses[i]=data;
           
 
             i = 357;
-            data = "1 subgoal (ID 229)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  ============================	  Sect (fun C : cocone D Y => postcompose_cocone C _^-1)	    (fun C : cocone D X => postcompose_cocone C f)	1 subgoal (ID 252)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D Y	  ============================	  postcompose_cocone (postcompose_cocone C _^-1) f = C	";
+            data = "1 subgoal (ID 219)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  ============================	  Sect	    (fun C : cocone D Y => postcompose_cocone C f.(equiv_isequiv).(equiv_inv))	    (fun C : cocone D X => postcompose_cocone C f.(equiv_fun))	1 subgoal (ID 242)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D Y	  ============================	  postcompose_cocone (postcompose_cocone C f.(equiv_isequiv).(equiv_inv))	    f.(equiv_fun) = C	";
             responses[i]=data;
           
 
             i = 358;
-            data = "2 focused subgoals	(shelved: 1) (ID 275)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D Y	  ============================	  postcompose_cocone (postcompose_cocone C _^-1) f = ?Goal		subgoal 2 (ID 276) is:	 ?Goal = C	";
+            data = "2 focused subgoals	(shelved: 1) (ID 265)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D Y	  ============================	  postcompose_cocone (postcompose_cocone C f.(equiv_isequiv).(equiv_inv))	    f.(equiv_fun) = ?Goal		subgoal 2 (ID 266) is:	 ?Goal = C	";
             responses[i]=data;
           
 
             i = 359;
-            data = "2 focused subgoals	(shelved: 1) (ID 292)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D Y	  ============================	  ?Goal = postcompose_cocone (postcompose_cocone C _^-1) f		subgoal 2 (ID 276) is:	 ?Goal = C	";
+            data = "2 focused subgoals	(shelved: 1) (ID 282)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D Y	  ============================	  ?Goal =	  postcompose_cocone (postcompose_cocone C f.(equiv_isequiv).(equiv_inv))	    f.(equiv_fun)		subgoal 2 (ID 266) is:	 ?Goal = C	";
             responses[i]=data;
           
 
             i = 360;
-            data = "1 subgoal (ID 276)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D Y	  ============================	  postcompose_cocone C (fun x : Y => f (_^-1 x)) = C	";
+            data = "1 subgoal (ID 266)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D Y	  ============================	  postcompose_cocone C	    (fun x : Y => f.(equiv_fun) (f.(equiv_isequiv).(equiv_inv) x)) = C	";
             responses[i]=data;
           
 
             i = 361;
-            data = "2 focused subgoals	(shelved: 1) (ID 318)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D Y	  ============================	  postcompose_cocone C (fun x : Y => f (_^-1 x)) = ?Goal		subgoal 2 (ID 319) is:	 ?Goal = C	1 subgoal (ID 318)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D Y	  ============================	  postcompose_cocone C (fun x : Y => f (_^-1 x)) = postcompose_cocone C idmap	";
+            data = "2 focused subgoals	(shelved: 1) (ID 308)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D Y	  ============================	  postcompose_cocone C	    (fun x : Y => f.(equiv_fun) (f.(equiv_isequiv).(equiv_inv) x)) = 	  ?Goal		subgoal 2 (ID 309) is:	 ?Goal = C	1 subgoal (ID 308)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D Y	  ============================	  postcompose_cocone C	    (fun x : Y => f.(equiv_fun) (f.(equiv_isequiv).(equiv_inv) x)) =	  postcompose_cocone C idmap	";
             responses[i]=data;
           
 
             i = 362;
-            data = "1 subgoal (ID 324)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D Y	  ============================	  (fun x : Y => f (_^-1 x)) = idmap	";
+            data = "1 subgoal (ID 314)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D Y	  ============================	  (fun x : Y => f.(equiv_fun) (f.(equiv_isequiv).(equiv_inv) x)) = idmap	";
             responses[i]=data;
           
 
             i = 363;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 231)		subgoal 1 (ID 231) is:	 Sect (fun C : cocone D X => postcompose_cocone C f)	   (fun C : cocone D Y => postcompose_cocone C _^-1)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 221)		subgoal 1 (ID 221) is:	 Sect (fun C : cocone D X => postcompose_cocone C f.(equiv_fun))	   (fun C : cocone D Y => postcompose_cocone C f.(equiv_isequiv).(equiv_inv))	";
             responses[i]=data;
           
 
             i = 364;
-            data = "1 subgoal (ID 231)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  ============================	  Sect (fun C : cocone D X => postcompose_cocone C f)	    (fun C : cocone D Y => postcompose_cocone C _^-1)	1 subgoal (ID 334)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D X	  ============================	  postcompose_cocone (postcompose_cocone C f) _^-1 = C	";
+            data = "1 subgoal (ID 221)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  ============================	  Sect (fun C : cocone D X => postcompose_cocone C f.(equiv_fun))	    (fun C : cocone D Y => postcompose_cocone C f.(equiv_isequiv).(equiv_inv))	1 subgoal (ID 324)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D X	  ============================	  postcompose_cocone (postcompose_cocone C f.(equiv_fun))	    f.(equiv_isequiv).(equiv_inv) = C	";
             responses[i]=data;
           
 
             i = 365;
-            data = "2 focused subgoals	(shelved: 1) (ID 357)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D X	  ============================	  postcompose_cocone (postcompose_cocone C f) _^-1 = ?Goal		subgoal 2 (ID 358) is:	 ?Goal = C	";
+            data = "2 focused subgoals	(shelved: 1) (ID 347)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D X	  ============================	  postcompose_cocone (postcompose_cocone C f.(equiv_fun))	    f.(equiv_isequiv).(equiv_inv) = ?Goal		subgoal 2 (ID 348) is:	 ?Goal = C	";
             responses[i]=data;
           
 
             i = 366;
-            data = "2 focused subgoals	(shelved: 1) (ID 374)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D X	  ============================	  ?Goal = postcompose_cocone (postcompose_cocone C f) _^-1		subgoal 2 (ID 358) is:	 ?Goal = C	";
+            data = "2 focused subgoals	(shelved: 1) (ID 364)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D X	  ============================	  ?Goal =	  postcompose_cocone (postcompose_cocone C f.(equiv_fun))	    f.(equiv_isequiv).(equiv_inv)		subgoal 2 (ID 348) is:	 ?Goal = C	";
             responses[i]=data;
           
 
             i = 367;
-            data = "1 subgoal (ID 358)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D X	  ============================	  postcompose_cocone C (fun x : X => _^-1 (f x)) = C	";
+            data = "1 subgoal (ID 348)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D X	  ============================	  postcompose_cocone C	    (fun x : X => f.(equiv_isequiv).(equiv_inv) (f.(equiv_fun) x)) = C	";
             responses[i]=data;
           
 
             i = 368;
-            data = "2 focused subgoals	(shelved: 1) (ID 400)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D X	  ============================	  postcompose_cocone C (fun x : X => _^-1 (f x)) = ?Goal		subgoal 2 (ID 401) is:	 ?Goal = C	1 subgoal (ID 400)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D X	  ============================	  postcompose_cocone C (fun x : X => _^-1 (f x)) = postcompose_cocone C idmap	";
+            data = "2 focused subgoals	(shelved: 1) (ID 390)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D X	  ============================	  postcompose_cocone C	    (fun x : X => f.(equiv_isequiv).(equiv_inv) (f.(equiv_fun) x)) = 	  ?Goal		subgoal 2 (ID 391) is:	 ?Goal = C	1 subgoal (ID 390)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D X	  ============================	  postcompose_cocone C	    (fun x : X => f.(equiv_isequiv).(equiv_inv) (f.(equiv_fun) x)) =	  postcompose_cocone C idmap	";
             responses[i]=data;
           
 
             i = 369;
-            data = "1 subgoal (ID 406)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D X	  ============================	  (fun x : X => _^-1 (f x)) = idmap	";
+            data = "1 subgoal (ID 396)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D X	  ============================	  (fun x : X => f.(equiv_isequiv).(equiv_inv) (f.(equiv_fun) x)) = idmap	";
             responses[i]=data;
           
 
@@ -1923,32 +1923,32 @@
           
 
             i = 381;
-            data = "1 subgoal (ID 218)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D2 X	  ============================	  is_universal C -> is_universal (precompose_cocone m C)	";
+            data = "1 subgoal (ID 208)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D2 X	  ============================	  is_universal C -> is_universal (precompose_cocone m.(diag_equiv_map) C)	";
             responses[i]=data;
           
 
             i = 382;
-            data = "1 subgoal (ID 218)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D2 X	  ============================	  is_universal C -> is_universal (precompose_cocone m C)	";
+            data = "1 subgoal (ID 208)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D2 X	  ============================	  is_universal C -> is_universal (precompose_cocone m.(diag_equiv_map) C)	";
             responses[i]=data;
           
 
             i = 383;
-            data = "1 subgoal (ID 219)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D2 X	  ============================	  (forall Y : Type, IsEquiv (postcompose_cocone C)) ->	  forall Y : Type, IsEquiv (postcompose_cocone (precompose_cocone m C))	";
+            data = "1 subgoal (ID 209)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D2 X	  ============================	  (forall Y : Type, IsEquiv (postcompose_cocone C)) ->	  forall Y : Type,	  IsEquiv (postcompose_cocone (precompose_cocone m.(diag_equiv_map) C))	";
             responses[i]=data;
           
 
             i = 384;
-            data = "1 subgoal (ID 221)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D2 X	  H : forall Y : Type, IsEquiv (postcompose_cocone C)	  Y : Type	  ============================	  IsEquiv (postcompose_cocone (precompose_cocone m C))	";
+            data = "1 subgoal (ID 211)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D2 X	  H : forall Y : Type, IsEquiv (postcompose_cocone C)	  Y : Type	  ============================	  IsEquiv (postcompose_cocone (precompose_cocone m.(diag_equiv_map) C))	";
             responses[i]=data;
           
 
             i = 385;
-            data = "1 subgoal (ID 236)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D2 X	  H : forall Y : Type, IsEquiv (postcompose_cocone C)	  Y : Type	  ============================	  IsEquiv (fun f : X -> Y => precompose_cocone m (postcompose_cocone C f))	";
+            data = "1 subgoal (ID 226)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D2 X	  H : forall Y : Type, IsEquiv (postcompose_cocone C)	  Y : Type	  ============================	  IsEquiv	    (fun f : X -> Y =>	     precompose_cocone m.(diag_equiv_map) (postcompose_cocone C f))	";
             responses[i]=data;
           
 
             i = 386;
-            data = "1 subgoal (ID 257)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D2 X	  H : forall Y : Type, IsEquiv (postcompose_cocone C)	  Y : Type	  ============================	  IsEquiv (precompose_cocone m)	";
+            data = "1 subgoal (ID 247)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D2 X	  H : forall Y : Type, IsEquiv (postcompose_cocone C)	  Y : Type	  ============================	  IsEquiv (precompose_cocone m.(diag_equiv_map))	";
             responses[i]=data;
           
 
@@ -1963,27 +1963,27 @@
           
 
             i = 389;
-            data = "1 subgoal (ID 237)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D X	  ============================	  is_universal C -> is_universal (postcompose_cocone C f)	";
+            data = "1 subgoal (ID 227)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D X	  ============================	  is_universal C -> is_universal (postcompose_cocone C f.(equiv_fun))	";
             responses[i]=data;
           
 
             i = 390;
-            data = "1 subgoal (ID 237)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D X	  ============================	  is_universal C -> is_universal (postcompose_cocone C f)	";
+            data = "1 subgoal (ID 227)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D X	  ============================	  is_universal C -> is_universal (postcompose_cocone C f.(equiv_fun))	";
             responses[i]=data;
           
 
             i = 391;
-            data = "1 subgoal (ID 238)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D X	  ============================	  (forall Y0 : Type, IsEquiv (postcompose_cocone C)) ->	  forall Y0 : Type, IsEquiv (postcompose_cocone (postcompose_cocone C f))	";
+            data = "1 subgoal (ID 228)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D X	  ============================	  (forall Y0 : Type, IsEquiv (postcompose_cocone C)) ->	  forall Y0 : Type,	  IsEquiv (postcompose_cocone (postcompose_cocone C f.(equiv_fun)))	";
             responses[i]=data;
           
 
             i = 392;
-            data = "1 subgoal (ID 240)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D X	  H : forall Y : Type, IsEquiv (postcompose_cocone C)	  Z : Type	  ============================	  IsEquiv (postcompose_cocone (postcompose_cocone C f))	";
+            data = "1 subgoal (ID 230)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D X	  H : forall Y : Type, IsEquiv (postcompose_cocone C)	  Z : Type	  ============================	  IsEquiv (postcompose_cocone (postcompose_cocone C f.(equiv_fun)))	";
             responses[i]=data;
           
 
             i = 393;
-            data = "1 subgoal (ID 254)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D X	  H : forall Y : Type, IsEquiv (postcompose_cocone C)	  Z : Type	  ============================	  IsEquiv (fun g : Y -> Z => postcompose_cocone C (fun x : X => g (f x)))	";
+            data = "1 subgoal (ID 244)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D X	  H : forall Y : Type, IsEquiv (postcompose_cocone C)	  Z : Type	  ============================	  IsEquiv	    (fun g : Y -> Z =>	     postcompose_cocone C (fun x : X => g (f.(equiv_fun) x)))	";
             responses[i]=data;
           
 
@@ -2018,27 +2018,27 @@
           
 
             i = 400;
-            data = "1 subgoal (ID 245)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q : Type	  ============================	  is_colimit D2 Q -> is_colimit D1 Q	";
+            data = "1 subgoal (ID 235)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q : Type	  ============================	  is_colimit D2 Q -> is_colimit D1 Q	";
             responses[i]=data;
           
 
             i = 401;
-            data = "1 subgoal (ID 245)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q : Type	  ============================	  is_colimit D2 Q -> is_colimit D1 Q	";
+            data = "1 subgoal (ID 235)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q : Type	  ============================	  is_colimit D2 Q -> is_colimit D1 Q	";
             responses[i]=data;
           
 
             i = 402;
-            data = "1 subgoal (ID 246)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q : Type	  HQ : is_colimit D2 Q	  ============================	  is_colimit D1 Q	";
+            data = "1 subgoal (ID 236)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q : Type	  HQ : is_colimit D2 Q	  ============================	  is_colimit D1 Q	";
             responses[i]=data;
           
 
             i = 403;
-            data = "1 subgoal (ID 254)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q : Type	  HQ : is_colimit D2 Q	  ============================	  is_universal (precompose_cocone m HQ)	";
+            data = "1 subgoal (ID 244)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q : Type	  HQ : is_colimit D2 Q	  ============================	  is_universal (precompose_cocone m.(diag_equiv_map) HQ.(is_colimit_C))	";
             responses[i]=data;
           
 
             i = 404;
-            data = "1 subgoal (ID 257)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q : Type	  HQ : is_colimit D2 Q	  ============================	  is_universal HQ	";
+            data = "1 subgoal (ID 247)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q : Type	  HQ : is_colimit D2 Q	  ============================	  is_universal HQ.(is_colimit_C)	";
             responses[i]=data;
           
 
@@ -2053,27 +2053,27 @@
           
 
             i = 407;
-            data = "1 subgoal (ID 254)	  	  fs : Funext	  G : graph	  D : diagram G	  Q : Type	  Q' : Type	  f : Q <~> Q'	  ============================	  is_colimit D Q -> is_colimit D Q'	";
+            data = "1 subgoal (ID 244)	  	  fs : Funext	  G : graph	  D : diagram G	  Q : Type	  Q' : Type	  f : Q <~> Q'	  ============================	  is_colimit D Q -> is_colimit D Q'	";
             responses[i]=data;
           
 
             i = 408;
-            data = "1 subgoal (ID 254)	  	  fs : Funext	  G : graph	  D : diagram G	  Q : Type	  Q' : Type	  f : Q <~> Q'	  ============================	  is_colimit D Q -> is_colimit D Q'	";
+            data = "1 subgoal (ID 244)	  	  fs : Funext	  G : graph	  D : diagram G	  Q : Type	  Q' : Type	  f : Q <~> Q'	  ============================	  is_colimit D Q -> is_colimit D Q'	";
             responses[i]=data;
           
 
             i = 409;
-            data = "1 subgoal (ID 255)	  	  fs : Funext	  G : graph	  D : diagram G	  Q : Type	  Q' : Type	  f : Q <~> Q'	  HQ : is_colimit D Q	  ============================	  is_colimit D Q'	";
+            data = "1 subgoal (ID 245)	  	  fs : Funext	  G : graph	  D : diagram G	  Q : Type	  Q' : Type	  f : Q <~> Q'	  HQ : is_colimit D Q	  ============================	  is_colimit D Q'	";
             responses[i]=data;
           
 
             i = 410;
-            data = "1 subgoal (ID 264)	  	  fs : Funext	  G : graph	  D : diagram G	  Q : Type	  Q' : Type	  f : Q <~> Q'	  HQ : is_colimit D Q	  ============================	  is_universal (postcompose_cocone HQ f)	";
+            data = "1 subgoal (ID 254)	  	  fs : Funext	  G : graph	  D : diagram G	  Q : Type	  Q' : Type	  f : Q <~> Q'	  HQ : is_colimit D Q	  ============================	  is_universal (postcompose_cocone HQ.(is_colimit_C) f.(equiv_fun))	";
             responses[i]=data;
           
 
             i = 411;
-            data = "1 subgoal (ID 268)	  	  fs : Funext	  G : graph	  D : diagram G	  Q : Type	  Q' : Type	  f : Q <~> Q'	  HQ : is_colimit D Q	  ============================	  is_universal HQ	";
+            data = "1 subgoal (ID 258)	  	  fs : Funext	  G : graph	  D : diagram G	  Q : Type	  Q' : Type	  f : Q <~> Q'	  HQ : is_colimit D Q	  ============================	  is_universal HQ.(is_colimit_C)	";
             responses[i]=data;
           
 
@@ -2233,17 +2233,17 @@
           
 
             i = 443;
-            data = "1 subgoal (ID 90)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  precompose_cocone m HQ2 =	  postcompose_cocone HQ1 (functoriality_colimit m HQ1 HQ2)	";
+            data = "1 subgoal (ID 80)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  precompose_cocone m HQ2.(is_colimit_C) =	  postcompose_cocone HQ1.(is_colimit_C) (functoriality_colimit m HQ1 HQ2)	";
             responses[i]=data;
           
 
             i = 444;
-            data = "1 subgoal (ID 90)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  precompose_cocone m HQ2 =	  postcompose_cocone HQ1 (functoriality_colimit m HQ1 HQ2)	";
+            data = "1 subgoal (ID 80)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  precompose_cocone m HQ2.(is_colimit_C) =	  postcompose_cocone HQ1.(is_colimit_C) (functoriality_colimit m HQ1 HQ2)	";
             responses[i]=data;
           
 
             i = 445;
-            data = "1 subgoal (ID 91)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  precompose_cocone m HQ2 =	  postcompose_cocone HQ1	    (postcompose_cocone_inv HQ1 (precompose_cocone m HQ2))	";
+            data = "1 subgoal (ID 81)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  precompose_cocone m HQ2.(is_colimit_C) =	  postcompose_cocone HQ1.(is_colimit_C)	    (postcompose_cocone_inv HQ1 (precompose_cocone m HQ2.(is_colimit_C)))	";
             responses[i]=data;
           
 
@@ -2308,77 +2308,77 @@
           
 
             i = 458;
-            data = "1 subgoal (ID 109)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  Sect (functoriality_colimit (diagram_equiv_inv m) HQ2 HQ1)	    (functoriality_colimit m HQ1 HQ2)	";
+            data = "1 subgoal (ID 99)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  Sect (functoriality_colimit (diagram_equiv_inv m) HQ2 HQ1)	    (functoriality_colimit m.(diag_equiv_map) HQ1 HQ2)	";
             responses[i]=data;
           
 
             i = 459;
-            data = "1 subgoal (ID 109)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  Sect (functoriality_colimit (diagram_equiv_inv m) HQ2 HQ1)	    (functoriality_colimit m HQ1 HQ2)	";
+            data = "1 subgoal (ID 99)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  Sect (functoriality_colimit (diagram_equiv_inv m) HQ2 HQ1)	    (functoriality_colimit m.(diag_equiv_map) HQ1 HQ2)	";
             responses[i]=data;
           
 
             i = 460;
-            data = "1 subgoal (ID 110)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  Sect	    (postcompose_cocone_inv HQ2 (precompose_cocone (diagram_equiv_inv m) HQ1))	    (postcompose_cocone_inv HQ1 (precompose_cocone m HQ2))	";
+            data = "1 subgoal (ID 100)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  Sect	    (postcompose_cocone_inv HQ2	       (precompose_cocone (diagram_equiv_inv m) HQ1.(is_colimit_C)))	    (postcompose_cocone_inv HQ1	       (precompose_cocone m.(diag_equiv_map) HQ2.(is_colimit_C)))	";
             responses[i]=data;
           
 
             i = 461;
-            data = "1 subgoal (ID 115)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  (fun x : Q2 =>	   postcompose_cocone_inv HQ1 (precompose_cocone m HQ2)	     (postcompose_cocone_inv HQ2	        (precompose_cocone (diagram_equiv_inv m) HQ1) x)) = idmap	";
+            data = "1 subgoal (ID 105)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  (fun x : Q2 =>	   postcompose_cocone_inv HQ1	     (precompose_cocone m.(diag_equiv_map) HQ2.(is_colimit_C))	     (postcompose_cocone_inv HQ2	        (precompose_cocone (diagram_equiv_inv m) HQ1.(is_colimit_C)) x)) =	  idmap	";
             responses[i]=data;
           
 
             i = 462;
-            data = "2 subgoals (ID 122)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  IsEquiv (postcompose_cocone HQ2)		subgoal 2 (ID 125) is:	 postcompose_cocone HQ2	   (fun x : Q2 =>	    postcompose_cocone_inv HQ1 (precompose_cocone m HQ2)	      (postcompose_cocone_inv HQ2	         (precompose_cocone (diagram_equiv_inv m) HQ1) x)) =	 postcompose_cocone HQ2 idmap	";
+            data = "2 subgoals (ID 112)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  IsEquiv (postcompose_cocone HQ2.(is_colimit_C))		subgoal 2 (ID 115) is:	 postcompose_cocone HQ2.(is_colimit_C)	   (fun x : Q2 =>	    postcompose_cocone_inv HQ1	      (precompose_cocone m.(diag_equiv_map) HQ2.(is_colimit_C))	      (postcompose_cocone_inv HQ2	         (precompose_cocone (diagram_equiv_inv m) HQ1.(is_colimit_C)) x)) =	 postcompose_cocone HQ2.(is_colimit_C) idmap	";
             responses[i]=data;
           
 
             i = 463;
-            data = "1 subgoal (ID 125)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone HQ2	    (fun x : Q2 =>	     postcompose_cocone_inv HQ1 (precompose_cocone m HQ2)	       (postcompose_cocone_inv HQ2	          (precompose_cocone (diagram_equiv_inv m) HQ1) x)) =	  postcompose_cocone HQ2 idmap	";
+            data = "1 subgoal (ID 115)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone HQ2.(is_colimit_C)	    (fun x : Q2 =>	     postcompose_cocone_inv HQ1	       (precompose_cocone m.(diag_equiv_map) HQ2.(is_colimit_C))	       (postcompose_cocone_inv HQ2	          (precompose_cocone (diagram_equiv_inv m) HQ1.(is_colimit_C)) x)) =	  postcompose_cocone HQ2.(is_colimit_C) idmap	";
             responses[i]=data;
           
 
             i = 464;
-            data = "2 focused subgoals	(shelved: 1) (ID 394)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone HQ2	    (fun x : Q2 =>	     postcompose_cocone_inv HQ1 (precompose_cocone m HQ2)	       (postcompose_cocone_inv HQ2	          (precompose_cocone (diagram_equiv_inv m) HQ1) x)) = 	  ?Goal		subgoal 2 (ID 395) is:	 ?Goal = postcompose_cocone HQ2 idmap	1 subgoal (ID 394)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone HQ2	    (fun x : Q2 =>	     postcompose_cocone_inv HQ1 (precompose_cocone m HQ2)	       (postcompose_cocone_inv HQ2	          (precompose_cocone (diagram_equiv_inv m) HQ1) x)) = HQ2	";
+            data = "2 focused subgoals	(shelved: 1) (ID 384)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone HQ2.(is_colimit_C)	    (fun x : Q2 =>	     postcompose_cocone_inv HQ1	       (precompose_cocone m.(diag_equiv_map) HQ2.(is_colimit_C))	       (postcompose_cocone_inv HQ2	          (precompose_cocone (diagram_equiv_inv m) HQ1.(is_colimit_C)) x)) =	  ?Goal		subgoal 2 (ID 385) is:	 ?Goal = postcompose_cocone HQ2.(is_colimit_C) idmap	1 subgoal (ID 384)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone HQ2.(is_colimit_C)	    (fun x : Q2 =>	     postcompose_cocone_inv HQ1	       (precompose_cocone m.(diag_equiv_map) HQ2.(is_colimit_C))	       (postcompose_cocone_inv HQ2	          (precompose_cocone (diagram_equiv_inv m) HQ1.(is_colimit_C)) x)) =	  HQ2.(is_colimit_C)	";
             responses[i]=data;
           
 
             i = 465;
-            data = "2 focused subgoals	(shelved: 1) (ID 442)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone HQ2	    (fun x : Q2 =>	     postcompose_cocone_inv HQ1 (precompose_cocone m HQ2)	       (postcompose_cocone_inv HQ2	          (precompose_cocone (diagram_equiv_inv m) HQ1) x)) = 	  ?Goal		subgoal 2 (ID 443) is:	 ?Goal = HQ2	";
+            data = "2 focused subgoals	(shelved: 1) (ID 432)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone HQ2.(is_colimit_C)	    (fun x : Q2 =>	     postcompose_cocone_inv HQ1	       (precompose_cocone m.(diag_equiv_map) HQ2.(is_colimit_C))	       (postcompose_cocone_inv HQ2	          (precompose_cocone (diagram_equiv_inv m) HQ1.(is_colimit_C)) x)) =	  ?Goal		subgoal 2 (ID 433) is:	 ?Goal = HQ2.(is_colimit_C)	";
             responses[i]=data;
           
 
             i = 466;
-            data = "1 subgoal (ID 443)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone	    (postcompose_cocone HQ2	       (postcompose_cocone_inv HQ2	          (precompose_cocone (diagram_equiv_inv m) HQ1)))	    (postcompose_cocone_inv HQ1 (precompose_cocone m HQ2)) = HQ2	";
+            data = "1 subgoal (ID 433)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone	    (postcompose_cocone HQ2.(is_colimit_C)	       (postcompose_cocone_inv HQ2	          (precompose_cocone (diagram_equiv_inv m) HQ1.(is_colimit_C))))	    (postcompose_cocone_inv HQ1	       (precompose_cocone m.(diag_equiv_map) HQ2.(is_colimit_C))) =	  HQ2.(is_colimit_C)	";
             responses[i]=data;
           
 
             i = 467;
-            data = "1 subgoal (ID 449)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone	    (postcompose_cocone HQ2	       (_^-1 (precompose_cocone (diagram_equiv_inv m) HQ1)))	    (_^-1 (precompose_cocone m HQ2)) = HQ2	";
+            data = "1 subgoal (ID 439)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone	    (postcompose_cocone HQ2.(is_colimit_C)	       ((HQ2.(is_colimit_H) Q1).(equiv_inv)	          (precompose_cocone (diagram_equiv_inv m) HQ1.(is_colimit_C))))	    ((HQ1.(is_colimit_H) Q2).(equiv_inv)	       (precompose_cocone m.(diag_equiv_map) HQ2.(is_colimit_C))) =	  HQ2.(is_colimit_C)	";
             responses[i]=data;
           
 
             i = 468;
-            data = "1 subgoal (ID 454)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone (precompose_cocone (diagram_equiv_inv m) HQ1)	    (_^-1 (precompose_cocone m HQ2)) = HQ2	";
+            data = "1 subgoal (ID 444)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone	    (precompose_cocone (diagram_equiv_inv m) HQ1.(is_colimit_C))	    ((HQ1.(is_colimit_H) Q2).(equiv_inv)	       (precompose_cocone m.(diag_equiv_map) HQ2.(is_colimit_C))) =	  HQ2.(is_colimit_C)	";
             responses[i]=data;
           
 
             i = 469;
-            data = "1 subgoal (ID 461)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  precompose_cocone (diagram_equiv_inv m)	    (postcompose_cocone HQ1 (_^-1 (precompose_cocone m HQ2))) = HQ2	";
+            data = "1 subgoal (ID 451)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  precompose_cocone (diagram_equiv_inv m)	    (postcompose_cocone HQ1.(is_colimit_C)	       ((HQ1.(is_colimit_H) Q2).(equiv_inv)	          (precompose_cocone m.(diag_equiv_map) HQ2.(is_colimit_C)))) =	  HQ2.(is_colimit_C)	";
             responses[i]=data;
           
 
             i = 470;
-            data = "1 subgoal (ID 470)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  precompose_cocone (diagram_equiv_inv m) (precompose_cocone m HQ2) = HQ2	";
+            data = "1 subgoal (ID 460)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  precompose_cocone (diagram_equiv_inv m)	    (precompose_cocone m.(diag_equiv_map) HQ2.(is_colimit_C)) =	  HQ2.(is_colimit_C)	";
             responses[i]=data;
           
 
             i = 471;
-            data = "1 subgoal (ID 481)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  precompose_cocone (diagram_comp m (diagram_equiv_inv m)) HQ2 = HQ2	";
+            data = "1 subgoal (ID 471)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  precompose_cocone (diagram_comp m.(diag_equiv_map) (diagram_equiv_inv m))	    HQ2.(is_colimit_C) = HQ2.(is_colimit_C)	";
             responses[i]=data;
           
 
             i = 472;
-            data = "1 subgoal (ID 491)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  precompose_cocone (diagram_idmap D2) HQ2 = HQ2	";
+            data = "1 subgoal (ID 481)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  precompose_cocone (diagram_idmap D2) HQ2.(is_colimit_C) =	  HQ2.(is_colimit_C)	";
             responses[i]=data;
           
 
@@ -2393,77 +2393,77 @@
           
 
             i = 475;
-            data = "1 subgoal (ID 123)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  Sect (functoriality_colimit m HQ1 HQ2)	    (functoriality_colimit (diagram_equiv_inv m) HQ2 HQ1)	";
+            data = "1 subgoal (ID 113)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  Sect (functoriality_colimit m.(diag_equiv_map) HQ1 HQ2)	    (functoriality_colimit (diagram_equiv_inv m) HQ2 HQ1)	";
             responses[i]=data;
           
 
             i = 476;
-            data = "1 subgoal (ID 123)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  Sect (functoriality_colimit m HQ1 HQ2)	    (functoriality_colimit (diagram_equiv_inv m) HQ2 HQ1)	";
+            data = "1 subgoal (ID 113)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  Sect (functoriality_colimit m.(diag_equiv_map) HQ1 HQ2)	    (functoriality_colimit (diagram_equiv_inv m) HQ2 HQ1)	";
             responses[i]=data;
           
 
             i = 477;
-            data = "1 subgoal (ID 124)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  Sect (postcompose_cocone_inv HQ1 (precompose_cocone m HQ2))	    (postcompose_cocone_inv HQ2 (precompose_cocone (diagram_equiv_inv m) HQ1))	";
+            data = "1 subgoal (ID 114)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  Sect	    (postcompose_cocone_inv HQ1	       (precompose_cocone m.(diag_equiv_map) HQ2.(is_colimit_C)))	    (postcompose_cocone_inv HQ2	       (precompose_cocone (diagram_equiv_inv m) HQ1.(is_colimit_C)))	";
             responses[i]=data;
           
 
             i = 478;
-            data = "1 subgoal (ID 129)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  (fun x : Q1 =>	   postcompose_cocone_inv HQ2 (precompose_cocone (diagram_equiv_inv m) HQ1)	     (postcompose_cocone_inv HQ1 (precompose_cocone m HQ2) x)) = idmap	";
+            data = "1 subgoal (ID 119)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  (fun x : Q1 =>	   postcompose_cocone_inv HQ2	     (precompose_cocone (diagram_equiv_inv m) HQ1.(is_colimit_C))	     (postcompose_cocone_inv HQ1	        (precompose_cocone m.(diag_equiv_map) HQ2.(is_colimit_C)) x)) = idmap	";
             responses[i]=data;
           
 
             i = 479;
-            data = "2 subgoals (ID 136)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  IsEquiv (postcompose_cocone HQ1)		subgoal 2 (ID 139) is:	 postcompose_cocone HQ1	   (fun x : Q1 =>	    postcompose_cocone_inv HQ2 (precompose_cocone (diagram_equiv_inv m) HQ1)	      (postcompose_cocone_inv HQ1 (precompose_cocone m HQ2) x)) =	 postcompose_cocone HQ1 idmap	";
+            data = "2 subgoals (ID 126)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  IsEquiv (postcompose_cocone HQ1.(is_colimit_C))		subgoal 2 (ID 129) is:	 postcompose_cocone HQ1.(is_colimit_C)	   (fun x : Q1 =>	    postcompose_cocone_inv HQ2	      (precompose_cocone (diagram_equiv_inv m) HQ1.(is_colimit_C))	      (postcompose_cocone_inv HQ1	         (precompose_cocone m.(diag_equiv_map) HQ2.(is_colimit_C)) x)) =	 postcompose_cocone HQ1.(is_colimit_C) idmap	";
             responses[i]=data;
           
 
             i = 480;
-            data = "1 subgoal (ID 139)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone HQ1	    (fun x : Q1 =>	     postcompose_cocone_inv HQ2 (precompose_cocone (diagram_equiv_inv m) HQ1)	       (postcompose_cocone_inv HQ1 (precompose_cocone m HQ2) x)) =	  postcompose_cocone HQ1 idmap	";
+            data = "1 subgoal (ID 129)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone HQ1.(is_colimit_C)	    (fun x : Q1 =>	     postcompose_cocone_inv HQ2	       (precompose_cocone (diagram_equiv_inv m) HQ1.(is_colimit_C))	       (postcompose_cocone_inv HQ1	          (precompose_cocone m.(diag_equiv_map) HQ2.(is_colimit_C)) x)) =	  postcompose_cocone HQ1.(is_colimit_C) idmap	";
             responses[i]=data;
           
 
             i = 481;
-            data = "2 focused subgoals	(shelved: 1) (ID 408)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone HQ1	    (fun x : Q1 =>	     postcompose_cocone_inv HQ2 (precompose_cocone (diagram_equiv_inv m) HQ1)	       (postcompose_cocone_inv HQ1 (precompose_cocone m HQ2) x)) = 	  ?Goal		subgoal 2 (ID 409) is:	 ?Goal = postcompose_cocone HQ1 idmap	1 subgoal (ID 408)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone HQ1	    (fun x : Q1 =>	     postcompose_cocone_inv HQ2 (precompose_cocone (diagram_equiv_inv m) HQ1)	       (postcompose_cocone_inv HQ1 (precompose_cocone m HQ2) x)) = HQ1	";
+            data = "2 focused subgoals	(shelved: 1) (ID 398)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone HQ1.(is_colimit_C)	    (fun x : Q1 =>	     postcompose_cocone_inv HQ2	       (precompose_cocone (diagram_equiv_inv m) HQ1.(is_colimit_C))	       (postcompose_cocone_inv HQ1	          (precompose_cocone m.(diag_equiv_map) HQ2.(is_colimit_C)) x)) =	  ?Goal		subgoal 2 (ID 399) is:	 ?Goal = postcompose_cocone HQ1.(is_colimit_C) idmap	1 subgoal (ID 398)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone HQ1.(is_colimit_C)	    (fun x : Q1 =>	     postcompose_cocone_inv HQ2	       (precompose_cocone (diagram_equiv_inv m) HQ1.(is_colimit_C))	       (postcompose_cocone_inv HQ1	          (precompose_cocone m.(diag_equiv_map) HQ2.(is_colimit_C)) x)) =	  HQ1.(is_colimit_C)	";
             responses[i]=data;
           
 
             i = 482;
-            data = "2 focused subgoals	(shelved: 1) (ID 456)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone HQ1	    (fun x : Q1 =>	     postcompose_cocone_inv HQ2 (precompose_cocone (diagram_equiv_inv m) HQ1)	       (postcompose_cocone_inv HQ1 (precompose_cocone m HQ2) x)) = 	  ?Goal		subgoal 2 (ID 457) is:	 ?Goal = HQ1	";
+            data = "2 focused subgoals	(shelved: 1) (ID 446)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone HQ1.(is_colimit_C)	    (fun x : Q1 =>	     postcompose_cocone_inv HQ2	       (precompose_cocone (diagram_equiv_inv m) HQ1.(is_colimit_C))	       (postcompose_cocone_inv HQ1	          (precompose_cocone m.(diag_equiv_map) HQ2.(is_colimit_C)) x)) =	  ?Goal		subgoal 2 (ID 447) is:	 ?Goal = HQ1.(is_colimit_C)	";
             responses[i]=data;
           
 
             i = 483;
-            data = "1 subgoal (ID 457)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone	    (postcompose_cocone HQ1	       (postcompose_cocone_inv HQ1 (precompose_cocone m HQ2)))	    (postcompose_cocone_inv HQ2 (precompose_cocone (diagram_equiv_inv m) HQ1)) =	  HQ1	";
+            data = "1 subgoal (ID 447)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone	    (postcompose_cocone HQ1.(is_colimit_C)	       (postcompose_cocone_inv HQ1	          (precompose_cocone m.(diag_equiv_map) HQ2.(is_colimit_C))))	    (postcompose_cocone_inv HQ2	       (precompose_cocone (diagram_equiv_inv m) HQ1.(is_colimit_C))) =	  HQ1.(is_colimit_C)	";
             responses[i]=data;
           
 
             i = 484;
-            data = "1 subgoal (ID 463)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone	    (postcompose_cocone HQ1 (_^-1 (precompose_cocone m HQ2)))	    (_^-1 (precompose_cocone (diagram_equiv_inv m) HQ1)) = HQ1	";
+            data = "1 subgoal (ID 453)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone	    (postcompose_cocone HQ1.(is_colimit_C)	       ((HQ1.(is_colimit_H) Q2).(equiv_inv)	          (precompose_cocone m.(diag_equiv_map) HQ2.(is_colimit_C))))	    ((HQ2.(is_colimit_H) Q1).(equiv_inv)	       (precompose_cocone (diagram_equiv_inv m) HQ1.(is_colimit_C))) =	  HQ1.(is_colimit_C)	";
             responses[i]=data;
           
 
             i = 485;
-            data = "1 subgoal (ID 468)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone (precompose_cocone m HQ2)	    (_^-1 (precompose_cocone (diagram_equiv_inv m) HQ1)) = HQ1	";
+            data = "1 subgoal (ID 458)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone	    (precompose_cocone m.(diag_equiv_map) HQ2.(is_colimit_C))	    ((HQ2.(is_colimit_H) Q1).(equiv_inv)	       (precompose_cocone (diagram_equiv_inv m) HQ1.(is_colimit_C))) =	  HQ1.(is_colimit_C)	";
             responses[i]=data;
           
 
             i = 486;
-            data = "1 subgoal (ID 475)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  precompose_cocone m	    (postcompose_cocone HQ2	       (_^-1 (precompose_cocone (diagram_equiv_inv m) HQ1))) = HQ1	";
+            data = "1 subgoal (ID 465)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  precompose_cocone m.(diag_equiv_map)	    (postcompose_cocone HQ2.(is_colimit_C)	       ((HQ2.(is_colimit_H) Q1).(equiv_inv)	          (precompose_cocone (diagram_equiv_inv m) HQ1.(is_colimit_C)))) =	  HQ1.(is_colimit_C)	";
             responses[i]=data;
           
 
             i = 487;
-            data = "1 subgoal (ID 484)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  precompose_cocone m (precompose_cocone (diagram_equiv_inv m) HQ1) = HQ1	";
+            data = "1 subgoal (ID 474)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  precompose_cocone m.(diag_equiv_map)	    (precompose_cocone (diagram_equiv_inv m) HQ1.(is_colimit_C)) =	  HQ1.(is_colimit_C)	";
             responses[i]=data;
           
 
             i = 488;
-            data = "1 subgoal (ID 495)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  precompose_cocone (diagram_comp (diagram_equiv_inv m) m) HQ1 = HQ1	";
+            data = "1 subgoal (ID 485)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  precompose_cocone (diagram_comp (diagram_equiv_inv m) m.(diag_equiv_map))	    HQ1.(is_colimit_C) = HQ1.(is_colimit_C)	";
             responses[i]=data;
           
 
             i = 489;
-            data = "1 subgoal (ID 505)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  precompose_cocone (diagram_idmap D1) HQ1 = HQ1	";
+            data = "1 subgoal (ID 495)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  precompose_cocone (diagram_idmap D1) HQ1.(is_colimit_C) =	  HQ1.(is_colimit_C)	";
             responses[i]=data;
           
 
@@ -2538,17 +2538,17 @@
           
 
             i = 504;
-            data = "1 subgoal (ID 60)	  	  H : Funext	  G : graph	  D : diagram G	  Q1 : Type	  Q2 : Type	  HQ1 : is_colimit D Q1	  HQ2 : is_colimit D Q2	  ============================	  Q1 <~> Q2	";
+            data = "1 subgoal (ID 50)	  	  H : Funext	  G : graph	  D : diagram G	  Q1 : Type	  Q2 : Type	  HQ1 : is_colimit D Q1	  HQ2 : is_colimit D Q2	  ============================	  Q1 <~> Q2	";
             responses[i]=data;
           
 
             i = 505;
-            data = "1 subgoal (ID 60)	  	  H : Funext	  G : graph	  D : diagram G	  Q1 : Type	  Q2 : Type	  HQ1 : is_colimit D Q1	  HQ2 : is_colimit D Q2	  ============================	  Q1 <~> Q2	";
+            data = "1 subgoal (ID 50)	  	  H : Funext	  G : graph	  D : diagram G	  Q1 : Type	  Q2 : Type	  HQ1 : is_colimit D Q1	  HQ2 : is_colimit D Q2	  ============================	  Q1 <~> Q2	";
             responses[i]=data;
           
 
             i = 506;
-            data = "1 subgoal (ID 66)	  	  H : Funext	  G : graph	  D : diagram G	  Q1 : Type	  Q2 : Type	  HQ1 : is_colimit D Q1	  HQ2 : is_colimit D Q2	  ============================	  D ~d~ D	";
+            data = "1 subgoal (ID 56)	  	  H : Funext	  G : graph	  D : diagram G	  Q1 : Type	  Q2 : Type	  HQ1 : is_colimit D Q1	  HQ2 : is_colimit D Q2	  ============================	  D ~d~ D	";
             responses[i]=data;
           
 

@@ -153,27 +153,27 @@
           
 
             i = 27;
-            data = "1 subgoal (ID 56)	  	  ua : Univalence	  A : Type	  U : Type	  V : Type	  w : U <~> V	  ============================	  forall f : U -> A,	  transport (fun I : Type => I -> A) (path_universe w) f = f o _^-1	";
+            data = "1 subgoal (ID 56)	  	  ua : Univalence	  A : Type	  U : Type	  V : Type	  w : U <~> V	  ============================	  forall f : U -> A,	  transport (fun I : Type => I -> A) (path_universe w.(equiv_fun)) f =	  f o w.(equiv_isequiv).(equiv_inv)	";
             responses[i]=data;
           
 
             i = 28;
-            data = "1 subgoal (ID 56)	  	  ua : Univalence	  A : Type	  U : Type	  V : Type	  w : U <~> V	  ============================	  forall f : U -> A,	  transport (fun I : Type => I -> A) (path_universe w) f = f o _^-1	";
+            data = "1 subgoal (ID 56)	  	  ua : Univalence	  A : Type	  U : Type	  V : Type	  w : U <~> V	  ============================	  forall f : U -> A,	  transport (fun I : Type => I -> A) (path_universe w.(equiv_fun)) f =	  f o w.(equiv_isequiv).(equiv_inv)	";
             responses[i]=data;
           
 
             i = 29;
-            data = "1 subgoal (ID 71)	  	  ua : Univalence	  A : Type	  U : Type	  V : Type	  w : U <~> V	  f : U -> A	  y : V	  ============================	  transport (fun I : Type => I -> A) (path_universe w) f y = f (_^-1 y)	";
+            data = "1 subgoal (ID 71)	  	  ua : Univalence	  A : Type	  U : Type	  V : Type	  w : U <~> V	  f : U -> A	  y : V	  ============================	  transport (fun I : Type => I -> A) (path_universe w.(equiv_fun)) f y =	  f (w.(equiv_isequiv).(equiv_inv) y)	";
             responses[i]=data;
           
 
             i = 30;
-            data = "1 subgoal (ID 89)	  	  ua : Univalence	  A : Type	  U : Type	  V : Type	  w : U <~> V	  f : U -> A	  y : V	  ============================	  f (transport idmap (path_universe w)^ y) = f (_^-1 y)	";
+            data = "1 subgoal (ID 89)	  	  ua : Univalence	  A : Type	  U : Type	  V : Type	  w : U <~> V	  f : U -> A	  y : V	  ============================	  f (transport idmap (path_universe w.(equiv_fun))^ y) =	  f (w.(equiv_isequiv).(equiv_inv) y)	";
             responses[i]=data;
           
 
             i = 31;
-            data = "1 subgoal (ID 92)	  	  ua : Univalence	  A : Type	  U : Type	  V : Type	  w : U <~> V	  f : U -> A	  y : V	  ============================	  transport idmap (path_universe w)^ y = _^-1 y	";
+            data = "1 subgoal (ID 92)	  	  ua : Univalence	  A : Type	  U : Type	  V : Type	  w : U <~> V	  f : U -> A	  y : V	  ============================	  transport idmap (path_universe w.(equiv_fun))^ y =	  w.(equiv_isequiv).(equiv_inv) y	";
             responses[i]=data;
           
 
@@ -208,7 +208,7 @@
           
 
             i = 38;
-            data = "1 subgoal (ID 82)	  	  ua : Univalence	  A : Type	  I : Type	  f : I -> A	  e := equiv_path_sigma (fun I0 : Type => I0 -> A) 	         (I; f) ({a : A & hfiber f a}; pr1)	   : {p : (I; f).1 = ({a : A & hfiber f a}; pr1).1 &	     transport (fun I0 : Type => I0 -> A) p (I; f).2 =	     ({a : A & hfiber f a}; pr1).2} <~> (I; f) = ({a : A & hfiber f a}; pr1)	  ============================	  p2f (f2p (I; f)) = (I; f)	";
+            data = "1 subgoal (ID 82)	  	  ua : Univalence	  A : Type	  I : Type	  f : I -> A	  e := equiv_path_sigma (fun I0 : Type => I0 -> A) 	         (I; f) ({a : A & hfiber f a}; pr1)	   : {p : (I; f).(proj1_sig) = ({a : A & hfiber f a}; pr1).(proj1_sig) &	     transport (fun I0 : Type => I0 -> A) p (I; f).(proj2_sig) =	     ({a : A & hfiber f a}; pr1).(proj2_sig)} <~>	     (I; f) = ({a : A & hfiber f a}; pr1)	  ============================	  p2f (f2p (I; f)) = (I; f)	";
             responses[i]=data;
           
 
@@ -228,7 +228,7 @@
           
 
             i = 42;
-            data = "1 subgoal (ID 120)	  	  ua : Univalence	  A : Type	  I : Type	  f : I -> A	  e := equiv_path_sigma (fun I0 : Type => I0 -> A) 	         (I; f) ({a : A & hfiber f a}; pr1)	   : {p : I = {a : A & hfiber f a} &	     transport (fun I0 : Type => I0 -> A) p f = pr1} <~>	     (I; f) = ({a : A & hfiber f a}; pr1)	  w := equiv_fibration_replacement f : I <~> {y : A & hfiber f y}	  ============================	  transport (fun I0 : Type => I0 -> A) (path_universe w) f = pr1	";
+            data = "1 subgoal (ID 120)	  	  ua : Univalence	  A : Type	  I : Type	  f : I -> A	  e := equiv_path_sigma (fun I0 : Type => I0 -> A) 	         (I; f) ({a : A & hfiber f a}; pr1)	   : {p : I = {a : A & hfiber f a} &	     transport (fun I0 : Type => I0 -> A) p f = pr1} <~>	     (I; f) = ({a : A & hfiber f a}; pr1)	  w := equiv_fibration_replacement f : I <~> {y : A & hfiber f y}	  ============================	  transport (fun I0 : Type => I0 -> A) (path_universe w.(equiv_fun)) f = pr1	";
             responses[i]=data;
           
 
@@ -343,12 +343,12 @@
           
 
             i = 65;
-            data = "1 subgoal (ID 150)	  	  ua : Univalence	  A : Type	  P : A -> Type	  a : A	  T : Type	  t : T	  p : P a = (T; t).1	  ============================	  transport (fun b : A => {c : {u : Type & u} & P b = c.1}) 1	    ((P (help_objclasspb_is_fibrantreplacement2 P (a; (T; t); p)).1;	     (help_objclasspb_is_fibrantreplacement2 P (a; (T; t); p)).2); 1) =	  ((T; t); p)	";
+            data = "1 subgoal (ID 150)	  	  ua : Univalence	  A : Type	  P : A -> Type	  a : A	  T : Type	  t : T	  p : P a = (T; t).1	  ============================	  transport (fun b : A => {c : {u : Type & u} & P b = c.1}) 1	    ((P (help_objclasspb_is_fibrantreplacement2 P (a; (T; t); p)).(proj1_sig);	     (help_objclasspb_is_fibrantreplacement2 P (a; (T; t); p)).(proj2_sig));	    1) = ((T; t); p)	";
             responses[i]=data;
           
 
             i = 66;
-            data = "1 subgoal (ID 151)	  	  ua : Univalence	  A : Type	  P : A -> Type	  a : A	  T : Type	  t : T	  p : P a = T	  ============================	  transport (fun b : A => {c : {u : Type & u} & P b = c.1}) 1	    ((P (help_objclasspb_is_fibrantreplacement2 P (a; (T; t); p)).1;	     (help_objclasspb_is_fibrantreplacement2 P (a; (T; t); p)).2); 1) =	  ((T; t); p)	";
+            data = "1 subgoal (ID 151)	  	  ua : Univalence	  A : Type	  P : A -> Type	  a : A	  T : Type	  t : T	  p : P a = T	  ============================	  transport (fun b : A => {c : {u : Type & u} & P b = c.1}) 1	    ((P (help_objclasspb_is_fibrantreplacement2 P (a; (T; t); p)).(proj1_sig);	     (help_objclasspb_is_fibrantreplacement2 P (a; (T; t); p)).(proj2_sig));	    1) = ((T; t); p)	";
             responses[i]=data;
           
 
@@ -438,17 +438,17 @@
           
 
             i = 84;
-            data = "1 subgoal (ID 27)	  	  ua : Univalence	  A : Type	  isP : Type -> Type	  ishprop_isP : forall I : Type, IsHProp (isP I)	  P : A -> {X : Type & isP X}	  ============================	  IsPfibered (p2f A (pr1 o P)).2	";
+            data = "1 subgoal (ID 27)	  	  ua : Univalence	  A : Type	  isP : Type -> Type	  ishprop_isP : forall I : Type, IsHProp (isP I)	  P : A -> {X : Type & isP X}	  ============================	  IsPfibered (p2f A (pr1 o P)).(proj2_sig)	";
             responses[i]=data;
           
 
             i = 85;
-            data = "1 subgoal (ID 27)	  	  ua : Univalence	  A : Type	  isP : Type -> Type	  ishprop_isP : forall I : Type, IsHProp (isP I)	  P : A -> {X : Type & isP X}	  ============================	  IsPfibered (p2f A (pr1 o P)).2	";
+            data = "1 subgoal (ID 27)	  	  ua : Univalence	  A : Type	  isP : Type -> Type	  ishprop_isP : forall I : Type, IsHProp (isP I)	  P : A -> {X : Type & isP X}	  ============================	  IsPfibered (p2f A (pr1 o P)).(proj2_sig)	";
             responses[i]=data;
           
 
             i = 86;
-            data = "1 subgoal (ID 29)	  	  ua : Univalence	  A : Type	  isP : Type -> Type	  ishprop_isP : forall I : Type, IsHProp (isP I)	  P : A -> {X : Type & isP X}	  i : A	  ============================	  isP (hfiber (p2f A (fun x : A => (P x).1)).2 i)	";
+            data = "1 subgoal (ID 29)	  	  ua : Univalence	  A : Type	  isP : Type -> Type	  ishprop_isP : forall I : Type, IsHProp (isP I)	  P : A -> {X : Type & isP X}	  i : A	  ============================	  isP (hfiber (p2f A (fun x : A => (P x).1)).(proj2_sig) i)	";
             responses[i]=data;
           
 
@@ -478,12 +478,12 @@
           
 
             i = 92;
-            data = "1 subgoal (ID 39)	  	  ua : Univalence	  A : Type	  isP : Type -> Type	  ishprop_isP : forall I : Type, IsHProp (isP I)	  F : PFam	  a : A	  ============================	  isP (f2p A F.1 a)	";
+            data = "1 subgoal (ID 39)	  	  ua : Univalence	  A : Type	  isP : Type -> Type	  ishprop_isP : forall I : Type, IsHProp (isP I)	  F : PFam	  a : A	  ============================	  isP (f2p A F.(proj1_sig) a)	";
             responses[i]=data;
           
 
             i = 93;
-            data = "1 subgoal (ID 40)	  	  ua : Univalence	  A : Type	  isP : Type -> Type	  ishprop_isP : forall I : Type, IsHProp (isP I)	  F : PFam	  a : A	  ============================	  isP (hfiber (F.1).2 a)	";
+            data = "1 subgoal (ID 40)	  	  ua : Univalence	  A : Type	  isP : Type -> Type	  ishprop_isP : forall I : Type, IsHProp (isP I)	  F : PFam	  a : A	  ============================	  isP (hfiber F.(proj1_sig).(proj2_sig) a)	";
             responses[i]=data;
           
 
@@ -518,17 +518,17 @@
           
 
             i = 100;
-            data = "1 subgoal (ID 50)	  	  ua : Univalence	  A : Type	  isP : Type -> Type	  ishprop_isP : forall I : Type, IsHProp (isP I)	  ============================	  Sect Pfam2pow pow2Pfam	1 subgoal (ID 61)	  	  ua : Univalence	  A : Type	  isP : Type -> Type	  ishprop_isP : forall I : Type, IsHProp (isP I)	  B : Type	  f : B -> A	  q : IsPfibered (B; f).2	  ============================	  pow2Pfam (Pfam2pow ((B; f); q)) = ((B; f); q)	";
+            data = "1 subgoal (ID 50)	  	  ua : Univalence	  A : Type	  isP : Type -> Type	  ishprop_isP : forall I : Type, IsHProp (isP I)	  ============================	  Sect Pfam2pow pow2Pfam	1 subgoal (ID 61)	  	  ua : Univalence	  A : Type	  isP : Type -> Type	  ishprop_isP : forall I : Type, IsHProp (isP I)	  B : Type	  f : B -> A	  q : IsPfibered (B; f).(proj2_sig)	  ============================	  pow2Pfam (Pfam2pow ((B; f); q)) = ((B; f); q)	";
             responses[i]=data;
           
 
             i = 101;
-            data = "1 subgoal (ID 176)	  	  ua : Univalence	  A : Type	  isP : Type -> Type	  ishprop_isP : forall I : Type, IsHProp (isP I)	  B : Type	  f : B -> A	  q : IsPfibered (B; f).2	  ============================	  (pow2Pfam (Pfam2pow ((B; f); q))).1 = ((B; f); q).1	";
+            data = "1 subgoal (ID 176)	  	  ua : Univalence	  A : Type	  isP : Type -> Type	  ishprop_isP : forall I : Type, IsHProp (isP I)	  B : Type	  f : B -> A	  q : IsPfibered (B; f).(proj2_sig)	  ============================	  (pow2Pfam (Pfam2pow ((B; f); q))).(proj1_sig) = ((B; f); q).(proj1_sig)	";
             responses[i]=data;
           
 
             i = 102;
-            data = "1 subgoal (ID 177)	  	  ua : Univalence	  A : Type	  isP : Type -> Type	  ishprop_isP : forall I : Type, IsHProp (isP I)	  B : Type	  f : B -> A	  q : IsPfibered (B; f).2	  ============================	  p2f A (fun a : A => f2p A (B; f) a) = (B; f)	";
+            data = "1 subgoal (ID 177)	  	  ua : Univalence	  A : Type	  isP : Type -> Type	  ishprop_isP : forall I : Type, IsHProp (isP I)	  B : Type	  f : B -> A	  q : IsPfibered (B; f).(proj2_sig)	  ============================	  p2f A (fun a : A => f2p A (B; f) a) = (B; f)	";
             responses[i]=data;
           
 
@@ -553,17 +553,17 @@
           
 
             i = 107;
-            data = "2 subgoals (ID 226)	  	  ua : Univalence	  A : Type	  isP : Type -> Type	  ishprop_isP : forall I : Type, IsHProp (isP I)	  P : A -> {X : Type & isP X}	  a : A	  ============================	  f2p A (p2f A (fun x : A => (P x).1)) a = (P a).1		subgoal 2 (ID 227) is:	 Pfam2pow (pow2Pfam P) a = P a	";
+            data = "2 subgoals (ID 226)	  	  ua : Univalence	  A : Type	  isP : Type -> Type	  ishprop_isP : forall I : Type, IsHProp (isP I)	  P : A -> {X : Type & isP X}	  a : A	  ============================	  f2p A (p2f A (fun x : A => (P x).1)) a = (P a).(proj1_sig)		subgoal 2 (ID 227) is:	 Pfam2pow (pow2Pfam P) a = P a	";
             responses[i]=data;
           
 
             i = 108;
-            data = "2 subgoals (ID 242)	  	  ua : Univalence	  A : Type	  isP : Type -> Type	  ishprop_isP : forall I : Type, IsHProp (isP I)	  P : A -> {X : Type & isP X}	  a : A	  p := eissect _ : Sect (FamequivPow A) _^-1	  ============================	  f2p A (p2f A (fun x : A => (P x).1)) a = (P a).1		subgoal 2 (ID 227) is:	 Pfam2pow (pow2Pfam P) a = P a	";
+            data = "2 subgoals (ID 242)	  	  ua : Univalence	  A : Type	  isP : Type -> Type	  ishprop_isP : forall I : Type, IsHProp (isP I)	  P : A -> {X : Type & isP X}	  a : A	  p := (FamequivPow A).(equiv_isequiv).(eissect)	   : Sect (FamequivPow A).(equiv_fun)	       (FamequivPow A).(equiv_isequiv).(equiv_inv)	  ============================	  f2p A (p2f A (fun x : A => (P x).1)) a = (P a).(proj1_sig)		subgoal 2 (ID 227) is:	 Pfam2pow (pow2Pfam P) a = P a	";
             responses[i]=data;
           
 
             i = 109;
-            data = "1 subgoal (ID 227)	  	  ua : Univalence	  A : Type	  isP : Type -> Type	  ishprop_isP : forall I : Type, IsHProp (isP I)	  P : A -> {X : Type & isP X}	  a : A	  X : f2p A (p2f A (pr1 o P)) a = (P a).1	  ============================	  Pfam2pow (pow2Pfam P) a = P a	";
+            data = "1 subgoal (ID 227)	  	  ua : Univalence	  A : Type	  isP : Type -> Type	  ishprop_isP : forall I : Type, IsHProp (isP I)	  P : A -> {X : Type & isP X}	  a : A	  X : f2p A (p2f A (pr1 o P)) a = (P a).(proj1_sig)	  ============================	  Pfam2pow (pow2Pfam P) a = P a	";
             responses[i]=data;
           
 

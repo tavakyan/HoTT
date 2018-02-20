@@ -133,12 +133,12 @@
           
 
             i = 23;
-            data = "1 subgoal (ID 36)	  	  H : Univalence	  ============================	  Commutative	    ((fun P Q : -1 -Type => hor P Q) : -1 -Type -> -1 -Type -> -1 -Type)	";
+            data = "1 subgoal (ID 36)	  	  H : Univalence	  ============================	  Commutative	    ((fun P Q : -1 -Type => hor P.(trunctype_type) Q.(trunctype_type))	     :	     -1 -Type -> -1 -Type -> -1 -Type)	";
             responses[i]=data;
           
 
             i = 24;
-            data = "1 subgoal (ID 39)	  	  H : Univalence	  x, y : -1 -Type	  ============================	  hor x y = hor y x	";
+            data = "1 subgoal (ID 39)	  	  H : Univalence	  x, y : -1 -Type	  ============================	  hor x.(trunctype_type) y.(trunctype_type) =	  hor y.(trunctype_type) x.(trunctype_type)	";
             responses[i]=data;
           
 
@@ -168,7 +168,7 @@
           
 
             i = 30;
-            data = "1 subgoal (ID 46)	  	  H : Univalence	  x, y : -1 -Type	  ============================	  hand x y <~> hand y x	";
+            data = "1 subgoal (ID 46)	  	  H : Univalence	  x, y : -1 -Type	  ============================	  (hand x y).(trunctype_type) <~> (hand y x).(trunctype_type)	";
             responses[i]=data;
           
 
@@ -188,12 +188,12 @@
           
 
             i = 34;
-            data = "1 subgoal (ID 41)	  	  H : Univalence	  ============================	  Associative	    ((fun P Q : -1 -Type => hor P Q) : -1 -Type -> -1 -Type -> -1 -Type)	";
+            data = "1 subgoal (ID 41)	  	  H : Univalence	  ============================	  Associative	    ((fun P Q : -1 -Type => hor P.(trunctype_type) Q.(trunctype_type))	     :	     -1 -Type -> -1 -Type -> -1 -Type)	";
             responses[i]=data;
           
 
             i = 35;
-            data = "1 subgoal (ID 45)	  	  H : Univalence	  x, y, z : -1 -Type	  ============================	  hor x (hor y z) = hor (hor x y) z	";
+            data = "1 subgoal (ID 45)	  	  H : Univalence	  x, y, z : -1 -Type	  ============================	  hor x.(trunctype_type)	    (hor y.(trunctype_type) z.(trunctype_type)).(trunctype_type) =	  hor (hor x.(trunctype_type) y.(trunctype_type)).(trunctype_type)	    z.(trunctype_type)	";
             responses[i]=data;
           
 
@@ -223,7 +223,7 @@
           
 
             i = 41;
-            data = "1 subgoal (ID 51)	  	  H : Univalence	  x, y, z : -1 -Type	  ============================	  hand x (hand y z) <~> hand (hand x y) z	";
+            data = "1 subgoal (ID 51)	  	  H : Univalence	  x, y, z : -1 -Type	  ============================	  (hand x (hand y z)).(trunctype_type) <~>	  (hand (hand x y) z).(trunctype_type)	";
             responses[i]=data;
           
 
@@ -243,22 +243,22 @@
           
 
             i = 45;
-            data = "1 subgoal (ID 45)	  	  H : Univalence	  ============================	  BinaryIdempotent	    ((fun P Q : -1 -Type => hor P Q) : -1 -Type -> -1 -Type -> -1 -Type)	";
+            data = "1 subgoal (ID 45)	  	  H : Univalence	  ============================	  BinaryIdempotent	    ((fun P Q : -1 -Type => hor P.(trunctype_type) Q.(trunctype_type))	     :	     -1 -Type -> -1 -Type -> -1 -Type)	";
             responses[i]=data;
           
 
             i = 46;
-            data = "1 subgoal (ID 47)	  	  H : Univalence	  x : -1 -Type	  ============================	  Idempotent (fun P Q : -1 -Type => hor P Q) x	";
+            data = "1 subgoal (ID 47)	  	  H : Univalence	  x : -1 -Type	  ============================	  Idempotent	    (fun P Q : -1 -Type => hor P.(trunctype_type) Q.(trunctype_type)) x	";
             responses[i]=data;
           
 
             i = 47;
-            data = "1 subgoal (ID 48)	  	  H : Univalence	  x : -1 -Type	  ============================	  BuildhProp (Trunc -1 (x + x)) = x	";
+            data = "1 subgoal (ID 48)	  	  H : Univalence	  x : -1 -Type	  ============================	  BuildhProp (Trunc -1 (x.(trunctype_type) + x.(trunctype_type))) = x	";
             responses[i]=data;
           
 
             i = 48;
-            data = "1 subgoal (ID 263)	  	  H : Univalence	  x : -1 -Type	  H0 : x	  ============================	  BuildhProp (Trunc -1 (x + x))	";
+            data = "1 subgoal (ID 263)	  	  H : Univalence	  x : -1 -Type	  H0 : x.(trunctype_type)	  ============================	  (BuildhProp (Trunc -1 (x.(trunctype_type) + x.(trunctype_type))))	  .(trunctype_type)	";
             responses[i]=data;
           
 
@@ -288,17 +288,17 @@
           
 
             i = 54;
-            data = "2 subgoals (ID 53)	  	  H : Univalence	  x : -1 -Type	  ============================	  hand x x -> x		subgoal 2 (ID 54) is:	 x -> hand x x	";
+            data = "2 subgoals (ID 53)	  	  H : Univalence	  x : -1 -Type	  ============================	  (hand x x).(trunctype_type) -> x.(trunctype_type)		subgoal 2 (ID 54) is:	 x.(trunctype_type) -> (hand x x).(trunctype_type)	";
             responses[i]=data;
           
 
             i = 55;
-            data = "1 subgoal (ID 53)	  	  H : Univalence	  x : -1 -Type	  ============================	  hand x x -> x	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 54)		subgoal 1 (ID 54) is:	 x -> hand x x	";
+            data = "1 subgoal (ID 53)	  	  H : Univalence	  x : -1 -Type	  ============================	  (hand x x).(trunctype_type) -> x.(trunctype_type)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 54)		subgoal 1 (ID 54) is:	 x.(trunctype_type) -> (hand x x).(trunctype_type)	";
             responses[i]=data;
           
 
             i = 56;
-            data = "1 subgoal (ID 54)	  	  H : Univalence	  x : -1 -Type	  ============================	  x -> hand x x	No more subgoals.	";
+            data = "1 subgoal (ID 54)	  	  H : Univalence	  x : -1 -Type	  ============================	  x.(trunctype_type) -> (hand x x).(trunctype_type)	No more subgoals.	";
             responses[i]=data;
           
 
@@ -313,17 +313,17 @@
           
 
             i = 59;
-            data = "1 subgoal (ID 50)	  	  H : Univalence	  ============================	  LeftIdentity	    ((fun P Q : -1 -Type => hor P Q) : -1 -Type -> -1 -Type -> -1 -Type)	    False_hp	";
+            data = "1 subgoal (ID 50)	  	  H : Univalence	  ============================	  LeftIdentity	    ((fun P Q : -1 -Type => hor P.(trunctype_type) Q.(trunctype_type))	     :	     -1 -Type -> -1 -Type -> -1 -Type) False_hp	";
             responses[i]=data;
           
 
             i = 60;
-            data = "1 subgoal (ID 52)	  	  H : Univalence	  y : -1 -Type	  ============================	  hor False_hp y = y	";
+            data = "1 subgoal (ID 52)	  	  H : Univalence	  y : -1 -Type	  ============================	  hor False_hp.(trunctype_type) y.(trunctype_type) = y	";
             responses[i]=data;
           
 
             i = 61;
-            data = "1 subgoal (ID 310)	  	  H : Univalence	  y : -1 -Type	  H0 : y	  ============================	  hor False_hp y	";
+            data = "1 subgoal (ID 310)	  	  H : Univalence	  y : -1 -Type	  H0 : y.(trunctype_type)	  ============================	  (hor False_hp.(trunctype_type) y.(trunctype_type)).(trunctype_type)	";
             responses[i]=data;
           
 
@@ -343,17 +343,17 @@
           
 
             i = 65;
-            data = "1 subgoal (ID 53)	  	  H : Univalence	  ============================	  RightIdentity	    ((fun P Q : -1 -Type => hor P Q) : -1 -Type -> -1 -Type -> -1 -Type)	    False_hp	";
+            data = "1 subgoal (ID 53)	  	  H : Univalence	  ============================	  RightIdentity	    ((fun P Q : -1 -Type => hor P.(trunctype_type) Q.(trunctype_type))	     :	     -1 -Type -> -1 -Type -> -1 -Type) False_hp	";
             responses[i]=data;
           
 
             i = 66;
-            data = "1 subgoal (ID 55)	  	  H : Univalence	  x : -1 -Type	  ============================	  hor x False_hp = x	";
+            data = "1 subgoal (ID 55)	  	  H : Univalence	  x : -1 -Type	  ============================	  hor x.(trunctype_type) False_hp.(trunctype_type) = x	";
             responses[i]=data;
           
 
             i = 67;
-            data = "1 subgoal (ID 313)	  	  H : Univalence	  x : -1 -Type	  H0 : x	  ============================	  hor x False_hp	";
+            data = "1 subgoal (ID 313)	  	  H : Univalence	  x : -1 -Type	  H0 : x.(trunctype_type)	  ============================	  (hor x.(trunctype_type) False_hp.(trunctype_type)).(trunctype_type)	";
             responses[i]=data;
           
 
@@ -423,32 +423,32 @@
           
 
             i = 81;
-            data = "1 subgoal (ID 63)	  	  H : Univalence	  ============================	  Absorption	    ((fun P Q : -1 -Type => hor P Q) : -1 -Type -> -1 -Type -> -1 -Type) hand	";
+            data = "1 subgoal (ID 63)	  	  H : Univalence	  ============================	  Absorption	    ((fun P Q : -1 -Type => hor P.(trunctype_type) Q.(trunctype_type))	     :	     -1 -Type -> -1 -Type -> -1 -Type) hand	";
             responses[i]=data;
           
 
             i = 82;
-            data = "1 subgoal (ID 66)	  	  H : Univalence	  x, y : -1 -Type	  ============================	  hor x (hand x y) = x	";
+            data = "1 subgoal (ID 66)	  	  H : Univalence	  x, y : -1 -Type	  ============================	  hor x.(trunctype_type) (hand x y).(trunctype_type) = x	";
             responses[i]=data;
           
 
             i = 83;
-            data = "2 subgoals (ID 70)	  	  H : Univalence	  x, y : -1 -Type	  ============================	  hor x (hand x y) -> x		subgoal 2 (ID 71) is:	 x -> hor x (hand x y)	";
+            data = "2 subgoals (ID 70)	  	  H : Univalence	  x, y : -1 -Type	  ============================	  (hor x.(trunctype_type) (hand x y).(trunctype_type)).(trunctype_type) ->	  x.(trunctype_type)		subgoal 2 (ID 71) is:	 x.(trunctype_type) ->	 (hor x.(trunctype_type) (hand x y).(trunctype_type)).(trunctype_type)	";
             responses[i]=data;
           
 
             i = 84;
-            data = "1 subgoal (ID 70)	  	  H : Univalence	  x, y : -1 -Type	  ============================	  hor x (hand x y) -> x	1 subgoal (ID 106)	  	  H : Univalence	  x, y : -1 -Type	  X : x + hand x y	  ============================	  x	";
+            data = "1 subgoal (ID 70)	  	  H : Univalence	  x, y : -1 -Type	  ============================	  (hor x.(trunctype_type) (hand x y).(trunctype_type)).(trunctype_type) ->	  x.(trunctype_type)	1 subgoal (ID 106)	  	  H : Univalence	  x, y : -1 -Type	  X : x.(trunctype_type) + (hand x y).(trunctype_type)	  ============================	  x.(trunctype_type)	";
             responses[i]=data;
           
 
             i = 85;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 71)		subgoal 1 (ID 71) is:	 x -> hor x (hand x y)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 71)		subgoal 1 (ID 71) is:	 x.(trunctype_type) ->	 (hor x.(trunctype_type) (hand x y).(trunctype_type)).(trunctype_type)	";
             responses[i]=data;
           
 
             i = 86;
-            data = "1 subgoal (ID 71)	  	  H : Univalence	  x, y : -1 -Type	  ============================	  x -> hor x (hand x y)	1 subgoal (ID 185)	  	  H : Univalence	  x, y : -1 -Type	  X : x	  ============================	  hor x (hand x y)	";
+            data = "1 subgoal (ID 71)	  	  H : Univalence	  x, y : -1 -Type	  ============================	  x.(trunctype_type) ->	  (hor x.(trunctype_type) (hand x y).(trunctype_type)).(trunctype_type)	1 subgoal (ID 185)	  	  H : Univalence	  x, y : -1 -Type	  X : x.(trunctype_type)	  ============================	  (hor x.(trunctype_type) (hand x y).(trunctype_type)).(trunctype_type)	";
             responses[i]=data;
           
 
@@ -468,42 +468,42 @@
           
 
             i = 90;
-            data = "1 subgoal (ID 67)	  	  H : Univalence	  ============================	  Absorption hand	    ((fun P Q : -1 -Type => hor P Q) : -1 -Type -> -1 -Type -> -1 -Type)	";
+            data = "1 subgoal (ID 67)	  	  H : Univalence	  ============================	  Absorption hand	    ((fun P Q : -1 -Type => hor P.(trunctype_type) Q.(trunctype_type))	     :	     -1 -Type -> -1 -Type -> -1 -Type)	";
             responses[i]=data;
           
 
             i = 91;
-            data = "1 subgoal (ID 70)	  	  H : Univalence	  x, y : -1 -Type	  ============================	  hand x (hor x y) = x	";
+            data = "1 subgoal (ID 70)	  	  H : Univalence	  x, y : -1 -Type	  ============================	  hand x (hor x.(trunctype_type) y.(trunctype_type)) = x	";
             responses[i]=data;
           
 
             i = 92;
-            data = "2 subgoals (ID 74)	  	  H : Univalence	  x, y : -1 -Type	  ============================	  hand x (hor x y) -> x		subgoal 2 (ID 75) is:	 x -> hand x (hor x y)	";
+            data = "2 subgoals (ID 74)	  	  H : Univalence	  x, y : -1 -Type	  ============================	  (hand x (hor x.(trunctype_type) y.(trunctype_type))).(trunctype_type) ->	  x.(trunctype_type)		subgoal 2 (ID 75) is:	 x.(trunctype_type) ->	 (hand x (hor x.(trunctype_type) y.(trunctype_type))).(trunctype_type)	";
             responses[i]=data;
           
 
             i = 93;
-            data = "1 subgoal (ID 74)	  	  H : Univalence	  x, y : -1 -Type	  ============================	  hand x (hor x y) -> x	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 75)		subgoal 1 (ID 75) is:	 x -> hand x (hor x y)	";
+            data = "1 subgoal (ID 74)	  	  H : Univalence	  x, y : -1 -Type	  ============================	  (hand x (hor x.(trunctype_type) y.(trunctype_type))).(trunctype_type) ->	  x.(trunctype_type)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 75)		subgoal 1 (ID 75) is:	 x.(trunctype_type) ->	 (hand x (hor x.(trunctype_type) y.(trunctype_type))).(trunctype_type)	";
             responses[i]=data;
           
 
             i = 94;
-            data = "1 subgoal (ID 75)	  	  H : Univalence	  x, y : -1 -Type	  ============================	  x -> hand x (hor x y)	1 subgoal (ID 82)	  	  H : Univalence	  x, y : -1 -Type	  X : x	  ============================	  hand x (hor x y)	";
+            data = "1 subgoal (ID 75)	  	  H : Univalence	  x, y : -1 -Type	  ============================	  x.(trunctype_type) ->	  (hand x (hor x.(trunctype_type) y.(trunctype_type))).(trunctype_type)	1 subgoal (ID 82)	  	  H : Univalence	  x, y : -1 -Type	  X : x.(trunctype_type)	  ============================	  (hand x (hor x.(trunctype_type) y.(trunctype_type))).(trunctype_type)	";
             responses[i]=data;
           
 
             i = 95;
-            data = "2 subgoals (ID 84)	  	  H : Univalence	  x, y : -1 -Type	  X : x	  ============================	  x		subgoal 2 (ID 85) is:	 hor x y	";
+            data = "2 subgoals (ID 84)	  	  H : Univalence	  x, y : -1 -Type	  X : x.(trunctype_type)	  ============================	  x.(trunctype_type)		subgoal 2 (ID 85) is:	 (hor x.(trunctype_type) y.(trunctype_type)).(trunctype_type)	";
             responses[i]=data;
           
 
             i = 96;
-            data = "1 subgoal (ID 84)	  	  H : Univalence	  x, y : -1 -Type	  X : x	  ============================	  x	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	1 subgoal (ID 85)		subgoal 1 (ID 85) is:	 hor x y	";
+            data = "1 subgoal (ID 84)	  	  H : Univalence	  x, y : -1 -Type	  X : x.(trunctype_type)	  ============================	  x.(trunctype_type)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	1 subgoal (ID 85)		subgoal 1 (ID 85) is:	 (hor x.(trunctype_type) y.(trunctype_type)).(trunctype_type)	";
             responses[i]=data;
           
 
             i = 97;
-            data = "1 subgoal (ID 85)	  	  H : Univalence	  x, y : -1 -Type	  X : x	  ============================	  hor x y	No more subgoals.	";
+            data = "1 subgoal (ID 85)	  	  H : Univalence	  x, y : -1 -Type	  X : x.(trunctype_type)	  ============================	  (hor x.(trunctype_type) y.(trunctype_type)).(trunctype_type)	No more subgoals.	";
             responses[i]=data;
           
 

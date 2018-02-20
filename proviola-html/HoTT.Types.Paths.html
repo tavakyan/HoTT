@@ -1783,7 +1783,7 @@
           
 
             i = 353;
-            data = "1 subgoal (ID 1838)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  x : A	  y : B	  ============================	  IsEquiv (fun p : x = _^-1 y => ap f p @ eisretr _ y)	";
+            data = "1 subgoal (ID 1838)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  x : A	  y : B	  ============================	  IsEquiv (fun p : x = H.(equiv_inv) y => ap f p @ H.(eisretr) y)	";
             responses[i]=data;
           
 
@@ -1813,7 +1813,7 @@
           
 
             i = 359;
-            data = "1 subgoal (ID 1873)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  x : B	  y : A	  ============================	  IsEquiv (fun p : x = f y => ap _^-1 p @ eissect _ y)	";
+            data = "1 subgoal (ID 1873)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  x : B	  y : A	  ============================	  IsEquiv (fun p : x = f y => ap H.(equiv_inv) p @ H.(eissect) y)	";
             responses[i]=data;
           
 
@@ -1843,7 +1843,7 @@
           
 
             i = 365;
-            data = "1 subgoal (ID 1908)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  x : A	  y : B	  ============================	  IsEquiv (fun p : _^-1 y = x => (eisretr _ y)^ @ ap f p)	";
+            data = "1 subgoal (ID 1908)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  x : A	  y : B	  ============================	  IsEquiv (fun p : H.(equiv_inv) y = x => (H.(eisretr) y)^ @ ap f p)	";
             responses[i]=data;
           
 
@@ -1873,7 +1873,7 @@
           
 
             i = 371;
-            data = "1 subgoal (ID 1943)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  x : B	  y : A	  ============================	  IsEquiv (fun p : f y = x => (eissect _ y)^ @ ap _^-1 p)	";
+            data = "1 subgoal (ID 1943)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  x : B	  y : A	  ============================	  IsEquiv (fun p : f y = x => (H.(eissect) y)^ @ ap H.(equiv_inv) p)	";
             responses[i]=data;
           
 

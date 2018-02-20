@@ -183,7 +183,7 @@
           
 
             i = 33;
-            data = "1 subgoal (ID 39)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  ============================	  forall (s d : (C^op * C)%category) (m : morphism (C^op * C) s d),	  ((fun m0 : (hom_functor C) d => F _1 m0) o (hom_functor C) _1 m)%morphism =	  ((hom_functor D o (F^op, F)) _1 m o (fun m0 : (hom_functor C) s => F _1 m0))%morphism	";
+            data = "1 subgoal (ID 39)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  ============================	  forall (s d : (C^op * C).(object)) (m : (C^op * C).(morphism) s d),	  set_cat.(Category.Core.compose) ((hom_functor C).(object_of) s)	    ((hom_functor C).(object_of) d)	    ((hom_functor D o (F^op, F))%functor.(object_of) d)	    (fun m0 : ((hom_functor C).(object_of) d).(trunctype_type) =>	     F.(morphism_of) d.(Datatypes.fst) d.(Datatypes.snd) m0)	    ((hom_functor C).(morphism_of) s d m) =	  set_cat.(Category.Core.compose) ((hom_functor C).(object_of) s)	    ((hom_functor D o (F^op, F))%functor.(object_of) s)	    ((hom_functor D o (F^op, F))%functor.(object_of) d)	    ((hom_functor D o (F^op, F))%functor.(morphism_of) s d m)	    (fun m0 : ((hom_functor C).(object_of) s).(trunctype_type) =>	     F.(morphism_of) s.(Datatypes.fst) s.(Datatypes.snd) m0)	";
             responses[i]=data;
           
 
@@ -358,12 +358,12 @@
           
 
             i = 68;
-            data = "1 subgoal (ID 19)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  H0 : IsFullyFaithful	  ============================	  IsFull	";
+            data = "1 subgoal (ID 16)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  H0 : IsFullyFaithful	  ============================	  IsFull	";
             responses[i]=data;
           
 
             i = 69;
-            data = "1 subgoal (ID 29)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  H0 : forall x y : C,	       IsIsomorphism (induced_hom_natural_transformation (x, y))	  x, y : C	  ============================	  IsEpimorphism (induced_hom_natural_transformation (x, y))	";
+            data = "1 subgoal (ID 26)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  H0 : forall x y : C.(object),	       IsIsomorphism	         (induced_hom_natural_transformation.(components_of) (x, y))	  x, y : C.(object)	  ============================	  IsEpimorphism (induced_hom_natural_transformation.(components_of) (x, y))	";
             responses[i]=data;
           
 
@@ -418,12 +418,12 @@
           
 
             i = 80;
-            data = "1 subgoal (ID 21)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  H0 : IsFullyFaithful	  ============================	  IsFaithful	";
+            data = "1 subgoal (ID 18)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  H0 : IsFullyFaithful	  ============================	  IsFaithful	";
             responses[i]=data;
           
 
             i = 81;
-            data = "1 subgoal (ID 31)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  H0 : forall x y : C,	       IsIsomorphism (induced_hom_natural_transformation (x, y))	  x, y : C	  ============================	  IsMonomorphism (induced_hom_natural_transformation (x, y))	";
+            data = "1 subgoal (ID 28)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  H0 : forall x y : C.(object),	       IsIsomorphism	         (induced_hom_natural_transformation.(components_of) (x, y))	  x, y : C.(object)	  ============================	  IsMonomorphism (induced_hom_natural_transformation.(components_of) (x, y))	";
             responses[i]=data;
           
 
@@ -473,17 +473,17 @@
           
 
             i = 91;
-            data = "1 subgoal (ID 38)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  H0 : IsFull	  H1 : IsFaithful	  H' : forall (x y : set_cat) (m : morphism set_cat x y),	       IsEpimorphism m -> IsMonomorphism m -> IsIsomorphism m	  ============================	  IsFullyFaithful	";
+            data = "1 subgoal (ID 35)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  H0 : IsFull	  H1 : IsFaithful	  H' : forall (x y : set_cat.(object)) (m : set_cat.(morphism) x y),	       IsEpimorphism m -> IsMonomorphism m -> IsIsomorphism m	  ============================	  IsFullyFaithful	";
             responses[i]=data;
           
 
             i = 92;
-            data = "1 subgoal (ID 38)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  H0 : IsFull	  H1 : IsFaithful	  H' : forall (x y : set_cat) (m : morphism set_cat x y),	       IsEpimorphism m -> IsMonomorphism m -> IsIsomorphism m	  ============================	  IsFullyFaithful	";
+            data = "1 subgoal (ID 35)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  H0 : IsFull	  H1 : IsFaithful	  H' : forall (x y : set_cat.(object)) (m : set_cat.(morphism) x y),	       IsEpimorphism m -> IsMonomorphism m -> IsIsomorphism m	  ============================	  IsFullyFaithful	";
             responses[i]=data;
           
 
             i = 93;
-            data = "1 subgoal (ID 50)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  H0 : forall x y : C,	       IsEpimorphism (induced_hom_natural_transformation (x, y))	  H1 : forall x y : C,	       IsMonomorphism (induced_hom_natural_transformation (x, y))	  H' : forall (x y : set_cat) (m : morphism set_cat x y),	       IsEpimorphism m -> IsMonomorphism m -> IsIsomorphism m	  x, y : C	  ============================	  IsIsomorphism (induced_hom_natural_transformation (x, y))	";
+            data = "1 subgoal (ID 47)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  H0 : forall x y : C.(object),	       IsEpimorphism	         (induced_hom_natural_transformation.(components_of) (x, y))	  H1 : forall x y : C.(object),	       IsMonomorphism	         (induced_hom_natural_transformation.(components_of) (x, y))	  H' : forall (x y : set_cat.(object)) (m : set_cat.(morphism) x y),	       IsEpimorphism m -> IsMonomorphism m -> IsIsomorphism m	  x, y : C.(object)	  ============================	  IsIsomorphism (induced_hom_natural_transformation.(components_of) (x, y))	";
             responses[i]=data;
           
 
@@ -523,12 +523,12 @@
           
 
             i = 101;
-            data = "1 subgoal (ID 17)	  	  ua : Univalence	  x : 0 -Type	  y : 0 -Type	  m : x -> y	  H' : IsEquiv m	  ============================	  IsIsomorphism (m : morphism set_cat x y)	";
+            data = "1 subgoal (ID 17)	  	  ua : Univalence	  x : 0 -Type	  y : 0 -Type	  m : x.(trunctype_type) -> y.(trunctype_type)	  H' : IsEquiv m	  ============================	  IsIsomorphism (m : set_cat.(morphism) x y)	";
             responses[i]=data;
           
 
             i = 102;
-            data = "1 subgoal (ID 17)	  	  ua : Univalence	  x : 0 -Type	  y : 0 -Type	  m : x -> y	  H' : IsEquiv m	  ============================	  IsIsomorphism (m : morphism set_cat x y)	";
+            data = "1 subgoal (ID 17)	  	  ua : Univalence	  x : 0 -Type	  y : 0 -Type	  m : x.(trunctype_type) -> y.(trunctype_type)	  H' : IsEquiv m	  ============================	  IsIsomorphism (m : set_cat.(morphism) x y)	";
             responses[i]=data;
           
 

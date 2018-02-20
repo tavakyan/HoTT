@@ -228,12 +228,12 @@
           
 
             i = 42;
-            data = "1 subgoal (ID 70)	  	  ua : Univalence_type	  A : Type	  B : Type	  ============================	  IsEquiv (fun g : A -> {xy : B * B & fst xy = snd xy} => fst o pr1 o g)	";
+            data = "1 subgoal (ID 70)	  	  ua : Univalence_type	  A : Type	  B : Type	  ============================	  IsEquiv (fun g : A -> {xy : B * B & xy.(fst) = xy.(snd)} => fst o pr1 o g)	";
             responses[i]=data;
           
 
             i = 43;
-            data = "1 subgoal (ID 397)	  	  ua : Univalence_type	  A : Type	  B : Type	  ============================	  IsEquiv (fun x : {xy : B * B & fst xy = snd xy} => fst x.1)	";
+            data = "1 subgoal (ID 397)	  	  ua : Univalence_type	  A : Type	  B : Type	  ============================	  IsEquiv (fun x : {xy : B * B & xy.(fst) = xy.(snd)} => fst x.1)	";
             responses[i]=data;
           
 
@@ -253,12 +253,12 @@
           
 
             i = 47;
-            data = "1 subgoal (ID 117)	  	  ua : Univalence_type	  A : Type	  B : Type	  ============================	  IsEquiv (fun g : A -> {xy : B * B & fst xy = snd xy} => snd o pr1 o g)	";
+            data = "1 subgoal (ID 117)	  	  ua : Univalence_type	  A : Type	  B : Type	  ============================	  IsEquiv (fun g : A -> {xy : B * B & xy.(fst) = xy.(snd)} => snd o pr1 o g)	";
             responses[i]=data;
           
 
             i = 48;
-            data = "1 subgoal (ID 444)	  	  ua : Univalence_type	  A : Type	  B : Type	  ============================	  IsEquiv (fun x : {xy : B * B & fst xy = snd xy} => snd x.1)	";
+            data = "1 subgoal (ID 444)	  	  ua : Univalence_type	  A : Type	  B : Type	  ============================	  IsEquiv (fun x : {xy : B * B & xy.(fst) = xy.(snd)} => snd x.1)	";
             responses[i]=data;
           
 
@@ -308,12 +308,12 @@
           
 
             i = 58;
-            data = "1 subgoal (ID 145)	  	  ua : Univalence_type	  A : Type	  B : Type	  f, g : A -> B	  p : f == g	  d := fun x : A => ((f x, f x); 1%path)	   : A -> {xy : B * B & fst xy = snd xy}	  ============================	  f = g	";
+            data = "1 subgoal (ID 145)	  	  ua : Univalence_type	  A : Type	  B : Type	  f, g : A -> B	  p : f == g	  d := fun x : A => ((f x, f x); 1%path)	   : A -> {xy : B * B & xy.(fst) = xy.(snd)}	  ============================	  f = g	";
             responses[i]=data;
           
 
             i = 59;
-            data = "1 subgoal (ID 162)	  	  ua : Univalence_type	  A : Type	  B : Type	  f, g : A -> B	  p : f == g	  d := fun x : A => ((f x, f x); 1%path)	   : A -> {xy : B * B & fst xy = snd xy}	  e := fun x : A => ((f x, g x); p x) : A -> {xy : B * B & fst xy = snd xy}	  ============================	  f = g	";
+            data = "1 subgoal (ID 162)	  	  ua : Univalence_type	  A : Type	  B : Type	  f, g : A -> B	  p : f == g	  d := fun x : A => ((f x, f x); 1%path)	   : A -> {xy : B * B & xy.(fst) = xy.(snd)}	  e := fun x : A => ((f x, g x); p x)	   : A -> {xy : B * B & xy.(fst) = xy.(snd)}	  ============================	  f = g	";
             responses[i]=data;
           
 
@@ -428,17 +428,17 @@
           
 
             i = 82;
-            data = "1 subgoal (ID 197)	  	  ua : Univalence_type	  A : Type	  B : Type	  f, g : A -> B	  p : f == g	  d := fun x : A => ((f x, f x); 1%path)	   : A -> {xy : B * B & fst xy = snd xy}	  e := fun x : A => ((f x, g x); p x) : A -> {xy : B * B & fst xy = snd xy}	  ============================	  snd o pr1 o d = g	";
+            data = "1 subgoal (ID 197)	  	  ua : Univalence_type	  A : Type	  B : Type	  f, g : A -> B	  p : f == g	  d := fun x : A => ((f x, f x); 1%path)	   : A -> {xy : B * B & xy.(fst) = xy.(snd)}	  e := fun x : A => ((f x, g x); p x)	   : A -> {xy : B * B & xy.(fst) = xy.(snd)}	  ============================	  snd o pr1 o d = g	";
             responses[i]=data;
           
 
             i = 83;
-            data = "1 subgoal (ID 232)	  	  ua : Univalence_type	  A : Type	  B : Type	  f, g : A -> B	  p : f == g	  d := fun x : A => ((f x, f x); 1%path)	   : A -> {xy : B * B & fst xy = snd xy}	  e := fun x : A => ((f x, g x); p x) : A -> {xy : B * B & fst xy = snd xy}	  ============================	  snd o pr1 o d = snd o pr1 o e	";
+            data = "1 subgoal (ID 232)	  	  ua : Univalence_type	  A : Type	  B : Type	  f, g : A -> B	  p : f == g	  d := fun x : A => ((f x, f x); 1%path)	   : A -> {xy : B * B & xy.(fst) = xy.(snd)}	  e := fun x : A => ((f x, g x); p x)	   : A -> {xy : B * B & xy.(fst) = xy.(snd)}	  ============================	  snd o pr1 o d = snd o pr1 o e	";
             responses[i]=data;
           
 
             i = 84;
-            data = "1 subgoal (ID 306)	  	  ua : Univalence_type	  A : Type	  B : Type	  f, g : A -> B	  p : f == g	  d := fun x : A => ((f x, f x); 1%path)	   : A -> {xy : B * B & fst xy = snd xy}	  e := fun x : A => ((f x, g x); p x) : A -> {xy : B * B & fst xy = snd xy}	  ============================	  d = e	";
+            data = "1 subgoal (ID 306)	  	  ua : Univalence_type	  A : Type	  B : Type	  f, g : A -> B	  p : f == g	  d := fun x : A => ((f x, f x); 1%path)	   : A -> {xy : B * B & xy.(fst) = xy.(snd)}	  e := fun x : A => ((f x, g x); p x)	   : A -> {xy : B * B & xy.(fst) = xy.(snd)}	  ============================	  d = e	";
             responses[i]=data;
           
 
@@ -483,12 +483,12 @@
           
 
             i = 93;
-            data = "1 subgoal (ID 324)	  	  ua : Univalence_type	  A : Type	  B : Type	  f, g : A -> B	  p : f == g	  d := fun x : A => ((f x, f x); 1%path)	   : A -> {xy : B * B & fst xy = snd xy}	  e := fun x : A => ((f x, g x); p x) : A -> {xy : B * B & fst xy = snd xy}	  H' := fun (A B : Type) (x y : A -> {xy : B * B & fst xy = snd xy}) => _^-1	   : forall (A B : Type) (x y : A -> {xy : B * B & fst xy = snd xy}),	     (fun g : A -> {xy : B * B & fst xy = snd xy} => fst o pr1 o g) x =	     (fun g : A -> {xy : B * B & fst xy = snd xy} => fst o pr1 o g) y ->	     x = y	  ============================	  d = e	";
+            data = "1 subgoal (ID 324)	  	  ua : Univalence_type	  A : Type	  B : Type	  f, g : A -> B	  p : f == g	  d := fun x : A => ((f x, f x); 1%path)	   : A -> {xy : B * B & xy.(fst) = xy.(snd)}	  e := fun x : A => ((f x, g x); p x)	   : A -> {xy : B * B & xy.(fst) = xy.(snd)}	  H' := fun (A B : Type) (x y : A -> {xy : B * B & xy.(fst) = xy.(snd)}) =>	        (isequiv_ap x y).(equiv_inv)	   : forall (A B : Type) (x y : A -> {xy : B * B & xy.(fst) = xy.(snd)}),	     (fun g : A -> {xy : B * B & xy.(fst) = xy.(snd)} => fst o pr1 o g) x =	     (fun g : A -> {xy : B * B & xy.(fst) = xy.(snd)} => fst o pr1 o g) y ->	     x = y	  ============================	  d = e	";
             responses[i]=data;
           
 
             i = 94;
-            data = "1 subgoal (ID 325)	  	  ua : Univalence_type	  A : Type	  B : Type	  f, g : A -> B	  p : f == g	  d := fun x : A => ((f x, f x); 1%path)	   : A -> {xy : B * B & fst xy = snd xy}	  e := fun x : A => ((f x, g x); p x) : A -> {xy : B * B & fst xy = snd xy}	  H' := fun (A B : Type) (x y : A -> {xy : B * B & fst xy = snd xy}) => _^-1	   : forall (A B : Type) (x y : A -> {xy : B * B & fst xy = snd xy}),	     (fun g : A -> {xy : B * B & fst xy = snd xy} => fst o pr1 o g) x =	     (fun g : A -> {xy : B * B & fst xy = snd xy} => fst o pr1 o g) y ->	     x = y	  ============================	  (fun x : A => fst (d x).1) = (fun x : A => fst (e x).1)	";
+            data = "1 subgoal (ID 325)	  	  ua : Univalence_type	  A : Type	  B : Type	  f, g : A -> B	  p : f == g	  d := fun x : A => ((f x, f x); 1%path)	   : A -> {xy : B * B & xy.(fst) = xy.(snd)}	  e := fun x : A => ((f x, g x); p x)	   : A -> {xy : B * B & xy.(fst) = xy.(snd)}	  H' := fun (A B : Type) (x y : A -> {xy : B * B & xy.(fst) = xy.(snd)}) =>	        (isequiv_ap x y).(equiv_inv)	   : forall (A B : Type) (x y : A -> {xy : B * B & xy.(fst) = xy.(snd)}),	     (fun g : A -> {xy : B * B & xy.(fst) = xy.(snd)} => fst o pr1 o g) x =	     (fun g : A -> {xy : B * B & xy.(fst) = xy.(snd)} => fst o pr1 o g) y ->	     x = y	  ============================	  (fun x : A => fst (d x).1) = (fun x : A => fst (e x).1)	";
             responses[i]=data;
           
 
@@ -663,7 +663,7 @@
           
 
             i = 129;
-            data = "1 subgoal (ID 63)	  	  ua1 : Univalence_type	  ua2 : Univalence_type	  A : Type	  P : A -> Type	  allcontr : forall x : A, Contr (P x)	  U := fun _ : A => Unit : A -> Type0	  p : P = U	  f : A -> Unit	  x : A	  ============================	  tt = center _	";
+            data = "1 subgoal (ID 63)	  	  ua1 : Univalence_type	  ua2 : Univalence_type	  A : Type	  P : A -> Type	  allcontr : forall x : A, Contr (P x)	  U := fun _ : A => Unit : A -> Type0	  p : P = U	  f : A -> Unit	  x : A	  ============================	  tt = contr_unit.(center)	";
             responses[i]=data;
           
 

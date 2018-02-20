@@ -178,12 +178,12 @@
           
 
             i = 32;
-            data = "1 subgoal (ID 25)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  ============================	  {CO : forall x : C, morphism D (F x) (G x) &	  forall (s d : C) (m : morphism C s d), CO d o F _1 m = G _1 m o CO s} <~>	  NaturalTransformation F G	";
+            data = "1 subgoal (ID 25)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  ============================	  {CO	  : forall x : C.(object), D.(morphism) (F.(object_of) x) (G.(object_of) x) &	  forall (s d : C.(object)) (m : C.(morphism) s d),	  D.(compose) (F.(object_of) s) (F.(object_of) d) 	    (G.(object_of) d) (CO d) (F.(morphism_of) s d m) =	  D.(compose) (F.(object_of) s) (G.(object_of) s) 	    (G.(object_of) d) (G.(morphism_of) s d m) (CO s)} <~>	  NaturalTransformation F G	";
             responses[i]=data;
           
 
             i = 33;
-            data = "1 subgoal (ID 25)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  ============================	  {CO : forall x : C, morphism D (F x) (G x) &	  forall (s d : C) (m : morphism C s d), CO d o F _1 m = G _1 m o CO s} <~>	  NaturalTransformation F G	";
+            data = "1 subgoal (ID 25)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  ============================	  {CO	  : forall x : C.(object), D.(morphism) (F.(object_of) x) (G.(object_of) x) &	  forall (s d : C.(object)) (m : C.(morphism) s d),	  D.(compose) (F.(object_of) s) (F.(object_of) d) 	    (G.(object_of) d) (CO d) (F.(morphism_of) s d m) =	  D.(compose) (F.(object_of) s) (G.(object_of) s) 	    (G.(object_of) d) (G.(morphism_of) s d m) (CO s)} <~>	  NaturalTransformation F G	";
             responses[i]=data;
           
 
@@ -243,7 +243,7 @@
           
 
             i = 45;
-            data = "1 subgoal (ID 31)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  ============================	  IsHSet	    {CO : forall x : C, morphism D (F x) (G x) &	    forall (s d : C) (m : morphism C s d), CO d o F _1 m = G _1 m o CO s}	";
+            data = "1 subgoal (ID 31)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  ============================	  IsHSet	    {CO	    : forall x : C.(object), D.(morphism) (F.(object_of) x) (G.(object_of) x)	    &	    forall (s d : C.(object)) (m : C.(morphism) s d),	    D.(compose) (F.(object_of) s) (F.(object_of) d) 	      (G.(object_of) d) (CO d) (F.(morphism_of) s d m) =	    D.(compose) (F.(object_of) s) (G.(object_of) s) 	      (G.(object_of) d) (G.(morphism_of) s d m) (CO s)}	";
             responses[i]=data;
           
 
@@ -303,27 +303,27 @@
           
 
             i = 57;
-            data = "1 subgoal (ID 45)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  ============================	  T = U -> T = U	";
+            data = "1 subgoal (ID 45)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  ============================	  T.(components_of) = U.(components_of) -> T = U	";
             responses[i]=data;
           
 
             i = 58;
-            data = "1 subgoal (ID 45)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  ============================	  T = U -> T = U	";
+            data = "1 subgoal (ID 45)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  ============================	  T.(components_of) = U.(components_of) -> T = U	";
             responses[i]=data;
           
 
             i = 59;
-            data = "1 subgoal (ID 46)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  X : T = U	  ============================	  T = U	";
+            data = "1 subgoal (ID 46)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  X : T.(components_of) = U.(components_of)	  ============================	  T = U	";
             responses[i]=data;
           
 
             i = 60;
-            data = "1 subgoal (ID 83)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  components_of : forall c : C, morphism D (F c) (G c)	  commutes : forall (s d : C) (m : morphism C s d),	             components_of d o F _1 m = G _1 m o components_of s	  commutes_sym : forall (s d : C) (m : morphism C s d),	                 G _1 m o components_of s = components_of d o F _1 m	  components_of0 : forall c : C, morphism D (F c) (G c)	  commutes0 : forall (s d : C) (m : morphism C s d),	              components_of0 d o F _1 m = G _1 m o components_of0 s	  commutes_sym0 : forall (s d : C) (m : morphism C s d),	                  G _1 m o components_of0 s = components_of0 d o F _1 m	  X : components_of = components_of0	  ============================	  {|	  components_of := components_of;	  commutes := commutes;	  commutes_sym := commutes_sym |} =	  {|	  components_of := components_of0;	  commutes := commutes0;	  commutes_sym := commutes_sym0 |}	";
+            data = "1 subgoal (ID 83)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  components_of : forall c : C.(object),	                  D.(morphism) (F.(object_of) c) (G.(object_of) c)	  commutes : forall (s d : C.(object)) (m : C.(morphism) s d),	             D.(compose) (F.(object_of) s) (F.(object_of) d)	               (G.(object_of) d) (components_of d) 	               (F.(morphism_of) s d m) =	             D.(compose) (F.(object_of) s) (G.(object_of) s)	               (G.(object_of) d) (G.(morphism_of) s d m) 	               (components_of s)	  commutes_sym : forall (s d : C.(object)) (m : C.(morphism) s d),	                 D.(compose) (F.(object_of) s) (G.(object_of) s)	                   (G.(object_of) d) (G.(morphism_of) s d m)	                   (components_of s) =	                 D.(compose) (F.(object_of) s) (F.(object_of) d)	                   (G.(object_of) d) (components_of d)	                   (F.(morphism_of) s d m)	  components_of0 : forall c : C.(object),	                   D.(morphism) (F.(object_of) c) (G.(object_of) c)	  commutes0 : forall (s d : C.(object)) (m : C.(morphism) s d),	              D.(compose) (F.(object_of) s) (F.(object_of) d)	                (G.(object_of) d) (components_of0 d) 	                (F.(morphism_of) s d m) =	              D.(compose) (F.(object_of) s) (G.(object_of) s)	                (G.(object_of) d) (G.(morphism_of) s d m) 	                (components_of0 s)	  commutes_sym0 : forall (s d : C.(object)) (m : C.(morphism) s d),	                  D.(compose) (F.(object_of) s) (G.(object_of) s)	                    (G.(object_of) d) (G.(morphism_of) s d m)	                    (components_of0 s) =	                  D.(compose) (F.(object_of) s) (F.(object_of) d)	                    (G.(object_of) d) (components_of0 d)	                    (F.(morphism_of) s d m)	  X : components_of = components_of0	  ============================	  {|	  components_of := components_of;	  commutes := commutes;	  commutes_sym := commutes_sym |} =	  {|	  components_of := components_of0;	  commutes := commutes0;	  commutes_sym := commutes_sym0 |}	";
             responses[i]=data;
           
 
             i = 61;
-            data = "1 subgoal (ID 94)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  components_of : forall c : C, morphism D (F c) (G c)	  commutes : forall (s d : C) (m : morphism C s d),	             components_of d o F _1 m = G _1 m o components_of s	  commutes_sym : forall (s d : C) (m : morphism C s d),	                 G _1 m o components_of s = components_of d o F _1 m	  commutes0 : forall (s d : C) (m : morphism C s d),	              components_of d o F _1 m = G _1 m o components_of s	  commutes_sym0 : forall (s d : C) (m : morphism C s d),	                  G _1 m o components_of s = components_of d o F _1 m	  ============================	  {|	  components_of := components_of;	  commutes := commutes;	  commutes_sym := commutes_sym |} =	  {|	  components_of := components_of;	  commutes := commutes0;	  commutes_sym := commutes_sym0 |}	";
+            data = "1 subgoal (ID 94)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  components_of : forall c : C.(object),	                  D.(morphism) (F.(object_of) c) (G.(object_of) c)	  commutes : forall (s d : C.(object)) (m : C.(morphism) s d),	             D.(compose) (F.(object_of) s) (F.(object_of) d)	               (G.(object_of) d) (components_of d) 	               (F.(morphism_of) s d m) =	             D.(compose) (F.(object_of) s) (G.(object_of) s)	               (G.(object_of) d) (G.(morphism_of) s d m) 	               (components_of s)	  commutes_sym : forall (s d : C.(object)) (m : C.(morphism) s d),	                 D.(compose) (F.(object_of) s) (G.(object_of) s)	                   (G.(object_of) d) (G.(morphism_of) s d m)	                   (components_of s) =	                 D.(compose) (F.(object_of) s) (F.(object_of) d)	                   (G.(object_of) d) (components_of d)	                   (F.(morphism_of) s d m)	  commutes0 : forall (s d : C.(object)) (m : C.(morphism) s d),	              D.(compose) (F.(object_of) s) (F.(object_of) d)	                (G.(object_of) d) (components_of d) 	                (F.(morphism_of) s d m) =	              D.(compose) (F.(object_of) s) (G.(object_of) s)	                (G.(object_of) d) (G.(morphism_of) s d m) 	                (components_of s)	  commutes_sym0 : forall (s d : C.(object)) (m : C.(morphism) s d),	                  D.(compose) (F.(object_of) s) (G.(object_of) s)	                    (G.(object_of) d) (G.(morphism_of) s d m)	                    (components_of s) =	                  D.(compose) (F.(object_of) s) (F.(object_of) d)	                    (G.(object_of) d) (components_of d)	                    (F.(morphism_of) s d m)	  ============================	  {|	  components_of := components_of;	  commutes := commutes;	  commutes_sym := commutes_sym |} =	  {|	  components_of := components_of;	  commutes := commutes0;	  commutes_sym := commutes_sym0 |}	";
             responses[i]=data;
           
 
@@ -338,22 +338,22 @@
           
 
             i = 64;
-            data = "1 subgoal (ID 58)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  ============================	  T == U -> T = U	";
+            data = "1 subgoal (ID 58)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  ============================	  T.(components_of) == U.(components_of) -> T = U	";
             responses[i]=data;
           
 
             i = 65;
-            data = "1 subgoal (ID 58)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  ============================	  T == U -> T = U	";
+            data = "1 subgoal (ID 58)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  ============================	  T.(components_of) == U.(components_of) -> T = U	";
             responses[i]=data;
           
 
             i = 66;
-            data = "1 subgoal (ID 59)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  X : T == U	  ============================	  T = U	";
+            data = "1 subgoal (ID 59)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  X : T.(components_of) == U.(components_of)	  ============================	  T = U	";
             responses[i]=data;
           
 
             i = 67;
-            data = "1 subgoal (ID 60)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  X : T == U	  ============================	  T = U	";
+            data = "1 subgoal (ID 60)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  X : T.(components_of) == U.(components_of)	  ============================	  T.(components_of) = U.(components_of)	";
             responses[i]=data;
           
 
@@ -373,17 +373,17 @@
           
 
             i = 71;
-            data = "1 subgoal (ID 80)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  path_inv := fun (H : T = U) (x : C) =>	              match H in (_ = n) return (T x = n x) with	              | 1%path => 1%path	              end : T = U -> T == U	  ============================	  Sect path_natural_transformation path_inv	";
+            data = "1 subgoal (ID 80)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  path_inv := fun (H : T = U) (x : C.(object)) =>	              match	                H in (_ = n)	                return (T.(components_of) x = n.(components_of) x)	              with	              | 1%path => 1%path	              end : T = U -> T.(components_of) == U.(components_of)	  ============================	  Sect path_natural_transformation path_inv	";
             responses[i]=data;
           
 
             i = 72;
-            data = "1 subgoal (ID 80)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  path_inv := fun (H : T = U) (x : C) =>	              match H in (_ = n) return (T x = n x) with	              | 1%path => 1%path	              end : T = U -> T == U	  ============================	  Sect path_natural_transformation path_inv	";
+            data = "1 subgoal (ID 80)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  path_inv := fun (H : T = U) (x : C.(object)) =>	              match	                H in (_ = n)	                return (T.(components_of) x = n.(components_of) x)	              with	              | 1%path => 1%path	              end : T = U -> T.(components_of) == U.(components_of)	  ============================	  Sect path_natural_transformation path_inv	";
             responses[i]=data;
           
 
             i = 73;
-            data = "1 subgoal (ID 82)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  path_inv := fun (H : T = U) (x : C) =>	              match H in (_ = n) return (T x = n x) with	              | 1%path => 1%path	              end : T = U -> T == U	  x : T == U	  ============================	  path_inv (path_natural_transformation x) = x	";
+            data = "1 subgoal (ID 82)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  path_inv := fun (H : T = U) (x : C.(object)) =>	              match	                H in (_ = n)	                return (T.(components_of) x = n.(components_of) x)	              with	              | 1%path => 1%path	              end : T = U -> T.(components_of) == U.(components_of)	  x : T.(components_of) == U.(components_of)	  ============================	  path_inv (path_natural_transformation x) = x	";
             responses[i]=data;
           
 
@@ -398,17 +398,17 @@
           
 
             i = 76;
-            data = "1 subgoal (ID 83)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  path_inv := fun (H : T = U) (x : C) =>	              match H in (_ = n) return (T x = n x) with	              | 1%path => 1%path	              end : T = U -> T == U	  ============================	  Sect path_inv path_natural_transformation	";
+            data = "1 subgoal (ID 83)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  path_inv := fun (H : T = U) (x : C.(object)) =>	              match	                H in (_ = n)	                return (T.(components_of) x = n.(components_of) x)	              with	              | 1%path => 1%path	              end : T = U -> T.(components_of) == U.(components_of)	  ============================	  Sect path_inv path_natural_transformation	";
             responses[i]=data;
           
 
             i = 77;
-            data = "1 subgoal (ID 83)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  path_inv := fun (H : T = U) (x : C) =>	              match H in (_ = n) return (T x = n x) with	              | 1%path => 1%path	              end : T = U -> T == U	  ============================	  Sect path_inv path_natural_transformation	";
+            data = "1 subgoal (ID 83)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  path_inv := fun (H : T = U) (x : C.(object)) =>	              match	                H in (_ = n)	                return (T.(components_of) x = n.(components_of) x)	              with	              | 1%path => 1%path	              end : T = U -> T.(components_of) == U.(components_of)	  ============================	  Sect path_inv path_natural_transformation	";
             responses[i]=data;
           
 
             i = 78;
-            data = "1 subgoal (ID 85)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  path_inv := fun (H : T = U) (x : C) =>	              match H in (_ = n) return (T x = n x) with	              | 1%path => 1%path	              end : T = U -> T == U	  x : T = U	  ============================	  path_natural_transformation (path_inv x) = x	";
+            data = "1 subgoal (ID 85)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  path_inv := fun (H : T = U) (x : C.(object)) =>	              match	                H in (_ = n)	                return (T.(components_of) x = n.(components_of) x)	              with	              | 1%path => 1%path	              end : T = U -> T.(components_of) == U.(components_of)	  x : T = U	  ============================	  path_natural_transformation (path_inv x) = x	";
             responses[i]=data;
           
 
@@ -423,17 +423,17 @@
           
 
             i = 81;
-            data = "1 subgoal (ID 91)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  path_inv := fun (H : T = U) (x : C) =>	              match H in (_ = n) return (T x = n x) with	              | 1%path => 1%path	              end : T = U -> T == U	  ============================	  forall x : T = U,	  eisretr_path_natural_transformation (path_inv x) =	  ap path_inv (eissect_path_natural_transformation x)	";
+            data = "1 subgoal (ID 91)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  path_inv := fun (H : T = U) (x : C.(object)) =>	              match	                H in (_ = n)	                return (T.(components_of) x = n.(components_of) x)	              with	              | 1%path => 1%path	              end : T = U -> T.(components_of) == U.(components_of)	  ============================	  forall x : T = U,	  eisretr_path_natural_transformation (path_inv x) =	  ap path_inv (eissect_path_natural_transformation x)	";
             responses[i]=data;
           
 
             i = 82;
-            data = "1 subgoal (ID 91)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  path_inv := fun (H : T = U) (x : C) =>	              match H in (_ = n) return (T x = n x) with	              | 1%path => 1%path	              end : T = U -> T == U	  ============================	  forall x : T = U,	  eisretr_path_natural_transformation (path_inv x) =	  ap path_inv (eissect_path_natural_transformation x)	";
+            data = "1 subgoal (ID 91)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  path_inv := fun (H : T = U) (x : C.(object)) =>	              match	                H in (_ = n)	                return (T.(components_of) x = n.(components_of) x)	              with	              | 1%path => 1%path	              end : T = U -> T.(components_of) == U.(components_of)	  ============================	  forall x : T = U,	  eisretr_path_natural_transformation (path_inv x) =	  ap path_inv (eissect_path_natural_transformation x)	";
             responses[i]=data;
           
 
             i = 83;
-            data = "1 subgoal (ID 92)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  path_inv := fun (H : T = U) (x : C) =>	              match H in (_ = n) return (T x = n x) with	              | 1%path => 1%path	              end : T = U -> T == U	  x : T = U	  ============================	  eisretr_path_natural_transformation (path_inv x) =	  ap path_inv (eissect_path_natural_transformation x)	";
+            data = "1 subgoal (ID 92)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  path_inv := fun (H : T = U) (x : C.(object)) =>	              match	                H in (_ = n)	                return (T.(components_of) x = n.(components_of) x)	              with	              | 1%path => 1%path	              end : T = U -> T.(components_of) == U.(components_of)	  x : T = U	  ============================	  eisretr_path_natural_transformation (path_inv x) =	  ap path_inv (eissect_path_natural_transformation x)	";
             responses[i]=data;
           
 
@@ -483,22 +483,22 @@
           
 
             i = 93;
-            data = "1 subgoal (ID 104)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  path_inv := fun (H : T = U) (x : C) =>	              match H in (_ = n) return (T x = n x) with	              | 1%path => 1%path	              end : T = U -> T == U	  ============================	  T = U <~> T == U	";
+            data = "1 subgoal (ID 104)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  path_inv := fun (H : T = U) (x : C.(object)) =>	              match	                H in (_ = n)	                return (T.(components_of) x = n.(components_of) x)	              with	              | 1%path => 1%path	              end : T = U -> T.(components_of) == U.(components_of)	  ============================	  T = U <~> T.(components_of) == U.(components_of)	";
             responses[i]=data;
           
 
             i = 94;
-            data = "1 subgoal (ID 104)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  path_inv := fun (H : T = U) (x : C) =>	              match H in (_ = n) return (T x = n x) with	              | 1%path => 1%path	              end : T = U -> T == U	  ============================	  T = U <~> T == U	";
+            data = "1 subgoal (ID 104)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  path_inv := fun (H : T = U) (x : C.(object)) =>	              match	                H in (_ = n)	                return (T.(components_of) x = n.(components_of) x)	              with	              | 1%path => 1%path	              end : T = U -> T.(components_of) == U.(components_of)	  ============================	  T = U <~> T.(components_of) == U.(components_of)	";
             responses[i]=data;
           
 
             i = 95;
-            data = "1 focused subgoal	(shelved: 1) (ID 107)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  path_inv := fun (H : T = U) (x : C) =>	              match H in (_ = n) return (T x = n x) with	              | 1%path => 1%path	              end : T = U -> T == U	  ============================	  IsEquiv ?equiv_fun	";
+            data = "1 focused subgoal	(shelved: 1) (ID 107)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  path_inv := fun (H : T = U) (x : C.(object)) =>	              match	                H in (_ = n)	                return (T.(components_of) x = n.(components_of) x)	              with	              | 1%path => 1%path	              end : T = U -> T.(components_of) == U.(components_of)	  ============================	  IsEquiv ?equiv_fun	";
             responses[i]=data;
           
 
             i = 96;
-            data = "1 focused subgoal	(shelved: 4) (ID 112)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  path_inv := fun (H : T = U) (x : C) =>	              match H in (_ = n) return (T x = n x) with	              | 1%path => 1%path	              end : T = U -> T == U	  ============================	  forall x : T = U, ?eisretr (?equiv_fun x) = ap ?equiv_fun (?eissect x)	";
+            data = "1 focused subgoal	(shelved: 4) (ID 112)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  T, U : NaturalTransformation F G	  path_inv := fun (H : T = U) (x : C.(object)) =>	              match	                H in (_ = n)	                return (T.(components_of) x = n.(components_of) x)	              with	              | 1%path => 1%path	              end : T = U -> T.(components_of) == U.(components_of)	  ============================	  forall x : T = U, ?eisretr (?equiv_fun x) = ap ?equiv_fun (?eissect x)	";
             responses[i]=data;
           
 

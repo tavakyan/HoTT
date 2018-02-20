@@ -258,37 +258,37 @@
           
 
             i = 48;
-            data = "2 subgoals (ID 14)	  	  H : Univalence	  n : trunc_index	  A, B : n -Type	  ============================	  A = B <~> A = B		subgoal 2 (ID 189) is:	 IsEquiv (ap trunctype_type)	";
+            data = "2 subgoals (ID 14)	  	  H : Univalence	  n : trunc_index	  A, B : n -Type	  ============================	  A.(trunctype_type) = B.(trunctype_type) <~> A = B		subgoal 2 (ID 189) is:	 IsEquiv (ap trunctype_type)	";
             responses[i]=data;
           
 
             i = 49;
-            data = "1 subgoal (ID 14)	  	  H : Univalence	  n : trunc_index	  A, B : n -Type	  ============================	  A = B <~> A = B	2 subgoals (ID 216)	  	  H : Univalence	  n : trunc_index	  A, B : n -Type	  ============================	  A = B <~> _^-1 A = _^-1 B		subgoal 2 (ID 217) is:	 _^-1 A = _^-1 B <~> A = B	";
+            data = "1 subgoal (ID 14)	  	  H : Univalence	  n : trunc_index	  A, B : n -Type	  ============================	  A.(trunctype_type) = B.(trunctype_type) <~> A = B	2 subgoals (ID 216)	  	  H : Univalence	  n : trunc_index	  A, B : n -Type	  ============================	  A.(trunctype_type) = B.(trunctype_type) <~>	  issig_trunctype.(equiv_isequiv).(equiv_inv) A =	  issig_trunctype.(equiv_isequiv).(equiv_inv) B		subgoal 2 (ID 217) is:	 issig_trunctype.(equiv_isequiv).(equiv_inv) A =	 issig_trunctype.(equiv_isequiv).(equiv_inv) B <~> 	 A = B	";
             responses[i]=data;
           
 
             i = 50;
-            data = "1 subgoal (ID 216)	  	  H : Univalence	  n : trunc_index	  A, B : n -Type	  ============================	  A = B <~> _^-1 A = _^-1 B	1 subgoal (ID 218)	  	  H : Univalence	  n : trunc_index	  A, B : n -Type	  ============================	  A = B <~> (A; istrunc_trunctype_type A) = (B; istrunc_trunctype_type B)	";
+            data = "1 subgoal (ID 216)	  	  H : Univalence	  n : trunc_index	  A, B : n -Type	  ============================	  A.(trunctype_type) = B.(trunctype_type) <~>	  issig_trunctype.(equiv_isequiv).(equiv_inv) A =	  issig_trunctype.(equiv_isequiv).(equiv_inv) B	1 subgoal (ID 218)	  	  H : Univalence	  n : trunc_index	  A, B : n -Type	  ============================	  A.(trunctype_type) = B.(trunctype_type) <~>	  (A; istrunc_trunctype_type A) = (B; istrunc_trunctype_type B)	";
             responses[i]=data;
           
 
             i = 51;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 217)		subgoal 1 (ID 217) is:	 _^-1 A = _^-1 B <~> A = B	subgoal 2 (ID 189) is:	 IsEquiv (ap trunctype_type)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 217)		subgoal 1 (ID 217) is:	 issig_trunctype.(equiv_isequiv).(equiv_inv) A =	 issig_trunctype.(equiv_isequiv).(equiv_inv) B <~> 	 A = B	subgoal 2 (ID 189) is:	 IsEquiv (ap trunctype_type)	";
             responses[i]=data;
           
 
             i = 52;
-            data = "1 subgoal (ID 217)	  	  H : Univalence	  n : trunc_index	  A, B : n -Type	  ============================	  _^-1 A = _^-1 B <~> A = B	1 subgoal (ID 258)	  	  H : Univalence	  n : trunc_index	  A, B : n -Type	  ============================	  A = B <~> _^-1 A = _^-1 B	";
+            data = "1 subgoal (ID 217)	  	  H : Univalence	  n : trunc_index	  A, B : n -Type	  ============================	  issig_trunctype.(equiv_isequiv).(equiv_inv) A =	  issig_trunctype.(equiv_isequiv).(equiv_inv) B <~> 	  A = B	1 subgoal (ID 258)	  	  H : Univalence	  n : trunc_index	  A, B : n -Type	  ============================	  A = B <~>	  issig_trunctype.(equiv_isequiv).(equiv_inv) A =	  issig_trunctype.(equiv_isequiv).(equiv_inv) B	";
             responses[i]=data;
           
 
             i = 53;
-            data = "1 subgoal (ID 261)	  	  H : Univalence	  n : trunc_index	  A, B : n -Type	  ============================	  IsEquiv issig_trunctype^-1	";
+            data = "1 subgoal (ID 261)	  	  H : Univalence	  n : trunc_index	  A, B : n -Type	  ============================	  IsEquiv issig_trunctype.(equiv_fun)^-1	";
             responses[i]=data;
           
 
             i = 54;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 189)		subgoal 1 (ID 189) is:	 IsEquiv (ap trunctype_type)	1 subgoal (ID 189)	  	  H : Univalence	  n : trunc_index	  A, B : n -Type	  e := equiv_composeR'	         (equiv_path_sigma_hprop (A; istrunc_trunctype_type A)	            (B; istrunc_trunctype_type B))	         (symmetric_equiv (A = B) (_^-1 A = _^-1 B)	            (equiv_ap issig_trunctype^-1 A B)) : A = B <~> A = B	  ============================	  IsEquiv (ap trunctype_type)	1 subgoal (ID 279)	  	  H : Univalence	  n : trunc_index	  A, B : n -Type	  e := equiv_composeR'	         (equiv_path_sigma_hprop (A; istrunc_trunctype_type A)	            (B; istrunc_trunctype_type B))	         (symmetric_equiv (A = B) (_^-1 A = _^-1 B)	            (equiv_ap issig_trunctype^-1 A B)) : A = B <~> A = B	  ============================	  (e^-1)%equiv == ap trunctype_type	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 189)		subgoal 1 (ID 189) is:	 IsEquiv (ap trunctype_type)	1 subgoal (ID 189)	  	  H : Univalence	  n : trunc_index	  A, B : n -Type	  e := equiv_composeR'	         (equiv_path_sigma_hprop	            (A.(trunctype_type); A.(istrunc_trunctype_type))	            (B.(trunctype_type); B.(istrunc_trunctype_type)))	         (symmetric_equiv (A = B)	            (issig_trunctype.(equiv_isequiv).(equiv_inv) A =	             issig_trunctype.(equiv_isequiv).(equiv_inv) B)	            (equiv_ap issig_trunctype.(equiv_fun)^-1 A B))	   : A.(trunctype_type) = B.(trunctype_type) <~> A = B	  ============================	  IsEquiv (ap trunctype_type)	1 subgoal (ID 279)	  	  H : Univalence	  n : trunc_index	  A, B : n -Type	  e := equiv_composeR'	         (equiv_path_sigma_hprop	            (A.(trunctype_type); A.(istrunc_trunctype_type))	            (B.(trunctype_type); B.(istrunc_trunctype_type)))	         (symmetric_equiv (A = B)	            (issig_trunctype.(equiv_isequiv).(equiv_inv) A =	             issig_trunctype.(equiv_isequiv).(equiv_inv) B)	            (equiv_ap issig_trunctype.(equiv_fun)^-1 A B))	   : A.(trunctype_type) = B.(trunctype_type) <~> A = B	  ============================	  (e^-1)%equiv.(equiv_fun) == ap trunctype_type	";
             responses[i]=data;
           
 
@@ -303,27 +303,27 @@
           
 
             i = 57;
-            data = "1 subgoal (ID 17)	  	  H : Univalence	  n : trunc_index	  A, B : n -Type	  ============================	  (A <~> B) <~> A = B	";
+            data = "1 subgoal (ID 17)	  	  H : Univalence	  n : trunc_index	  A, B : n -Type	  ============================	  (A.(trunctype_type) <~> B.(trunctype_type)) <~> A = B	";
             responses[i]=data;
           
 
             i = 58;
-            data = "1 subgoal (ID 17)	  	  H : Univalence	  n : trunc_index	  A, B : n -Type	  ============================	  (A <~> B) <~> A = B	";
+            data = "1 subgoal (ID 17)	  	  H : Univalence	  n : trunc_index	  A, B : n -Type	  ============================	  (A.(trunctype_type) <~> B.(trunctype_type)) <~> A = B	";
             responses[i]=data;
           
 
             i = 59;
-            data = "2 subgoals (ID 18)	  	  H : Univalence	  n : trunc_index	  A, B : n -Type	  ============================	  (A <~> B) <~> A = B		subgoal 2 (ID 19) is:	 A = B <~> A = B	";
+            data = "2 subgoals (ID 18)	  	  H : Univalence	  n : trunc_index	  A, B : n -Type	  ============================	  (A.(trunctype_type) <~> B.(trunctype_type)) <~>	  A.(trunctype_type) = B.(trunctype_type)		subgoal 2 (ID 19) is:	 A.(trunctype_type) = B.(trunctype_type) <~> A = B	";
             responses[i]=data;
           
 
             i = 60;
-            data = "1 subgoal (ID 18)	  	  H : Univalence	  n : trunc_index	  A, B : n -Type	  ============================	  (A <~> B) <~> A = B	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 19)		subgoal 1 (ID 19) is:	 A = B <~> A = B	";
+            data = "1 subgoal (ID 18)	  	  H : Univalence	  n : trunc_index	  A, B : n -Type	  ============================	  (A.(trunctype_type) <~> B.(trunctype_type)) <~>	  A.(trunctype_type) = B.(trunctype_type)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 19)		subgoal 1 (ID 19) is:	 A.(trunctype_type) = B.(trunctype_type) <~> A = B	";
             responses[i]=data;
           
 
             i = 61;
-            data = "1 subgoal (ID 19)	  	  H : Univalence	  n : trunc_index	  A, B : n -Type	  ============================	  A = B <~> A = B	No more subgoals.	";
+            data = "1 subgoal (ID 19)	  	  H : Univalence	  n : trunc_index	  A, B : n -Type	  ============================	  A.(trunctype_type) = B.(trunctype_type) <~> A = B	No more subgoals.	";
             responses[i]=data;
           
 
@@ -383,17 +383,17 @@
           
 
             i = 73;
-            data = "1 subgoal (ID 53)	  	  H : Univalence	  n : trunc_index	  A, B : n -Type	  ============================	  IsTrunc n (A <~> B)	";
+            data = "1 subgoal (ID 53)	  	  H : Univalence	  n : trunc_index	  A, B : n -Type	  ============================	  IsTrunc n (A.(trunctype_type) <~> B.(trunctype_type))	";
             responses[i]=data;
           
 
             i = 74;
-            data = "2 subgoals (ID 65)	  	  H : Univalence	  A, B : -2 -Type	  ============================	  Contr (A <~> B)		subgoal 2 (ID 68) is:	 IsTrunc n'.+1 (A <~> B)	";
+            data = "2 subgoals (ID 65)	  	  H : Univalence	  A, B : -2 -Type	  ============================	  Contr (A.(trunctype_type) <~> B.(trunctype_type))		subgoal 2 (ID 68) is:	 IsTrunc n'.+1 (A.(trunctype_type) <~> B.(trunctype_type))	";
             responses[i]=data;
           
 
             i = 75;
-            data = "1 subgoal (ID 65)	  	  H : Univalence	  A, B : -2 -Type	  ============================	  Contr (A <~> B)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 68)		subgoal 1 (ID 68) is:	 IsTrunc n'.+1 (A <~> B)	1 subgoal (ID 68)	  	  H : Univalence	  n' : trunc_index	  A, B : (n'.+1) -Type	  ============================	  IsTrunc n'.+1 (A <~> B)	No more subgoals.	";
+            data = "1 subgoal (ID 65)	  	  H : Univalence	  A, B : -2 -Type	  ============================	  Contr (A.(trunctype_type) <~> B.(trunctype_type))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 68)		subgoal 1 (ID 68) is:	 IsTrunc n'.+1 (A.(trunctype_type) <~> B.(trunctype_type))	1 subgoal (ID 68)	  	  H : Univalence	  n' : trunc_index	  A, B : (n'.+1) -Type	  ============================	  IsTrunc n'.+1 (A.(trunctype_type) <~> B.(trunctype_type))	No more subgoals.	";
             responses[i]=data;
           
 
@@ -608,7 +608,7 @@
           
 
             i = 118;
-            data = "1 subgoal (ID 124)	  	  H : Univalence	  X, Y : Type	  IsHProp0 : IsHProp Y	  pf1, pf2 : X = Y	  ============================	  equiv_path X Y pf1 == equiv_path X Y pf2	";
+            data = "1 subgoal (ID 124)	  	  H : Univalence	  X, Y : Type	  IsHProp0 : IsHProp Y	  pf1, pf2 : X = Y	  ============================	  (equiv_path X Y pf1).(equiv_fun) == (equiv_path X Y pf2).(equiv_fun)	";
             responses[i]=data;
           
 

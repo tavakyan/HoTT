@@ -553,12 +553,12 @@
           
 
             i = 107;
-            data = "4 subgoals (ID 112)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  a = f (_^-1 a)		subgoal 2 (ID 113) is:	 iter_pos _^-1 n a = f (_^-1 (iter_pos _^-1 n a))	subgoal 3 (ID 114) is:	 f a = f a	subgoal 4 (ID 115) is:	 f (iter_pos f n a) = f (iter_pos f n a)	";
+            data = "4 subgoals (ID 112)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  a = f (H.(equiv_inv) a)		subgoal 2 (ID 113) is:	 iter_pos H.(equiv_inv) n a = f (H.(equiv_inv) (iter_pos H.(equiv_inv) n a))	subgoal 3 (ID 114) is:	 f a = f a	subgoal 4 (ID 115) is:	 f (iter_pos f n a) = f (iter_pos f n a)	";
             responses[i]=data;
           
 
             i = 108;
-            data = "1 subgoal (ID 112)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  a = f (_^-1 a)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	3 subgoals (ID 113)		subgoal 1 (ID 113) is:	 iter_pos _^-1 n a = f (_^-1 (iter_pos _^-1 n a))	subgoal 2 (ID 114) is:	 f a = f a	subgoal 3 (ID 115) is:	 f (iter_pos f n a) = f (iter_pos f n a)	";
+            data = "1 subgoal (ID 112)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  a = f (H.(equiv_inv) a)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	3 subgoals (ID 113)		subgoal 1 (ID 113) is:	 iter_pos H.(equiv_inv) n a = f (H.(equiv_inv) (iter_pos H.(equiv_inv) n a))	subgoal 2 (ID 114) is:	 f a = f a	subgoal 3 (ID 115) is:	 f (iter_pos f n a) = f (iter_pos f n a)	";
             responses[i]=data;
           
 
@@ -593,7 +593,7 @@
           
 
             i = 115;
-            data = "1 subgoal (ID 113)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  iter_pos _^-1 n a = f (_^-1 (iter_pos _^-1 n a))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 114)		subgoal 1 (ID 114) is:	 f a = f a	subgoal 2 (ID 115) is:	 f (iter_pos f n a) = f (iter_pos f n a)	";
+            data = "1 subgoal (ID 113)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  iter_pos H.(equiv_inv) n a = f (H.(equiv_inv) (iter_pos H.(equiv_inv) n a))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 114)		subgoal 1 (ID 114) is:	 f a = f a	subgoal 2 (ID 115) is:	 f (iter_pos f n a) = f (iter_pos f n a)	";
             responses[i]=data;
           
 
@@ -693,12 +693,12 @@
           
 
             i = 135;
-            data = "4 subgoals (ID 117)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  a = _^-1 (f a)		subgoal 2 (ID 118) is:	 iter_pos _^-1 n a = _^-1 (iter_pos _^-1 n (f a))	subgoal 3 (ID 119) is:	 f a = f a	subgoal 4 (ID 120) is:	 f (iter_pos f n a) = iter_pos f n (f a)	";
+            data = "4 subgoals (ID 117)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  a = H.(equiv_inv) (f a)		subgoal 2 (ID 118) is:	 iter_pos H.(equiv_inv) n a = H.(equiv_inv) (iter_pos H.(equiv_inv) n (f a))	subgoal 3 (ID 119) is:	 f a = f a	subgoal 4 (ID 120) is:	 f (iter_pos f n a) = iter_pos f n (f a)	";
             responses[i]=data;
           
 
             i = 136;
-            data = "1 subgoal (ID 117)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  a = _^-1 (f a)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	3 subgoals (ID 118)		subgoal 1 (ID 118) is:	 iter_pos _^-1 n a = _^-1 (iter_pos _^-1 n (f a))	subgoal 2 (ID 119) is:	 f a = f a	subgoal 3 (ID 120) is:	 f (iter_pos f n a) = iter_pos f n (f a)	";
+            data = "1 subgoal (ID 117)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  a = H.(equiv_inv) (f a)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	3 subgoals (ID 118)		subgoal 1 (ID 118) is:	 iter_pos H.(equiv_inv) n a = H.(equiv_inv) (iter_pos H.(equiv_inv) n (f a))	subgoal 2 (ID 119) is:	 f a = f a	subgoal 3 (ID 120) is:	 f (iter_pos f n a) = iter_pos f n (f a)	";
             responses[i]=data;
           
 
@@ -733,17 +733,17 @@
           
 
             i = 143;
-            data = "1 subgoal (ID 118)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  iter_pos _^-1 n a = _^-1 (iter_pos _^-1 n (f a))	1 subgoal (ID 149)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  iter_pos _^-1 n a = iter_pos _^-1 (succ_pos n) (f a)	";
+            data = "1 subgoal (ID 118)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  iter_pos H.(equiv_inv) n a = H.(equiv_inv) (iter_pos H.(equiv_inv) n (f a))	1 subgoal (ID 149)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  iter_pos H.(equiv_inv) n a = iter_pos H.(equiv_inv) (succ_pos n) (f a)	";
             responses[i]=data;
           
 
             i = 144;
-            data = "1 subgoal (ID 166)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  iter_pos _^-1 n a = iter_pos _^-1 n (_^-1 (f a))	";
+            data = "1 subgoal (ID 166)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  iter_pos H.(equiv_inv) n a = iter_pos H.(equiv_inv) n (H.(equiv_inv) (f a))	";
             responses[i]=data;
           
 
             i = 145;
-            data = "1 subgoal (ID 169)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  a = _^-1 (f a)	";
+            data = "1 subgoal (ID 169)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  a = H.(equiv_inv) (f a)	";
             responses[i]=data;
           
 
@@ -848,22 +848,22 @@
           
 
             i = 166;
-            data = "1 subgoal (ID 110)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Int	  a : A	  ============================	  iter_int (pred_int n) a = _^-1 (iter_int n a)	";
+            data = "1 subgoal (ID 110)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Int	  a : A	  ============================	  iter_int (pred_int n) a = H.(equiv_inv) (iter_int n a)	";
             responses[i]=data;
           
 
             i = 167;
-            data = "1 subgoal (ID 110)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Int	  a : A	  ============================	  iter_int (pred_int n) a = _^-1 (iter_int n a)	";
+            data = "1 subgoal (ID 110)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Int	  a : A	  ============================	  iter_int (pred_int n) a = H.(equiv_inv) (iter_int n a)	";
             responses[i]=data;
           
 
             i = 168;
-            data = "4 subgoals (ID 128)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  _^-1 (iter_pos _^-1 n a) = _^-1 (iter_pos _^-1 n a)		subgoal 2 (ID 129) is:	 _^-1 a = _^-1 a	subgoal 3 (ID 130) is:	 a = _^-1 (f a)	subgoal 4 (ID 131) is:	 iter_pos f n a = _^-1 (f (iter_pos f n a))	";
+            data = "4 subgoals (ID 128)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  H.(equiv_inv) (iter_pos H.(equiv_inv) n a) =	  H.(equiv_inv) (iter_pos H.(equiv_inv) n a)		subgoal 2 (ID 129) is:	 H.(equiv_inv) a = H.(equiv_inv) a	subgoal 3 (ID 130) is:	 a = H.(equiv_inv) (f a)	subgoal 4 (ID 131) is:	 iter_pos f n a = H.(equiv_inv) (f (iter_pos f n a))	";
             responses[i]=data;
           
 
             i = 169;
-            data = "1 subgoal (ID 128)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  _^-1 (iter_pos _^-1 n a) = _^-1 (iter_pos _^-1 n a)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	3 subgoals (ID 129)		subgoal 1 (ID 129) is:	 _^-1 a = _^-1 a	subgoal 2 (ID 130) is:	 a = _^-1 (f a)	subgoal 3 (ID 131) is:	 iter_pos f n a = _^-1 (f (iter_pos f n a))	";
+            data = "1 subgoal (ID 128)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  H.(equiv_inv) (iter_pos H.(equiv_inv) n a) =	  H.(equiv_inv) (iter_pos H.(equiv_inv) n a)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	3 subgoals (ID 129)		subgoal 1 (ID 129) is:	 H.(equiv_inv) a = H.(equiv_inv) a	subgoal 2 (ID 130) is:	 a = H.(equiv_inv) (f a)	subgoal 3 (ID 131) is:	 iter_pos f n a = H.(equiv_inv) (f (iter_pos f n a))	";
             responses[i]=data;
           
 
@@ -898,7 +898,7 @@
           
 
             i = 176;
-            data = "1 subgoal (ID 129)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  _^-1 a = _^-1 a	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 130)		subgoal 1 (ID 130) is:	 a = _^-1 (f a)	subgoal 2 (ID 131) is:	 iter_pos f n a = _^-1 (f (iter_pos f n a))	";
+            data = "1 subgoal (ID 129)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  H.(equiv_inv) a = H.(equiv_inv) a	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 130)		subgoal 1 (ID 130) is:	 a = H.(equiv_inv) (f a)	subgoal 2 (ID 131) is:	 iter_pos f n a = H.(equiv_inv) (f (iter_pos f n a))	";
             responses[i]=data;
           
 
@@ -923,7 +923,7 @@
           
 
             i = 181;
-            data = "1 subgoal (ID 130)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  a = _^-1 (f a)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 131)		subgoal 1 (ID 131) is:	 iter_pos f n a = _^-1 (f (iter_pos f n a))	";
+            data = "1 subgoal (ID 130)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  a = H.(equiv_inv) (f a)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 131)		subgoal 1 (ID 131) is:	 iter_pos f n a = H.(equiv_inv) (f (iter_pos f n a))	";
             responses[i]=data;
           
 
@@ -948,7 +948,7 @@
           
 
             i = 186;
-            data = "1 subgoal (ID 131)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  iter_pos f n a = _^-1 (f (iter_pos f n a))	No more subgoals.	";
+            data = "1 subgoal (ID 131)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  iter_pos f n a = H.(equiv_inv) (f (iter_pos f n a))	No more subgoals.	";
             responses[i]=data;
           
 
@@ -978,22 +978,22 @@
           
 
             i = 192;
-            data = "1 subgoal (ID 121)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Int	  a : A	  ============================	  iter_int (pred_int n) a = iter_int n (_^-1 a)	";
+            data = "1 subgoal (ID 121)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Int	  a : A	  ============================	  iter_int (pred_int n) a = iter_int n (H.(equiv_inv) a)	";
             responses[i]=data;
           
 
             i = 193;
-            data = "1 subgoal (ID 121)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Int	  a : A	  ============================	  iter_int (pred_int n) a = iter_int n (_^-1 a)	";
+            data = "1 subgoal (ID 121)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Int	  a : A	  ============================	  iter_int (pred_int n) a = iter_int n (H.(equiv_inv) a)	";
             responses[i]=data;
           
 
             i = 194;
-            data = "4 subgoals (ID 139)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  _^-1 (iter_pos _^-1 n a) = iter_pos _^-1 n (_^-1 a)		subgoal 2 (ID 140) is:	 _^-1 a = _^-1 a	subgoal 3 (ID 141) is:	 a = f (_^-1 a)	subgoal 4 (ID 142) is:	 iter_pos f n a = f (iter_pos f n (_^-1 a))	";
+            data = "4 subgoals (ID 139)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  H.(equiv_inv) (iter_pos H.(equiv_inv) n a) =	  iter_pos H.(equiv_inv) n (H.(equiv_inv) a)		subgoal 2 (ID 140) is:	 H.(equiv_inv) a = H.(equiv_inv) a	subgoal 3 (ID 141) is:	 a = f (H.(equiv_inv) a)	subgoal 4 (ID 142) is:	 iter_pos f n a = f (iter_pos f n (H.(equiv_inv) a))	";
             responses[i]=data;
           
 
             i = 195;
-            data = "1 subgoal (ID 139)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  _^-1 (iter_pos _^-1 n a) = iter_pos _^-1 n (_^-1 a)	2 focused subgoals	(shelved: 1) (ID 163)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  _^-1 (iter_pos _^-1 n a) = ?Goal2		subgoal 2 (ID 164) is:	 ?Goal2 = iter_pos _^-1 n (_^-1 a)	";
+            data = "1 subgoal (ID 139)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  H.(equiv_inv) (iter_pos H.(equiv_inv) n a) =	  iter_pos H.(equiv_inv) n (H.(equiv_inv) a)	2 focused subgoals	(shelved: 1) (ID 163)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  H.(equiv_inv) (iter_pos H.(equiv_inv) n a) = ?Goal2		subgoal 2 (ID 164) is:	 ?Goal2 = iter_pos H.(equiv_inv) n (H.(equiv_inv) a)	";
             responses[i]=data;
           
 
@@ -1028,17 +1028,17 @@
           
 
             i = 202;
-            data = "1 focused subgoal	(shelved: 1) (ID 163)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  _^-1 (iter_pos _^-1 n a) = ?Goal2	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	4 subgoals (ID 164)		subgoal 1 (ID 164) is:	 iter_pos _^-1 (succ_pos n) a = iter_pos _^-1 n (_^-1 a)	subgoal 2 (ID 140) is:	 _^-1 a = _^-1 a	subgoal 3 (ID 141) is:	 a = f (_^-1 a)	subgoal 4 (ID 142) is:	 iter_pos f n a = f (iter_pos f n (_^-1 a))	";
+            data = "1 focused subgoal	(shelved: 1) (ID 163)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  H.(equiv_inv) (iter_pos H.(equiv_inv) n a) = ?Goal2	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	4 subgoals (ID 164)		subgoal 1 (ID 164) is:	 iter_pos H.(equiv_inv) (succ_pos n) a =	 iter_pos H.(equiv_inv) n (H.(equiv_inv) a)	subgoal 2 (ID 140) is:	 H.(equiv_inv) a = H.(equiv_inv) a	subgoal 3 (ID 141) is:	 a = f (H.(equiv_inv) a)	subgoal 4 (ID 142) is:	 iter_pos f n a = f (iter_pos f n (H.(equiv_inv) a))	";
             responses[i]=data;
           
 
             i = 203;
-            data = "1 subgoal (ID 164)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  iter_pos _^-1 (succ_pos n) a = iter_pos _^-1 n (_^-1 a)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	3 subgoals (ID 140)		subgoal 1 (ID 140) is:	 _^-1 a = _^-1 a	subgoal 2 (ID 141) is:	 a = f (_^-1 a)	subgoal 3 (ID 142) is:	 iter_pos f n a = f (iter_pos f n (_^-1 a))	";
+            data = "1 subgoal (ID 164)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  iter_pos H.(equiv_inv) (succ_pos n) a =	  iter_pos H.(equiv_inv) n (H.(equiv_inv) a)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	3 subgoals (ID 140)		subgoal 1 (ID 140) is:	 H.(equiv_inv) a = H.(equiv_inv) a	subgoal 2 (ID 141) is:	 a = f (H.(equiv_inv) a)	subgoal 3 (ID 142) is:	 iter_pos f n a = f (iter_pos f n (H.(equiv_inv) a))	";
             responses[i]=data;
           
 
             i = 204;
-            data = "1 subgoal (ID 140)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  _^-1 a = _^-1 a	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 141)		subgoal 1 (ID 141) is:	 a = f (_^-1 a)	subgoal 2 (ID 142) is:	 iter_pos f n a = f (iter_pos f n (_^-1 a))	";
+            data = "1 subgoal (ID 140)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  H.(equiv_inv) a = H.(equiv_inv) a	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 141)		subgoal 1 (ID 141) is:	 a = f (H.(equiv_inv) a)	subgoal 2 (ID 142) is:	 iter_pos f n a = f (iter_pos f n (H.(equiv_inv) a))	";
             responses[i]=data;
           
 
@@ -1063,7 +1063,7 @@
           
 
             i = 209;
-            data = "1 subgoal (ID 141)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  a = f (_^-1 a)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 142)		subgoal 1 (ID 142) is:	 iter_pos f n a = f (iter_pos f n (_^-1 a))	";
+            data = "1 subgoal (ID 141)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  a = f (H.(equiv_inv) a)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 142)		subgoal 1 (ID 142) is:	 iter_pos f n a = f (iter_pos f n (H.(equiv_inv) a))	";
             responses[i]=data;
           
 
@@ -1088,17 +1088,17 @@
           
 
             i = 214;
-            data = "1 subgoal (ID 142)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  iter_pos f n a = f (iter_pos f n (_^-1 a))	1 subgoal (ID 210)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  iter_pos f n a = iter_pos f (succ_pos n) (_^-1 a)	";
+            data = "1 subgoal (ID 142)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  iter_pos f n a = f (iter_pos f n (H.(equiv_inv) a))	1 subgoal (ID 210)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  iter_pos f n a = iter_pos f (succ_pos n) (H.(equiv_inv) a)	";
             responses[i]=data;
           
 
             i = 215;
-            data = "1 subgoal (ID 227)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  iter_pos f n a = iter_pos f n (f (_^-1 a))	";
+            data = "1 subgoal (ID 227)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  iter_pos f n a = iter_pos f n (f (H.(equiv_inv) a))	";
             responses[i]=data;
           
 
             i = 216;
-            data = "1 subgoal (ID 230)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  a = f (_^-1 a)	";
+            data = "1 subgoal (ID 230)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  a = f (H.(equiv_inv) a)	";
             responses[i]=data;
           
 
@@ -1253,17 +1253,17 @@
           
 
             i = 247;
-            data = "1 subgoal (ID 137)	  	  H : Univalence	  A : Type	  p : A = A	  z : Int	  a : A	  ============================	  (equiv_path A A (loopexp p z)) a = iter_int (equiv_path A A p) z a	";
+            data = "1 subgoal (ID 137)	  	  H : Univalence	  A : Type	  p : A = A	  z : Int	  a : A	  ============================	  (equiv_path A A (loopexp p z)).(equiv_fun) a =	  iter_int (equiv_path A A p).(equiv_fun) z a	";
             responses[i]=data;
           
 
             i = 248;
-            data = "1 subgoal (ID 137)	  	  H : Univalence	  A : Type	  p : A = A	  z : Int	  a : A	  ============================	  (equiv_path A A (loopexp p z)) a = iter_int (equiv_path A A p) z a	";
+            data = "1 subgoal (ID 137)	  	  H : Univalence	  A : Type	  p : A = A	  z : Int	  a : A	  ============================	  (equiv_path A A (loopexp p z)).(equiv_fun) a =	  iter_int (equiv_path A A p).(equiv_fun) z a	";
             responses[i]=data;
           
 
             i = 249;
-            data = "2 subgoals (ID 146)	  	  H : Univalence	  A : Type	  p : A = A	  n : Pos	  a : A	  ============================	  (equiv_path A A (loopexp p (neg n))) a =	  iter_int (equiv_path A A p) (neg n) a		subgoal 2 (ID 148) is:	 (equiv_path A A (loopexp p (pos n))) a =	 iter_int (equiv_path A A p) (pos n) a	";
+            data = "2 subgoals (ID 146)	  	  H : Univalence	  A : Type	  p : A = A	  n : Pos	  a : A	  ============================	  (equiv_path A A (loopexp p (neg n))).(equiv_fun) a =	  iter_int (equiv_path A A p).(equiv_fun) (neg n) a		subgoal 2 (ID 148) is:	 (equiv_path A A (loopexp p (pos n))).(equiv_fun) a =	 iter_int (equiv_path A A p).(equiv_fun) (pos n) a	";
             responses[i]=data;
           
 
@@ -1283,32 +1283,32 @@
           
 
             i = 253;
-            data = "1 subgoal (ID 169)	  	  H : Univalence	  A : Type	  f : A <~> A	  z : Int	  a : A	  ============================	  transport idmap (loopexp (path_universe f) z) a = iter_int f z a	";
+            data = "1 subgoal (ID 169)	  	  H : Univalence	  A : Type	  f : A <~> A	  z : Int	  a : A	  ============================	  transport idmap (loopexp (path_universe f.(equiv_fun)) z) a =	  iter_int f.(equiv_fun) z a	";
             responses[i]=data;
           
 
             i = 254;
-            data = "1 subgoal (ID 169)	  	  H : Univalence	  A : Type	  f : A <~> A	  z : Int	  a : A	  ============================	  transport idmap (loopexp (path_universe f) z) a = iter_int f z a	";
+            data = "1 subgoal (ID 169)	  	  H : Univalence	  A : Type	  f : A <~> A	  z : Int	  a : A	  ============================	  transport idmap (loopexp (path_universe f.(equiv_fun)) z) a =	  iter_int f.(equiv_fun) z a	";
             responses[i]=data;
           
 
             i = 255;
-            data = "1 subgoal (ID 171)	  	  H : Univalence	  A : Type	  z : Int	  a : A	  ============================	  forall f : A <~> A,	  transport idmap (loopexp (path_universe f) z) a = iter_int f z a	";
+            data = "1 subgoal (ID 171)	  	  H : Univalence	  A : Type	  z : Int	  a : A	  ============================	  forall f : A <~> A,	  transport idmap (loopexp (path_universe f.(equiv_fun)) z) a =	  iter_int f.(equiv_fun) z a	";
             responses[i]=data;
           
 
             i = 256;
-            data = "1 subgoal (ID 183)	  	  H : Univalence	  A : Type	  z : Int	  a : A	  p : A = A	  ============================	  transport idmap (loopexp (path_universe (equiv_path A A p)) z) a =	  iter_int (equiv_path A A p) z a	";
+            data = "1 subgoal (ID 183)	  	  H : Univalence	  A : Type	  z : Int	  a : A	  p : A = A	  ============================	  transport idmap (loopexp (path_universe (equiv_path A A p).(equiv_fun)) z)	    a = iter_int (equiv_path A A p).(equiv_fun) z a	";
             responses[i]=data;
           
 
             i = 257;
-            data = "1 subgoal (ID 192)	  	  H : Univalence	  A : Type	  z : Int	  a : A	  p : A = A	  ============================	  transport idmap (loopexp (path_universe (equiv_path A A p)) z) a =	  (equiv_path A A (loopexp p z)) a	";
+            data = "1 subgoal (ID 192)	  	  H : Univalence	  A : Type	  z : Int	  a : A	  p : A = A	  ============================	  transport idmap (loopexp (path_universe (equiv_path A A p).(equiv_fun)) z)	    a = (equiv_path A A (loopexp p z)).(equiv_fun) a	";
             responses[i]=data;
           
 
             i = 258;
-            data = "1 subgoal (ID 204)	  	  H : Univalence	  A : Type	  z : Int	  a : A	  p : A = A	  ============================	  path_universe (equiv_path A A p) = p	";
+            data = "1 subgoal (ID 204)	  	  H : Univalence	  A : Type	  z : Int	  a : A	  p : A = A	  ============================	  path_universe (equiv_path A A p).(equiv_fun) = p	";
             responses[i]=data;
           
 
