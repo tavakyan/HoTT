@@ -533,12 +533,12 @@
           
 
             i = 103;
-            data = "1 subgoal (ID 189)	  	  A : Type	  B : Type	  a : A	  ============================	  Decidable {x : A & inl x = inl a}	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 190)		subgoal 1 (ID 190) is:	 Decidable {x : A & inl x = inr b}	";
+            data = "1 subgoal (ID 189)	  	  A : Type	  B : Type	  a : A	  ============================	  Decidable {x : A & inl x = inl a}	";
             responses[i]=data;
           
 
             i = 104;
-            data = "1 subgoal (ID 190)	  	  A : Type	  B : Type	  b : B	  ============================	  Decidable {x : A & inl x = inr b}	No more subgoals.	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 190)		subgoal 1 (ID 190) is:	 Decidable {x : A & inl x = inr b}	1 subgoal (ID 190)	  	  A : Type	  B : Type	  b : B	  ============================	  Decidable {x : A & inl x = inr b}	No more subgoals.	";
             responses[i]=data;
           
 
@@ -708,12 +708,12 @@
           
 
             i = 138;
-            data = "1 subgoal (ID 292)	  	  H : Funext	  A : Type	  P : A -> Type	  H0 : forall a : A, IsHProp (P a)	  H1 : forall a : A, Decidable (P a)	  f := fun x : A =>	       let s := dec (P x) in	       match s with	       | inl p => inl (x; p)	       | inr np => inr (x; np)	       end : A -> {x : A & P x} + {x : A & ~ P x}	  ============================	  Sect	    (fun z : {x : A & P x} + {x : A & ~ P x} =>	     match z with	     | inl y | inr y => y.(proj1_sig)	     end) f	4 subgoals (ID 321)	  	  H : Funext	  A : Type	  P : A -> Type	  H0 : forall a : A, IsHProp (P a)	  H1 : forall a : A, Decidable (P a)	  f := fun x : A =>	       let s := dec (P x) in	       match s with	       | inl p => inl (x; p)	       | inr np => inr (x; np)	       end : A -> {x : A & P x} + {x : A & ~ P x}	  x : A	  p, p' : P x	  ============================	  inl (x; p') = inl (x; p)		subgoal 2 (ID 322) is:	 inr (x; np') = inl (x; p)	subgoal 3 (ID 332) is:	 inl (x; p') = inr (x; np)	subgoal 4 (ID 333) is:	 inr (x; np') = inr (x; np)	";
+            data = "1 subgoal (ID 292)	  	  H : Funext	  A : Type	  P : A -> Type	  H0 : forall a : A, IsHProp (P a)	  H1 : forall a : A, Decidable (P a)	  f := fun x : A =>	       let s := dec (P x) in	       match s with	       | inl p => inl (x; p)	       | inr np => inr (x; np)	       end : A -> {x : A & P x} + {x : A & ~ P x}	  ============================	  Sect	    (fun z : {x : A & P x} + {x : A & ~ P x} =>	     match z with	     | inl y | inr y => y.(proj1_sig)	     end) f	";
             responses[i]=data;
           
 
             i = 139;
-            data = "1 subgoal (ID 321)	  	  H : Funext	  A : Type	  P : A -> Type	  H0 : forall a : A, IsHProp (P a)	  H1 : forall a : A, Decidable (P a)	  f := fun x : A =>	       let s := dec (P x) in	       match s with	       | inl p => inl (x; p)	       | inr np => inr (x; np)	       end : A -> {x : A & P x} + {x : A & ~ P x}	  x : A	  p, p' : P x	  ============================	  inl (x; p') = inl (x; p)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	4 subgoals (ID 322)		subgoal 1 (ID 322) is:	 inr (x; np') = inl (x; p)	subgoal 2 (ID 332) is:	 inl (x; p') = inr (x; np)	subgoal 3 (ID 333) is:	 inr (x; np') = inr (x; np)	subgoal 4 (ID 293) is:	 Sect f	   (fun z : {x : A & P x} + {x : A & ~ P x} =>	    match z with	    | inl y | inr y => y.(proj1_sig)	    end)	";
+            data = "4 subgoals (ID 321)	  	  H : Funext	  A : Type	  P : A -> Type	  H0 : forall a : A, IsHProp (P a)	  H1 : forall a : A, Decidable (P a)	  f := fun x : A =>	       let s := dec (P x) in	       match s with	       | inl p => inl (x; p)	       | inr np => inr (x; np)	       end : A -> {x : A & P x} + {x : A & ~ P x}	  x : A	  p, p' : P x	  ============================	  inl (x; p') = inl (x; p)		subgoal 2 (ID 322) is:	 inr (x; np') = inl (x; p)	subgoal 3 (ID 332) is:	 inl (x; p') = inr (x; np)	subgoal 4 (ID 333) is:	 inr (x; np') = inr (x; np)	1 subgoal (ID 321)	  	  H : Funext	  A : Type	  P : A -> Type	  H0 : forall a : A, IsHProp (P a)	  H1 : forall a : A, Decidable (P a)	  f := fun x : A =>	       let s := dec (P x) in	       match s with	       | inl p => inl (x; p)	       | inr np => inr (x; np)	       end : A -> {x : A & P x} + {x : A & ~ P x}	  x : A	  p, p' : P x	  ============================	  inl (x; p') = inl (x; p)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	4 subgoals (ID 322)		subgoal 1 (ID 322) is:	 inr (x; np') = inl (x; p)	subgoal 2 (ID 332) is:	 inl (x; p') = inr (x; np)	subgoal 3 (ID 333) is:	 inr (x; np') = inr (x; np)	subgoal 4 (ID 293) is:	 Sect f	   (fun z : {x : A & P x} + {x : A & ~ P x} =>	    match z with	    | inl y | inr y => y.(proj1_sig)	    end)	";
             responses[i]=data;
           
 

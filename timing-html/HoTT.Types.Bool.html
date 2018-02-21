@@ -175,8 +175,8 @@ Infix "-&gt;" := implb : bool_scope.</pre>
 </div>
 <div class="code" title="File: Bool.v
 Line: 31
-Time: 0.001s">
-<div class="time" style="width: 5%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition implb_true {b} : implb b true = true
@@ -199,8 +199,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Bool.v
 Line: 37
-Time: 0.006s">
-<div class="time" style="width: 30%"></div>
+Time: 0.004s">
+<div class="time" style="width: 20%"></div>
 <pre>
   destruct a; simpl; split; trivial using idpath with nocore;
   destruct b; simpl; auto using idpath with nocore.</pre>
@@ -250,8 +250,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Bool.v
 Line: 51
-Time: 0.001s">
-<div class="time" style="width: 5%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
   Definition true_ne_false : ~true = false
@@ -259,8 +259,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Bool.v
 Line: 54
-Time: 0.003s">
-<div class="time" style="width: 15%"></div>
+Time: 0.002s">
+<div class="time" style="width: 10%"></div>
 <pre>
 
   Global Instance decidable_paths_bool : DecidablePaths Bool
@@ -317,8 +317,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Bool.v
 Line: 70
-Time: 0.001s">
-<div class="time" style="width: 5%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition not_fixed_negb (b : Bool) : negb b &lt;&gt; b
   := match b return negb b &lt;&gt; b with
        | true =&gt; false_ne_true
@@ -408,8 +408,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Bool.v
 Line: 83
-Time: 0.001s">
-<div class="time" style="width: 5%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -492,8 +492,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Bool.v
 Line: 106
-Time: 0.001s">
-<div class="time" style="width: 5%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 End BoolForall.</pre>
 </div>
@@ -565,8 +565,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Bool.v
 Line: 125
-Time: 0.001s">
-<div class="time" style="width: 5%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Lemma eval_bool_isequiv (f : Bool -&gt; Bool) `{IsEquiv Bool Bool f}
 : f false = negb (f true).</pre>
 </div>
@@ -703,8 +703,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Bool.v
 Line: 143
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 5%"></div>
 <pre>
 
   Definition aut_bool_canonical (e : Bool &lt;~&gt; Bool)
@@ -801,8 +801,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Bool.v
 Line: 157
-Time: 0.001s">
-<div class="time" style="width: 5%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       apply path_equiv, path_forall.</pre>
 </div>
@@ -822,14 +822,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Bool.v
 Line: 160
-Time: 0.001s">
-<div class="time" style="width: 5%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> intros []; reflexivity.</pre>
 </div>
 <div class="code" title="File: Bool.v
 Line: 160
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 5%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -865,8 +865,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Bool.v
 Line: 167
-Time: 0.001s">
-<div class="time" style="width: 5%"></div>
+Time: 0.002s">
+<div class="time" style="width: 10%"></div>
 <pre> equiv_intro equiv_bool_aut_bool e.</pre>
 </div>
 <div class="code" title="File: Bool.v
@@ -904,8 +904,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Bool.v
 Line: 170
-Time: 0.001s">
-<div class="time" style="width: 5%"></div>
+Time: 0.002s">
+<div class="time" style="width: 10%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -984,8 +984,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Bool.v
 Line: 184
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 5%"></div>
 <pre>
     refine (ap e1 (aut_bool_canonical e2 b) @ _).</pre>
 </div>
@@ -1019,8 +1019,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Bool.v
 Line: 189
-Time: 0.007s">
-<div class="time" style="width: 35%"></div>
+Time: 0.008s">
+<div class="time" style="width: 40%"></div>
 <pre>
     destruct (e1 true), (e2 true), b; reflexivity.</pre>
 </div>
