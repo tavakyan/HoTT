@@ -40,20 +40,20 @@ Time: 0s">
 <div class="code" title="File: Connectedness.v
 Line: 3
 Time: 0.046s">
-<div class="time" style="width: 2.6589595375723%"></div>
+<div class="time" style="width: 2.8255528255528%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 3
-Time: 0.014s">
-<div class="time" style="width: 0.80924855491329%"></div>
+Time: 0.015s">
+<div class="time" style="width: 0.92137592137592%"></div>
 <pre>
 Require Import TruncType UnivalenceImpliesFunext HProp EquivalenceVarieties Extensions Factorization.</pre>
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 4
-Time: 0.012s">
-<div class="time" style="width: 0.69364161849711%"></div>
+Time: 0.013s">
+<div class="time" style="width: 0.7985257985258%"></div>
 <pre>
 Require Export Modality.</pre>
 </div>
@@ -65,14 +65,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 5
-Time: 0.179s">
-<div class="time" style="width: 10.346820809249%"></div>
+Time: 0.181s">
+<div class="time" style="width: 11.117936117936%"></div>
 <pre>Require Import HIT.Truncations.</pre>
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 5
 Time: 0.004s">
-<div class="time" style="width: 0.23121387283237%"></div>
+<div class="time" style="width: 0.24570024570025%"></div>
 <pre>
 Import TrM.</pre>
 </div>
@@ -144,7 +144,7 @@ This lemma is most useful via corollaries like the wedge-inclusion, the wiggly w
 <div class="code" title="File: Connectedness.v
 Line: 34
 Time: 0.001s">
-<div class="time" style="width: 0.057803468208092%"></div>
+<div class="time" style="width: 0.061425061425061%"></div>
 <pre>Lemma istrunc_extension_along_conn {m n : trunc_index}
   {A B : Type} (f : A -&gt; B) `{IsConnMap n _ _ f}
   (P : B -&gt; Type) {HP : forall b:B, IsTrunc (m -2+ n) (P b)}
@@ -168,7 +168,7 @@ Time: 0s">
 <div class="code" title="File: Connectedness.v
 Line: 40
 Time: 0.001s">
-<div class="time" style="width: 0.057803468208092%"></div>
+<div class="time" style="width: 0.061425061425061%"></div>
 <pre> induction m as [ | m' IH]; intros P HP d; simpl in *.</pre>
 </div>
 <div class="code" title="File: Connectedness.v
@@ -181,8 +181,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 42
-Time: 0.002s">
-<div class="time" style="width: 0.11560693641618%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.24570024570025%"></div>
 <pre>exists (extension_conn_map_elim n f P d).</pre>
 </div>
 <div class="code" title="File: Connectedness.v
@@ -195,7 +195,7 @@ Time: 0s">
 <div class="code" title="File: Connectedness.v
 Line: 43
 Time: 0.001s">
-<div class="time" style="width: 0.057803468208092%"></div>
+<div class="time" style="width: 0.061425061425061%"></div>
 <pre> apply (allpath_extension_conn_map n); assumption.</pre>
 </div>
 <div class="code" title="File: Connectedness.v
@@ -214,8 +214,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 45
-Time: 0.131s">
-<div class="time" style="width: 7.5722543352601%"></div>
+Time: 0.125s">
+<div class="time" style="width: 7.6781326781327%"></div>
 <pre> refine (trunc_equiv _ (path_extension e e')).</pre>
 </div>
 <div class="code" title="File: Connectedness.v
@@ -229,7 +229,7 @@ Time: 0s">
 <div class="code" title="File: Connectedness.v
 Line: 47
 Time: 0.002s">
-<div class="time" style="width: 0.11560693641618%"></div>
+<div class="time" style="width: 0.12285012285012%"></div>
 <pre>Defined.</pre>
 </div>
 <div class="code" title="File: Connectedness.v
@@ -281,14 +281,14 @@ Time: 0s">
 <div class="code" title="File: Connectedness.v
 Line: 57
 Time: 0.009s">
-<div class="time" style="width: 0.52023121387283%"></div>
+<div class="time" style="width: 0.55282555282555%"></div>
 <pre>
   refine (conn_map_elim n (unit_name a0) _ (fun _ =&gt; idpath)).</pre>
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 58
 Time: 0.001s">
-<div class="time" style="width: 0.057803468208092%"></div>
+<div class="time" style="width: 0.061425061425061%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -324,28 +324,28 @@ Time: 0s">
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 65
-Time: 0.001s">
-<div class="time" style="width: 0.057803468208092%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.12285012285012%"></div>
 <pre> set (PP := fun a =&gt; BuildTruncType n (P a)).</pre>
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 65
 Time: 0.002s">
-<div class="time" style="width: 0.11560693641618%"></div>
+<div class="time" style="width: 0.12285012285012%"></div>
 <pre>
   assert (QQ := isconnected_elim n.+1 (TruncType n) PP).</pre>
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 66
 Time: 0.001s">
-<div class="time" style="width: 0.057803468208092%"></div>
+<div class="time" style="width: 0.061425061425061%"></div>
 <pre>
   destruct QQ as [[Q0 HQ] e].</pre>
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 67
 Time: 0.001s">
-<div class="time" style="width: 0.057803468208092%"></div>
+<div class="time" style="width: 0.061425061425061%"></div>
 <pre>
   assert (e' := fun a =&gt; ap trunctype_type (e a)); simpl in e'.</pre>
 </div>
@@ -371,7 +371,7 @@ Time: 0s">
 <div class="code" title="File: Connectedness.v
 Line: 69
 Time: 0.001s">
-<div class="time" style="width: 0.057803468208092%"></div>
+<div class="time" style="width: 0.061425061425061%"></div>
 <pre>
   exists (fun a =&gt; (transport idmap (e' a0 @ (e' a)^) d0)).</pre>
 </div>
@@ -391,14 +391,14 @@ Time: 0s">
 <div class="code" title="File: Connectedness.v
 Line: 71
 Time: 0.001s">
-<div class="time" style="width: 0.057803468208092%"></div>
+<div class="time" style="width: 0.061425061425061%"></div>
 <pre>
   apply ap10, ap, concat_pV.</pre>
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 72
 Time: 0.002s">
-<div class="time" style="width: 0.11560693641618%"></div>
+<div class="time" style="width: 0.12285012285012%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -423,7 +423,7 @@ Time: 0s">
 <div class="code" title="File: Connectedness.v
 Line: 78
 Time: 0.003s">
-<div class="time" style="width: 0.17341040462428%"></div>
+<div class="time" style="width: 0.18427518427518%"></div>
 <pre>End Extensions.</pre>
 </div>
 <div class="code" title="File: Connectedness.v
@@ -459,8 +459,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 85
-Time: 0.009s">
-<div class="time" style="width: 0.52023121387283%"></div>
+Time: 0.008s">
+<div class="time" style="width: 0.49140049140049%"></div>
 <pre>
   refine (isconnected_elim n.+1 C f).</pre>
 </div>
@@ -560,15 +560,15 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 101
-Time: 0.098s">
-<div class="time" style="width: 5.6647398843931%"></div>
+Time: 0.096s">
+<div class="time" style="width: 5.8968058968059%"></div>
 <pre>
   refine (contr_equiv' _ (equiv_path_Tr x y)^-1).</pre>
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 102
 Time: 0.001s">
-<div class="time" style="width: 0.057803468208092%"></div>
+<div class="time" style="width: 0.061425061425061%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -599,7 +599,7 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 110
-Time: 1.73s">
+Time: 1.628s">
 <div class="time" style="width: 100%"></div>
 <pre>
   refine ((equiv_path_Tr x y)^-1 (path_contr (tr x) (tr y))).</pre>
@@ -631,8 +631,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 118
-Time: 0.069s">
-<div class="time" style="width: 3.9884393063584%"></div>
+Time: 0.05s">
+<div class="time" style="width: 3.0712530712531%"></div>
 <pre>
   strip_truncations.</pre>
 </div>
@@ -658,15 +658,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 121
-Time: 0.135s">
-<div class="time" style="width: 7.8034682080925%"></div>
+Time: 0.1s">
+<div class="time" style="width: 6.1425061425061%"></div>
 <pre>
     strip_truncations.</pre>
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 122
-Time: 0.001s">
-<div class="time" style="width: 0.057803468208092%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     refine (equiv_path_Tr z w (p z w)).</pre>
 </div>
@@ -685,8 +685,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 124
-Time: 0.002s">
-<div class="time" style="width: 0.11560693641618%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.061425061425061%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -742,15 +742,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 133
-Time: 0.002s">
-<div class="time" style="width: 0.11560693641618%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.061425061425061%"></div>
 <pre>
     assert (z := center (merely X) : merely X); generalize z.</pre>
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 134
-Time: 0.08s">
-<div class="time" style="width: 4.6242774566474%"></div>
+Time: 0.062s">
+<div class="time" style="width: 3.8083538083538%"></div>
 <pre>
     refine (Trunc_rec _).</pre>
 </div>
@@ -763,8 +763,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 136
-Time: 0.041s">
-<div class="time" style="width: 2.3699421965318%"></div>
+Time: 0.032s">
+<div class="time" style="width: 1.965601965602%"></div>
 <pre> apply ishprop_sum; try exact _.</pre>
 </div>
 <div class="code" title="File: Connectedness.v
@@ -776,8 +776,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 137
-Time: 0.149s">
-<div class="time" style="width: 8.6127167630058%"></div>
+Time: 0.109s">
+<div class="time" style="width: 6.6953316953317%"></div>
 <pre> strip_truncations.</pre>
 </div>
 <div class="code" title="File: Connectedness.v
@@ -810,14 +810,14 @@ Time: 0s">
 <div class="code" title="File: Connectedness.v
 Line: 140
 Time: 0.001s">
-<div class="time" style="width: 0.057803468208092%"></div>
+<div class="time" style="width: 0.061425061425061%"></div>
 <pre>
       destruct y as [a|b]; [ left | right ]; intros x'.</pre>
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 141
-Time: 0.361s">
-<div class="time" style="width: 20.867052023121%"></div>
+Time: 0.27s">
+<div class="time" style="width: 16.584766584767%"></div>
 <pre>
       all:assert (q := merely_path_is0connected X x x');
         strip_truncations.</pre>
@@ -825,14 +825,14 @@ Time: 0.361s">
 <div class="code" title="File: Connectedness.v
 Line: 143
 Time: 0.001s">
-<div class="time" style="width: 0.057803468208092%"></div>
+<div class="time" style="width: 0.061425061425061%"></div>
 <pre>
       all:refine (transport _ (ap f q) _).</pre>
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 144
-Time: 0.001s">
-<div class="time" style="width: 0.057803468208092%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       all:exact (transport _ p^ tt).</pre>
 </div>
@@ -852,21 +852,21 @@ Time: 0s">
 <div class="code" title="File: Connectedness.v
 Line: 146
 Time: 0.001s">
-<div class="time" style="width: 0.057803468208092%"></div>
+<div class="time" style="width: 0.061425061425061%"></div>
 <pre>
     apply (Trunc_rec (n := -1) nx).</pre>
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 147
-Time: 0.002s">
-<div class="time" style="width: 0.11560693641618%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.061425061425061%"></div>
 <pre>
     exact (center (merely X)).</pre>
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 148
-Time: 0.004s">
-<div class="time" style="width: 0.23121387283237%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.18427518427518%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -895,7 +895,7 @@ Once again, we believe that the type of the conclusion is an hprop (though we do
 <div class="code" title="File: Connectedness.v
 Line: 158
 Time: 0.001s">
-<div class="time" style="width: 0.057803468208092%"></div>
+<div class="time" style="width: 0.061425061425061%"></div>
 <pre>Context `{Univalence}
   {m n : trunc_index}
   {A : Type} (a0 : A) `{IsConnected m.+1 A}
@@ -907,8 +907,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 165
-Time: 0.002s">
-<div class="time" style="width: 0.11560693641618%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.061425061425061%"></div>
 <pre>
 
 Corollary isconn_wedge_incl
@@ -927,7 +927,7 @@ Proof.</pre>
 <div class="code" title="File: Connectedness.v
 Line: 172
 Time: 0.001s">
-<div class="time" style="width: 0.057803468208092%"></div>
+<div class="time" style="width: 0.061425061425061%"></div>
 <pre>
   assert (goal_as_extension :
     ExtensionAlong (unit_name a0)
@@ -936,8 +936,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 176
-Time: 0.001s">
-<div class="time" style="width: 0.057803468208092%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     apply (extension_conn_map_elim m).</pre>
 </div>
@@ -957,8 +957,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 179
-Time: 0.001s">
-<div class="time" style="width: 0.057803468208092%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     apply (istrunc_extension_along_conn (n := n)).</pre>
 </div>
@@ -978,8 +978,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 182
-Time: 0.002s">
-<div class="time" style="width: 0.11560693641618%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.061425061425061%"></div>
 <pre>
   destruct goal_as_extension as [f_eb name_ea_eab].</pre>
 </div>
@@ -993,21 +993,21 @@ Time: 0s">
 <div class="code" title="File: Connectedness.v
 Line: 184
 Time: 0.001s">
-<div class="time" style="width: 0.057803468208092%"></div>
+<div class="time" style="width: 0.061425061425061%"></div>
 <pre>
   exists (fun a =&gt; pr1 (f_eb a)).</pre>
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 185
-Time: 0.002s">
-<div class="time" style="width: 0.11560693641618%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.061425061425061%"></div>
 <pre>
   exists (fun b =&gt; apD10 (ea_eab ..1) b).</pre>
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 186
 Time: 0.001s">
-<div class="time" style="width: 0.057803468208092%"></div>
+<div class="time" style="width: 0.061425061425061%"></div>
 <pre>
   exists (fun a =&gt; pr2 (f_eb a) tt).</pre>
 </div>
@@ -1021,28 +1021,28 @@ Time: 0s">
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 189
-Time: 0.001s">
-<div class="time" style="width: 0.057803468208092%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>apply moveL_Mp.</pre>
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 189
 Time: 0.004s">
-<div class="time" style="width: 0.23121387283237%"></div>
+<div class="time" style="width: 0.24570024570025%"></div>
 <pre>
   apply (concatR (apD10 (ea_eab ..2) tt)).</pre>
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 190
-Time: 0.003s">
-<div class="time" style="width: 0.17341040462428%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.12285012285012%"></div>
 <pre>
   set (ea := ea_eab ..1).</pre>
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 191
-Time: 0.001s">
-<div class="time" style="width: 0.057803468208092%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> generalize ea; simpl.</pre>
 </div>
 <div class="code" title="File: Connectedness.v
@@ -1059,21 +1059,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 191
-Time: 0.003s">
-<div class="time" style="width: 0.17341040462428%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.12285012285012%"></div>
 <pre>
   rewrite transport_arrow.</pre>
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 192
-Time: 0.002s">
-<div class="time" style="width: 0.11560693641618%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.061425061425061%"></div>
 <pre> rewrite transport_const.</pre>
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 192
-Time: 0.003s">
-<div class="time" style="width: 0.17341040462428%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.12285012285012%"></div>
 <pre> rewrite transport_paths_Fl.</pre>
 </div>
 <div class="code" title="File: Connectedness.v
@@ -1085,8 +1085,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 193
-Time: 0.009s">
-<div class="time" style="width: 0.52023121387283%"></div>
+Time: 0.007s">
+<div class="time" style="width: 0.42997542997543%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -1101,14 +1101,14 @@ Time: 0s">
 <div class="code" title="File: Connectedness.v
 Line: 196
 Time: 0.002s">
-<div class="time" style="width: 0.11560693641618%"></div>
+<div class="time" style="width: 0.12285012285012%"></div>
 <pre>Definition wedge_incl_elim : forall a b, P a b
   := isconn_wedge_incl.1.</pre>
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 197
-Time: 0.004s">
-<div class="time" style="width: 0.23121387283237%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.18427518427518%"></div>
 <pre>
 
 Definition wedge_incl_comp1 : forall b, wedge_incl_elim a0 b = f_a0 b
@@ -1116,8 +1116,8 @@ Definition wedge_incl_comp1 : forall b, wedge_incl_elim a0 b = f_a0 b
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 200
-Time: 0.004s">
-<div class="time" style="width: 0.23121387283237%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.18427518427518%"></div>
 <pre>
 
 Definition wedge_incl_comp2 : forall a, wedge_incl_elim a b0 = f_b0 a
@@ -1125,8 +1125,8 @@ Definition wedge_incl_comp2 : forall a, wedge_incl_elim a b0 = f_b0 a
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 203
-Time: 0.006s">
-<div class="time" style="width: 0.34682080924855%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.30712530712531%"></div>
 <pre>
 
 Definition wedge_incl_comp3
@@ -1135,8 +1135,8 @@ Definition wedge_incl_comp3
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 207
-Time: 0.008s">
-<div class="time" style="width: 0.46242774566474%"></div>
+Time: 0.006s">
+<div class="time" style="width: 0.36855036855037%"></div>
 <pre>
 
 End Wedge_Incl_Conn.</pre>
@@ -1144,7 +1144,7 @@ End Wedge_Incl_Conn.</pre>
 <div class="code" title="File: Connectedness.v
 Line: 209
 Time: 0.001s">
-<div class="time" style="width: 0.057803468208092%"></div>
+<div class="time" style="width: 0.061425061425061%"></div>
 <pre>
 
 Definition wedge_incl_elim_uncurried `{Univalence}
@@ -1167,21 +1167,21 @@ Proof.</pre>
 <div class="code" title="File: Connectedness.v
 Line: 220
 Time: 0.001s">
-<div class="time" style="width: 0.057803468208092%"></div>
+<div class="time" style="width: 0.061425061425061%"></div>
 <pre>
   destruct fs as [f_a0 [f_b0 f_a0b0]].</pre>
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 221
-Time: 0.002s">
-<div class="time" style="width: 0.11560693641618%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.18427518427518%"></div>
 <pre>
   refine (wedge_incl_elim _ _ _ _ _ f_a0b0).</pre>
 </div>
 <div class="code" title="File: Connectedness.v
 Line: 222
 Time: 0.001s">
-<div class="time" style="width: 0.057803468208092%"></div>
+<div class="time" style="width: 0.061425061425061%"></div>
 <pre>
 Defined.</pre>
 </div>
