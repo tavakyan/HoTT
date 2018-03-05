@@ -167,8 +167,8 @@ Definition relation (A : Type) := A -&gt; A -&gt; Type.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 24
-Time: 0.001s">
-<div class="time" style="width: 100%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Class Reflexive {A} (R : relation A) :=
@@ -185,8 +185,8 @@ Class Symmetric {A} (R : relation A) :=
 </div>
 <div class="code" title="File: Overture.v
 Line: 30
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 100%"></div>
 <pre>
 
 Class Transitive {A} (R : relation A) :=
@@ -202,8 +202,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 35
-Time: 0.001s">
-<div class="time" style="width: 100%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Class PreOrder {A} (R : relation A) :=
   { PreOrder_Reflexive : Reflexive R | 2 ;
     PreOrder_Transitive : Transitive R | 2 }.</pre>
@@ -787,8 +787,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 156
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 100%"></div>
 <pre>Instance iff_inverse : Symmetric iff | 1
   := fun A B f =&gt; (snd f , fst f).</pre>
 </div>
@@ -1396,8 +1396,8 @@ Notation "f == g" := (pointwise_paths f g) : type_scope.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 298
-Time: 0.001s">
-<div class="time" style="width: 100%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition apD10 {A} {B:A-&gt;Type} {f g : forall x, B x} (h:f=g)
@@ -1445,8 +1445,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 311
-Time: 0.001s">
-<div class="time" style="width: 100%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition ap11 {A B} {f g:A-&gt;B} (h:f=g) {x y:A} (p:x=y) : f x = g y.</pre>
@@ -1460,8 +1460,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 314
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 100%"></div>
 <pre>
   case h, p; reflexivity.</pre>
 </div>
@@ -1482,8 +1482,8 @@ Global Arguments ap11 {A B}%type_scope {f g}%function_scope h%path_scope {x y} p
 </div>
 <div class="code" title="File: Overture.v
 Line: 318
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 100%"></div>
 <pre>
 
 Definition ap2 {A B C} (f : A -&gt; B -&gt; C) {x1 x2 y1 y2}:
@@ -1738,8 +1738,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 391
-Time: 0.001s">
-<div class="time" style="width: 100%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition ap10_equiv {A B : Type} {f g : A &lt;~&gt; B} (h : f = g) : f == g
   := ap10 (ap equiv_fun h).</pre>
 </div>
@@ -2000,8 +2000,8 @@ Coercion nat_to_trunc_index : nat &gt;-&gt; trunc_index.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 460
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 100%"></div>
 <pre>
 
 Fixpoint IsTrunc_internal (n : trunc_index) (A : Type) : Type :=
@@ -2067,8 +2067,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 476
-Time: 0.001s">
-<div class="time" style="width: 100%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Global Instance istrunc_paths (A : Type) n `{H : IsTrunc n.+1 A} (x y : A)
 : IsTrunc n (x = y)
   := H x y.</pre>
@@ -2249,8 +2249,8 @@ Global Existing Instance isequiv_apD10.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 529
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 100%"></div>
 <pre>
 
 Definition path_forall `{Funext} {A : Type} {P : A -&gt; Type} (f g : forall x : A, P x) :
@@ -2407,8 +2407,8 @@ Notation "x &lt;&gt; y" := (x &lt;&gt; y :&gt; _) : type_scope.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 573
-Time: 0.001s">
-<div class="time" style="width: 100%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition symmetric_neq {A} {x y : A} : x &lt;&gt; y -&gt; y &lt;&gt; x
@@ -2416,8 +2416,8 @@ Definition symmetric_neq {A} {x y : A} : x &lt;&gt; y -&gt; y &lt;&gt; x
 </div>
 <div class="code" title="File: Overture.v
 Line: 576
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 100%"></div>
 <pre>
 
 Definition complement {A} (R : relation A) : relation A :=
@@ -2564,8 +2564,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 615
-Time: 0.001s">
-<div class="time" style="width: 100%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition hfiber {A B : Type} (f : A -&gt; B) (y : B) := { x : A &amp; f x = y }.</pre>
 </div>
 <div class="code" title="File: Overture.v

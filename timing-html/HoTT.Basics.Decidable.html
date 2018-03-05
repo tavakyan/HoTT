@@ -37,7 +37,7 @@ Time: 0s">
 <div class="code" title="File: Decidable.v
 Line: 1
 Time: 0.012s">
-<div class="time" style="width: 92.307692307692%"></div>
+<div class="time" style="width: 100%"></div>
 <pre>Require Import Overture PathGroupoids Contractible Equivalences Trunc.</pre>
 </div>
 <div class="code" title="File: Decidable.v
@@ -86,18 +86,50 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
+(** The [decide_type] and [decide] tactic allow to automatically prove
+decidable claims using previously written decision procedures that
+compute. *)</pre>
+</div>
+<div class="code" title="File: Decidable.v
+Line: 15
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Ltac decide_type A :=
+  let K := (eval hnf in (dec A)) in
+  match K with
+  | inl ?Z =&gt; exact Z
+  | inr ?Z =&gt; exact Z
+  end.</pre>
+</div>
+<div class="code" title="File: Decidable.v
+Line: 20
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Ltac decide :=
+  match goal with
+  | [|- ?A] =&gt; decide_type A
+  end.</pre>
+</div>
+<div class="code" title="File: Decidable.v
+Line: 25
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
 Class DecidablePaths (A : Type) :=
   dec_paths : forall (x y : A), Decidable (x = y).</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 14
+Line: 28
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Global Existing Instance dec_paths.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 15
+Line: 29
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -105,7 +137,7 @@ Time: 0s">
 Class Stable P := stable : ~~P -&gt; P.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 17
+Line: 31
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -113,54 +145,54 @@ Time: 0s">
 Global Instance stable_decidable P `{!Decidable P} : Stable P.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 19
+Line: 33
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 20
-Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Line: 34
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   intros dn;destruct (dec P) as [p|n].</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 21
+Line: 35
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 22
+Line: 36
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> assumption.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 22
+Line: 36
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 23
+Line: 37
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply Empty_rect,dn,n.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 23
+Line: 37
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 24
+Line: 38
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -179,7 +211,7 @@ Time: 0s">
 *)</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 37
+Line: 51
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition decide_rel {A B} (R : A -&gt; B -&gt; Type)
@@ -188,7 +220,7 @@ Time: 0s">
   := dec x y.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 40
+Line: 54
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -200,14 +232,14 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 45
-Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Line: 59
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Global Instance decidable_contr X `{Contr X} : Decidable X
   := inl (center X).</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 46
+Line: 60
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -217,14 +249,14 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 49
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 63
+Time: 0.001s">
+<div class="time" style="width: 8.3333333333333%"></div>
 <pre>Global Instance decidablepaths_hprop X `{IsHProp X} : DecidablePaths X
   := fun x y =&gt; dec (x = y).</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 50
+Line: 64
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -234,14 +266,14 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 53
+Line: 67
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Global Instance decidable_empty : Decidable Empty
   := inr idmap.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 54
+Line: 68
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -252,99 +284,25 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 58
+Line: 72
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition decidable_equiv (A : Type) {B : Type} (f : A -&gt; B) `{IsEquiv A B f}
 : Decidable A -&gt; Decidable B.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 59
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Proof.</pre>
-</div>
-<div class="code" title="File: Decidable.v
-Line: 60
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  intros [a|na].</pre>
-</div>
-<div class="code" title="File: Decidable.v
-Line: 61
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  -</pre>
-</div>
-<div class="code" title="File: Decidable.v
-Line: 62
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> exact (inl (f a)).</pre>
-</div>
-<div class="code" title="File: Decidable.v
-Line: 62
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  -</pre>
-</div>
-<div class="code" title="File: Decidable.v
-Line: 63
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> exact (inr (fun b =&gt; na (f^-1 b))).</pre>
-</div>
-<div class="code" title="File: Decidable.v
-Line: 63
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Decidable.v
-Line: 64
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
-Definition decidable_equiv' (A : Type) {B : Type} (f : A &lt;~&gt; B)
-: Decidable A -&gt; Decidable B
-  := decidable_equiv A f.</pre>
-</div>
-<div class="code" title="File: Decidable.v
-Line: 68
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
-Definition decidablepaths_equiv
-           (A : Type) {B : Type} (f : A -&gt; B) `{IsEquiv A B f}
-: DecidablePaths A -&gt; DecidablePaths B.</pre>
-</div>
-<div class="code" title="File: Decidable.v
-Line: 72
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Proof.</pre>
-</div>
-<div class="code" title="File: Decidable.v
 Line: 73
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  intros d x y.</pre>
+Proof.</pre>
 </div>
 <div class="code" title="File: Decidable.v
 Line: 74
-Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-  destruct (d (f^-1 x) (f^-1 y)) as [e|ne].</pre>
+  intros [a|na].</pre>
 </div>
 <div class="code" title="File: Decidable.v
 Line: 75
@@ -357,13 +315,7 @@ Time: 0s">
 Line: 76
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> apply inl.</pre>
-</div>
-<div class="code" title="File: Decidable.v
-Line: 76
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> exact ((eisretr f x)^ @ ap f e @ eisretr f y).</pre>
+<pre> exact (inl (f a)).</pre>
 </div>
 <div class="code" title="File: Decidable.v
 Line: 76
@@ -376,13 +328,7 @@ Time: 0s">
 Line: 77
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> apply inr; intros p.</pre>
-</div>
-<div class="code" title="File: Decidable.v
-Line: 77
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> apply ne, ap, p.</pre>
+<pre> exact (inr (fun b =&gt; na (f^-1 b))).</pre>
 </div>
 <div class="code" title="File: Decidable.v
 Line: 77
@@ -397,12 +343,98 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
+Definition decidable_equiv' (A : Type) {B : Type} (f : A &lt;~&gt; B)
+: Decidable A -&gt; Decidable B
+  := decidable_equiv A f.</pre>
+</div>
+<div class="code" title="File: Decidable.v
+Line: 82
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Definition decidablepaths_equiv
+           (A : Type) {B : Type} (f : A -&gt; B) `{IsEquiv A B f}
+: DecidablePaths A -&gt; DecidablePaths B.</pre>
+</div>
+<div class="code" title="File: Decidable.v
+Line: 86
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: Decidable.v
+Line: 87
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  intros d x y.</pre>
+</div>
+<div class="code" title="File: Decidable.v
+Line: 88
+Time: 0.001s">
+<div class="time" style="width: 8.3333333333333%"></div>
+<pre>
+  destruct (d (f^-1 x) (f^-1 y)) as [e|ne].</pre>
+</div>
+<div class="code" title="File: Decidable.v
+Line: 89
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  -</pre>
+</div>
+<div class="code" title="File: Decidable.v
+Line: 90
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> apply inl.</pre>
+</div>
+<div class="code" title="File: Decidable.v
+Line: 90
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> exact ((eisretr f x)^ @ ap f e @ eisretr f y).</pre>
+</div>
+<div class="code" title="File: Decidable.v
+Line: 90
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  -</pre>
+</div>
+<div class="code" title="File: Decidable.v
+Line: 91
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> apply inr; intros p.</pre>
+</div>
+<div class="code" title="File: Decidable.v
+Line: 91
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> apply ne, ap, p.</pre>
+</div>
+<div class="code" title="File: Decidable.v
+Line: 91
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Defined.</pre>
+</div>
+<div class="code" title="File: Decidable.v
+Line: 92
+Time: 0.001s">
+<div class="time" style="width: 8.3333333333333%"></div>
+<pre>
+
 Definition decidablepaths_equiv' (A : Type) {B : Type} (f : A &lt;~&gt; B)
 : DecidablePaths A -&gt; DecidablePaths B
   := decidablepaths_equiv A f.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 82
+Line: 96
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -412,14 +444,14 @@ Time: 0s">
 (** A weakly constant function is one all of whose values are equal (in a specified way). *)</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 86
-Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Line: 100
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Class WeaklyConstant {A B} (f : A -&gt; B) :=
   wconst : forall x y, f x = f y.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 87
+Line: 101
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -427,7 +459,7 @@ Time: 0s">
 (** Any map that factors through an hprop is weakly constant. *)</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 89
+Line: 103
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition wconst_through_hprop {A B P} `{IsHProp P}
@@ -435,28 +467,28 @@ Time: 0s">
 : WeaklyConstant (g o f).</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 91
+Line: 105
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 92
+Line: 106
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intros x y; apply (ap g), path_ishprop.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 93
+Line: 107
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 94
+Line: 108
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -464,23 +496,23 @@ Time: 0s">
 (** A type is collapsible if it admits a weakly constant endomap. *)</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 96
-Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Line: 110
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Class Collapsible (A : Type) :=
   { collapse : A -&gt; A ;
     wconst_collapse : WeaklyConstant collapse
   }.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 99
+Line: 113
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Global Existing Instance wconst_collapse.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 100
+Line: 114
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -489,14 +521,14 @@ Class PathCollapsible (A : Type) :=
   path_coll : forall (x y : A), Collapsible (x = y).</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 103
+Line: 117
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Global Existing Instance path_coll.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 104
+Line: 118
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -505,68 +537,68 @@ Global Instance collapsible_decidable (A : Type) `{Decidable A}
 : Collapsible A.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 107
+Line: 121
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 108
+Line: 122
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   destruct (dec A) as [a | na].</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 109
+Line: 123
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 110
+Line: 124
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exists (const a).</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 110
+Line: 124
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     intros x y; reflexivity.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 111
+Line: 125
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 112
+Line: 126
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exists idmap.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 112
+Line: 126
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     intros x y; destruct (na x).</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 113
+Line: 127
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 114
+Line: 128
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -575,28 +607,28 @@ Global Instance pathcoll_decpaths (A : Type) `{DecidablePaths A}
 : PathCollapsible A.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 117
+Line: 131
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 118
-Time: 0.003s">
-<div class="time" style="width: 23.076923076923%"></div>
+Line: 132
+Time: 0.002s">
+<div class="time" style="width: 16.666666666667%"></div>
 <pre>
   intros x y; exact _.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 119
+Line: 133
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 120
+Line: 134
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -604,89 +636,89 @@ Time: 0s">
 (** We give this a relatively high-numbered priority so that in deducing [IsHProp -&gt; IsHSet] Coq doesn't detour via [DecidablePaths]. *)</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 122
+Line: 136
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Global Instance hset_pathcoll (A : Type) `{PathCollapsible A}
 : IsHSet A | 1000.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 123
+Line: 137
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 124
+Line: 138
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intros x y.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 125
-Time: 0.013s">
-<div class="time" style="width: 100%"></div>
+Line: 139
+Time: 0.011s">
+<div class="time" style="width: 91.666666666667%"></div>
 <pre>
   assert (h : forall p:x=y, p = (collapse (idpath x))^ @ collapse p).</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 126
+Line: 140
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   {</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 127
+Line: 141
 Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+<div class="time" style="width: 8.3333333333333%"></div>
 <pre> intros []; symmetry; by apply concat_Vp.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 127
+Line: 141
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> }</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 127
+Line: 141
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply hprop_allpath; intros p q.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 128
+Line: 142
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   refine (h p @ _ @ (h q)^).</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 129
+Line: 143
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply whiskerL.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 130
+Line: 144
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply wconst.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 131
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 145
+Time: 0.001s">
+<div class="time" style="width: 8.3333333333333%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 132
+Line: 146
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -695,35 +727,35 @@ Definition collapsible_hprop (A : Type) `{IsHProp A}
 : Collapsible A.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 135
+Line: 149
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 136
+Line: 150
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   exists idmap.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 137
+Line: 151
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intros x y; apply path_ishprop.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 138
+Line: 152
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 139
+Line: 153
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -732,28 +764,28 @@ Definition pathcoll_hset (A : Type) `{IsHSet A}
 : PathCollapsible A.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 142
+Line: 156
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 143
-Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Line: 157
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   intros x y; apply collapsible_hprop; exact _.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 144
+Line: 158
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 145
+Line: 159
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -762,28 +794,28 @@ Corollary hset_decpaths (A : Type) `{DecidablePaths A}
 : IsHSet A.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 148
+Line: 162
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 149
+Line: 163
 Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+<div class="time" style="width: 8.3333333333333%"></div>
 <pre>
   exact _.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 150
+Line: 164
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 151
+Line: 165
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -795,129 +827,129 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 156
+Line: 170
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Global Instance ishprop_decpaths `{Funext} (A : Type)
 : IsHProp (DecidablePaths A).</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 157
+Line: 171
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 158
+Line: 172
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply hprop_inhabited_contr; intros d.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 159
-Time: 0.002s">
-<div class="time" style="width: 15.384615384615%"></div>
+Line: 173
+Time: 0.001s">
+<div class="time" style="width: 8.3333333333333%"></div>
 <pre>
   assert (IsHSet A) by exact _.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 160
+Line: 174
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   exists d; intros d'.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 161
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 175
+Time: 0.001s">
+<div class="time" style="width: 8.3333333333333%"></div>
 <pre>
   apply path_forall; intros x; apply path_forall; intros y.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 162
+Line: 176
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   generalize (d x y); clear d; intros d.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 163
+Line: 177
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   generalize (d' x y); clear d'; intros d'.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 164
-Time: 0.002s">
-<div class="time" style="width: 15.384615384615%"></div>
+Line: 178
+Time: 0.001s">
+<div class="time" style="width: 8.3333333333333%"></div>
 <pre>
   destruct d as [d|nd]; destruct d' as [d'|nd'].</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 165
+Line: 179
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 166
-Time: 0.002s">
-<div class="time" style="width: 15.384615384615%"></div>
+Line: 180
+Time: 0.001s">
+<div class="time" style="width: 8.3333333333333%"></div>
 <pre> apply ap, path_ishprop.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 166
+Line: 180
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 167
+Line: 181
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> elim (nd' d).</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 167
+Line: 181
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 168
+Line: 182
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> elim (nd d').</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 168
+Line: 182
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 169
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 183
+Time: 0.001s">
+<div class="time" style="width: 8.3333333333333%"></div>
 <pre> apply ap, path_forall; intros p; elim (nd p).</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 169
+Line: 183
 Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+<div class="time" style="width: 8.3333333333333%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Decidable.v
-Line: 171
+Line: 185
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

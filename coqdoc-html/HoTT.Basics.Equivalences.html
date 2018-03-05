@@ -642,6 +642,22 @@ Using <span class="inlinecode"><a class="idref" href="HoTT.Basics.Equivalences.h
 </div>
 
 <div class="doc">
+The same, but for several variables. 
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Tactic Notation</span> "equiv_intros" <span class="id" title="keyword">constr</span>(<span class="id" title="var">E</span>) <span class="id" title="var">ident</span>(<span class="id" title="var">x</span>)<br/>
+&nbsp;&nbsp;:= <span class="id" title="var">equiv_intro</span> <span class="id" title="var">E</span> <span class="id" title="var">x</span>.<br/>
+<span class="id" title="keyword">Tactic Notation</span> "equiv_intros" <span class="id" title="keyword">constr</span>(<span class="id" title="var">E</span>) <span class="id" title="var">ident</span>(<span class="id" title="var">x</span>) <span class="id" title="var">ident</span>(<span class="id" title="var">y</span>)<br/>
+&nbsp;&nbsp;:= <span class="id" title="var">equiv_intro</span> <span class="id" title="var">E</span> <span class="id" title="var">x</span>; <span class="id" title="var">equiv_intro</span> <span class="id" title="var">E</span> <span class="id" title="var">y</span>.<br/>
+<span class="id" title="keyword">Tactic Notation</span> "equiv_intros" <span class="id" title="keyword">constr</span>(<span class="id" title="var">E</span>) <span class="id" title="var">ident</span>(<span class="id" title="var">x</span>) <span class="id" title="var">ident</span>(<span class="id" title="var">y</span>) <span class="id" title="var">ident</span>(<span class="id" title="var">z</span>)<br/>
+&nbsp;&nbsp;:= <span class="id" title="var">equiv_intro</span> <span class="id" title="var">E</span> <span class="id" title="var">x</span>; <span class="id" title="var">equiv_intro</span> <span class="id" title="var">E</span> <span class="id" title="var">y</span>; <span class="id" title="var">equiv_intro</span> <span class="id" title="var">E</span> <span class="id" title="var">z</span>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
 <span class="inlinecode"><a class="idref" href="HoTT.Basics.Equivalences.html#equiv_composeR'"><span class="id" title="definition">equiv_composeR'</span></a></span>, a flipped version of <span class="inlinecode"><a class="idref" href="HoTT.Basics.Equivalences.html#equiv_compose'"><span class="id" title="definition">equiv_compose'</span></a></span>, is (like <span class="inlinecode"><a class="idref" href="HoTT.Basics.PathGroupoids.html#concatR"><span class="id" title="abbreviation">concatR</span></a></span>) most often useful partially applied, to give the “first half” of an equivalence one is constructing and leave the rest as a subgoal. One could similarly define <span class="inlinecode"><span class="id" title="var">equiv_composeR</span></span> as a flip of <span class="inlinecode"><a class="idref" href="HoTT.Basics.Equivalences.html#equiv_compose"><span class="id" title="definition">equiv_compose</span></a></span>, but it doesn’t seem so useful since it doesn’t leave the remaining equivalence as a subgoal. 
 </div>
 <div class="code">

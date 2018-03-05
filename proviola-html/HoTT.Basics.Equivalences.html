@@ -2048,12 +2048,12 @@
           
 
             i = 406;
-            data = "<infomsg>equiv_composeR' is defined</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
             i = 407;
-            data = "<infomsg>equiv_via is defined</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
@@ -2083,12 +2083,12 @@
           
 
             i = 413;
-            data = "";
+            data = "<infomsg>equiv_composeR' is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 414;
-            data = "";
+            data = "<infomsg>equiv_via is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -2108,7 +2108,7 @@
           
 
             i = 418;
-            data = "<infomsg>ev_equiv is defined</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
@@ -2143,7 +2143,7 @@
           
 
             i = 425;
-            data = "";
+            data = "<infomsg>ev_equiv is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -2163,6 +2163,41 @@
           
 
             i = 429;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 430;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 431;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 432;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 433;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 434;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 435;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 436;
             data = "";
             responses[i]=data;
           
@@ -3557,39 +3592,71 @@ Using <span class="inlinecode"><a class="idref" href="HoTT.Basics.Equivalences.h
 </div>
 <div class="goal" id="goal0_3_99"><pre><span></span></pre></div>
 <div class="doc" scenenumber="101">
-<span class="inlinecode"><a class="idref" href="HoTT.Basics.Equivalences.html#equiv_composeR'"><span class="id" title="definition">equiv_composeR'</span></a></span>, a flipped version of <span class="inlinecode"><a class="idref" href="HoTT.Basics.Equivalences.html#equiv_compose'"><span class="id" title="definition">equiv_compose'</span></a></span>, is (like <span class="inlinecode"><a class="idref" href="HoTT.Basics.PathGroupoids.html#concatR"><span class="id" title="abbreviation">concatR</span></a></span>) most often useful partially applied, to give the “first half” of an equivalence one is constructing and leave the rest as a subgoal. One could similarly define <span class="inlinecode"><span class="id" title="var">equiv_composeR</span></span> as a flip of <span class="inlinecode"><a class="idref" href="HoTT.Basics.Equivalences.html#equiv_compose"><span class="id" title="definition">equiv_compose</span></a></span>, but it doesn’t seem so useful since it doesn’t leave the remaining equivalence as a subgoal. 
+The same, but for several variables. 
 </div>
 <div scenenumber="103" class="code">
 <span class="command" onmouseout="
       mouseout('0_3_103');
       " onmouseover="
-      mouseover(406, '0_3_103');
+      mouseover(396, '0_3_103');
       ">
-<span class="id" title="keyword">Definition</span> <a name="equiv_composeR'"><span class="id" title="definition">equiv_composeR'</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span> <span class="id" title="var">C</span>} (<span class="id" title="var">f</span> : <a class="idref" href="HoTT.Basics.Equivalences.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Overture.html#fdd951a86e2a1b4ef3630e8a03060363"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#B"><span class="id" title="variable">B</span></a>) (<span class="id" title="var">g</span> : <a class="idref" href="HoTT.Basics.Equivalences.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Basics.Overture.html#fdd951a86e2a1b4ef3630e8a03060363"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#C"><span class="id" title="variable">C</span></a>)<br>
-  := <a class="idref" href="HoTT.Basics.Equivalences.html#equiv_compose'"><span class="id" title="definition">equiv_compose'</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#g"><span class="id" title="variable">g</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#f"><span class="id" title="variable">f</span></a>.</span><span class="command" onmouseout="
-      mouseout('0_3_103');
-      " onmouseover="
-      mouseover(407, '0_3_103');
-      "><br>
 <br>
-<span class="id" title="keyword">Ltac</span> <span class="id" title="var">equiv_via</span> <span class="id" title="var">mid</span> :=<br>
-  <span class="id" title="tactic">apply</span> @<a class="idref" href="HoTT.Basics.Equivalences.html#equiv_composeR'"><span class="id" title="definition">equiv_composeR'</span></a> <span class="id" title="keyword">with</span> (<span class="id" title="var">B</span> := <span class="id" title="var">mid</span>).</span><span class="command" onmouseout="
+<span class="id" title="keyword">Tactic Notation</span> "equiv_intros" <span class="id" title="keyword">constr</span>(<span class="id" title="var">E</span>) <span class="id" title="var">ident</span>(<span class="id" title="var">x</span>)<br>
+  := <span class="id" title="var">equiv_intro</span> <span class="id" title="var">E</span> <span class="id" title="var">x</span>.</span><span class="command" onmouseout="
       mouseout('0_3_103');
       " onmouseover="
-      mouseover(408, '0_3_103');
+      mouseover(397, '0_3_103');
+      "><br>
+<span class="id" title="keyword">Tactic Notation</span> "equiv_intros" <span class="id" title="keyword">constr</span>(<span class="id" title="var">E</span>) <span class="id" title="var">ident</span>(<span class="id" title="var">x</span>) <span class="id" title="var">ident</span>(<span class="id" title="var">y</span>)<br>
+  := <span class="id" title="var">equiv_intro</span> <span class="id" title="var">E</span> <span class="id" title="var">x</span>; <span class="id" title="var">equiv_intro</span> <span class="id" title="var">E</span> <span class="id" title="var">y</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_103');
+      " onmouseover="
+      mouseover(398, '0_3_103');
+      "><br>
+<span class="id" title="keyword">Tactic Notation</span> "equiv_intros" <span class="id" title="keyword">constr</span>(<span class="id" title="var">E</span>) <span class="id" title="var">ident</span>(<span class="id" title="var">x</span>) <span class="id" title="var">ident</span>(<span class="id" title="var">y</span>) <span class="id" title="var">ident</span>(<span class="id" title="var">z</span>)<br>
+  := <span class="id" title="var">equiv_intro</span> <span class="id" title="var">E</span> <span class="id" title="var">x</span>; <span class="id" title="var">equiv_intro</span> <span class="id" title="var">E</span> <span class="id" title="var">y</span>; <span class="id" title="var">equiv_intro</span> <span class="id" title="var">E</span> <span class="id" title="var">z</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_103');
+      " onmouseover="
+      mouseover(399, '0_3_103');
       "><br>
 <br>
 </span>
 </div>
 <div class="goal" id="goal0_3_103"><pre><span></span></pre></div>
 <div class="doc" scenenumber="105">
-It's often convenient when constructing a chain of equivalences to use <span class="inlinecode"><a class="idref" href="HoTT.Basics.Equivalences.html#equiv_compose'"><span class="id" title="definition">equiv_compose'</span></a></span>, etc.  But when we treat an <span class="inlinecode"><a class="idref" href="HoTT.HIT.quotient.html#Equiv"><span class="id" title="section">Equiv</span></a></span> object constructed in that way as a function, via the coercion <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#equiv_fun"><span class="id" title="projection">equiv_fun</span></a></span>, Coq sometimes needs a little help to realize that the result is the same as ordinary composition.  This tactic provides that help. 
+<span class="inlinecode"><a class="idref" href="HoTT.Basics.Equivalences.html#equiv_composeR'"><span class="id" title="definition">equiv_composeR'</span></a></span>, a flipped version of <span class="inlinecode"><a class="idref" href="HoTT.Basics.Equivalences.html#equiv_compose'"><span class="id" title="definition">equiv_compose'</span></a></span>, is (like <span class="inlinecode"><a class="idref" href="HoTT.Basics.PathGroupoids.html#concatR"><span class="id" title="abbreviation">concatR</span></a></span>) most often useful partially applied, to give the “first half” of an equivalence one is constructing and leave the rest as a subgoal. One could similarly define <span class="inlinecode"><span class="id" title="var">equiv_composeR</span></span> as a flip of <span class="inlinecode"><a class="idref" href="HoTT.Basics.Equivalences.html#equiv_compose"><span class="id" title="definition">equiv_compose</span></a></span>, but it doesn’t seem so useful since it doesn’t leave the remaining equivalence as a subgoal. 
 </div>
 <div scenenumber="107" class="code">
 <span class="command" onmouseout="
       mouseout('0_3_107');
       " onmouseover="
-      mouseover(418, '0_3_107');
+      mouseover(413, '0_3_107');
+      ">
+<span class="id" title="keyword">Definition</span> <a name="equiv_composeR'"><span class="id" title="definition">equiv_composeR'</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span> <span class="id" title="var">C</span>} (<span class="id" title="var">f</span> : <a class="idref" href="HoTT.Basics.Equivalences.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Overture.html#fdd951a86e2a1b4ef3630e8a03060363"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#B"><span class="id" title="variable">B</span></a>) (<span class="id" title="var">g</span> : <a class="idref" href="HoTT.Basics.Equivalences.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Basics.Overture.html#fdd951a86e2a1b4ef3630e8a03060363"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#C"><span class="id" title="variable">C</span></a>)<br>
+  := <a class="idref" href="HoTT.Basics.Equivalences.html#equiv_compose'"><span class="id" title="definition">equiv_compose'</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#g"><span class="id" title="variable">g</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#f"><span class="id" title="variable">f</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_107');
+      " onmouseover="
+      mouseover(414, '0_3_107');
+      "><br>
+<br>
+<span class="id" title="keyword">Ltac</span> <span class="id" title="var">equiv_via</span> <span class="id" title="var">mid</span> :=<br>
+  <span class="id" title="tactic">apply</span> @<a class="idref" href="HoTT.Basics.Equivalences.html#equiv_composeR'"><span class="id" title="definition">equiv_composeR'</span></a> <span class="id" title="keyword">with</span> (<span class="id" title="var">B</span> := <span class="id" title="var">mid</span>).</span><span class="command" onmouseout="
+      mouseout('0_3_107');
+      " onmouseover="
+      mouseover(415, '0_3_107');
+      "><br>
+<br>
+</span>
+</div>
+<div class="goal" id="goal0_3_107"><pre><span></span></pre></div>
+<div class="doc" scenenumber="109">
+It's often convenient when constructing a chain of equivalences to use <span class="inlinecode"><a class="idref" href="HoTT.Basics.Equivalences.html#equiv_compose'"><span class="id" title="definition">equiv_compose'</span></a></span>, etc.  But when we treat an <span class="inlinecode"><a class="idref" href="HoTT.HIT.quotient.html#Equiv"><span class="id" title="section">Equiv</span></a></span> object constructed in that way as a function, via the coercion <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#equiv_fun"><span class="id" title="projection">equiv_fun</span></a></span>, Coq sometimes needs a little help to realize that the result is the same as ordinary composition.  This tactic provides that help. 
+</div>
+<div scenenumber="111" class="code">
+<span class="command" onmouseout="
+      mouseout('0_3_111');
+      " onmouseover="
+      mouseover(425, '0_3_111');
       ">
 <span class="id" title="keyword">Ltac</span> <span class="id" title="var">ev_equiv</span> :=<br>
   <span class="id" title="tactic">repeat</span> <span class="id" title="keyword">match</span> <span class="id" title="keyword">goal</span> <span class="id" title="keyword">with</span><br>
@@ -3600,13 +3667,13 @@ It's often convenient when constructing a chain of equivalences to use <span cla
            | [ |- <span class="id" title="keyword">context</span>[<a class="idref" href="HoTT.Basics.Overture.html#equiv_fun"><span class="id" title="projection">equiv_fun</span></a> (<a class="idref" href="HoTT.Basics.Equivalences.html#equiv_inverse"><span class="id" title="lemma">equiv_inverse</span></a> ?<span class="id" title="var">f</span>) ?<span class="id" title="var">a</span>] ] ⇒<br>
              <span class="id" title="tactic">change</span> ((<a class="idref" href="HoTT.Basics.Equivalences.html#equiv_inverse"><span class="id" title="lemma">equiv_inverse</span></a> <span class="id" title="var">f</span>) <span class="id" title="var">a</span>) <span class="id" title="keyword">with</span> (<span class="id" title="var">f</span><a class="idref" href="HoTT.Basics.Overture.html#77ed8f3b30fae66d423e9f3dab28cba2"><span class="id" title="notation">^-1</span></a> <span class="id" title="var">a</span>)<br>
          <span class="id" title="keyword">end</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_107');
+      mouseout('0_3_111');
       " onmouseover="
-      mouseover(419, '0_3_107');
+      mouseover(426, '0_3_111');
       "><br>
 </span>
 </div>
-<div class="goal" id="goal0_3_107"><pre><span></span></pre></div>
+<div class="goal" id="goal0_3_111"><pre><span></span></pre></div>
 </div>
 <div id="footer" scenenumber="5" class="doc">
 <hr>
