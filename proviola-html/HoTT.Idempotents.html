@@ -553,12 +553,12 @@
           
 
             i = 107;
-            data = "1 subgoal (ID 153)	  	  X : Type	  Y : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  f : X -> Y	  g : A -> Y	  p : (fun x : X => g (r x)) == f	  y : Y	  a : A	  q : g a = y	  ============================	  transport (fun x : A => g x = y) (H a)	    (p (s a) @ (((p (s a))^ @ ap g (H a)) @ q)) = q	";
+            data = "1 subgoal (ID 153)	  	  X : Type	  Y : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  f : X -> Y	  g : A -> Y	  p : (fun x : X => g (r x)) == f	  y : Y	  a : A	  q : g a = y	  ============================	  transport (fun x : A => g x = y) (H a)	    (p (s a) @ (((p (s a))^ @ ap g (H a)) @ q)) = q	No more subgoals.	";
             responses[i]=data;
           
 
             i = 108;
-            data = "No more subgoals.	<infomsg>retractof_hfiber is defined</infomsg>	";
+            data = "<infomsg>retractof_hfiber is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -698,12 +698,12 @@
           
 
             i = 136;
-            data = "1 subgoal (ID 111)	  	  X : Type	  ============================	  {A : Type & {r : X -> A & {s : A -> X & (fun x : A => r (s x)) == idmap}}} <~>	  RetractOf X	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 112)		subgoal 1 (ID 112) is:	 {A : Type &	 {rs : (X -> A) * (A -> X) & (fun x : A => rs.(fst) (rs.(snd) x)) == idmap}} <~>	 {A : Type & {r : X -> A & {s : A -> X & (fun x : A => r (s x)) == idmap}}}	";
+            data = "1 subgoal (ID 111)	  	  X : Type	  ============================	  {A : Type & {r : X -> A & {s : A -> X & (fun x : A => r (s x)) == idmap}}} <~>	  RetractOf X	";
             responses[i]=data;
           
 
             i = 137;
-            data = "1 subgoal (ID 112)	  	  X : Type	  ============================	  {A : Type &	  {rs : (X -> A) * (A -> X) & (fun x : A => rs.(fst) (rs.(snd) x)) == idmap}} <~>	  {A : Type & {r : X -> A & {s : A -> X & (fun x : A => r (s x)) == idmap}}}	1 subgoal (ID 169)	  	  X : Type	  A : Type	  ============================	  {rs : (X -> A) * (A -> X) & (fun x : A => rs.(fst) (rs.(snd) x)) == idmap} <~>	  {r : X -> 1%equiv.(equiv_fun) A &	  {s : 1%equiv.(equiv_fun) A -> X &	  (fun x : 1%equiv.(equiv_fun) A => r (s x)) == idmap}}	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 112)		subgoal 1 (ID 112) is:	 {A : Type &	 {rs : (X -> A) * (A -> X) & (fun x : A => rs.(fst) (rs.(snd) x)) == idmap}} <~>	 {A : Type & {r : X -> A & {s : A -> X & (fun x : A => r (s x)) == idmap}}}	1 subgoal (ID 112)	  	  X : Type	  ============================	  {A : Type &	  {rs : (X -> A) * (A -> X) & (fun x : A => rs.(fst) (rs.(snd) x)) == idmap}} <~>	  {A : Type & {r : X -> A & {s : A -> X & (fun x : A => r (s x)) == idmap}}}	1 subgoal (ID 169)	  	  X : Type	  A : Type	  ============================	  {rs : (X -> A) * (A -> X) & (fun x : A => rs.(fst) (rs.(snd) x)) == idmap} <~>	  {r : X -> 1%equiv.(equiv_fun) A &	  {s : 1%equiv.(equiv_fun) A -> X &	  (fun x : 1%equiv.(equiv_fun) A => r (s x)) == idmap}}	";
             responses[i]=data;
           
 
@@ -3223,12 +3223,12 @@
           
 
             i = 641;
-            data = "1 subgoal (ID 510)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a : split_idem	  a' := (fun n : nat => f (a n.+1); fun n : nat => ap f (a.(proj2_sig) n.+1))	   : split_idem	  n : nat	  ============================	  ap f (ap f (a.(proj2_sig) n.+1)) @ I (a n.+1) =	  ap f (I (a n.+2)) @ ap f (a.(proj2_sig) n.+1)	";
+            data = "1 subgoal (ID 510)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a : split_idem	  a' := (fun n : nat => f (a n.+1); fun n : nat => ap f (a.(proj2_sig) n.+1))	   : split_idem	  n : nat	  ============================	  ap f (ap f (a.(proj2_sig) n.+1)) @ I (a n.+1) =	  ap f (I (a n.+2)) @ ap f (a.(proj2_sig) n.+1)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 511)		subgoal 1 (ID 511) is:	 f (a.(proj1_sig) n.+1) = a.(proj1_sig) n	subgoal 2 (ID 512) is:	 ap f (a.(proj2_sig) n.+1) @ ?Goal = ap f ?Goal@{n:=n.+1} @ a.(proj2_sig) n	";
             responses[i]=data;
           
 
             i = 642;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 511)		subgoal 1 (ID 511) is:	 f (a.(proj1_sig) n.+1) = a.(proj1_sig) n	subgoal 2 (ID 512) is:	 ap f (a.(proj2_sig) n.+1) @ ?Goal = ap f ?Goal@{n:=n.+1} @ a.(proj2_sig) n	1 subgoal (ID 511)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a : split_idem	  a' := (fun n : nat => f (a n.+1); fun n : nat => ap f (a.(proj2_sig) n.+1))	   : split_idem	  n : nat	  ============================	  f (a.(proj1_sig) n.+1) = a.(proj1_sig) n	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 512)		subgoal 1 (ID 512) is:	 ap f (a.(proj2_sig) n.+1) @ a.(proj2_sig) n =	 ap f (a.(proj2_sig) n.+1) @ a.(proj2_sig) n	";
+            data = "1 subgoal (ID 511)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a : split_idem	  a' := (fun n : nat => f (a n.+1); fun n : nat => ap f (a.(proj2_sig) n.+1))	   : split_idem	  n : nat	  ============================	  f (a.(proj1_sig) n.+1) = a.(proj1_sig) n	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 512)		subgoal 1 (ID 512) is:	 ap f (a.(proj2_sig) n.+1) @ a.(proj2_sig) n =	 ap f (a.(proj2_sig) n.+1) @ a.(proj2_sig) n	";
             responses[i]=data;
           
 
