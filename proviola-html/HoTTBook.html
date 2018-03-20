@@ -6658,22 +6658,22 @@
           
 
             i = 1328;
-            data = "1 subgoal (ID 13)	  	  A : Core.PreCategory	  H : forall s d : A.(Core.object),	      IsEquiv (Category.Morphisms.idtoiso A (y:=d))	  ============================	  IsHSet A.(Core.object) <->	  (forall a b : A.(Core.object), IsHProp (Morphisms.Isomorphic a b))	";
+            data = "1 subgoal (ID 13)	  	  A : Core.PreCategory	  H : forall s d : A.(Core.object),	      IsEquiv (Category.Morphisms.idtoiso A (y:=d))	  ============================	  IsHSet A.(Core.object) <->	  is_mere_relation A.(Core.object) Morphisms.Isomorphic	";
             responses[i]=data;
           
 
             i = 1329;
-            data = "1 subgoal (ID 13)	  	  A : Core.PreCategory	  H : forall s d : A.(Core.object),	      IsEquiv (Category.Morphisms.idtoiso A (y:=d))	  ============================	  IsHSet A.(Core.object) <->	  (forall a b : A.(Core.object), IsHProp (Morphisms.Isomorphic a b))	";
+            data = "";
             responses[i]=data;
           
 
             i = 1330;
-            data = "2 subgoals (ID 15)	  	  A : Core.PreCategory	  H : forall s d : A.(Core.object),	      IsEquiv (Category.Morphisms.idtoiso A (y:=d))	  ============================	  IsHSet A.(Core.object) ->	  forall a b : A.(Core.object), IsHProp (Morphisms.Isomorphic a b)		subgoal 2 (ID 16) is:	 (forall a b : A.(Core.object), IsHProp (Morphisms.Isomorphic a b)) ->	 IsHSet A.(Core.object)	";
+            data = "2 subgoals (ID 15)	  	  A : Core.PreCategory	  H : forall s d : A.(Core.object),	      IsEquiv (Category.Morphisms.idtoiso A (y:=d))	  ============================	  IsHSet A.(Core.object) ->	  is_mere_relation A.(Core.object) Morphisms.Isomorphic		subgoal 2 (ID 16) is:	 is_mere_relation A.(Core.object) Morphisms.Isomorphic ->	 IsHSet A.(Core.object)	";
             responses[i]=data;
           
 
             i = 1331;
-            data = "1 subgoal (ID 15)	  	  A : Core.PreCategory	  H : forall s d : A.(Core.object),	      IsEquiv (Category.Morphisms.idtoiso A (y:=d))	  ============================	  IsHSet A.(Core.object) ->	  forall a b : A.(Core.object), IsHProp (Morphisms.Isomorphic a b)	1 subgoal (ID 19)	  	  A : Core.PreCategory	  H : forall s d : A.(Core.object),	      IsEquiv (Category.Morphisms.idtoiso A (y:=d))	  H' : IsHSet A.(Core.object)	  a, b : A.(Core.object)	  ============================	  IsHProp (Morphisms.Isomorphic a b)	";
+            data = "1 subgoal (ID 15)	  	  A : Core.PreCategory	  H : forall s d : A.(Core.object),	      IsEquiv (Category.Morphisms.idtoiso A (y:=d))	  ============================	  IsHSet A.(Core.object) ->	  is_mere_relation A.(Core.object) Morphisms.Isomorphic	1 subgoal (ID 19)	  	  A : Core.PreCategory	  H : forall s d : A.(Core.object),	      IsEquiv (Category.Morphisms.idtoiso A (y:=d))	  H' : IsHSet A.(Core.object)	  a, b : A.(Core.object)	  ============================	  IsHProp (Morphisms.Isomorphic a b)	";
             responses[i]=data;
           
 
@@ -6683,32 +6683,32 @@
           
 
             i = 1333;
-            data = "1 focused subgoal	(shelved: 2) (ID 62)	  	  A : Core.PreCategory	  H : forall s d : A.(Core.object),	      IsEquiv (Category.Morphisms.idtoiso A (y:=d))	  H' : IsHSet A.(Core.object)	  a, b : A.(Core.object)	  ============================	  IsHProp ?A	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals	(shelved: 1) (ID 63)		subgoal 1 (ID 63) is:	 IsEquiv ?f	subgoal 2 (ID 16) is:	 (forall a b : A.(Core.object), IsHProp (Morphisms.Isomorphic a b)) ->	 IsHSet A.(Core.object)	";
+            data = "1 focused subgoal	(shelved: 2) (ID 62)	  	  A : Core.PreCategory	  H : forall s d : A.(Core.object),	      IsEquiv (Category.Morphisms.idtoiso A (y:=d))	  H' : IsHSet A.(Core.object)	  a, b : A.(Core.object)	  ============================	  IsHProp ?A	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals	(shelved: 1) (ID 63)		subgoal 1 (ID 63) is:	 IsEquiv ?f	subgoal 2 (ID 16) is:	 is_mere_relation A.(Core.object) Morphisms.Isomorphic ->	 IsHSet A.(Core.object)	";
             responses[i]=data;
           
 
             i = 1334;
-            data = "1 focused subgoal	(shelved: 1) (ID 63)	  	  A : Core.PreCategory	  H : forall s d : A.(Core.object),	      IsEquiv (Category.Morphisms.idtoiso A (y:=d))	  H' : IsHSet A.(Core.object)	  a, b : A.(Core.object)	  ============================	  IsEquiv ?f	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 16)		subgoal 1 (ID 16) is:	 (forall a b : A.(Core.object), IsHProp (Morphisms.Isomorphic a b)) ->	 IsHSet A.(Core.object)	";
+            data = "1 focused subgoal	(shelved: 1) (ID 63)	  	  A : Core.PreCategory	  H : forall s d : A.(Core.object),	      IsEquiv (Category.Morphisms.idtoiso A (y:=d))	  H' : IsHSet A.(Core.object)	  a, b : A.(Core.object)	  ============================	  IsEquiv ?f	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 16)		subgoal 1 (ID 16) is:	 is_mere_relation A.(Core.object) Morphisms.Isomorphic ->	 IsHSet A.(Core.object)	";
             responses[i]=data;
           
 
             i = 1335;
-            data = "1 subgoal (ID 16)	  	  A : Core.PreCategory	  H : forall s d : A.(Core.object),	      IsEquiv (Category.Morphisms.idtoiso A (y:=d))	  ============================	  (forall a b : A.(Core.object), IsHProp (Morphisms.Isomorphic a b)) ->	  IsHSet A.(Core.object)	1 subgoal (ID 68)	  	  A : Core.PreCategory	  H : forall s d : A.(Core.object),	      IsEquiv (Category.Morphisms.idtoiso A (y:=d))	  H' : forall a b : A.(Core.object), IsHProp (Morphisms.Isomorphic a b)	  a, b : A.(Core.object)	  ============================	  IsTrunc_internal -1 (a = b)	";
+            data = "1 subgoal (ID 16)	  	  A : Core.PreCategory	  H : forall s d : A.(Core.object),	      IsEquiv (Category.Morphisms.idtoiso A (y:=d))	  ============================	  is_mere_relation A.(Core.object) Morphisms.Isomorphic ->	  IsHSet A.(Core.object)	1 subgoal (ID 68)	  	  A : Core.PreCategory	  H : forall s d : A.(Core.object),	      IsEquiv (Category.Morphisms.idtoiso A (y:=d))	  H' : is_mere_relation A.(Core.object) Morphisms.Isomorphic	  a, b : A.(Core.object)	  ============================	  IsTrunc_internal -1 (a = b)	";
             responses[i]=data;
           
 
             i = 1336;
-            data = "2 focused subgoals	(shelved: 2) (ID 71)	  	  A : Core.PreCategory	  H : forall s d : A.(Core.object),	      IsEquiv (Category.Morphisms.idtoiso A (y:=d))	  H' : forall a b : A.(Core.object), IsHProp (Morphisms.Isomorphic a b)	  a, b : A.(Core.object)	  ============================	  IsHProp ?A		subgoal 2 (ID 72) is:	 IsEquiv ?f	";
+            data = "2 focused subgoals	(shelved: 2) (ID 71)	  	  A : Core.PreCategory	  H : forall s d : A.(Core.object),	      IsEquiv (Category.Morphisms.idtoiso A (y:=d))	  H' : is_mere_relation A.(Core.object) Morphisms.Isomorphic	  a, b : A.(Core.object)	  ============================	  IsHProp ?A		subgoal 2 (ID 72) is:	 IsEquiv ?f	";
             responses[i]=data;
           
 
             i = 1337;
-            data = "1 focused subgoal	(shelved: 2) (ID 71)	  	  A : Core.PreCategory	  H : forall s d : A.(Core.object),	      IsEquiv (Category.Morphisms.idtoiso A (y:=d))	  H' : forall a b : A.(Core.object), IsHProp (Morphisms.Isomorphic a b)	  a, b : A.(Core.object)	  ============================	  IsHProp ?A	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal	(shelved: 1) (ID 72)		subgoal 1 (ID 72) is:	 IsEquiv ?f	";
+            data = "1 focused subgoal	(shelved: 2) (ID 71)	  	  A : Core.PreCategory	  H : forall s d : A.(Core.object),	      IsEquiv (Category.Morphisms.idtoiso A (y:=d))	  H' : is_mere_relation A.(Core.object) Morphisms.Isomorphic	  a, b : A.(Core.object)	  ============================	  IsHProp ?A	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal	(shelved: 1) (ID 72)		subgoal 1 (ID 72) is:	 IsEquiv ?f	";
             responses[i]=data;
           
 
             i = 1338;
-            data = "1 focused subgoal	(shelved: 1) (ID 72)	  	  A : Core.PreCategory	  H : forall s d : A.(Core.object),	      IsEquiv (Category.Morphisms.idtoiso A (y:=d))	  H' : forall a b : A.(Core.object), IsHProp (Morphisms.Isomorphic a b)	  a, b : A.(Core.object)	  ============================	  IsEquiv ?f	No more subgoals.	";
+            data = "1 focused subgoal	(shelved: 1) (ID 72)	  	  A : Core.PreCategory	  H : forall s d : A.(Core.object),	      IsEquiv (Category.Morphisms.idtoiso A (y:=d))	  H' : is_mere_relation A.(Core.object) Morphisms.Isomorphic	  a, b : A.(Core.object)	  ============================	  IsEquiv ?f	No more subgoals.	";
             responses[i]=data;
           
 

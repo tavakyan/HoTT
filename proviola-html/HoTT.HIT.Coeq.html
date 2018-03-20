@@ -178,7 +178,7 @@
           
 
             i = 32;
-            data = "1 subgoal (ID 64)	  	  B : Type	  A : Type	  f, g : B -> A	  P : Type	  coeq' : A -> P	  cp' : forall b : B, coeq' (f b) = coeq' (g b)	  b : B	  ============================	  ap (Coeq_rec P coeq' cp') (cp b) = cp' b	";
+            data = "";
             responses[i]=data;
           
 
@@ -298,7 +298,7 @@
           
 
             i = 56;
-            data = "1 subgoal (ID 137)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  ============================	  Coeq f g -> Coeq f' g'	";
+            data = "";
             responses[i]=data;
           
 
@@ -333,7 +333,7 @@
           
 
             i = 63;
-            data = "1 subgoal (ID 458)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  B'' : Type	  A'' : Type	  f'', g'' : B'' -> A''	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B' -> B''	  k' : A' -> A''	  p' : k' o f' == f'' o h'	  q' : k' o g' == g'' o h'	  ============================	  functor_coeq (h' o h) (k' o k) (fun b : B => ap k' (p b) @ p' (h b))	    (fun b : B => ap k' (q b) @ q' (h b)) ==	  functor_coeq h' k' p' q' o functor_coeq h k p q	";
+            data = "";
             responses[i]=data;
           
 
@@ -393,7 +393,7 @@
           
 
             i = 75;
-            data = "1 subgoal (ID 631)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B -> B'	  k' : A -> A'	  p' : k' o f == f' o h'	  q' : k' o g == g' o h'	  r : h == h'	  s : k == k'	  u : forall b : B, s (f b) @ p' b = p b @ ap f' (r b)	  v : forall b : B, s (g b) @ q' b = q b @ ap g' (r b)	  ============================	  functor_coeq h k p q == functor_coeq h' k' p' q'	";
+            data = "";
             responses[i]=data;
           
 
@@ -423,27 +423,27 @@
           
 
             i = 81;
-            data = "1 subgoal (ID 732)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B -> B'	  k' : A -> A'	  p' : k' o f == f' o h'	  q' : k' o g == g' o h'	  r : h == h'	  s : k == k'	  u : forall b : B, s (f b)	                    @' p' b = p b	                              @' ap f' (r b)	  v : forall b : B, s (g b)	                    @' q' b = q b	                              @' ap g' (r b)	  b : B	  ============================	  (ap coeq (s (f b)) @ ap coeq (p' b)) @ cp (h' b)	  @' ap coeq (q' b)^ =	  (ap coeq (p b) @ cp (h b)) @ ap coeq (q b)^	  @' ap coeq (s (g b))	";
+            data = "1 subgoal (ID 732)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B -> B'	  k' : A -> A'	  p' : k' o f == f' o h'	  q' : k' o g == g' o h'	  r : h == h'	  s : k == k'	  u : forall b : B, s (f b)	                    @' p' b = p b	                              @' ap f' (r b)	  v : forall b : B, s (g b)	                    @' q' b = q b	                              @' ap g' (r b)	  b : B	  ============================	  ap coeq (s (f b))	  @' ap coeq (p' b)	  @' cp (h' b)	  @' ap coeq (q' b)^ =	  ap coeq (p b)	  @' cp (h b)	  @' ap coeq (q b)^	  @' ap coeq (s (g b))	";
             responses[i]=data;
           
 
             i = 82;
-            data = "1 subgoal (ID 752)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B -> B'	  k' : A -> A'	  p' : k' o f == f' o h'	  q' : k' o g == g' o h'	  r : h == h'	  s : k == k'	  u : forall b : B, s (f b)	                    @' p' b = p b	                              @' ap f' (r b)	  v : forall b : B, s (g b)	                    @' q' b = q b	                              @' ap g' (r b)	  b : B	  ============================	  ap coeq (s (f b) @ p' b) @ cp (h' b)	  @' ap coeq (q' b)^ =	  (ap coeq (p b) @ cp (h b)) @ ap coeq (q b)^	  @' ap coeq (s (g b))	";
+            data = "1 subgoal (ID 752)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B -> B'	  k' : A -> A'	  p' : k' o f == f' o h'	  q' : k' o g == g' o h'	  r : h == h'	  s : k == k'	  u : forall b : B, s (f b)	                    @' p' b = p b	                              @' ap f' (r b)	  v : forall b : B, s (g b)	                    @' q' b = q b	                              @' ap g' (r b)	  b : B	  ============================	  ap coeq (s (f b)	           @' p' b)	  @' cp (h' b)	  @' ap coeq (q' b)^ =	  ap coeq (p b)	  @' cp (h b)	  @' ap coeq (q b)^	  @' ap coeq (s (g b))	";
             responses[i]=data;
           
 
             i = 83;
-            data = "1 subgoal (ID 818)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B -> B'	  k' : A -> A'	  p' : k' o f == f' o h'	  q' : k' o g == g' o h'	  r : h == h'	  s : k == k'	  u : forall b : B, s (f b)	                    @' p' b = p b	                              @' ap f' (r b)	  v : forall b : B, s (g b)	                    @' q' b = q b	                              @' ap g' (r b)	  b : B	  ============================	  ap coeq (ap f' (r b)) @ cp (h' b)	  @' ap coeq (q' b)^ = cp (h b) @ ap coeq (q b)^	                       @' ap coeq (s (g b))	";
+            data = "1 subgoal (ID 818)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B -> B'	  k' : A -> A'	  p' : k' o f == f' o h'	  q' : k' o g == g' o h'	  r : h == h'	  s : k == k'	  u : forall b : B, s (f b)	                    @' p' b = p b	                              @' ap f' (r b)	  v : forall b : B, s (g b)	                    @' q' b = q b	                              @' ap g' (r b)	  b : B	  ============================	  ap coeq (ap f' (r b))	  @' cp (h' b)	  @' ap coeq (q' b)^ = cp (h b)	                       @' ap coeq (q b)^	                       @' ap coeq (s (g b))	";
             responses[i]=data;
           
 
             i = 84;
-            data = "1 subgoal (ID 838)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B -> B'	  k' : A -> A'	  p' : k' o f == f' o h'	  q' : k' o g == g' o h'	  r : h == h'	  s : k == k'	  u : forall b : B, s (f b)	                    @' p' b = p b	                              @' ap f' (r b)	  v : forall b : B, s (g b)	                    @' q' b = q b	                              @' ap g' (r b)	  b : B	  ============================	  ap coeq (ap f' (r b))	  @' cp (h' b) =	  (cp (h b) @ ap coeq (q b)^) @ ap coeq (s (g b))	  @' ap coeq (q' b)	";
+            data = "1 subgoal (ID 838)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B -> B'	  k' : A -> A'	  p' : k' o f == f' o h'	  q' : k' o g == g' o h'	  r : h == h'	  s : k == k'	  u : forall b : B, s (f b)	                    @' p' b = p b	                              @' ap f' (r b)	  v : forall b : B, s (g b)	                    @' q' b = q b	                              @' ap g' (r b)	  b : B	  ============================	  ap coeq (ap f' (r b))	  @' cp (h' b) =	  cp (h b)	  @' ap coeq (q b)^	  @' ap coeq (s (g b))	  @' ap coeq (q' b)	";
             responses[i]=data;
           
 
             i = 85;
-            data = "1 subgoal (ID 870)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B -> B'	  k' : A -> A'	  p' : k' o f == f' o h'	  q' : k' o g == g' o h'	  r : h == h'	  s : k == k'	  u : forall b : B, s (f b)	                    @' p' b = p b	                              @' ap f' (r b)	  v : forall b : B, s (g b)	                    @' q' b = q b	                              @' ap g' (r b)	  b : B	  ============================	  ap coeq (ap f' (r b))	  @' cp (h' b) = cp (h b)	                 @' ap coeq (q b)^ @ ap coeq (s (g b) @ q' b)	";
+            data = "1 subgoal (ID 870)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B -> B'	  k' : A -> A'	  p' : k' o f == f' o h'	  q' : k' o g == g' o h'	  r : h == h'	  s : k == k'	  u : forall b : B, s (f b)	                    @' p' b = p b	                              @' ap f' (r b)	  v : forall b : B, s (g b)	                    @' q' b = q b	                              @' ap g' (r b)	  b : B	  ============================	  ap coeq (ap f' (r b))	  @' cp (h' b) = cp (h b)	                 @' (ap coeq (q b)^	                     @' ap coeq (s (g b)	                                 @' q' b))	";
             responses[i]=data;
           
 
@@ -478,7 +478,7 @@
           
 
             i = 92;
-            data = "1 subgoal (ID 812)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B' -> B	  k' : A' -> A	  p' : k' o f' == f o h'	  q' : k' o g' == g o h'	  r : Sect h h'	  s : Sect k k'	  u : forall b : B, (ap k' (p b) @ p' (h b)) @ ap f (r b) = s (f b)	  v : forall b : B, (ap k' (q b) @ q' (h b)) @ ap g (r b) = s (g b)	  ============================	  Sect (functor_coeq h k p q) (functor_coeq h' k' p' q')	";
+            data = "";
             responses[i]=data;
           
 
@@ -518,37 +518,37 @@
           
 
             i = 100;
-            data = "1 subgoal (ID 938)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B' -> B	  k' : A' -> A	  p' : k' o f' == f o h'	  q' : k' o g' == g o h'	  r : Sect h h'	  s : Sect k k'	  u : forall b : B, ap k' (p b) @ p' (h b)	                    @' ap f (r b) = s (f b)	  v : forall b : B, ap k' (q b) @ q' (h b)	                    @' ap g (r b) = s (g b)	  b : B	  ============================	  ap coeq (s (f b))	  @' cp b =	  (((ap (fun x : A' => coeq (k' x)) (p b) @ ap coeq (p' (h b))) @	    cp (h' (h b))) @ ap coeq (q' (h b))^) @	  ap (fun x : A' => coeq (k' x)) (q b)^	  @' ap coeq (s (g b))	";
+            data = "1 subgoal (ID 938)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B' -> B	  k' : A' -> A	  p' : k' o f' == f o h'	  q' : k' o g' == g o h'	  r : Sect h h'	  s : Sect k k'	  u : forall b : B, ap k' (p b)	                    @' p' (h b)	                    @' ap f (r b) = s (f b)	  v : forall b : B, ap k' (q b)	                    @' q' (h b)	                    @' ap g (r b) = s (g b)	  b : B	  ============================	  ap coeq (s (f b))	  @' cp b =	  ap (fun x : A' => coeq (k' x)) (p b)	  @' ap coeq (p' (h b))	  @' cp (h' (h b))	  @' ap coeq (q' (h b))^	  @' ap (fun x : A' => coeq (k' x)) (q b)^	  @' ap coeq (s (g b))	";
             responses[i]=data;
           
 
             i = 101;
-            data = "1 subgoal (ID 979)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B' -> B	  k' : A' -> A	  p' : k' o f' == f o h'	  q' : k' o g' == g o h'	  r : Sect h h'	  s : Sect k k'	  u : forall b : B, ap k' (p b) @ p' (h b)	                    @' ap f (r b) = s (f b)	  v : forall b : B, ap k' (q b) @ q' (h b)	                    @' ap g (r b) = s (g b)	  b : B	  ============================	  (ap coeq (ap k' (p b)) @ ap coeq (p' (h b))) @ ap coeq (ap f (r b))	  @' cp b =	  (((ap coeq (ap k' (p b)) @ ap coeq (p' (h b))) @ cp (h' (h b))) @	   ap coeq (q' (h b))^) @ ap coeq (ap k' (q b)^)	  @' ap coeq (s (g b))	";
+            data = "1 subgoal (ID 979)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B' -> B	  k' : A' -> A	  p' : k' o f' == f o h'	  q' : k' o g' == g o h'	  r : Sect h h'	  s : Sect k k'	  u : forall b : B, ap k' (p b)	                    @' p' (h b)	                    @' ap f (r b) = s (f b)	  v : forall b : B, ap k' (q b)	                    @' q' (h b)	                    @' ap g (r b) = s (g b)	  b : B	  ============================	  ap coeq (ap k' (p b))	  @' ap coeq (p' (h b))	  @' ap coeq (ap f (r b))	  @' cp b =	  ap coeq (ap k' (p b))	  @' ap coeq (p' (h b))	  @' cp (h' (h b))	  @' ap coeq (q' (h b))^	  @' ap coeq (ap k' (q b)^)	  @' ap coeq (s (g b))	";
             responses[i]=data;
           
 
             i = 102;
-            data = "1 subgoal (ID 1053)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B' -> B	  k' : A' -> A	  p' : k' o f' == f o h'	  q' : k' o g' == g o h'	  r : Sect h h'	  s : Sect k k'	  u : forall b : B, ap k' (p b) @ p' (h b)	                    @' ap f (r b) = s (f b)	  v : forall b : B, ap k' (q b) @ q' (h b)	                    @' ap g (r b) = s (g b)	  b : B	  ============================	  ap coeq (ap f (r b))	  @' cp b =	  cp (h' (h b))	  @' ap coeq (q' (h b))^ @ (ap coeq (ap k' (q b)^) @ ap coeq (s (g b)))	";
+            data = "1 subgoal (ID 1053)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B' -> B	  k' : A' -> A	  p' : k' o f' == f o h'	  q' : k' o g' == g o h'	  r : Sect h h'	  s : Sect k k'	  u : forall b : B, ap k' (p b)	                    @' p' (h b)	                    @' ap f (r b) = s (f b)	  v : forall b : B, ap k' (q b)	                    @' q' (h b)	                    @' ap g (r b) = s (g b)	  b : B	  ============================	  ap coeq (ap f (r b))	  @' cp b =	  cp (h' (h b))	  @' (ap coeq (q' (h b))^	      @' (ap coeq (ap k' (q b)^)	          @' ap coeq (s (g b))))	";
             responses[i]=data;
           
 
             i = 103;
-            data = "1 subgoal (ID 1065)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B' -> B	  k' : A' -> A	  p' : k' o f' == f o h'	  q' : k' o g' == g o h'	  r : Sect h h'	  s : Sect k k'	  u : forall b : B, ap k' (p b) @ p' (h b)	                    @' ap f (r b) = s (f b)	  v : forall b : B, ap k' (q b) @ q' (h b)	                    @' ap g (r b) = s (g b)	  b : B	  ============================	  ap coeq (ap f (r b))	  @' cp b =	  (cp (h' (h b)) @ ap coeq (q' (h b))^) @ ap coeq (ap k' (q b)^)	  @' ap coeq (s (g b))	";
+            data = "1 subgoal (ID 1065)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B' -> B	  k' : A' -> A	  p' : k' o f' == f o h'	  q' : k' o g' == g o h'	  r : Sect h h'	  s : Sect k k'	  u : forall b : B, ap k' (p b)	                    @' p' (h b)	                    @' ap f (r b) = s (f b)	  v : forall b : B, ap k' (q b)	                    @' q' (h b)	                    @' ap g (r b) = s (g b)	  b : B	  ============================	  ap coeq (ap f (r b))	  @' cp b =	  cp (h' (h b))	  @' ap coeq (q' (h b))^	  @' ap coeq (ap k' (q b)^)	  @' ap coeq (s (g b))	";
             responses[i]=data;
           
 
             i = 104;
-            data = "1 subgoal (ID 1076)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B' -> B	  k' : A' -> A	  p' : k' o f' == f o h'	  q' : k' o g' == g o h'	  r : Sect h h'	  s : Sect k k'	  u : forall b : B, ap k' (p b) @ p' (h b)	                    @' ap f (r b) = s (f b)	  v : forall b : B, ap k' (q b) @ q' (h b)	                    @' ap g (r b) = s (g b)	  b : B	  ============================	  ap coeq (ap f (r b))	  @' cp b =	  (cp (h' (h b)) @ ap coeq (q' (h b))^) @ ap coeq (ap k' (q b)^)	  @' ap coeq ((ap k' (q b) @ q' (h b)) @ ap g (r b))	";
+            data = "1 subgoal (ID 1076)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B' -> B	  k' : A' -> A	  p' : k' o f' == f o h'	  q' : k' o g' == g o h'	  r : Sect h h'	  s : Sect k k'	  u : forall b : B, ap k' (p b)	                    @' p' (h b)	                    @' ap f (r b) = s (f b)	  v : forall b : B, ap k' (q b)	                    @' q' (h b)	                    @' ap g (r b) = s (g b)	  b : B	  ============================	  ap coeq (ap f (r b))	  @' cp b =	  cp (h' (h b))	  @' ap coeq (q' (h b))^	  @' ap coeq (ap k' (q b)^)	  @' ap coeq (ap k' (q b)	              @' q' (h b)	              @' ap g (r b))	";
             responses[i]=data;
           
 
             i = 105;
-            data = "1 subgoal (ID 1131)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B' -> B	  k' : A' -> A	  p' : k' o f' == f o h'	  q' : k' o g' == g o h'	  r : Sect h h'	  s : Sect k k'	  u : forall b : B, ap k' (p b) @ p' (h b)	                    @' ap f (r b) = s (f b)	  v : forall b : B, ap k' (q b) @ q' (h b)	                    @' ap g (r b) = s (g b)	  b : B	  ============================	  ap coeq (ap f (r b))	  @' cp b = cp (h' (h b))	            @' ap coeq (ap g (r b))	";
+            data = "1 subgoal (ID 1131)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B' -> B	  k' : A' -> A	  p' : k' o f' == f o h'	  q' : k' o g' == g o h'	  r : Sect h h'	  s : Sect k k'	  u : forall b : B, ap k' (p b)	                    @' p' (h b)	                    @' ap f (r b) = s (f b)	  v : forall b : B, ap k' (q b)	                    @' q' (h b)	                    @' ap g (r b) = s (g b)	  b : B	  ============================	  ap coeq (ap f (r b))	  @' cp b = cp (h' (h b))	            @' ap coeq (ap g (r b))	";
             responses[i]=data;
           
 
             i = 106;
-            data = "1 subgoal (ID 1147)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B' -> B	  k' : A' -> A	  p' : k' o f' == f o h'	  q' : k' o g' == g o h'	  r : Sect h h'	  s : Sect k k'	  u : forall b : B, ap k' (p b) @ p' (h b)	                    @' ap f (r b) = s (f b)	  v : forall b : B, ap k' (q b) @ q' (h b)	                    @' ap g (r b) = s (g b)	  b : B	  ============================	  ap (fun x : B => coeq (f x)) (r b)	  @' cp b = cp (h' (h b))	            @' ap (fun x : B => coeq (g x)) (r b)	";
+            data = "1 subgoal (ID 1147)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B' -> B	  k' : A' -> A	  p' : k' o f' == f o h'	  q' : k' o g' == g o h'	  r : Sect h h'	  s : Sect k k'	  u : forall b : B, ap k' (p b)	                    @' p' (h b)	                    @' ap f (r b) = s (f b)	  v : forall b : B, ap k' (q b)	                    @' q' (h b)	                    @' ap g (r b) = s (g b)	  b : B	  ============================	  ap (fun x : B => coeq (f x)) (r b)	  @' cp b = cp (h' (h b))	            @' ap (fun x : B => coeq (g x)) (r b)	";
             responses[i]=data;
           
 
@@ -583,7 +583,7 @@
           
 
             i = 113;
-            data = "1 subgoal (ID 881)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  ============================	  Coeq f' g' -> Coeq f g	";
+            data = "";
             responses[i]=data;
           
 
@@ -633,7 +633,7 @@
           
 
             i = 123;
-            data = "1 subgoal (ID 892)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  ============================	  Sect functor_coeq_inverse (functor_coeq h k p q)	";
+            data = "";
             responses[i]=data;
           
 
@@ -643,7 +643,7 @@
           
 
             i = 125;
-            data = "2 subgoals (ID 929)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  ap k	    ((ap (fun x : B' => H0.(equiv_inv) (f' x)) (H.(eisretr) b)^ @	      ap k^-1 (p (H.(equiv_inv) b))^) @ H0.(eissect) (f (H.(equiv_inv) b))) @	  p (H.(equiv_inv) b)	  @' ap f' (H.(eisretr) b) = H0.(eisretr) (f' b)		subgoal 2 (ID 930) is:	 ap k	   ((ap (fun x : B' => H0.(equiv_inv) (g' x)) (H.(eisretr) b)^ @	     ap k^-1 (q (H.(equiv_inv) b))^) @ H0.(eissect) (g (H.(equiv_inv) b))) @	 q (H.(equiv_inv) b)	 @' ap g' (H.(eisretr) b) = H0.(eisretr) (g' b)	";
+            data = "2 subgoals (ID 929)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  ap k	    (ap (fun x : B' => H0.(equiv_inv) (f' x)) (H.(eisretr) b)^	     @' ap k^-1 (p (H.(equiv_inv) b))^	     @' H0.(eissect) (f (H.(equiv_inv) b)))	  @' p (H.(equiv_inv) b)	  @' ap f' (H.(eisretr) b) = H0.(eisretr) (f' b)		subgoal 2 (ID 930) is:	 ap k	   (ap (fun x : B' => H0.(equiv_inv) (g' x)) (H.(eisretr) b)^	    @' ap k^-1 (q (H.(equiv_inv) b))^	    @' H0.(eissect) (g (H.(equiv_inv) b)))	 @' q (H.(equiv_inv) b)	 @' ap g' (H.(eisretr) b) = H0.(eisretr) (g' b)	";
             responses[i]=data;
           
 
@@ -728,37 +728,37 @@
           
 
             i = 142;
-            data = "2 subgoals (ID 943)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  ((ap k (ap (fun x : B' => H0.(equiv_inv) (f' x)) (H.(eisretr) b)^) @	    ap k (ap k^-1 (p (H.(equiv_inv) b))^)) @	   H0.(eisretr) (k (f (H.(equiv_inv) b)))) @ p (H.(equiv_inv) b)	  @' ap f' (H.(eisretr) b) = H0.(eisretr) (f' b)		subgoal 2 (ID 958) is:	 ((ap k (ap (fun x : B' => H0.(equiv_inv) (g' x)) (H.(eisretr) b)^) @	   ap k (ap k^-1 (q (H.(equiv_inv) b))^)) @	  H0.(eisretr) (k (g (H.(equiv_inv) b)))) @ q (H.(equiv_inv) b)	 @' ap g' (H.(eisretr) b) = H0.(eisretr) (g' b)	";
+            data = "2 subgoals (ID 943)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  ap k (ap (fun x : B' => H0.(equiv_inv) (f' x)) (H.(eisretr) b)^)	  @' ap k (ap k^-1 (p (H.(equiv_inv) b))^)	  @' H0.(eisretr) (k (f (H.(equiv_inv) b)))	  @' p (H.(equiv_inv) b)	  @' ap f' (H.(eisretr) b) = H0.(eisretr) (f' b)		subgoal 2 (ID 958) is:	 ap k (ap (fun x : B' => H0.(equiv_inv) (g' x)) (H.(eisretr) b)^)	 @' ap k (ap k^-1 (q (H.(equiv_inv) b))^)	 @' H0.(eisretr) (k (g (H.(equiv_inv) b)))	 @' q (H.(equiv_inv) b)	 @' ap g' (H.(eisretr) b) = H0.(eisretr) (g' b)	";
             responses[i]=data;
           
 
             i = 143;
-            data = "2 subgoals (ID 964)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  ((ap k (ap (fun x : B' => H0.(equiv_inv) (f' x)) (H.(eisretr) b)^) @	    ap (fun x : A' => k (k^-1 x)) (p (H.(equiv_inv) b))^) @	   H0.(eisretr) (k (f (H.(equiv_inv) b)))) @ p (H.(equiv_inv) b)	  @' ap f' (H.(eisretr) b) = H0.(eisretr) (f' b)		subgoal 2 (ID 974) is:	 ((ap k (ap (fun x : B' => H0.(equiv_inv) (g' x)) (H.(eisretr) b)^) @	   ap (fun x : A' => k (k^-1 x)) (q (H.(equiv_inv) b))^) @	  H0.(eisretr) (k (g (H.(equiv_inv) b)))) @ q (H.(equiv_inv) b)	 @' ap g' (H.(eisretr) b) = H0.(eisretr) (g' b)	";
+            data = "2 subgoals (ID 964)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  ap k (ap (fun x : B' => H0.(equiv_inv) (f' x)) (H.(eisretr) b)^)	  @' ap (fun x : A' => k (k^-1 x)) (p (H.(equiv_inv) b))^	  @' H0.(eisretr) (k (f (H.(equiv_inv) b)))	  @' p (H.(equiv_inv) b)	  @' ap f' (H.(eisretr) b) = H0.(eisretr) (f' b)		subgoal 2 (ID 974) is:	 ap k (ap (fun x : B' => H0.(equiv_inv) (g' x)) (H.(eisretr) b)^)	 @' ap (fun x : A' => k (k^-1 x)) (q (H.(equiv_inv) b))^	 @' H0.(eisretr) (k (g (H.(equiv_inv) b)))	 @' q (H.(equiv_inv) b)	 @' ap g' (H.(eisretr) b) = H0.(eisretr) (g' b)	";
             responses[i]=data;
           
 
             i = 144;
-            data = "2 subgoals (ID 993)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  ((ap k (ap (fun x : B' => H0.(equiv_inv) (f' x)) (H.(eisretr) b)^) @	    H0.(eisretr) (f' (h (H.(equiv_inv) b)))) @ (p (H.(equiv_inv) b))^) @	  p (H.(equiv_inv) b)	  @' ap f' (H.(eisretr) b) = H0.(eisretr) (f' b)		subgoal 2 (ID 1018) is:	 ((ap k (ap (fun x : B' => H0.(equiv_inv) (g' x)) (H.(eisretr) b)^) @	   H0.(eisretr) (g' (h (H.(equiv_inv) b)))) @ (q (H.(equiv_inv) b))^) @	 q (H.(equiv_inv) b)	 @' ap g' (H.(eisretr) b) = H0.(eisretr) (g' b)	";
+            data = "2 subgoals (ID 993)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  ap k (ap (fun x : B' => H0.(equiv_inv) (f' x)) (H.(eisretr) b)^)	  @' H0.(eisretr) (f' (h (H.(equiv_inv) b)))	  @' (p (H.(equiv_inv) b))^	  @' p (H.(equiv_inv) b)	  @' ap f' (H.(eisretr) b) = H0.(eisretr) (f' b)		subgoal 2 (ID 1018) is:	 ap k (ap (fun x : B' => H0.(equiv_inv) (g' x)) (H.(eisretr) b)^)	 @' H0.(eisretr) (g' (h (H.(equiv_inv) b)))	 @' (q (H.(equiv_inv) b))^	 @' q (H.(equiv_inv) b)	 @' ap g' (H.(eisretr) b) = H0.(eisretr) (g' b)	";
             responses[i]=data;
           
 
             i = 145;
-            data = "2 subgoals (ID 1035)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  ap k (ap (fun x : B' => H0.(equiv_inv) (f' x)) (H.(eisretr) b)^) @	  H0.(eisretr) (f' (h (H.(equiv_inv) b)))	  @' ap f' (H.(eisretr) b) = H0.(eisretr) (f' b)		subgoal 2 (ID 1044) is:	 ap k (ap (fun x : B' => H0.(equiv_inv) (g' x)) (H.(eisretr) b)^) @	 H0.(eisretr) (g' (h (H.(equiv_inv) b)))	 @' ap g' (H.(eisretr) b) = H0.(eisretr) (g' b)	";
+            data = "2 subgoals (ID 1035)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  ap k (ap (fun x : B' => H0.(equiv_inv) (f' x)) (H.(eisretr) b)^)	  @' H0.(eisretr) (f' (h (H.(equiv_inv) b)))	  @' ap f' (H.(eisretr) b) = H0.(eisretr) (f' b)		subgoal 2 (ID 1044) is:	 ap k (ap (fun x : B' => H0.(equiv_inv) (g' x)) (H.(eisretr) b)^)	 @' H0.(eisretr) (g' (h (H.(equiv_inv) b)))	 @' ap g' (H.(eisretr) b) = H0.(eisretr) (g' b)	";
             responses[i]=data;
           
 
             i = 146;
-            data = "2 subgoals (ID 1071)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  ap (fun x : B' => k (H0.(equiv_inv) (f' x))) (H.(eisretr) b)^ @	  H0.(eisretr) (f' (h (H.(equiv_inv) b)))	  @' ap f' (H.(eisretr) b) = H0.(eisretr) (f' b)		subgoal 2 (ID 1116) is:	 ap (fun x : B' => k (H0.(equiv_inv) (g' x))) (H.(eisretr) b)^ @	 H0.(eisretr) (g' (h (H.(equiv_inv) b)))	 @' ap g' (H.(eisretr) b) = H0.(eisretr) (g' b)	";
+            data = "2 subgoals (ID 1071)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  ap (fun x : B' => k (H0.(equiv_inv) (f' x))) (H.(eisretr) b)^	  @' H0.(eisretr) (f' (h (H.(equiv_inv) b)))	  @' ap f' (H.(eisretr) b) = H0.(eisretr) (f' b)		subgoal 2 (ID 1116) is:	 ap (fun x : B' => k (H0.(equiv_inv) (g' x))) (H.(eisretr) b)^	 @' H0.(eisretr) (g' (h (H.(equiv_inv) b)))	 @' ap g' (H.(eisretr) b) = H0.(eisretr) (g' b)	";
             responses[i]=data;
           
 
             i = 147;
-            data = "2 subgoals (ID 1161)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  ap (fun x : A' => k (H0.(equiv_inv) x)) (ap f' (H.(eisretr) b)^) @	  H0.(eisretr) (f' (h (H.(equiv_inv) b)))	  @' ap f' (H.(eisretr) b) = H0.(eisretr) (f' b)		subgoal 2 (ID 1206) is:	 ap (fun x : A' => k (H0.(equiv_inv) x)) (ap g' (H.(eisretr) b)^) @	 H0.(eisretr) (g' (h (H.(equiv_inv) b)))	 @' ap g' (H.(eisretr) b) = H0.(eisretr) (g' b)	";
+            data = "2 subgoals (ID 1161)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  ap (fun x : A' => k (H0.(equiv_inv) x)) (ap f' (H.(eisretr) b)^)	  @' H0.(eisretr) (f' (h (H.(equiv_inv) b)))	  @' ap f' (H.(eisretr) b) = H0.(eisretr) (f' b)		subgoal 2 (ID 1206) is:	 ap (fun x : A' => k (H0.(equiv_inv) x)) (ap g' (H.(eisretr) b)^)	 @' H0.(eisretr) (g' (h (H.(equiv_inv) b)))	 @' ap g' (H.(eisretr) b) = H0.(eisretr) (g' b)	";
             responses[i]=data;
           
 
             i = 148;
-            data = "2 subgoals (ID 1248)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  H0.(eisretr) (f' b) @ ap f' (H.(eisretr) b)^	  @' ap f' (H.(eisretr) b) = H0.(eisretr) (f' b)		subgoal 2 (ID 1287) is:	 H0.(eisretr) (g' b) @ ap g' (H.(eisretr) b)^	 @' ap g' (H.(eisretr) b) = H0.(eisretr) (g' b)	";
+            data = "2 subgoals (ID 1248)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  H0.(eisretr) (f' b)	  @' ap f' (H.(eisretr) b)^	  @' ap f' (H.(eisretr) b) = H0.(eisretr) (f' b)		subgoal 2 (ID 1287) is:	 H0.(eisretr) (g' b)	 @' ap g' (H.(eisretr) b)^	 @' ap g' (H.(eisretr) b) = H0.(eisretr) (g' b)	";
             responses[i]=data;
           
 
@@ -783,7 +783,7 @@
           
 
             i = 153;
-            data = "1 subgoal (ID 903)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  ============================	  Sect (functor_coeq h k p q) functor_coeq_inverse	";
+            data = "";
             responses[i]=data;
           
 
@@ -793,47 +793,47 @@
           
 
             i = 155;
-            data = "2 subgoals (ID 940)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  ap H0.(equiv_inv) (p b) @	  ((ap (fun x : B' => H0.(equiv_inv) (f' x)) (H.(eisretr) (h b))^ @	    ap k^-1 (p (H.(equiv_inv) (h b)))^) @	   H0.(eissect) (f (H.(equiv_inv) (h b))))	  @' ap f (H.(eissect) b) = H0.(eissect) (f b)		subgoal 2 (ID 941) is:	 ap H0.(equiv_inv) (q b) @	 ((ap (fun x : B' => H0.(equiv_inv) (g' x)) (H.(eisretr) (h b))^ @	   ap k^-1 (q (H.(equiv_inv) (h b)))^) @	  H0.(eissect) (g (H.(equiv_inv) (h b))))	 @' ap g (H.(eissect) b) = H0.(eissect) (g b)	";
+            data = "2 subgoals (ID 940)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  ap H0.(equiv_inv) (p b)	  @' (ap (fun x : B' => H0.(equiv_inv) (f' x)) (H.(eisretr) (h b))^	      @' ap k^-1 (p (H.(equiv_inv) (h b)))^	      @' H0.(eissect) (f (H.(equiv_inv) (h b))))	  @' ap f (H.(eissect) b) = H0.(eissect) (f b)		subgoal 2 (ID 941) is:	 ap H0.(equiv_inv) (q b)	 @' (ap (fun x : B' => H0.(equiv_inv) (g' x)) (H.(eisretr) (h b))^	     @' ap k^-1 (q (H.(equiv_inv) (h b)))^	     @' H0.(eissect) (g (H.(equiv_inv) (h b))))	 @' ap g (H.(eissect) b) = H0.(eissect) (g b)	";
             responses[i]=data;
           
 
             i = 156;
-            data = "2 subgoals (ID 977)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  ((ap H0.(equiv_inv) (p b) @	    ap (fun x : B => H0.(equiv_inv) (f' (h x))) (H.(eissect) b)^) @	   ap k^-1 (p (H.(equiv_inv) (h b)))^) @	  H0.(eissect) (f (H.(equiv_inv) (h b)))	  @' ap f (H.(eissect) b) = H0.(eissect) (f b)		subgoal 2 (ID 1019) is:	 ((ap H0.(equiv_inv) (q b) @	   ap (fun x : B => H0.(equiv_inv) (g' (h x))) (H.(eissect) b)^) @	  ap k^-1 (q (H.(equiv_inv) (h b)))^) @	 H0.(eissect) (g (H.(equiv_inv) (h b)))	 @' ap g (H.(eissect) b) = H0.(eissect) (g b)	";
+            data = "2 subgoals (ID 977)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  ap H0.(equiv_inv) (p b)	  @' ap (fun x : B => H0.(equiv_inv) (f' (h x))) (H.(eissect) b)^	  @' ap k^-1 (p (H.(equiv_inv) (h b)))^	  @' H0.(eissect) (f (H.(equiv_inv) (h b)))	  @' ap f (H.(eissect) b) = H0.(eissect) (f b)		subgoal 2 (ID 1019) is:	 ap H0.(equiv_inv) (q b)	 @' ap (fun x : B => H0.(equiv_inv) (g' (h x))) (H.(eissect) b)^	 @' ap k^-1 (q (H.(equiv_inv) (h b)))^	 @' H0.(eissect) (g (H.(equiv_inv) (h b)))	 @' ap g (H.(eissect) b) = H0.(eissect) (g b)	";
             responses[i]=data;
           
 
             i = 157;
-            data = "2 subgoals (ID 1050)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  ((ap H0.(equiv_inv) (p b) @	    ap H0.(equiv_inv) (ap (fun x : B => f' (h x)) (H.(eissect) b)^)) @	   ap k^-1 (p (H.(equiv_inv) (h b)))^) @	  H0.(eissect) (f (H.(equiv_inv) (h b)))	  @' ap f (H.(eissect) b) = H0.(eissect) (f b)		subgoal 2 (ID 1099) is:	 ((ap H0.(equiv_inv) (q b) @	   ap H0.(equiv_inv) (ap (fun x : B => g' (h x)) (H.(eissect) b)^)) @	  ap k^-1 (q (H.(equiv_inv) (h b)))^) @	 H0.(eissect) (g (H.(equiv_inv) (h b)))	 @' ap g (H.(eissect) b) = H0.(eissect) (g b)	";
+            data = "2 subgoals (ID 1050)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  ap H0.(equiv_inv) (p b)	  @' ap H0.(equiv_inv) (ap (fun x : B => f' (h x)) (H.(eissect) b)^)	  @' ap k^-1 (p (H.(equiv_inv) (h b)))^	  @' H0.(eissect) (f (H.(equiv_inv) (h b)))	  @' ap f (H.(eissect) b) = H0.(eissect) (f b)		subgoal 2 (ID 1099) is:	 ap H0.(equiv_inv) (q b)	 @' ap H0.(equiv_inv) (ap (fun x : B => g' (h x)) (H.(eissect) b)^)	 @' ap k^-1 (q (H.(equiv_inv) (h b)))^	 @' H0.(eissect) (g (H.(equiv_inv) (h b)))	 @' ap g (H.(eissect) b) = H0.(eissect) (g b)	";
             responses[i]=data;
           
 
             i = 158;
-            data = "2 subgoals (ID 1181)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  ap H0.(equiv_inv)	    (p b @	     (ap (fun x : B => f' (h x)) (H.(eissect) b)^ @	      (p (H.(equiv_inv) (h b)))^))	  @' H0.(eissect) (f (H.(equiv_inv) (h b))) @ ap f (H.(eissect) b) =	  H0.(eissect) (f b)		subgoal 2 (ID 1249) is:	 ap H0.(equiv_inv)	   (q b @	    (ap (fun x : B => g' (h x)) (H.(eissect) b)^ @ (q (H.(equiv_inv) (h b)))^))	 @' H0.(eissect) (g (H.(equiv_inv) (h b))) @ ap g (H.(eissect) b) =	 H0.(eissect) (g b)	";
+            data = "2 subgoals (ID 1181)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  ap H0.(equiv_inv)	    (p b	     @' (ap (fun x : B => f' (h x)) (H.(eissect) b)^	         @' (p (H.(equiv_inv) (h b)))^))	  @' (H0.(eissect) (f (H.(equiv_inv) (h b)))	      @' ap f (H.(eissect) b)) = H0.(eissect) (f b)		subgoal 2 (ID 1249) is:	 ap H0.(equiv_inv)	   (q b	    @' (ap (fun x : B => g' (h x)) (H.(eissect) b)^	        @' (q (H.(equiv_inv) (h b)))^))	 @' (H0.(eissect) (g (H.(equiv_inv) (h b)))	     @' ap g (H.(eissect) b)) = H0.(eissect) (g b)	";
             responses[i]=data;
           
 
             i = 159;
-            data = "2 subgoals (ID 1276)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  ap H0.(equiv_inv)	    (p b @ ((p b)^ @ ap (fun b0 : B => k (f b0)) (H.(eissect) b)^))	  @' H0.(eissect) (f (H.(equiv_inv) (h b))) @ ap f (H.(eissect) b) =	  H0.(eissect) (f b)		subgoal 2 (ID 1249) is:	 ap H0.(equiv_inv)	   (q b @	    (ap (fun x : B => g' (h x)) (H.(eissect) b)^ @ (q (H.(equiv_inv) (h b)))^))	 @' H0.(eissect) (g (H.(equiv_inv) (h b))) @ ap g (H.(eissect) b) =	 H0.(eissect) (g b)	";
+            data = "2 subgoals (ID 1276)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  ap H0.(equiv_inv)	    (p b	     @' ((p b)^	         @' ap (fun b0 : B => k (f b0)) (H.(eissect) b)^))	  @' (H0.(eissect) (f (H.(equiv_inv) (h b)))	      @' ap f (H.(eissect) b)) = H0.(eissect) (f b)		subgoal 2 (ID 1249) is:	 ap H0.(equiv_inv)	   (q b	    @' (ap (fun x : B => g' (h x)) (H.(eissect) b)^	        @' (q (H.(equiv_inv) (h b)))^))	 @' (H0.(eissect) (g (H.(equiv_inv) (h b)))	     @' ap g (H.(eissect) b)) = H0.(eissect) (g b)	";
             responses[i]=data;
           
 
             i = 160;
-            data = "2 subgoals (ID 1276)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  ap H0.(equiv_inv)	    (p b @ ((p b)^ @ ap (fun b0 : B => k (f b0)) (H.(eissect) b)^))	  @' H0.(eissect) (f (H.(equiv_inv) (h b))) @ ap f (H.(eissect) b) =	  H0.(eissect) (f b)		subgoal 2 (ID 1309) is:	 ap H0.(equiv_inv)	   (q b @ ((q b)^ @ ap (fun b0 : B => k (g b0)) (H.(eissect) b)^))	 @' H0.(eissect) (g (H.(equiv_inv) (h b))) @ ap g (H.(eissect) b) =	 H0.(eissect) (g b)	";
+            data = "2 subgoals (ID 1276)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  ap H0.(equiv_inv)	    (p b	     @' ((p b)^	         @' ap (fun b0 : B => k (f b0)) (H.(eissect) b)^))	  @' (H0.(eissect) (f (H.(equiv_inv) (h b)))	      @' ap f (H.(eissect) b)) = H0.(eissect) (f b)		subgoal 2 (ID 1309) is:	 ap H0.(equiv_inv)	   (q b	    @' ((q b)^	        @' ap (fun b0 : B => k (g b0)) (H.(eissect) b)^))	 @' (H0.(eissect) (g (H.(equiv_inv) (h b)))	     @' ap g (H.(eissect) b)) = H0.(eissect) (g b)	";
             responses[i]=data;
           
 
             i = 161;
-            data = "2 subgoals (ID 1340)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  ap H0.(equiv_inv) (ap (fun b0 : B => k (f b0)) (H.(eissect) b)^) @	  H0.(eissect) (f (H.(equiv_inv) (h b)))	  @' ap f (H.(eissect) b) = H0.(eissect) (f b)		subgoal 2 (ID 1360) is:	 ap H0.(equiv_inv) (ap (fun b0 : B => k (g b0)) (H.(eissect) b)^) @	 H0.(eissect) (g (H.(equiv_inv) (h b)))	 @' ap g (H.(eissect) b) = H0.(eissect) (g b)	";
+            data = "2 subgoals (ID 1340)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  ap H0.(equiv_inv) (ap (fun b0 : B => k (f b0)) (H.(eissect) b)^)	  @' H0.(eissect) (f (H.(equiv_inv) (h b)))	  @' ap f (H.(eissect) b) = H0.(eissect) (f b)		subgoal 2 (ID 1360) is:	 ap H0.(equiv_inv) (ap (fun b0 : B => k (g b0)) (H.(eissect) b)^)	 @' H0.(eissect) (g (H.(equiv_inv) (h b)))	 @' ap g (H.(eissect) b) = H0.(eissect) (g b)	";
             responses[i]=data;
           
 
             i = 162;
-            data = "2 subgoals (ID 1433)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  ap (fun x : A => H0.(equiv_inv) (k x)) (ap f (H.(eissect) b)^) @	  H0.(eissect) (f (H.(equiv_inv) (h b)))	  @' ap f (H.(eissect) b) = H0.(eissect) (f b)		subgoal 2 (ID 1523) is:	 ap (fun x : A => H0.(equiv_inv) (k x)) (ap g (H.(eissect) b)^) @	 H0.(eissect) (g (H.(equiv_inv) (h b)))	 @' ap g (H.(eissect) b) = H0.(eissect) (g b)	";
+            data = "2 subgoals (ID 1433)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  ap (fun x : A => H0.(equiv_inv) (k x)) (ap f (H.(eissect) b)^)	  @' H0.(eissect) (f (H.(equiv_inv) (h b)))	  @' ap f (H.(eissect) b) = H0.(eissect) (f b)		subgoal 2 (ID 1523) is:	 ap (fun x : A => H0.(equiv_inv) (k x)) (ap g (H.(eissect) b)^)	 @' H0.(eissect) (g (H.(equiv_inv) (h b)))	 @' ap g (H.(eissect) b) = H0.(eissect) (g b)	";
             responses[i]=data;
           
 
             i = 163;
-            data = "2 subgoals (ID 1555)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  H0.(eissect) (f b) @ ap f (H.(eissect) b)^	  @' ap f (H.(eissect) b) = H0.(eissect) (f b)		subgoal 2 (ID 1574) is:	 H0.(eissect) (g b) @ ap g (H.(eissect) b)^	 @' ap g (H.(eissect) b) = H0.(eissect) (g b)	";
+            data = "2 subgoals (ID 1555)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  H0.(eissect) (f b)	  @' ap f (H.(eissect) b)^	  @' ap f (H.(eissect) b) = H0.(eissect) (f b)		subgoal 2 (ID 1574) is:	 H0.(eissect) (g b)	 @' ap g (H.(eissect) b)^	 @' ap g (H.(eissect) b) = H0.(eissect) (g b)	";
             responses[i]=data;
           
 
@@ -923,7 +923,7 @@
           
 
             i = 181;
-            data = "1 subgoal (ID 937)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Type	  coeq' : A -> A' -> P	  cpl : forall (b : B) (a' : A'), coeq' (f b) a' = coeq' (g b) a'	  cpr : forall (a : A) (b' : B'), coeq' a (f' b') = coeq' a (g' b')	  cplr : forall (b : B) (b' : B'),	         cpl b (f' b') @ cpr (g b) b' = cpr (f b) b' @ cpl b (g' b')	  ============================	  Coeq f g -> Coeq f' g' -> P	";
+            data = "";
             responses[i]=data;
           
 
@@ -1053,7 +1053,7 @@
           
 
             i = 207;
-            data = "1 subgoal (ID 966)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Type	  coeq' : A -> A' -> P	  cpl : forall (b : B) (a' : A'), coeq' (f b) a' = coeq' (g b) a'	  cpr : forall (a : A) (b' : B'), coeq' a (f' b') = coeq' a (g' b')	  cplr : forall (b : B) (b' : B'),	         cpl b (f' b') @ cpr (g b) b' = cpr (f b) b' @ cpl b (g' b')	  a : A	  b' : B'	  ============================	  ap (Coeq_rec2 (coeq a)) (cp b') = cpr a b'	";
+            data = "";
             responses[i]=data;
           
 
@@ -1073,7 +1073,7 @@
           
 
             i = 211;
-            data = "1 subgoal (ID 984)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Type	  coeq' : A -> A' -> P	  cpl : forall (b : B) (a' : A'), coeq' (f b) a' = coeq' (g b) a'	  cpr : forall (a : A) (b' : B'), coeq' a (f' b') = coeq' a (g' b')	  cplr : forall (b : B) (b' : B'),	         cpl b (f' b') @ cpr (g b) b' = cpr (f b) b' @ cpl b (g' b')	  b : B	  a' : A'	  ============================	  ap (fun x : Coeq f g => Coeq_rec2 x (coeq a')) (cp b) = cpl b a'	";
+            data = "";
             responses[i]=data;
           
 
@@ -1228,7 +1228,7 @@
           
 
             i = 242;
-            data = "1 subgoal (ID 1029)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Coeq f g -> Coeq f' g' -> Type	  coeq' : forall (a : A) (a' : A'), P (coeq a) (coeq a')	  cpl : forall (b : B) (a' : A'),	        transport (fun x : Coeq f g => P x (coeq a')) (cp b) (coeq' (f b) a') =	        coeq' (g b) a'	  cpr : forall (a : A) (b' : B'),	        transport (fun y : Coeq f' g' => P (coeq a) y) 	          (cp b') (coeq' a (f' b')) = coeq' a (g' b')	  cplr : forall (b : B) (b' : B'),	         ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b')) @	         cpr (g b) b' =	         (transport_transport P (cp b) (cp b') (coeq' (f b) (f' b')) @	          ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	            (cpr (f b) b')) @ cpl b (g' b')	  ============================	  forall (x : Coeq f g) (y : Coeq f' g'), P x y	";
+            data = "";
             responses[i]=data;
           
 
@@ -1343,12 +1343,12 @@
           
 
             i = 265;
-            data = "1 subgoal (ID 1125)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Coeq f g -> Coeq f' g' -> Type	  coeq' : forall (a : A) (a' : A'), P (coeq a) (coeq a')	  cpl : forall (b : B) (a' : A'),	        transport (fun x : Coeq f g => P x (coeq a')) (cp b) (coeq' (f b) a') =	        coeq' (g b) a'	  cpr : forall (a : A) (b' : B'),	        transport (fun y : Coeq f' g' => P (coeq a) y) 	          (cp b') (coeq' a (f' b')) = coeq' a (g' b')	  cplr : forall (b : B) (b' : B'),	         ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b'))	         @' cpr (g b) b' =	         transport_transport P (cp b) (cp b') (coeq' (f b) (f' b')) @	         ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	           (cpr (f b) b')	         @' cpl b (g' b')	  b : B	  b' : B'	  ============================	  (apD	     (transport (fun w : Coeq f g => forall y : Coeq f' g', P w y) 	        (cp b)	        (Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	           (fun b'0 : B' => cpr (f b) b'0))) (cp b'))^ @	  (ap (transport (P (coeq (g b))) (cp b'))	     (transport_forall_constant (cp b)	        (Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	           (fun b'0 : B' => cpr (f b) b'0)) (coeq (f' b'))) @	   ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b')))	  @' cpr (g b) b' =	  transport_forall_constant (cp b)	    (Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	       (fun b'0 : B' => cpr (f b) b'0)) (coeq (g' b'))	  @' cpl b (g' b')	";
+            data = "1 subgoal (ID 1125)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Coeq f g -> Coeq f' g' -> Type	  coeq' : forall (a : A) (a' : A'), P (coeq a) (coeq a')	  cpl : forall (b : B) (a' : A'),	        transport (fun x : Coeq f g => P x (coeq a')) (cp b) (coeq' (f b) a') =	        coeq' (g b) a'	  cpr : forall (a : A) (b' : B'),	        transport (fun y : Coeq f' g' => P (coeq a) y) 	          (cp b') (coeq' a (f' b')) = coeq' a (g' b')	  cplr : forall (b : B) (b' : B'),	         ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b'))	         @' cpr (g b) b' =	         transport_transport P (cp b) (cp b') (coeq' (f b) (f' b'))	         @' ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	              (cpr (f b) b')	         @' cpl b (g' b')	  b : B	  b' : B'	  ============================	  (apD	     (transport (fun w : Coeq f g => forall y : Coeq f' g', P w y) 	        (cp b)	        (Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	           (fun b'0 : B' => cpr (f b) b'0))) (cp b'))^	  @' (ap (transport (P (coeq (g b))) (cp b'))	        (transport_forall_constant (cp b)	           (Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	              (fun b'0 : B' => cpr (f b) b'0)) (coeq (f' b')))	      @' ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b')))	  @' cpr (g b) b' =	  transport_forall_constant (cp b)	    (Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	       (fun b'0 : B' => cpr (f b) b'0)) (coeq (g' b'))	  @' cpl b (g' b')	";
             responses[i]=data;
           
 
             i = 266;
-            data = "1 subgoal (ID 1133)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Coeq f g -> Coeq f' g' -> Type	  coeq' : forall (a : A) (a' : A'), P (coeq a) (coeq a')	  cpl : forall (b : B) (a' : A'),	        transport (fun x : Coeq f g => P x (coeq a')) (cp b) (coeq' (f b) a') =	        coeq' (g b) a'	  cpr : forall (a : A) (b' : B'),	        transport (fun y : Coeq f' g' => P (coeq a) y) 	          (cp b') (coeq' a (f' b')) = coeq' a (g' b')	  cplr : forall (b : B) (b' : B'),	         ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b'))	         @' cpr (g b) b' =	         transport_transport P (cp b) (cp b') (coeq' (f b) (f' b')) @	         ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	           (cpr (f b) b')	         @' cpl b (g' b')	  b : B	  b' : B'	  ============================	  ((apD	      (transport (fun w : Coeq f g => forall y : Coeq f' g', P w y) 	         (cp b)	         (Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	            (fun b'0 : B' => cpr (f b) b'0))) (cp b'))^ @	   ap (transport (P (coeq (g b))) (cp b'))	     (transport_forall_constant (cp b)	        (Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	           (fun b'0 : B' => cpr (f b) b'0)) (coeq (f' b')))) @	  ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b'))	  @' cpr (g b) b' =	  transport_forall_constant (cp b)	    (Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	       (fun b'0 : B' => cpr (f b) b'0)) (coeq (g' b'))	  @' cpl b (g' b')	";
+            data = "1 subgoal (ID 1133)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Coeq f g -> Coeq f' g' -> Type	  coeq' : forall (a : A) (a' : A'), P (coeq a) (coeq a')	  cpl : forall (b : B) (a' : A'),	        transport (fun x : Coeq f g => P x (coeq a')) (cp b) (coeq' (f b) a') =	        coeq' (g b) a'	  cpr : forall (a : A) (b' : B'),	        transport (fun y : Coeq f' g' => P (coeq a) y) 	          (cp b') (coeq' a (f' b')) = coeq' a (g' b')	  cplr : forall (b : B) (b' : B'),	         ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b'))	         @' cpr (g b) b' =	         transport_transport P (cp b) (cp b') (coeq' (f b) (f' b'))	         @' ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	              (cpr (f b) b')	         @' cpl b (g' b')	  b : B	  b' : B'	  ============================	  (apD	     (transport (fun w : Coeq f g => forall y : Coeq f' g', P w y) 	        (cp b)	        (Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	           (fun b'0 : B' => cpr (f b) b'0))) (cp b'))^	  @' ap (transport (P (coeq (g b))) (cp b'))	       (transport_forall_constant (cp b)	          (Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	             (fun b'0 : B' => cpr (f b) b'0)) (coeq (f' b')))	  @' ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b'))	  @' cpr (g b) b' =	  transport_forall_constant (cp b)	    (Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	       (fun b'0 : B' => cpr (f b) b'0)) (coeq (g' b'))	  @' cpl b (g' b')	";
             responses[i]=data;
           
 
@@ -1383,7 +1383,7 @@
           
 
             i = 273;
-            data = "1 subgoal (ID 1153)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Coeq f g -> Coeq f' g' -> Type	  coeq' : forall (a : A) (a' : A'), P (coeq a) (coeq a')	  cpl : forall (b : B) (a' : A'),	        transport (fun x : Coeq f g => P x (coeq a')) (cp b) (coeq' (f b) a') =	        coeq' (g b) a'	  cpr : forall (a : A) (b' : B'),	        transport (fun y : Coeq f' g' => P (coeq a) y) 	          (cp b') (coeq' a (f' b')) = coeq' a (g' b')	  cplr : forall (b : B) (b' : B'),	         ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b'))	         @' cpr (g b) b' =	         transport_transport P (cp b) (cp b') (coeq' (f b) (f' b')) @	         ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	           (cpr (f b) b')	         @' cpl b (g' b')	  b : B	  b' : B'	  G := Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	         (fun b'0 : B' => cpr (f b) b'0)	   : forall w : Coeq f' g', P (coeq (f b)) w	  ============================	  ((apD	      (transport (fun w : Coeq f g => forall y : Coeq f' g', P w y) (cp b) G)	      (cp b'))^ @	   ap (transport (P (coeq (g b))) (cp b'))	     (transport_forall_constant (cp b) G (coeq (f' b')))) @	  ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b'))	  @' cpr (g b) b' =	  transport_forall_constant (cp b) G (coeq (g' b'))	  @' cpl b (g' b')	";
+            data = "1 subgoal (ID 1153)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Coeq f g -> Coeq f' g' -> Type	  coeq' : forall (a : A) (a' : A'), P (coeq a) (coeq a')	  cpl : forall (b : B) (a' : A'),	        transport (fun x : Coeq f g => P x (coeq a')) (cp b) (coeq' (f b) a') =	        coeq' (g b) a'	  cpr : forall (a : A) (b' : B'),	        transport (fun y : Coeq f' g' => P (coeq a) y) 	          (cp b') (coeq' a (f' b')) = coeq' a (g' b')	  cplr : forall (b : B) (b' : B'),	         ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b'))	         @' cpr (g b) b' =	         transport_transport P (cp b) (cp b') (coeq' (f b) (f' b'))	         @' ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	              (cpr (f b) b')	         @' cpl b (g' b')	  b : B	  b' : B'	  G := Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	         (fun b'0 : B' => cpr (f b) b'0)	   : forall w : Coeq f' g', P (coeq (f b)) w	  ============================	  (apD	     (transport (fun w : Coeq f g => forall y : Coeq f' g', P w y) (cp b) G)	     (cp b'))^	  @' ap (transport (P (coeq (g b))) (cp b'))	       (transport_forall_constant (cp b) G (coeq (f' b')))	  @' ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b'))	  @' cpr (g b) b' =	  transport_forall_constant (cp b) G (coeq (g' b'))	  @' cpl b (g' b')	";
             responses[i]=data;
           
 
@@ -1448,12 +1448,12 @@
           
 
             i = 286;
-            data = "1 subgoal (ID 1183)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Coeq f g -> Coeq f' g' -> Type	  coeq' : forall (a : A) (a' : A'), P (coeq a) (coeq a')	  cpl : forall (b : B) (a' : A'),	        transport (fun x : Coeq f g => P x (coeq a')) (cp b) (coeq' (f b) a') =	        coeq' (g b) a'	  cpr : forall (a : A) (b' : B'),	        transport (fun y : Coeq f' g' => P (coeq a) y) 	          (cp b') (coeq' a (f' b')) = coeq' a (g' b')	  cplr : forall (b : B) (b' : B'),	         ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b'))	         @' cpr (g b) b' =	         transport_transport P (cp b) (cp b') (coeq' (f b) (f' b')) @	         ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	           (cpr (f b) b')	         @' cpl b (g' b')	  b : B	  b' : B'	  G := Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	         (fun b'0 : B' => cpr (f b) b'0)	   : forall w : Coeq f' g', P (coeq (f b)) w	  ============================	  ((((ap (transport (P (coeq (g b))) (cp b'))	        (transport_forall_constant (cp b) G (coeq (f' b'))) @	      transport_transport P (cp b) (cp b') (coeq' (f b) (f' b'))) @	     ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	       (apD G (cp b'))) @	    (transport_forall_constant (cp b) G (coeq (g' b')))^)^ @	   ap (transport (P (coeq (g b))) (cp b'))	     (transport_forall_constant (cp b) G (coeq (f' b')))) @	  ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b'))	  @' cpr (g b) b' =	  transport_forall_constant (cp b) G (coeq (g' b'))	  @' cpl b (g' b')	";
+            data = "1 subgoal (ID 1183)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Coeq f g -> Coeq f' g' -> Type	  coeq' : forall (a : A) (a' : A'), P (coeq a) (coeq a')	  cpl : forall (b : B) (a' : A'),	        transport (fun x : Coeq f g => P x (coeq a')) (cp b) (coeq' (f b) a') =	        coeq' (g b) a'	  cpr : forall (a : A) (b' : B'),	        transport (fun y : Coeq f' g' => P (coeq a) y) 	          (cp b') (coeq' a (f' b')) = coeq' a (g' b')	  cplr : forall (b : B) (b' : B'),	         ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b'))	         @' cpr (g b) b' =	         transport_transport P (cp b) (cp b') (coeq' (f b) (f' b'))	         @' ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	              (cpr (f b) b')	         @' cpl b (g' b')	  b : B	  b' : B'	  G := Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	         (fun b'0 : B' => cpr (f b) b'0)	   : forall w : Coeq f' g', P (coeq (f b)) w	  ============================	  (ap (transport (P (coeq (g b))) (cp b'))	     (transport_forall_constant (cp b) G (coeq (f' b')))	   @' transport_transport P (cp b) (cp b') (coeq' (f b) (f' b'))	   @' ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	        (apD G (cp b'))	   @' (transport_forall_constant (cp b) G (coeq (g' b')))^)^	  @' ap (transport (P (coeq (g b))) (cp b'))	       (transport_forall_constant (cp b) G (coeq (f' b')))	  @' ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b'))	  @' cpr (g b) b' =	  transport_forall_constant (cp b) G (coeq (g' b'))	  @' cpl b (g' b')	";
             responses[i]=data;
           
 
             i = 287;
-            data = "1 subgoal (ID 1210)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Coeq f g -> Coeq f' g' -> Type	  coeq' : forall (a : A) (a' : A'), P (coeq a) (coeq a')	  cpl : forall (b : B) (a' : A'),	        transport (fun x : Coeq f g => P x (coeq a')) (cp b) (coeq' (f b) a') =	        coeq' (g b) a'	  cpr : forall (a : A) (b' : B'),	        transport (fun y : Coeq f' g' => P (coeq a) y) 	          (cp b') (coeq' a (f' b')) = coeq' a (g' b')	  cplr : forall (b : B) (b' : B'),	         ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b'))	         @' cpr (g b) b' =	         transport_transport P (cp b) (cp b') (coeq' (f b) (f' b')) @	         ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	           (cpr (f b) b')	         @' cpl b (g' b')	  b : B	  b' : B'	  G := Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	         (fun b'0 : B' => cpr (f b) b'0)	   : forall w : Coeq f' g', P (coeq (f b)) w	  ============================	  ((transport_forall_constant (cp b) G (coeq (g' b')) @	    ((ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	        (apD G (cp b')))^ @	     ((transport_transport P (cp b) (cp b') (coeq' (f b) (f' b')))^ @	      (ap (transport (P (coeq (g b))) (cp b'))	         (transport_forall_constant (cp b) G (coeq (f' b'))))^))) @	   ap (transport (P (coeq (g b))) (cp b'))	     (transport_forall_constant (cp b) G (coeq (f' b')))) @	  ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b'))	  @' cpr (g b) b' =	  transport_forall_constant (cp b) G (coeq (g' b'))	  @' cpl b (g' b')	";
+            data = "1 subgoal (ID 1210)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Coeq f g -> Coeq f' g' -> Type	  coeq' : forall (a : A) (a' : A'), P (coeq a) (coeq a')	  cpl : forall (b : B) (a' : A'),	        transport (fun x : Coeq f g => P x (coeq a')) (cp b) (coeq' (f b) a') =	        coeq' (g b) a'	  cpr : forall (a : A) (b' : B'),	        transport (fun y : Coeq f' g' => P (coeq a) y) 	          (cp b') (coeq' a (f' b')) = coeq' a (g' b')	  cplr : forall (b : B) (b' : B'),	         ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b'))	         @' cpr (g b) b' =	         transport_transport P (cp b) (cp b') (coeq' (f b) (f' b'))	         @' ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	              (cpr (f b) b')	         @' cpl b (g' b')	  b : B	  b' : B'	  G := Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	         (fun b'0 : B' => cpr (f b) b'0)	   : forall w : Coeq f' g', P (coeq (f b)) w	  ============================	  transport_forall_constant (cp b) G (coeq (g' b'))	  @' ((ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	         (apD G (cp b')))^	      @' ((transport_transport P (cp b) (cp b') (coeq' (f b) (f' b')))^	          @' (ap (transport (P (coeq (g b))) (cp b'))	                (transport_forall_constant (cp b) G (coeq (f' b'))))^))	  @' ap (transport (P (coeq (g b))) (cp b'))	       (transport_forall_constant (cp b) G (coeq (f' b')))	  @' ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b'))	  @' cpr (g b) b' =	  transport_forall_constant (cp b) G (coeq (g' b'))	  @' cpl b (g' b')	";
             responses[i]=data;
           
 
@@ -1488,7 +1488,7 @@
           
 
             i = 294;
-            data = "1 subgoal (ID 1261)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Coeq f g -> Coeq f' g' -> Type	  coeq' : forall (a : A) (a' : A'), P (coeq a) (coeq a')	  cpl : forall (b : B) (a' : A'),	        transport (fun x : Coeq f g => P x (coeq a')) (cp b) (coeq' (f b) a') =	        coeq' (g b) a'	  cpr : forall (a : A) (b' : B'),	        transport (fun y : Coeq f' g' => P (coeq a) y) 	          (cp b') (coeq' a (f' b')) = coeq' a (g' b')	  cplr : forall (b : B) (b' : B'),	         ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b'))	         @' cpr (g b) b' =	         transport_transport P (cp b) (cp b') (coeq' (f b) (f' b')) @	         ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	           (cpr (f b) b')	         @' cpl b (g' b')	  b : B	  b' : B'	  G := Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	         (fun b'0 : B' => cpr (f b) b'0)	   : forall w : Coeq f' g', P (coeq (f b)) w	  ============================	  (ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	     (apD G (cp b')))^	  @' (transport_transport P (cp b) (cp b') (coeq' (f b) (f' b')))^ @	     ((ap (transport (P (coeq (g b))) (cp b'))	         (transport_forall_constant (cp b) G (coeq (f' b'))))^ @	      (ap (transport (P (coeq (g b))) (cp b'))	         (transport_forall_constant (cp b) G (coeq (f' b'))) @	       (ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b')) @	        cpr (g b) b'))) = cpl b (g' b')	";
+            data = "1 subgoal (ID 1261)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Coeq f g -> Coeq f' g' -> Type	  coeq' : forall (a : A) (a' : A'), P (coeq a) (coeq a')	  cpl : forall (b : B) (a' : A'),	        transport (fun x : Coeq f g => P x (coeq a')) (cp b) (coeq' (f b) a') =	        coeq' (g b) a'	  cpr : forall (a : A) (b' : B'),	        transport (fun y : Coeq f' g' => P (coeq a) y) 	          (cp b') (coeq' a (f' b')) = coeq' a (g' b')	  cplr : forall (b : B) (b' : B'),	         ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b'))	         @' cpr (g b) b' =	         transport_transport P (cp b) (cp b') (coeq' (f b) (f' b'))	         @' ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	              (cpr (f b) b')	         @' cpl b (g' b')	  b : B	  b' : B'	  G := Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	         (fun b'0 : B' => cpr (f b) b'0)	   : forall w : Coeq f' g', P (coeq (f b)) w	  ============================	  (ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	     (apD G (cp b')))^	  @' ((transport_transport P (cp b) (cp b') (coeq' (f b) (f' b')))^	      @' ((ap (transport (P (coeq (g b))) (cp b'))	             (transport_forall_constant (cp b) G (coeq (f' b'))))^	          @' (ap (transport (P (coeq (g b))) (cp b'))	                (transport_forall_constant (cp b) G (coeq (f' b')))	              @' (ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b'))	                  @' cpr (g b) b')))) = cpl b (g' b')	";
             responses[i]=data;
           
 
@@ -1523,7 +1523,7 @@
           
 
             i = 301;
-            data = "1 subgoal (ID 1300)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Coeq f g -> Coeq f' g' -> Type	  coeq' : forall (a : A) (a' : A'), P (coeq a) (coeq a')	  cpl : forall (b : B) (a' : A'),	        transport (fun x : Coeq f g => P x (coeq a')) (cp b) (coeq' (f b) a') =	        coeq' (g b) a'	  cpr : forall (a : A) (b' : B'),	        transport (fun y : Coeq f' g' => P (coeq a) y) 	          (cp b') (coeq' a (f' b')) = coeq' a (g' b')	  cplr : forall (b : B) (b' : B'),	         ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b'))	         @' cpr (g b) b' =	         transport_transport P (cp b) (cp b') (coeq' (f b) (f' b')) @	         ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	           (cpr (f b) b')	         @' cpl b (g' b')	  b : B	  b' : B'	  G := Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	         (fun b'0 : B' => cpr (f b) b'0)	   : forall w : Coeq f' g', P (coeq (f b)) w	  ============================	  ((ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	      (apD G (cp b')))^ @	   (transport_transport P (cp b) (cp b') (coeq' (f b) (f' b')))^) @	  ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b'))	  @' cpr (g b) b' = cpl b (g' b')	";
+            data = "1 subgoal (ID 1300)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Coeq f g -> Coeq f' g' -> Type	  coeq' : forall (a : A) (a' : A'), P (coeq a) (coeq a')	  cpl : forall (b : B) (a' : A'),	        transport (fun x : Coeq f g => P x (coeq a')) (cp b) (coeq' (f b) a') =	        coeq' (g b) a'	  cpr : forall (a : A) (b' : B'),	        transport (fun y : Coeq f' g' => P (coeq a) y) 	          (cp b') (coeq' a (f' b')) = coeq' a (g' b')	  cplr : forall (b : B) (b' : B'),	         ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b'))	         @' cpr (g b) b' =	         transport_transport P (cp b) (cp b') (coeq' (f b) (f' b'))	         @' ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	              (cpr (f b) b')	         @' cpl b (g' b')	  b : B	  b' : B'	  G := Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	         (fun b'0 : B' => cpr (f b) b'0)	   : forall w : Coeq f' g', P (coeq (f b)) w	  ============================	  (ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	     (apD G (cp b')))^	  @' (transport_transport P (cp b) (cp b') (coeq' (f b) (f' b')))^	  @' ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b'))	  @' cpr (g b) b' = cpl b (g' b')	";
             responses[i]=data;
           
 
@@ -1558,7 +1558,7 @@
           
 
             i = 308;
-            data = "1 subgoal (ID 1316)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Coeq f g -> Coeq f' g' -> Type	  coeq' : forall (a : A) (a' : A'), P (coeq a) (coeq a')	  cpl : forall (b : B) (a' : A'),	        transport (fun x : Coeq f g => P x (coeq a')) (cp b) (coeq' (f b) a') =	        coeq' (g b) a'	  cpr : forall (a : A) (b' : B'),	        transport (fun y : Coeq f' g' => P (coeq a) y) 	          (cp b') (coeq' a (f' b')) = coeq' a (g' b')	  cplr : forall (b : B) (b' : B'),	         ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b'))	         @' cpr (g b) b' =	         transport_transport P (cp b) (cp b') (coeq' (f b) (f' b')) @	         ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	           (cpr (f b) b')	         @' cpl b (g' b')	  b : B	  b' : B'	  ============================	  ((ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	      (cpr (f b) b'))^ @	   (transport_transport P (cp b) (cp b') (coeq' (f b) (f' b')))^) @	  ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b'))	  @' cpr (g b) b' = cpl b (g' b')	";
+            data = "1 subgoal (ID 1316)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Coeq f g -> Coeq f' g' -> Type	  coeq' : forall (a : A) (a' : A'), P (coeq a) (coeq a')	  cpl : forall (b : B) (a' : A'),	        transport (fun x : Coeq f g => P x (coeq a')) (cp b) (coeq' (f b) a') =	        coeq' (g b) a'	  cpr : forall (a : A) (b' : B'),	        transport (fun y : Coeq f' g' => P (coeq a) y) 	          (cp b') (coeq' a (f' b')) = coeq' a (g' b')	  cplr : forall (b : B) (b' : B'),	         ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b'))	         @' cpr (g b) b' =	         transport_transport P (cp b) (cp b') (coeq' (f b) (f' b'))	         @' ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	              (cpr (f b) b')	         @' cpl b (g' b')	  b : B	  b' : B'	  ============================	  (ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	     (cpr (f b) b'))^	  @' (transport_transport P (cp b) (cp b') (coeq' (f b) (f' b')))^	  @' ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b'))	  @' cpr (g b) b' = cpl b (g' b')	";
             responses[i]=data;
           
 
@@ -1583,7 +1583,7 @@
           
 
             i = 313;
-            data = "1 subgoal (ID 1354)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Coeq f g -> Coeq f' g' -> Type	  coeq' : forall (a : A) (a' : A'), P (coeq a) (coeq a')	  cpl : forall (b : B) (a' : A'),	        transport (fun x : Coeq f g => P x (coeq a')) (cp b) (coeq' (f b) a') =	        coeq' (g b) a'	  cpr : forall (a : A) (b' : B'),	        transport (fun y : Coeq f' g' => P (coeq a) y) 	          (cp b') (coeq' a (f' b')) = coeq' a (g' b')	  cplr : forall (b : B) (b' : B'),	         ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b'))	         @' cpr (g b) b' =	         transport_transport P (cp b) (cp b') (coeq' (f b) (f' b')) @	         ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	           (cpr (f b) b')	         @' cpl b (g' b')	  b : B	  b' : B'	  ============================	  ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b'))	  @' cpr (g b) b' =	  transport_transport P (cp b) (cp b') (coeq' (f b) (f' b')) @	  ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	    (cpr (f b) b')	  @' cpl b (g' b')	";
+            data = "1 subgoal (ID 1354)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Coeq f g -> Coeq f' g' -> Type	  coeq' : forall (a : A) (a' : A'), P (coeq a) (coeq a')	  cpl : forall (b : B) (a' : A'),	        transport (fun x : Coeq f g => P x (coeq a')) (cp b) (coeq' (f b) a') =	        coeq' (g b) a'	  cpr : forall (a : A) (b' : B'),	        transport (fun y : Coeq f' g' => P (coeq a) y) 	          (cp b') (coeq' a (f' b')) = coeq' a (g' b')	  cplr : forall (b : B) (b' : B'),	         ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b'))	         @' cpr (g b) b' =	         transport_transport P (cp b) (cp b') (coeq' (f b) (f' b'))	         @' ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	              (cpr (f b) b')	         @' cpl b (g' b')	  b : B	  b' : B'	  ============================	  ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b'))	  @' cpr (g b) b' =	  transport_transport P (cp b) (cp b') (coeq' (f b) (f' b'))	  @' ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	       (cpr (f b) b')	  @' cpl b (g' b')	";
             responses[i]=data;
           
 
@@ -1653,7 +1653,7 @@
           
 
             i = 327;
-            data = "1 subgoal (ID 948)	  	  B : Type	  A : Type	  f, g : B -> A	  ============================	  Sect (Coeq_sym_map g f) (Coeq_sym_map f g)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1693,7 +1693,7 @@
           
 
             i = 335;
-            data = "1 subgoal (ID 957)	  	  B : Type	  A : Type	  f, g : B -> A	  ============================	  Coeq f g <~> Coeq g f	";
+            data = "";
             responses[i]=data;
           
 

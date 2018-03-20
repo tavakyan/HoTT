@@ -188,7 +188,7 @@
           
 
             i = 34;
-            data = "1 subgoal (ID 28)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  ============================	  {OO : C.(object) -> D.(object) &	  {MO	  : forall s d : C.(object), C.(morphism) s d -> D.(morphism) (OO s) (OO d) &	  {_	  : forall (s d d' : C.(object)) (m1 : C.(morphism) s d)	    (m2 : C.(morphism) d d'),	    MO s d' (C.(compose) s d d' m2 m1) =	    D.(compose) (OO s) (OO d) (OO d') (MO d d' m2) (MO s d m1) &	  forall x : C.(object), MO x x (C.(identity) x) = D.(identity) (OO x)}}} <~>	  Functor C D	";
+            data = "";
             responses[i]=data;
           
 
@@ -368,7 +368,7 @@
           
 
             i = 70;
-            data = "1 subgoal (ID 54)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  ============================	  {HO : F.(object_of) = G.(object_of) &	  transport	    (fun GO : C.(object) -> D.(object) =>	     forall s d : C.(object), C.(morphism) s d -> D.(morphism) (GO s) (GO d))	    HO F.(morphism_of) = G.(morphism_of)} -> F = G	";
+            data = "";
             responses[i]=data;
           
 
@@ -438,7 +438,7 @@
           
 
             i = 84;
-            data = "1 subgoal (ID 76)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  HO : F.(object_of) = G.(object_of)	  HM : (fun HO : F.(object_of) = G.(object_of) =>	        transport	          (fun GO : C.(object) -> D.(object) =>	           forall s d : C.(object),	           C.(morphism) s d -> D.(morphism) (GO s) (GO d)) HO 	          F.(morphism_of) = G.(morphism_of)) HO	  ============================	  ap object_of (path_functor_uncurried F G (HO; HM)) = HO	";
+            data = "";
             responses[i]=data;
           
 
@@ -498,7 +498,7 @@
           
 
             i = 96;
-            data = "1 subgoal (ID 90)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  ============================	  path_functor_uncurried F F (1%path; 1%path) = 1%path	";
+            data = "";
             responses[i]=data;
           
 
@@ -643,7 +643,7 @@
           
 
             i = 125;
-            data = "1 subgoal (ID 214)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  HO : F.(object_of) == G.(object_of)	  HM : forall (s d : C.(object)) (m : C.(morphism) s d),	       transport	         (fun GO : C.(object) -> D.(object) =>	          forall s0 d0 : C.(object),	          C.(morphism) s0 d0 -> D.(morphism) (GO s0) (GO d0))	         (path_forall F.(object_of) G.(object_of) HO) 	         F.(morphism_of) s d m = G.(morphism_of) s d m	  ============================	  F = G	";
+            data = "";
             responses[i]=data;
           
 
@@ -698,12 +698,12 @@
           
 
             i = 136;
-            data = "";
+            data = "1 subgoal (ID 219)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  ============================	  IsEquiv (path_functor_uncurried F G)	";
             responses[i]=data;
           
 
             i = 137;
-            data = "1 subgoal (ID 219)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  ============================	  IsEquiv (path_functor_uncurried F G)	";
+            data = "";
             responses[i]=data;
           
 
@@ -773,7 +773,7 @@
           
 
             i = 151;
-            data = "1 subgoal (ID 273)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  p, q : F = G	  ============================	  ap object_of p = ap object_of q -> p = q	";
+            data = "";
             responses[i]=data;
           
 
@@ -798,12 +798,12 @@
           
 
             i = 156;
-            data = "";
+            data = "1 subgoal (ID 284)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  p, q : F = G	  ============================	  IsEquiv (path_path_functor_uncurried p q)	";
             responses[i]=data;
           
 
             i = 157;
-            data = "1 subgoal (ID 284)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F, G : Functor C D	  p, q : F = G	  ============================	  IsEquiv (path_path_functor_uncurried p q)	";
+            data = "";
             responses[i]=data;
           
 
@@ -898,12 +898,12 @@
           
 
             i = 176;
-            data = "";
+            data = "1 subgoal (ID 291)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  n : trunc_index	  H0 : IsTrunc n D.(object)	  H1 : forall s d : D.(object), IsTrunc n (D.(morphism) s d)	  ============================	  IsTrunc n (Functor C D)	";
             responses[i]=data;
           
 
             i = 177;
-            data = "1 subgoal (ID 291)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  n : trunc_index	  H0 : IsTrunc n D.(object)	  H1 : forall s d : D.(object), IsTrunc n (D.(morphism) s d)	  ============================	  IsTrunc n (Functor C D)	";
+            data = "";
             responses[i]=data;
           
 

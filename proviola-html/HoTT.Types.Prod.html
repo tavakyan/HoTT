@@ -453,7 +453,7 @@
           
 
             i = 87;
-            data = "1 subgoal (ID 50)	  	  A : Type	  B : Type	  z, z' : A * B	  pq : (z.(fst) = z'.(fst)) * (z.(snd) = z'.(snd))	  ============================	  z = z'	";
+            data = "";
             responses[i]=data;
           
 
@@ -558,7 +558,7 @@
           
 
             i = 108;
-            data = "1 subgoal (ID 121)	  	  A : Type	  B : Type	  z, z' : A * B	  p : z.(fst) = z'.(fst)	  q : z.(snd) = z'.(snd)	  ============================	  ap fst (path_prod z z' p q) = p	";
+            data = "";
             responses[i]=data;
           
 
@@ -593,7 +593,7 @@
           
 
             i = 115;
-            data = "1 subgoal (ID 154)	  	  A : Type	  B : Type	  z, z' : A * B	  p : z.(fst) = z'.(fst)	  q : z.(snd) = z'.(snd)	  ============================	  ap snd (path_prod z z' p q) = q	";
+            data = "";
             responses[i]=data;
           
 
@@ -628,7 +628,7 @@
           
 
             i = 122;
-            data = "1 subgoal (ID 182)	  	  A : Type	  B : Type	  z, z' : A * B	  p : z = z'	  ============================	  path_prod z z' (ap fst p) (ap snd p) = p	";
+            data = "";
             responses[i]=data;
           
 
@@ -653,7 +653,7 @@
           
 
             i = 127;
-            data = "1 subgoal (ID 230)	  	  A : Type	  B : Type	  C : Type	  f : A -> B -> C	  z, z' : A * B	  p : z.(fst) = z'.(fst)	  q : z.(snd) = z'.(snd)	  ============================	  ap (fun z0 : A * B => f z0.(fst) z0.(snd)) (path_prod z z' p q) =	  ap011 f p q	";
+            data = "";
             responses[i]=data;
           
 
@@ -693,7 +693,7 @@
           
 
             i = 135;
-            data = "1 subgoal (ID 285)	  	  A : Type	  B : Type	  P : A * B -> Type	  x, y : A * B	  H : (x.(fst) = y.(fst)) * (x.(snd) = y.(snd))	  Px : P x	  ============================	  transport P (path_prod_uncurried x y H) Px =	  transport (fun x0 : A => P (x0, y.(snd))) H.(fst)	    (transport (fun y0 : B => P (x.(fst), y0)) H.(snd) Px)	";
+            data = "";
             responses[i]=data;
           
 
@@ -748,12 +748,12 @@
           
 
             i = 146;
-            data = "";
+            data = "1 subgoal (ID 384)	  	  A : Type	  B : Type	  z, z' : A * B	  ============================	  IsEquiv (path_prod_uncurried z z')	";
             responses[i]=data;
           
 
             i = 147;
-            data = "1 subgoal (ID 384)	  	  A : Type	  B : Type	  z, z' : A * B	  ============================	  IsEquiv (path_prod_uncurried z z')	";
+            data = "";
             responses[i]=data;
           
 
@@ -833,7 +833,7 @@
           
 
             i = 163;
-            data = "1 subgoal (ID 460)	  	  A : Type	  B : Type	  z, z', z'' : A * B	  p : z.(fst) = z'.(fst)	  p' : z'.(fst) = z''.(fst)	  q : z.(snd) = z'.(snd)	  q' : z'.(snd) = z''.(snd)	  ============================	  path_prod z z'' (p @ p') (q @ q') =	  path_prod z z' p q @ path_prod z' z'' p' q'	";
+            data = "";
             responses[i]=data;
           
 
@@ -878,7 +878,7 @@
           
 
             i = 172;
-            data = "1 subgoal (ID 597)	  	  A : Type	  B : Type	  u, v, z, w : A * B	  p : u.(fst) = v.(fst)	  q : v.(fst) = z.(fst)	  r : z.(fst) = w.(fst)	  p' : u.(snd) = v.(snd)	  q' : v.(snd) = z.(snd)	  r' : z.(snd) = w.(snd)	  ============================	  (path_prod_pp u z w (p @ q) r (p' @ q') r' @	   whiskerR (path_prod_pp u v z p q p' q') (path_prod z w r r')) @	  concat_pp_p (path_prod u v p p') (path_prod v z q q') (path_prod z w r r') =	  (ap011 (path_prod u w) (concat_pp_p p q r) (concat_pp_p p' q' r') @	   path_prod_pp u v w p (q @ r) p' (q' @ r')) @	  whiskerL (path_prod u v p p') (path_prod_pp v z w q r q' r')	";
+            data = "";
             responses[i]=data;
           
 
@@ -983,7 +983,7 @@
           
 
             i = 193;
-            data = "1 subgoal (ID 700)	  	  A : Type	  A' : Type	  B : Type	  B' : Type	  f : A -> A'	  g : B -> B'	  z, z' : A * B	  p : z.(fst) = z'.(fst)	  q : z.(snd) = z'.(snd)	  ============================	  ap (functor_prod f g) (path_prod z z' p q) =	  path_prod (functor_prod f g z) (functor_prod f g z') (ap f p) (ap g q)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1048,12 +1048,12 @@
           
 
             i = 206;
-            data = "";
+            data = "1 subgoal (ID 721)	  	  A : Type	  A' : Type	  f : A -> A'	  H : IsEquiv f	  B : Type	  B' : Type	  g : B -> B'	  H0 : IsEquiv g	  ============================	  IsEquiv (functor_prod f g)	";
             responses[i]=data;
           
 
             i = 207;
-            data = "1 subgoal (ID 721)	  	  A : Type	  A' : Type	  f : A -> A'	  H : IsEquiv f	  B : Type	  B' : Type	  g : B -> B'	  H0 : IsEquiv g	  ============================	  IsEquiv (functor_prod f g)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1103,7 +1103,7 @@
           
 
             i = 217;
-            data = "1 subgoal (ID 736)	  	  A : Type	  A' : Type	  f : A -> A'	  H : IsEquiv f	  B : Type	  B' : Type	  g : B -> B'	  H0 : IsEquiv g	  ============================	  A * B <~> A' * B'	";
+            data = "";
             responses[i]=data;
           
 
@@ -1128,7 +1128,7 @@
           
 
             i = 222;
-            data = "1 subgoal (ID 743)	  	  A : Type	  A' : Type	  B : Type	  B' : Type	  f : A <~> A'	  g : B <~> B'	  ============================	  A * B <~> A' * B'	";
+            data = "";
             responses[i]=data;
           
 
@@ -1333,7 +1333,7 @@
           
 
             i = 263;
-            data = "1 subgoal (ID 848)	  	  X : Type	  ============================	  X * Unit <~> X	";
+            data = "";
             responses[i]=data;
           
 
@@ -1373,7 +1373,7 @@
           
 
             i = 271;
-            data = "1 subgoal (ID 851)	  	  X : Type	  ============================	  Unit * X <~> X	";
+            data = "";
             responses[i]=data;
           
 
@@ -1523,12 +1523,12 @@
           
 
             i = 301;
-            data = "";
+            data = "1 subgoal (ID 965)	  	  n : trunc_index	  A : Type	  H : IsTrunc n A	  B : Type	  H0 : IsTrunc n B	  ============================	  IsTrunc n (A * B)	";
             responses[i]=data;
           
 
             i = 302;
-            data = "1 subgoal (ID 965)	  	  n : trunc_index	  A : Type	  H : IsTrunc n A	  B : Type	  H0 : IsTrunc n B	  ============================	  IsTrunc n (A * B)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1603,12 +1603,12 @@
           
 
             i = 317;
-            data = "";
+            data = "1 subgoal (ID 972)	  	  A : Type	  B : Type	  H : Decidable A	  H0 : Decidable B	  ============================	  Decidable (A * B)	";
             responses[i]=data;
           
 
             i = 318;
-            data = "1 subgoal (ID 972)	  	  A : Type	  B : Type	  H : Decidable A	  H0 : Decidable B	  ============================	  Decidable (A * B)	";
+            data = "";
             responses[i]=data;
           
 

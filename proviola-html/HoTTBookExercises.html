@@ -118,7 +118,7 @@
           
 
             i = 20;
-            data = "1 subgoal (ID 48)	  	  ============================	  forall (A B C D : Type) (f : A -> B) (g : B -> C) 	  (h : C -> D), h o (g o f) = h o g o f	";
+            data = "";
             responses[i]=data;
           
 
@@ -213,7 +213,7 @@
           
 
             i = 39;
-            data = "1 subgoal (ID 60)	  	  A : Type	  B : Type	  prod_rec_proj := fun (C : Type) (g : A -> B -> C) (p : A * B) =>	                   g p.(fst) p.(snd)	   : forall C : Type, (A -> B -> C) -> A * B -> C	  ============================	  fst = prod_rec_proj A (fun (a : A) (_ : B) => a)	";
+            data = "";
             responses[i]=data;
           
 
@@ -233,7 +233,7 @@
           
 
             i = 43;
-            data = "1 subgoal (ID 67)	  	  A : Type	  B : Type	  prod_rec_proj := fun (C : Type) (g : A -> B -> C) (p : A * B) =>	                   g p.(fst) p.(snd)	   : forall C : Type, (A -> B -> C) -> A * B -> C	  ============================	  snd = prod_rec_proj B (fun _ : A => idmap)	";
+            data = "";
             responses[i]=data;
           
 
@@ -328,7 +328,7 @@
           
 
             i = 62;
-            data = "1 subgoal (ID 59)	  	  A : Type	  B : A -> Type	  sig_rec_proj := fun (C : Type) (g : forall x : A, B x -> C)	                    (p : {x : A & B x}) => g p.(proj1_sig) p.(proj2_sig)	   : forall C : Type, (forall x : A, B x -> C) -> {x : A & B x} -> C	  ============================	  pr1 = sig_rec_proj A (fun (a : A) (_ : B a) => a)	";
+            data = "";
             responses[i]=data;
           
 
@@ -428,7 +428,7 @@
           
 
             i = 82;
-            data = "1 subgoal (ID 70)	  	  A : Type	  B : Type	  prod_ind_eta := fun (C : A * B -> Type)	                    (g : forall (x : A) (y : B), C (x, y)) 	                    (x : A * B) =>	                  transport C (eta_prod x) (g x.(fst) x.(snd))	   : forall C : A * B -> Type,	     (forall (x : A) (y : B), C (x, y)) -> forall x : A * B, C x	  ============================	  forall (C : A * B -> Type) (g : forall (x : A) (y : B), C (x, y)) 	  (a : A) (b : B), prod_ind_eta C g (a, b) = g a b	";
+            data = "";
             responses[i]=data;
           
 
@@ -483,7 +483,7 @@
           
 
             i = 93;
-            data = "1 subgoal (ID 74)	  	  A : Type	  B : A -> Type	  sig_ind_eta := fun (C : {a : A & B a} -> Type)	                   (g : forall (a : A) (b : B a), C (a; b))	                   (x : {a : A & B a}) =>	                 transport C (eta_sigma x) (g x.(proj1_sig) x.(proj2_sig))	   : forall C : {a : A & B a} -> Type,	     (forall (a : A) (b : B a), C (a; b)) -> forall x : {a : A & B a}, C x	  ============================	  forall (C : {a : A & B a} -> Type) (g : forall (a : A) (b : B a), C (a; b))	  (a : A) (b : (fun a0 : A => B a0) a), sig_ind_eta C g (a; b) = g a b	";
+            data = "";
             responses[i]=data;
           
 
@@ -1673,7 +1673,7 @@
           
 
             i = 331;
-            data = "1 subgoal (ID 334)	  	  H : Univalence	  A : Type	  B : Type	  ============================	  A <~> B -> IsHSet A -> IsHSet B	";
+            data = "";
             responses[i]=data;
           
 
@@ -1703,7 +1703,7 @@
           
 
             i = 337;
-            data = "1 subgoal (ID 370)	  	  A : Type	  B : Type	  f : A -> B	  g : B -> A	  alpha : Sect g f	  x, y : B	  p : x = y	  ============================	  p = ((alpha x)^ @ ap f (ap g p)) @ alpha y	";
+            data = "";
             responses[i]=data;
           
 
@@ -1743,7 +1743,7 @@
           
 
             i = 345;
-            data = "1 subgoal (ID 379)	  	  A : Type	  B : Type	  f : A -> B	  g : B -> A	  ============================	  Sect g f -> IsHSet A -> IsHSet B	";
+            data = "";
             responses[i]=data;
           
 
@@ -1828,7 +1828,7 @@
           
 
             i = 362;
-            data = "1 subgoal (ID 384)	  	  A : Type	  B : Type	  ============================	  A <~> B -> IsHSet A -> IsHSet B	";
+            data = "";
             responses[i]=data;
           
 
@@ -1908,7 +1908,7 @@
           
 
             i = 378;
-            data = "1 subgoal (ID 387)	  	  A : Type	  B : Type	  ============================	  IsHSet A -> IsHSet B -> IsHSet (A + B)	";
+            data = "";
             responses[i]=data;
           
 
@@ -2023,7 +2023,7 @@
           
 
             i = 401;
-            data = "1 subgoal (ID 391)	  	  A : Type	  B : A -> Type	  ============================	  IsHSet A -> (forall x : A, IsHSet (B x)) -> IsHSet {x : A & B x}	";
+            data = "";
             responses[i]=data;
           
 
@@ -2083,7 +2083,7 @@
           
 
             i = 413;
-            data = "1 subgoal (ID 394)	  	  H : Funext	  A : Type	  ============================	  IsHProp A <-> Contr (A -> A)	";
+            data = "";
             responses[i]=data;
           
 
@@ -2173,7 +2173,7 @@
           
 
             i = 431;
-            data = "1 subgoal (ID 397)	  	  H : Funext	  A : Type	  ============================	  IsHProp A -> IsHProp (A + (~ A))	";
+            data = "";
             responses[i]=data;
           
 
@@ -2238,7 +2238,7 @@
           
 
             i = 444;
-            data = "1 subgoal (ID 400)	  	  A : Type	  B : Type	  ============================	  IsHProp A -> IsHProp B -> ~ A * B -> IsHProp (A + B)	";
+            data = "";
             responses[i]=data;
           
 
@@ -2328,17 +2328,17 @@
           
 
             i = 462;
-            data = "1 subgoal (ID 403)	  	  H : Univalence	  ============================	  LEM -> -1 -Type <~> Bool	";
+            data = "1 subgoal (ID 403)	  	  H : Univalence	  ============================	  LEM -> hProp <~> Bool	";
             responses[i]=data;
           
 
             i = 463;
-            data = "1 subgoal (ID 403)	  	  H : Univalence	  ============================	  LEM -> -1 -Type <~> Bool	";
+            data = "";
             responses[i]=data;
           
 
             i = 464;
-            data = "1 subgoal (ID 404)	  	  H : Univalence	  lem : LEM	  ============================	  -1 -Type <~> Bool	";
+            data = "1 subgoal (ID 404)	  	  H : Univalence	  lem : LEM	  ============================	  hProp <~> Bool	";
             responses[i]=data;
           
 
@@ -2408,42 +2408,42 @@
           
 
             i = 478;
-            data = "1 subgoal (ID 408)	  	  H : Univalence	  lem : LEM	  ============================	  Sect (LEM_hProp_Bool lem) is_true	1 subgoal (ID 433)	  	  H : Univalence	  lem : LEM	  ============================	  forall x : -1 -Type, is_true (LEM_hProp_Bool lem x) = x	";
+            data = "1 subgoal (ID 408)	  	  H : Univalence	  lem : LEM	  ============================	  Sect (LEM_hProp_Bool lem) is_true	1 subgoal (ID 433)	  	  H : Univalence	  lem : LEM	  ============================	  forall x : hProp, is_true (LEM_hProp_Bool lem x) = x	";
             responses[i]=data;
           
 
             i = 479;
-            data = "1 subgoal (ID 434)	  	  H : Univalence	  lem : LEM	  hprop : -1 -Type	  ============================	  is_true (LEM_hProp_Bool lem hprop) = hprop	";
+            data = "1 subgoal (ID 434)	  	  H : Univalence	  lem : LEM	  hprop : hProp	  ============================	  is_true (LEM_hProp_Bool lem hprop) = hprop	";
             responses[i]=data;
           
 
             i = 480;
-            data = "1 subgoal (ID 435)	  	  H : Univalence	  lem : LEM	  hprop : -1 -Type	  ============================	  is_true	    match lem hprop.(trunctype_type) hprop.(istrunc_trunctype_type) with	    | inl _ => true	    | inr _ => false	    end = hprop	";
+            data = "1 subgoal (ID 435)	  	  H : Univalence	  lem : LEM	  hprop : hProp	  ============================	  is_true	    match lem hprop.(trunctype_type) hprop.(istrunc_trunctype_type) with	    | inl _ => true	    | inr _ => false	    end = hprop	";
             responses[i]=data;
           
 
             i = 481;
-            data = "2 subgoals (ID 437)	  	  H : Univalence	  lem : LEM	  hprop : -1 -Type	  ============================	  hprop.(trunctype_type) -> is_true true = hprop		subgoal 2 (ID 438) is:	 ~ hprop.(trunctype_type) -> is_true false = hprop	";
+            data = "2 subgoals (ID 437)	  	  H : Univalence	  lem : LEM	  hprop : hProp	  ============================	  hprop.(trunctype_type) -> is_true true = hprop		subgoal 2 (ID 438) is:	 ~ hprop.(trunctype_type) -> is_true false = hprop	";
             responses[i]=data;
           
 
             i = 482;
-            data = "1 subgoal (ID 437)	  	  H : Univalence	  lem : LEM	  hprop : -1 -Type	  ============================	  hprop.(trunctype_type) -> is_true true = hprop	1 subgoal (ID 439)	  	  H : Univalence	  lem : LEM	  hprop : -1 -Type	  p : hprop.(trunctype_type)	  ============================	  is_true true = hprop	";
+            data = "1 subgoal (ID 437)	  	  H : Univalence	  lem : LEM	  hprop : hProp	  ============================	  hprop.(trunctype_type) -> is_true true = hprop	1 subgoal (ID 439)	  	  H : Univalence	  lem : LEM	  hprop : hProp	  p : hprop.(trunctype_type)	  ============================	  is_true true = hprop	";
             responses[i]=data;
           
 
             i = 483;
-            data = "1 subgoal (ID 444)	  	  H : Univalence	  lem : LEM	  hprop : -1 -Type	  p : hprop.(trunctype_type)	  ============================	  Unit <~> hprop.(trunctype_type)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 438)		subgoal 1 (ID 438) is:	 ~ hprop.(trunctype_type) -> is_true false = hprop	";
+            data = "1 subgoal (ID 444)	  	  H : Univalence	  lem : LEM	  hprop : hProp	  p : hprop.(trunctype_type)	  ============================	  Unit <~> hprop.(trunctype_type)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 438)		subgoal 1 (ID 438) is:	 ~ hprop.(trunctype_type) -> is_true false = hprop	";
             responses[i]=data;
           
 
             i = 484;
-            data = "1 subgoal (ID 438)	  	  H : Univalence	  lem : LEM	  hprop : -1 -Type	  ============================	  ~ hprop.(trunctype_type) -> is_true false = hprop	1 subgoal (ID 450)	  	  H : Univalence	  lem : LEM	  hprop : -1 -Type	  np : ~ hprop.(trunctype_type)	  ============================	  is_true false = hprop	";
+            data = "1 subgoal (ID 438)	  	  H : Univalence	  lem : LEM	  hprop : hProp	  ============================	  ~ hprop.(trunctype_type) -> is_true false = hprop	1 subgoal (ID 450)	  	  H : Univalence	  lem : LEM	  hprop : hProp	  np : ~ hprop.(trunctype_type)	  ============================	  is_true false = hprop	";
             responses[i]=data;
           
 
             i = 485;
-            data = "1 subgoal (ID 455)	  	  H : Univalence	  lem : LEM	  hprop : -1 -Type	  np : ~ hprop.(trunctype_type)	  ============================	  Empty <~> hprop.(trunctype_type)	No more subgoals.	";
+            data = "1 subgoal (ID 455)	  	  H : Univalence	  lem : LEM	  hprop : hProp	  np : ~ hprop.(trunctype_type)	  ============================	  Empty <~> hprop.(trunctype_type)	No more subgoals.	";
             responses[i]=data;
           
 
@@ -2548,7 +2548,7 @@
           
 
             i = 506;
-            data = "1 subgoal (ID 418)	  	  ============================	  (forall A : Type, A + (~ A)) ->	  forall (X : Type) (A : X -> Type) (P : forall x : X, A x -> Type),	  (forall x : X, ~~ {a : A x & P x a}) ->	  {g : forall x : X, A x & forall x : X, P x (g x)}	";
+            data = "";
             responses[i]=data;
           
 
@@ -2583,7 +2583,7 @@
           
 
             i = 513;
-            data = "1 subgoal (ID 435)	  	  H : Funext	  ============================	  (forall A : Type, A + (~ A)) ->	  forall (X : Type) (A : X -> Type) (P : forall x : X, A x -> Type),	  IsHSet X ->	  (forall x : X, IsHSet (A x)) ->	  (forall (x : X) (a : A x), IsHProp (P x a)) ->	  (forall x : X, (merely {a : A x & P x a}).(trunctype_type)) ->	  (merely {g : forall x : X, A x & forall x : X, P x (g x)}).(trunctype_type)	";
+            data = "";
             responses[i]=data;
           
 
@@ -2678,7 +2678,7 @@
           
 
             i = 532;
-            data = "1 subgoal (ID 485)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + (~ A)	  ============================	  forall (A : Type) (P : ~~ A -> Type),	  (forall a : A, P (fun na : ~ A => na a)) ->	  (forall (x y : ~~ A) (z : P x) (w : P y),	   transport P (path_ishprop x y) z = w) -> forall x : ~~ A, P x	";
+            data = "";
             responses[i]=data;
           
 
@@ -2773,7 +2773,7 @@
           
 
             i = 551;
-            data = "1 subgoal (ID 488)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + (~ A)	  A : Type	  ============================	  (merely A).(trunctype_type) <~> ~~ A	";
+            data = "";
             responses[i]=data;
           
 
@@ -2783,12 +2783,12 @@
           
 
             i = 553;
-            data = "1 subgoal (ID 536)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + (~ A)	  A : Type	  ============================	  (merely A).(trunctype_type) -> ~~ A	";
+            data = "1 subgoal (ID 536)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + (~ A)	  A : Type	  ============================	  (merely A).(trunctype_type) -> ~~ A	1 subgoal (ID 585)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + (~ A)	  A : Type	  ============================	  A -> ~~ A	";
             responses[i]=data;
           
 
             i = 554;
-            data = "1 subgoal (ID 585)	  	  H : Funext	  LEM : forall A : Type, IsHProp A -> A + (~ A)	  A : Type	  ============================	  A -> ~~ A	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 537)		subgoal 1 (ID 537) is:	 ~~ A -> (merely A).(trunctype_type)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 537)		subgoal 1 (ID 537) is:	 ~~ A -> (merely A).(trunctype_type)	";
             responses[i]=data;
           
 
@@ -3148,12 +3148,12 @@
           
 
             i = 626;
-            data = "";
+            data = "1 subgoal (ID 432)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : B -> C	  h : C -> D	  H : IsEquiv (g o f)	  H0 : IsEquiv (h o g)	  ============================	  IsEquiv g	";
             responses[i]=data;
           
 
             i = 627;
-            data = "1 subgoal (ID 432)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : B -> C	  h : C -> D	  H : IsEquiv (g o f)	  H0 : IsEquiv (h o g)	  ============================	  IsEquiv g	";
+            data = "";
             responses[i]=data;
           
 
@@ -3183,12 +3183,12 @@
           
 
             i = 633;
-            data = "";
+            data = "1 subgoal (ID 435)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : B -> C	  h : C -> D	  H : IsEquiv (g o f)	  H0 : IsEquiv (h o g)	  ============================	  IsEquiv f	";
             responses[i]=data;
           
 
             i = 634;
-            data = "1 subgoal (ID 435)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : B -> C	  h : C -> D	  H : IsEquiv (g o f)	  H0 : IsEquiv (h o g)	  ============================	  IsEquiv f	";
+            data = "";
             responses[i]=data;
           
 
@@ -3208,12 +3208,12 @@
           
 
             i = 638;
-            data = "";
+            data = "1 subgoal (ID 438)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : B -> C	  h : C -> D	  H : IsEquiv (g o f)	  H0 : IsEquiv (h o g)	  ============================	  IsEquiv h	";
             responses[i]=data;
           
 
             i = 639;
-            data = "1 subgoal (ID 438)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : B -> C	  h : C -> D	  H : IsEquiv (g o f)	  H0 : IsEquiv (h o g)	  ============================	  IsEquiv h	";
+            data = "";
             responses[i]=data;
           
 
@@ -3238,7 +3238,7 @@
           
 
             i = 644;
-            data = "1 subgoal (ID 459)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : B -> C	  h : C -> D	  H : IsEquiv (g o f)	  H0 : IsEquiv (h o g)	  ============================	  IsEquiv (h o g o f)	";
+            data = "";
             responses[i]=data;
           
 
@@ -3323,7 +3323,7 @@
           
 
             i = 661;
-            data = "1 subgoal (ID 460)	  	  A : Type	  B : Type	  f : A -> B	  ============================	  is_qinv f -> IsEquiv f	";
+            data = "";
             responses[i]=data;
           
 
@@ -3363,7 +3363,7 @@
           
 
             i = 669;
-            data = "1 subgoal (ID 513)	  	  qua : QInv_Univalence_type	  A : Type	  B : Type	  w : A -> B	  H0 : IsEquiv w	  C : Type	  ============================	  IsEquiv (fun g : C -> A => w o g)	";
+            data = "";
             responses[i]=data;
           
 
@@ -3408,12 +3408,12 @@
           
 
             i = 678;
-            data = "";
+            data = "1 subgoal (ID 560)	  	  qua : QInv_Univalence_type	  A : Type	  B : Type	  ============================	  IsEquiv (fun g : A -> {xy : B * B & xy.(fst) = xy.(snd)} => fst o pr1 o g)	";
             responses[i]=data;
           
 
             i = 679;
-            data = "1 subgoal (ID 560)	  	  qua : QInv_Univalence_type	  A : Type	  B : Type	  ============================	  IsEquiv (fun g : A -> {xy : B * B & xy.(fst) = xy.(snd)} => fst o pr1 o g)	";
+            data = "";
             responses[i]=data;
           
 
@@ -3433,12 +3433,12 @@
           
 
             i = 683;
-            data = "";
+            data = "1 subgoal (ID 607)	  	  qua : QInv_Univalence_type	  A : Type	  B : Type	  ============================	  IsEquiv (fun g : A -> {xy : B * B & xy.(fst) = xy.(snd)} => snd o pr1 o g)	";
             responses[i]=data;
           
 
             i = 684;
-            data = "1 subgoal (ID 607)	  	  qua : QInv_Univalence_type	  A : Type	  B : Type	  ============================	  IsEquiv (fun g : A -> {xy : B * B & xy.(fst) = xy.(snd)} => snd o pr1 o g)	";
+            data = "";
             responses[i]=data;
           
 
@@ -3463,7 +3463,7 @@
           
 
             i = 689;
-            data = "1 subgoal (ID 614)	  	  qua : QInv_Univalence_type	  A : Type	  B : Type	  ============================	  forall f g : A -> B, f == g -> f = g	";
+            data = "";
             responses[i]=data;
           
 
@@ -3558,7 +3558,7 @@
           
 
             i = 708;
-            data = "1 subgoal (ID 404)	  	  qua1 : QInv_Univalence_type	  qua2 : QInv_Univalence_type	  ============================	  WeakFunext	";
+            data = "";
             responses[i]=data;
           
 
@@ -3703,12 +3703,12 @@
           
 
             i = 737;
-            data = "";
+            data = "1 subgoal (ID 435)	  	  fa : Funext_type	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : B -> A	  g : forall b : B, P (f b) -> Q b	  H : IsEquiv f	  H0 : forall b : B, IsEquiv (g b)	  ============================	  IsEquiv (functor_forall f g)	";
             responses[i]=data;
           
 
             i = 738;
-            data = "1 subgoal (ID 435)	  	  fa : Funext_type	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : B -> A	  g : forall b : B, P (f b) -> Q b	  H : IsEquiv f	  H0 : forall b : B, IsEquiv (g b)	  ============================	  IsEquiv (functor_forall f g)	";
+            data = "";
             responses[i]=data;
           
 
@@ -3773,7 +3773,7 @@
           
 
             i = 751;
-            data = "1 subgoal (ID 412)	  	  qua1 : QInv_Univalence_type	  qua2 : QInv_Univalence_type	  qua3 : QInv_Univalence_type	  ============================	  ~ IsHProp (forall A : {X : Type & X = X}, A = A)	";
+            data = "";
             responses[i]=data;
           
 
@@ -3903,7 +3903,7 @@
           
 
             i = 777;
-            data = "1 subgoal (ID 447)	  	  qua : QInv_Univalence_type	  A : Type	  B : Type	  f : qinv A B	  ============================	  (fun x : B =>	   ap f.(proj2_sig).(proj1_sig) (f.(proj2_sig).(proj2_sig).(fst) x)) =	  (fun x : B => f.(proj2_sig).(proj2_sig).(snd) (f.(proj2_sig).(proj1_sig) x))	";
+            data = "";
             responses[i]=data;
           
 
@@ -3933,7 +3933,7 @@
           
 
             i = 783;
-            data = "1 subgoal (ID 451)	  	  qua1 : QInv_Univalence_type	  qua2 : QInv_Univalence_type	  qua3 : QInv_Univalence_type	  ============================	  Empty	";
+            data = "";
             responses[i]=data;
           
 
@@ -4103,7 +4103,7 @@
           
 
             i = 817;
-            data = "1 subgoal (ID 459)	  	  ez := true : Bool	  es := fun _ : nat => idmap : nat -> Bool -> Bool	  ============================	  forall n : nat, Book_5_2_i n = Book_5_2_ii n	";
+            data = "";
             responses[i]=data;
           
 
@@ -4338,7 +4338,7 @@
           
 
             i = 864;
-            data = "1 subgoal (ID 463)	  	  ind_nat := fun (P : nat -> Type)	               (x : P 0 * (forall n : nat, P n -> P n.+1)) =>	             nat_ind P x.(fst) x.(snd)	   : forall P : nat -> Type,	     P 0 * (forall n : nat, P n -> P n.+1) -> forall n : nat, P n	  fs : Funext	  ============================	  ~ (forall P : nat -> Type, IsEquiv (ind_nat P))	";
+            data = "";
             responses[i]=data;
           
 
@@ -4853,7 +4853,7 @@
           
 
             i = 967;
-            data = "1 subgoal (ID 455)	  	  LEM : forall A : Type, IsHProp A -> A + (~ A)	  ua : Univalence	  ============================	  forall X : Type, X -> X	";
+            data = "";
             responses[i]=data;
           
 
@@ -4933,7 +4933,7 @@
           
 
             i = 983;
-            data = "1 subgoal (ID 466)	  	  LEM : forall A : Type, IsHProp A -> A + (~ A)	  f : {f : Bool <~> Bool & ~ (forall x : Bool, f.(equiv_fun) x = x)}	  ============================	  forall b : Bool, f.(proj1_sig).(equiv_fun) b <> b	";
+            data = "";
             responses[i]=data;
           
 
@@ -4978,7 +4978,7 @@
           
 
             i = 992;
-            data = "1 subgoal (ID 472)	  	  LEM : forall A : Type, IsHProp A -> A + (~ A)	  ua : Univalence	  fs : Funext	  ============================	  Book_6_9 Bool = negb	";
+            data = "";
             responses[i]=data;
           
 
@@ -5088,7 +5088,7 @@
           
 
             i = 1014;
-            data = "1 subgoal (ID 483)	  	  LEM : forall A : Type, IsHProp A -> A + (~ A)	  H : Funext	  f : AllExistsOther Bool	  ============================	  centerAllExOthBool = f	";
+            data = "";
             responses[i]=data;
           
 
@@ -5143,7 +5143,7 @@
           
 
             i = 1025;
-            data = "1 subgoal (ID 489)	  	  LEM : forall A : Type, IsHProp A -> A + (~ A)	  H : Funext	  ============================	  forall X : Type, X -> X	";
+            data = "";
             responses[i]=data;
           
 
@@ -5178,7 +5178,7 @@
           
 
             i = 1032;
-            data = "1 subgoal (ID 495)	  	  LEM : forall A : Type, IsHProp A -> A + (~ A)	  H : Funext	  ============================	  solution_6_9 Bool <> idmap	";
+            data = "";
             responses[i]=data;
           
 
@@ -5358,7 +5358,7 @@
           
 
             i = 1068;
-            data = "1 subgoal (ID 456)	  	  H : forall A : Type, (merely A).(trunctype_type) -> A	  A : Type	  ============================	  IsHSet A	";
+            data = "";
             responses[i]=data;
           
 
@@ -5408,7 +5408,7 @@
           
 
             i = 1078;
-            data = "1 subgoal (ID 467)	  	  H : forall (A B : Type) (f : A -> B),	      (forall b : B, (merely (hfiber f b)).(trunctype_type)) ->	      forall b : B, hfiber f b	  ============================	  forall A : Type, IsHSet A	";
+            data = "";
             responses[i]=data;
           
 

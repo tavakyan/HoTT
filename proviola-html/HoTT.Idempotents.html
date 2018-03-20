@@ -413,7 +413,7 @@
           
 
             i = 79;
-            data = "1 subgoal (ID 14)	  	  X : Type	  Y : Type	  f : X -> Y	  feq : IsEquiv f	  ============================	  RetractOf X -> RetractOf Y	";
+            data = "";
             responses[i]=data;
           
 
@@ -443,7 +443,7 @@
           
 
             i = 85;
-            data = "1 subgoal (ID 32)	  	  X : Type	  R : RetractOf X	  B : Type	  f : R.(retract_type) -> B	  feq : IsEquiv f	  ============================	  RetractOf X	";
+            data = "";
             responses[i]=data;
           
 
@@ -493,7 +493,7 @@
           
 
             i = 95;
-            data = "1 subgoal (ID 64)	  	  X : Type	  Y : Type	  R : RetractOf X	  f : X -> Y	  g : R.(retract_type) -> Y	  p : g o R.(retract_retr) == f	  y : Y	  ============================	  RetractOf (hfiber f y)	";
+            data = "";
             responses[i]=data;
           
 
@@ -553,12 +553,12 @@
           
 
             i = 107;
-            data = "1 subgoal (ID 153)	  	  X : Type	  Y : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  f : X -> Y	  g : A -> Y	  p : (fun x : X => g (r x)) == f	  y : Y	  a : A	  q : g a = y	  ============================	  transport (fun x : A => g x = y) (H a)	    (p (s a) @ (((p (s a))^ @ ap g (H a)) @ q)) = q	No more subgoals.	";
+            data = "1 subgoal (ID 153)	  	  X : Type	  Y : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  f : X -> Y	  g : A -> Y	  p : (fun x : X => g (r x)) == f	  y : Y	  a : A	  q : g a = y	  ============================	  transport (fun x : A => g x = y) (H a)	    (p (s a) @ (((p (s a))^ @ ap g (H a)) @ q)) = q	";
             responses[i]=data;
           
 
             i = 108;
-            data = "<infomsg>retractof_hfiber is defined</infomsg>	";
+            data = "No more subgoals.	<infomsg>retractof_hfiber is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -588,7 +588,7 @@
           
 
             i = 114;
-            data = "1 subgoal (ID 69)	  	  X : Type	  R : RetractOf X	  contra : Contr X	  ============================	  Contr R.(retract_type)	";
+            data = "";
             responses[i]=data;
           
 
@@ -688,7 +688,7 @@
           
 
             i = 134;
-            data = "1 subgoal (ID 89)	  	  X : Type	  ============================	  {A : Type & {rs : (X -> A) * (A -> X) & rs.(fst) o rs.(snd) == idmap}} <~>	  RetractOf X	";
+            data = "";
             responses[i]=data;
           
 
@@ -748,7 +748,7 @@
           
 
             i = 146;
-            data = "1 subgoal (ID 183)	  	  ua : Univalence	  X : Type	  R, R' : RetractOf X	  Ap : R'.(retract_type) <~> R.(retract_type)	  rp : Ap.(equiv_fun) o R'.(retract_retr) == R.(retract_retr)	  sp : R'.(retract_sect) o Ap.(equiv_isequiv).(equiv_inv) == R.(retract_sect)	  Hp : forall a : R.(retract_type),	       ap Ap.(equiv_fun)	         (R'.(retract_issect) (Ap.(equiv_isequiv).(equiv_inv) a)) @	       Ap.(equiv_isequiv).(eisretr) a =	       (rp (R'.(retract_sect) (Ap.(equiv_isequiv).(equiv_inv) a)) @	        ap R.(retract_retr) (sp a)) @ R.(retract_issect) a	  ============================	  R' = R	";
+            data = "";
             responses[i]=data;
           
 
@@ -953,12 +953,12 @@
           
 
             i = 187;
-            data = "1 subgoal (ID 627)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  Hp : forall a : A,	       ap Ap.(equiv_fun) (H' (Ap.(equiv_isequiv).(equiv_inv) a)) @	       Ap.(equiv_isequiv).(eisretr) a =	       (rp (s' (Ap.(equiv_isequiv).(equiv_inv) a)) @ ap r (sp a)) @ H a	  a : A	  ============================	  (ap (fun x : (X -> A) * (A -> X) => x.(fst) (x.(snd) a))	     (transport_prod (path_universe_uncurried Ap) (r', s')))^ @	  transportD (fun x : Type => (X -> x) * (x -> X))	    (fun (x : Type) (y : (X -> x) * (x -> X)) =>	     forall x0 : x, y.(fst) (y.(snd) x0) = x0) (path_universe_uncurried Ap)	    (r', s') H' a =	  ((transport_arrow_fromconst (path_universe_uncurried Ap) r'	      (transport (fun Z : Type => Z -> X) (path_universe_uncurried Ap) s' a) @	    ap (transport idmap (path_universe_uncurried Ap) o r')	      (transport_arrow_toconst (path_universe_uncurried Ap) s' a)) @	   ap (transport idmap (path_universe_uncurried Ap))	     (H' (transport idmap (path_universe_uncurried Ap)^ a))) @	  transport_pV idmap (path_universe_uncurried Ap) a	1 subgoal (ID 632)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  Hp : forall a : A,	       ap Ap.(equiv_fun) (H' (Ap.(equiv_isequiv).(equiv_inv) a)) @	       Ap.(equiv_isequiv).(eisretr) a =	       (rp (s' (Ap.(equiv_isequiv).(equiv_inv) a)) @ ap r (sp a)) @ H a	  a : A	  ============================	  forall p : A' = A,	  (ap (fun x : (X -> A) * (A -> X) => x.(fst) (x.(snd) a))	     (transport_prod p (r', s')))^ @	  transportD (fun x : Type => (X -> x) * (x -> X))	    (fun (x : Type) (y : (X -> x) * (x -> X)) =>	     forall x0 : x, y.(fst) (y.(snd) x0) = x0) p (r', s') H' a =	  ((transport_arrow_fromconst p r'	      (transport (fun Z : Type => Z -> X) p s' a) @	    ap (fun x : X => transport idmap p (r' x))	      (transport_arrow_toconst p s' a)) @	   ap (transport idmap p) (H' (transport idmap p^ a))) @	  transport_pV idmap p a	";
+            data = "1 subgoal (ID 627)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  Hp : forall a : A,	       ap Ap.(equiv_fun) (H' (Ap.(equiv_isequiv).(equiv_inv) a)) @	       Ap.(equiv_isequiv).(eisretr) a =	       (rp (s' (Ap.(equiv_isequiv).(equiv_inv) a)) @ ap r (sp a)) @ H a	  a : A	  ============================	  (ap (fun x : (X -> A) * (A -> X) => x.(fst) (x.(snd) a))	     (transport_prod (path_universe_uncurried Ap) (r', s')))^ @	  transportD (fun x : Type => (X -> x) * (x -> X))	    (fun (x : Type) (y : (X -> x) * (x -> X)) =>	     forall x0 : x, y.(fst) (y.(snd) x0) = x0) (path_universe_uncurried Ap)	    (r', s') H' a =	  ((transport_arrow_fromconst (path_universe_uncurried Ap) r'	      (transport (fun Z : Type => Z -> X) (path_universe_uncurried Ap) s' a) @	    ap (transport idmap (path_universe_uncurried Ap) o r')	      (transport_arrow_toconst (path_universe_uncurried Ap) s' a)) @	   ap (transport idmap (path_universe_uncurried Ap))	     (H' (transport idmap (path_universe_uncurried Ap)^ a))) @	  transport_pV idmap (path_universe_uncurried Ap) a	";
             responses[i]=data;
           
 
             i = 188;
-            data = "1 subgoal (ID 663)	  	  ua : Univalence	  X : Type	  A' : Type	  r : X -> A'	  s : A' -> X	  H : (fun x : A' => r (s x)) == idmap	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A'	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A' => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  Hp : forall a : A',	       ap Ap.(equiv_fun) (H' (Ap.(equiv_isequiv).(equiv_inv) a)) @	       Ap.(equiv_isequiv).(eisretr) a =	       (rp (s' (Ap.(equiv_isequiv).(equiv_inv) a)) @ ap r (sp a)) @ H a	  a : A'	  ============================	  1 @ H' a = (1 @ ap (transport idmap 1) (H' a)) @ transport_pV idmap 1 a	";
+            data = "1 subgoal (ID 632)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  Hp : forall a : A,	       ap Ap.(equiv_fun) (H' (Ap.(equiv_isequiv).(equiv_inv) a)) @	       Ap.(equiv_isequiv).(eisretr) a =	       (rp (s' (Ap.(equiv_isequiv).(equiv_inv) a)) @ ap r (sp a)) @ H a	  a : A	  ============================	  forall p : A' = A,	  (ap (fun x : (X -> A) * (A -> X) => x.(fst) (x.(snd) a))	     (transport_prod p (r', s')))^ @	  transportD (fun x : Type => (X -> x) * (x -> X))	    (fun (x : Type) (y : (X -> x) * (x -> X)) =>	     forall x0 : x, y.(fst) (y.(snd) x0) = x0) p (r', s') H' a =	  ((transport_arrow_fromconst p r'	      (transport (fun Z : Type => Z -> X) p s' a) @	    ap (fun x : X => transport idmap p (r' x))	      (transport_arrow_toconst p s' a)) @	   ap (transport idmap p) (H' (transport idmap p^ a))) @	  transport_pV idmap p a	1 subgoal (ID 663)	  	  ua : Univalence	  X : Type	  A' : Type	  r : X -> A'	  s : A' -> X	  H : (fun x : A' => r (s x)) == idmap	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A'	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A' => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  Hp : forall a : A',	       ap Ap.(equiv_fun) (H' (Ap.(equiv_isequiv).(equiv_inv) a)) @	       Ap.(equiv_isequiv).(eisretr) a =	       (rp (s' (Ap.(equiv_isequiv).(equiv_inv) a)) @ ap r (sp a)) @ H a	  a : A'	  ============================	  1 @ H' a = (1 @ ap (transport idmap 1) (H' a)) @ transport_pV idmap 1 a	";
             responses[i]=data;
           
 
@@ -1088,22 +1088,22 @@
           
 
             i = 214;
-            data = "1 subgoal (ID 933)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  Hp : forall a : A,	       ap Ap.(equiv_fun) (H' (Ap.(equiv_isequiv).(equiv_inv) a))	       @' Ap.(equiv_isequiv).(eisretr) a =	       rp (s' (Ap.(equiv_isequiv).(equiv_inv) a)) @ ap r (sp a)	       @' H a	  a : A	  ============================	  (ap (fun x : X => transport idmap (path_universe_uncurried Ap) (r' x))	     (transport_arrow_toconst (path_universe_uncurried Ap) s' a) @	   ap (transport idmap (path_universe_uncurried Ap))	     (H' (transport idmap (path_universe_uncurried Ap)^ a))) @	  (transport_pp idmap (path_universe_uncurried Ap)^	     (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  (transport_path_universe_uncurried Ap	     (r'	        (transport (fun a0 : Type => a0 -> X) (path_universe_uncurried Ap) s'	           a)) @	   rp	     (transport (fun a0 : Type => a0 -> X) (path_universe_uncurried Ap) s' a)) @	  ap (fun b : X => r b)	    ((transport_arrow_toconst (path_universe_uncurried Ap) s' a @	      ap s' (transport_path_universe_V_uncurried Ap a)) @ 	     sp a)	  @' H a	";
+            data = "1 subgoal (ID 933)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  Hp : forall a : A,	       ap Ap.(equiv_fun) (H' (Ap.(equiv_isequiv).(equiv_inv) a))	       @' Ap.(equiv_isequiv).(eisretr) a =	       rp (s' (Ap.(equiv_isequiv).(equiv_inv) a))	       @' ap r (sp a)	       @' H a	  a : A	  ============================	  ap (fun x : X => transport idmap (path_universe_uncurried Ap) (r' x))	    (transport_arrow_toconst (path_universe_uncurried Ap) s' a)	  @' ap (transport idmap (path_universe_uncurried Ap))	       (H' (transport idmap (path_universe_uncurried Ap)^ a))	  @' (transport_pp idmap (path_universe_uncurried Ap)^	        (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  transport_path_universe_uncurried Ap	    (r'	       (transport (fun a0 : Type => a0 -> X) (path_universe_uncurried Ap) s'	          a))	  @' rp	       (transport (fun a0 : Type => a0 -> X) (path_universe_uncurried Ap) s'	          a)	  @' ap (fun b : X => r b)	       (transport_arrow_toconst (path_universe_uncurried Ap) s' a	        @' ap s' (transport_path_universe_V_uncurried Ap a)	        @' sp a)	  @' H a	";
             responses[i]=data;
           
 
             i = 215;
-            data = "1 subgoal (ID 950)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  Hp : forall a : A,	       ap Ap.(equiv_fun) (H' (Ap.(equiv_isequiv).(equiv_inv) a))	       @' Ap.(equiv_isequiv).(eisretr) a =	       rp (s' (Ap.(equiv_isequiv).(equiv_inv) a)) @ ap r (sp a)	       @' H a	  a : A	  ============================	  (ap (fun x : X => transport idmap (path_universe_uncurried Ap) (r' x))	     (transport_arrow_toconst (path_universe_uncurried Ap) s' a) @	   ap (transport idmap (path_universe_uncurried Ap))	     (H' (transport idmap (path_universe_uncurried Ap)^ a))) @	  (transport_pp idmap (path_universe_uncurried Ap)^	     (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  (transport_path_universe_uncurried Ap	     (r'	        (transport (fun a0 : Type => a0 -> X) (path_universe_uncurried Ap) s'	           a)) @	   ap (fun x : X => Ap.(equiv_fun) (r' x))	     ((transport_arrow_toconst (path_universe_uncurried Ap) s' a @	       ap s' (transport_path_universe_V_uncurried Ap a)) @ 	      sp a)) @ rp (s a)	  @' H a	";
+            data = "1 subgoal (ID 950)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  Hp : forall a : A,	       ap Ap.(equiv_fun) (H' (Ap.(equiv_isequiv).(equiv_inv) a))	       @' Ap.(equiv_isequiv).(eisretr) a =	       rp (s' (Ap.(equiv_isequiv).(equiv_inv) a))	       @' ap r (sp a)	       @' H a	  a : A	  ============================	  ap (fun x : X => transport idmap (path_universe_uncurried Ap) (r' x))	    (transport_arrow_toconst (path_universe_uncurried Ap) s' a)	  @' ap (transport idmap (path_universe_uncurried Ap))	       (H' (transport idmap (path_universe_uncurried Ap)^ a))	  @' (transport_pp idmap (path_universe_uncurried Ap)^	        (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  transport_path_universe_uncurried Ap	    (r'	       (transport (fun a0 : Type => a0 -> X) (path_universe_uncurried Ap) s'	          a))	  @' ap (fun x : X => Ap.(equiv_fun) (r' x))	       (transport_arrow_toconst (path_universe_uncurried Ap) s' a	        @' ap s' (transport_path_universe_V_uncurried Ap a)	        @' sp a)	  @' rp (s a)	  @' H a	";
             responses[i]=data;
           
 
             i = 216;
-            data = "1 subgoal (ID 967)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  Hp : forall a : A,	       ap Ap.(equiv_fun) (H' (Ap.(equiv_isequiv).(equiv_inv) a))	       @' Ap.(equiv_isequiv).(eisretr) a =	       rp (s' (Ap.(equiv_isequiv).(equiv_inv) a)) @ ap r (sp a)	       @' H a	  a : A	  ============================	  (ap (fun x : X => transport idmap (path_universe_uncurried Ap) (r' x))	     (transport_arrow_toconst (path_universe_uncurried Ap) s' a) @	   ap (transport idmap (path_universe_uncurried Ap))	     (H' (transport idmap (path_universe_uncurried Ap)^ a))) @	  (transport_pp idmap (path_universe_uncurried Ap)^	     (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  ((transport_path_universe_uncurried Ap	      (r'	         (transport (fun a0 : Type => a0 -> X) (path_universe_uncurried Ap)	            s' a)) @	    ap (fun x : X => Ap.(equiv_fun) (r' x))	      (transport_arrow_toconst (path_universe_uncurried Ap) s' a @	       ap s' (transport_path_universe_V_uncurried Ap a))) @	   ap (fun x : X => Ap.(equiv_fun) (r' x)) (sp a)) @ 	  rp (s a)	  @' H a	";
+            data = "1 subgoal (ID 967)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  Hp : forall a : A,	       ap Ap.(equiv_fun) (H' (Ap.(equiv_isequiv).(equiv_inv) a))	       @' Ap.(equiv_isequiv).(eisretr) a =	       rp (s' (Ap.(equiv_isequiv).(equiv_inv) a))	       @' ap r (sp a)	       @' H a	  a : A	  ============================	  ap (fun x : X => transport idmap (path_universe_uncurried Ap) (r' x))	    (transport_arrow_toconst (path_universe_uncurried Ap) s' a)	  @' ap (transport idmap (path_universe_uncurried Ap))	       (H' (transport idmap (path_universe_uncurried Ap)^ a))	  @' (transport_pp idmap (path_universe_uncurried Ap)^	        (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  transport_path_universe_uncurried Ap	    (r'	       (transport (fun a0 : Type => a0 -> X) (path_universe_uncurried Ap) s'	          a))	  @' ap (fun x : X => Ap.(equiv_fun) (r' x))	       (transport_arrow_toconst (path_universe_uncurried Ap) s' a	        @' ap s' (transport_path_universe_V_uncurried Ap a))	  @' ap (fun x : X => Ap.(equiv_fun) (r' x)) (sp a)	  @' rp (s a)	  @' H a	";
             responses[i]=data;
           
 
             i = 217;
-            data = "1 subgoal (ID 979)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  Hp : forall a : A,	       ap Ap.(equiv_fun) (H' (Ap.(equiv_isequiv).(equiv_inv) a))	       @' Ap.(equiv_isequiv).(eisretr) a =	       rp (s' (Ap.(equiv_isequiv).(equiv_inv) a)) @ ap r (sp a)	       @' H a	  a : A	  ============================	  (ap (fun x : X => transport idmap (path_universe_uncurried Ap) (r' x))	     (transport_arrow_toconst (path_universe_uncurried Ap) s' a) @	   ap (transport idmap (path_universe_uncurried Ap))	     (H' (transport idmap (path_universe_uncurried Ap)^ a))) @	  (transport_pp idmap (path_universe_uncurried Ap)^	     (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  ((transport_path_universe_uncurried Ap	      (r'	         (transport (fun a0 : Type => a0 -> X) (path_universe_uncurried Ap)	            s' a)) @	    ap (fun x : X => Ap.(equiv_fun) (r' x))	      (transport_arrow_toconst (path_universe_uncurried Ap) s' a @	       ap s' (transport_path_universe_V_uncurried Ap a))) @	   rp (s' (Ap.(equiv_isequiv).(equiv_inv) a))) @ ap r (sp a)	  @' H a	";
+            data = "1 subgoal (ID 979)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  Hp : forall a : A,	       ap Ap.(equiv_fun) (H' (Ap.(equiv_isequiv).(equiv_inv) a))	       @' Ap.(equiv_isequiv).(eisretr) a =	       rp (s' (Ap.(equiv_isequiv).(equiv_inv) a))	       @' ap r (sp a)	       @' H a	  a : A	  ============================	  ap (fun x : X => transport idmap (path_universe_uncurried Ap) (r' x))	    (transport_arrow_toconst (path_universe_uncurried Ap) s' a)	  @' ap (transport idmap (path_universe_uncurried Ap))	       (H' (transport idmap (path_universe_uncurried Ap)^ a))	  @' (transport_pp idmap (path_universe_uncurried Ap)^	        (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  transport_path_universe_uncurried Ap	    (r'	       (transport (fun a0 : Type => a0 -> X) (path_universe_uncurried Ap) s'	          a))	  @' ap (fun x : X => Ap.(equiv_fun) (r' x))	       (transport_arrow_toconst (path_universe_uncurried Ap) s' a	        @' ap s' (transport_path_universe_V_uncurried Ap a))	  @' rp (s' (Ap.(equiv_isequiv).(equiv_inv) a))	  @' ap r (sp a)	  @' H a	";
             responses[i]=data;
           
 
@@ -1138,22 +1138,22 @@
           
 
             i = 224;
-            data = "1 subgoal (ID 987)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  a : A	  Hp : ap Ap.(equiv_fun) (H' (Ap.(equiv_isequiv).(equiv_inv) a))	       @' Ap.(equiv_isequiv).(eisretr) a =	       rp (s' (Ap.(equiv_isequiv).(equiv_inv) a)) @ ap r (sp a)	       @' H a	  ============================	  (ap (fun x : X => transport idmap (path_universe_uncurried Ap) (r' x))	     (transport_arrow_toconst (path_universe_uncurried Ap) s' a) @	   ap (transport idmap (path_universe_uncurried Ap))	     (H' (transport idmap (path_universe_uncurried Ap)^ a))) @	  (transport_pp idmap (path_universe_uncurried Ap)^	     (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  ((transport_path_universe_uncurried Ap	      (r'	         (transport (fun a0 : Type => a0 -> X) (path_universe_uncurried Ap)	            s' a)) @	    ap (fun x : X => Ap.(equiv_fun) (r' x))	      (transport_arrow_toconst (path_universe_uncurried Ap) s' a @	       ap s' (transport_path_universe_V_uncurried Ap a))) @	   rp (s' (Ap.(equiv_isequiv).(equiv_inv) a))) @ ap r (sp a)	  @' H a	";
+            data = "1 subgoal (ID 987)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  a : A	  Hp : ap Ap.(equiv_fun) (H' (Ap.(equiv_isequiv).(equiv_inv) a))	       @' Ap.(equiv_isequiv).(eisretr) a =	       rp (s' (Ap.(equiv_isequiv).(equiv_inv) a))	       @' ap r (sp a)	       @' H a	  ============================	  ap (fun x : X => transport idmap (path_universe_uncurried Ap) (r' x))	    (transport_arrow_toconst (path_universe_uncurried Ap) s' a)	  @' ap (transport idmap (path_universe_uncurried Ap))	       (H' (transport idmap (path_universe_uncurried Ap)^ a))	  @' (transport_pp idmap (path_universe_uncurried Ap)^	        (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  transport_path_universe_uncurried Ap	    (r'	       (transport (fun a0 : Type => a0 -> X) (path_universe_uncurried Ap) s'	          a))	  @' ap (fun x : X => Ap.(equiv_fun) (r' x))	       (transport_arrow_toconst (path_universe_uncurried Ap) s' a	        @' ap s' (transport_path_universe_V_uncurried Ap a))	  @' rp (s' (Ap.(equiv_isequiv).(equiv_inv) a))	  @' ap r (sp a)	  @' H a	";
             responses[i]=data;
           
 
             i = 225;
-            data = "1 subgoal (ID 993)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  a : A	  Hp : ap Ap.(equiv_fun) (H' (Ap.(equiv_isequiv).(equiv_inv) a))	       @' Ap.(equiv_isequiv).(eisretr) a =	       rp (s' (Ap.(equiv_isequiv).(equiv_inv) a))	       @' ap r (sp a) @ H a	  ============================	  (ap (fun x : X => transport idmap (path_universe_uncurried Ap) (r' x))	     (transport_arrow_toconst (path_universe_uncurried Ap) s' a) @	   ap (transport idmap (path_universe_uncurried Ap))	     (H' (transport idmap (path_universe_uncurried Ap)^ a))) @	  (transport_pp idmap (path_universe_uncurried Ap)^	     (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  ((transport_path_universe_uncurried Ap	      (r'	         (transport (fun a0 : Type => a0 -> X) (path_universe_uncurried Ap)	            s' a)) @	    ap (fun x : X => Ap.(equiv_fun) (r' x))	      (transport_arrow_toconst (path_universe_uncurried Ap) s' a @	       ap s' (transport_path_universe_V_uncurried Ap a))) @	   rp (s' (Ap.(equiv_isequiv).(equiv_inv) a))) @ ap r (sp a)	  @' H a	";
+            data = "1 subgoal (ID 993)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  a : A	  Hp : ap Ap.(equiv_fun) (H' (Ap.(equiv_isequiv).(equiv_inv) a))	       @' Ap.(equiv_isequiv).(eisretr) a =	       rp (s' (Ap.(equiv_isequiv).(equiv_inv) a))	       @' (ap r (sp a)	           @' H a)	  ============================	  ap (fun x : X => transport idmap (path_universe_uncurried Ap) (r' x))	    (transport_arrow_toconst (path_universe_uncurried Ap) s' a)	  @' ap (transport idmap (path_universe_uncurried Ap))	       (H' (transport idmap (path_universe_uncurried Ap)^ a))	  @' (transport_pp idmap (path_universe_uncurried Ap)^	        (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  transport_path_universe_uncurried Ap	    (r'	       (transport (fun a0 : Type => a0 -> X) (path_universe_uncurried Ap) s'	          a))	  @' ap (fun x : X => Ap.(equiv_fun) (r' x))	       (transport_arrow_toconst (path_universe_uncurried Ap) s' a	        @' ap s' (transport_path_universe_V_uncurried Ap a))	  @' rp (s' (Ap.(equiv_isequiv).(equiv_inv) a))	  @' ap r (sp a)	  @' H a	";
             responses[i]=data;
           
 
             i = 226;
-            data = "1 subgoal (ID 1064)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  a : A	  Hp : ap Ap.(equiv_fun) (H' (Ap.(equiv_isequiv).(equiv_inv) a))	       @' Ap.(equiv_isequiv).(eisretr) a =	       rp (s' (Ap.(equiv_isequiv).(equiv_inv) a))	       @' ap r (sp a) @ H a	  ============================	  (ap (fun x : X => transport idmap (path_universe_uncurried Ap) (r' x))	     (transport_arrow_toconst (path_universe_uncurried Ap) s' a) @	   ap (transport idmap (path_universe_uncurried Ap))	     (H' (transport idmap (path_universe_uncurried Ap)^ a))) @	  (transport_pp idmap (path_universe_uncurried Ap)^	     (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  (transport_path_universe_uncurried Ap	     (r'	        (transport (fun a0 : Type => a0 -> X) (path_universe_uncurried Ap) s'	           a)) @	   ap (fun x : X => Ap.(equiv_fun) (r' x))	     (transport_arrow_toconst (path_universe_uncurried Ap) s' a @	      ap s' (transport_path_universe_V_uncurried Ap a))) @	  ap Ap.(equiv_fun) (H' (Ap.(equiv_isequiv).(equiv_inv) a))	  @' Ap.(equiv_isequiv).(eisretr) a	";
+            data = "1 subgoal (ID 1064)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  a : A	  Hp : ap Ap.(equiv_fun) (H' (Ap.(equiv_isequiv).(equiv_inv) a))	       @' Ap.(equiv_isequiv).(eisretr) a =	       rp (s' (Ap.(equiv_isequiv).(equiv_inv) a))	       @' (ap r (sp a)	           @' H a)	  ============================	  ap (fun x : X => transport idmap (path_universe_uncurried Ap) (r' x))	    (transport_arrow_toconst (path_universe_uncurried Ap) s' a)	  @' ap (transport idmap (path_universe_uncurried Ap))	       (H' (transport idmap (path_universe_uncurried Ap)^ a))	  @' (transport_pp idmap (path_universe_uncurried Ap)^	        (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  transport_path_universe_uncurried Ap	    (r'	       (transport (fun a0 : Type => a0 -> X) (path_universe_uncurried Ap) s'	          a))	  @' ap (fun x : X => Ap.(equiv_fun) (r' x))	       (transport_arrow_toconst (path_universe_uncurried Ap) s' a	        @' ap s' (transport_path_universe_V_uncurried Ap a))	  @' ap Ap.(equiv_fun) (H' (Ap.(equiv_isequiv).(equiv_inv) a))	  @' Ap.(equiv_isequiv).(eisretr) a	";
             responses[i]=data;
           
 
             i = 227;
-            data = "1 subgoal (ID 1075)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  a : A	  ============================	  (ap (fun x : X => transport idmap (path_universe_uncurried Ap) (r' x))	     (transport_arrow_toconst (path_universe_uncurried Ap) s' a) @	   ap (transport idmap (path_universe_uncurried Ap))	     (H' (transport idmap (path_universe_uncurried Ap)^ a))) @	  (transport_pp idmap (path_universe_uncurried Ap)^	     (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  (transport_path_universe_uncurried Ap	     (r'	        (transport (fun a0 : Type => a0 -> X) (path_universe_uncurried Ap) s'	           a)) @	   ap (fun x : X => Ap.(equiv_fun) (r' x))	     (transport_arrow_toconst (path_universe_uncurried Ap) s' a @	      ap s' (transport_path_universe_V_uncurried Ap a))) @	  ap Ap.(equiv_fun) (H' (Ap.(equiv_isequiv).(equiv_inv) a))	  @' Ap.(equiv_isequiv).(eisretr) a	";
+            data = "1 subgoal (ID 1075)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  a : A	  ============================	  ap (fun x : X => transport idmap (path_universe_uncurried Ap) (r' x))	    (transport_arrow_toconst (path_universe_uncurried Ap) s' a)	  @' ap (transport idmap (path_universe_uncurried Ap))	       (H' (transport idmap (path_universe_uncurried Ap)^ a))	  @' (transport_pp idmap (path_universe_uncurried Ap)^	        (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  transport_path_universe_uncurried Ap	    (r'	       (transport (fun a0 : Type => a0 -> X) (path_universe_uncurried Ap) s'	          a))	  @' ap (fun x : X => Ap.(equiv_fun) (r' x))	       (transport_arrow_toconst (path_universe_uncurried Ap) s' a	        @' ap s' (transport_path_universe_V_uncurried Ap a))	  @' ap Ap.(equiv_fun) (H' (Ap.(equiv_isequiv).(equiv_inv) a))	  @' Ap.(equiv_isequiv).(eisretr) a	";
             responses[i]=data;
           
 
@@ -1178,57 +1178,57 @@
           
 
             i = 232;
-            data = "1 subgoal (ID 1081)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  a : A	  ============================	  (ap (fun x : X => transport idmap (path_universe_uncurried Ap) (r' x))	     (transport_arrow_toconst (path_universe_uncurried Ap) s' a) @	   ap (transport idmap (path_universe_uncurried Ap))	     (H' (transport idmap (path_universe_uncurried Ap)^ a))) @	  (transport_pp idmap (path_universe_uncurried Ap)^	     (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  (transport_path_universe_uncurried Ap	     (r'	        (transport (fun a0 : Type => a0 -> X) (path_universe_uncurried Ap) s'	           a)) @	   ap Ap.(equiv_fun)	     (ap r'	        (transport_arrow_toconst (path_universe_uncurried Ap) s' a @	         ap s' (transport_path_universe_V_uncurried Ap a)))) @	  ap Ap.(equiv_fun) (H' (Ap.(equiv_isequiv).(equiv_inv) a))	  @' Ap.(equiv_isequiv).(eisretr) a	";
+            data = "1 subgoal (ID 1081)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  a : A	  ============================	  ap (fun x : X => transport idmap (path_universe_uncurried Ap) (r' x))	    (transport_arrow_toconst (path_universe_uncurried Ap) s' a)	  @' ap (transport idmap (path_universe_uncurried Ap))	       (H' (transport idmap (path_universe_uncurried Ap)^ a))	  @' (transport_pp idmap (path_universe_uncurried Ap)^	        (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  transport_path_universe_uncurried Ap	    (r'	       (transport (fun a0 : Type => a0 -> X) (path_universe_uncurried Ap) s'	          a))	  @' ap Ap.(equiv_fun)	       (ap r'	          (transport_arrow_toconst (path_universe_uncurried Ap) s' a	           @' ap s' (transport_path_universe_V_uncurried Ap a)))	  @' ap Ap.(equiv_fun) (H' (Ap.(equiv_isequiv).(equiv_inv) a))	  @' Ap.(equiv_isequiv).(eisretr) a	";
             responses[i]=data;
           
 
             i = 233;
-            data = "1 subgoal (ID 1102)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  a : A	  ============================	  (ap (fun x : X => transport idmap (path_universe_uncurried Ap) (r' x))	     (transport_arrow_toconst (path_universe_uncurried Ap) s' a) @	   ap (transport idmap (path_universe_uncurried Ap))	     (H' (transport idmap (path_universe_uncurried Ap)^ a))) @	  (transport_pp idmap (path_universe_uncurried Ap)^	     (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  ((transport_path_universe_uncurried Ap	      (r'	         (transport (fun a0 : Type => a0 -> X) (path_universe_uncurried Ap)	            s' a)) @	    ap Ap.(equiv_fun)	      (ap r' (transport_arrow_toconst (path_universe_uncurried Ap) s' a))) @	   ap Ap.(equiv_fun)	     (ap r' (ap s' (transport_path_universe_V_uncurried Ap a)))) @	  ap Ap.(equiv_fun) (H' (Ap.(equiv_isequiv).(equiv_inv) a))	  @' Ap.(equiv_isequiv).(eisretr) a	";
+            data = "1 subgoal (ID 1102)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  a : A	  ============================	  ap (fun x : X => transport idmap (path_universe_uncurried Ap) (r' x))	    (transport_arrow_toconst (path_universe_uncurried Ap) s' a)	  @' ap (transport idmap (path_universe_uncurried Ap))	       (H' (transport idmap (path_universe_uncurried Ap)^ a))	  @' (transport_pp idmap (path_universe_uncurried Ap)^	        (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  transport_path_universe_uncurried Ap	    (r'	       (transport (fun a0 : Type => a0 -> X) (path_universe_uncurried Ap) s'	          a))	  @' ap Ap.(equiv_fun)	       (ap r' (transport_arrow_toconst (path_universe_uncurried Ap) s' a))	  @' ap Ap.(equiv_fun)	       (ap r' (ap s' (transport_path_universe_V_uncurried Ap a)))	  @' ap Ap.(equiv_fun) (H' (Ap.(equiv_isequiv).(equiv_inv) a))	  @' Ap.(equiv_isequiv).(eisretr) a	";
             responses[i]=data;
           
 
             i = 234;
-            data = "1 subgoal (ID 1118)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  a : A	  ============================	  (ap (fun x : X => transport idmap (path_universe_uncurried Ap) (r' x))	     (transport_arrow_toconst (path_universe_uncurried Ap) s' a) @	   ap (transport idmap (path_universe_uncurried Ap))	     (H' (transport idmap (path_universe_uncurried Ap)^ a))) @	  (transport_pp idmap (path_universe_uncurried Ap)^	     (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  ((transport_path_universe_uncurried Ap	      (r'	         (transport (fun a0 : Type => a0 -> X) (path_universe_uncurried Ap)	            s' a)) @	    ap (fun x : X => Ap.(equiv_fun) (r' x))	      (transport_arrow_toconst (path_universe_uncurried Ap) s' a)) @	   ap Ap.(equiv_fun)	     (ap r' (ap s' (transport_path_universe_V_uncurried Ap a)))) @	  ap Ap.(equiv_fun) (H' (Ap.(equiv_isequiv).(equiv_inv) a))	  @' Ap.(equiv_isequiv).(eisretr) a	";
+            data = "1 subgoal (ID 1118)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  a : A	  ============================	  ap (fun x : X => transport idmap (path_universe_uncurried Ap) (r' x))	    (transport_arrow_toconst (path_universe_uncurried Ap) s' a)	  @' ap (transport idmap (path_universe_uncurried Ap))	       (H' (transport idmap (path_universe_uncurried Ap)^ a))	  @' (transport_pp idmap (path_universe_uncurried Ap)^	        (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  transport_path_universe_uncurried Ap	    (r'	       (transport (fun a0 : Type => a0 -> X) (path_universe_uncurried Ap) s'	          a))	  @' ap (fun x : X => Ap.(equiv_fun) (r' x))	       (transport_arrow_toconst (path_universe_uncurried Ap) s' a)	  @' ap Ap.(equiv_fun)	       (ap r' (ap s' (transport_path_universe_V_uncurried Ap a)))	  @' ap Ap.(equiv_fun) (H' (Ap.(equiv_isequiv).(equiv_inv) a))	  @' Ap.(equiv_isequiv).(eisretr) a	";
             responses[i]=data;
           
 
             i = 235;
-            data = "1 subgoal (ID 1135)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  a : A	  ============================	  (ap (fun x : X => transport idmap (path_universe_uncurried Ap) (r' x))	     (transport_arrow_toconst (path_universe_uncurried Ap) s' a) @	   ap (transport idmap (path_universe_uncurried Ap))	     (H' (transport idmap (path_universe_uncurried Ap)^ a))) @	  (transport_pp idmap (path_universe_uncurried Ap)^	     (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  ((ap (fun x : X => transport idmap (path_universe_uncurried Ap) (r' x))	      (transport_arrow_toconst (path_universe_uncurried Ap) s' a) @	    transport_path_universe_uncurried Ap	      (r' (s' (transport idmap (path_universe_uncurried Ap)^ a)))) @	   ap Ap.(equiv_fun)	     (ap r' (ap s' (transport_path_universe_V_uncurried Ap a)))) @	  ap Ap.(equiv_fun) (H' (Ap.(equiv_isequiv).(equiv_inv) a))	  @' Ap.(equiv_isequiv).(eisretr) a	";
+            data = "1 subgoal (ID 1135)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  a : A	  ============================	  ap (fun x : X => transport idmap (path_universe_uncurried Ap) (r' x))	    (transport_arrow_toconst (path_universe_uncurried Ap) s' a)	  @' ap (transport idmap (path_universe_uncurried Ap))	       (H' (transport idmap (path_universe_uncurried Ap)^ a))	  @' (transport_pp idmap (path_universe_uncurried Ap)^	        (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  ap (fun x : X => transport idmap (path_universe_uncurried Ap) (r' x))	    (transport_arrow_toconst (path_universe_uncurried Ap) s' a)	  @' transport_path_universe_uncurried Ap	       (r' (s' (transport idmap (path_universe_uncurried Ap)^ a)))	  @' ap Ap.(equiv_fun)	       (ap r' (ap s' (transport_path_universe_V_uncurried Ap a)))	  @' ap Ap.(equiv_fun) (H' (Ap.(equiv_isequiv).(equiv_inv) a))	  @' Ap.(equiv_isequiv).(eisretr) a	";
             responses[i]=data;
           
 
             i = 236;
-            data = "1 subgoal (ID 1208)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  a : A	  ============================	  ap (transport idmap (path_universe_uncurried Ap))	    (H' (transport idmap (path_universe_uncurried Ap)^ a)) @	  (transport_pp idmap (path_universe_uncurried Ap)^	     (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  (transport_path_universe_uncurried Ap	     (r' (s' (transport idmap (path_universe_uncurried Ap)^ a))) @	   ap Ap.(equiv_fun)	     (ap r' (ap s' (transport_path_universe_V_uncurried Ap a)))) @	  ap Ap.(equiv_fun) (H' (Ap.(equiv_isequiv).(equiv_inv) a))	  @' Ap.(equiv_isequiv).(eisretr) a	";
+            data = "1 subgoal (ID 1208)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  a : A	  ============================	  ap (transport idmap (path_universe_uncurried Ap))	    (H' (transport idmap (path_universe_uncurried Ap)^ a))	  @' (transport_pp idmap (path_universe_uncurried Ap)^	        (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  transport_path_universe_uncurried Ap	    (r' (s' (transport idmap (path_universe_uncurried Ap)^ a)))	  @' ap Ap.(equiv_fun)	       (ap r' (ap s' (transport_path_universe_V_uncurried Ap a)))	  @' ap Ap.(equiv_fun) (H' (Ap.(equiv_isequiv).(equiv_inv) a))	  @' Ap.(equiv_isequiv).(eisretr) a	";
             responses[i]=data;
           
 
             i = 237;
-            data = "1 subgoal (ID 1225)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  a : A	  ============================	  ap (transport idmap (path_universe_uncurried Ap))	    (H' (transport idmap (path_universe_uncurried Ap)^ a)) @	  (transport_pp idmap (path_universe_uncurried Ap)^	     (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  transport_path_universe_uncurried Ap	    (r' (s' (transport idmap (path_universe_uncurried Ap)^ a))) @	  ap Ap.(equiv_fun)	    (ap r' (ap s' (transport_path_universe_V_uncurried Ap a)) @	     H' (Ap.(equiv_isequiv).(equiv_inv) a))	  @' Ap.(equiv_isequiv).(eisretr) a	";
+            data = "1 subgoal (ID 1225)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  a : A	  ============================	  ap (transport idmap (path_universe_uncurried Ap))	    (H' (transport idmap (path_universe_uncurried Ap)^ a))	  @' (transport_pp idmap (path_universe_uncurried Ap)^	        (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  transport_path_universe_uncurried Ap	    (r' (s' (transport idmap (path_universe_uncurried Ap)^ a)))	  @' ap Ap.(equiv_fun)	       (ap r' (ap s' (transport_path_universe_V_uncurried Ap a))	        @' H' (Ap.(equiv_isequiv).(equiv_inv) a))	  @' Ap.(equiv_isequiv).(eisretr) a	";
             responses[i]=data;
           
 
             i = 238;
-            data = "1 subgoal (ID 1237)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  a : A	  ============================	  ap (transport idmap (path_universe_uncurried Ap))	    (H' (transport idmap (path_universe_uncurried Ap)^ a)) @	  (transport_pp idmap (path_universe_uncurried Ap)^	     (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  transport_path_universe_uncurried Ap	    (r' (s' (transport idmap (path_universe_uncurried Ap)^ a))) @	  ap Ap.(equiv_fun)	    (ap (fun x : A' => r' (s' x)) (transport_path_universe_V_uncurried Ap a) @	     H' (Ap.(equiv_isequiv).(equiv_inv) a))	  @' Ap.(equiv_isequiv).(eisretr) a	";
+            data = "1 subgoal (ID 1237)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  a : A	  ============================	  ap (transport idmap (path_universe_uncurried Ap))	    (H' (transport idmap (path_universe_uncurried Ap)^ a))	  @' (transport_pp idmap (path_universe_uncurried Ap)^	        (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  transport_path_universe_uncurried Ap	    (r' (s' (transport idmap (path_universe_uncurried Ap)^ a)))	  @' ap Ap.(equiv_fun)	       (ap (fun x : A' => r' (s' x))	          (transport_path_universe_V_uncurried Ap a)	        @' H' (Ap.(equiv_isequiv).(equiv_inv) a))	  @' Ap.(equiv_isequiv).(eisretr) a	";
             responses[i]=data;
           
 
             i = 239;
-            data = "1 subgoal (ID 1247)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  a : A	  ============================	  ap (transport idmap (path_universe_uncurried Ap))	    (H' (transport idmap (path_universe_uncurried Ap)^ a)) @	  (transport_pp idmap (path_universe_uncurried Ap)^	     (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  transport_path_universe_uncurried Ap	    (r' (s' (transport idmap (path_universe_uncurried Ap)^ a))) @	  ap Ap.(equiv_fun)	    (H' (transport idmap (path_universe_uncurried Ap)^ a) @	     transport_path_universe_V_uncurried Ap a)	  @' Ap.(equiv_isequiv).(eisretr) a	";
+            data = "1 subgoal (ID 1247)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  a : A	  ============================	  ap (transport idmap (path_universe_uncurried Ap))	    (H' (transport idmap (path_universe_uncurried Ap)^ a))	  @' (transport_pp idmap (path_universe_uncurried Ap)^	        (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  transport_path_universe_uncurried Ap	    (r' (s' (transport idmap (path_universe_uncurried Ap)^ a)))	  @' ap Ap.(equiv_fun)	       (H' (transport idmap (path_universe_uncurried Ap)^ a)	        @' transport_path_universe_V_uncurried Ap a)	  @' Ap.(equiv_isequiv).(eisretr) a	";
             responses[i]=data;
           
 
             i = 240;
-            data = "1 subgoal (ID 1262)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  a : A	  ============================	  ap (transport idmap (path_universe_uncurried Ap))	    (H' (transport idmap (path_universe_uncurried Ap)^ a)) @	  (transport_pp idmap (path_universe_uncurried Ap)^	     (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  (transport_path_universe_uncurried Ap	     (r' (s' (transport idmap (path_universe_uncurried Ap)^ a))) @	   ap Ap.(equiv_fun) (H' (transport idmap (path_universe_uncurried Ap)^ a))) @	  ap Ap.(equiv_fun) (transport_path_universe_V_uncurried Ap a)	  @' Ap.(equiv_isequiv).(eisretr) a	";
+            data = "1 subgoal (ID 1262)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  a : A	  ============================	  ap (transport idmap (path_universe_uncurried Ap))	    (H' (transport idmap (path_universe_uncurried Ap)^ a))	  @' (transport_pp idmap (path_universe_uncurried Ap)^	        (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  transport_path_universe_uncurried Ap	    (r' (s' (transport idmap (path_universe_uncurried Ap)^ a)))	  @' ap Ap.(equiv_fun) (H' (transport idmap (path_universe_uncurried Ap)^ a))	  @' ap Ap.(equiv_fun) (transport_path_universe_V_uncurried Ap a)	  @' Ap.(equiv_isequiv).(eisretr) a	";
             responses[i]=data;
           
 
             i = 241;
-            data = "1 subgoal (ID 1277)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  a : A	  ============================	  ap (transport idmap (path_universe_uncurried Ap))	    (H' (transport idmap (path_universe_uncurried Ap)^ a)) @	  (transport_pp idmap (path_universe_uncurried Ap)^	     (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  (ap (transport idmap (path_universe_uncurried Ap))	     (H' (transport idmap (path_universe_uncurried Ap)^ a)) @	   transport_path_universe_uncurried Ap	     (transport idmap (path_universe_uncurried Ap)^ a)) @	  ap Ap.(equiv_fun) (transport_path_universe_V_uncurried Ap a)	  @' Ap.(equiv_isequiv).(eisretr) a	";
+            data = "1 subgoal (ID 1277)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  a : A	  ============================	  ap (transport idmap (path_universe_uncurried Ap))	    (H' (transport idmap (path_universe_uncurried Ap)^ a))	  @' (transport_pp idmap (path_universe_uncurried Ap)^	        (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  ap (transport idmap (path_universe_uncurried Ap))	    (H' (transport idmap (path_universe_uncurried Ap)^ a))	  @' transport_path_universe_uncurried Ap	       (transport idmap (path_universe_uncurried Ap)^ a)	  @' ap Ap.(equiv_fun) (transport_path_universe_V_uncurried Ap a)	  @' Ap.(equiv_isequiv).(eisretr) a	";
             responses[i]=data;
           
 
             i = 242;
-            data = "1 subgoal (ID 1325)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  a : A	  ============================	  (transport_pp idmap (path_universe_uncurried Ap)^	     (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  transport_path_universe_uncurried Ap	    (transport idmap (path_universe_uncurried Ap)^ a) @	  ap Ap.(equiv_fun) (transport_path_universe_V_uncurried Ap a)	  @' Ap.(equiv_isequiv).(eisretr) a	";
+            data = "1 subgoal (ID 1325)	  	  ua : Univalence	  X : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  A' : Type	  r' : X -> A'	  s' : A' -> X	  H' : (fun x : A' => r' (s' x)) == idmap	  Ap : A' <~> A	  rp : (fun x : X => Ap.(equiv_fun) (r' x)) == r	  sp : (fun x : A => s' (Ap.(equiv_isequiv).(equiv_inv) x)) == s	  a : A	  ============================	  (transport_pp idmap (path_universe_uncurried Ap)^	     (path_universe_uncurried Ap) a)^	  @' ap (fun r0 : A = A => transport idmap r0 a)	       (concat_Vp (path_universe_uncurried Ap)) =	  transport_path_universe_uncurried Ap	    (transport idmap (path_universe_uncurried Ap)^ a)	  @' ap Ap.(equiv_fun) (transport_path_universe_V_uncurried Ap a)	  @' Ap.(equiv_isequiv).(eisretr) a	";
             responses[i]=data;
           
 
@@ -1643,7 +1643,7 @@
           
 
             i = 325;
-            data = "1 subgoal (ID 225)	  	  X : Type	  f : X -> X	  H : IsPreIdempotent f	  g : X -> X	  p : f == g	  ============================	  IsPreIdempotent g	";
+            data = "";
             responses[i]=data;
           
 
@@ -1723,7 +1723,7 @@
           
 
             i = 341;
-            data = "1 subgoal (ID 238)	  	  X : Type	  ============================	  PreIdempotent X	";
+            data = "";
             responses[i]=data;
           
 
@@ -1763,7 +1763,7 @@
           
 
             i = 349;
-            data = "1 subgoal (ID 243)	  	  X : Type	  IsHSet0 : IsHSet X	  f : PreIdempotent X	  ============================	  Splitting f	";
+            data = "";
             responses[i]=data;
           
 
@@ -1828,7 +1828,7 @@
           
 
             i = 362;
-            data = "1 subgoal (ID 252)	  	  X : Type	  f : PreIdempotent X	  H : WeaklyConstant f	  ============================	  Splitting f	";
+            data = "";
             responses[i]=data;
           
 
@@ -1953,7 +1953,7 @@
           
 
             i = 387;
-            data = "1 subgoal (ID 260)	  	  X : Type	  f : PreIdempotent X	  ss : forall x : X, Collapsible (f x = x)	  ============================	  Splitting f	";
+            data = "";
             responses[i]=data;
           
 
@@ -2033,7 +2033,7 @@
           
 
             i = 403;
-            data = "1 subgoal (ID 272)	  	  X : Type	  f : PreIdempotent X	  ss : forall x : X, Collapsible (f x = x)	  ============================	  IsEmbedding (split_preidem_splitsupp X f ss).(proj1_sig).(retract_sect)	";
+            data = "";
             responses[i]=data;
           
 
@@ -2133,7 +2133,7 @@
           
 
             i = 423;
-            data = "1 subgoal (ID 286)	  	  X : Type	  f : X -> X	  S : Splitting f	  IsEmbedding0 : IsEmbedding S.(proj1_sig).(retract_sect)	  ============================	  forall x : X, Collapsible (f x = x)	";
+            data = "";
             responses[i]=data;
           
 
@@ -2263,7 +2263,7 @@
           
 
             i = 449;
-            data = "1 subgoal (ID 301)	  	  X : Type	  f : X -> X	  H : IsPreIdempotent f	  H0 : IsQuasiIdempotent f	  g : X -> X	  p : f == g	  ============================	  IsQuasiIdempotent g	";
+            data = "";
             responses[i]=data;
           
 
@@ -2278,37 +2278,37 @@
           
 
             i = 452;
-            data = "1 subgoal (ID 319)	  	  X : Type	  f : X -> X	  H : IsPreIdempotent f	  H0 : IsQuasiIdempotent f	  g : X -> X	  p : f == g	  x : X	  ============================	  ap g ((((p (g x))^ @ ap f (p x)^) @ isidem f x) @ p x) =	  (ap g (p (g x))^ @ (p (f (g x)))^) @ isidem f (g x)	  @' p (g x)	";
+            data = "1 subgoal (ID 319)	  	  X : Type	  f : X -> X	  H : IsPreIdempotent f	  H0 : IsQuasiIdempotent f	  g : X -> X	  p : f == g	  x : X	  ============================	  ap g ((p (g x))^	        @' ap f (p x)^	        @' isidem f x	        @' p x) = ap g (p (g x))^	                  @' (p (f (g x)))^	                  @' isidem f (g x)	                  @' p (g x)	";
             responses[i]=data;
           
 
             i = 453;
-            data = "1 subgoal (ID 384)	  	  X : Type	  f : X -> X	  H : IsPreIdempotent f	  H0 : IsQuasiIdempotent f	  g : X -> X	  p : f == g	  x : X	  ============================	  ap g (ap f (p x)^)	  @' ap g (isidem f x) @ ap g (p x) =	  (p (f (g x)))^	  @' isidem f (g x) @ p (g x)	";
+            data = "1 subgoal (ID 384)	  	  X : Type	  f : X -> X	  H : IsPreIdempotent f	  H0 : IsQuasiIdempotent f	  g : X -> X	  p : f == g	  x : X	  ============================	  ap g (ap f (p x)^)	  @' (ap g (isidem f x)	      @' ap g (p x)) = (p (f (g x)))^	                       @' (isidem f (g x)	                           @' p (g x))	";
             responses[i]=data;
           
 
             i = 454;
-            data = "1 subgoal (ID 411)	  	  X : Type	  f : X -> X	  H : IsPreIdempotent f	  H0 : IsQuasiIdempotent f	  g : X -> X	  p : f == g	  x : X	  ============================	  (ap g (ap f (p x)^) @ ap g (isidem f x)) @ ap g (p x)	  @' (p (g x))^ = (p (f (g x)))^	                  @' isidem f (g x)	";
+            data = "1 subgoal (ID 411)	  	  X : Type	  f : X -> X	  H : IsPreIdempotent f	  H0 : IsQuasiIdempotent f	  g : X -> X	  p : f == g	  x : X	  ============================	  ap g (ap f (p x)^)	  @' ap g (isidem f x)	  @' ap g (p x)	  @' (p (g x))^ = (p (f (g x)))^	                  @' isidem f (g x)	";
             responses[i]=data;
           
 
             i = 455;
-            data = "1 subgoal (ID 423)	  	  X : Type	  f : X -> X	  H : IsPreIdempotent f	  H0 : IsQuasiIdempotent f	  g : X -> X	  p : f == g	  x : X	  ============================	  (ap g (ap f (p x)^) @ ap g (isidem f x)) @ (p (f x))^	  @' ap f (p x) = (p (f (g x)))^	                  @' isidem f (g x)	";
+            data = "1 subgoal (ID 423)	  	  X : Type	  f : X -> X	  H : IsPreIdempotent f	  H0 : IsQuasiIdempotent f	  g : X -> X	  p : f == g	  x : X	  ============================	  ap g (ap f (p x)^)	  @' ap g (isidem f x)	  @' (p (f x))^	  @' ap f (p x) = (p (f (g x)))^	                  @' isidem f (g x)	";
             responses[i]=data;
           
 
             i = 456;
-            data = "1 subgoal (ID 450)	  	  X : Type	  f : X -> X	  H : IsPreIdempotent f	  H0 : IsQuasiIdempotent f	  g : X -> X	  p : f == g	  x : X	  ============================	  (ap g (ap f (p x)^) @ (p (f (f x)))^) @ ap f (isidem f x)	  @' ap f (p x) = (p (f (g x)))^	                  @' isidem f (g x)	";
+            data = "1 subgoal (ID 450)	  	  X : Type	  f : X -> X	  H : IsPreIdempotent f	  H0 : IsQuasiIdempotent f	  g : X -> X	  p : f == g	  x : X	  ============================	  ap g (ap f (p x)^)	  @' (p (f (f x)))^	  @' ap f (isidem f x)	  @' ap f (p x) = (p (f (g x)))^	                  @' isidem f (g x)	";
             responses[i]=data;
           
 
             i = 457;
-            data = "1 subgoal (ID 483)	  	  X : Type	  f : X -> X	  H : IsPreIdempotent f	  H0 : IsQuasiIdempotent f	  g : X -> X	  p : f == g	  x : X	  ============================	  ((p (f (g x)))^ @ ap f (ap f (p x)^)) @ ap f (isidem f x)	  @' ap f (p x) = (p (f (g x)))^	                  @' isidem f (g x)	";
+            data = "1 subgoal (ID 483)	  	  X : Type	  f : X -> X	  H : IsPreIdempotent f	  H0 : IsQuasiIdempotent f	  g : X -> X	  p : f == g	  x : X	  ============================	  (p (f (g x)))^	  @' ap f (ap f (p x)^)	  @' ap f (isidem f x)	  @' ap f (p x) = (p (f (g x)))^	                  @' isidem f (g x)	";
             responses[i]=data;
           
 
             i = 458;
-            data = "1 subgoal (ID 527)	  	  X : Type	  f : X -> X	  H : IsPreIdempotent f	  H0 : IsQuasiIdempotent f	  g : X -> X	  p : f == g	  x : X	  ============================	  ap f (ap f (p x)^)	  @' ap f (isidem f x) @ ap f (p x) = isidem f (g x)	";
+            data = "1 subgoal (ID 527)	  	  X : Type	  f : X -> X	  H : IsPreIdempotent f	  H0 : IsQuasiIdempotent f	  g : X -> X	  p : f == g	  x : X	  ============================	  ap f (ap f (p x)^)	  @' (ap f (isidem f x)	      @' ap f (p x)) = isidem f (g x)	";
             responses[i]=data;
           
 
@@ -2393,7 +2393,7 @@
           
 
             i = 475;
-            data = "1 subgoal (ID 318)	  	  X : Type	  ============================	  QuasiIdempotent X	";
+            data = "";
             responses[i]=data;
           
 
@@ -2523,12 +2523,12 @@
           
 
             i = 501;
-            data = "";
+            data = "1 subgoal (ID 323)	  	  X : Type	  R : RetractOf X	  ============================	  IsPreIdempotent (retract_idem R)	";
             responses[i]=data;
           
 
             i = 502;
-            data = "1 subgoal (ID 323)	  	  X : Type	  R : RetractOf X	  ============================	  IsPreIdempotent (retract_idem R)	";
+            data = "";
             responses[i]=data;
           
 
@@ -2558,12 +2558,12 @@
           
 
             i = 508;
-            data = "";
+            data = "1 subgoal (ID 334)	  	  X : Type	  R : RetractOf X	  ============================	  IsQuasiIdempotent (retract_idem R)	";
             responses[i]=data;
           
 
             i = 509;
-            data = "1 subgoal (ID 334)	  	  X : Type	  R : RetractOf X	  ============================	  IsQuasiIdempotent (retract_idem R)	";
+            data = "";
             responses[i]=data;
           
 
@@ -2628,12 +2628,12 @@
           
 
             i = 522;
-            data = "";
+            data = "1 subgoal (ID 345)	  	  X : Type	  f : X -> X	  S : Splitting f	  ============================	  IsPreIdempotent f	";
             responses[i]=data;
           
 
             i = 523;
-            data = "1 subgoal (ID 345)	  	  X : Type	  f : X -> X	  S : Splitting f	  ============================	  IsPreIdempotent f	";
+            data = "";
             responses[i]=data;
           
 
@@ -2658,12 +2658,12 @@
           
 
             i = 528;
-            data = "";
+            data = "1 subgoal (ID 351)	  	  X : Type	  f : X -> X	  S : Splitting f	  ============================	  IsQuasiIdempotent f	";
             responses[i]=data;
           
 
             i = 529;
-            data = "1 subgoal (ID 351)	  	  X : Type	  f : X -> X	  S : Splitting f	  ============================	  IsQuasiIdempotent f	";
+            data = "";
             responses[i]=data;
           
 
@@ -2938,7 +2938,7 @@
           
 
             i = 584;
-            data = "1 subgoal (ID 374)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  ============================	  X -> split_idem	";
+            data = "";
             responses[i]=data;
           
 
@@ -3008,7 +3008,7 @@
           
 
             i = 598;
-            data = "1 subgoal (ID 410)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a, a' : split_idem	  p : a.(proj1_sig) == a'.(proj1_sig)	  q : forall n : nat,	      a.(proj2_sig) n @ p n = ap f (p n.+1) @ a'.(proj2_sig) n	  ============================	  a = a'	";
+            data = "";
             responses[i]=data;
           
 
@@ -3078,7 +3078,7 @@
           
 
             i = 612;
-            data = "1 subgoal (ID 448)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a, a' : split_idem	  p : a.(proj1_sig) == a'.(proj1_sig)	  q : forall n : nat,	      a.(proj2_sig) n @ p n = ap f (p n.+1) @ a'.(proj2_sig) n	  ============================	  ap split_idem_sect (path_split_idem p q) = p 0	";
+            data = "";
             responses[i]=data;
           
 
@@ -3168,7 +3168,7 @@
           
 
             i = 630;
-            data = "1 subgoal (ID 450)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a : split_idem	  ============================	  split_idem	";
+            data = "";
             responses[i]=data;
           
 
@@ -3193,7 +3193,7 @@
           
 
             i = 635;
-            data = "1 subgoal (ID 455)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a : split_idem	  ============================	  nudge a = a	";
+            data = "";
             responses[i]=data;
           
 
@@ -3278,7 +3278,7 @@
           
 
             i = 652;
-            data = "1 subgoal (ID 460)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a : split_idem	  n : nat	  ============================	  f (f (a n.+1)) = f (a 0)	";
+            data = "";
             responses[i]=data;
           
 
@@ -3308,7 +3308,7 @@
           
 
             i = 658;
-            data = "1 subgoal (ID 508)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a : split_idem	  n : nat	  ============================	  ap f (ap f (a.(proj2_sig) n.+1)) @ split_idem_issect_part1 a n =	  ap f	    ((ap f (a.(proj2_sig) n.+1) @ (I (a.(proj1_sig) n.+1))^) @	     split_idem_issect_part1 a n) @ I (a.(proj1_sig) 0)	";
+            data = "";
             responses[i]=data;
           
 
@@ -3323,7 +3323,7 @@
           
 
             i = 661;
-            data = "1 subgoal (ID 518)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a : split_idem	  ============================	  ap f (ap f (a.(proj2_sig) 1))	  @' ap f (a.(proj2_sig) 0) =	  ap f	    ((ap f (a.(proj2_sig) 1) @ (I (a.(proj1_sig) 1))^) @	     ap f (a.(proj2_sig) 0))	  @' I (a.(proj1_sig) 0)	1 subgoal (ID 548)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a : split_idem	  ============================	  ap f (ap f (a.(proj2_sig) 1))	  @' ap f (a.(proj2_sig) 0) =	  ap f (ap f (a.(proj2_sig) 1))	  @' (ap f (I (a.(proj1_sig) 1)))^ @	     (ap f (ap f (a.(proj2_sig) 0)) @ I (a.(proj1_sig) 0))	";
+            data = "1 subgoal (ID 518)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a : split_idem	  ============================	  ap f (ap f (a.(proj2_sig) 1))	  @' ap f (a.(proj2_sig) 0) =	  ap f	    (ap f (a.(proj2_sig) 1)	     @' (I (a.(proj1_sig) 1))^	     @' ap f (a.(proj2_sig) 0))	  @' I (a.(proj1_sig) 0)	1 subgoal (ID 548)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a : split_idem	  ============================	  ap f (ap f (a.(proj2_sig) 1))	  @' ap f (a.(proj2_sig) 0) =	  ap f (ap f (a.(proj2_sig) 1))	  @' ((ap f (I (a.(proj1_sig) 1)))^	      @' (ap f (ap f (a.(proj2_sig) 0))	          @' I (a.(proj1_sig) 0)))	";
             responses[i]=data;
           
 
@@ -3338,32 +3338,32 @@
           
 
             i = 664;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 521)		subgoal 1 (ID 521) is:	 ap f (ap f (a.(proj2_sig) n.+2))	 @' (ap f (a.(proj2_sig) n.+1) @ (I (a.(proj1_sig) n.+1))^) @	    split_idem_issect_part1 a n =	 ap f	   ((ap f (a.(proj2_sig) n.+2) @ (I (a.(proj1_sig) n.+2))^) @	    ((ap f (a.(proj2_sig) n.+1) @ (I (a.(proj1_sig) n.+1))^) @	     split_idem_issect_part1 a n))	 @' I (a.(proj1_sig) 0)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 521)		subgoal 1 (ID 521) is:	 ap f (ap f (a.(proj2_sig) n.+2))	 @' (ap f (a.(proj2_sig) n.+1)	     @' (I (a.(proj1_sig) n.+1))^	     @' split_idem_issect_part1 a n) =	 ap f	   (ap f (a.(proj2_sig) n.+2)	    @' (I (a.(proj1_sig) n.+2))^	    @' (ap f (a.(proj2_sig) n.+1)	        @' (I (a.(proj1_sig) n.+1))^	        @' split_idem_issect_part1 a n))	 @' I (a.(proj1_sig) 0)	";
             responses[i]=data;
           
 
             i = 665;
-            data = "1 subgoal (ID 521)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a : split_idem	  n : nat	  IH : ap f (ap f (a.(proj2_sig) n.+1))	       @' split_idem_issect_part1 a n =	       ap f	         ((ap f (a.(proj2_sig) n.+1) @ (I (a.(proj1_sig) n.+1))^) @	          split_idem_issect_part1 a n)	       @' I (a.(proj1_sig) 0)	  ============================	  ap f (ap f (a.(proj2_sig) n.+2))	  @' (ap f (a.(proj2_sig) n.+1) @ (I (a.(proj1_sig) n.+1))^) @	     split_idem_issect_part1 a n =	  ap f	    ((ap f (a.(proj2_sig) n.+2) @ (I (a.(proj1_sig) n.+2))^) @	     ((ap f (a.(proj2_sig) n.+1) @ (I (a.(proj1_sig) n.+1))^) @	      split_idem_issect_part1 a n))	  @' I (a.(proj1_sig) 0)	1 subgoal (ID 602)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a : split_idem	  n : nat	  IH : ap f (ap f (a.(proj2_sig) n.+1))	       @' split_idem_issect_part1 a n =	       ap f	         ((ap f (a.(proj2_sig) n.+1) @ (I (a.(proj1_sig) n.+1))^) @	          split_idem_issect_part1 a n)	       @' I (a.(proj1_sig) 0)	  ============================	  ap f (ap f (a.(proj2_sig) n.+2))	  @' (ap f (a.(proj2_sig) n.+1) @ (I (a.(proj1_sig) n.+1))^) @	     split_idem_issect_part1 a n =	  ap f (ap f (a.(proj2_sig) n.+2) @ (I (a.(proj1_sig) n.+2))^) @	  ap f	    ((ap f (a.(proj2_sig) n.+1) @ (I (a.(proj1_sig) n.+1))^) @	     split_idem_issect_part1 a n)	  @' I (a.(proj1_sig) 0)	";
+            data = "1 subgoal (ID 521)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a : split_idem	  n : nat	  IH : ap f (ap f (a.(proj2_sig) n.+1))	       @' split_idem_issect_part1 a n =	       ap f	         (ap f (a.(proj2_sig) n.+1)	          @' (I (a.(proj1_sig) n.+1))^	          @' split_idem_issect_part1 a n)	       @' I (a.(proj1_sig) 0)	  ============================	  ap f (ap f (a.(proj2_sig) n.+2))	  @' (ap f (a.(proj2_sig) n.+1)	      @' (I (a.(proj1_sig) n.+1))^	      @' split_idem_issect_part1 a n) =	  ap f	    (ap f (a.(proj2_sig) n.+2)	     @' (I (a.(proj1_sig) n.+2))^	     @' (ap f (a.(proj2_sig) n.+1)	         @' (I (a.(proj1_sig) n.+1))^	         @' split_idem_issect_part1 a n))	  @' I (a.(proj1_sig) 0)	1 subgoal (ID 602)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a : split_idem	  n : nat	  IH : ap f (ap f (a.(proj2_sig) n.+1))	       @' split_idem_issect_part1 a n =	       ap f	         (ap f (a.(proj2_sig) n.+1)	          @' (I (a.(proj1_sig) n.+1))^	          @' split_idem_issect_part1 a n)	       @' I (a.(proj1_sig) 0)	  ============================	  ap f (ap f (a.(proj2_sig) n.+2))	  @' (ap f (a.(proj2_sig) n.+1)	      @' (I (a.(proj1_sig) n.+1))^	      @' split_idem_issect_part1 a n) =	  ap f (ap f (a.(proj2_sig) n.+2)	        @' (I (a.(proj1_sig) n.+2))^)	  @' ap f	       (ap f (a.(proj2_sig) n.+1)	        @' (I (a.(proj1_sig) n.+1))^	        @' split_idem_issect_part1 a n)	  @' I (a.(proj1_sig) 0)	";
             responses[i]=data;
           
 
             i = 666;
-            data = "1 subgoal (ID 636)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a : split_idem	  n : nat	  IH : ap f (ap f (a.(proj2_sig) n.+1))	       @' split_idem_issect_part1 a n =	       ap f	         ((ap f (a.(proj2_sig) n.+1) @ (I (a.(proj1_sig) n.+1))^) @	          split_idem_issect_part1 a n)	       @' I (a.(proj1_sig) 0)	  ============================	  ap f (ap f (a.(proj2_sig) n.+2))	  @' (ap f (a.(proj2_sig) n.+1) @ (I (a.(proj1_sig) n.+1))^) @	     split_idem_issect_part1 a n =	  ap f (ap f (a.(proj2_sig) n.+2) @ (I (a.(proj1_sig) n.+2))^)	  @' ap f (ap f (a.(proj2_sig) n.+1)) @ split_idem_issect_part1 a n	";
+            data = "1 subgoal (ID 636)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a : split_idem	  n : nat	  IH : ap f (ap f (a.(proj2_sig) n.+1))	       @' split_idem_issect_part1 a n =	       ap f	         (ap f (a.(proj2_sig) n.+1)	          @' (I (a.(proj1_sig) n.+1))^	          @' split_idem_issect_part1 a n)	       @' I (a.(proj1_sig) 0)	  ============================	  ap f (ap f (a.(proj2_sig) n.+2))	  @' (ap f (a.(proj2_sig) n.+1)	      @' (I (a.(proj1_sig) n.+1))^	      @' split_idem_issect_part1 a n) =	  ap f (ap f (a.(proj2_sig) n.+2)	        @' (I (a.(proj1_sig) n.+2))^)	  @' (ap f (ap f (a.(proj2_sig) n.+1))	      @' split_idem_issect_part1 a n)	";
             responses[i]=data;
           
 
             i = 667;
-            data = "1 subgoal (ID 674)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a : split_idem	  n : nat	  IH : ap f (ap f (a.(proj2_sig) n.+1))	       @' split_idem_issect_part1 a n =	       ap f	         ((ap f (a.(proj2_sig) n.+1) @ (I (a.(proj1_sig) n.+1))^) @	          split_idem_issect_part1 a n)	       @' I (a.(proj1_sig) 0)	  ============================	  (ap f (ap f (a.(proj2_sig) n.+2)) @ ap f (a.(proj2_sig) n.+1)) @	  (I (a.(proj1_sig) n.+1))^	  @' split_idem_issect_part1 a n =	  (ap f (ap f (a.(proj2_sig) n.+2)) @ (ap f (I (a.(proj1_sig) n.+2)))^) @	  ap f (ap f (a.(proj2_sig) n.+1))	  @' split_idem_issect_part1 a n	";
+            data = "1 subgoal (ID 674)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a : split_idem	  n : nat	  IH : ap f (ap f (a.(proj2_sig) n.+1))	       @' split_idem_issect_part1 a n =	       ap f	         (ap f (a.(proj2_sig) n.+1)	          @' (I (a.(proj1_sig) n.+1))^	          @' split_idem_issect_part1 a n)	       @' I (a.(proj1_sig) 0)	  ============================	  ap f (ap f (a.(proj2_sig) n.+2))	  @' ap f (a.(proj2_sig) n.+1)	  @' (I (a.(proj1_sig) n.+1))^	  @' split_idem_issect_part1 a n =	  ap f (ap f (a.(proj2_sig) n.+2))	  @' (ap f (I (a.(proj1_sig) n.+2)))^	  @' ap f (ap f (a.(proj2_sig) n.+1))	  @' split_idem_issect_part1 a n	";
             responses[i]=data;
           
 
             i = 668;
-            data = "1 subgoal (ID 677)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a : split_idem	  n : nat	  IH : ap f (ap f (a.(proj2_sig) n.+1))	       @' split_idem_issect_part1 a n =	       ap f	         ((ap f (a.(proj2_sig) n.+1) @ (I (a.(proj1_sig) n.+1))^) @	          split_idem_issect_part1 a n)	       @' I (a.(proj1_sig) 0)	  ============================	  (ap f (ap f (a.(proj2_sig) n.+2)) @ ap f (a.(proj2_sig) n.+1)) @	  (I (a.(proj1_sig) n.+1))^	  @' split_idem_issect_part1 a n =	  (ap f (ap f (a.(proj2_sig) n.+2)) @ (I (f (a.(proj1_sig) n.+2)))^) @	  ap f (ap f (a.(proj2_sig) n.+1))	  @' split_idem_issect_part1 a n	";
+            data = "1 subgoal (ID 677)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a : split_idem	  n : nat	  IH : ap f (ap f (a.(proj2_sig) n.+1))	       @' split_idem_issect_part1 a n =	       ap f	         (ap f (a.(proj2_sig) n.+1)	          @' (I (a.(proj1_sig) n.+1))^	          @' split_idem_issect_part1 a n)	       @' I (a.(proj1_sig) 0)	  ============================	  ap f (ap f (a.(proj2_sig) n.+2))	  @' ap f (a.(proj2_sig) n.+1)	  @' (I (a.(proj1_sig) n.+1))^	  @' split_idem_issect_part1 a n =	  ap f (ap f (a.(proj2_sig) n.+2))	  @' (I (f (a.(proj1_sig) n.+2)))^	  @' ap f (ap f (a.(proj2_sig) n.+1))	  @' split_idem_issect_part1 a n	";
             responses[i]=data;
           
 
             i = 669;
-            data = "1 subgoal (ID 685)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a : split_idem	  n : nat	  IH : ap f (ap f (a.(proj2_sig) n.+1))	       @' split_idem_issect_part1 a n =	       ap f	         ((ap f (a.(proj2_sig) n.+1) @ (I (a.(proj1_sig) n.+1))^) @	          split_idem_issect_part1 a n)	       @' I (a.(proj1_sig) 0)	  ============================	  (ap (fun x : X => f (f x)) (a.(proj2_sig) n.+2) @ ap f (a.(proj2_sig) n.+1)) @	  (I (a.(proj1_sig) n.+1))^	  @' split_idem_issect_part1 a n =	  (ap (fun x : X => f (f x)) (a.(proj2_sig) n.+2) @	   (I (f (a.(proj1_sig) n.+2)))^) @	  ap (fun x : X => f (f x)) (a.(proj2_sig) n.+1)	  @' split_idem_issect_part1 a n	";
+            data = "1 subgoal (ID 685)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a : split_idem	  n : nat	  IH : ap f (ap f (a.(proj2_sig) n.+1))	       @' split_idem_issect_part1 a n =	       ap f	         (ap f (a.(proj2_sig) n.+1)	          @' (I (a.(proj1_sig) n.+1))^	          @' split_idem_issect_part1 a n)	       @' I (a.(proj1_sig) 0)	  ============================	  ap (fun x : X => f (f x)) (a.(proj2_sig) n.+2)	  @' ap f (a.(proj2_sig) n.+1)	  @' (I (a.(proj1_sig) n.+1))^	  @' split_idem_issect_part1 a n =	  ap (fun x : X => f (f x)) (a.(proj2_sig) n.+2)	  @' (I (f (a.(proj1_sig) n.+2)))^	  @' ap (fun x : X => f (f x)) (a.(proj2_sig) n.+1)	  @' split_idem_issect_part1 a n	";
             responses[i]=data;
           
 
@@ -3388,7 +3388,7 @@
           
 
             i = 674;
-            data = "1 subgoal (ID 512)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a : split_idem	  ============================	  split_idem_retr (split_idem_sect a) = a	";
+            data = "";
             responses[i]=data;
           
 
@@ -3463,7 +3463,7 @@
           
 
             i = 689;
-            data = "1 subgoal (ID 524)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  x : X	  ============================	  ap split_idem_sect (split_idem_issect (split_idem_retr x)) = I x	";
+            data = "";
             responses[i]=data;
           
 
@@ -3778,7 +3778,7 @@
           
 
             i = 752;
-            data = "1 subgoal (ID 494)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  a : split_idem (s o r)	  ============================	  H (r (s (r (split_idem_sect (s o r) a)))) @	  H (r (split_idem_sect (s o r) a)) =	  ap (r o split_idem_sect (s o r))	    (ap (split_idem_retr (s o r))	       (1 @ ap (split_idem_sect (s o r)) (split_idem_issect (s o r) a)) @	     split_idem_issect (s o r) a)	";
+            data = "";
             responses[i]=data;
           
 
@@ -3928,7 +3928,7 @@
           
 
             i = 782;
-            data = "1 subgoal (ID 505)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  ============================	  split_idem (s o r) <~> A	";
+            data = "";
             responses[i]=data;
           
 
@@ -4038,7 +4038,7 @@
           
 
             i = 804;
-            data = "1 subgoal (ID 611)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  a : A	  ============================	  ap equiv_split_idem_retract.(equiv_fun)	    (split_idem_issect (s o r)	       (equiv_split_idem_retract.(equiv_isequiv).(equiv_inv) a)) @	  equiv_split_idem_retract.(equiv_isequiv).(eisretr) a =	  (equiv_split_idem_retract_retr	     (split_idem_sect (s o r)	        (equiv_split_idem_retract.(equiv_isequiv).(equiv_inv) a)) @	   ap r (equiv_split_idem_retract_sect a)) @ H a	";
+            data = "";
             responses[i]=data;
           
 
@@ -4078,12 +4078,12 @@
           
 
             i = 812;
-            data = "1 subgoal (ID 738)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  a : A	  ============================	  (ap r (ap s (H (r (s (r (s a)))))) @ ap r (ap s (H (r (s a))))) @	  H (r (s a))	  @' H a =	  (ap r (ap (fun x : X => s (r x)) (ap s (H (r (s a))))) @	   H (r (s (r (s a))))) @ ap r (ap s (H a))	  @' H a	";
+            data = "1 subgoal (ID 738)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  a : A	  ============================	  ap r (ap s (H (r (s (r (s a))))))	  @' ap r (ap s (H (r (s a))))	  @' H (r (s a))	  @' H a =	  ap r (ap (fun x : X => s (r x)) (ap s (H (r (s a)))))	  @' H (r (s (r (s a))))	  @' ap r (ap s (H a))	  @' H a	";
             responses[i]=data;
           
 
             i = 813;
-            data = "1 subgoal (ID 773)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  a : A	  ============================	  (ap (fun x : A => r (s x)) (H (r (s (r (s a))))) @	   ap (fun x : A => r (s x)) (H (r (s a)))) @ H (r (s a))	  @' H a =	  (ap r (ap (fun x : A => s (r (s x))) (H (r (s a)))) @ H (r (s (r (s a))))) @	  ap (fun x : A => r (s x)) (H a)	  @' H a	";
+            data = "1 subgoal (ID 773)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  a : A	  ============================	  ap (fun x : A => r (s x)) (H (r (s (r (s a)))))	  @' ap (fun x : A => r (s x)) (H (r (s a)))	  @' H (r (s a))	  @' H a =	  ap r (ap (fun x : A => s (r (s x))) (H (r (s a))))	  @' H (r (s (r (s a))))	  @' ap (fun x : A => r (s x)) (H a)	  @' H a	";
             responses[i]=data;
           
 
@@ -4108,37 +4108,37 @@
           
 
             i = 818;
-            data = "1 subgoal (ID 800)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  a : A	  ============================	  (ap (fun x : A => r (s x)) (H (r (s (r (s a))))) @	   ap (fun x : A => r (s x)) (H (r (s a)))) @ H (r (s a))	  @' H a =	  (ap (fun x : R.(retract_type) => r (s (r (s x)))) (H (r (s a))) @	   H (r (s (r (s a))))) @ ap (fun x : A => r (s x)) (H a)	  @' H a	";
+            data = "1 subgoal (ID 800)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  a : A	  ============================	  ap (fun x : A => r (s x)) (H (r (s (r (s a)))))	  @' ap (fun x : A => r (s x)) (H (r (s a)))	  @' H (r (s a))	  @' H a =	  ap (fun x : R.(retract_type) => r (s (r (s x)))) (H (r (s a)))	  @' H (r (s (r (s a))))	  @' ap (fun x : A => r (s x)) (H a)	  @' H a	";
             responses[i]=data;
           
 
             i = 819;
-            data = "1 subgoal (ID 842)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  a : A	  ============================	  ap (fun x : R.(retract_type) => r (s x))	    (H (r (s (r (s a)))) @ H (r (s a))) @ H (r (s a))	  @' H a =	  (ap (fun x : R.(retract_type) => r (s (r (s x)))) (H (r (s a))) @	   H (r (s (r (s a))))) @ ap (fun x : A => r (s x)) (H a)	  @' H a	";
+            data = "1 subgoal (ID 842)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  a : A	  ============================	  ap (fun x : R.(retract_type) => r (s x))	    (H (r (s (r (s a))))	     @' H (r (s a)))	  @' H (r (s a))	  @' H a =	  ap (fun x : R.(retract_type) => r (s (r (s x)))) (H (r (s a)))	  @' H (r (s (r (s a))))	  @' ap (fun x : A => r (s x)) (H a)	  @' H a	";
             responses[i]=data;
           
 
             i = 820;
-            data = "1 subgoal (ID 865)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  a : A	  ============================	  ap (fun x : R.(retract_type) => r (s x))	    (ap (fun x : R.(retract_type) => R.(retract_retr) (R.(retract_sect) x))	       (H (r (s a))) @ H (r (s a))) @ H (r (s a))	  @' H a =	  (ap (fun x : R.(retract_type) => r (s (r (s x)))) (H (r (s a))) @	   H (r (s (r (s a))))) @ ap (fun x : A => r (s x)) (H a)	  @' H a	";
+            data = "1 subgoal (ID 865)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  a : A	  ============================	  ap (fun x : R.(retract_type) => r (s x))	    (ap (fun x : R.(retract_type) => R.(retract_retr) (R.(retract_sect) x))	       (H (r (s a)))	     @' H (r (s a)))	  @' H (r (s a))	  @' H a =	  ap (fun x : R.(retract_type) => r (s (r (s x)))) (H (r (s a)))	  @' H (r (s (r (s a))))	  @' ap (fun x : A => r (s x)) (H a)	  @' H a	";
             responses[i]=data;
           
 
             i = 821;
-            data = "1 subgoal (ID 872)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  a : A	  ============================	  (ap (fun x : R.(retract_type) => r (s x))	     (ap (fun x : R.(retract_type) => R.(retract_retr) (R.(retract_sect) x))	        (H (r (s a)))) @	   ap (fun x : R.(retract_type) => r (s x)) (H (r (s a)))) @ 	  H (r (s a))	  @' H a =	  (ap (fun x : R.(retract_type) => r (s (r (s x)))) (H (r (s a))) @	   H (r (s (r (s a))))) @ ap (fun x : A => r (s x)) (H a)	  @' H a	";
+            data = "1 subgoal (ID 872)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  a : A	  ============================	  ap (fun x : R.(retract_type) => r (s x))	    (ap (fun x : R.(retract_type) => R.(retract_retr) (R.(retract_sect) x))	       (H (r (s a))))	  @' ap (fun x : R.(retract_type) => r (s x)) (H (r (s a)))	  @' H (r (s a))	  @' H a =	  ap (fun x : R.(retract_type) => r (s (r (s x)))) (H (r (s a)))	  @' H (r (s (r (s a))))	  @' ap (fun x : A => r (s x)) (H a)	  @' H a	";
             responses[i]=data;
           
 
             i = 822;
-            data = "1 subgoal (ID 900)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  a : A	  ============================	  (ap (fun x : R.(retract_type) => r (s (r (s x)))) (H (r (s a))) @	   ap (fun x : R.(retract_type) => r (s x)) (H (r (s a)))) @ 	  H (r (s a))	  @' H a =	  (ap (fun x : R.(retract_type) => r (s (r (s x)))) (H (r (s a))) @	   H (r (s (r (s a))))) @ ap (fun x : A => r (s x)) (H a)	  @' H a	";
+            data = "1 subgoal (ID 900)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  a : A	  ============================	  ap (fun x : R.(retract_type) => r (s (r (s x)))) (H (r (s a)))	  @' ap (fun x : R.(retract_type) => r (s x)) (H (r (s a)))	  @' H (r (s a))	  @' H a =	  ap (fun x : R.(retract_type) => r (s (r (s x)))) (H (r (s a)))	  @' H (r (s (r (s a))))	  @' ap (fun x : A => r (s x)) (H a)	  @' H a	";
             responses[i]=data;
           
 
             i = 823;
-            data = "1 subgoal (ID 976)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  a : A	  ============================	  ap (fun x : R.(retract_type) => r (s x)) (H (r (s a))) @ H (r (s a))	  @' H a = H (r (s (r (s a)))) @ ap (fun x : A => r (s x)) (H a)	           @' H a	";
+            data = "1 subgoal (ID 976)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  a : A	  ============================	  ap (fun x : R.(retract_type) => r (s x)) (H (r (s a)))	  @' H (r (s a))	  @' H a = H (r (s (r (s a))))	           @' ap (fun x : A => r (s x)) (H a)	           @' H a	";
             responses[i]=data;
           
 
             i = 824;
-            data = "1 subgoal (ID 991)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  a : A	  ============================	  H (R.(retract_retr) (R.(retract_sect) (r (s a)))) @ H (r (s a))	  @' H a = H (r (s (r (s a)))) @ ap (fun x : A => r (s x)) (H a)	           @' H a	";
+            data = "1 subgoal (ID 991)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  a : A	  ============================	  H (R.(retract_retr) (R.(retract_sect) (r (s a))))	  @' H (r (s a))	  @' H a = H (r (s (r (s a))))	           @' ap (fun x : A => r (s x)) (H a)	           @' H a	";
             responses[i]=data;
           
 
@@ -4188,7 +4188,7 @@
           
 
             i = 834;
-            data = "1 subgoal (ID 680)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  x : X	  ============================	  split_idem_splits (s o r) x =	  (ap (split_idem_sect (s o r))	     (equiv_split_idem_retract.(equiv_isequiv).(eissect)	        (split_idem_retr (s o r) x))^ @	   equiv_split_idem_retract_sect	     (equiv_split_idem_retract.(equiv_fun) (split_idem_retr (s o r) x))) @	  ap s (equiv_split_idem_retract_retr x)	";
+            data = "";
             responses[i]=data;
           
 
@@ -4268,22 +4268,22 @@
           
 
             i = 850;
-            data = "1 subgoal (ID 828)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  x : X	  ============================	  ((((ap (split_idem_sect (fun x0 : X => s (r x0)))	        (ap (split_idem_retr (fun x0 : X => s (r x0)))	           (ap (fun x0 : X => s (r x0)) (ap s (H (r x))))))^ @	     ap (split_idem_sect (fun x0 : X => s (r x0)))	       (ap (split_idem_retr (fun x0 : X => s (r x0)))	          (ap s (H (r (s (r x))))))) @	    ap (split_idem_sect (fun x0 : X => s (r x0)))	      (ap (split_idem_retr (fun x0 : X => s (r x0))) (ap s (H (r x))))) @	   (ap (fun x0 : X => s (r x0)) (ap s (H (r x))))^) @ 	  ap s (H (r (s (r x))))	  @' ap s (H (r x)) = ap s (H (r (s (r x))))	                      @' ap s (H (r x))	";
+            data = "1 subgoal (ID 828)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  x : X	  ============================	  (ap (split_idem_sect (fun x0 : X => s (r x0)))	     (ap (split_idem_retr (fun x0 : X => s (r x0)))	        (ap (fun x0 : X => s (r x0)) (ap s (H (r x))))))^	  @' ap (split_idem_sect (fun x0 : X => s (r x0)))	       (ap (split_idem_retr (fun x0 : X => s (r x0)))	          (ap s (H (r (s (r x))))))	  @' ap (split_idem_sect (fun x0 : X => s (r x0)))	       (ap (split_idem_retr (fun x0 : X => s (r x0))) (ap s (H (r x))))	  @' (ap (fun x0 : X => s (r x0)) (ap s (H (r x))))^	  @' ap s (H (r (s (r x))))	  @' ap s (H (r x)) = ap s (H (r (s (r x))))	                      @' ap s (H (r x))	";
             responses[i]=data;
           
 
             i = 851;
-            data = "1 subgoal (ID 869)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  x : X	  ============================	  ((((ap (fun x0 : X => s (r x0)) (ap (fun x0 : A => s (r (s x0))) (H (r x))))^ @	     ap (fun x0 : A => s (r (s x0))) (H (r (s (r x))))) @	    ap (fun x0 : A => s (r (s x0))) (H (r x))) @	   (ap (fun x0 : A => s (r (s x0))) (H (r x)))^) @ 	  ap s (H (r (s (r x))))	  @' ap s (H (r x)) = ap s (H (r (s (r x))))	                      @' ap s (H (r x))	";
+            data = "1 subgoal (ID 869)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  x : X	  ============================	  (ap (fun x0 : X => s (r x0)) (ap (fun x0 : A => s (r (s x0))) (H (r x))))^	  @' ap (fun x0 : A => s (r (s x0))) (H (r (s (r x))))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x))	  @' (ap (fun x0 : A => s (r (s x0))) (H (r x)))^	  @' ap s (H (r (s (r x))))	  @' ap s (H (r x)) = ap s (H (r (s (r x))))	                      @' ap s (H (r x))	";
             responses[i]=data;
           
 
             i = 852;
-            data = "1 subgoal (ID 876)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  x : X	  ============================	  (((ap (fun x0 : X => s (r x0)) (ap (fun x0 : A => s (r (s x0))) (H (r x))))^ @	    ap (fun x0 : A => s (r (s x0))) (H (r (s (r x))))) @	   ap (fun x0 : A => s (r (s x0))) (H (r x))) @	  (ap (fun x0 : A => s (r (s x0))) (H (r x)))^	  @' ap s (H (r (s (r x)))) = ap s (H (r (s (r x))))	";
+            data = "1 subgoal (ID 876)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  x : X	  ============================	  (ap (fun x0 : X => s (r x0)) (ap (fun x0 : A => s (r (s x0))) (H (r x))))^	  @' ap (fun x0 : A => s (r (s x0))) (H (r (s (r x))))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x))	  @' (ap (fun x0 : A => s (r (s x0))) (H (r x)))^	  @' ap s (H (r (s (r x)))) = ap s (H (r (s (r x))))	";
             responses[i]=data;
           
 
             i = 853;
-            data = "1 subgoal (ID 895)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  x : X	  ============================	  ((ap (fun x0 : X => s (r x0)) (ap (fun x0 : A => s (r (s x0))) (H (r x))))^ @	   ap (fun x0 : A => s (r (s x0))) (H (r (s (r x))))) @	  ap (fun x0 : A => s (r (s x0))) (H (r x))	  @' (ap (fun x0 : A => s (r (s x0))) (H (r x)))^ = 1	";
+            data = "1 subgoal (ID 895)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  x : X	  ============================	  (ap (fun x0 : X => s (r x0)) (ap (fun x0 : A => s (r (s x0))) (H (r x))))^	  @' ap (fun x0 : A => s (r (s x0))) (H (r (s (r x))))	  @' ap (fun x0 : A => s (r (s x0))) (H (r x))	  @' (ap (fun x0 : A => s (r (s x0))) (H (r x)))^ = 1	";
             responses[i]=data;
           
 
@@ -4318,32 +4318,32 @@
           
 
             i = 860;
-            data = "1 subgoal (ID 1146)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  x : X	  ============================	  ap (fun x0 : R.(retract_type) => r (s x0)) (H (r (s (r x)))) @	  ap (fun x0 : R.(retract_type) => r (s x0)) (H (r x))	  @' H (r x) =	  ap (fun x0 : R.(retract_type) => r (s (r (s x0)))) (H (r x)) @	  ap (fun x0 : R.(retract_type) => r (s x0)) (H (r x))	  @' H (r x)	";
+            data = "1 subgoal (ID 1146)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  x : X	  ============================	  ap (fun x0 : R.(retract_type) => r (s x0)) (H (r (s (r x))))	  @' ap (fun x0 : R.(retract_type) => r (s x0)) (H (r x))	  @' H (r x) =	  ap (fun x0 : R.(retract_type) => r (s (r (s x0)))) (H (r x))	  @' ap (fun x0 : R.(retract_type) => r (s x0)) (H (r x))	  @' H (r x)	";
             responses[i]=data;
           
 
             i = 861;
-            data = "1 subgoal (ID 1154)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  x : X	  ============================	  ap (fun x0 : R.(retract_type) => r (s x0)) (H (r (s (r x)))) @	  H (R.(retract_retr) (R.(retract_sect) (r x)))	  @' H (r x) =	  ap (fun x0 : R.(retract_type) => r (s (r (s x0)))) (H (r x)) @	  ap (fun x0 : R.(retract_type) => r (s x0)) (H (r x))	  @' H (r x)	";
+            data = "1 subgoal (ID 1154)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  x : X	  ============================	  ap (fun x0 : R.(retract_type) => r (s x0)) (H (r (s (r x))))	  @' H (R.(retract_retr) (R.(retract_sect) (r x)))	  @' H (r x) =	  ap (fun x0 : R.(retract_type) => r (s (r (s x0)))) (H (r x))	  @' ap (fun x0 : R.(retract_type) => r (s x0)) (H (r x))	  @' H (r x)	";
             responses[i]=data;
           
 
             i = 862;
-            data = "1 subgoal (ID 1169)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  x : X	  ============================	  ap (fun x0 : R.(retract_type) => r (s x0)) (H (r (s (r x)))) @	  H (R.(retract_retr) (R.(retract_sect) (r x)))	  @' H (r x) =	  ap (fun x0 : R.(retract_type) => r (s (r (s x0)))) (H (r x)) @	  H (R.(retract_retr) (R.(retract_sect) (r x)))	  @' H (r x)	";
+            data = "1 subgoal (ID 1169)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  x : X	  ============================	  ap (fun x0 : R.(retract_type) => r (s x0)) (H (r (s (r x))))	  @' H (R.(retract_retr) (R.(retract_sect) (r x)))	  @' H (r x) =	  ap (fun x0 : R.(retract_type) => r (s (r (s x0)))) (H (r x))	  @' H (R.(retract_retr) (R.(retract_sect) (r x)))	  @' H (r x)	";
             responses[i]=data;
           
 
             i = 863;
-            data = "1 subgoal (ID 1197)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  x : X	  ============================	  H (R.(retract_retr) (R.(retract_sect) (r (s (r x))))) @ H (r (s (r x)))	  @' H (r x) =	  ap (fun x0 : R.(retract_type) => r (s (r (s x0)))) (H (r x)) @	  H (R.(retract_retr) (R.(retract_sect) (r x)))	  @' H (r x)	";
+            data = "1 subgoal (ID 1197)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  x : X	  ============================	  H (R.(retract_retr) (R.(retract_sect) (r (s (r x)))))	  @' H (r (s (r x)))	  @' H (r x) =	  ap (fun x0 : R.(retract_type) => r (s (r (s x0)))) (H (r x))	  @' H (R.(retract_retr) (R.(retract_sect) (r x)))	  @' H (r x)	";
             responses[i]=data;
           
 
             i = 864;
-            data = "1 subgoal (ID 1223)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  x : X	  ============================	  H (R.(retract_retr) (R.(retract_sect) (r (s (r x))))) @ H (r (s (r x)))	  @' H (r x) =	  ap (fun x0 : R.(retract_type) => r (s x0))	    (ap (fun x0 : R.(retract_type) => r (s x0)) (H (r x))) @	  H (R.(retract_retr) (R.(retract_sect) (r x)))	  @' H (r x)	";
+            data = "1 subgoal (ID 1223)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  x : X	  ============================	  H (R.(retract_retr) (R.(retract_sect) (r (s (r x)))))	  @' H (r (s (r x)))	  @' H (r x) =	  ap (fun x0 : R.(retract_type) => r (s x0))	    (ap (fun x0 : R.(retract_type) => r (s x0)) (H (r x)))	  @' H (R.(retract_retr) (R.(retract_sect) (r x)))	  @' H (r x)	";
             responses[i]=data;
           
 
             i = 865;
-            data = "1 subgoal (ID 1266)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  x : X	  ============================	  H (R.(retract_retr) (R.(retract_sect) (r (s (r x))))) @ H (r (s (r x)))	  @' H (r x) =	  H (r (s (R.(retract_retr) (R.(retract_sect) (r x))))) @	  ap (fun x0 : R.(retract_type) => r (s x0)) (H (r x))	  @' H (r x)	";
+            data = "1 subgoal (ID 1266)	  	  fs : Funext	  X : Type	  R : RetractOf X	  A := R.(retract_type) : Type	  r := R.(retract_retr) : X -> R.(retract_type)	  s := R.(retract_sect) : R.(retract_type) -> X	  H := R.(retract_issect) : R.(retract_retr) o R.(retract_sect) == idmap	  x : X	  ============================	  H (R.(retract_retr) (R.(retract_sect) (r (s (r x)))))	  @' H (r (s (r x)))	  @' H (r x) =	  H (r (s (R.(retract_retr) (R.(retract_sect) (r x)))))	  @' ap (fun x0 : R.(retract_type) => r (s x0)) (H (r x))	  @' H (r x)	";
             responses[i]=data;
           
 
@@ -4448,7 +4448,7 @@
           
 
             i = 886;
-            data = "1 subgoal (ID 362)	  	  ua : Univalence	  X : Type	  ============================	  RetractOf (QuasiIdempotent X)	";
+            data = "";
             responses[i]=data;
           
 
@@ -4508,7 +4508,7 @@
           
 
             i = 898;
-            data = "1 subgoal (ID 368)	  	  ua : Univalence	  X : Type	  f : X -> X	  ============================	  RetractOf {I : IsPreIdempotent f & IsQuasiIdempotent f}	";
+            data = "";
             responses[i]=data;
           
 
@@ -4603,7 +4603,7 @@
           
 
             i = 917;
-            data = "1 subgoal (ID 425)	  	  ua : Univalence	  X : Type	  f : PreIdempotent X	  ============================	  RetractOf (IsQuasiIdempotent f)	";
+            data = "";
             responses[i]=data;
           
 
@@ -4893,12 +4893,12 @@
           
 
             i = 975;
-            data = "";
+            data = "1 subgoal (ID 405)	  	  ua : Univalence	  X : Type	  f : X -> X	  H : IsIdempotent f	  ============================	  IsPreIdempotent f	";
             responses[i]=data;
           
 
             i = 976;
-            data = "1 subgoal (ID 405)	  	  ua : Univalence	  X : Type	  f : X -> X	  H : IsIdempotent f	  ============================	  IsPreIdempotent f	";
+            data = "";
             responses[i]=data;
           
 
@@ -4918,12 +4918,12 @@
           
 
             i = 980;
-            data = "";
+            data = "1 subgoal (ID 413)	  	  ua : Univalence	  X : Type	  f : X -> X	  H : IsIdempotent f	  ============================	  IsQuasiIdempotent f	";
             responses[i]=data;
           
 
             i = 981;
-            data = "1 subgoal (ID 413)	  	  ua : Univalence	  X : Type	  f : X -> X	  H : IsIdempotent f	  ============================	  IsQuasiIdempotent f	";
+            data = "";
             responses[i]=data;
           
 
@@ -5033,7 +5033,7 @@
           
 
             i = 1003;
-            data = "1 subgoal (ID 422)	  	  ua : Univalence	  X : Type	  ============================	  Idempotent X <~> RetractOf X	";
+            data = "";
             responses[i]=data;
           
 
@@ -5378,7 +5378,7 @@
           
 
             i = 1072;
-            data = "1 subgoal (ID 365)	  	  ua : Univalence	  X : Type	  ============================	  Contr (Splitting_PreIdempotent (preidem_idmap X))	";
+            data = "";
             responses[i]=data;
           
 
@@ -6782,7 +6782,7 @@ For example, here is the canonical splitting of the identity.
       " onmouseover="
       mouseover(333, '0_3_79');
       "><br>
-<span class="id" title="keyword">Coercion</span> <a class="idref" href="HoTT.Idempotents.html#preidempotent_pr1"><span class="id" title="definition">preidempotent_pr1</span></a> : <span class="id" title="var">PreIdempotent</span> &gt;-&gt; <span class="id" title="var">Funclass</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Coercion</span> <a class="idref" href="HoTT.Idempotents.html#preidempotent_pr1"><span class="id" title="definition">preidempotent_pr1</span></a> <a class="idref" href="HoTT.Idempotents.html#preidempotent_pr1"><span class="id" title="definition">:</span></a> <a class="idref" href="HoTT.Idempotents.html#preidempotent_pr1"><span class="id" title="definition">PreIdempotent</span></a> <a class="idref" href="HoTT.Idempotents.html#preidempotent_pr1"><span class="id" title="definition">&gt;-&gt;</span></a> <a class="idref" href="HoTT.Idempotents.html#preidempotent_pr1"><span class="id" title="definition">Funclass</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_79');
       " onmouseover="
       mouseover(334, '0_3_79');
@@ -7261,7 +7261,7 @@ Conversely, if <span class="inlinecode"><a class="idref" href="HoTTBookExercises
       " onmouseover="
       mouseover(467, '0_3_107');
       "><br>
-<span class="id" title="keyword">Coercion</span> <a class="idref" href="HoTT.Idempotents.html#quasiidempotent_pr1"><span class="id" title="definition">quasiidempotent_pr1</span></a> : <span class="id" title="var">QuasiIdempotent</span> &gt;-&gt; <span class="id" title="var">Funclass</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Coercion</span> <a class="idref" href="HoTT.Idempotents.html#quasiidempotent_pr1"><span class="id" title="definition">quasiidempotent_pr1</span></a> <a class="idref" href="HoTT.Idempotents.html#quasiidempotent_pr1"><span class="id" title="definition">:</span></a> <a class="idref" href="HoTT.Idempotents.html#quasiidempotent_pr1"><span class="id" title="definition">QuasiIdempotent</span></a> <a class="idref" href="HoTT.Idempotents.html#quasiidempotent_pr1"><span class="id" title="definition">&gt;-&gt;</span></a> <a class="idref" href="HoTT.Idempotents.html#quasiidempotent_pr1"><span class="id" title="definition">Funclass</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_107');
       " onmouseover="
       mouseover(468, '0_3_107');
@@ -7594,7 +7594,7 @@ The splitting will be the sequential limit of the sequence <span class="inlineco
       " onmouseover="
       mouseover(573, '0_3_131');
       "><br>
-  <span class="id" title="keyword">Coercion</span> <a class="idref" href="HoTT.Idempotents.html#split_idem_pr1"><span class="id" title="definition">split_idem_pr1</span></a> : <span class="id" title="var">split_idem</span> &gt;-&gt; <span class="id" title="var">Funclass</span>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Coercion</span> <a class="idref" href="HoTT.Idempotents.html#split_idem_pr1"><span class="id" title="definition">split_idem_pr1</span></a> <a class="idref" href="HoTT.Idempotents.html#split_idem_pr1"><span class="id" title="definition">:</span></a> <a class="idref" href="HoTT.Idempotents.html#split_idem_pr1"><span class="id" title="definition">split_idem</span></a> <a class="idref" href="HoTT.Idempotents.html#split_idem_pr1"><span class="id" title="definition">&gt;-&gt;</span></a> <a class="idref" href="HoTT.Idempotents.html#split_idem_pr1"><span class="id" title="definition">Funclass</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_131');
       " onmouseover="
       mouseover(574, '0_3_131');
@@ -9214,7 +9214,7 @@ For convenience, we instead split the idempotent on splittings of a fixed map <s
       " onmouseover="
       mouseover(986, '0_3_211');
       "><br>
-  <span class="id" title="keyword">Coercion</span> <a class="idref" href="HoTT.Idempotents.html#idempotent_pr1"><span class="id" title="definition">idempotent_pr1</span></a> : <span class="id" title="var">Idempotent</span> &gt;-&gt; <span class="id" title="var">Funclass</span>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Coercion</span> <a class="idref" href="HoTT.Idempotents.html#idempotent_pr1"><span class="id" title="definition">idempotent_pr1</span></a> <a class="idref" href="HoTT.Idempotents.html#idempotent_pr1"><span class="id" title="definition">:</span></a> <a class="idref" href="HoTT.Idempotents.html#idempotent_pr1"><span class="id" title="definition">Idempotent</span></a> <a class="idref" href="HoTT.Idempotents.html#idempotent_pr1"><span class="id" title="definition">&gt;-&gt;</span></a> <a class="idref" href="HoTT.Idempotents.html#idempotent_pr1"><span class="id" title="definition">Funclass</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_211');
       " onmouseover="
       mouseover(987, '0_3_211');

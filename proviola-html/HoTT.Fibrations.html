@@ -148,7 +148,7 @@
           
 
             i = 26;
-            data = "1 subgoal (ID 34)	  	  A : Type	  B : Type	  f : A -> B	  y : B	  x1, x2 : hfiber f y	  ============================	  {q : x1.(proj1_sig) = x2.(proj1_sig) &	  x1.(proj2_sig) = ap f q @ x2.(proj2_sig)} <~> x1 = x2	";
+            data = "";
             responses[i]=data;
           
 
@@ -228,7 +228,7 @@
           
 
             i = 42;
-            data = "1 subgoal (ID 125)	  	  A : Type	  B : Type	  f : A -> B	  x1, x2 : A	  p : f x1 = f x2	  ============================	  hfiber (ap f) p <~> (x1; p) = (x2; 1)	";
+            data = "";
             responses[i]=data;
           
 
@@ -288,7 +288,7 @@
           
 
             i = 54;
-            data = "1 subgoal (ID 138)	  	  A : Type	  B : Type	  f, g : A -> B	  h : f == g	  b : B	  ============================	  hfiber f b <~> hfiber g b	";
+            data = "";
             responses[i]=data;
           
 
@@ -343,7 +343,7 @@
           
 
             i = 65;
-            data = "1 subgoal (ID 177)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  p : k o f == g o h	  b : B	  ============================	  hfiber f b -> hfiber g (k b)	";
+            data = "";
             responses[i]=data;
           
 
@@ -408,7 +408,7 @@
           
 
             i = 78;
-            data = "1 subgoal (ID 249)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  p : k o f == g o h	  b : B	  c : C	  q : g c = k b	  ============================	  hfiber (functor_hfiber p b) (c; q) <~>	  hfiber (functor_hfiber (fun x : A => (p x)^) c) (b; q^)	";
+            data = "";
             responses[i]=data;
           
 
@@ -533,7 +533,7 @@
           
 
             i = 103;
-            data = "1 subgoal (ID 258)	  	  B : Type	  C : Type	  f : C -> B	  ============================	  C <~> {y : B & hfiber f y}	";
+            data = "";
             responses[i]=data;
           
 
@@ -563,7 +563,7 @@
           
 
             i = 109;
-            data = "1 subgoal (ID 266)	  	  X : Type	  x : X	  P : X -> Type	  ============================	  P x <~> hfiber pr1 x	";
+            data = "";
             responses[i]=data;
           
 
@@ -643,7 +643,7 @@
           
 
             i = 125;
-            data = "1 subgoal (ID 301)	  	  n : trunc_index	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  b : B	  ============================	  hfiber (hfiber_compose_map b) (b; 1) <~> hfiber f b	";
+            data = "";
             responses[i]=data;
           
 
@@ -698,7 +698,7 @@
           
 
             i = 136;
-            data = "1 subgoal (ID 321)	  	  n : trunc_index	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  c : C	  ============================	  hfiber (g o f) c <~> {w : hfiber g c & hfiber f w.(proj1_sig)}	";
+            data = "";
             responses[i]=data;
           
 
@@ -753,12 +753,12 @@
           
 
             i = 147;
-            data = "";
+            data = "1 subgoal (ID 339)	  	  n : trunc_index	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  IsTruncMap0 : IsTruncMap n g	  IsTruncMap1 : IsTruncMap n f	  ============================	  IsTruncMap n (g o f)	";
             responses[i]=data;
           
 
             i = 148;
-            data = "1 subgoal (ID 339)	  	  n : trunc_index	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  IsTruncMap0 : IsTruncMap n g	  IsTruncMap1 : IsTruncMap n f	  ============================	  IsTruncMap n (g o f)	";
+            data = "";
             responses[i]=data;
           
 
@@ -868,7 +868,7 @@
           
 
             i = 170;
-            data = "1 subgoal (ID 369)	  	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  g : forall a : A, P a -> Q (f a)	  b : B	  v : Q b	  ============================	  hfiber (functor_sigma f g) (b; v) <~>	  {w : hfiber f b & hfiber (g w.(proj1_sig)) (transport Q w.(proj2_sig)^ v)}	";
+            data = "";
             responses[i]=data;
           
 
@@ -933,12 +933,12 @@
           
 
             i = 183;
-            data = "";
+            data = "1 subgoal (ID 401)	  	  n : trunc_index	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  g : forall a : A, P a -> Q (f a)	  Hf : IsTruncMap n f	  Hg : forall a : A, IsTruncMap n (g a)	  ============================	  IsTruncMap n (functor_sigma f g)	";
             responses[i]=data;
           
 
             i = 184;
-            data = "1 subgoal (ID 401)	  	  n : trunc_index	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  g : forall a : A, P a -> Q (f a)	  Hf : IsTruncMap n f	  Hg : forall a : A, IsTruncMap n (g a)	  ============================	  IsTruncMap n (functor_sigma f g)	";
+            data = "";
             responses[i]=data;
           
 
@@ -983,7 +983,7 @@
           
 
             i = 193;
-            data = "1 subgoal (ID 422)	  	  A : Type	  P : A -> Type	  Q : A -> Type	  g : forall a : A, P a -> Q a	  b : A	  v : Q b	  ============================	  hfiber (functor_sigma idmap g) (b; v) <~> hfiber (g b) v	";
+            data = "";
             responses[i]=data;
           
 
@@ -1008,7 +1008,7 @@
           
 
             i = 198;
-            data = "1 subgoal (ID 447)	  	  n : trunc_index	  A : Type	  P : A -> Type	  Q : A -> Type	  g : forall a : A, P a -> Q a	  IsTruncMap0 : IsTruncMap n (functor_sigma idmap g)	  ============================	  forall a : A, IsTruncMap n (g a)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1033,7 +1033,7 @@
           
 
             i = 203;
-            data = "1 subgoal (ID 466)	  	  A : Type	  P : A -> Type	  Q : A -> Type	  g : forall a : A, P a -> Q a	  H : IsEquiv (functor_sigma idmap g)	  ============================	  forall a : A, IsEquiv (g a)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1098,7 +1098,7 @@
           
 
             i = 216;
-            data = "1 subgoal (ID 493)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  y : B * D	  ============================	  hfiber (Prod.functor_prod f g) y <~> hfiber f y.(fst) * hfiber g y.(snd)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1178,12 +1178,12 @@
           
 
             i = 232;
-            data = "";
+            data = "1 subgoal (ID 518)	  	  n : trunc_index	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  IsTruncMap0 : IsTruncMap n f	  IsTruncMap1 : IsTruncMap n g	  ============================	  IsTruncMap n (Prod.functor_prod f g)	";
             responses[i]=data;
           
 
             i = 233;
-            data = "1 subgoal (ID 518)	  	  n : trunc_index	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  IsTruncMap0 : IsTruncMap n f	  IsTruncMap1 : IsTruncMap n g	  ============================	  IsTruncMap n (Prod.functor_prod f g)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1248,7 +1248,7 @@
           
 
             i = 246;
-            data = "1 subgoal (ID 605)	  	  A : Type	  B : Type	  n : trunc_index	  f : A -> B	  H : forall x y : A, IsTruncMap n (ap f)	  ============================	  IsTruncMap n.+1 f	";
+            data = "";
             responses[i]=data;
           
 
@@ -1268,12 +1268,12 @@
           
 
             i = 250;
-            data = "";
+            data = "1 subgoal (ID 779)	  	  A : Type	  B : Type	  f : A -> B	  IsEmbedding0 : IsEmbedding f	  ============================	  forall x y : A, IsEquiv (ap f)	";
             responses[i]=data;
           
 
             i = 251;
-            data = "1 subgoal (ID 779)	  	  A : Type	  B : Type	  f : A -> B	  IsEmbedding0 : IsEmbedding f	  ============================	  forall x y : A, IsEquiv (ap f)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1298,7 +1298,7 @@
           
 
             i = 256;
-            data = "1 subgoal (ID 796)	  	  A : Type	  B : Type	  f : A -> B	  H : forall x y : A, IsEquiv (ap f)	  ============================	  IsEmbedding f	";
+            data = "";
             responses[i]=data;
           
 
@@ -1323,7 +1323,7 @@
           
 
             i = 261;
-            data = "1 subgoal (ID 813)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  ============================	  IsEmbedding f <~> (forall x y : A, IsEquiv (ap f))	";
+            data = "";
             responses[i]=data;
           
 

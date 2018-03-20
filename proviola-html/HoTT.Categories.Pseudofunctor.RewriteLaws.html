@@ -188,7 +188,7 @@
           
 
             i = 34;
-            data = "1 subgoal (ID 124)	  	  H : Funext	  C : PreCategory	  F : Pseudofunctor C	  w, x, y, z : C.(object)	  f : C.(morphism) w x	  g : C.(morphism) x y	  h : C.(morphism) y z	  p : PreCategory	  p0 : PreCategory	  p1 : PreCategory	  p2 : PreCategory	  f0 : C.(morphism) w z -> Functor p2 p1	  f1 : Functor p0 p1	  f2 : Functor p2 p	  f3 : Functor p p0	  f4 : Functor p2 p0	  n : (p2 -> p0)%category.(morphism) f4 (f3 o f2)%functor	  H0 : IsIsomorphism n	  n0 : (p2 -> p1)%category.(morphism)	         (f0	            (C.(Category.Core.compose) w y z h	               (C.(Category.Core.compose) w x y g f))) 	         (f1 o f4)%functor	  H1 : IsIsomorphism n0	  ============================	  (Category.Morphisms.idtoiso (p2 -> p1)	     (ap f0 (C.(Core.associativity) w x y z f g h))).(	  morphism_isomorphic) =	  H1.(morphism_inverse)	  o (f1 oL H0.(morphism_inverse)	     o (f1 oL n	        o (n0	           o (Category.Morphisms.idtoiso (p2 -> p1)	                (ap f0 (C.(Core.associativity) w x y z f g h)))	             .(morphism_isomorphic))))	";
+            data = "";
             responses[i]=data;
           
 
@@ -238,7 +238,7 @@
           
 
             i = 44;
-            data = "1 subgoal (ID 204)	  	  H : Funext	  C : PreCategory	  F : Pseudofunctor C	  w, x, y, z : C.(object)	  f : Functor (F.(p_object_of) w) (F.(p_object_of) z)	  f0 : Functor (F.(p_object_of) w) (F.(p_object_of) y)	  f1 : Functor (F.(p_object_of) x) (F.(p_object_of) y)	  f2 : Functor (F.(p_object_of) y) (F.(p_object_of) z)	  f3 : Functor (F.(p_object_of) w) (F.(p_object_of) x)	  f4 : Functor (F.(p_object_of) x) (F.(p_object_of) z)	  f5 : Functor (F.(p_object_of) w) (F.(p_object_of) z)	  n : f5 <~=~> (f4 o f3)%functor	  n0 : f4 <~=~> (f2 o f1)%functor	  n1 : f0 <~=~> (f1 o f3)%functor	  n2 : f <~=~> (f2 o f0)%functor	  ============================	  IsIsomorphism	    (n2.(isisomorphism_isomorphic).(morphism_inverse)	     o (f2 oL n1.(isisomorphism_isomorphic).(morphism_inverse)	        o (associator_1 f2 f1 f3 o (n0 oR f3 o n))))%natural_transformation	";
+            data = "";
             responses[i]=data;
           
 
@@ -283,7 +283,7 @@
           
 
             i = 53;
-            data = "1 subgoal (ID 255)	  	  H : Funext	  C : PreCategory	  F : Pseudofunctor C	  w, x, y, z : C.(object)	  f : C.(morphism) w x	  g : C.(morphism) x y	  h : C.(morphism) y z	  ============================	  Category.Morphisms.idtoiso (F.(p_object_of) w -> F.(p_object_of) z)	    (ap (F.(p_morphism_of) w z) (C.(Core.associativity) w x y z f g h)) =	  {|	  morphism_isomorphic := ((F.(p_composition_of) w y z h	                             (C.(Category.Core.compose) w x y g f))	                          .(isisomorphism_isomorphic).(	                          morphism_inverse)	                          o (F.(p_morphism_of) y z h	                             oL (F.(p_composition_of) w x y g f)	                                .(isisomorphism_isomorphic)	                                .(morphism_inverse)	                             o (associator_1 (F.(p_morphism_of) y z h)	                                  (F.(p_morphism_of) x y g)	                                  (F.(p_morphism_of) w x f)	                                o (F.(p_composition_of) x y z h g	                                   oR F.(p_morphism_of) w x f	                                   o F.(p_composition_of) w x z	                                       (C.(Category.Core.compose) x y z h g)	                                       f))))%natural_transformation;	  isisomorphism_isomorphic := p_composition_of_coherent_iso_for_rewrite__isisomorphism_helper |}	";
+            data = "";
             responses[i]=data;
           
 
@@ -313,7 +313,7 @@
           
 
             i = 59;
-            data = "1 subgoal (ID 427)	  	  H : Funext	  C : PreCategory	  F : Pseudofunctor C	  x, y : C.(object)	  f : C.(morphism) x y	  ============================	  Category.Morphisms.idtoiso (F.(p_object_of) x -> F.(p_object_of) y)	    (ap (F.(p_morphism_of) x y) (C.(Core.left_identity) x y f)) =	  {|	  morphism_isomorphic := (left_identity_natural_transformation_1	                            (F.(p_morphism_of) x y f)	                          o (F.(p_identity_of) y oR F.(p_morphism_of) x y f	                             o F.(p_composition_of) x y y	                                 (C.(Core.identity) y) f))%natural_transformation;	  isisomorphism_isomorphic := isisomorphism_compose	                                (left_identity_natural_transformation_1	                                   (F.(p_morphism_of) x y f))	                                (F.(p_identity_of) y	                                 oR F.(p_morphism_of) x y f	                                 o F.(p_composition_of) x y y 1 f) |}	";
+            data = "";
             responses[i]=data;
           
 
@@ -353,7 +353,7 @@
           
 
             i = 67;
-            data = "1 subgoal (ID 599)	  	  H : Funext	  C : PreCategory	  F : Pseudofunctor C	  x, y : C.(object)	  f : C.(morphism) x y	  ============================	  Category.Morphisms.idtoiso (F.(p_object_of) x -> F.(p_object_of) y)	    (ap (F.(p_morphism_of) x y) (C.(Core.right_identity) x y f)) =	  {|	  morphism_isomorphic := (right_identity_natural_transformation_1	                            (F.(p_morphism_of) x y f)	                          o (F.(p_morphism_of) x y f oL F.(p_identity_of) x	                             o F.(p_composition_of) x x y f	                                 (C.(Core.identity) x)))%natural_transformation;	  isisomorphism_isomorphic := isisomorphism_compose	                                (right_identity_natural_transformation_1	                                   (F.(p_morphism_of) x y f))	                                (F.(p_morphism_of) x y f	                                 oL F.(p_identity_of) x	                                 o F.(p_composition_of) x x y f 1) |}	";
+            data = "";
             responses[i]=data;
           
 

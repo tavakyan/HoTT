@@ -2548,7 +2548,7 @@
           
 
             i = 506;
-            data = "1 subgoal (ID 170)	  	  O : ReflectiveSubuniverse	  P : Type	  Q : Type	  H : In O Q	  f, g : P -> Q	  pi : f == g	  ============================	  O_rec f == O_rec g	";
+            data = "";
             responses[i]=data;
           
 
@@ -2643,7 +2643,7 @@
           
 
             i = 525;
-            data = "1 subgoal (ID 175)	  	  O : ReflectiveSubuniverse	  T : Type	  H : In O T	  ============================	  IsEquiv (to O T)	";
+            data = "";
             responses[i]=data;
           
 
@@ -2833,7 +2833,7 @@
           
 
             i = 563;
-            data = "1 subgoal (ID 255)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  ============================	  O_functor (g o f) == O_functor g o O_functor f	";
+            data = "";
             responses[i]=data;
           
 
@@ -2903,7 +2903,7 @@
           
 
             i = 577;
-            data = "1 subgoal (ID 269)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  f, g : A -> B	  pi : f == g	  ============================	  O_functor f == O_functor g	";
+            data = "";
             responses[i]=data;
           
 
@@ -2958,7 +2958,7 @@
           
 
             i = 588;
-            data = "1 subgoal (ID 291)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  f, g : A -> B	  pi : f == g	  ============================	  O_functor_homotopy g f (fun x : A => (pi x)^) ==	  (fun x : O A => (O_functor_homotopy f g pi x)^)	";
+            data = "";
             responses[i]=data;
           
 
@@ -3013,7 +3013,7 @@
           
 
             i = 599;
-            data = "1 subgoal (ID 349)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  C : Type	  X : Type	  pi1 : X -> A	  pi2 : X -> B	  f : A -> C	  g : B -> C	  comm : f o pi1 == g o pi2	  ============================	  O_functor f o O_functor pi1 == O_functor g o O_functor pi2	";
+            data = "";
             responses[i]=data;
           
 
@@ -3078,7 +3078,7 @@
           
 
             i = 612;
-            data = "1 subgoal (ID 355)	  	  O : ReflectiveSubuniverse	  A : Type	  ============================	  O_functor idmap == idmap	";
+            data = "";
             responses[i]=data;
           
 
@@ -3133,7 +3133,7 @@
           
 
             i = 623;
-            data = "1 subgoal (ID 375)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  f, g : A -> B	  p, q : f == g	  r : p == q	  ============================	  O_functor_homotopy f g p == O_functor_homotopy f g q	";
+            data = "";
             responses[i]=data;
           
 
@@ -3208,7 +3208,7 @@
           
 
             i = 638;
-            data = "1 subgoal (ID 407)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  f, g : A -> B	  pi : f == g	  x : A	  ============================	  O_functor_homotopy f g pi (to O A x) =	  (to_O_natural f x @ ap (to O B) (pi x)) @ (to_O_natural g x)^	";
+            data = "";
             responses[i]=data;
           
 
@@ -3288,7 +3288,7 @@
           
 
             i = 654;
-            data = "1 subgoal (ID 413)	  	  O : ReflectiveSubuniverse	  A : Type	  ============================	  O_functor (to O A) == to O (O A)	";
+            data = "";
             responses[i]=data;
           
 
@@ -3333,7 +3333,7 @@
           
 
             i = 663;
-            data = "1 subgoal (ID 457)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  a : A	  ============================	  ap (O_functor g) (to_O_natural f a) @ to_O_natural g (f a) =	  (O_functor_compose f g (to O A a))^ @ to_O_natural (g o f) a	";
+            data = "";
             responses[i]=data;
           
 
@@ -3388,7 +3388,7 @@
           
 
             i = 674;
-            data = "1 subgoal (ID 514)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : B -> C	  h : C -> D	  a : O A	  ============================	  O_functor_compose f (h o g) a @ O_functor_compose g h (O_functor f a) =	  O_functor_compose (g o f) h a @ ap (O_functor h) (O_functor_compose f g a)	";
+            data = "";
             responses[i]=data;
           
 
@@ -3408,32 +3408,32 @@
           
 
             i = 678;
-            data = "1 subgoal (ID 609)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : B -> C	  h : C -> D	  a : A	  ============================	  (to_O_natural (fun x : A => h (g (f x))) a @	   (to_O_natural (fun x : B => h (g x)) (f a))^) @	  (ap (O_functor (fun x : B => h (g x))) (to_O_natural f a))^	  @' O_indpaths (O_functor (fun x : B => h (g x)))	       (fun x : O B => O_functor h (O_functor g x))	       (fun x : B =>	        to_O_natural (fun x0 : B => h (g x0)) x	        @' (to_O_natural h (g x))^ @ ap (O_functor h) (to_O_natural g x)^)	       (O_functor f (to O A a)) =	  (((to_O_natural (fun x : A => h (g (f x))) a @ (to_O_natural h (g (f a)))^) @	    (ap (O_functor h) (to_O_natural (fun x : A => g (f x)) a))^) @	   ap (O_functor h) (to_O_natural (fun x : A => g (f x)) a)) @	  (ap (O_functor h) (to_O_natural g (f a)))^	  @' (ap (O_functor h) (ap (O_functor g) (to_O_natural f a)))^	";
+            data = "1 subgoal (ID 609)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : B -> C	  h : C -> D	  a : A	  ============================	  to_O_natural (fun x : A => h (g (f x))) a	  @' (to_O_natural (fun x : B => h (g x)) (f a))^	  @' (ap (O_functor (fun x : B => h (g x))) (to_O_natural f a))^	  @' O_indpaths (O_functor (fun x : B => h (g x)))	       (fun x : O B => O_functor h (O_functor g x))	       (fun x : B =>	        to_O_natural (fun x0 : B => h (g x0)) x	        @' ((to_O_natural h (g x))^	            @' ap (O_functor h) (to_O_natural g x)^))	       (O_functor f (to O A a)) =	  to_O_natural (fun x : A => h (g (f x))) a	  @' (to_O_natural h (g (f a)))^	  @' (ap (O_functor h) (to_O_natural (fun x : A => g (f x)) a))^	  @' ap (O_functor h) (to_O_natural (fun x : A => g (f x)) a)	  @' (ap (O_functor h) (to_O_natural g (f a)))^	  @' (ap (O_functor h) (ap (O_functor g) (to_O_natural f a)))^	";
             responses[i]=data;
           
 
             i = 679;
-            data = "1 subgoal (ID 648)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : B -> C	  h : C -> D	  a : A	  ============================	  (to_O_natural (fun x : A => h (g (f x))) a @	   (to_O_natural (fun x : B => h (g x)) (f a))^) @	  (ap (O_functor (fun x : B => h (g x))) (to_O_natural f a))^	  @' transport	       (fun x : O B =>	        O_functor (fun x0 : B => h (g x0)) x = O_functor h (O_functor g x))	       (to_O_natural f a)^	       (O_indpaths (O_functor (fun x : B => h (g x)))	          (fun x : O B => O_functor h (O_functor g x))	          (fun x : B =>	           to_O_natural (fun x0 : B => h (g x0)) x	           @' (to_O_natural h (g x))^ @ ap (O_functor h) (to_O_natural g x)^)	          (to O B (f a))) =	  (((to_O_natural (fun x : A => h (g (f x))) a @ (to_O_natural h (g (f a)))^) @	    (ap (O_functor h) (to_O_natural (fun x : A => g (f x)) a))^) @	   ap (O_functor h) (to_O_natural (fun x : A => g (f x)) a)) @	  (ap (O_functor h) (to_O_natural g (f a)))^	  @' (ap (O_functor h) (ap (O_functor g) (to_O_natural f a)))^	";
+            data = "1 subgoal (ID 648)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : B -> C	  h : C -> D	  a : A	  ============================	  to_O_natural (fun x : A => h (g (f x))) a	  @' (to_O_natural (fun x : B => h (g x)) (f a))^	  @' (ap (O_functor (fun x : B => h (g x))) (to_O_natural f a))^	  @' transport	       (fun x : O B =>	        O_functor (fun x0 : B => h (g x0)) x = O_functor h (O_functor g x))	       (to_O_natural f a)^	       (O_indpaths (O_functor (fun x : B => h (g x)))	          (fun x : O B => O_functor h (O_functor g x))	          (fun x : B =>	           to_O_natural (fun x0 : B => h (g x0)) x	           @' ((to_O_natural h (g x))^	               @' ap (O_functor h) (to_O_natural g x)^)) 	          (to O B (f a))) =	  to_O_natural (fun x : A => h (g (f x))) a	  @' (to_O_natural h (g (f a)))^	  @' (ap (O_functor h) (to_O_natural (fun x : A => g (f x)) a))^	  @' ap (O_functor h) (to_O_natural (fun x : A => g (f x)) a)	  @' (ap (O_functor h) (to_O_natural g (f a)))^	  @' (ap (O_functor h) (ap (O_functor g) (to_O_natural f a)))^	";
             responses[i]=data;
           
 
             i = 680;
-            data = "1 subgoal (ID 653)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : B -> C	  h : C -> D	  a : A	  ============================	  (to_O_natural (fun x : A => h (g (f x))) a @	   (to_O_natural (fun x : B => h (g x)) (f a))^) @	  (ap (O_functor (fun x : B => h (g x))) (to_O_natural f a))^	  @' transport	       (fun x : O B =>	        O_functor (fun x0 : B => h (g x0)) x = O_functor h (O_functor g x))	       (to_O_natural f a)^	       (to_O_natural (fun x : B => h (g x)) (f a)	        @' (to_O_natural h (g (f a)))^ @	           ap (O_functor h) (to_O_natural g (f a))^) =	  (((to_O_natural (fun x : A => h (g (f x))) a @ (to_O_natural h (g (f a)))^) @	    (ap (O_functor h) (to_O_natural (fun x : A => g (f x)) a))^) @	   ap (O_functor h) (to_O_natural (fun x : A => g (f x)) a)) @	  (ap (O_functor h) (to_O_natural g (f a)))^	  @' (ap (O_functor h) (ap (O_functor g) (to_O_natural f a)))^	";
+            data = "1 subgoal (ID 653)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : B -> C	  h : C -> D	  a : A	  ============================	  to_O_natural (fun x : A => h (g (f x))) a	  @' (to_O_natural (fun x : B => h (g x)) (f a))^	  @' (ap (O_functor (fun x : B => h (g x))) (to_O_natural f a))^	  @' transport	       (fun x : O B =>	        O_functor (fun x0 : B => h (g x0)) x = O_functor h (O_functor g x))	       (to_O_natural f a)^	       (to_O_natural (fun x : B => h (g x)) (f a)	        @' ((to_O_natural h (g (f a)))^	            @' ap (O_functor h) (to_O_natural g (f a))^)) =	  to_O_natural (fun x : A => h (g (f x))) a	  @' (to_O_natural h (g (f a)))^	  @' (ap (O_functor h) (to_O_natural (fun x : A => g (f x)) a))^	  @' ap (O_functor h) (to_O_natural (fun x : A => g (f x)) a)	  @' (ap (O_functor h) (to_O_natural g (f a)))^	  @' (ap (O_functor h) (ap (O_functor g) (to_O_natural f a)))^	";
             responses[i]=data;
           
 
             i = 681;
-            data = "1 subgoal (ID 694)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : B -> C	  h : C -> D	  a : A	  ============================	  (((((to_O_natural (fun x : A => h (g (f x))) a @	       (to_O_natural (fun x : B => h (g x)) (f a))^) @	      (ap (O_functor (fun x : B => h (g x))) (to_O_natural f a))^) @	     (ap (O_functor (fun x : B => h (g x))) (to_O_natural f a)^)^) @	    to_O_natural (fun x : B => h (g x)) (f a)) @ (to_O_natural h (g (f a)))^) @	  ap (O_functor h) (to_O_natural g (f a))^	  @' ap (fun x : O B => O_functor h (O_functor g x)) (to_O_natural f a)^ =	  (((to_O_natural (fun x : A => h (g (f x))) a @ (to_O_natural h (g (f a)))^) @	    (ap (O_functor h) (to_O_natural (fun x : A => g (f x)) a))^) @	   ap (O_functor h) (to_O_natural (fun x : A => g (f x)) a)) @	  (ap (O_functor h) (to_O_natural g (f a)))^	  @' (ap (O_functor h) (ap (O_functor g) (to_O_natural f a)))^	";
+            data = "1 subgoal (ID 694)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : B -> C	  h : C -> D	  a : A	  ============================	  to_O_natural (fun x : A => h (g (f x))) a	  @' (to_O_natural (fun x : B => h (g x)) (f a))^	  @' (ap (O_functor (fun x : B => h (g x))) (to_O_natural f a))^	  @' (ap (O_functor (fun x : B => h (g x))) (to_O_natural f a)^)^	  @' to_O_natural (fun x : B => h (g x)) (f a)	  @' (to_O_natural h (g (f a)))^	  @' ap (O_functor h) (to_O_natural g (f a))^	  @' ap (fun x : O B => O_functor h (O_functor g x)) (to_O_natural f a)^ =	  to_O_natural (fun x : A => h (g (f x))) a	  @' (to_O_natural h (g (f a)))^	  @' (ap (O_functor h) (to_O_natural (fun x : A => g (f x)) a))^	  @' ap (O_functor h) (to_O_natural (fun x : A => g (f x)) a)	  @' (ap (O_functor h) (to_O_natural g (f a)))^	  @' (ap (O_functor h) (ap (O_functor g) (to_O_natural f a)))^	";
             responses[i]=data;
           
 
             i = 682;
-            data = "1 subgoal (ID 721)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : B -> C	  h : C -> D	  a : A	  ============================	  (((((to_O_natural (fun x : A => h (g (f x))) a @	       (to_O_natural (fun x : B => h (g x)) (f a))^) @	      (ap (O_functor (fun x : B => h (g x))) (to_O_natural f a))^) @	     ap (O_functor (fun x : B => h (g x))) (to_O_natural f a)) @	    to_O_natural (fun x : B => h (g x)) (f a)) @ (to_O_natural h (g (f a)))^) @	  (ap (O_functor h) (to_O_natural g (f a)))^	  @' (ap (fun x : O B => O_functor h (O_functor g x)) (to_O_natural f a))^ =	  (((to_O_natural (fun x : A => h (g (f x))) a @ (to_O_natural h (g (f a)))^) @	    (ap (O_functor h) (to_O_natural (fun x : A => g (f x)) a))^) @	   ap (O_functor h) (to_O_natural (fun x : A => g (f x)) a)) @	  (ap (O_functor h) (to_O_natural g (f a)))^	  @' (ap (O_functor h) (ap (O_functor g) (to_O_natural f a)))^	";
+            data = "1 subgoal (ID 721)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : B -> C	  h : C -> D	  a : A	  ============================	  to_O_natural (fun x : A => h (g (f x))) a	  @' (to_O_natural (fun x : B => h (g x)) (f a))^	  @' (ap (O_functor (fun x : B => h (g x))) (to_O_natural f a))^	  @' ap (O_functor (fun x : B => h (g x))) (to_O_natural f a)	  @' to_O_natural (fun x : B => h (g x)) (f a)	  @' (to_O_natural h (g (f a)))^	  @' (ap (O_functor h) (to_O_natural g (f a)))^	  @' (ap (fun x : O B => O_functor h (O_functor g x)) (to_O_natural f a))^ =	  to_O_natural (fun x : A => h (g (f x))) a	  @' (to_O_natural h (g (f a)))^	  @' (ap (O_functor h) (to_O_natural (fun x : A => g (f x)) a))^	  @' ap (O_functor h) (to_O_natural (fun x : A => g (f x)) a)	  @' (ap (O_functor h) (to_O_natural g (f a)))^	  @' (ap (O_functor h) (ap (O_functor g) (to_O_natural f a)))^	";
             responses[i]=data;
           
 
             i = 683;
-            data = "1 subgoal (ID 739)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : B -> C	  h : C -> D	  a : A	  ============================	  (to_O_natural (fun x : A => h (g (f x))) a @ (to_O_natural h (g (f a)))^) @	  (ap (O_functor h) (to_O_natural g (f a)))^	  @' (ap (fun x : O B => O_functor h (O_functor g x)) (to_O_natural f a))^ =	  (to_O_natural (fun x : A => h (g (f x))) a @ (to_O_natural h (g (f a)))^) @	  (ap (O_functor h) (to_O_natural g (f a)))^	  @' (ap (O_functor h) (ap (O_functor g) (to_O_natural f a)))^	";
+            data = "1 subgoal (ID 739)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : B -> C	  h : C -> D	  a : A	  ============================	  to_O_natural (fun x : A => h (g (f x))) a	  @' (to_O_natural h (g (f a)))^	  @' (ap (O_functor h) (to_O_natural g (f a)))^	  @' (ap (fun x : O B => O_functor h (O_functor g x)) (to_O_natural f a))^ =	  to_O_natural (fun x : A => h (g (f x))) a	  @' (to_O_natural h (g (f a)))^	  @' (ap (O_functor h) (to_O_natural g (f a)))^	  @' (ap (O_functor h) (ap (O_functor g) (to_O_natural f a)))^	";
             responses[i]=data;
           
 
@@ -3483,12 +3483,12 @@
           
 
             i = 693;
-            data = "";
+            data = "1 subgoal (ID 527)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  ============================	  IsEquiv (O_functor f)	";
             responses[i]=data;
           
 
             i = 694;
-            data = "1 subgoal (ID 527)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  ============================	  IsEquiv (O_functor f)	";
+            data = "";
             responses[i]=data;
           
 
@@ -3603,7 +3603,7 @@
           
 
             i = 717;
-            data = "1 subgoal (ID 565)	  	  O : ReflectiveSubuniverse	  H : Univalence	  A : Type	  B : Type	  f : A <~> B	  ============================	  ap O (path_universe_uncurried f) =	  path_universe_uncurried (equiv_O_functor f)	";
+            data = "";
             responses[i]=data;
           
 
@@ -3688,7 +3688,7 @@
           
 
             i = 734;
-            data = "1 subgoal (ID 640)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  C : Type	  H : In O B	  C_inO : In O C	  f : A -> B	  g : B -> C	  ============================	  g o O_rec f == O_rec (g o f)	";
+            data = "";
             responses[i]=data;
           
 
@@ -3773,7 +3773,7 @@
           
 
             i = 751;
-            data = "1 subgoal (ID 199)	  	  O : ReflectiveSubuniverse	  T : Type	  ============================	  In O T <-> IsEquiv (to O T)	";
+            data = "";
             responses[i]=data;
           
 
@@ -3853,7 +3853,7 @@
           
 
             i = 767;
-            data = "1 subgoal (ID 204)	  	  O : ReflectiveSubuniverse	  T : Type	  mu : O T -> T	  ============================	  Sect (to O T) mu -> In O T	";
+            data = "";
             responses[i]=data;
           
 
@@ -3928,12 +3928,12 @@
           
 
             i = 782;
-            data = "";
+            data = "1 subgoal (ID 188)	  	  O : ReflectiveSubuniverse	  A : Type	  ============================	  O_inverts (to O A)	";
             responses[i]=data;
           
 
             i = 783;
-            data = "1 subgoal (ID 188)	  	  O : ReflectiveSubuniverse	  A : Type	  ============================	  O_inverts (to O A)	";
+            data = "";
             responses[i]=data;
           
 
@@ -4008,7 +4008,7 @@
           
 
             i = 798;
-            data = "1 subgoal (ID 201)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  H : In O A	  H0 : In O B	  f : A -> B	  O_inverts0 : O_inverts f	  ============================	  IsEquiv f	";
+            data = "";
             responses[i]=data;
           
 
@@ -4108,7 +4108,7 @@
           
 
             i = 818;
-            data = "1 subgoal (ID 230)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  H : In O B	  f : A -> B	  O_inverts0 : O_inverts f	  ============================	  IsEquiv (O_rec f)	";
+            data = "";
             responses[i]=data;
           
 
@@ -4143,7 +4143,7 @@
           
 
             i = 825;
-            data = "1 subgoal (ID 286)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  H : In O A	  H0 : In O B	  f : A -> B	  ============================	  (isequiv_to_O_inO B).(equiv_inv) o O_functor f ==	  f o (isequiv_to_O_inO A).(equiv_inv)	";
+            data = "";
             responses[i]=data;
           
 
@@ -4213,7 +4213,7 @@
           
 
             i = 839;
-            data = "1 subgoal (ID 302)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  H : In O A	  H0 : In O B	  f, g : A -> B	  e : O_functor f == O_functor g	  ============================	  f == g	";
+            data = "";
             responses[i]=data;
           
 
@@ -4318,12 +4318,12 @@
           
 
             i = 860;
-            data = "";
+            data = "1 subgoal (ID 311)	  	  O : ReflectiveSubuniverse	  H : Univalence	  A : Type	  ============================	  Contr (typeof_to_O A)	";
             responses[i]=data;
           
 
             i = 861;
-            data = "1 subgoal (ID 311)	  	  O : ReflectiveSubuniverse	  H : Univalence	  A : Type	  ============================	  Contr (typeof_to_O A)	";
+            data = "";
             responses[i]=data;
           
 
@@ -4538,12 +4538,12 @@
           
 
             i = 904;
-            data = "";
+            data = "1 subgoal (ID 183)	  	  O : ReflectiveSubuniverse	  ============================	  In O Unit	";
             responses[i]=data;
           
 
             i = 905;
-            data = "1 subgoal (ID 183)	  	  O : ReflectiveSubuniverse	  ============================	  In O Unit	";
+            data = "";
             responses[i]=data;
           
 
@@ -4593,12 +4593,12 @@
           
 
             i = 915;
-            data = "";
+            data = "1 subgoal (ID 186)	  	  O : ReflectiveSubuniverse	  A : Type	  Contr0 : Contr A	  ============================	  In O A	";
             responses[i]=data;
           
 
             i = 916;
-            data = "1 subgoal (ID 186)	  	  O : ReflectiveSubuniverse	  A : Type	  Contr0 : Contr A	  ============================	  In O A	";
+            data = "";
             responses[i]=data;
           
 
@@ -4633,12 +4633,12 @@
           
 
             i = 923;
-            data = "";
+            data = "1 subgoal (ID 189)	  	  O : ReflectiveSubuniverse	  A : Type	  Contr0 : Contr A	  ============================	  Contr (O A)	";
             responses[i]=data;
           
 
             i = 924;
-            data = "1 subgoal (ID 189)	  	  O : ReflectiveSubuniverse	  A : Type	  Contr0 : Contr A	  ============================	  Contr (O A)	";
+            data = "";
             responses[i]=data;
           
 
@@ -4688,12 +4688,12 @@
           
 
             i = 934;
-            data = "";
+            data = "1 subgoal (ID 194)	  	  O : ReflectiveSubuniverse	  fs : Funext	  A : Type	  B : A -> Type	  ============================	  (forall x : A, In O (B x)) -> In O (forall x : A, B x)	";
             responses[i]=data;
           
 
             i = 935;
-            data = "1 subgoal (ID 194)	  	  O : ReflectiveSubuniverse	  fs : Funext	  A : Type	  B : A -> Type	  ============================	  (forall x : A, In O (B x)) -> In O (forall x : A, B x)	";
+            data = "";
             responses[i]=data;
           
 
@@ -4743,12 +4743,12 @@
           
 
             i = 945;
-            data = "";
+            data = "1 subgoal (ID 199)	  	  O : ReflectiveSubuniverse	  fs : Funext	  A : Type	  B : Type	  H : In O B	  ============================	  In O (A -> B)	";
             responses[i]=data;
           
 
             i = 946;
-            data = "1 subgoal (ID 199)	  	  O : ReflectiveSubuniverse	  fs : Funext	  A : Type	  B : Type	  H : In O B	  ============================	  In O (A -> B)	";
+            data = "";
             responses[i]=data;
           
 
@@ -4808,12 +4808,12 @@
           
 
             i = 958;
-            data = "";
+            data = "1 subgoal (ID 204)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  H : In O A	  H0 : In O B	  ============================	  In O (A * B)	";
             responses[i]=data;
           
 
             i = 959;
-            data = "1 subgoal (ID 204)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  H : In O A	  H0 : In O B	  ============================	  In O (A * B)	";
+            data = "";
             responses[i]=data;
           
 
@@ -4888,7 +4888,7 @@
           
 
             i = 974;
-            data = "1 subgoal (ID 210)	  	  O : ReflectiveSubuniverse	  fs : Funext	  A : Type	  B : Type	  C : Type	  H : In O C	  ============================	  (O A * O B -> C) <~> (A * B -> C)	";
+            data = "";
             responses[i]=data;
           
 
@@ -4973,12 +4973,12 @@
           
 
             i = 991;
-            data = "";
+            data = "1 subgoal (ID 311)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  ============================	  IsEquiv (O_prod_cmp A B)	";
             responses[i]=data;
           
 
             i = 992;
-            data = "1 subgoal (ID 311)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  ============================	  IsEquiv (O_prod_cmp A B)	";
+            data = "";
             responses[i]=data;
           
 
@@ -5063,7 +5063,7 @@
           
 
             i = 1009;
-            data = "1 subgoal (ID 328)	  	  O : ReflectiveSubuniverse	  fs : Funext	  A : Type	  B : Type	  C : Type	  C_inO : In O C	  ============================	  IsEquiv (fun h : O A * O B -> C => h o O_prod_cmp A B)	";
+            data = "";
             responses[i]=data;
           
 
@@ -5123,7 +5123,7 @@
           
 
             i = 1021;
-            data = "1 subgoal (ID 341)	  	  O : ReflectiveSubuniverse	  ============================	  (forall (A : Type) (B : O A -> Type),	   (forall a : O A, In O (B a)) ->	   forall g : forall a : A, B (to O A a),	   {f : forall z : O A, B z & forall a : A, f (to O A a) = g a}) ->	  forall (A : Type) (B : A -> Type),	  In O A -> (forall a : A, In O (B a)) -> In O {x : A & B x}	";
+            data = "";
             responses[i]=data;
           
 
@@ -5253,7 +5253,7 @@
           
 
             i = 1047;
-            data = "1 subgoal (ID 348)	  	  O : ReflectiveSubuniverse	  ============================	  (forall (A : Type) (B : A -> Type),	   In O A -> (forall a : A, In O (B a)) -> In O {x : A & B x}) ->	  forall (A : Type) (B : O A -> Type),	  (forall a : O A, In O (B a)) ->	  forall g : forall a : A, B (to O A a),	  {f : forall z : O A, B z & forall a : A, f (to O A a) = g a}	";
+            data = "";
             responses[i]=data;
           
 
@@ -5368,12 +5368,12 @@
           
 
             i = 1070;
-            data = "";
+            data = "1 subgoal (ID 357)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  H : In O A	  H0 : In O B	  f : A -> B	  b : B	  ============================	  In O (hfiber f b)	";
             responses[i]=data;
           
 
             i = 1071;
-            data = "1 subgoal (ID 357)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  H : In O A	  H0 : In O B	  f : A -> B	  b : B	  ============================	  In O (hfiber f b)	";
+            data = "";
             responses[i]=data;
           
 
@@ -5443,7 +5443,7 @@
           
 
             i = 1085;
-            data = "1 subgoal (ID 364)	  	  O : ReflectiveSubuniverse	  A : Type	  B : A -> Type	  H : In O A	  B_inO : In O {x : A & B x}	  x : A	  ============================	  In O (B x)	";
+            data = "";
             responses[i]=data;
           
 
@@ -5513,7 +5513,7 @@
           
 
             i = 1099;
-            data = "1 subgoal (ID 377)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  f : A -> B	  b : B	  ============================	  O (hfiber f b) -> hfiber (O_functor f) (to O B b)	";
+            data = "";
             responses[i]=data;
           
 
@@ -5583,7 +5583,7 @@
           
 
             i = 1113;
-            data = "1 subgoal (ID 383)	  	  O : ReflectiveSubuniverse	  A : Type	  P : A -> Type	  ============================	  O {x : A & O (P x)} <~> O {x : A & P x}	";
+            data = "";
             responses[i]=data;
           
 
@@ -5693,7 +5693,7 @@
           
 
             i = 1135;
-            data = "1 subgoal (ID 390)	  	  O : ReflectiveSubuniverse	  S : Type	  S_inO : In O S	  x, y : S	  ============================	  In O (x = y)	";
+            data = "";
             responses[i]=data;
           
 
@@ -5803,12 +5803,12 @@
           
 
             i = 1157;
-            data = "";
+            data = "1 subgoal (ID 394)	  	  O : ReflectiveSubuniverse	  A : Type	  IsHProp0 : IsHProp A	  ============================	  IsHProp (O A)	";
             responses[i]=data;
           
 
             i = 1158;
-            data = "1 subgoal (ID 394)	  	  O : ReflectiveSubuniverse	  A : Type	  IsHProp0 : IsHProp A	  ============================	  IsHProp (O A)	";
+            data = "";
             responses[i]=data;
           
 
@@ -5923,12 +5923,12 @@
           
 
             i = 1181;
-            data = "";
+            data = "1 subgoal (ID 401)	  	  O : ReflectiveSubuniverse	  H : Funext	  n : trunc_index	  A : Type2le	  H0 : In O A	  ============================	  In O (IsTrunc n A)	";
             responses[i]=data;
           
 
             i = 1182;
-            data = "1 subgoal (ID 401)	  	  O : ReflectiveSubuniverse	  H : Funext	  n : trunc_index	  A : Type2le	  H0 : In O A	  ============================	  In O (IsTrunc n A)	";
+            data = "";
             responses[i]=data;
           
 
@@ -5988,12 +5988,12 @@
           
 
             i = 1194;
-            data = "1 subgoal (ID 417)	  	  O : ReflectiveSubuniverse	  H : Funext	  A : Type2le	  H0 : In O A	  ============================	  In O (Contr A)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 419)		subgoal 1 (ID 419) is:	 In O (IsTrunc n.+1 A)	";
+            data = "1 subgoal (ID 417)	  	  O : ReflectiveSubuniverse	  H : Funext	  A : Type2le	  H0 : In O A	  ============================	  In O (Contr A)	";
             responses[i]=data;
           
 
             i = 1195;
-            data = "1 subgoal (ID 419)	  	  O : ReflectiveSubuniverse	  H : Funext	  n : trunc_index	  IH : forall A : Type2le, In O A -> In O (IsTrunc n A)	  A : Type2le	  H0 : In O A	  ============================	  In O (IsTrunc n.+1 A)	1 subgoal (ID 1667)	  	  O : ReflectiveSubuniverse	  H : Funext	  n : trunc_index	  IH : forall A : Type2le, In O A -> In O (IsTrunc n A)	  A : Type2le	  H0 : In O A	  ============================	  In O (forall x y : A, IsTrunc n (x = y))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 419)		subgoal 1 (ID 419) is:	 In O (IsTrunc n.+1 A)	1 subgoal (ID 419)	  	  O : ReflectiveSubuniverse	  H : Funext	  n : trunc_index	  IH : forall A : Type2le, In O A -> In O (IsTrunc n A)	  A : Type2le	  H0 : In O A	  ============================	  In O (IsTrunc n.+1 A)	1 subgoal (ID 1667)	  	  O : ReflectiveSubuniverse	  H : Funext	  n : trunc_index	  IH : forall A : Type2le, In O A -> In O (IsTrunc n A)	  A : Type2le	  H0 : In O A	  ============================	  In O (forall x y : A, IsTrunc n (x = y))	";
             responses[i]=data;
           
 
@@ -6048,7 +6048,7 @@
           
 
             i = 1206;
-            data = "1 subgoal (ID 406)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  ============================	  O (A + B) <~> O (O A + O B)	";
+            data = "";
             responses[i]=data;
           
 
@@ -6163,7 +6163,7 @@
           
 
             i = 1229;
-            data = "1 subgoal (ID 415)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  ============================	  O (Coeq f g) -> O (Coeq (O_functor f) (O_functor g))	";
+            data = "";
             responses[i]=data;
           
 
@@ -6188,7 +6188,7 @@
           
 
             i = 1234;
-            data = "1 subgoal (ID 424)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  ============================	  O (Coeq (O_functor f) (O_functor g)) -> O (Coeq f g)	";
+            data = "";
             responses[i]=data;
           
 
@@ -6238,7 +6238,7 @@
           
 
             i = 1244;
-            data = "1 subgoal (ID 427)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  ============================	  Sect O_coeq_cmp_inverse O_coeq_cmp	";
+            data = "";
             responses[i]=data;
           
 
@@ -6278,12 +6278,12 @@
           
 
             i = 1252;
-            data = "1 subgoal (ID 456)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  ============================	  forall b : O B,	  transport	    (fun w : Coeq (O_functor f) (O_functor g) =>	     O_functor	       (functor_coeq (to O B) (to O A) (fun y : B => (to_O_natural f y)^)	          (fun y : B => (to_O_natural g y)^))	       (Coeq_rec (O (Coeq f g)) (O_functor coeq)	          (fun b0 : O B =>	           (O_functor_compose f coeq b0)^ @	           (O_functor_homotopy (fun x : B => coeq (f x))	              (fun x : B => coeq (g x)) (fun z : B => cp z) b0 @	            O_functor_compose g coeq b0)) w) =	     to O (Coeq (O_functor f) (O_functor g)) w) (cp b)	    ((fun a : O A =>	      (O_functor_compose coeq	         (functor_coeq (to O B) (to O A) (fun y : B => (to_O_natural f y)^)	            (fun y : B => (to_O_natural g y)^)) a)^ @	      O_indpaths (O_functor (fun x : A => coeq (to O A x)))	        (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural (fun x : A => coeq (to O A x))) a) 	       (O_functor f b)) =	  (fun a : O A =>	   (O_functor_compose coeq	      (functor_coeq (to O B) (to O A) (fun y : B => (to_O_natural f y)^)	         (fun y : B => (to_O_natural g y)^)) a)^ @	   O_indpaths (O_functor (fun x : A => coeq (to O A x)))	     (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural (fun x : A => coeq (to O A x))) a) 	    (O_functor g b)	1 subgoal (ID 507)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  ============================	  forall b : O B,	  transport	    (fun w : Coeq (O_functor f) (O_functor g) =>	     O_functor coeq_to	       (Coeq_rec (O (Coeq f g)) (O_functor coeq)	          (fun b0 : O B =>	           (O_functor_compose f coeq b0)^ @	           (O_functor_homotopy (fun x : B => coeq (f x))	              (fun x : B => coeq (g x)) (fun z : B => cp z) b0 @	            O_functor_compose g coeq b0)) w) =	     to O (Coeq (O_functor f) (O_functor g)) w) (cp b)	    ((fun a : O A =>	      (O_functor_compose coeq coeq_to a)^ @	      O_indpaths (O_functor (fun x : A => coeq (to O A x)))	        (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural (fun x : A => coeq (to O A x))) a) 	       (O_functor f b)) =	  (fun a : O A =>	   (O_functor_compose coeq coeq_to a)^ @	   O_indpaths (O_functor (fun x : A => coeq (to O A x)))	     (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural (fun x : A => coeq (to O A x))) a) 	    (O_functor g b)	";
+            data = "1 subgoal (ID 456)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  ============================	  forall b : O B,	  transport	    (fun w : Coeq (O_functor f) (O_functor g) =>	     O_functor	       (functor_coeq (to O B) (to O A) (fun y : B => (to_O_natural f y)^)	          (fun y : B => (to_O_natural g y)^))	       (Coeq_rec (O (Coeq f g)) (O_functor coeq)	          (fun b0 : O B =>	           (O_functor_compose f coeq b0)^ @	           (O_functor_homotopy (fun x : B => coeq (f x))	              (fun x : B => coeq (g x)) (fun z : B => cp z) b0 @	            O_functor_compose g coeq b0)) w) =	     to O (Coeq (O_functor f) (O_functor g)) w) (cp b)	    ((fun a : O A =>	      (O_functor_compose coeq	         (functor_coeq (to O B) (to O A) (fun y : B => (to_O_natural f y)^)	            (fun y : B => (to_O_natural g y)^)) a)^ @	      O_indpaths (O_functor (fun x : A => coeq (to O A x)))	        (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural (fun x : A => coeq (to O A x))) a) 	       (O_functor f b)) =	  (fun a : O A =>	   (O_functor_compose coeq	      (functor_coeq (to O B) (to O A) (fun y : B => (to_O_natural f y)^)	         (fun y : B => (to_O_natural g y)^)) a)^ @	   O_indpaths (O_functor (fun x : A => coeq (to O A x)))	     (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural (fun x : A => coeq (to O A x))) a) 	    (O_functor g b)	";
             responses[i]=data;
           
 
             i = 1253;
-            data = "1 subgoal (ID 518)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  transport	    (fun w : Coeq (O_functor f) (O_functor g) =>	     O_functor coeq_to	       (Coeq_rec (O (Coeq f g)) (O_functor coeq)	          (fun b0 : O B =>	           (O_functor_compose f coeq b0)^ @	           (O_functor_homotopy (fun x : B => coeq (f x))	              (fun x : B => coeq (g x)) (fun z : B => cp z) b0 @	            O_functor_compose g coeq b0)) w) =	     to O (Coeq (O_functor f) (O_functor g)) w) (cp (to O B b))	    ((O_functor_compose coeq coeq_to (O_functor f (to O B b)))^ @	     O_indpaths (O_functor (fun x : A => coeq (to O A x)))	       (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	       (to_O_natural (fun x : A => coeq (to O A x))) 	       (O_functor f (to O B b))) =	  (O_functor_compose coeq coeq_to (O_functor g (to O B b)))^ @	  O_indpaths (O_functor (fun x : A => coeq (to O A x)))	    (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	    (to_O_natural (fun x : A => coeq (to O A x))) 	    (O_functor g (to O B b))	";
+            data = "1 subgoal (ID 507)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  ============================	  forall b : O B,	  transport	    (fun w : Coeq (O_functor f) (O_functor g) =>	     O_functor coeq_to	       (Coeq_rec (O (Coeq f g)) (O_functor coeq)	          (fun b0 : O B =>	           (O_functor_compose f coeq b0)^ @	           (O_functor_homotopy (fun x : B => coeq (f x))	              (fun x : B => coeq (g x)) (fun z : B => cp z) b0 @	            O_functor_compose g coeq b0)) w) =	     to O (Coeq (O_functor f) (O_functor g)) w) (cp b)	    ((fun a : O A =>	      (O_functor_compose coeq coeq_to a)^ @	      O_indpaths (O_functor (fun x : A => coeq (to O A x)))	        (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural (fun x : A => coeq (to O A x))) a) 	       (O_functor f b)) =	  (fun a : O A =>	   (O_functor_compose coeq coeq_to a)^ @	   O_indpaths (O_functor (fun x : A => coeq (to O A x)))	     (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural (fun x : A => coeq (to O A x))) a) 	    (O_functor g b)	1 subgoal (ID 518)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  transport	    (fun w : Coeq (O_functor f) (O_functor g) =>	     O_functor coeq_to	       (Coeq_rec (O (Coeq f g)) (O_functor coeq)	          (fun b0 : O B =>	           (O_functor_compose f coeq b0)^ @	           (O_functor_homotopy (fun x : B => coeq (f x))	              (fun x : B => coeq (g x)) (fun z : B => cp z) b0 @	            O_functor_compose g coeq b0)) w) =	     to O (Coeq (O_functor f) (O_functor g)) w) (cp (to O B b))	    ((O_functor_compose coeq coeq_to (O_functor f (to O B b)))^ @	     O_indpaths (O_functor (fun x : A => coeq (to O A x)))	       (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	       (to_O_natural (fun x : A => coeq (to O A x))) 	       (O_functor f (to O B b))) =	  (O_functor_compose coeq coeq_to (O_functor g (to O B b)))^ @	  O_indpaths (O_functor (fun x : A => coeq (to O A x)))	    (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	    (to_O_natural (fun x : A => coeq (to O A x))) 	    (O_functor g (to O B b))	";
             responses[i]=data;
           
 
@@ -6313,87 +6313,87 @@
           
 
             i = 1259;
-            data = "1 subgoal (ID 729)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (((O_functor_compose coeq coeq_to (O_functor f (to O B b)))^ @	    ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural f b)) @	   to_O_natural (fun x : A => coeq (to O A x)) (f b)) @	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ((ap	      (fun x : Coeq (O_functor f) (O_functor g) =>	       O_functor coeq_to	         (Coeq_rec (O (Coeq f g)) (O_functor coeq)	            (fun b0 : O B =>	             (O_functor_compose f coeq b0)^ @	             (O_functor_homotopy (fun x0 : B => coeq (f x0))	                (fun x0 : B => coeq (g x0)) (fun z : B => cp z) b0 @	              O_functor_compose g coeq b0)) x)) (cp (to O B b)) @	    (O_functor_compose coeq coeq_to (O_functor g (to O B b)))^) @	   ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural g b)) @	  to_O_natural (fun x : A => coeq (to O A x)) (g b)	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
+            data = "1 subgoal (ID 729)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (O_functor_compose coeq coeq_to (O_functor f (to O B b)))^	  @' ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural f b)	  @' to_O_natural (fun x : A => coeq (to O A x)) (f b)	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ap	    (fun x : Coeq (O_functor f) (O_functor g) =>	     O_functor coeq_to	       (Coeq_rec (O (Coeq f g)) (O_functor coeq)	          (fun b0 : O B =>	           (O_functor_compose f coeq b0)^	           @' (O_functor_homotopy (fun x0 : B => coeq (f x0))	                 (fun x0 : B => coeq (g x0)) (fun z : B => cp z) b0	               @' O_functor_compose g coeq b0)) x)) 	    (cp (to O B b))	  @' (O_functor_compose coeq coeq_to (O_functor g (to O B b)))^	  @' ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural g b)	  @' to_O_natural (fun x : A => coeq (to O A x)) (g b)	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
             responses[i]=data;
           
 
             i = 1260;
-            data = "1 subgoal (ID 749)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (((O_functor_compose coeq coeq_to (O_functor f (to O B b)))^ @	    ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural f b)) @	   to_O_natural (fun x : A => coeq (to O A x)) (f b)) @	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ((ap (O_functor coeq_to)	      (ap	         (Coeq_rec (O (Coeq f g)) (O_functor coeq)	            (fun b0 : O B =>	             (O_functor_compose f coeq b0)^ @	             (O_functor_homotopy (fun x : B => coeq (f x))	                (fun x : B => coeq (g x)) (fun z : B => cp z) b0 @	              O_functor_compose g coeq b0))) (cp (to O B b))) @	    (O_functor_compose coeq coeq_to (O_functor g (to O B b)))^) @	   ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural g b)) @	  to_O_natural (fun x : A => coeq (to O A x)) (g b)	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
+            data = "1 subgoal (ID 749)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (O_functor_compose coeq coeq_to (O_functor f (to O B b)))^	  @' ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural f b)	  @' to_O_natural (fun x : A => coeq (to O A x)) (f b)	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ap (O_functor coeq_to)	    (ap	       (Coeq_rec (O (Coeq f g)) (O_functor coeq)	          (fun b0 : O B =>	           (O_functor_compose f coeq b0)^	           @' (O_functor_homotopy (fun x : B => coeq (f x))	                 (fun x : B => coeq (g x)) (fun z : B => cp z) b0	               @' O_functor_compose g coeq b0))) (cp (to O B b)))	  @' (O_functor_compose coeq coeq_to (O_functor g (to O B b)))^	  @' ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural g b)	  @' to_O_natural (fun x : A => coeq (to O A x)) (g b)	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
             responses[i]=data;
           
 
             i = 1261;
-            data = "1 subgoal (ID 763)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (((O_functor_compose coeq coeq_to (O_functor f (to O B b)))^ @	    ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural f b)) @	   to_O_natural (fun x : A => coeq (to O A x)) (f b)) @	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ((ap (O_functor coeq_to)	      ((O_functor_compose f coeq (to O B b))^ @	       (O_functor_homotopy (fun x : B => coeq (f x))	          (fun x : B => coeq (g x)) (fun z : B => cp z) 	          (to O B b) @ O_functor_compose g coeq (to O B b))) @	    (O_functor_compose coeq coeq_to (O_functor g (to O B b)))^) @	   ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural g b)) @	  to_O_natural (fun x : A => coeq (to O A x)) (g b)	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
+            data = "1 subgoal (ID 763)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (O_functor_compose coeq coeq_to (O_functor f (to O B b)))^	  @' ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural f b)	  @' to_O_natural (fun x : A => coeq (to O A x)) (f b)	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ap (O_functor coeq_to)	    ((O_functor_compose f coeq (to O B b))^	     @' (O_functor_homotopy (fun x : B => coeq (f x))	           (fun x : B => coeq (g x)) (fun z : B => cp z) 	           (to O B b)	         @' O_functor_compose g coeq (to O B b)))	  @' (O_functor_compose coeq coeq_to (O_functor g (to O B b)))^	  @' ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural g b)	  @' to_O_natural (fun x : A => coeq (to O A x)) (g b)	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
             responses[i]=data;
           
 
             i = 1262;
-            data = "1 subgoal (ID 783)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (((O_functor_compose coeq coeq_to (O_functor f (to O B b)))^ @	    ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural f b)) @	   to_O_natural (fun x : A => coeq (to O A x)) (f b)) @	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ((((ap (O_functor coeq_to) (O_functor_compose f coeq (to O B b))^ @	      ap (O_functor coeq_to)	        (O_functor_homotopy (fun x : B => coeq (f x))	           (fun x : B => coeq (g x)) (fun z : B => cp z) 	           (to O B b))) @	     ap (O_functor coeq_to) (O_functor_compose g coeq (to O B b))) @	    (O_functor_compose coeq coeq_to (O_functor g (to O B b)))^) @	   ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural g b)) @	  to_O_natural (fun x : A => coeq (to O A x)) (g b)	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
+            data = "1 subgoal (ID 783)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (O_functor_compose coeq coeq_to (O_functor f (to O B b)))^	  @' ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural f b)	  @' to_O_natural (fun x : A => coeq (to O A x)) (f b)	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ap (O_functor coeq_to) (O_functor_compose f coeq (to O B b))^	  @' ap (O_functor coeq_to)	       (O_functor_homotopy (fun x : B => coeq (f x))	          (fun x : B => coeq (g x)) (fun z : B => cp z) 	          (to O B b))	  @' ap (O_functor coeq_to) (O_functor_compose g coeq (to O B b))	  @' (O_functor_compose coeq coeq_to (O_functor g (to O B b)))^	  @' ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural g b)	  @' to_O_natural (fun x : A => coeq (to O A x)) (g b)	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
             responses[i]=data;
           
 
             i = 1263;
-            data = "1 subgoal (ID 799)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (((O_functor_compose coeq coeq_to (O_functor f (to O B b)))^ @	    ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural f b)) @	   to_O_natural (fun x : A => coeq (to O A x)) (f b)) @	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ((((ap (O_functor coeq_to) (O_functor_compose f coeq (to O B b))^ @	      ap (O_functor coeq_to)	        (to_O_natural (fun x : B => coeq (f x)) b @	         (ap (to O (Coeq f g)) (cp b) @	          (to_O_natural (fun x : B => coeq (g x)) b)^))) @	     ap (O_functor coeq_to) (O_functor_compose g coeq (to O B b))) @	    (O_functor_compose coeq coeq_to (O_functor g (to O B b)))^) @	   ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural g b)) @	  to_O_natural (fun x : A => coeq (to O A x)) (g b)	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
+            data = "1 subgoal (ID 799)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (O_functor_compose coeq coeq_to (O_functor f (to O B b)))^	  @' ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural f b)	  @' to_O_natural (fun x : A => coeq (to O A x)) (f b)	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ap (O_functor coeq_to) (O_functor_compose f coeq (to O B b))^	  @' ap (O_functor coeq_to)	       (to_O_natural (fun x : B => coeq (f x)) b	        @' (ap (to O (Coeq f g)) (cp b)	            @' (to_O_natural (fun x : B => coeq (g x)) b)^))	  @' ap (O_functor coeq_to) (O_functor_compose g coeq (to O B b))	  @' (O_functor_compose coeq coeq_to (O_functor g (to O B b)))^	  @' ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural g b)	  @' to_O_natural (fun x : A => coeq (to O A x)) (g b)	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
             responses[i]=data;
           
 
             i = 1264;
-            data = "1 subgoal (ID 825)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (((O_functor_compose coeq coeq_to (O_functor f (to O B b)))^ @	    ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural f b)) @	   to_O_natural (fun x : A => coeq (to O A x)) (f b)) @	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ((((((ap (O_functor coeq_to) (O_functor_compose f coeq (to O B b))^ @	        ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (f x)) b)) @	       ap (O_functor coeq_to) (ap (to O (Coeq f g)) (cp b))) @	      ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (g x)) b)^) @	     ap (O_functor coeq_to) (O_functor_compose g coeq (to O B b))) @	    (O_functor_compose coeq coeq_to (O_functor g (to O B b)))^) @	   ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural g b)) @	  to_O_natural (fun x : A => coeq (to O A x)) (g b)	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
+            data = "1 subgoal (ID 825)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (O_functor_compose coeq coeq_to (O_functor f (to O B b)))^	  @' ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural f b)	  @' to_O_natural (fun x : A => coeq (to O A x)) (f b)	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ap (O_functor coeq_to) (O_functor_compose f coeq (to O B b))^	  @' ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (f x)) b)	  @' ap (O_functor coeq_to) (ap (to O (Coeq f g)) (cp b))	  @' ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (g x)) b)^	  @' ap (O_functor coeq_to) (O_functor_compose g coeq (to O B b))	  @' (O_functor_compose coeq coeq_to (O_functor g (to O B b)))^	  @' ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural g b)	  @' to_O_natural (fun x : A => coeq (to O A x)) (g b)	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
             responses[i]=data;
           
 
             i = 1265;
-            data = "1 subgoal (ID 845)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  p := O_functor_compose_compose g coeq coeq_to (to O B b)	   : O_functor_compose g (coeq_to o coeq) (to O B b)	     @' O_functor_compose coeq coeq_to (O_functor g (to O B b)) =	     O_functor_compose (coeq o g) coeq_to (to O B b)	     @' ap (O_functor coeq_to) (O_functor_compose g coeq (to O B b))	  ============================	  (((O_functor_compose coeq coeq_to (O_functor f (to O B b)))^ @	    ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural f b)) @	   to_O_natural (fun x : A => coeq (to O A x)) (f b)) @	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ((((((ap (O_functor coeq_to) (O_functor_compose f coeq (to O B b))^ @	        ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (f x)) b)) @	       ap (O_functor coeq_to) (ap (to O (Coeq f g)) (cp b))) @	      ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (g x)) b)^) @	     ap (O_functor coeq_to) (O_functor_compose g coeq (to O B b))) @	    (O_functor_compose coeq coeq_to (O_functor g (to O B b)))^) @	   ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural g b)) @	  to_O_natural (fun x : A => coeq (to O A x)) (g b)	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
+            data = "1 subgoal (ID 845)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  p := O_functor_compose_compose g coeq coeq_to (to O B b)	   : O_functor_compose g (coeq_to o coeq) (to O B b)	     @' O_functor_compose coeq coeq_to (O_functor g (to O B b)) =	     O_functor_compose (coeq o g) coeq_to (to O B b)	     @' ap (O_functor coeq_to) (O_functor_compose g coeq (to O B b))	  ============================	  (O_functor_compose coeq coeq_to (O_functor f (to O B b)))^	  @' ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural f b)	  @' to_O_natural (fun x : A => coeq (to O A x)) (f b)	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ap (O_functor coeq_to) (O_functor_compose f coeq (to O B b))^	  @' ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (f x)) b)	  @' ap (O_functor coeq_to) (ap (to O (Coeq f g)) (cp b))	  @' ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (g x)) b)^	  @' ap (O_functor coeq_to) (O_functor_compose g coeq (to O B b))	  @' (O_functor_compose coeq coeq_to (O_functor g (to O B b)))^	  @' ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural g b)	  @' to_O_natural (fun x : A => coeq (to O A x)) (g b)	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
             responses[i]=data;
           
 
             i = 1266;
-            data = "1 subgoal (ID 868)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  p : (O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b))^	      @' O_functor_compose g (fun x : A => coeq_to (coeq x)) (to O B b) =	      ap (O_functor coeq_to) (O_functor_compose g coeq (to O B b))	      @' (O_functor_compose coeq coeq_to (O_functor g (to O B b)))^	  ============================	  (((O_functor_compose coeq coeq_to (O_functor f (to O B b)))^ @	    ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural f b)) @	   to_O_natural (fun x : A => coeq (to O A x)) (f b)) @	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ((((((ap (O_functor coeq_to) (O_functor_compose f coeq (to O B b))^ @	        ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (f x)) b)) @	       ap (O_functor coeq_to) (ap (to O (Coeq f g)) (cp b))) @	      ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (g x)) b)^) @	     ap (O_functor coeq_to) (O_functor_compose g coeq (to O B b))) @	    (O_functor_compose coeq coeq_to (O_functor g (to O B b)))^) @	   ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural g b)) @	  to_O_natural (fun x : A => coeq (to O A x)) (g b)	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
+            data = "1 subgoal (ID 868)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  p : (O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b))^	      @' O_functor_compose g (fun x : A => coeq_to (coeq x)) (to O B b) =	      ap (O_functor coeq_to) (O_functor_compose g coeq (to O B b))	      @' (O_functor_compose coeq coeq_to (O_functor g (to O B b)))^	  ============================	  (O_functor_compose coeq coeq_to (O_functor f (to O B b)))^	  @' ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural f b)	  @' to_O_natural (fun x : A => coeq (to O A x)) (f b)	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ap (O_functor coeq_to) (O_functor_compose f coeq (to O B b))^	  @' ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (f x)) b)	  @' ap (O_functor coeq_to) (ap (to O (Coeq f g)) (cp b))	  @' ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (g x)) b)^	  @' ap (O_functor coeq_to) (O_functor_compose g coeq (to O B b))	  @' (O_functor_compose coeq coeq_to (O_functor g (to O B b)))^	  @' ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural g b)	  @' to_O_natural (fun x : A => coeq (to O A x)) (g b)	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
             responses[i]=data;
           
 
             i = 1267;
-            data = "1 subgoal (ID 933)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  p : (O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b))^	      @' O_functor_compose g (fun x : A => coeq_to (coeq x)) (to O B b) =	      ap (O_functor coeq_to) (O_functor_compose g coeq (to O B b))	      @' (O_functor_compose coeq coeq_to (O_functor g (to O B b)))^	  ============================	  (((O_functor_compose coeq coeq_to (O_functor f (to O B b)))^ @	    ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural f b)) @	   to_O_natural (fun x : A => coeq (to O A x)) (f b)) @	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ((((((ap (O_functor coeq_to) (O_functor_compose f coeq (to O B b))^ @	        ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (f x)) b)) @	       ap (O_functor coeq_to) (ap (to O (Coeq f g)) (cp b))) @	      ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (g x)) b)^) @	     (O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b))^) @	    O_functor_compose g (fun x : A => coeq_to (coeq x)) (to O B b)) @	   ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural g b)) @	  to_O_natural (fun x : A => coeq (to O A x)) (g b)	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
+            data = "1 subgoal (ID 933)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  p : (O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b))^	      @' O_functor_compose g (fun x : A => coeq_to (coeq x)) (to O B b) =	      ap (O_functor coeq_to) (O_functor_compose g coeq (to O B b))	      @' (O_functor_compose coeq coeq_to (O_functor g (to O B b)))^	  ============================	  (O_functor_compose coeq coeq_to (O_functor f (to O B b)))^	  @' ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural f b)	  @' to_O_natural (fun x : A => coeq (to O A x)) (f b)	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ap (O_functor coeq_to) (O_functor_compose f coeq (to O B b))^	  @' ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (f x)) b)	  @' ap (O_functor coeq_to) (ap (to O (Coeq f g)) (cp b))	  @' ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (g x)) b)^	  @' (O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b))^	  @' O_functor_compose g (fun x : A => coeq_to (coeq x)) (to O B b)	  @' ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural g b)	  @' to_O_natural (fun x : A => coeq (to O A x)) (g b)	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
             responses[i]=data;
           
 
             i = 1268;
-            data = "1 subgoal (ID 934)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (((O_functor_compose coeq coeq_to (O_functor f (to O B b)))^ @	    ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural f b)) @	   to_O_natural (fun x : A => coeq (to O A x)) (f b)) @	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ((((((ap (O_functor coeq_to) (O_functor_compose f coeq (to O B b))^ @	        ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (f x)) b)) @	       ap (O_functor coeq_to) (ap (to O (Coeq f g)) (cp b))) @	      ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (g x)) b)^) @	     (O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b))^) @	    O_functor_compose g (fun x : A => coeq_to (coeq x)) (to O B b)) @	   ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural g b)) @	  to_O_natural (fun x : A => coeq (to O A x)) (g b)	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
+            data = "1 subgoal (ID 934)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (O_functor_compose coeq coeq_to (O_functor f (to O B b)))^	  @' ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural f b)	  @' to_O_natural (fun x : A => coeq (to O A x)) (f b)	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ap (O_functor coeq_to) (O_functor_compose f coeq (to O B b))^	  @' ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (f x)) b)	  @' ap (O_functor coeq_to) (ap (to O (Coeq f g)) (cp b))	  @' ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (g x)) b)^	  @' (O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b))^	  @' O_functor_compose g (fun x : A => coeq_to (coeq x)) (to O B b)	  @' ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural g b)	  @' to_O_natural (fun x : A => coeq (to O A x)) (g b)	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
             responses[i]=data;
           
 
             i = 1269;
-            data = "1 subgoal (ID 1010)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (((O_functor_compose coeq coeq_to (O_functor f (to O B b)))^ @	    ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural f b)) @	   to_O_natural (fun x : A => coeq (to O A x)) (f b)) @	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ((((((ap (O_functor coeq_to) (O_functor_compose f coeq (to O B b))^ @	        ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (f x)) b)) @	       ap (O_functor coeq_to) (ap (to O (Coeq f g)) (cp b))) @	      ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (g x)) b)^) @	     (O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b))^) @	    O_functor_compose g (fun x : A => coeq_to (coeq x)) (to O B b)) @	   (O_functor_compose g (fun x : A => coeq (to O A x)) (to O B b))^) @	  to_O_natural (fun x : B => coeq (to O A (g x))) b	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
+            data = "1 subgoal (ID 1010)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (O_functor_compose coeq coeq_to (O_functor f (to O B b)))^	  @' ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural f b)	  @' to_O_natural (fun x : A => coeq (to O A x)) (f b)	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ap (O_functor coeq_to) (O_functor_compose f coeq (to O B b))^	  @' ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (f x)) b)	  @' ap (O_functor coeq_to) (ap (to O (Coeq f g)) (cp b))	  @' ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (g x)) b)^	  @' (O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b))^	  @' O_functor_compose g (fun x : A => coeq_to (coeq x)) (to O B b)	  @' (O_functor_compose g (fun x : A => coeq (to O A x)) (to O B b))^	  @' to_O_natural (fun x : B => coeq (to O A (g x))) b	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
             responses[i]=data;
           
 
             i = 1270;
-            data = "1 subgoal (ID 1015)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (((O_functor_compose coeq coeq_to (O_functor f (to O B b)))^ @	    ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural f b)) @	   to_O_natural (fun x : A => coeq (to O A x)) (f b)) @	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ((((ap (O_functor coeq_to) (O_functor_compose f coeq (to O B b))^ @	      ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (f x)) b)) @	     ap (O_functor coeq_to) (ap (to O (Coeq f g)) (cp b))) @	    ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (g x)) b)^) @	   (O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b))^) @	  to_O_natural (fun x : B => coeq (to O A (g x))) b	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
+            data = "1 subgoal (ID 1015)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (O_functor_compose coeq coeq_to (O_functor f (to O B b)))^	  @' ap (O_functor (fun x : A => coeq (to O A x))) (to_O_natural f b)	  @' to_O_natural (fun x : A => coeq (to O A x)) (f b)	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ap (O_functor coeq_to) (O_functor_compose f coeq (to O B b))^	  @' ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (f x)) b)	  @' ap (O_functor coeq_to) (ap (to O (Coeq f g)) (cp b))	  @' ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (g x)) b)^	  @' (O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b))^	  @' to_O_natural (fun x : B => coeq (to O A (g x))) b	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
             responses[i]=data;
           
 
             i = 1271;
-            data = "1 subgoal (ID 1095)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (((O_functor_compose coeq coeq_to (O_functor f (to O B b)))^ @	    (O_functor_compose f (fun x : A => coeq (to O A x)) (to O B b))^) @	   to_O_natural (fun x : B => coeq (to O A (f x))) b) @	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ((((ap (O_functor coeq_to) (O_functor_compose f coeq (to O B b))^ @	      ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (f x)) b)) @	     ap (O_functor coeq_to) (ap (to O (Coeq f g)) (cp b))) @	    ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (g x)) b)^) @	   (O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b))^) @	  to_O_natural (fun x : B => coeq (to O A (g x))) b	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
+            data = "1 subgoal (ID 1095)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (O_functor_compose coeq coeq_to (O_functor f (to O B b)))^	  @' (O_functor_compose f (fun x : A => coeq (to O A x)) (to O B b))^	  @' to_O_natural (fun x : B => coeq (to O A (f x))) b	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ap (O_functor coeq_to) (O_functor_compose f coeq (to O B b))^	  @' ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (f x)) b)	  @' ap (O_functor coeq_to) (ap (to O (Coeq f g)) (cp b))	  @' ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (g x)) b)^	  @' (O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b))^	  @' to_O_natural (fun x : B => coeq (to O A (g x))) b	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
             responses[i]=data;
           
 
             i = 1272;
-            data = "1 subgoal (ID 1100)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  ((O_functor_compose f (fun x : A => coeq (to O A x)) (to O B b) @	    O_functor_compose coeq coeq_to (O_functor f (to O B b)))^ @	   to_O_natural (fun x : B => coeq (to O A (f x))) b) @	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ((((ap (O_functor coeq_to) (O_functor_compose f coeq (to O B b))^ @	      ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (f x)) b)) @	     ap (O_functor coeq_to) (ap (to O (Coeq f g)) (cp b))) @	    ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (g x)) b)^) @	   (O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b))^) @	  to_O_natural (fun x : B => coeq (to O A (g x))) b	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
+            data = "1 subgoal (ID 1100)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (O_functor_compose f (fun x : A => coeq (to O A x)) (to O B b)	   @' O_functor_compose coeq coeq_to (O_functor f (to O B b)))^	  @' to_O_natural (fun x : B => coeq (to O A (f x))) b	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ap (O_functor coeq_to) (O_functor_compose f coeq (to O B b))^	  @' ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (f x)) b)	  @' ap (O_functor coeq_to) (ap (to O (Coeq f g)) (cp b))	  @' ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (g x)) b)^	  @' (O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b))^	  @' to_O_natural (fun x : B => coeq (to O A (g x))) b	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
             responses[i]=data;
           
 
             i = 1273;
-            data = "1 subgoal (ID 1113)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  ((O_functor_compose (fun x : B => coeq (f x)) coeq_to (to O B b) @	    ap (O_functor coeq_to) (O_functor_compose f coeq (to O B b)))^ @	   to_O_natural (fun x : B => coeq (to O A (f x))) b) @	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ((((ap (O_functor coeq_to) (O_functor_compose f coeq (to O B b))^ @	      ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (f x)) b)) @	     ap (O_functor coeq_to) (ap (to O (Coeq f g)) (cp b))) @	    ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (g x)) b)^) @	   (O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b))^) @	  to_O_natural (fun x : B => coeq (to O A (g x))) b	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
+            data = "1 subgoal (ID 1113)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (O_functor_compose (fun x : B => coeq (f x)) coeq_to (to O B b)	   @' ap (O_functor coeq_to) (O_functor_compose f coeq (to O B b)))^	  @' to_O_natural (fun x : B => coeq (to O A (f x))) b	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ap (O_functor coeq_to) (O_functor_compose f coeq (to O B b))^	  @' ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (f x)) b)	  @' ap (O_functor coeq_to) (ap (to O (Coeq f g)) (cp b))	  @' ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (g x)) b)^	  @' (O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b))^	  @' to_O_natural (fun x : B => coeq (to O A (g x))) b	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
             responses[i]=data;
           
 
             i = 1274;
-            data = "1 subgoal (ID 1133)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (((ap (O_functor coeq_to) (O_functor_compose f coeq (to O B b)))^ @	    (O_functor_compose (fun x : B => coeq (f x)) coeq_to (to O B b))^) @	   to_O_natural (fun x : B => coeq (to O A (f x))) b) @	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  (((((ap (O_functor coeq_to) (O_functor_compose f coeq (to O B b)))^ @	      ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (f x)) b)) @	     ap (O_functor coeq_to) (ap (to O (Coeq f g)) (cp b))) @	    ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (g x)) b)^) @	   (O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b))^) @	  to_O_natural (fun x : B => coeq (to O A (g x))) b	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
+            data = "1 subgoal (ID 1133)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (ap (O_functor coeq_to) (O_functor_compose f coeq (to O B b)))^	  @' (O_functor_compose (fun x : B => coeq (f x)) coeq_to (to O B b))^	  @' to_O_natural (fun x : B => coeq (to O A (f x))) b	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  (ap (O_functor coeq_to) (O_functor_compose f coeq (to O B b)))^	  @' ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (f x)) b)	  @' ap (O_functor coeq_to) (ap (to O (Coeq f g)) (cp b))	  @' ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (g x)) b)^	  @' (O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b))^	  @' to_O_natural (fun x : B => coeq (to O A (g x))) b	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
             responses[i]=data;
           
 
             i = 1275;
-            data = "1 subgoal (ID 1234)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  ((O_functor_compose (fun x : B => coeq (f x)) coeq_to (to O B b))^ @	   to_O_natural (fun x : B => coeq (to O A (f x))) b) @	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  (((ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (f x)) b) @	     ap (O_functor coeq_to) (ap (to O (Coeq f g)) (cp b))) @	    ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (g x)) b)^) @	   (O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b))^) @	  to_O_natural (fun x : B => coeq (to O A (g x))) b	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
+            data = "1 subgoal (ID 1234)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (O_functor_compose (fun x : B => coeq (f x)) coeq_to (to O B b))^	  @' to_O_natural (fun x : B => coeq (to O A (f x))) b	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (f x)) b)	  @' ap (O_functor coeq_to) (ap (to O (Coeq f g)) (cp b))	  @' ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (g x)) b)^	  @' (O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b))^	  @' to_O_natural (fun x : B => coeq (to O A (g x))) b	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
             responses[i]=data;
           
 
@@ -6578,52 +6578,52 @@
           
 
             i = 1312;
-            data = "1 subgoal (ID 1256)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (f x)) b) @	   to_O_natural coeq_to (coeq (f b))) @	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  (((ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (f x)) b) @	     ap (O_functor coeq_to) (ap (to O (Coeq f g)) (cp b))) @	    ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (g x)) b)^) @	   (O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b))^) @	  to_O_natural (fun x : B => coeq (to O A (g x))) b	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
+            data = "1 subgoal (ID 1256)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (f x)) b)	  @' to_O_natural coeq_to (coeq (f b))	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (f x)) b)	  @' ap (O_functor coeq_to) (ap (to O (Coeq f g)) (cp b))	  @' ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (g x)) b)^	  @' (O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b))^	  @' to_O_natural (fun x : B => coeq (to O A (g x))) b	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
             responses[i]=data;
           
 
             i = 1313;
-            data = "1 subgoal (ID 1271)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (f x)) b) @	   to_O_natural coeq_to (coeq (f b))) @	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  (((ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (f x)) b) @	     ap (fun x : Coeq f g => O_functor coeq_to (to O (Coeq f g) x)) (cp b)) @	    ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (g x)) b)^) @	   (O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b))^) @	  to_O_natural (fun x : B => coeq (to O A (g x))) b	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
+            data = "1 subgoal (ID 1271)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (f x)) b)	  @' to_O_natural coeq_to (coeq (f b))	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (f x)) b)	  @' ap (fun x : Coeq f g => O_functor coeq_to (to O (Coeq f g) x)) (cp b)	  @' ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (g x)) b)^	  @' (O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b))^	  @' to_O_natural (fun x : B => coeq (to O A (g x))) b	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
             responses[i]=data;
           
 
             i = 1314;
-            data = "1 subgoal (ID 1354)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ((((to_O_natural coeq_to (coeq (f b)))^ @	     ap (fun x : Coeq f g => O_functor coeq_to (to O (Coeq f g) x)) (cp b)) @	    ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (g x)) b)^) @	   (O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b))^) @	  to_O_natural (fun x : B => coeq (to O A (g x))) b	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
+            data = "1 subgoal (ID 1354)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  (to_O_natural coeq_to (coeq (f b)))^	  @' ap (fun x : Coeq f g => O_functor coeq_to (to O (Coeq f g) x)) (cp b)	  @' ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (g x)) b)^	  @' (O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b))^	  @' to_O_natural (fun x : B => coeq (to O A (g x))) b	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
             responses[i]=data;
           
 
             i = 1315;
-            data = "1 subgoal (ID 1381)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  (((ap	       (fun x : Coeq f g =>	        to O (Coeq (O_functor f) (O_functor g)) (coeq_to x)) 	       (cp b) @ (to_O_natural coeq_to (coeq (g b)))^) @	    ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (g x)) b)^) @	   (O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b))^) @	  to_O_natural (fun x : B => coeq (to O A (g x))) b	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
+            data = "1 subgoal (ID 1381)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  ap	    (fun x : Coeq f g => to O (Coeq (O_functor f) (O_functor g)) (coeq_to x))	    (cp b)	  @' (to_O_natural coeq_to (coeq (g b)))^	  @' ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (g x)) b)^	  @' (O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b))^	  @' to_O_natural (fun x : B => coeq (to O A (g x))) b	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
             responses[i]=data;
           
 
             i = 1316;
-            data = "1 subgoal (ID 1460)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (ap	     (fun x : Coeq f g => to O (Coeq (O_functor f) (O_functor g)) (coeq_to x))	     (cp b))^ @	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  (((to_O_natural coeq_to (coeq (g b)))^ @	    ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (g x)) b)^) @	   (O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b))^) @	  to_O_natural (fun x : B => coeq (to O A (g x))) b	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
+            data = "1 subgoal (ID 1460)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (ap	     (fun x : Coeq f g => to O (Coeq (O_functor f) (O_functor g)) (coeq_to x))	     (cp b))^	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  (to_O_natural coeq_to (coeq (g b)))^	  @' ap (O_functor coeq_to) (to_O_natural (fun x : B => coeq (g x)) b)^	  @' (O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b))^	  @' to_O_natural (fun x : B => coeq (to O A (g x))) b	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
             responses[i]=data;
           
 
             i = 1317;
-            data = "1 subgoal (ID 1499)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural f b) @	   ap	     (fun x : Coeq f g => to O (Coeq (O_functor f) (O_functor g)) (coeq_to x))	     (cp b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  (O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b) @	   ((O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b))^ @	    to_O_natural (fun x : B => coeq_to (coeq (g x))) b))^ @	  to_O_natural (fun x : B => coeq (to O A (g x))) b	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
+            data = "1 subgoal (ID 1499)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural f b)	   @' ap	        (fun x : Coeq f g =>	         to O (Coeq (O_functor f) (O_functor g)) (coeq_to x)) 	        (cp b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  (O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b)	   @' ((O_functor_compose (fun x : B => coeq (g x)) coeq_to (to O B b))^	       @' to_O_natural (fun x : B => coeq_to (coeq (g x))) b))^	  @' to_O_natural (fun x : B => coeq (to O A (g x))) b	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural g b))^	";
             responses[i]=data;
           
 
             i = 1318;
-            data = "1 subgoal (ID 1519)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural f b) @	   ap	     (fun x : Coeq f g => to O (Coeq (O_functor f) (O_functor g)) (coeq_to x))	     (cp b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural g b))^	";
+            data = "1 subgoal (ID 1519)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural f b)	   @' ap	        (fun x : Coeq f g =>	         to O (Coeq (O_functor f) (O_functor g)) (coeq_to x)) 	        (cp b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural g b))^	";
             responses[i]=data;
           
 
             i = 1319;
-            data = "1 subgoal (ID 1534)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural f b) @	   ap (to O (Coeq (O_functor f) (O_functor g))) (ap coeq_to (cp b)))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural g b))^	";
+            data = "1 subgoal (ID 1534)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  coeq_to := functor_coeq (to O B) (to O A)	               (fun y : B => (to_O_natural f y)^)	               (fun y : B => (to_O_natural g y)^)	   : Coeq f g -> Coeq (O_functor f) (O_functor g)	  b : B	  ============================	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural f b)	   @' ap (to O (Coeq (O_functor f) (O_functor g))) (ap coeq_to (cp b)))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural g b))^	";
             responses[i]=data;
           
 
             i = 1320;
-            data = "1 subgoal (ID 1557)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  b : B	  ============================	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural f b) @	   ap (to O (Coeq (O_functor f) (O_functor g)))	     ((ap coeq (to_O_natural f b)^ @ cp (to O B b)) @	      ap coeq ((to_O_natural g b)^)^))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural g b))^	";
+            data = "1 subgoal (ID 1557)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  b : B	  ============================	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural f b)	   @' ap (to O (Coeq (O_functor f) (O_functor g)))	        (ap coeq (to_O_natural f b)^	         @' cp (to O B b)	         @' ap coeq ((to_O_natural g b)^)^))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural g b))^	";
             responses[i]=data;
           
 
             i = 1321;
-            data = "1 subgoal (ID 1649)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  b : B	  ============================	  (((ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	       (to_O_natural g b))^ @	    (ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)))^) @	   ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural f b)) @	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural g b))^	";
+            data = "1 subgoal (ID 1649)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  b : B	  ============================	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural g b))^	  @' (ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)))^	  @' ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	       (to_O_natural f b)	  @' (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	        (to_O_natural f b))^	  @' ap (to O (Coeq (O_functor f) (O_functor g))) (cp (to O B b)) =	  (ap (fun x : O A => to O (Coeq (O_functor f) (O_functor g)) (coeq x))	     (to_O_natural g b))^	";
             responses[i]=data;
           
 
@@ -6648,7 +6648,7 @@
           
 
             i = 1326;
-            data = "1 subgoal (ID 430)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  ============================	  Sect O_coeq_cmp O_coeq_cmp_inverse	";
+            data = "";
             responses[i]=data;
           
 
@@ -6718,37 +6718,37 @@
           
 
             i = 1340;
-            data = "1 subgoal (ID 623)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  b : B	  ============================	  (((((ap (fun x : O A => O_functor coeq x) (to_O_natural g b))^ @	      (O_functor_compose g coeq (to O B b))^) @	     (O_functor_homotopy (fun x : B => coeq (f x)) 	        (fun x : B => coeq (g x)) (fun z : B => cp z) 	        (to O B b))^) @ O_functor_compose f coeq (to O B b)) @	   ap (fun x : O A => O_functor coeq x) (to_O_natural f b)) @	  to_O_natural coeq (f b)	  @' ap (to O (Coeq f g)) (cp b) = to_O_natural coeq (g b)	";
+            data = "1 subgoal (ID 623)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  b : B	  ============================	  (ap (fun x : O A => O_functor coeq x) (to_O_natural g b))^	  @' (O_functor_compose g coeq (to O B b))^	  @' (O_functor_homotopy (fun x : B => coeq (f x)) 	        (fun x : B => coeq (g x)) (fun z : B => cp z) 	        (to O B b))^	  @' O_functor_compose f coeq (to O B b)	  @' ap (fun x : O A => O_functor coeq x) (to_O_natural f b)	  @' to_O_natural coeq (f b)	  @' ap (to O (Coeq f g)) (cp b) = to_O_natural coeq (g b)	";
             responses[i]=data;
           
 
             i = 1341;
-            data = "1 subgoal (ID 658)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  b : B	  ============================	  (ap (fun x : O A => O_functor coeq x) (to_O_natural g b))^	  @' (O_functor_compose g coeq (to O B b))^ @	     ((O_functor_homotopy (fun x : B => coeq (f x)) 	         (fun x : B => coeq (g x)) (fun z : B => cp z) 	         (to O B b))^ @	      (O_functor_compose f coeq (to O B b) @	       (ap (fun x : O A => O_functor coeq x) (to_O_natural f b) @	        to_O_natural coeq (f b)))) =	  to_O_natural coeq (g b)	  @' (ap (to O (Coeq f g)) (cp b))^	";
+            data = "1 subgoal (ID 658)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  b : B	  ============================	  (ap (fun x : O A => O_functor coeq x) (to_O_natural g b))^	  @' ((O_functor_compose g coeq (to O B b))^	      @' ((O_functor_homotopy (fun x : B => coeq (f x))	             (fun x : B => coeq (g x)) (fun z : B => cp z) 	             (to O B b))^	          @' (O_functor_compose f coeq (to O B b)	              @' (ap (fun x : O A => O_functor coeq x) (to_O_natural f b)	                  @' to_O_natural coeq (f b))))) =	  to_O_natural coeq (g b)	  @' (ap (to O (Coeq f g)) (cp b))^	";
             responses[i]=data;
           
 
             i = 1342;
-            data = "1 subgoal (ID 672)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  b : B	  ============================	  (ap (fun x : O A => O_functor coeq x) (to_O_natural g b))^	  @' (O_functor_compose g coeq (to O B b))^ @	     ((O_functor_homotopy (fun x : B => coeq (f x)) 	         (fun x : B => coeq (g x)) (fun z : B => cp z) 	         (to O B b))^ @	      (O_functor_compose f coeq (to O B b) @	       ((O_functor_compose f coeq (to O B b))^ @	        to_O_natural (fun x : B => coeq (f x)) b))) =	  to_O_natural coeq (g b)	  @' (ap (to O (Coeq f g)) (cp b))^	";
+            data = "1 subgoal (ID 672)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  b : B	  ============================	  (ap (fun x : O A => O_functor coeq x) (to_O_natural g b))^	  @' ((O_functor_compose g coeq (to O B b))^	      @' ((O_functor_homotopy (fun x : B => coeq (f x))	             (fun x : B => coeq (g x)) (fun z : B => cp z) 	             (to O B b))^	          @' (O_functor_compose f coeq (to O B b)	              @' ((O_functor_compose f coeq (to O B b))^	                  @' to_O_natural (fun x : B => coeq (f x)) b)))) =	  to_O_natural coeq (g b)	  @' (ap (to O (Coeq f g)) (cp b))^	";
             responses[i]=data;
           
 
             i = 1343;
-            data = "1 subgoal (ID 680)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  b : B	  ============================	  (ap (fun x : O A => O_functor coeq x) (to_O_natural g b))^	  @' (O_functor_compose g coeq (to O B b))^ @	     ((O_functor_homotopy (fun x : B => coeq (f x)) 	         (fun x : B => coeq (g x)) (fun z : B => cp z) 	         (to O B b))^ @ to_O_natural (fun x : B => coeq (f x)) b) =	  to_O_natural coeq (g b)	  @' (ap (to O (Coeq f g)) (cp b))^	";
+            data = "1 subgoal (ID 680)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  b : B	  ============================	  (ap (fun x : O A => O_functor coeq x) (to_O_natural g b))^	  @' ((O_functor_compose g coeq (to O B b))^	      @' ((O_functor_homotopy (fun x : B => coeq (f x))	             (fun x : B => coeq (g x)) (fun z : B => cp z) 	             (to O B b))^	          @' to_O_natural (fun x : B => coeq (f x)) b)) =	  to_O_natural coeq (g b)	  @' (ap (to O (Coeq f g)) (cp b))^	";
             responses[i]=data;
           
 
             i = 1344;
-            data = "1 subgoal (ID 690)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  b : B	  ============================	  (ap (fun x : O A => O_functor coeq x) (to_O_natural g b))^	  @' (O_functor_compose g coeq (to O B b))^ @	     (O_functor_homotopy (fun x : B => coeq (g x)) 	        (fun x : B => coeq (f x)) (fun x : B => (cp x)^) 	        (to O B b) @ to_O_natural (fun x : B => coeq (f x)) b) =	  to_O_natural coeq (g b)	  @' (ap (to O (Coeq f g)) (cp b))^	";
+            data = "1 subgoal (ID 690)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  b : B	  ============================	  (ap (fun x : O A => O_functor coeq x) (to_O_natural g b))^	  @' ((O_functor_compose g coeq (to O B b))^	      @' (O_functor_homotopy (fun x : B => coeq (g x))	            (fun x : B => coeq (f x)) (fun x : B => (cp x)^) 	            (to O B b)	          @' to_O_natural (fun x : B => coeq (f x)) b)) =	  to_O_natural coeq (g b)	  @' (ap (to O (Coeq f g)) (cp b))^	";
             responses[i]=data;
           
 
             i = 1345;
-            data = "1 subgoal (ID 695)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  b : B	  ============================	  (ap (fun x : O A => O_functor coeq x) (to_O_natural g b))^	  @' (O_functor_compose g coeq (to O B b))^ @	     (((to_O_natural (fun x : B => coeq (g x)) b @	        ap (to O (Coeq f g)) (cp b)^) @	       (to_O_natural (fun x : B => coeq (f x)) b)^) @	      to_O_natural (fun x : B => coeq (f x)) b) =	  to_O_natural coeq (g b)	  @' (ap (to O (Coeq f g)) (cp b))^	";
+            data = "1 subgoal (ID 695)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  b : B	  ============================	  (ap (fun x : O A => O_functor coeq x) (to_O_natural g b))^	  @' ((O_functor_compose g coeq (to O B b))^	      @' (to_O_natural (fun x : B => coeq (g x)) b	          @' ap (to O (Coeq f g)) (cp b)^	          @' (to_O_natural (fun x : B => coeq (f x)) b)^	          @' to_O_natural (fun x : B => coeq (f x)) b)) =	  to_O_natural coeq (g b)	  @' (ap (to O (Coeq f g)) (cp b))^	";
             responses[i]=data;
           
 
             i = 1346;
-            data = "1 subgoal (ID 740)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  b : B	  ============================	  (ap (fun x : O A => O_functor coeq x) (to_O_natural g b))^ @	  (O_functor_compose g coeq (to O B b))^	  @' to_O_natural (fun x : B => coeq (g x)) b = to_O_natural coeq (g b)	";
+            data = "1 subgoal (ID 740)	  	  O : ReflectiveSubuniverse	  B : Type	  A : Type	  f, g : B -> A	  b : B	  ============================	  (ap (fun x : O A => O_functor coeq x) (to_O_natural g b))^	  @' (O_functor_compose g coeq (to O B b))^	  @' to_O_natural (fun x : B => coeq (g x)) b = to_O_natural coeq (g b)	";
             responses[i]=data;
           
 
@@ -6848,12 +6848,12 @@
           
 
             i = 1366;
-            data = "";
+            data = "1 subgoal (ID 186)	  	  O : ReflectiveSubuniverse	  H : In O Empty	  A : Type	  H0 : Decidable A	  ============================	  Decidable (O A)	";
             responses[i]=data;
           
 
             i = 1367;
-            data = "1 subgoal (ID 186)	  	  O : ReflectiveSubuniverse	  H : In O Empty	  A : Type	  H0 : Decidable A	  ============================	  Decidable (O A)	";
+            data = "";
             responses[i]=data;
           
 
@@ -6953,7 +6953,7 @@
           
 
             i = 1387;
-            data = "1 subgoal (ID 189)	  	  O : ReflectiveSubuniverse	  A : Type	  H : Decidable (O A)	  ============================	  O (Decidable A)	";
+            data = "";
             responses[i]=data;
           
 
@@ -7008,7 +7008,7 @@
           
 
             i = 1398;
-            data = "1 subgoal (ID 219)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  f : A -> B	  ============================	  O_functor f o O_monad_mult A == O_monad_mult B o O_functor (O_functor f)	";
+            data = "";
             responses[i]=data;
           
 
@@ -7048,7 +7048,7 @@
           
 
             i = 1406;
-            data = "1 subgoal (ID 233)	  	  O : ReflectiveSubuniverse	  A : Type	  ============================	  O_monad_mult A o to O (O A) == idmap	";
+            data = "";
             responses[i]=data;
           
 
@@ -7073,7 +7073,7 @@
           
 
             i = 1411;
-            data = "1 subgoal (ID 249)	  	  O : ReflectiveSubuniverse	  A : Type	  ============================	  O_monad_mult A o O_functor (to O A) == idmap	";
+            data = "";
             responses[i]=data;
           
 
@@ -7103,7 +7103,7 @@
           
 
             i = 1417;
-            data = "1 subgoal (ID 273)	  	  O : ReflectiveSubuniverse	  A : Type	  ============================	  O_monad_mult A o O_monad_mult (O A) ==	  O_monad_mult A o O_functor (O_monad_mult A)	";
+            data = "";
             responses[i]=data;
           
 
@@ -7153,7 +7153,7 @@
           
 
             i = 1427;
-            data = "1 subgoal (ID 684)	  	  O : ReflectiveSubuniverse	  fs : Funext	  A : Type	  A' : Type	  B : Type	  B' : Type	  f : A -> A'	  g : B -> B'	  ============================	  O_functor (functor_prod f g) o O_monad_strength A B ==	  O_monad_strength A' B' o functor_prod f (O_functor g)	";
+            data = "";
             responses[i]=data;
           
 
@@ -7233,7 +7233,7 @@
           
 
             i = 1443;
-            data = "1 subgoal (ID 699)	  	  O : ReflectiveSubuniverse	  fs : Funext	  A : Type	  ============================	  O_functor snd o O_monad_strength Unit A == snd	";
+            data = "";
             responses[i]=data;
           
 
@@ -7273,7 +7273,7 @@
           
 
             i = 1451;
-            data = "1 subgoal (ID 720)	  	  O : ReflectiveSubuniverse	  fs : Funext	  A : Type	  B : Type	  ============================	  O_monad_strength A B o functor_prod idmap (to O B) == to O (A * B)	";
+            data = "";
             responses[i]=data;
           
 
@@ -7313,7 +7313,7 @@
           
 
             i = 1459;
-            data = "1 subgoal (ID 786)	  	  O : ReflectiveSubuniverse	  fs : Funext	  A : Type	  B : Type	  C : Type	  ============================	  O_functor (equiv_prod_assoc A B C).(equiv_isequiv).(equiv_inv)	  o O_monad_strength (A * B) C ==	  O_monad_strength A (B * C) o functor_prod idmap (O_monad_strength B C)	  o (equiv_prod_assoc A B (O C)).(equiv_isequiv).(equiv_inv)	";
+            data = "";
             responses[i]=data;
           
 
@@ -7383,7 +7383,7 @@
           
 
             i = 1473;
-            data = "1 subgoal (ID 827)	  	  O : ReflectiveSubuniverse	  fs : Funext	  A : Type	  B : Type	  ============================	  O_monad_mult (A * B) o O_functor (O_monad_strength A B)	  o O_monad_strength A (O B) ==	  O_monad_strength A B o functor_prod idmap (O_monad_mult B)	";
+            data = "";
             responses[i]=data;
           
 
@@ -7668,12 +7668,12 @@
           
 
             i = 1530;
-            data = "";
+            data = "1 subgoal (ID 155)	  	  O : ReflectiveSubuniverse	  H : Funext	  A : Type	  ============================	  IsHProp (IsConnected O A)	";
             responses[i]=data;
           
 
             i = 1531;
-            data = "1 subgoal (ID 155)	  	  O : ReflectiveSubuniverse	  H : Funext	  A : Type	  ============================	  IsHProp (IsConnected O A)	";
+            data = "";
             responses[i]=data;
           
 
@@ -7713,7 +7713,7 @@
           
 
             i = 1539;
-            data = "1 subgoal (ID 164)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  ============================	  IsConnected O A -> IsConnected O B	";
+            data = "";
             responses[i]=data;
           
 
@@ -7788,7 +7788,7 @@
           
 
             i = 1554;
-            data = "1 subgoal (ID 179)	  	  O : ReflectiveSubuniverse	  A : Type	  H : IsConnected O A	  C : Type	  H0 : In O C	  f : A -> C	  ============================	  NullHomotopy f	";
+            data = "";
             responses[i]=data;
           
 
@@ -7883,7 +7883,7 @@
           
 
             i = 1573;
-            data = "1 subgoal (ID 183)	  	  O : ReflectiveSubuniverse	  A : Type	  ============================	  NullHomotopy (to O A) -> IsConnected O A	";
+            data = "";
             responses[i]=data;
           
 
@@ -7938,7 +7938,7 @@
           
 
             i = 1584;
-            data = "1 subgoal (ID 187)	  	  O : ReflectiveSubuniverse	  A : Type	  ============================	  (forall C : Type, In O C -> forall f : A -> C, NullHomotopy f) ->	  IsConnected O A	";
+            data = "";
             responses[i]=data;
           
 
@@ -7978,12 +7978,12 @@
           
 
             i = 1592;
-            data = "";
+            data = "1 subgoal (ID 194)	  	  O : ReflectiveSubuniverse	  A : Type	  B : A -> Type	  H : IsConnected O A	  H0 : forall a : A, IsConnected O (B a)	  ============================	  IsConnected O {a : A & B a}	";
             responses[i]=data;
           
 
             i = 1593;
-            data = "1 subgoal (ID 194)	  	  O : ReflectiveSubuniverse	  A : Type	  B : A -> Type	  H : IsConnected O A	  H0 : forall a : A, IsConnected O (B a)	  ============================	  IsConnected O {a : A & B a}	";
+            data = "";
             responses[i]=data;
           
 
@@ -8038,12 +8038,12 @@
           
 
             i = 1604;
-            data = "";
+            data = "1 subgoal (ID 197)	  	  O : ReflectiveSubuniverse	  A : Type	  Contr0 : Contr A	  ============================	  IsConnected O A	";
             responses[i]=data;
           
 
             i = 1605;
-            data = "1 subgoal (ID 197)	  	  O : ReflectiveSubuniverse	  A : Type	  Contr0 : Contr A	  ============================	  IsConnected O A	";
+            data = "";
             responses[i]=data;
           
 
@@ -8083,7 +8083,7 @@
           
 
             i = 1613;
-            data = "1 subgoal (ID 201)	  	  O : ReflectiveSubuniverse	  A : Type	  H : In O A	  H0 : IsConnected O A	  ============================	  Contr A	";
+            data = "";
             responses[i]=data;
           
 
@@ -8143,7 +8143,7 @@
           
 
             i = 1625;
-            data = "1 subgoal (ID 210)	  	  O : ReflectiveSubuniverse	  n : nat	  A : Type	  conn_A : IsConnected O A	  C : Type	  H : In O C	  ============================	  ExtendableAlong n (const tt) (unit_name C)	";
+            data = "";
             responses[i]=data;
           
 
@@ -8198,7 +8198,7 @@
           
 
             i = 1636;
-            data = "1 subgoal (ID 224)	  	  O : ReflectiveSubuniverse	  H : Funext	  A : Type	  H0 : IsConnected O A	  C : Type	  H1 : In O C	  ============================	  IsEquiv const	";
+            data = "";
             responses[i]=data;
           
 
@@ -8313,12 +8313,12 @@
           
 
             i = 1659;
-            data = "";
+            data = "1 subgoal (ID 162)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  ============================	  MapIn O f	";
             responses[i]=data;
           
 
             i = 1660;
-            data = "1 subgoal (ID 162)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  ============================	  MapIn O f	";
+            data = "";
             responses[i]=data;
           
 
@@ -8368,7 +8368,7 @@
           
 
             i = 1670;
-            data = "1 subgoal (ID 177)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  f, g : A -> B	  p : f == g	  H : MapIn O f	  ============================	  MapIn O g	";
+            data = "";
             responses[i]=data;
           
 
@@ -8408,12 +8408,12 @@
           
 
             i = 1678;
-            data = "";
+            data = "1 subgoal (ID 184)	  	  O : ReflectiveSubuniverse	  A : Type	  B : A -> Type	  H : forall a : A, In O (B a)	  ============================	  MapIn O pr1	";
             responses[i]=data;
           
 
             i = 1679;
-            data = "1 subgoal (ID 184)	  	  O : ReflectiveSubuniverse	  A : Type	  B : A -> Type	  H : forall a : A, In O (B a)	  ============================	  MapIn O pr1	";
+            data = "";
             responses[i]=data;
           
 
@@ -8483,12 +8483,12 @@
           
 
             i = 1693;
-            data = "";
+            data = "1 subgoal (ID 199)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  f : A -> B	  H : In O Empty	  H0 : forall b : B, IsHProp (hfiber f b)	  H1 : forall b : B, Decidable (hfiber f b)	  ============================	  MapIn O f	";
             responses[i]=data;
           
 
             i = 1694;
-            data = "1 subgoal (ID 199)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  f : A -> B	  H : In O Empty	  H0 : forall b : B, IsHProp (hfiber f b)	  H1 : forall b : B, Decidable (hfiber f b)	  ============================	  MapIn O f	";
+            data = "";
             responses[i]=data;
           
 
@@ -8538,12 +8538,12 @@
           
 
             i = 1704;
-            data = "";
+            data = "1 subgoal (ID 206)	  	  O : ReflectiveSubuniverse	  H : Funext	  A : Type	  B : Type	  f : A -> B	  ============================	  IsHProp (MapIn O f)	";
             responses[i]=data;
           
 
             i = 1705;
-            data = "1 subgoal (ID 206)	  	  O : ReflectiveSubuniverse	  H : Funext	  A : Type	  B : Type	  f : A -> B	  ============================	  IsHProp (MapIn O f)	";
+            data = "";
             responses[i]=data;
           
 
@@ -8578,12 +8578,12 @@
           
 
             i = 1712;
-            data = "";
+            data = "1 subgoal (ID 214)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  f : A -> B	  H : In O A	  H0 : In O B	  ============================	  MapIn O f	";
             responses[i]=data;
           
 
             i = 1713;
-            data = "1 subgoal (ID 214)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  f : A -> B	  H : In O A	  H0 : In O B	  ============================	  MapIn O f	";
+            data = "";
             responses[i]=data;
           
 
@@ -8623,7 +8623,7 @@
           
 
             i = 1721;
-            data = "1 subgoal (ID 235)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  ============================	  MapIn O g -> MapIn O (g o f) -> MapIn O f	";
+            data = "";
             responses[i]=data;
           
 
@@ -8663,12 +8663,12 @@
           
 
             i = 1729;
-            data = "";
+            data = "1 subgoal (ID 254)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  C : Type	  f : B -> A	  g : C -> A	  H : MapIn O g	  ============================	  MapIn O ((f ^*) g)	";
             responses[i]=data;
           
 
             i = 1730;
-            data = "1 subgoal (ID 254)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  C : Type	  f : B -> A	  g : C -> A	  H : MapIn O g	  ============================	  MapIn O ((f ^*) g)	";
+            data = "";
             responses[i]=data;
           
 
@@ -8688,12 +8688,12 @@
           
 
             i = 1734;
-            data = "";
+            data = "1 subgoal (ID 273)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  C : Type	  g : C -> A	  f : B -> A	  H : MapIn O f	  ============================	  MapIn O ((g ^*') f)	";
             responses[i]=data;
           
 
             i = 1735;
-            data = "1 subgoal (ID 273)	  	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  C : Type	  g : C -> A	  f : B -> A	  H : MapIn O f	  ============================	  MapIn O ((g ^*') f)	";
+            data = "";
             responses[i]=data;
           
 
@@ -8743,12 +8743,12 @@
           
 
             i = 1745;
-            data = "";
+            data = "1 subgoal (ID 300)	  	  O : ReflectiveSubuniverse	  A : Type	  A' : Type	  B : Type	  B' : Type	  f : A -> A'	  g : B -> B'	  H : MapIn O f	  H0 : MapIn O g	  ============================	  MapIn O (functor_sum f g)	";
             responses[i]=data;
           
 
             i = 1746;
-            data = "1 subgoal (ID 300)	  	  O : ReflectiveSubuniverse	  A : Type	  A' : Type	  B : Type	  B' : Type	  f : A -> A'	  g : B -> B'	  H : MapIn O f	  H0 : MapIn O g	  ============================	  MapIn O (functor_sum f g)	";
+            data = "";
             responses[i]=data;
           
 
@@ -8838,7 +8838,7 @@
           
 
             i = 1764;
-            data = "1 subgoal (ID 331)	  	  O : ReflectiveSubuniverse	  A : Type	  A' : Type	  B : Type	  B' : Type	  h : A + B -> A' + B'	  Ha : forall a : A, is_inl (h (inl a))	  Hb : forall b : B, is_inr (h (inr b))	  H : MapIn O h	  ============================	  MapIn O (unfunctor_sum_l h Ha)	";
+            data = "";
             responses[i]=data;
           
 
@@ -8863,7 +8863,7 @@
           
 
             i = 1769;
-            data = "1 subgoal (ID 362)	  	  O : ReflectiveSubuniverse	  A : Type	  A' : Type	  B : Type	  B' : Type	  h : A + B -> A' + B'	  Ha : forall a : A, is_inl (h (inl a))	  Hb : forall b : B, is_inr (h (inr b))	  H : MapIn O h	  ============================	  MapIn O (unfunctor_sum_r h Hb)	";
+            data = "";
             responses[i]=data;
           
 
@@ -9043,12 +9043,12 @@
           
 
             i = 1805;
-            data = "";
+            data = "1 subgoal (ID 162)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  f : A -> B	  H1 : IsEquiv f	  ============================	  IsConnMap O f	";
             responses[i]=data;
           
 
             i = 1806;
-            data = "1 subgoal (ID 162)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  f : A -> B	  H1 : IsEquiv f	  ============================	  IsConnMap O f	";
+            data = "";
             responses[i]=data;
           
 
@@ -9098,7 +9098,7 @@
           
 
             i = 1816;
-            data = "1 subgoal (ID 174)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  f, g : A -> B	  h : f == g	  ============================	  IsConnMap O f -> IsConnMap O g	";
+            data = "";
             responses[i]=data;
           
 
@@ -9138,12 +9138,12 @@
           
 
             i = 1824;
-            data = "";
+            data = "1 subgoal (ID 193)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  C : Type	  f : B -> A	  g : C -> A	  H1 : IsConnMap O g	  ============================	  IsConnMap O ((f ^*) g)	";
             responses[i]=data;
           
 
             i = 1825;
-            data = "1 subgoal (ID 193)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  C : Type	  f : B -> A	  g : C -> A	  H1 : IsConnMap O g	  ============================	  IsConnMap O ((f ^*) g)	";
+            data = "";
             responses[i]=data;
           
 
@@ -9163,12 +9163,12 @@
           
 
             i = 1829;
-            data = "";
+            data = "1 subgoal (ID 212)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  C : Type	  g : C -> A	  f : B -> A	  H1 : IsConnMap O f	  ============================	  IsConnMap O ((g ^*') f)	";
             responses[i]=data;
           
 
             i = 1830;
-            data = "1 subgoal (ID 212)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  C : Type	  g : C -> A	  f : B -> A	  H1 : IsConnMap O f	  ============================	  IsConnMap O ((g ^*') f)	";
+            data = "";
             responses[i]=data;
           
 
@@ -9208,12 +9208,12 @@
           
 
             i = 1838;
-            data = "";
+            data = "1 subgoal (ID 219)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  A : Type	  B : A -> Type	  H1 : forall a : A, IsConnected O (B a)	  ============================	  IsConnMap O pr1	";
             responses[i]=data;
           
 
             i = 1839;
-            data = "1 subgoal (ID 219)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  A : Type	  B : A -> Type	  H1 : forall a : A, IsConnected O (B a)	  ============================	  IsConnMap O pr1	";
+            data = "";
             responses[i]=data;
           
 
@@ -9253,12 +9253,12 @@
           
 
             i = 1847;
-            data = "";
+            data = "1 subgoal (ID 226)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  H1 : Funext	  A : Type	  B : Type	  f : A -> B	  ============================	  IsHProp (IsConnMap O f)	";
             responses[i]=data;
           
 
             i = 1848;
-            data = "1 subgoal (ID 226)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  H1 : Funext	  A : Type	  B : Type	  f : A -> B	  ============================	  IsHProp (IsConnMap O f)	";
+            data = "";
             responses[i]=data;
           
 
@@ -9298,7 +9298,7 @@
           
 
             i = 1856;
-            data = "1 subgoal (ID 238)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  f : A -> B	  H1 : IsConnMap O f	  P : B -> Type	  H2 : forall b : B, In O (P b)	  d : forall a : A, P (f a)	  ============================	  forall b : B, P b	";
+            data = "";
             responses[i]=data;
           
 
@@ -9308,12 +9308,12 @@
           
 
             i = 1858;
-            data = "1 focused subgoal	(shelved: 1) (ID 266)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  f : A -> B	  H1 : IsConnMap O f	  P : B -> Type	  H2 : forall b : B, In O (P b)	  d : forall a : A, P (f a)	  b : B	  ============================	  hfiber f ?Goal0 -> P b	";
+            data = "1 focused subgoal	(shelved: 1) (ID 266)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  f : A -> B	  H1 : IsConnMap O f	  P : B -> Type	  H2 : forall b : B, In O (P b)	  d : forall a : A, P (f a)	  b : B	  ============================	  hfiber f ?b -> P b	";
             responses[i]=data;
           
 
             i = 1859;
-            data = "1 focused subgoal	(shelved: 1) (ID 272)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  f : A -> B	  H1 : IsConnMap O f	  P : B -> Type	  H2 : forall b : B, In O (P b)	  d : forall a : A, P (f a)	  b : B	  a : A	  p : f a = ?Goal	  ============================	  P b	";
+            data = "1 focused subgoal	(shelved: 1) (ID 271)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  f : A -> B	  H1 : IsConnMap O f	  P : B -> Type	  H2 : forall b : B, In O (P b)	  d : forall a : A, P (f a)	  b : B	  a : A	  p : f a = ?b	  ============================	  P b	";
             responses[i]=data;
           
 
@@ -9333,7 +9333,7 @@
           
 
             i = 1863;
-            data = "1 subgoal (ID 256)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  f : A -> B	  H1 : IsConnMap O f	  P : B -> Type	  H2 : forall b : B, In O (P b)	  d : forall a : A, P (f a)	  ============================	  forall a : A, conn_map_elim f P d (f a) = d a	";
+            data = "";
             responses[i]=data;
           
 
@@ -9398,7 +9398,7 @@
           
 
             i = 1876;
-            data = "1 subgoal (ID 272)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  f : A -> B	  H1 : IsConnMap O f	  H2 : MapIn O f	  ============================	  IsEquiv f	";
+            data = "";
             responses[i]=data;
           
 
@@ -9448,7 +9448,7 @@
           
 
             i = 1886;
-            data = "1 subgoal (ID 286)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  f : A -> B	  H1 : IsConnMap O f	  P : B -> Type	  H2 : forall b : B, In O (P b)	  d : forall a : A, P (f a)	  ============================	  ExtensionAlong f P d	";
+            data = "";
             responses[i]=data;
           
 
@@ -9473,7 +9473,7 @@
           
 
             i = 1891;
-            data = "1 subgoal (ID 300)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  n : nat	  A : Type	  B : Type	  f : A -> B	  H1 : IsConnMap O f	  P : B -> Type	  H2 : forall b : B, In O (P b)	  ============================	  ExtendableAlong n f P	";
+            data = "";
             responses[i]=data;
           
 
@@ -9513,7 +9513,7 @@
           
 
             i = 1899;
-            data = "1 subgoal (ID 331)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  f : A -> B	  H1 : IsConnMap O f	  P : B -> Type	  H2 : forall b : B, In O (P b)	  d : forall a : A, P (f a)	  e, e' : ExtensionAlong f P d	  ============================	  e = e'	";
+            data = "";
             responses[i]=data;
           
 
@@ -9568,7 +9568,7 @@
           
 
             i = 1910;
-            data = "1 subgoal (ID 347)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  f : A -> B	  H1 : IsConnMap O f	  P : B -> Type	  H2 : forall b : B, In O (P b)	  ============================	  IsEquiv (fun g : forall b : B, P b => g oD f)	";
+            data = "";
             responses[i]=data;
           
 
@@ -9648,7 +9648,7 @@
           
 
             i = 1926;
-            data = "1 subgoal (ID 355)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  f : A -> B	  ============================	  (forall P : B -> Type,	   (forall b : B, In O (P b)) ->	   forall d : forall a : A, P (f a), ExtensionAlong f P d) -> 	  IsConnMap O f	";
+            data = "";
             responses[i]=data;
           
 
@@ -9713,12 +9713,12 @@
           
 
             i = 1939;
-            data = "";
+            data = "1 subgoal (ID 382)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  H1 : IsConnMap O f	  H2 : IsConnMap O g	  ============================	  IsConnMap O (g o f)	";
             responses[i]=data;
           
 
             i = 1940;
-            data = "1 subgoal (ID 382)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  H1 : IsConnMap O f	  H2 : IsConnMap O g	  ============================	  IsConnMap O (g o f)	";
+            data = "";
             responses[i]=data;
           
 
@@ -9748,7 +9748,7 @@
           
 
             i = 1946;
-            data = "1 subgoal (ID 409)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  H1 : IsConnMap O f	  H2 : IsConnMap O (g o f)	  ============================	  IsConnMap O g	";
+            data = "";
             responses[i]=data;
           
 
@@ -9813,7 +9813,7 @@
           
 
             i = 1959;
-            data = "1 subgoal (ID 416)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  A : Type	  H1 : IsConnMap O (const tt)	  ============================	  IsConnected O A	";
+            data = "";
             responses[i]=data;
           
 
@@ -9833,12 +9833,12 @@
           
 
             i = 1963;
-            data = "";
+            data = "1 subgoal (ID 421)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  A : Type	  H1 : IsConnected O A	  ============================	  IsConnMap O (const tt)	";
             responses[i]=data;
           
 
             i = 1964;
-            data = "1 subgoal (ID 421)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  A : Type	  H1 : IsConnected O A	  ============================	  IsConnMap O (const tt)	";
+            data = "";
             responses[i]=data;
           
 
@@ -9863,7 +9863,7 @@
           
 
             i = 1969;
-            data = "1 subgoal (ID 437)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  H1 : In O B	  f : A -> B	  H2 : IsConnMap O f	  ============================	  IsEquiv (O_rec f)	";
+            data = "";
             responses[i]=data;
           
 
@@ -9948,7 +9948,7 @@
           
 
             i = 1986;
-            data = "1 subgoal (ID 455)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  g : forall a : A, P a -> Q (f a)	  H1 : forall a : A, IsConnMap O (g a)	  b : B	  v : Q b	  ============================	  O (hfiber (functor_sigma f g) (b; v)) <~> O (hfiber f b)	";
+            data = "";
             responses[i]=data;
           
 
@@ -9978,12 +9978,12 @@
           
 
             i = 1992;
-            data = "";
+            data = "1 subgoal (ID 467)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  g : forall a : A, P a -> Q (f a)	  H1 : forall a : A, IsConnMap O (g a)	  H2 : IsConnMap O f	  ============================	  IsConnMap O (functor_sigma f g)	";
             responses[i]=data;
           
 
             i = 1993;
-            data = "1 subgoal (ID 467)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  g : forall a : A, P a -> Q (f a)	  H1 : forall a : A, IsConnMap O (g a)	  H2 : IsConnMap O f	  ============================	  IsConnMap O (functor_sigma f g)	";
+            data = "";
             responses[i]=data;
           
 
@@ -10008,7 +10008,7 @@
           
 
             i = 1998;
-            data = "1 subgoal (ID 481)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  g : forall a : A, P a -> Q (f a)	  H1 : forall a : A, IsConnMap O (g a)	  inh : forall b : B, Q b	  H2 : IsConnMap O (functor_sigma f g)	  ============================	  IsConnMap O f	";
+            data = "";
             responses[i]=data;
           
 
@@ -10068,7 +10068,7 @@
           
 
             i = 2010;
-            data = "1 subgoal (ID 456)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  A : Type	  P : A -> Type	  Q : A -> Type	  f : forall a : A, P a -> Q a	  H1 : IsConnMap O (functor_sigma idmap f)	  ============================	  forall a : A, IsConnMap O (f a)	";
+            data = "";
             responses[i]=data;
           
 
@@ -10123,12 +10123,12 @@
           
 
             i = 2021;
-            data = "";
+            data = "1 subgoal (ID 469)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  f : A -> B	  H1 : IsConnMap O f	  ============================	  O_inverts O f	";
             responses[i]=data;
           
 
             i = 2022;
-            data = "1 subgoal (ID 469)	  	  H : Univalence	  H0 : Funext	  O : ReflectiveSubuniverse	  A : Type	  B : Type	  f : A -> B	  H1 : IsConnMap O f	  ============================	  O_inverts O f	";
+            data = "";
             responses[i]=data;
           
 
@@ -10448,7 +10448,7 @@
           
 
             i = 2086;
-            data = "1 subgoal (ID 5)	  	  ============================	  ReflectiveSubuniverse -> Type2le -> Type2le	";
+            data = "";
             responses[i]=data;
           
 
@@ -10468,7 +10468,7 @@
           
 
             i = 2090;
-            data = "1 subgoal (ID 6)	  	  ============================	  ReflectiveSubuniverse -> Type2le -> Type2le	";
+            data = "";
             responses[i]=data;
           
 
@@ -10488,7 +10488,7 @@
           
 
             i = 2094;
-            data = "1 subgoal (ID 7)	  	  ============================	  forall (O : ReflectiveSubuniverse) (T : Type), In O (O_reflector O T)	";
+            data = "";
             responses[i]=data;
           
 
@@ -10508,7 +10508,7 @@
           
 
             i = 2098;
-            data = "1 subgoal (ID 8)	  	  ============================	  forall (O : ReflectiveSubuniverse) (T : Type), T -> O_reflector O T	";
+            data = "";
             responses[i]=data;
           
 
@@ -10528,7 +10528,7 @@
           
 
             i = 2102;
-            data = "1 subgoal (ID 11)	  	  ============================	  forall (O : ReflectiveSubuniverse) (T U : Type),	  In O T -> forall f : T -> U, IsEquiv f -> In O U	";
+            data = "";
             responses[i]=data;
           
 
@@ -10548,7 +10548,7 @@
           
 
             i = 2106;
-            data = "1 subgoal (ID 12)	  	  ============================	  Funext -> forall (O : ReflectiveSubuniverse) (T : Type), IsHProp (In O T)	";
+            data = "";
             responses[i]=data;
           
 
@@ -10568,7 +10568,7 @@
           
 
             i = 2110;
-            data = "1 subgoal (ID 16)	  	  ============================	  forall (O : ReflectiveSubuniverse) (P Q : Type2le),	  In O Q -> ooExtendableAlong (to O P) (fun _ : O_reflector O P => Q)	";
+            data = "";
             responses[i]=data;
           
 
@@ -11135,7 +11135,7 @@ We allow the name of a subuniverse or modality to be used as the name of its ref
       " onmouseover="
       mouseover(407, '0_3_51');
       ">
-  <span class="id" title="keyword">Coercion</span> <a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#Os.O_reflector"><span class="id" title="axiom">O_reflector</span></a> : <span class="id" title="var">ReflectiveSubuniverse</span> &gt;-&gt; <span class="id" title="var">Funclass</span>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Coercion</span> <a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#Os.O_reflector"><span class="id" title="axiom">O_reflector</span></a> <a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#Os.O_reflector"><span class="id" title="axiom">:</span></a> <a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#Os.O_reflector"><span class="id" title="axiom">ReflectiveSubuniverse</span></a> <a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#Os.O_reflector"><span class="id" title="axiom">&gt;-&gt;</span></a> <a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#Os.O_reflector"><span class="id" title="axiom">Funclass</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_51');
       " onmouseover="
       mouseover(408, '0_3_51');

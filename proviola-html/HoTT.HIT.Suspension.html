@@ -208,7 +208,7 @@
           
 
             i = 38;
-            data = "1 subgoal (ID 8)	  	  X : Type	  Y : Type	  H_N, H_S : Y	  H_merid : X -> H_N = H_S	  ============================	  Susp X -> Y	";
+            data = "";
             responses[i]=data;
           
 
@@ -243,7 +243,7 @@
           
 
             i = 45;
-            data = "1 subgoal (ID 26)	  	  X : Type	  Y : Type	  H_N, H_S : Y	  H_merid : X -> H_N = H_S	  x : X	  ============================	  ap (Susp_rec H_N H_S H_merid) (merid x) = H_merid x	";
+            data = "";
             responses[i]=data;
           
 
@@ -343,7 +343,7 @@
           
 
             i = 65;
-            data = "1 subgoal (ID 42)	  	  X : Type	  P : Susp X -> Type	  f : forall y : Susp X, P y	  ============================	  f == Susp_ind P (f North) (f South) (fun x : X => apD f (merid x))	";
+            data = "";
             responses[i]=data;
           
 
@@ -398,7 +398,7 @@
           
 
             i = 76;
-            data = "1 subgoal (ID 59)	  	  X : Type	  Y : Type	  f : Susp X -> Y	  ============================	  f == Susp_rec (f North) (f South) (fun x : X => ap f (merid x))	";
+            data = "";
             responses[i]=data;
           
 
@@ -503,7 +503,7 @@
           
 
             i = 97;
-            data = "1 subgoal (ID 113)	  	  H : Funext	  X : Type	  Y : Type	  ============================	  (Susp X -> Y) <~> {NS : Y * Y & X -> NS.(fst) = NS.(snd)}	";
+            data = "";
             responses[i]=data;
           
 
@@ -638,7 +638,7 @@
           
 
             i = 124;
-            data = "1 subgoal (ID 129)	  	  X : Type	  Z : Type	  f : Susp X -> Z	  n : NullHomotopy (fun x : X => ap f (merid x))	  ============================	  NullHomotopy f	";
+            data = "";
             responses[i]=data;
           
 
@@ -678,7 +678,7 @@
           
 
             i = 132;
-            data = "1 subgoal (ID 144)	  	  X : Type	  Z : Type	  H_N, H_S : Z	  f : X -> H_N = H_S	  n : NullHomotopy (Susp_rec H_N H_S f)	  ============================	  NullHomotopy f	";
+            data = "";
             responses[i]=data;
           
 
@@ -833,7 +833,7 @@
           
 
             i = 163;
-            data = "1 subgoal (ID 164)	  	  X : pType	  Y : pType	  f : X ->* Y	  ============================	  psusp X ->* psusp Y	";
+            data = "";
             responses[i]=data;
           
 
@@ -853,7 +853,7 @@
           
 
             i = 167;
-            data = "1 subgoal (ID 184)	  	  X : pType	  Y : pType	  Z : pType	  g : Y ->* Z	  f : X ->* Y	  ============================	  psusp_functor (g o* f) ==* psusp_functor g o* psusp_functor f	";
+            data = "";
             responses[i]=data;
           
 
@@ -973,7 +973,7 @@
           
 
             i = 191;
-            data = "1 subgoal (ID 188)	  	  H : Funext	  A : pType	  B : pType	  ============================	  (psusp A ->* B) <~> (A ->* loops B)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1123,7 +1123,7 @@
           
 
             i = 221;
-            data = "1 subgoal (ID 186)	  	  X : pType	  ============================	  X ->* loops (psusp X)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1148,7 +1148,7 @@
           
 
             i = 226;
-            data = "1 subgoal (ID 202)	  	  X : pType	  Y : pType	  f : X ->* Y	  ============================	  loop_susp_unit Y o* f ==*	  loops_functor (psusp_functor f) o* loop_susp_unit X	";
+            data = "";
             responses[i]=data;
           
 
@@ -1263,7 +1263,7 @@
           
 
             i = 249;
-            data = "1 subgoal (ID 204)	  	  X : pType	  ============================	  psusp (loops X) ->* X	";
+            data = "";
             responses[i]=data;
           
 
@@ -1283,7 +1283,7 @@
           
 
             i = 253;
-            data = "1 subgoal (ID 220)	  	  X : pType	  Y : pType	  f : X ->* Y	  ============================	  f o* loop_susp_counit X ==*	  loop_susp_counit Y o* psusp_functor (loops_functor f)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1383,7 +1383,7 @@
           
 
             i = 273;
-            data = "1 subgoal (ID 229)	  	  X : pType	  ============================	  loops_functor (loop_susp_counit X) o* loop_susp_unit (loops X) ==*	  pmap_idmap (loops X)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1423,12 +1423,12 @@
           
 
             i = 281;
-            data = "1 subgoal (ID 237)	  	  X : pType	  ============================	  (fun p : (loops X).(pointed_type) =>	   concat_1p	     (ap (Susp_rec (point X.(pointed_type)) (point X.(pointed_type)) idmap)	        (merid p @ (merid 1)^) @ 1) @	   (concat_p1	      (ap (Susp_rec (point X.(pointed_type)) (point X.(pointed_type)) idmap)	         (merid p @ (merid 1)^)) @	    (ap_pp (Susp_rec (point X.(pointed_type)) (point X.(pointed_type)) idmap)	       (merid p)	       (merid (point (point X.(pointed_type) = point X.(pointed_type))))^ @	     ((1 @@	       ap_V	         (Susp_rec (point X.(pointed_type)) (point X.(pointed_type)) idmap)	         (merid (point (point X.(pointed_type) = point X.(pointed_type))))) @	      ((Susp_rec_beta_merid p @@	        inverse2 (Susp_rec_beta_merid (point (loops X).(pointed_type)))) @	       concat_p1 p))))) (point (loops X).(pointed_type)) @	  (pmap_idmap (loops X)).(point_eq) =	  (loops_functor (loop_susp_counit X) o* loop_susp_unit (loops X)).(point_eq)	1 subgoal (ID 356)	  	  X : Type	  x : IsPointed X	  ============================	  (concat_1p (ap (Susp_rec x x idmap) (merid 1 @ (merid 1)^) @ 1) @	   (concat_p1 (ap (Susp_rec x x idmap) (merid 1 @ (merid 1)^)) @	    (ap_pp (Susp_rec x x idmap) (merid 1) (merid 1)^ @	     ((1 @@ ap_V (Susp_rec x x idmap) (merid 1)) @	      ((Susp_rec_beta_merid 1 @@ inverse2 (Susp_rec_beta_merid 1)) @ 1))))) @	  1 =	  ap	    (fun p : ispointed_susp = ispointed_susp =>	     1 @ (ap (Susp_rec x x idmap) p @ 1)) (concat_pV (merid 1)) @ 1	";
+            data = "1 subgoal (ID 237)	  	  X : pType	  ============================	  (fun p : (loops X).(pointed_type) =>	   concat_1p	     (ap (Susp_rec (point X.(pointed_type)) (point X.(pointed_type)) idmap)	        (merid p @ (merid 1)^) @ 1) @	   (concat_p1	      (ap (Susp_rec (point X.(pointed_type)) (point X.(pointed_type)) idmap)	         (merid p @ (merid 1)^)) @	    (ap_pp (Susp_rec (point X.(pointed_type)) (point X.(pointed_type)) idmap)	       (merid p)	       (merid (point (point X.(pointed_type) = point X.(pointed_type))))^ @	     ((1 @@	       ap_V	         (Susp_rec (point X.(pointed_type)) (point X.(pointed_type)) idmap)	         (merid (point (point X.(pointed_type) = point X.(pointed_type))))) @	      ((Susp_rec_beta_merid p @@	        inverse2 (Susp_rec_beta_merid (point (loops X).(pointed_type)))) @	       concat_p1 p))))) (point (loops X).(pointed_type)) @	  (pmap_idmap (loops X)).(point_eq) =	  (loops_functor (loop_susp_counit X) o* loop_susp_unit (loops X)).(point_eq)	";
             responses[i]=data;
           
 
             i = 282;
-            data = "1 subgoal (ID 363)	  	  X : Type	  x : IsPointed X	  ============================	  concat_1p (ap (Susp_rec x x idmap) (merid 1 @ (merid 1)^) @ 1) @	  (concat_p1 (ap (Susp_rec x x idmap) (merid 1 @ (merid 1)^)) @	   (ap_pp (Susp_rec x x idmap) (merid 1) (merid 1)^ @	    ((1 @@ ap_V (Susp_rec x x idmap) (merid 1)) @	     ((Susp_rec_beta_merid 1 @@ inverse2 (Susp_rec_beta_merid 1)) @ 1)))) =	  ap	    (fun p : ispointed_susp = ispointed_susp =>	     1 @ (ap (Susp_rec x x idmap) p @ 1)) (concat_pV (merid 1))	";
+            data = "1 subgoal (ID 356)	  	  X : Type	  x : IsPointed X	  ============================	  (concat_1p (ap (Susp_rec x x idmap) (merid 1 @ (merid 1)^) @ 1) @	   (concat_p1 (ap (Susp_rec x x idmap) (merid 1 @ (merid 1)^)) @	    (ap_pp (Susp_rec x x idmap) (merid 1) (merid 1)^ @	     ((1 @@ ap_V (Susp_rec x x idmap) (merid 1)) @	      ((Susp_rec_beta_merid 1 @@ inverse2 (Susp_rec_beta_merid 1)) @ 1))))) @	  1 =	  ap	    (fun p : ispointed_susp = ispointed_susp =>	     1 @ (ap (Susp_rec x x idmap) p @ 1)) (concat_pV (merid 1)) @ 1	1 subgoal (ID 363)	  	  X : Type	  x : IsPointed X	  ============================	  concat_1p (ap (Susp_rec x x idmap) (merid 1 @ (merid 1)^) @ 1) @	  (concat_p1 (ap (Susp_rec x x idmap) (merid 1 @ (merid 1)^)) @	   (ap_pp (Susp_rec x x idmap) (merid 1) (merid 1)^ @	    ((1 @@ ap_V (Susp_rec x x idmap) (merid 1)) @	     ((Susp_rec_beta_merid 1 @@ inverse2 (Susp_rec_beta_merid 1)) @ 1)))) =	  ap	    (fun p : ispointed_susp = ispointed_susp =>	     1 @ (ap (Susp_rec x x idmap) p @ 1)) (concat_pV (merid 1))	";
             responses[i]=data;
           
 
@@ -1468,7 +1468,7 @@
           
 
             i = 290;
-            data = "1 subgoal (ID 238)	  	  X : pType	  ============================	  loop_susp_counit (psusp X) o* psusp_functor (loop_susp_unit X) ==*	  pmap_idmap (psusp X)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1543,7 +1543,7 @@
           
 
             i = 305;
-            data = "1 subgoal (ID 242)	  	  H : Funext	  A : pType	  B : pType	  ============================	  (psusp A ->* B) <~> (A ->* loops B)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1663,7 +1663,7 @@
           
 
             i = 329;
-            data = "1 subgoal (ID 261)	  	  H : Funext	  A : pType	  B : pType	  B' : pType	  f : psusp A ->* B	  g : B ->* B'	  ============================	  (loop_susp_adjoint A B').(equiv_fun) (g o* f) ==*	  loops_functor g o* (loop_susp_adjoint A B).(equiv_fun) f	";
+            data = "";
             responses[i]=data;
           
 
@@ -1698,7 +1698,7 @@
           
 
             i = 336;
-            data = "1 subgoal (ID 306)	  	  H : Funext	  A : pType	  A' : pType	  B : pType	  f : A ->* loops B	  g : A' ->* A	  ============================	  (loop_susp_adjoint A' B).(equiv_isequiv).(equiv_inv) (f o* g) ==*	  (loop_susp_adjoint A B).(equiv_isequiv).(equiv_inv) f o* psusp_functor g	";
+            data = "";
             responses[i]=data;
           
 

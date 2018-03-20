@@ -223,7 +223,7 @@
           
 
             i = 41;
-            data = "1 subgoal (ID 51)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  Heq : {Hobj : C.(object) = D.(object) &	        {Hmor	        : transport (fun obj : Type => obj -> obj -> Type) Hobj C.(morphism) =	          D.(morphism) &	        transport	          (fun mor : (fun obj : Type => obj -> obj -> Type) D.(object) =>	           forall s d d' : D.(object), mor d d' -> mor s d -> mor s d') Hmor	          (transportD (fun obj : Type => obj -> obj -> Type)	             (fun (obj : Type)	                (mor : (fun obj0 : Type => obj0 -> obj0 -> Type) obj) =>	              forall s d d' : obj, mor d d' -> mor s d -> mor s d') Hobj	             C.(morphism) C.(compose)) = D.(compose)}}	  ============================	  transport	    (fun mor : (fun obj : Type => obj -> obj -> Type) D.(object) =>	     forall x : D.(object), mor x x) Heq.(proj2_sig).(proj1_sig)	    (transportD (fun obj : Type => obj -> obj -> Type)	       (fun (obj : Type)	          (mor : (fun obj0 : Type => obj0 -> obj0 -> Type) obj) =>	        forall x : obj, mor x x) Heq.(proj1_sig) C.(morphism) 	       C.(identity)) = D.(identity)	";
+            data = "";
             responses[i]=data;
           
 
@@ -273,7 +273,7 @@
           
 
             i = 51;
-            data = "1 subgoal (ID 191)	  	  A : Type	  B : A -> Type	  P : forall x : A, B x -> Type	  Q : forall x : A, B x -> Type	  H : forall (a : A) (b : B a), IsHProp (Q a b)	  x : {a : A & {b : B a & P a b * Q a b}}	  q' : Q x.(proj1_sig) x.(proj2_sig).(proj1_sig)	  ============================	  (x.(proj1_sig); x.(proj2_sig).(proj1_sig);	  (x.(proj2_sig).(proj2_sig).(fst), q')) = x	";
+            data = "";
             responses[i]=data;
           
 
@@ -303,7 +303,7 @@
           
 
             i = 57;
-            data = "1 subgoal (ID 427)	  	  fs : Funext	  C, D : PreCategory	  ============================	  {Hobj : C.(object) = D.(object) &	  {Hmor	  : transport (fun obj : Type => obj -> obj -> Type) Hobj C.(morphism) =	    D.(morphism) &	  (transport	     (fun mor : (fun obj : Type => obj -> obj -> Type) D.(object) =>	      forall s d d' : D.(object), mor d d' -> mor s d -> mor s d') Hmor	     (transportD (fun obj : Type => obj -> obj -> Type)	        (fun (obj : Type)	           (mor : (fun obj0 : Type => obj0 -> obj0 -> Type) obj) =>	         forall s d d' : obj, mor d d' -> mor s d -> mor s d') Hobj	        C.(morphism) C.(compose)) = D.(compose)) *	  (transport	     (fun mor : (fun obj : Type => obj -> obj -> Type) D.(object) =>	      forall x : D.(object), mor x x) Hmor	     (transportD (fun obj : Type => obj -> obj -> Type)	        (fun (obj : Type)	           (mor : (fun obj0 : Type => obj0 -> obj0 -> Type) obj) =>	         forall x : obj, mor x x) Hobj C.(morphism) 	        C.(identity)) = D.(identity))}} -> C = D	";
+            data = "";
             responses[i]=data;
           
 
@@ -373,7 +373,7 @@
           
 
             i = 71;
-            data = "1 subgoal (ID 461)	  	  H : Funext	  C, D : PreCategory	  HO : C.(object) = D.(object)	  HM : transport (fun obj : Type => obj -> obj -> Type) HO C.(morphism) =	       D.(morphism)	  HC : transport	         (fun mor : (fun obj : Type => obj -> obj -> Type) D.(object) =>	          forall s d d' : D.(object), mor d d' -> mor s d -> mor s d') HM	         (transportD (fun obj : Type => obj -> obj -> Type)	            (fun (obj : Type)	               (mor : (fun obj0 : Type => obj0 -> obj0 -> Type) obj) =>	             forall s d d' : obj, mor d d' -> mor s d -> mor s d') HO	            C.(morphism) C.(compose)) = D.(compose)	  HI : transport	         (fun mor : (fun obj : Type => obj -> obj -> Type) D.(object) =>	          forall x : D.(object), mor x x) HM	         (transportD (fun obj : Type => obj -> obj -> Type)	            (fun (obj : Type)	               (mor : (fun obj0 : Type => obj0 -> obj0 -> Type) obj) =>	             forall x : obj, mor x x) HO C.(morphism) 	            C.(identity)) = D.(identity)	  ============================	  ap object (path_precategory_uncurried' C D (HO; HM; (HC, HI))) = HO	";
+            data = "";
             responses[i]=data;
           
 
@@ -433,7 +433,7 @@
           
 
             i = 83;
-            data = "1 subgoal (ID 487)	  	  H : Funext	  C : PreCategory	  ============================	  path_precategory_uncurried' C C (1; 1; (1, 1)) = 1	";
+            data = "";
             responses[i]=data;
           
 
@@ -498,7 +498,7 @@
           
 
             i = 96;
-            data = "1 subgoal (ID 532)	  	  C, D : PreCategory	  ============================	  C = D ->	  {Hobj : C.(object) = D.(object) &	  {Hmor	  : transport (fun obj : Type => obj -> obj -> Type) Hobj C.(morphism) =	    D.(morphism) &	  (transport	     (fun mor : (fun obj : Type => obj -> obj -> Type) D.(object) =>	      forall s d d' : D.(object), mor d d' -> mor s d -> mor s d') Hmor	     (transportD (fun obj : Type => obj -> obj -> Type)	        (fun (obj : Type)	           (mor : (fun obj0 : Type => obj0 -> obj0 -> Type) obj) =>	         forall s d d' : obj, mor d d' -> mor s d -> mor s d') Hobj	        C.(morphism) C.(compose)) = D.(compose)) *	  (transport	     (fun mor : (fun obj : Type => obj -> obj -> Type) D.(object) =>	      forall x : D.(object), mor x x) Hmor	     (transportD (fun obj : Type => obj -> obj -> Type)	        (fun (obj : Type)	           (mor : (fun obj0 : Type => obj0 -> obj0 -> Type) obj) =>	         forall x : obj, mor x x) Hobj C.(morphism) 	        C.(identity)) = D.(identity))}}	";
+            data = "";
             responses[i]=data;
           
 
@@ -598,7 +598,7 @@
           
 
             i = 116;
-            data = "1 subgoal (ID 581)	  	  H : Funext	  C, D : PreCategory	  ============================	  forall	  x : {Hobj : C.(object) = D.(object) &	      {Hmor	      : transport (fun obj : Type => obj -> obj -> Type) Hobj C.(morphism) =	        D.(morphism) &	      (transport	         (fun mor : (fun obj : Type => obj -> obj -> Type) D.(object) =>	          forall s d d' : D.(object), mor d d' -> mor s d -> mor s d') Hmor	         (transportD (fun obj : Type => obj -> obj -> Type)	            (fun (obj : Type)	               (mor : (fun obj0 : Type => obj0 -> obj0 -> Type) obj) =>	             forall s d d' : obj, mor d d' -> mor s d -> mor s d') Hobj	            C.(morphism) C.(compose)) = D.(compose)) *	      (transport	         (fun mor : (fun obj : Type => obj -> obj -> Type) D.(object) =>	          forall x : D.(object), mor x x) Hmor	         (transportD (fun obj : Type => obj -> obj -> Type)	            (fun (obj : Type)	               (mor : (fun obj0 : Type => obj0 -> obj0 -> Type) obj) =>	             forall x : obj, mor x x) Hobj C.(morphism) 	            C.(identity)) = D.(identity))}},	  path_precategory_uncurried'_inv (path_precategory_uncurried' C D x) = x	";
+            data = "";
             responses[i]=data;
           
 
@@ -638,7 +638,7 @@
           
 
             i = 124;
-            data = "1 subgoal (ID 627)	  	  H : Funext	  C, D : PreCategory	  ============================	  {Hobj : C.(object) = D.(object) &	  {Hmor	  : transport (fun obj : Type => obj -> obj -> Type) Hobj C.(morphism) =	    D.(morphism) &	  (transport	     (fun mor : (fun obj : Type => obj -> obj -> Type) D.(object) =>	      forall s d d' : D.(object), mor d d' -> mor s d -> mor s d') Hmor	     (transportD (fun obj : Type => obj -> obj -> Type)	        (fun (obj : Type)	           (mor : (fun obj0 : Type => obj0 -> obj0 -> Type) obj) =>	         forall s d d' : obj, mor d d' -> mor s d -> mor s d') Hobj	        C.(morphism) C.(compose)) = D.(compose)) *	  (transport	     (fun mor : (fun obj : Type => obj -> obj -> Type) D.(object) =>	      forall x : D.(object), mor x x) Hmor	     (transportD (fun obj : Type => obj -> obj -> Type)	        (fun (obj : Type)	           (mor : (fun obj0 : Type => obj0 -> obj0 -> Type) obj) =>	         forall x : obj, mor x x) Hobj C.(morphism) 	        C.(identity)) = D.(identity))}} <~> C = D	";
+            data = "";
             responses[i]=data;
           
 
@@ -728,7 +728,7 @@
           
 
             i = 142;
-            data = "1 subgoal (ID 701)	  	  fs : Funext	  C, D : PreCategory	  ============================	  forall (Hobj : C.(object) = D.(object))	  (Hmor : transport (fun obj : Type => obj -> obj -> Type) Hobj C.(morphism) =	          D.(morphism)),	  transport	    (fun mor : (fun obj : Type => obj -> obj -> Type) D.(object) =>	     forall s d d' : D.(object), mor d d' -> mor s d -> mor s d') Hmor	    (transportD (fun obj : Type => obj -> obj -> Type)	       (fun (obj : Type)	          (mor : (fun obj0 : Type => obj0 -> obj0 -> Type) obj) =>	        forall s d d' : obj, mor d d' -> mor s d -> mor s d') Hobj	       C.(morphism) C.(compose)) = D.(compose) -> 	  C = D	";
+            data = "";
             responses[i]=data;
           
 
@@ -793,7 +793,7 @@
           
 
             i = 155;
-            data = "1 subgoal (ID 776)	  	  fs : Funext	  C, D : PreCategory	  ============================	  forall (Hobj : C.(object) = D.(object))	  (Hmor : forall s d : D.(object),	          C.(morphism) (transport idmap Hobj^ s) (transport idmap Hobj^ d) =	          D.(morphism) s d),	  (forall (s d d' : D.(object)) (m : D.(morphism) d d')	   (m' : D.(morphism) s d),	   transport idmap (Hmor s d')	     (C.(compose) (transport idmap Hobj^ s) (transport idmap Hobj^ d)	        (transport idmap Hobj^ d') (transport idmap (Hmor d d')^ m)	        (transport idmap (Hmor s d)^ m')) = D.(compose) s d d' m m') -> 	  C = D	";
+            data = "";
             responses[i]=data;
           
 

@@ -183,7 +183,7 @@
           
 
             i = 33;
-            data = "1 subgoal (ID 11)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  f : forall a : A, O_reflector O (B (to O A a))	  ============================	  forall z : O_reflector O A, O_reflector O (B z)	";
+            data = "";
             responses[i]=data;
           
 
@@ -218,7 +218,7 @@
           
 
             i = 40;
-            data = "1 subgoal (ID 20)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  f : forall a : A, O_reflector O (B (to O A a))	  a : A	  ============================	  O_indO O A B f (to O A a) = f a	";
+            data = "";
             responses[i]=data;
           
 
@@ -273,7 +273,7 @@
           
 
             i = 51;
-            data = "1 subgoal (ID 29)	  	  O : Modality	  A : Type	  z, z' : O_reflector O A	  ============================	  IsEquiv (to O (z = z'))	";
+            data = "";
             responses[i]=data;
           
 
@@ -423,12 +423,12 @@
           
 
             i = 81;
-            data = "";
+            data = "1 subgoal (ID 3)	  	  O : Modality	  ============================	  Lex O	";
             responses[i]=data;
           
 
             i = 82;
-            data = "1 subgoal (ID 3)	  	  O : Modality	  ============================	  Lex O	";
+            data = "";
             responses[i]=data;
           
 
@@ -438,27 +438,27 @@
           
 
             i = 84;
-            data = "1 subgoal (ID 11)	  	  O : Modality	  A : Type	  x, y : A	  U := O.(unOp) : -1 -Type	  H : Funext	  ============================	  IsConnected O A -> IsConnected O (x = y)	";
+            data = "1 subgoal (ID 11)	  	  O : Modality	  A : Type	  x, y : A	  U := O.(unOp) : hProp	  H : Funext	  ============================	  IsConnected O A -> IsConnected O (x = y)	";
             responses[i]=data;
           
 
             i = 85;
-            data = "1 subgoal (ID 15)	  	  O : Modality	  A : Type	  x, y : A	  U := O.(unOp) : -1 -Type	  H : Funext	  X : Contr (U.(trunctype_type) -> A)	  ============================	  Contr (U.(trunctype_type) -> x = y)	";
+            data = "1 subgoal (ID 15)	  	  O : Modality	  A : Type	  x, y : A	  U := O.(unOp) : hProp	  H : Funext	  X : Contr (U.(trunctype_type) -> A)	  ============================	  Contr (U.(trunctype_type) -> x = y)	";
             responses[i]=data;
           
 
             i = 86;
-            data = "2 subgoals (ID 16)	  	  O : Modality	  A : Type	  x, y : A	  U := O.(unOp) : -1 -Type	  H : Funext	  X : Contr (U.(trunctype_type) -> A)	  ============================	  U.(trunctype_type) -> Contr A		subgoal 2 (ID 18) is:	 Contr (U.(trunctype_type) -> x = y)	";
+            data = "2 subgoals (ID 16)	  	  O : Modality	  A : Type	  x, y : A	  U := O.(unOp) : hProp	  H : Funext	  X : Contr (U.(trunctype_type) -> A)	  ============================	  U.(trunctype_type) -> Contr A		subgoal 2 (ID 18) is:	 Contr (U.(trunctype_type) -> x = y)	";
             responses[i]=data;
           
 
             i = 87;
-            data = "1 subgoal (ID 16)	  	  O : Modality	  A : Type	  x, y : A	  U := O.(unOp) : -1 -Type	  H : Funext	  X : Contr (U.(trunctype_type) -> A)	  ============================	  U.(trunctype_type) -> Contr A	1 subgoal (ID 19)	  	  O : Modality	  A : Type	  x, y : A	  U := O.(unOp) : -1 -Type	  H : Funext	  X : Contr (U.(trunctype_type) -> A)	  u : U.(trunctype_type)	  ============================	  Contr A	";
+            data = "1 subgoal (ID 16)	  	  O : Modality	  A : Type	  x, y : A	  U := O.(unOp) : hProp	  H : Funext	  X : Contr (U.(trunctype_type) -> A)	  ============================	  U.(trunctype_type) -> Contr A	1 subgoal (ID 19)	  	  O : Modality	  A : Type	  x, y : A	  U := O.(unOp) : hProp	  H : Funext	  X : Contr (U.(trunctype_type) -> A)	  u : U.(trunctype_type)	  ============================	  Contr A	";
             responses[i]=data;
           
 
             i = 88;
-            data = "1 subgoal (ID 22)	  	  O : Modality	  A : Type	  x, y : A	  U := O.(unOp) : -1 -Type	  H : Funext	  X : Contr (U.(trunctype_type) -> A)	  u : U.(trunctype_type)	  i := contr_inhabited_hprop U.(trunctype_type) u : Contr U.(trunctype_type)	  ============================	  Contr A	";
+            data = "1 subgoal (ID 22)	  	  O : Modality	  A : Type	  x, y : A	  U := O.(unOp) : hProp	  H : Funext	  X : Contr (U.(trunctype_type) -> A)	  u : U.(trunctype_type)	  i := contr_inhabited_hprop U.(trunctype_type) u : Contr U.(trunctype_type)	  ============================	  Contr A	";
             responses[i]=data;
           
 
@@ -468,17 +468,17 @@
           
 
             i = 90;
-            data = "1 subgoal (ID 18)	  	  O : Modality	  A : Type	  x, y : A	  U := O.(unOp) : -1 -Type	  H : Funext	  X : Contr (U.(trunctype_type) -> A)	  uc : U.(trunctype_type) -> Contr A	  ============================	  Contr (U.(trunctype_type) -> x = y)	2 subgoals (ID 54)	  	  O : Modality	  A : Type	  x, y : A	  U := O.(unOp) : -1 -Type	  H : Funext	  X : Contr (U.(trunctype_type) -> A)	  uc : U.(trunctype_type) -> Contr A	  ============================	  U.(trunctype_type) -> x = y		subgoal 2 (ID 56) is:	 forall y0 : U.(trunctype_type) -> x = y, ?center = y0	";
+            data = "1 subgoal (ID 18)	  	  O : Modality	  A : Type	  x, y : A	  U := O.(unOp) : hProp	  H : Funext	  X : Contr (U.(trunctype_type) -> A)	  uc : U.(trunctype_type) -> Contr A	  ============================	  Contr (U.(trunctype_type) -> x = y)	2 subgoals (ID 54)	  	  O : Modality	  A : Type	  x, y : A	  U := O.(unOp) : hProp	  H : Funext	  X : Contr (U.(trunctype_type) -> A)	  uc : U.(trunctype_type) -> Contr A	  ============================	  U.(trunctype_type) -> x = y		subgoal 2 (ID 56) is:	 forall y0 : U.(trunctype_type) -> x = y, ?center = y0	";
             responses[i]=data;
           
 
             i = 91;
-            data = "1 subgoal (ID 54)	  	  O : Modality	  A : Type	  x, y : A	  U := O.(unOp) : -1 -Type	  H : Funext	  X : Contr (U.(trunctype_type) -> A)	  uc : U.(trunctype_type) -> Contr A	  ============================	  U.(trunctype_type) -> x = y	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 56)		subgoal 1 (ID 56) is:	 forall y0 : U.(trunctype_type) -> x = y,	 (fun u : U.(trunctype_type) =>	  let i := uc u in (istrunc_paths A -2 x y).(center)) = y0	";
+            data = "1 subgoal (ID 54)	  	  O : Modality	  A : Type	  x, y : A	  U := O.(unOp) : hProp	  H : Funext	  X : Contr (U.(trunctype_type) -> A)	  uc : U.(trunctype_type) -> Contr A	  ============================	  U.(trunctype_type) -> x = y	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 56)		subgoal 1 (ID 56) is:	 forall y0 : U.(trunctype_type) -> x = y,	 (fun u : U.(trunctype_type) =>	  let i := uc u in (istrunc_paths A -2 x y).(center)) = y0	";
             responses[i]=data;
           
 
             i = 92;
-            data = "1 subgoal (ID 56)	  	  O : Modality	  A : Type	  x, y : A	  U := O.(unOp) : -1 -Type	  H : Funext	  X : Contr (U.(trunctype_type) -> A)	  uc : U.(trunctype_type) -> Contr A	  ============================	  forall y0 : U.(trunctype_type) -> x = y,	  (fun u : U.(trunctype_type) =>	   let i := uc u in (istrunc_paths A -2 x y).(center)) = y0	1 subgoal (ID 126)	  	  O : Modality	  A : Type	  x, y : A	  U := O.(unOp) : -1 -Type	  H : Funext	  X : Contr (U.(trunctype_type) -> A)	  uc : U.(trunctype_type) -> Contr A	  f : U.(trunctype_type) -> x = y	  u : U.(trunctype_type)	  ============================	  (let i := uc u in (istrunc_paths A -2 x y).(center)) = f u	";
+            data = "1 subgoal (ID 56)	  	  O : Modality	  A : Type	  x, y : A	  U := O.(unOp) : hProp	  H : Funext	  X : Contr (U.(trunctype_type) -> A)	  uc : U.(trunctype_type) -> Contr A	  ============================	  forall y0 : U.(trunctype_type) -> x = y,	  (fun u : U.(trunctype_type) =>	   let i := uc u in (istrunc_paths A -2 x y).(center)) = y0	1 subgoal (ID 126)	  	  O : Modality	  A : Type	  x, y : A	  U := O.(unOp) : hProp	  H : Funext	  X : Contr (U.(trunctype_type) -> A)	  uc : U.(trunctype_type) -> Contr A	  f : U.(trunctype_type) -> x = y	  u : U.(trunctype_type)	  ============================	  (let i := uc u in (istrunc_paths A -2 x y).(center)) = f u	";
             responses[i]=data;
           
 
@@ -548,7 +548,7 @@
           
 
             i = 106;
-            data = "1 subgoal (ID 7)	  	  O : Modality	  X : Type	  ============================	  OpenModalities.In O X <-> (IsNull (acc_gen O)) X	";
+            data = "";
             responses[i]=data;
           
 

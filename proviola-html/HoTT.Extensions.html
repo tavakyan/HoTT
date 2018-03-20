@@ -583,12 +583,12 @@
           
 
             i = 113;
-            data = "1 subgoal (ID 4)	  	  ============================	  True	";
+            data = "";
             responses[i]=data;
           
 
             i = 114;
-            data = "ExtensionAlong	     : forall (f : ?A -> ?B) (P : ?B -> Type),	       (forall x : ?A, P (f x)) -> Type	where	?A : [ |- Type] 	?B : [ |- Type] 	";
+            data = "ExtensionAlong	     : forall (f : ?A -> ?B) (P : ?B -> Type),	       (forall x : ?A, P (f x)) -> Type	where	?A : [ |- Type]	?B : [ |- Type]	";
             responses[i]=data;
           
 
@@ -673,7 +673,7 @@
           
 
             i = 131;
-            data = "1 subgoal (ID 54)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  ============================	  ExtensionAlong f (fun y : B => ext.(proj1_sig) y = ext'.(proj1_sig) y)	    (fun x : A => ext.(proj2_sig) x @ (ext'.(proj2_sig) x)^) <~> 	  ext = ext'	";
+            data = "";
             responses[i]=data;
           
 
@@ -783,12 +783,12 @@
           
 
             i = 153;
-            data = "";
+            data = "1 subgoal (ID 108)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  ============================	  IsEquiv (path_extension ext ext')	";
             responses[i]=data;
           
 
             i = 154;
-            data = "1 subgoal (ID 108)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  P : B -> Type	  d : forall x : A, P (f x)	  ext, ext' : ExtensionAlong f P d	  ============================	  IsEquiv (path_extension ext ext')	";
+            data = "";
             responses[i]=data;
           
 
@@ -883,7 +883,7 @@
           
 
             i = 173;
-            data = "1 subgoal (ID 119)	  	  ============================	  True	";
+            data = "";
             responses[i]=data;
           
 
@@ -938,7 +938,7 @@
           
 
             i = 184;
-            data = "1 subgoal (ID 129)	  	  n : nat	  A : Type	  B : Type	  f : A -> B	  C : B -> Type	  ============================	  ExtendableAlong n f C -> ExtendableAlong n f C	";
+            data = "";
             responses[i]=data;
           
 
@@ -1008,7 +1008,7 @@
           
 
             i = 198;
-            data = "1 subgoal (ID 130)	  	  ============================	  True	";
+            data = "";
             responses[i]=data;
           
 
@@ -1033,7 +1033,7 @@
           
 
             i = 203;
-            data = "1 subgoal (ID 147)	  	  H : Funext	  n : nat	  A : Type	  B : Type	  C : B -> Type	  f : A -> B	  ============================	  ExtendableAlong n f C <~> PathSplit n (fun g : forall b : B, C b => g oD f)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1108,12 +1108,12 @@
           
 
             i = 218;
-            data = "";
+            data = "1 subgoal (ID 181)	  	  H : Funext	  n : nat	  A : Type	  B : Type	  C : B -> Type	  f : A -> B	  ============================	  IsHProp (ExtendableAlong n.+2 f C)	";
             responses[i]=data;
           
 
             i = 219;
-            data = "1 subgoal (ID 181)	  	  H : Funext	  n : nat	  A : Type	  B : Type	  C : B -> Type	  f : A -> B	  ============================	  IsHProp (ExtendableAlong n.+2 f C)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1133,7 +1133,7 @@
           
 
             i = 223;
-            data = "1 subgoal (ID 196)	  	  H : Funext	  n : nat	  A : Type	  B : Type	  C : B -> Type	  f : A -> B	  ============================	  ExtendableAlong n.+2 f C <~> IsEquiv (fun g : forall b : B, C b => g oD f)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1183,7 +1183,7 @@
           
 
             i = 233;
-            data = "1 subgoal (ID 209)	  	  n : nat	  A : Type	  B : Type	  C : B -> Type	  D : B -> Type	  f : A -> B	  g : forall b : B, C b <~> D b	  ============================	  ExtendableAlong n f C -> ExtendableAlong n f D	";
+            data = "";
             responses[i]=data;
           
 
@@ -1283,7 +1283,7 @@
           
 
             i = 253;
-            data = "1 subgoal (ID 250)	  	  n : nat	  A : Type	  B : Type	  C : Type	  P : C -> Type	  f : A -> B	  g : B -> C	  ============================	  ExtendableAlong n g P ->	  ExtendableAlong n f (fun b : B => P (g b)) -> ExtendableAlong n (g o f) P	";
+            data = "";
             responses[i]=data;
           
 
@@ -1363,7 +1363,7 @@
           
 
             i = 269;
-            data = "1 subgoal (ID 274)	  	  n : nat	  A : Type	  B : Type	  C : Type	  P : C -> Type	  f : A -> B	  g : B -> C	  ============================	  ExtendableAlong n g P ->	  ExtendableAlong n (g o f) P -> ExtendableAlong n f (fun b : B => P (g b))	";
+            data = "";
             responses[i]=data;
           
 
@@ -1433,7 +1433,7 @@
           
 
             i = 283;
-            data = "1 subgoal (ID 298)	  	  n : nat	  A : Type	  B : Type	  C : Type	  P : C -> Type	  f : A -> B	  g : B -> C	  ============================	  ExtendableAlong n.+1 f (fun b : B => P (g b)) ->	  ExtendableAlong n (g o f) P -> ExtendableAlong n g P	";
+            data = "";
             responses[i]=data;
           
 
@@ -1513,7 +1513,7 @@
           
 
             i = 299;
-            data = "1 subgoal (ID 312)	  	  n : nat	  A : Type	  B : Type	  C : B -> Type	  f, g : A -> B	  p : f == g	  ============================	  ExtendableAlong n f C -> ExtendableAlong n g C	";
+            data = "";
             responses[i]=data;
           
 
@@ -1588,7 +1588,7 @@
           
 
             i = 314;
-            data = "1 subgoal (ID 325)	  	  n : nat	  A : Type	  B : Type	  C : B -> Type	  f : A -> B	  H : IsEquiv f	  ============================	  ExtendableAlong n f C	";
+            data = "";
             responses[i]=data;
           
 
@@ -1663,7 +1663,7 @@
           
 
             i = 329;
-            data = "1 subgoal (ID 335)	  	  n : nat	  A : Type	  B : Type	  C : B -> Type	  f : A -> B	  H : forall b : B, Contr (C b)	  ============================	  ExtendableAlong n f C	";
+            data = "";
             responses[i]=data;
           
 
@@ -1728,7 +1728,7 @@
           
 
             i = 342;
-            data = "1 subgoal (ID 352)	  	  n : nat	  A : Type	  B : Type	  C : B -> Type	  f : A -> B	  h, k : forall b : B, C b	  ============================	  ExtendableAlong n.+1 f C -> ExtendableAlong n f (fun b : B => h b = k b)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1833,12 +1833,12 @@
           
 
             i = 363;
-            data = "1 subgoal (ID 355)	  	  ============================	  True	";
+            data = "";
             responses[i]=data;
           
 
             i = 364;
-            data = "ooExtendableAlong	     : (?A -> ?B) -> (?B -> Type) -> Type	where	?A : [ |- Type] 	?B : [ |- Type] 	";
+            data = "ooExtendableAlong	     : (?A -> ?B) -> (?B -> Type) -> Type	where	?A : [ |- Type]	?B : [ |- Type]	";
             responses[i]=data;
           
 
@@ -1913,12 +1913,12 @@
           
 
             i = 379;
-            data = "1 subgoal (ID 364)	  	  ============================	  True	";
+            data = "";
             responses[i]=data;
           
 
             i = 380;
-            data = "lift_ooextendablealong	     : forall (f : ?A -> ?B) (C : ?B -> Type),	       ooExtendableAlong f C -> ooExtendableAlong f C	where	?A : [ |- Type] 	?B : [ |- Type] 	";
+            data = "lift_ooextendablealong	     : forall (f : ?A -> ?B) (C : ?B -> Type),	       ooExtendableAlong f C -> ooExtendableAlong f C	where	?A : [ |- Type]	?B : [ |- Type]	";
             responses[i]=data;
           
 
@@ -1943,7 +1943,7 @@
           
 
             i = 385;
-            data = "1 subgoal (ID 396)	  	  H : Funext	  A : Type	  B : Type	  C : B -> Type	  f : A -> B	  ============================	  ooExtendableAlong f C <~> ooPathSplit (fun g : forall b : B, C b => g oD f)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1963,12 +1963,12 @@
           
 
             i = 389;
-            data = "";
+            data = "1 subgoal (ID 404)	  	  H : Funext	  A : Type	  B : Type	  C : B -> Type	  f : A -> B	  ============================	  IsHProp (ooExtendableAlong f C)	";
             responses[i]=data;
           
 
             i = 390;
-            data = "1 subgoal (ID 404)	  	  H : Funext	  A : Type	  B : Type	  C : B -> Type	  f : A -> B	  ============================	  IsHProp (ooExtendableAlong f C)	";
+            data = "";
             responses[i]=data;
           
 
@@ -2028,7 +2028,7 @@
           
 
             i = 402;
-            data = "1 subgoal (ID 550)	  	  A : Type	  B : Type	  C : B -> Type	  f : A -> B	  h, k : forall b : B, C b	  ============================	  ooExtendableAlong f C -> ooExtendableAlong f (fun b : B => h b = k b)	";
+            data = "";
             responses[i]=data;
           
 
@@ -2128,7 +2128,7 @@
           
 
             i = 422;
-            data = "1 subgoal (ID 565)	  	  A : Type	  B : Type	  f : A -> B	  C : B -> Type	  ============================	  (forall b : B, ooExtendableAlong (const tt) (unit_name (C b))) ->	  ooExtendableAlong f C	";
+            data = "";
             responses[i]=data;
           
 

@@ -203,7 +203,7 @@
           
 
             i = 37;
-            data = "1 subgoal (ID 27)	  	  A : Type	  x1, x2, y : A	  p : x1 = x2	  q : x1 = y	  ============================	  transport (fun x : A => x = y) p q = p^ @ q	";
+            data = "";
             responses[i]=data;
           
 
@@ -223,7 +223,7 @@
           
 
             i = 41;
-            data = "1 subgoal (ID 50)	  	  A : Type	  x, y1, y2 : A	  p : y1 = y2	  q : x = y1	  ============================	  transport (fun y : A => x = y) p q = q @ p	";
+            data = "";
             responses[i]=data;
           
 
@@ -243,7 +243,7 @@
           
 
             i = 45;
-            data = "1 subgoal (ID 80)	  	  A : Type	  x1, x2 : A	  p : x1 = x2	  q : x1 = x1	  ============================	  transport (fun x : A => x = x) p q = (p^ @ q) @ p	";
+            data = "";
             responses[i]=data;
           
 
@@ -268,7 +268,7 @@
           
 
             i = 50;
-            data = "1 subgoal (ID 112)	  	  A : Type	  B : Type	  f : A -> B	  x1, x2 : A	  y : B	  p : x1 = x2	  q : f x1 = y	  ============================	  transport (fun x : A => f x = y) p q = (ap f p)^ @ q	";
+            data = "";
             responses[i]=data;
           
 
@@ -288,7 +288,7 @@
           
 
             i = 54;
-            data = "1 subgoal (ID 141)	  	  A : Type	  B : Type	  g : A -> B	  y1, y2 : A	  x : B	  p : y1 = y2	  q : x = g y1	  ============================	  transport (fun y : A => x = g y) p q = q @ ap g p	";
+            data = "";
             responses[i]=data;
           
 
@@ -313,7 +313,7 @@
           
 
             i = 59;
-            data = "1 subgoal (ID 181)	  	  A : Type	  B : Type	  f, g : A -> B	  x1, x2 : A	  p : x1 = x2	  q : f x1 = g x1	  ============================	  transport (fun x : A => f x = g x) p q = ((ap f p)^ @ q) @ ap g p	";
+            data = "";
             responses[i]=data;
           
 
@@ -338,7 +338,7 @@
           
 
             i = 64;
-            data = "1 subgoal (ID 230)	  	  A : Type	  B : A -> Type	  f, g : forall a : A, B a	  x1, x2 : A	  p : x1 = x2	  q : f x1 = g x1	  ============================	  transport (fun x : A => f x = g x) p q =	  ((apD f p)^ @ ap (transport B p) q) @ apD g p	";
+            data = "";
             responses[i]=data;
           
 
@@ -363,7 +363,7 @@
           
 
             i = 69;
-            data = "1 subgoal (ID 270)	  	  A : Type	  B : Type	  f : A -> B	  g : B -> A	  x1, x2 : A	  p : x1 = x2	  q : g (f x1) = x1	  ============================	  transport (fun x : A => g (f x) = x) p q = ((ap g (ap f p))^ @ q) @ p	";
+            data = "";
             responses[i]=data;
           
 
@@ -388,7 +388,7 @@
           
 
             i = 74;
-            data = "1 subgoal (ID 311)	  	  A : Type	  B : Type	  f : A -> B	  g : B -> A	  x1, x2 : A	  p : x1 = x2	  q : x1 = g (f x1)	  ============================	  transport (fun x : A => x = g (f x)) p q = (p^ @ q) @ ap g (ap f p)	";
+            data = "";
             responses[i]=data;
           
 
@@ -448,7 +448,7 @@
           
 
             i = 86;
-            data = "1 subgoal (ID 384)	  	  A : Type	  x, y : A	  p : x = y	  q : 1 = 1	  ============================	  transport (fun a : A => 1 = 1) p q =	  ((concat_Vp p)^ @	   whiskerL p^ (((concat_1p p)^ @ whiskerR q p) @ concat_1p p)) @ 	  concat_Vp p	";
+            data = "";
             responses[i]=data;
           
 
@@ -683,12 +683,12 @@
           
 
             i = 133;
-            data = "";
+            data = "1 subgoal (ID 685)	  	  A : Type	  x, y : A	  ============================	  IsEquiv inverse	";
             responses[i]=data;
           
 
             i = 134;
-            data = "1 subgoal (ID 685)	  	  A : Type	  x, y : A	  ============================	  IsEquiv inverse	";
+            data = "";
             responses[i]=data;
           
 
@@ -713,12 +713,12 @@
           
 
             i = 139;
-            data = "";
+            data = "1 subgoal (ID 715)	  	  A : Type	  x, y : A	  p : x = y	  z : A	  ============================	  IsEquiv (transitivity p)	";
             responses[i]=data;
           
 
             i = 140;
-            data = "1 subgoal (ID 715)	  	  A : Type	  x, y : A	  p : x = y	  z : A	  ============================	  IsEquiv (transitivity p)	";
+            data = "";
             responses[i]=data;
           
 
@@ -743,12 +743,12 @@
           
 
             i = 145;
-            data = "";
+            data = "1 subgoal (ID 756)	  	  A : Type	  y, z : A	  p : y = z	  x : A	  ============================	  IsEquiv (fun q : x = y => q @ p)	";
             responses[i]=data;
           
 
             i = 146;
-            data = "1 subgoal (ID 756)	  	  A : Type	  y, z : A	  p : y = z	  x : A	  ============================	  IsEquiv (fun q : x = y => q @ p)	";
+            data = "";
             responses[i]=data;
           
 
@@ -783,12 +783,12 @@
           
 
             i = 153;
-            data = "";
+            data = "1 subgoal (ID 859)	  	  A : Type	  x, y, z : A	  p : x = y	  q, r : y = z	  ============================	  IsEquiv (whiskerL p)	";
             responses[i]=data;
           
 
             i = 154;
-            data = "1 subgoal (ID 859)	  	  A : Type	  x, y, z : A	  p : x = y	  q, r : y = z	  ============================	  IsEquiv (whiskerL p)	";
+            data = "";
             responses[i]=data;
           
 
@@ -878,7 +878,7 @@
           
 
             i = 172;
-            data = "1 subgoal (ID 936)	  	  A : Type	  x, y, z : A	  p : x = y	  q, r : y = z	  ============================	  IsEquiv (cancelL p q r)	";
+            data = "";
             responses[i]=data;
           
 
@@ -893,12 +893,12 @@
           
 
             i = 175;
-            data = "";
+            data = "1 subgoal (ID 954)	  	  A : Type	  x, y, z : A	  p, q : x = y	  r : y = z	  ============================	  IsEquiv (fun h : p = q => whiskerR h r)	";
             responses[i]=data;
           
 
             i = 176;
-            data = "1 subgoal (ID 954)	  	  A : Type	  x, y, z : A	  p, q : x = y	  r : y = z	  ============================	  IsEquiv (fun h : p = q => whiskerR h r)	";
+            data = "";
             responses[i]=data;
           
 
@@ -988,7 +988,7 @@
           
 
             i = 194;
-            data = "1 subgoal (ID 1037)	  	  A : Type	  x, y, z : A	  p, q : x = y	  r : y = z	  ============================	  IsEquiv (cancelR p q r)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1093,12 +1093,12 @@
           
 
             i = 215;
-            data = "";
+            data = "1 subgoal (ID 1057)	  	  A : Type	  x, y, z : A	  p : x = z	  q : y = z	  r : y = x	  ============================	  IsEquiv (moveR_Mp p q r)	";
             responses[i]=data;
           
 
             i = 216;
-            data = "1 subgoal (ID 1057)	  	  A : Type	  x, y, z : A	  p : x = z	  q : y = z	  r : y = x	  ============================	  IsEquiv (moveR_Mp p q r)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1123,12 +1123,12 @@
           
 
             i = 221;
-            data = "";
+            data = "1 subgoal (ID 1108)	  	  A : Type	  x, y, z : A	  p : x = z	  q : y = z	  r : y = x	  ============================	  IsEquiv (moveR_pM p q r)	";
             responses[i]=data;
           
 
             i = 222;
-            data = "1 subgoal (ID 1108)	  	  A : Type	  x, y, z : A	  p : x = z	  q : y = z	  r : y = x	  ============================	  IsEquiv (moveR_pM p q r)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1153,12 +1153,12 @@
           
 
             i = 227;
-            data = "";
+            data = "1 subgoal (ID 1159)	  	  A : Type	  x, y, z : A	  p : x = z	  q : y = z	  r : x = y	  ============================	  IsEquiv (moveR_Vp p q r)	";
             responses[i]=data;
           
 
             i = 228;
-            data = "1 subgoal (ID 1159)	  	  A : Type	  x, y, z : A	  p : x = z	  q : y = z	  r : x = y	  ============================	  IsEquiv (moveR_Vp p q r)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1183,12 +1183,12 @@
           
 
             i = 233;
-            data = "";
+            data = "1 subgoal (ID 1210)	  	  A : Type	  x, y, z : A	  p : z = x	  q : y = z	  r : y = x	  ============================	  IsEquiv (moveR_pV p q r)	";
             responses[i]=data;
           
 
             i = 234;
-            data = "1 subgoal (ID 1210)	  	  A : Type	  x, y, z : A	  p : z = x	  q : y = z	  r : y = x	  ============================	  IsEquiv (moveR_pV p q r)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1213,12 +1213,12 @@
           
 
             i = 239;
-            data = "";
+            data = "1 subgoal (ID 1261)	  	  A : Type	  x, y, z : A	  p : x = z	  q : y = z	  r : y = x	  ============================	  IsEquiv (moveL_Mp p q r)	";
             responses[i]=data;
           
 
             i = 240;
-            data = "1 subgoal (ID 1261)	  	  A : Type	  x, y, z : A	  p : x = z	  q : y = z	  r : y = x	  ============================	  IsEquiv (moveL_Mp p q r)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1248,7 +1248,7 @@
           
 
             i = 246;
-            data = "1 subgoal (ID 1312)	  	  A : Type	  x, y, z : A	  p : x = z	  q : y = z	  r : y = x	  ============================	  IsEquiv (moveL_pM p q r)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1273,12 +1273,12 @@
           
 
             i = 251;
-            data = "";
+            data = "1 subgoal (ID 1363)	  	  A : Type	  x, y, z : A	  p : x = z	  q : y = z	  r : x = y	  ============================	  IsEquiv (moveL_Vp p q r)	";
             responses[i]=data;
           
 
             i = 252;
-            data = "1 subgoal (ID 1363)	  	  A : Type	  x, y, z : A	  p : x = z	  q : y = z	  r : x = y	  ============================	  IsEquiv (moveL_Vp p q r)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1303,12 +1303,12 @@
           
 
             i = 257;
-            data = "";
+            data = "1 subgoal (ID 1414)	  	  A : Type	  x, y, z : A	  p : z = x	  q : y = z	  r : y = x	  ============================	  IsEquiv (moveL_pV p q r)	";
             responses[i]=data;
           
 
             i = 258;
-            data = "1 subgoal (ID 1414)	  	  A : Type	  x, y, z : A	  p : z = x	  q : y = z	  r : y = x	  ============================	  IsEquiv (moveL_pV p q r)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1338,7 +1338,7 @@
           
 
             i = 264;
-            data = "1 subgoal (ID 1460)	  	  A : Type	  x, y : A	  p, q : x = y	  ============================	  IsEquiv (moveL_1M p q)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1363,7 +1363,7 @@
           
 
             i = 269;
-            data = "1 subgoal (ID 1475)	  	  A : Type	  x, y : A	  p, q : x = y	  ============================	  IsEquiv (moveL_M1 p q)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1388,7 +1388,7 @@
           
 
             i = 274;
-            data = "1 subgoal (ID 1490)	  	  A : Type	  x, y : A	  p : x = y	  q : y = x	  ============================	  IsEquiv (moveL_1V p q)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1413,7 +1413,7 @@
           
 
             i = 279;
-            data = "1 subgoal (ID 1505)	  	  A : Type	  x, y : A	  p : x = y	  q : y = x	  ============================	  IsEquiv (moveL_V1 p q)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1438,7 +1438,7 @@
           
 
             i = 284;
-            data = "1 subgoal (ID 1520)	  	  A : Type	  x, y : A	  p, q : x = y	  ============================	  IsEquiv (moveR_M1 p q)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1463,7 +1463,7 @@
           
 
             i = 289;
-            data = "1 subgoal (ID 1535)	  	  A : Type	  x, y : A	  p, q : x = y	  ============================	  IsEquiv (moveR_1M p q)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1488,7 +1488,7 @@
           
 
             i = 294;
-            data = "1 subgoal (ID 1550)	  	  A : Type	  x, y : A	  p : x = y	  q : y = x	  ============================	  IsEquiv (moveR_1V p q)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1513,7 +1513,7 @@
           
 
             i = 299;
-            data = "1 subgoal (ID 1565)	  	  A : Type	  x, y : A	  p : x = y	  q : y = x	  ============================	  IsEquiv (moveR_V1 p q)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1538,7 +1538,7 @@
           
 
             i = 304;
-            data = "1 subgoal (ID 1589)	  	  A : Type	  P : A -> Type	  x, y : A	  p : x = y	  u : P x	  v : P y	  q : transport P p u = v	  ============================	  moveR_transport_p P p u v (moveL_transport_V P p u v q) = q	";
+            data = "";
             responses[i]=data;
           
 
@@ -1558,7 +1558,7 @@
           
 
             i = 308;
-            data = "1 subgoal (ID 1616)	  	  A : Type	  P : A -> Type	  x, y : A	  p : x = y	  u : P x	  v : P y	  q : u = transport P p^ v	  ============================	  moveL_transport_V P p u v (moveR_transport_p P p u v q) = q	";
+            data = "";
             responses[i]=data;
           
 
@@ -1573,12 +1573,12 @@
           
 
             i = 311;
-            data = "";
+            data = "1 subgoal (ID 1631)	  	  A : Type	  P : A -> Type	  x, y : A	  p : x = y	  u : P x	  v : P y	  ============================	  IsEquiv (moveR_transport_p P p u v)	";
             responses[i]=data;
           
 
             i = 312;
-            data = "1 subgoal (ID 1631)	  	  A : Type	  P : A -> Type	  x, y : A	  p : x = y	  u : P x	  v : P y	  ============================	  IsEquiv (moveR_transport_p P p u v)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1618,7 +1618,7 @@
           
 
             i = 320;
-            data = "1 subgoal (ID 1682)	  	  A : Type	  P : A -> Type	  x, y : A	  p : y = x	  u : P x	  v : P y	  q : transport P p^ u = v	  ============================	  moveR_transport_V P p u v (moveL_transport_p P p u v q) = q	";
+            data = "";
             responses[i]=data;
           
 
@@ -1638,7 +1638,7 @@
           
 
             i = 324;
-            data = "1 subgoal (ID 1706)	  	  A : Type	  P : A -> Type	  x, y : A	  p : y = x	  u : P x	  v : P y	  q : u = transport P p v	  ============================	  moveL_transport_p P p u v (moveR_transport_V P p u v q) = q	";
+            data = "";
             responses[i]=data;
           
 
@@ -1653,12 +1653,12 @@
           
 
             i = 327;
-            data = "";
+            data = "1 subgoal (ID 1721)	  	  A : Type	  P : A -> Type	  x, y : A	  p : y = x	  u : P x	  v : P y	  ============================	  IsEquiv (moveR_transport_V P p u v)	";
             responses[i]=data;
           
 
             i = 328;
-            data = "1 subgoal (ID 1721)	  	  A : Type	  P : A -> Type	  x, y : A	  p : y = x	  u : P x	  v : P y	  ============================	  IsEquiv (moveR_transport_V P p u v)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1693,12 +1693,12 @@
           
 
             i = 335;
-            data = "";
+            data = "1 subgoal (ID 1760)	  	  A : Type	  P : A -> Type	  x, y : A	  p : x = y	  u : P x	  v : P y	  ============================	  IsEquiv (moveL_transport_V P p u v)	";
             responses[i]=data;
           
 
             i = 336;
-            data = "1 subgoal (ID 1760)	  	  A : Type	  P : A -> Type	  x, y : A	  p : x = y	  u : P x	  v : P y	  ============================	  IsEquiv (moveL_transport_V P p u v)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1733,12 +1733,12 @@
           
 
             i = 343;
-            data = "";
+            data = "1 subgoal (ID 1799)	  	  A : Type	  P : A -> Type	  x, y : A	  p : y = x	  u : P x	  v : P y	  ============================	  IsEquiv (moveL_transport_p P p u v)	";
             responses[i]=data;
           
 
             i = 344;
-            data = "1 subgoal (ID 1799)	  	  A : Type	  P : A -> Type	  x, y : A	  p : y = x	  u : P x	  v : P y	  ============================	  IsEquiv (moveL_transport_p P p u v)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1773,12 +1773,12 @@
           
 
             i = 351;
-            data = "";
+            data = "1 subgoal (ID 1837)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  x : A	  y : B	  ============================	  IsEquiv (moveR_equiv_M x y)	";
             responses[i]=data;
           
 
             i = 352;
-            data = "1 subgoal (ID 1837)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  x : A	  y : B	  ============================	  IsEquiv (moveR_equiv_M x y)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1803,12 +1803,12 @@
           
 
             i = 357;
-            data = "";
+            data = "1 subgoal (ID 1872)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  x : B	  y : A	  ============================	  IsEquiv (moveR_equiv_V x y)	";
             responses[i]=data;
           
 
             i = 358;
-            data = "1 subgoal (ID 1872)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  x : B	  y : A	  ============================	  IsEquiv (moveR_equiv_V x y)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1833,12 +1833,12 @@
           
 
             i = 363;
-            data = "";
+            data = "1 subgoal (ID 1907)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  x : A	  y : B	  ============================	  IsEquiv (moveL_equiv_M x y)	";
             responses[i]=data;
           
 
             i = 364;
-            data = "1 subgoal (ID 1907)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  x : A	  y : B	  ============================	  IsEquiv (moveL_equiv_M x y)	";
+            data = "";
             responses[i]=data;
           
 
@@ -1863,12 +1863,12 @@
           
 
             i = 369;
-            data = "";
+            data = "1 subgoal (ID 1942)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  x : B	  y : A	  ============================	  IsEquiv (moveL_equiv_V x y)	";
             responses[i]=data;
           
 
             i = 370;
-            data = "1 subgoal (ID 1942)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  x : B	  y : A	  ============================	  IsEquiv (moveL_equiv_V x y)	";
+            data = "";
             responses[i]=data;
           
 
@@ -2103,7 +2103,7 @@
           
 
             i = 417;
-            data = "1 subgoal (ID 1992)	  	  A : Type	  x1, x2, y : A	  p : x1 = x2	  q : x1 = y	  r : x2 = y	  ============================	  q = p @ r <~> transport (fun x : A => x = y) p q = r	";
+            data = "";
             responses[i]=data;
           
 
@@ -2128,7 +2128,7 @@
           
 
             i = 422;
-            data = "1 subgoal (ID 2020)	  	  A : Type	  x, y1, y2 : A	  p : y1 = y2	  q : x = y1	  r : x = y2	  ============================	  q @ p = r <~> transport (fun y : A => x = y) p q = r	";
+            data = "";
             responses[i]=data;
           
 
@@ -2153,7 +2153,7 @@
           
 
             i = 427;
-            data = "1 subgoal (ID 2052)	  	  A : Type	  x1, x2 : A	  p : x1 = x2	  q : x1 = x1	  r : x2 = x2	  ============================	  q @ p = p @ r <~> transport (fun x : A => x = x) p q = r	";
+            data = "";
             responses[i]=data;
           
 
@@ -2188,7 +2188,7 @@
           
 
             i = 434;
-            data = "1 subgoal (ID 2086)	  	  A : Type	  B : Type	  f : A -> B	  x1, x2 : A	  y : B	  p : x1 = x2	  q : f x1 = y	  r : f x2 = y	  ============================	  q = ap f p @ r <~> transport (fun x : A => f x = y) p q = r	";
+            data = "";
             responses[i]=data;
           
 
@@ -2213,7 +2213,7 @@
           
 
             i = 439;
-            data = "1 subgoal (ID 2120)	  	  A : Type	  B : Type	  g : A -> B	  x : B	  y1, y2 : A	  p : y1 = y2	  q : x = g y1	  r : x = g y2	  ============================	  q @ ap g p = r <~> transport (fun y : A => x = g y) p q = r	";
+            data = "";
             responses[i]=data;
           
 
@@ -2238,7 +2238,7 @@
           
 
             i = 444;
-            data = "1 subgoal (ID 2162)	  	  A : Type	  B : Type	  f, g : A -> B	  x1, x2 : A	  p : x1 = x2	  q : f x1 = g x1	  r : f x2 = g x2	  ============================	  q @ ap g p = ap f p @ r <~> transport (fun x : A => f x = g x) p q = r	";
+            data = "";
             responses[i]=data;
           
 
@@ -2273,7 +2273,7 @@
           
 
             i = 451;
-            data = "1 subgoal (ID 2204)	  	  A : Type	  B : Type	  f : A -> B	  g : B -> A	  x1, x2 : A	  p : x1 = x2	  q : g (f x1) = x1	  r : g (f x2) = x2	  ============================	  q @ p = ap g (ap f p) @ r <~> transport (fun x : A => g (f x) = x) p q = r	";
+            data = "";
             responses[i]=data;
           
 
@@ -2308,7 +2308,7 @@
           
 
             i = 458;
-            data = "1 subgoal (ID 2247)	  	  A : Type	  B : Type	  f : A -> B	  g : B -> A	  x1, x2 : A	  p : x1 = x2	  q : x1 = g (f x1)	  r : x2 = g (f x2)	  ============================	  q @ ap g (ap f p) = p @ r <~> transport (fun x : A => x = g (f x)) p q = r	";
+            data = "";
             responses[i]=data;
           
 
@@ -2343,7 +2343,7 @@
           
 
             i = 465;
-            data = "1 subgoal (ID 2324)	  	  A : Type	  x, y : A	  p : x = y	  q : 1 = 1	  r : 1 = 1	  ============================	  ((concat_1p p)^ @ whiskerR q p) @ concat_1p p =	  ((concat_p1 p)^ @ whiskerL p r) @ concat_p1 p <~>	  transport (fun a : A => 1 = 1) p q = r	";
+            data = "";
             responses[i]=data;
           
 
@@ -2423,12 +2423,12 @@
           
 
             i = 481;
-            data = "";
+            data = "1 subgoal (ID 2335)	  	  H : Funext	  A : Type	  a : A	  P : forall x : A, a = x -> Type	  ============================	  IsEquiv (paths_ind a P)	";
             responses[i]=data;
           
 
             i = 482;
-            data = "1 subgoal (ID 2335)	  	  H : Funext	  A : Type	  a : A	  P : forall x : A, a = x -> Type	  ============================	  IsEquiv (paths_ind a P)	";
+            data = "";
             responses[i]=data;
           
 
