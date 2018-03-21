@@ -30,13 +30,13 @@ pre {
 
 <div class="code" title="File: ring_pol.v
 Line: 1
-Time: 0.036s">
-<div class="time" style="width: 8.0536912751678%"></div>
+Time: 0.034s">
+<div class="time" style="width: 8%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.Bool.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
 Line: 1
-Time: 0.447s">
+Time: 0.425s">
 <div class="time" style="width: 100%"></div>
 <pre>
 Require Import
@@ -58,25 +58,32 @@ Line: 8
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-
-Section content.</pre>
+Local Set Universe Minimization ToSet.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 10
+Line: 9
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Local Existing Instance almost_ring_semiring.</pre>
+
+Section content.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
 Line: 11
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Local Existing Instance almostring_mor_sr_mor.</pre>
+Local Existing Instance almost_ring_semiring.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
 Line: 12
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Local Existing Instance almostring_mor_sr_mor.</pre>
+</div>
+<div class="code" title="File: ring_pol.v
+Line: 13
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -84,14 +91,14 @@ Time: 0s">
 Universe UC.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 14
+Line: 15
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Context {C : Type@{UC} } {V : Type0 }.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 15
+Line: 16
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -101,7 +108,7 @@ Inductive Pol : Type@{UC} :=
   | PX (P : Pol) (v : V) (Q : Pol).</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 19
+Line: 20
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -110,13 +117,13 @@ Time: 0s">
    N on semirings, other sometimes. *)</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 22
+Line: 23
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Context `{AlmostRing C} `{DecidablePaths C}.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 22
+Line: 23
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -125,13 +132,13 @@ Time: 0s">
    It has a computable compare so we can normalise polynomials. *)</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 25
+Line: 26
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Context `{Trichotomy@{Set Set Set} V Vlt}.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 25
+Line: 26
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -145,10 +152,10 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 32
-Time: 0.034s">
-<div class="time" style="width: 7.6062639821029%"></div>
-<pre>Fixpoint Peqb P Q : bool :=
+Line: 33
+Time: 0.028s">
+<div class="time" style="width: 6.5882352941176%"></div>
+<pre>Fixpoint Peqb P Q : Bool :=
   match P, Q with
   | Pconst c, Pconst d =&gt; c =? d
   | PX P1 v P2, PX Q1 w Q2 =&gt;
@@ -157,7 +164,7 @@ Time: 0.034s">
   end.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 38
+Line: 39
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -165,14 +172,14 @@ Time: 0s">
 Global Instance Peqb_instance : Eqb Pol := Peqb.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 40
+Line: 41
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Arguments Peqb_instance _ _ /.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 41
+Line: 42
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -180,14 +187,14 @@ Time: 0s">
 Global Instance P0 : canonical_names.Zero Pol := Pconst 0.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 43
+Line: 44
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Global Instance P1 : canonical_names.One Pol := Pconst 1.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 44
+Line: 45
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -195,15 +202,15 @@ Time: 0s">
 Universe UR.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 46
+Line: 47
 Time: 0.002s">
-<div class="time" style="width: 0.44742729306488%"></div>
+<div class="time" style="width: 0.47058823529412%"></div>
 <pre>
 Context {R : Type@{UR} } `{AlmostRing R}
   (phi : C -&gt; R) `{!AlmostRingPreserving phi}.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 48
+Line: 49
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -211,9 +218,9 @@ Time: 0s">
 Notation Vars V := (V -&gt; R).</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 50
-Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
+Line: 51
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Fixpoint eval (vs : Vars V) (P : Pol) : R :=
@@ -224,36 +231,36 @@ Fixpoint eval (vs : Vars V) (P : Pol) : R :=
   end.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 57
+Line: 58
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-Lemma andb_true@{} : forall a b : bool, andb a b = true -&gt; a = true /\ b = true.</pre>
+Lemma andb_true : forall a b : Bool, andb a b = true -&gt; a = true /\ b = true.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 59
+Line: 60
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 60
-Time: 0.004s">
-<div class="time" style="width: 0.89485458612975%"></div>
+Line: 61
+Time: 0.003s">
+<div class="time" style="width: 0.70588235294118%"></div>
 <pre>
 intros [|] [|];simpl;auto.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 61
-Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
+Line: 62
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 62
+Line: 63
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -262,57 +269,44 @@ Lemma eval_eqb' : forall P Q : Pol, P =? Q = true -&gt;
   forall vs : Vars V, eval vs P = eval vs Q.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 65
+Line: 66
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 66
+Line: 67
 Time: 0.003s">
-<div class="time" style="width: 0.67114093959732%"></div>
+<div class="time" style="width: 0.70588235294118%"></div>
 <pre>
 induction P as [c|P1 IHP1 v P2 IHP2];destruct Q as [d|Q1 w Q2];intros E vs;
 change eqb with Peqb in E;simpl in E.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 68
+Line: 69
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 69
+Line: 70
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 69
+Line: 70
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply ap.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 69
-Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
-<pre> apply decide_eqb_ok;trivial.</pre>
-</div>
-<div class="code" title="File: ring_pol.v
-Line: 69
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
--</pre>
-</div>
-<div class="code" title="File: ring_pol.v
 Line: 70
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> destruct (false_ne_true E).</pre>
+Time: 0.001s">
+<div class="time" style="width: 0.23529411764706%"></div>
+<pre> apply decide_eqb_ok;trivial.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
 Line: 70
@@ -323,8 +317,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ring_pol.v
 Line: 71
-Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> destruct (false_ne_true E).</pre>
 </div>
 <div class="code" title="File: ring_pol.v
@@ -336,65 +330,78 @@ Time: 0s">
 </div>
 <div class="code" title="File: ring_pol.v
 Line: 72
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> destruct (false_ne_true E).</pre>
+</div>
+<div class="code" title="File: ring_pol.v
+Line: 72
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+-</pre>
+</div>
+<div class="code" title="File: ring_pol.v
+Line: 73
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply andb_true in E.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 72
+Line: 73
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> destruct E as [E1 E2].</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 72
+Line: 73
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply andb_true in E2.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 73
+Line: 74
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> destruct E2 as [E2 E3].</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 73
+Line: 74
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   simpl.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 74
+Line: 75
 Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
+<div class="time" style="width: 0.23529411764706%"></div>
 <pre>
   apply compare_eqb_eq,tricho_compare_eq in E1.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 75
-Time: 0.002s">
-<div class="time" style="width: 0.44742729306488%"></div>
+Line: 76
+Time: 0.001s">
+<div class="time" style="width: 0.23529411764706%"></div>
 <pre>
   apply ap2;auto.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 76
+Line: 77
 Time: 0.002s">
-<div class="time" style="width: 0.44742729306488%"></div>
+<div class="time" style="width: 0.47058823529412%"></div>
 <pre> apply ap2;auto.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 76
+Line: 77
 Time: 0.002s">
-<div class="time" style="width: 0.44742729306488%"></div>
+<div class="time" style="width: 0.47058823529412%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 77
+Line: 78
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -402,89 +409,89 @@ Time: 0s">
 Definition eval_eqb@{} := eval_eqb'@{Ularge}.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 79
+Line: 80
 Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
+<div class="time" style="width: 0.23529411764706%"></div>
 <pre>
 
 Lemma eval_0' : forall P, P =? 0 = true -&gt; forall vs, eval vs P = 0.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 81
+Line: 82
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 82
+Line: 83
 Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
+<div class="time" style="width: 0.23529411764706%"></div>
 <pre>
 induction P;simpl;intros E vs.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 83
+Line: 84
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 84
+Line: 85
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> change eqb with Peqb in E;simpl in E.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 84
+Line: 85
 Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
+<div class="time" style="width: 0.23529411764706%"></div>
 <pre>
   apply decide_eqb_ok in E.</pre>
-</div>
-<div class="code" title="File: ring_pol.v
-Line: 85
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> rewrite E.</pre>
-</div>
-<div class="code" title="File: ring_pol.v
-Line: 85
-Time: 0.002s">
-<div class="time" style="width: 0.44742729306488%"></div>
-<pre>
-  apply preserves_0.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
 Line: 86
 Time: 0s">
 <div class="time" style="width: 0%"></div>
+<pre> rewrite E.</pre>
+</div>
+<div class="code" title="File: ring_pol.v
+Line: 86
+Time: 0.002s">
+<div class="time" style="width: 0.47058823529412%"></div>
 <pre>
--</pre>
+  apply preserves_0.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
 Line: 87
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> change eqb with Peqb in E;simpl in E.</pre>
+<pre>
+-</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 87
-Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
-<pre>
-  destruct (false_ne_true E).</pre>
+Line: 88
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> change eqb with Peqb in E;simpl in E.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
 Line: 88
 Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
+<div class="time" style="width: 0.23529411764706%"></div>
+<pre>
+  destruct (false_ne_true E).</pre>
+</div>
+<div class="code" title="File: ring_pol.v
+Line: 89
+Time: 0.001s">
+<div class="time" style="width: 0.23529411764706%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 89
+Line: 90
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -492,9 +499,9 @@ Time: 0s">
 Definition eval_0@{} := eval_0'@{Ularge}.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 91
+Line: 92
 Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
+<div class="time" style="width: 0.23529411764706%"></div>
 <pre>
 
 Fixpoint addC c P :=
@@ -505,7 +512,7 @@ Fixpoint addC c P :=
   end.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 98
+Line: 99
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -513,31 +520,18 @@ Time: 0s">
 Lemma eval_addC vs : forall c P, eval vs (addC c P) = (phi c) + eval vs P.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 100
+Line: 101
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 101
-Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
-<pre>
-induction P;simpl.</pre>
-</div>
-<div class="code" title="File: ring_pol.v
 Line: 102
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
--</pre>
-</div>
-<div class="code" title="File: ring_pol.v
-Line: 103
-Time: 0.003s">
-<div class="time" style="width: 0.67114093959732%"></div>
-<pre> apply preserves_plus.</pre>
+induction P;simpl.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
 Line: 103
@@ -548,39 +542,52 @@ Time: 0s">
 </div>
 <div class="code" title="File: ring_pol.v
 Line: 104
+Time: 0.002s">
+<div class="time" style="width: 0.47058823529412%"></div>
+<pre> apply preserves_plus.</pre>
+</div>
+<div class="code" title="File: ring_pol.v
+Line: 104
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+-</pre>
+</div>
+<div class="code" title="File: ring_pol.v
+Line: 105
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> rewrite IHP2.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 104
-Time: 0.012s">
-<div class="time" style="width: 2.6845637583893%"></div>
+Line: 105
+Time: 0.01s">
+<div class="time" style="width: 2.3529411764706%"></div>
 <pre>
   rewrite 2!plus_assoc.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 105
+Line: 106
 Time: 0.003s">
-<div class="time" style="width: 0.67114093959732%"></div>
+<div class="time" style="width: 0.70588235294118%"></div>
 <pre> rewrite (plus_comm (phi c)).</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 105
+Line: 106
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   reflexivity.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 106
+Line: 107
 Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
+<div class="time" style="width: 0.23529411764706%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 107
+Line: 108
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -588,9 +595,9 @@ Time: 0s">
 (* c * v + Q *)</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 109
+Line: 110
 Time: 0.003s">
-<div class="time" style="width: 0.67114093959732%"></div>
+<div class="time" style="width: 0.70588235294118%"></div>
 <pre>Fixpoint addX' c v Q :=
   match Q with
   | Pconst d =&gt; PX (Pconst c) v Q
@@ -605,286 +612,286 @@ Time: 0.003s">
   end.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 120
+Line: 121
 Time: 0.002s">
-<div class="time" style="width: 0.44742729306488%"></div>
+<div class="time" style="width: 0.47058823529412%"></div>
 <pre>
 
 Definition addX c v Q := if c =? 0 then Q else addX' c v Q.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 122
-Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
+Line: 123
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Lemma eval_addX'@{} vs : forall c (v:V) Q,
   eval vs (addX' c v Q) = phi c * vs v + eval vs Q.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 125
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Proof.</pre>
-</div>
-<div class="code" title="File: ring_pol.v
 Line: 126
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-induction Q as [d|Q1 IH1 w Q2 IH2].</pre>
+Proof.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
 Line: 127
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
--</pre>
-</div>
-<div class="code" title="File: ring_pol.v
-Line: 128
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> simpl.</pre>
+induction Q as [d|Q1 IH1 w Q2 IH2].</pre>
 </div>
 <div class="code" title="File: ring_pol.v
 Line: 128
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  reflexivity.</pre>
+-</pre>
+</div>
+<div class="code" title="File: ring_pol.v
+Line: 129
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> simpl.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
 Line: 129
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
--</pre>
+  reflexivity.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
 Line: 130
 Time: 0s">
 <div class="time" style="width: 0%"></div>
+<pre>
+-</pre>
+</div>
+<div class="code" title="File: ring_pol.v
+Line: 131
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 130
+Line: 131
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   pose proof (tricho_compare_eq v w) as E.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 131
-Time: 0.005s">
-<div class="time" style="width: 1.1185682326622%"></div>
+Line: 132
+Time: 0.004s">
+<div class="time" style="width: 0.94117647058824%"></div>
 <pre>
   destruct (v ?= w);[clear E|rewrite &lt;-E by split;clear E w|clear E].</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 132
+Line: 133
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 133
+Line: 134
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 133
+Line: 134
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> rewrite IH2.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 133
-Time: 0.012s">
-<div class="time" style="width: 2.6845637583893%"></div>
+Line: 134
+Time: 0.011s">
+<div class="time" style="width: 2.5882352941176%"></div>
 <pre>
     rewrite 2!plus_assoc.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 134
+Line: 135
 Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
+<div class="time" style="width: 0.23529411764706%"></div>
 <pre> apply ap2;trivial.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 134
+Line: 135
 Time: 0.002s">
-<div class="time" style="width: 0.44742729306488%"></div>
+<div class="time" style="width: 0.47058823529412%"></div>
 <pre>
     apply plus_comm.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 135
+Line: 136
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 136
+Line: 137
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 136
+Line: 137
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> rewrite eval_addC.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 136
+Line: 137
 Time: 0.005s">
-<div class="time" style="width: 1.1185682326622%"></div>
+<div class="time" style="width: 1.1764705882353%"></div>
 <pre>
     rewrite plus_mult_distr_r.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 137
-Time: 0.004s">
-<div class="time" style="width: 0.89485458612975%"></div>
+Line: 138
+Time: 0.003s">
+<div class="time" style="width: 0.70588235294118%"></div>
 <pre>
     symmetry;apply plus_assoc.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 138
+Line: 139
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 139
+Line: 140
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 139
+Line: 140
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 139
+Line: 140
 Time: 0.003s">
-<div class="time" style="width: 0.67114093959732%"></div>
+<div class="time" style="width: 0.70588235294118%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 140
-Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
+Line: 141
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Lemma eval_addX vs : forall c (v:V) Q,
   eval vs (addX c v Q) = phi c * vs v + eval vs Q.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 143
+Line: 144
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 144
+Line: 145
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 145
+Line: 146
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> unfold addX.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 145
+Line: 146
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 pose proof (decide_eqb_ok c 0) as E.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 146
+Line: 147
 Time: 0.002s">
-<div class="time" style="width: 0.44742729306488%"></div>
+<div class="time" style="width: 0.47058823529412%"></div>
 <pre>
 destruct (c =? 0).</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 147
+Line: 148
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 148
-Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
+Line: 149
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> rewrite (fst E) by split.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 148
-Time: 0.004s">
-<div class="time" style="width: 0.89485458612975%"></div>
+Line: 149
+Time: 0.003s">
+<div class="time" style="width: 0.70588235294118%"></div>
 <pre> rewrite (preserves_0 (f:=phi)).</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 148
-Time: 0.009s">
-<div class="time" style="width: 2.0134228187919%"></div>
+Line: 149
+Time: 0.008s">
+<div class="time" style="width: 1.8823529411765%"></div>
 <pre>
   rewrite mult_0_l,plus_0_l.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 149
+Line: 150
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> split.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 149
+Line: 150
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 150
+Line: 151
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply eval_addX'.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 150
+Line: 151
 Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
+<div class="time" style="width: 0.23529411764706%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 151
+Line: 152
 Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
+<div class="time" style="width: 0.23529411764706%"></div>
 <pre>
 
 Definition PXguard@{} P v Q := if eqb P 0 then Q else PX P v Q.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 153
+Line: 154
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -893,89 +900,89 @@ Lemma eval_PXguard vs : forall P (v:V) Q,
   eval vs (PXguard P v Q) = eval vs P * vs v + eval vs Q.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 156
+Line: 157
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 157
+Line: 158
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 158
+Line: 159
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> unfold PXguard.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 158
+Line: 159
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 pose proof (eval_0 P) as E.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 159
-Time: 0.003s">
-<div class="time" style="width: 0.67114093959732%"></div>
+Line: 160
+Time: 0.002s">
+<div class="time" style="width: 0.47058823529412%"></div>
 <pre>
 destruct (P =? 0).</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 160
+Line: 161
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 161
+Line: 162
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> rewrite E by split.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 161
-Time: 0.009s">
-<div class="time" style="width: 2.0134228187919%"></div>
+Line: 162
+Time: 0.008s">
+<div class="time" style="width: 1.8823529411765%"></div>
 <pre>
   rewrite mult_0_l,plus_0_l.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 162
+Line: 163
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> split.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 162
+Line: 163
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 163
+Line: 164
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 163
+Line: 164
 Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
+<div class="time" style="width: 0.23529411764706%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 164
+Line: 165
 Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
+<div class="time" style="width: 0.23529411764706%"></div>
 <pre>
 
 Fixpoint mulC c P :=
@@ -987,7 +994,7 @@ Fixpoint mulC c P :=
   end.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 172
+Line: 173
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -995,31 +1002,18 @@ Time: 0s">
 Lemma eval_mulC vs : forall c P, eval vs (mulC c P) = (phi c) * eval vs P.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 174
+Line: 175
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 175
-Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
-<pre>
-induction P as [d | P1 IH1 v P2 IH2];simpl.</pre>
-</div>
-<div class="code" title="File: ring_pol.v
 Line: 176
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
--</pre>
-</div>
-<div class="code" title="File: ring_pol.v
-Line: 177
-Time: 0.003s">
-<div class="time" style="width: 0.67114093959732%"></div>
-<pre> apply preserves_mult.</pre>
+induction P as [d | P1 IH1 v P2 IH2];simpl.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
 Line: 177
@@ -1030,32 +1024,45 @@ Time: 0s">
 </div>
 <div class="code" title="File: ring_pol.v
 Line: 178
+Time: 0.002s">
+<div class="time" style="width: 0.47058823529412%"></div>
+<pre> apply preserves_mult.</pre>
+</div>
+<div class="code" title="File: ring_pol.v
+Line: 178
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+-</pre>
+</div>
+<div class="code" title="File: ring_pol.v
+Line: 179
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> rewrite eval_PXguard.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 178
-Time: 0.035s">
-<div class="time" style="width: 7.8299776286353%"></div>
+Line: 179
+Time: 0.033s">
+<div class="time" style="width: 7.7647058823529%"></div>
 <pre>
   rewrite IH1,IH2,plus_mult_distr_l,mult_assoc.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 179
+Line: 180
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 179
+Line: 180
 Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
+<div class="time" style="width: 0.23529411764706%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 180
+Line: 181
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1063,9 +1070,9 @@ Time: 0s">
 (* if P &lt;= v, P &lt;&gt; 0, and addP Q = P + Q then P * v + Q *)</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 182
+Line: 183
 Time: 0.003s">
-<div class="time" style="width: 0.67114093959732%"></div>
+<div class="time" style="width: 0.70588235294118%"></div>
 <pre>Fixpoint add_aux addP P v Q :=
   match Q with
   | Pconst _ =&gt; PX P v Q
@@ -1080,9 +1087,9 @@ Time: 0.003s">
   end.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 193
+Line: 194
 Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
+<div class="time" style="width: 0.23529411764706%"></div>
 <pre>
 
 Fixpoint add P Q :=
@@ -1092,9 +1099,9 @@ Fixpoint add P Q :=
   end.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 199
+Line: 200
 Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
+<div class="time" style="width: 0.23529411764706%"></div>
 <pre>
 
 Lemma eval_add_aux vs P addP
@@ -1102,166 +1109,166 @@ Lemma eval_add_aux vs P addP
   : forall (v:V) Q, eval vs (add_aux addP P v Q) = eval vs P * vs v + eval vs Q.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 203
+Line: 204
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 204
+Line: 205
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 induction Q as [d|Q1 IH1 w Q2 IH2].</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 205
+Line: 206
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 206
+Line: 207
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 206
+Line: 207
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 206
+Line: 207
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 207
+Line: 208
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 207
+Line: 208
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   pose proof (tricho_compare_eq v w) as E.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 208
-Time: 0.005s">
-<div class="time" style="width: 1.1185682326622%"></div>
+Line: 209
+Time: 0.004s">
+<div class="time" style="width: 0.94117647058824%"></div>
 <pre>
   destruct (v ?= w);[clear E|rewrite &lt;-E by split;clear E w|clear E].</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 209
+Line: 210
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 210
+Line: 211
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 210
+Line: 211
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     rewrite IH2.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 211
-Time: 0.013s">
-<div class="time" style="width: 2.9082774049217%"></div>
+Line: 212
+Time: 0.012s">
+<div class="time" style="width: 2.8235294117647%"></div>
 <pre>
     rewrite 2!plus_assoc.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 212
-Time: 0.004s">
-<div class="time" style="width: 0.89485458612975%"></div>
+Line: 213
+Time: 0.003s">
+<div class="time" style="width: 0.70588235294118%"></div>
 <pre> rewrite (plus_comm (eval vs Q1 * vs w)).</pre>
-</div>
-<div class="code" title="File: ring_pol.v
-Line: 212
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-    reflexivity.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
 Line: 213
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  +</pre>
+    reflexivity.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
 Line: 214
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  +</pre>
+</div>
+<div class="code" title="File: ring_pol.v
+Line: 215
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> rewrite eval_PXguard.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 214
+Line: 215
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> rewrite Eadd.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 214
-Time: 0.006s">
-<div class="time" style="width: 1.3422818791946%"></div>
+Line: 215
+Time: 0.005s">
+<div class="time" style="width: 1.1764705882353%"></div>
 <pre>
     rewrite plus_mult_distr_r.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 215
-Time: 0.005s">
-<div class="time" style="width: 1.1185682326622%"></div>
+Line: 216
+Time: 0.004s">
+<div class="time" style="width: 0.94117647058824%"></div>
 <pre>
     symmetry;apply plus_assoc.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 216
+Line: 217
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 217
+Line: 218
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 217
+Line: 218
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 217
-Time: 0.004s">
-<div class="time" style="width: 0.89485458612975%"></div>
+Line: 218
+Time: 0.003s">
+<div class="time" style="width: 0.70588235294118%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 218
+Line: 219
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1269,79 +1276,79 @@ Time: 0s">
 Lemma eval_add' vs : forall P Q, eval vs (add P Q) = eval vs P + eval vs Q.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 220
+Line: 221
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 221
+Line: 222
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 induction P as [c|P1 IH1 v P2 IH2];intros Q.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 222
+Line: 223
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 223
+Line: 224
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 223
+Line: 224
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply eval_addC.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 223
+Line: 224
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 224
+Line: 225
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 224
+Line: 225
 Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
+<div class="time" style="width: 0.23529411764706%"></div>
 <pre> rewrite eval_add_aux;auto.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 224
+Line: 225
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   rewrite IH2.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 225
+Line: 226
 Time: 0.002s">
-<div class="time" style="width: 0.44742729306488%"></div>
+<div class="time" style="width: 0.47058823529412%"></div>
 <pre> apply plus_assoc.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 225
+Line: 226
 Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
+<div class="time" style="width: 0.23529411764706%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 226
+Line: 227
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1349,9 +1356,9 @@ Time: 0s">
 Definition eval_add@{} := eval_add'@{Ularge}.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 228
+Line: 229
 Time: 0.003s">
-<div class="time" style="width: 0.67114093959732%"></div>
+<div class="time" style="width: 0.70588235294118%"></div>
 <pre>
 
 Fixpoint mulX v P :=
@@ -1366,7 +1373,7 @@ Fixpoint mulX v P :=
   end.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 239
+Line: 240
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1374,180 +1381,180 @@ Time: 0s">
 Lemma eval_mulX@{} vs : forall (v:V) (P:Pol), eval vs (mulX v P) = eval vs P * vs v.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 241
+Line: 242
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 242
+Line: 243
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 induction P as [c|P1 IH1 w P2 IH2].</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 243
+Line: 244
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 244
+Line: 245
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 244
+Line: 245
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> rewrite eval_addX.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 244
+Line: 245
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   simpl.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 245
-Time: 0.008s">
-<div class="time" style="width: 1.7897091722595%"></div>
+Line: 246
+Time: 0.007s">
+<div class="time" style="width: 1.6470588235294%"></div>
 <pre> rewrite (preserves_0 (f:=phi)),plus_0_r.</pre>
-</div>
-<div class="code" title="File: ring_pol.v
-Line: 245
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  split.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
 Line: 246
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
--</pre>
+  split.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
 Line: 247
 Time: 0s">
 <div class="time" style="width: 0%"></div>
+<pre>
+-</pre>
+</div>
+<div class="code" title="File: ring_pol.v
+Line: 248
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 247
+Line: 248
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   pose proof (tricho_compare_eq v w) as E.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 248
+Line: 249
 Time: 0.004s">
-<div class="time" style="width: 0.89485458612975%"></div>
+<div class="time" style="width: 0.94117647058824%"></div>
 <pre>
   destruct (v ?= w);[clear E|rewrite &lt;-E by split;clear E w|clear E].</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 249
+Line: 250
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 250
+Line: 251
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 250
+Line: 251
 Time: 0.006s">
-<div class="time" style="width: 1.3422818791946%"></div>
+<div class="time" style="width: 1.4117647058824%"></div>
 <pre>
     rewrite plus_mult_distr_r,IH1,IH2.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 251
+Line: 252
 Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
+<div class="time" style="width: 0.23529411764706%"></div>
 <pre>
     apply ap2;trivial.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 252
-Time: 0.014s">
-<div class="time" style="width: 3.1319910514541%"></div>
+Line: 253
+Time: 0.012s">
+<div class="time" style="width: 2.8235294117647%"></div>
 <pre>
     rewrite &lt;-2!mult_assoc;apply ap,mult_comm.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 253
+Line: 254
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 254
+Line: 255
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 254
-Time: 0.009s">
-<div class="time" style="width: 2.0134228187919%"></div>
+Line: 255
+Time: 0.008s">
+<div class="time" style="width: 1.8823529411765%"></div>
 <pre> rewrite (preserves_0 (f:=phi)),plus_0_r.</pre>
-</div>
-<div class="code" title="File: ring_pol.v
-Line: 254
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-    reflexivity.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
 Line: 255
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  +</pre>
+    reflexivity.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
 Line: 256
 Time: 0s">
 <div class="time" style="width: 0%"></div>
+<pre>
+  +</pre>
+</div>
+<div class="code" title="File: ring_pol.v
+Line: 257
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 256
-Time: 0.009s">
-<div class="time" style="width: 2.0134228187919%"></div>
+Line: 257
+Time: 0.008s">
+<div class="time" style="width: 1.8823529411765%"></div>
 <pre> rewrite (preserves_0 (f:=phi)),plus_0_r.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 256
+Line: 257
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     reflexivity.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 257
+Line: 258
 Time: 0.004s">
-<div class="time" style="width: 0.89485458612975%"></div>
+<div class="time" style="width: 0.94117647058824%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 258
+Line: 259
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1555,58 +1562,58 @@ Time: 0s">
 Definition mkPX P v Q := add (mulX v P) Q.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 260
+Line: 261
 Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
+<div class="time" style="width: 0.23529411764706%"></div>
 <pre>
 
 Lemma eval_mkPX vs : forall P v Q,
   eval vs (mkPX P v Q) = (eval vs P) * (vs v) + eval vs Q.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 263
+Line: 264
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 264
+Line: 265
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 265
+Line: 266
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> unfold mkPX.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 265
+Line: 266
 Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
+<div class="time" style="width: 0.23529411764706%"></div>
 <pre>
 rewrite eval_add,eval_mulX.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 266
+Line: 267
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 266
+Line: 267
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 267
+Line: 268
 Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
+<div class="time" style="width: 0.23529411764706%"></div>
 <pre>
 
 Fixpoint mul P Q :=
@@ -1620,7 +1627,7 @@ Fixpoint mul P Q :=
   end.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 277
+Line: 278
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1628,165 +1635,152 @@ Time: 0s">
 Lemma eval_mul' vs : forall P Q, eval vs (mul P Q) = eval vs P * eval vs Q.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 279
+Line: 280
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 280
-Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
-<pre>
-induction P as [c | P1 IHP1 v P2 IHP2];[apply eval_mulC|].</pre>
-</div>
-<div class="code" title="File: ring_pol.v
 Line: 281
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-destruct Q as [d | Q1 w Q2].</pre>
+induction P as [c | P1 IHP1 v P2 IHP2];[apply eval_mulC|].</pre>
 </div>
 <div class="code" title="File: ring_pol.v
 Line: 282
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
--</pre>
+destruct Q as [d | Q1 w Q2].</pre>
 </div>
 <div class="code" title="File: ring_pol.v
 Line: 283
 Time: 0s">
 <div class="time" style="width: 0%"></div>
+<pre>
+-</pre>
+</div>
+<div class="code" title="File: ring_pol.v
+Line: 284
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> change (mul (PX P1 v P2) (Pconst d)) with (mulC d (PX P1 v P2)).</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 283
+Line: 284
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   rewrite eval_mulC.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 284
+Line: 285
 Time: 0.002s">
-<div class="time" style="width: 0.44742729306488%"></div>
+<div class="time" style="width: 0.47058823529412%"></div>
 <pre> apply mult_comm.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 284
+Line: 285
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 285
+Line: 286
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 285
-Time: 0.026s">
-<div class="time" style="width: 5.8165548098434%"></div>
+Line: 286
+Time: 0.024s">
+<div class="time" style="width: 5.6470588235294%"></div>
 <pre>
   rewrite plus_mult_distr_r,!plus_mult_distr_l.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 286
-Time: 0.011s">
-<div class="time" style="width: 2.4608501118568%"></div>
+Line: 287
+Time: 0.01s">
+<div class="time" style="width: 2.3529411764706%"></div>
 <pre>
   repeat (rewrite eval_add || rewrite eval_mulX).</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 287
-Time: 0.011s">
-<div class="time" style="width: 2.4608501118568%"></div>
+Line: 288
+Time: 0.012s">
+<div class="time" style="width: 2.8235294117647%"></div>
 <pre>
   rewrite plus_mult_distr_r,(plus_mult_distr_l (eval vs P2)).</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 288
+Line: 289
 Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
+<div class="time" style="width: 0.23529411764706%"></div>
 <pre>
   rewrite IHP1,IHP2.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 289
-Time: 0.002s">
-<div class="time" style="width: 0.44742729306488%"></div>
+Line: 290
+Time: 0.001s">
+<div class="time" style="width: 0.23529411764706%"></div>
 <pre>
   apply ap2;apply ap2.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 290
+Line: 291
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 291
-Time: 0.025s">
-<div class="time" style="width: 5.592841163311%"></div>
+Line: 292
+Time: 0.022s">
+<div class="time" style="width: 5.1764705882353%"></div>
 <pre> rewrite &lt;-!mult_assoc.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 291
+Line: 292
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     apply ap.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 292
-Time: 0.004s">
-<div class="time" style="width: 0.89485458612975%"></div>
+Line: 293
+Time: 0.003s">
+<div class="time" style="width: 0.70588235294118%"></div>
 <pre>
     rewrite (mult_comm (vs v)).</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 293
-Time: 0.003s">
-<div class="time" style="width: 0.67114093959732%"></div>
+Line: 294
+Time: 0.002s">
+<div class="time" style="width: 0.47058823529412%"></div>
 <pre> apply mult_assoc.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 293
+Line: 294
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 294
-Time: 0.026s">
-<div class="time" style="width: 5.8165548098434%"></div>
+Line: 295
+Time: 0.023s">
+<div class="time" style="width: 5.4117647058824%"></div>
 <pre> rewrite &lt;-mult_assoc,(mult_comm (vs v)),mult_assoc.</pre>
-</div>
-<div class="code" title="File: ring_pol.v
-Line: 294
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-    rewrite IHP1;reflexivity.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
 Line: 295
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  +</pre>
-</div>
-<div class="code" title="File: ring_pol.v
-Line: 296
-Time: 0.005s">
-<div class="time" style="width: 1.1185682326622%"></div>
-<pre> symmetry;apply mult_assoc.</pre>
+    rewrite IHP1;reflexivity.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
 Line: 296
@@ -1797,19 +1791,32 @@ Time: 0s">
 </div>
 <div class="code" title="File: ring_pol.v
 Line: 297
+Time: 0.004s">
+<div class="time" style="width: 0.94117647058824%"></div>
+<pre> symmetry;apply mult_assoc.</pre>
+</div>
+<div class="code" title="File: ring_pol.v
+Line: 297
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  +</pre>
+</div>
+<div class="code" title="File: ring_pol.v
+Line: 298
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> auto.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 297
-Time: 0.009s">
-<div class="time" style="width: 2.0134228187919%"></div>
+Line: 298
+Time: 0.008s">
+<div class="time" style="width: 1.8823529411765%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 298
+Line: 299
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1817,9 +1824,9 @@ Time: 0s">
 Definition eval_mul@{} := eval_mul'@{Ularge}.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 300
-Time: 0.003s">
-<div class="time" style="width: 0.67114093959732%"></div>
+Line: 301
+Time: 0.002s">
+<div class="time" style="width: 0.47058823529412%"></div>
 <pre>
 
 Fixpoint toPol (e: Expr V) :=
@@ -1833,92 +1840,73 @@ Fixpoint toPol (e: Expr V) :=
   end.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 310
-Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
+Line: 311
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Lemma eval_toPol@{} vs : forall e : Expr V,
   eval vs (toPol e) = Quoting.eval _ vs e.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 313
+Line: 314
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 314
-Time: 0.003s">
-<div class="time" style="width: 0.67114093959732%"></div>
+Line: 315
+Time: 0.002s">
+<div class="time" style="width: 0.47058823529412%"></div>
 <pre>
 induction e as [v| | |a IHa b IHb|a IHa b IHb|a IHa];simpl.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 315
+Line: 316
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 316
-Time: 0.017s">
-<div class="time" style="width: 3.8031319910515%"></div>
+Line: 317
+Time: 0.014s">
+<div class="time" style="width: 3.2941176470588%"></div>
 <pre> rewrite (preserves_1 (f:=phi)),(preserves_0 (f:=phi)),plus_0_r,mult_1_l.</pre>
-</div>
-<div class="code" title="File: ring_pol.v
-Line: 316
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  reflexivity.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
 Line: 317
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
--</pre>
+  reflexivity.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
 Line: 318
-Time: 0.003s">
-<div class="time" style="width: 0.67114093959732%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+-</pre>
+</div>
+<div class="code" title="File: ring_pol.v
+Line: 319
+Time: 0.002s">
+<div class="time" style="width: 0.47058823529412%"></div>
 <pre> apply preserves_0.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 318
+Line: 319
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 319
-Time: 0.003s">
-<div class="time" style="width: 0.67114093959732%"></div>
+Line: 320
+Time: 0.002s">
+<div class="time" style="width: 0.47058823529412%"></div>
 <pre> apply preserves_1.</pre>
-</div>
-<div class="code" title="File: ring_pol.v
-Line: 319
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
--</pre>
-</div>
-<div class="code" title="File: ring_pol.v
-Line: 320
-Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
-<pre> rewrite eval_add,IHa,IHb.</pre>
-</div>
-<div class="code" title="File: ring_pol.v
-Line: 320
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
 Line: 320
@@ -1930,8 +1918,8 @@ Time: 0s">
 <div class="code" title="File: ring_pol.v
 Line: 321
 Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
-<pre> rewrite eval_mul,IHa,IHb.</pre>
+<div class="time" style="width: 0.23529411764706%"></div>
+<pre> rewrite eval_add,IHa,IHb.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
 Line: 321
@@ -1948,46 +1936,65 @@ Time: 0s">
 </div>
 <div class="code" title="File: ring_pol.v
 Line: 322
+Time: 0.001s">
+<div class="time" style="width: 0.23529411764706%"></div>
+<pre> rewrite eval_mul,IHa,IHb.</pre>
+</div>
+<div class="code" title="File: ring_pol.v
+Line: 322
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> reflexivity.</pre>
+</div>
+<div class="code" title="File: ring_pol.v
+Line: 322
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+-</pre>
+</div>
+<div class="code" title="File: ring_pol.v
+Line: 323
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> rewrite eval_mulC.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 322
-Time: 0.008s">
-<div class="time" style="width: 1.7897091722595%"></div>
+Line: 323
+Time: 0.006s">
+<div class="time" style="width: 1.4117647058824%"></div>
 <pre> rewrite (almostring_mor_neg (f:=phi)),preserves_1.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 322
+Line: 323
 Time: 0.001s">
-<div class="time" style="width: 0.22371364653244%"></div>
+<div class="time" style="width: 0.23529411764706%"></div>
 <pre>
   rewrite &lt;-almost_ring_neg_pr.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 323
+Line: 324
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply ap,IHa.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 323
-Time: 0.004s">
-<div class="time" style="width: 0.89485458612975%"></div>
+Line: 324
+Time: 0.003s">
+<div class="time" style="width: 0.70588235294118%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 324
-Time: 0.045s">
-<div class="time" style="width: 10.06711409396%"></div>
+Line: 325
+Time: 0.04s">
+<div class="time" style="width: 9.4117647058824%"></div>
 <pre>
 
 End content.</pre>
 </div>
 <div class="code" title="File: ring_pol.v
-Line: 327
+Line: 328
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

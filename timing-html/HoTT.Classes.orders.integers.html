@@ -31,13 +31,13 @@ pre {
 <div class="code" title="File: integers.v
 Line: 1
 Time: 0.032s">
-<div class="time" style="width: 5.4237288135593%"></div>
+<div class="time" style="width: 5.9369202226345%"></div>
 <pre>Require Import HoTT.Types.Universe HoTT.Basics.Decidable.</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 1
-Time: 0.514s">
-<div class="time" style="width: 87.118644067797%"></div>
+Time: 0.497s">
+<div class="time" style="width: 92.207792207792%"></div>
 <pre>
 Require
   HoTT.Classes.theory.integers
@@ -45,8 +45,8 @@ Require
 </div>
 <div class="code" title="File: integers.v
 Line: 4
-Time: 0.016s">
-<div class="time" style="width: 2.7118644067797%"></div>
+Time: 0.014s">
+<div class="time" style="width: 2.5974025974026%"></div>
 <pre>
 Require Import
   HoTT.Classes.interfaces.abstract_algebra
@@ -84,7 +84,7 @@ Context `{Funext} `{Univalence}.</pre>
 <div class="code" title="File: integers.v
 Line: 18
 Time: 0.002s">
-<div class="time" style="width: 0.33898305084746%"></div>
+<div class="time" style="width: 0.37105751391466%"></div>
 <pre>
 Context `{Integers Z} `{!TrivialApart Z}.</pre>
 </div>
@@ -102,7 +102,7 @@ Time: 0s">
 <div class="code" title="File: integers.v
 Line: 23
 Time: 0.002s">
-<div class="time" style="width: 0.33898305084746%"></div>
+<div class="time" style="width: 0.37105751391466%"></div>
 <pre>Lemma induction
   (P: Z -&gt; Type):
   P 0 -&gt; (forall n, 0 ≤ n -&gt; P n -&gt; P (1 + n)) -&gt; (forall n, n ≤ 0 -&gt; P n -&gt; P (n - 1)) -&gt;
@@ -124,8 +124,8 @@ intros P0 Psuc1 Psuc2 n.</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 28
-Time: 0.015s">
-<div class="time" style="width: 2.5423728813559%"></div>
+Time: 0.013s">
+<div class="time" style="width: 2.4118738404453%"></div>
 <pre>
 destruct (int_abs_sig Z nat n) as [[a A]|[a A]].</pre>
 </div>
@@ -156,8 +156,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: integers.v
 Line: 30
-Time: 0.004s">
-<div class="time" style="width: 0.67796610169492%"></div>
+Time: 0.006s">
+<div class="time" style="width: 1.113172541744%"></div>
 <pre>
   apply naturals.induction.</pre>
 </div>
@@ -171,7 +171,7 @@ Time: 0s">
 <div class="code" title="File: integers.v
 Line: 32
 Time: 0.004s">
-<div class="time" style="width: 0.67796610169492%"></div>
+<div class="time" style="width: 0.74211502782931%"></div>
 <pre> rewrite rings.preserves_0.</pre>
 </div>
 <div class="code" title="File: integers.v
@@ -195,8 +195,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: integers.v
 Line: 33
-Time: 0.01s">
-<div class="time" style="width: 1.6949152542373%"></div>
+Time: 0.008s">
+<div class="time" style="width: 1.4842300556586%"></div>
 <pre>
     rewrite rings.preserves_plus, rings.preserves_1.</pre>
 </div>
@@ -216,8 +216,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: integers.v
 Line: 36
-Time: 0.017s">
-<div class="time" style="width: 2.8813559322034%"></div>
+Time: 0.014s">
+<div class="time" style="width: 2.5974025974026%"></div>
 <pre> apply to_semiring_nonneg.</pre>
 </div>
 <div class="code" title="File: integers.v
@@ -242,8 +242,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: integers.v
 Line: 38
-Time: 0.045s">
-<div class="time" style="width: 7.6271186440678%"></div>
+Time: 0.036s">
+<div class="time" style="width: 6.6790352504638%"></div>
 <pre> rewrite &lt;-(groups.negate_involutive n), &lt;-A.</pre>
 </div>
 <div class="code" title="File: integers.v
@@ -261,8 +261,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: integers.v
 Line: 39
-Time: 0.005s">
-<div class="time" style="width: 0.84745762711864%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.74211502782931%"></div>
 <pre> apply naturals.induction.</pre>
 </div>
 <div class="code" title="File: integers.v
@@ -274,8 +274,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: integers.v
 Line: 40
-Time: 0.01s">
-<div class="time" style="width: 1.6949152542373%"></div>
+Time: 0.008s">
+<div class="time" style="width: 1.4842300556586%"></div>
 <pre> rewrite rings.preserves_0, rings.negate_0.</pre>
 </div>
 <div class="code" title="File: integers.v
@@ -299,15 +299,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: integers.v
 Line: 41
-Time: 0.011s">
-<div class="time" style="width: 1.864406779661%"></div>
+Time: 0.009s">
+<div class="time" style="width: 1.669758812616%"></div>
 <pre>
     rewrite rings.preserves_plus, rings.preserves_1.</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 42
-Time: 0.041s">
-<div class="time" style="width: 6.9491525423729%"></div>
+Time: 0.033s">
+<div class="time" style="width: 6.1224489795918%"></div>
 <pre>
     rewrite rings.negate_plus_distr, commutativity.</pre>
 </div>
@@ -327,8 +327,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: integers.v
 Line: 45
-Time: 0.053s">
-<div class="time" style="width: 8.9830508474576%"></div>
+Time: 0.049s">
+<div class="time" style="width: 9.0909090909091%"></div>
 <pre> apply naturals.negate_to_ring_nonpos.</pre>
 </div>
 <div class="code" title="File: integers.v
@@ -346,15 +346,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: integers.v
 Line: 46
-Time: 0.006s">
-<div class="time" style="width: 1.0169491525424%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.92764378478664%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 47
-Time: 0.002s">
-<div class="time" style="width: 0.33898305084746%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.18552875695733%"></div>
 <pre>
 
 Lemma induction_nonneg
@@ -377,8 +377,8 @@ intros P0 PS.</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 53
-Time: 0.003s">
-<div class="time" style="width: 0.50847457627119%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.37105751391466%"></div>
 <pre> refine (induction _ _ _ _); auto.</pre>
 </div>
 <div class="code" title="File: integers.v
@@ -390,15 +390,15 @@ intros n E1 ? E2.</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 54
-Time: 0.059s">
-<div class="time" style="width: 10%"></div>
+Time: 0.047s">
+<div class="time" style="width: 8.7198515769944%"></div>
 <pre>
 destruct (rings.is_ne_0 1).</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 55
-Time: 0.057s">
-<div class="time" style="width: 9.6610169491525%"></div>
+Time: 0.045s">
+<div class="time" style="width: 8.3487940630798%"></div>
 <pre>
 apply (antisymmetry (≤)).</pre>
 </div>
@@ -411,21 +411,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: integers.v
 Line: 57
-Time: 0.014s">
-<div class="time" style="width: 2.3728813559322%"></div>
+Time: 0.011s">
+<div class="time" style="width: 2.0408163265306%"></div>
 <pre> apply (order_reflecting ((n - 1) +)).</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 57
-Time: 0.044s">
-<div class="time" style="width: 7.4576271186441%"></div>
+Time: 0.034s">
+<div class="time" style="width: 6.3079777365492%"></div>
 <pre>
   rewrite &lt;-plus_assoc,plus_negate_l,2!plus_0_r.</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 58
-Time: 0.11s">
-<div class="time" style="width: 18.64406779661%"></div>
+Time: 0.091s">
+<div class="time" style="width: 16.883116883117%"></div>
 <pre>
   transitivity 0;trivial.</pre>
 </div>
@@ -438,28 +438,28 @@ Time: 0s">
 </div>
 <div class="code" title="File: integers.v
 Line: 60
-Time: 0.096s">
-<div class="time" style="width: 16.271186440678%"></div>
+Time: 0.075s">
+<div class="time" style="width: 13.9146567718%"></div>
 <pre> transitivity (n - 1);trivial.</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 60
-Time: 0.014s">
-<div class="time" style="width: 2.3728813559322%"></div>
+Time: 0.011s">
+<div class="time" style="width: 2.0408163265306%"></div>
 <pre>
   apply (order_reflecting (1 +)).</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 61
-Time: 0.044s">
-<div class="time" style="width: 7.4576271186441%"></div>
+Time: 0.035s">
+<div class="time" style="width: 6.4935064935065%"></div>
 <pre>
   rewrite plus_comm,&lt;-plus_assoc,plus_negate_l,plus_0_r.</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 62
-Time: 0.097s">
-<div class="time" style="width: 16.440677966102%"></div>
+Time: 0.076s">
+<div class="time" style="width: 14.100185528757%"></div>
 <pre>
   transitivity 0.</pre>
 </div>
@@ -471,15 +471,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: integers.v
 Line: 63
-Time: 0.009s">
-<div class="time" style="width: 1.5254237288136%"></div>
+Time: 0.008s">
+<div class="time" style="width: 1.4842300556586%"></div>
 <pre>
   apply le_0_2.</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 64
-Time: 0.005s">
-<div class="time" style="width: 0.84745762711864%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.74211502782931%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -507,8 +507,8 @@ intros P P0 Psuc.</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 69
-Time: 0.002s">
-<div class="time" style="width: 0.33898305084746%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.18552875695733%"></div>
 <pre> apply induction; trivial.</pre>
 </div>
 <div class="code" title="File: integers.v
@@ -533,14 +533,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: integers.v
 Line: 71
-Time: 0.003s">
-<div class="time" style="width: 0.50847457627119%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> intros;apply Psuc.</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 71
-Time: 0.038s">
-<div class="time" style="width: 6.4406779661017%"></div>
+Time: 0.035s">
+<div class="time" style="width: 6.4935064935065%"></div>
 <pre>
   rewrite plus_comm,&lt;-plus_assoc,plus_negate_l,plus_0_r.</pre>
 </div>
@@ -553,8 +553,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: integers.v
 Line: 73
-Time: 0.002s">
-<div class="time" style="width: 0.33898305084746%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.18552875695733%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -590,13 +590,13 @@ Time: 0s">
 </div>
 <div class="code" title="File: integers.v
 Line: 80
-Time: 0.01s">
-<div class="time" style="width: 1.6949152542373%"></div>
+Time: 0.008s">
+<div class="time" style="width: 1.4842300556586%"></div>
 <pre>pose (naturals_ring) as E0.</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 80
-Time: 0.59s">
+Time: 0.539s">
 <div class="time" style="width: 100%"></div>
 <pre>
 destruct (dec (integers_to_ring _ (NatPair.Z nat) x ≤
@@ -617,8 +617,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: integers.v
 Line: 83
-Time: 0.097s">
-<div class="time" style="width: 16.440677966102%"></div>
+Time: 0.077s">
+<div class="time" style="width: 14.285714285714%"></div>
 <pre> apply (order_reflecting _) in E.</pre>
 </div>
 <div class="code" title="File: integers.v
@@ -642,21 +642,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: integers.v
 Line: 84
-Time: 0.099s">
-<div class="time" style="width: 16.779661016949%"></div>
+Time: 0.079s">
+<div class="time" style="width: 14.656771799629%"></div>
 <pre> intro;apply E;apply (order_preserving _);trivial.</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 84
-Time: 0.029s">
-<div class="time" style="width: 4.9152542372881%"></div>
+Time: 0.023s">
+<div class="time" style="width: 4.2671614100186%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: integers.v
 Line: 85
-Time: 0.023s">
-<div class="time" style="width: 3.8983050847458%"></div>
+Time: 0.02s">
+<div class="time" style="width: 3.7105751391466%"></div>
 <pre>
 End integers.</pre>
 </div>
