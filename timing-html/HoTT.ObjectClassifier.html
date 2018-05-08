@@ -46,8 +46,8 @@ Time: 0.019s">
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 4
-Time: 0.019s">
-<div class="time" style="width: 100%"></div>
+Time: 0.018s">
+<div class="time" style="width: 94.736842105263%"></div>
 <pre>
 Require Import Types.Universe Types.Sigma Types.Arrow.</pre>
 </div>
@@ -111,15 +111,15 @@ Definition Fam A:=sigT (fun I:Type  =&gt; I-&gt;A).</pre>
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 15
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 5.2631578947368%"></div>
 <pre>
 Definition p2f: (A-&gt;Type)-&gt; Fam A:=  fun Q:(A-&gt;Type) =&gt; ( (sigT Q) ; @pr1 _ _).</pre>
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 16
-Time: 0.001s">
-<div class="time" style="width: 5.2631578947368%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Definition f2p: Fam A -&gt; (A-&gt;Type):=
  fun F =&gt; let (I, f) := F in (fun a =&gt; (hfiber f a)).</pre>
@@ -148,8 +148,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 22
-Time: 0.001s">
-<div class="time" style="width: 5.2631578947368%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   intros f; apply path_arrow; intros y.</pre>
 </div>
@@ -169,8 +169,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 25
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 5.2631578947368%"></div>
 <pre>
   by apply transport_path_universe_V.</pre>
 </div>
@@ -247,8 +247,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 36
-Time: 0.001s">
-<div class="time" style="width: 5.2631578947368%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   set (w:=@equiv_fibration_replacement A I f).</pre>
 </div>
@@ -317,8 +317,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 45
-Time: 0.001s">
-<div class="time" style="width: 5.2631578947368%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition topmap {B} (f:B-&gt;A) (b:B): pType :=
   Build_pType (hfiber f (f b)) (b ; idpath (f b)).</pre>
 </div>
@@ -556,8 +556,8 @@ Qed.</pre>
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 86
-Time: 0.002s">
-<div class="time" style="width: 10.526315789474%"></div>
+Time: 0.001s">
+<div class="time" style="width: 5.2631578947368%"></div>
 <pre>
 
 Definition pow2Pfam (P:forall a:A, {X :Type &amp; isP X}): PFam:=
@@ -637,8 +637,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 101
-Time: 0.015s">
-<div class="time" style="width: 78.947368421053%"></div>
+Time: 0.014s">
+<div class="time" style="width: 73.684210526316%"></div>
 <pre> apply path_sigma_hprop.</pre>
 </div>
 <div class="code" title="File: ObjectClassifier.v
