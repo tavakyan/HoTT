@@ -31,12 +31,12 @@ pre {
 <div class="code" title="File: int_abs.v
 Line: 1
 Time: 0.033s">
-<div class="time" style="width: 6.0773480662983%"></div>
+<div class="time" style="width: 5.9674502712477%"></div>
 <pre>Require Import HoTT.Types.Universe.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 1
-Time: 0.543s">
+Time: 0.553s">
 <div class="time" style="width: 100%"></div>
 <pre>
 Require Import
@@ -66,7 +66,7 @@ Context `{Funext} `{Univalence}.</pre>
 <div class="code" title="File: int_abs.v
 Line: 12
 Time: 0.006s">
-<div class="time" style="width: 1.1049723756906%"></div>
+<div class="time" style="width: 1.0849909584087%"></div>
 <pre>
 Context `{Integers Z} `{Apart Z} `{!TrivialApart Z}
   `{!FullPseudoSemiRingOrder Zle Zlt} `{Naturals N}.</pre>
@@ -83,8 +83,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: int_abs.v
 Line: 17
-Time: 0.089s">
-<div class="time" style="width: 16.390423572744%"></div>
+Time: 0.094s">
+<div class="time" style="width: 16.998191681736%"></div>
 <pre>Lemma int_abs_unique (a b : IntAbs Z N) (z : Z) :
   int_abs Z N (ia:=a) z = int_abs Z N (ia:=b) z.</pre>
 </div>
@@ -105,7 +105,7 @@ unfold int_abs.</pre>
 <div class="code" title="File: int_abs.v
 Line: 20
 Time: 0.024s">
-<div class="time" style="width: 4.4198895027624%"></div>
+<div class="time" style="width: 4.3399638336347%"></div>
 <pre>
 destruct (int_abs_sig Z N (IntAbs:=a) z) as [[n1 E1]|[n1 E1]];
 destruct (int_abs_sig Z N (IntAbs:=b) z) as [[n2 E2]|[n2 E2]].</pre>
@@ -119,14 +119,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: int_abs.v
 Line: 23
-Time: 0.04s">
-<div class="time" style="width: 7.3664825046041%"></div>
+Time: 0.042s">
+<div class="time" style="width: 7.5949367088608%"></div>
 <pre> apply (injective (naturals_to_semiring N Z)).</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 23
 Time: 0.002s">
-<div class="time" style="width: 0.3683241252302%"></div>
+<div class="time" style="width: 0.36166365280289%"></div>
 <pre> path_via z.</pre>
 </div>
 <div class="code" title="File: int_abs.v
@@ -138,36 +138,36 @@ Time: 0s">
 </div>
 <div class="code" title="File: int_abs.v
 Line: 24
-Time: 0.099s">
-<div class="time" style="width: 18.232044198895%"></div>
+Time: 0.102s">
+<div class="time" style="width: 18.444846292948%"></div>
 <pre> assert (E : n1 + n2 = 0);[|path_via 0;[|symmetry];
   apply (naturals.zero_sum _ _ E)].</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 25
 Time: 0.038s">
-<div class="time" style="width: 6.9981583793738%"></div>
+<div class="time" style="width: 6.871609403255%"></div>
 <pre>
   apply (injective (naturals_to_semiring N Z)).</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 26
 Time: 0.021s">
-<div class="time" style="width: 3.8674033149171%"></div>
+<div class="time" style="width: 3.7974683544304%"></div>
 <pre>
   rewrite preserves_0,preserves_plus.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 27
 Time: 0.001s">
-<div class="time" style="width: 0.1841620626151%"></div>
+<div class="time" style="width: 0.18083182640145%"></div>
 <pre>
   rewrite E1,E2.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 28
 Time: 0.008s">
-<div class="time" style="width: 1.4732965009208%"></div>
+<div class="time" style="width: 1.4466546112116%"></div>
 <pre>
   apply plus_negate_r.</pre>
 </div>
@@ -181,35 +181,35 @@ Time: 0s">
 <div class="code" title="File: int_abs.v
 Line: 30
 Time: 0.017s">
-<div class="time" style="width: 3.1307550644567%"></div>
+<div class="time" style="width: 3.0741410488246%"></div>
 <pre> assert (E : n1 + n2 = 0);[|path_via 0;[|symmetry];
   apply (naturals.zero_sum _ _ E)].</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 31
-Time: 0.038s">
-<div class="time" style="width: 6.9981583793738%"></div>
+Time: 0.039s">
+<div class="time" style="width: 7.0524412296564%"></div>
 <pre>
   apply (injective (naturals_to_semiring N Z)).</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 32
 Time: 0.021s">
-<div class="time" style="width: 3.8674033149171%"></div>
+<div class="time" style="width: 3.7974683544304%"></div>
 <pre>
   rewrite preserves_0,preserves_plus.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 33
 Time: 0.001s">
-<div class="time" style="width: 0.1841620626151%"></div>
+<div class="time" style="width: 0.18083182640145%"></div>
 <pre>
   rewrite E1,E2.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 34
 Time: 0.008s">
-<div class="time" style="width: 1.4732965009208%"></div>
+<div class="time" style="width: 1.4466546112116%"></div>
 <pre>
   apply plus_negate_l.</pre>
 </div>
@@ -223,26 +223,26 @@ Time: 0s">
 <div class="code" title="File: int_abs.v
 Line: 36
 Time: 0.039s">
-<div class="time" style="width: 7.1823204419889%"></div>
+<div class="time" style="width: 7.0524412296564%"></div>
 <pre> apply (injective (naturals_to_semiring N Z)).</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 36
 Time: 0.002s">
-<div class="time" style="width: 0.3683241252302%"></div>
+<div class="time" style="width: 0.36166365280289%"></div>
 <pre> path_via (- z).</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 36
 Time: 0.01s">
-<div class="time" style="width: 1.841620626151%"></div>
+<div class="time" style="width: 1.8083182640145%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 37
-Time: 0.035s">
-<div class="time" style="width: 6.4456721915285%"></div>
+Time: 0.036s">
+<div class="time" style="width: 6.5099457504521%"></div>
 <pre>
 
 Context `{!IntAbs Z N}.</pre>
@@ -250,7 +250,7 @@ Context `{!IntAbs Z N}.</pre>
 <div class="code" title="File: int_abs.v
 Line: 39
 Time: 0.001s">
-<div class="time" style="width: 0.1841620626151%"></div>
+<div class="time" style="width: 0.18083182640145%"></div>
 <pre>
 
 Context `{!SemiRingPreserving (f : N -&gt; Z)}.</pre>
@@ -258,7 +258,7 @@ Context `{!SemiRingPreserving (f : N -&gt; Z)}.</pre>
 <div class="code" title="File: int_abs.v
 Line: 41
 Time: 0.102s">
-<div class="time" style="width: 18.78453038674%"></div>
+<div class="time" style="width: 18.444846292948%"></div>
 <pre>
 
 Lemma int_abs_spec x :
@@ -280,8 +280,8 @@ unfold int_abs.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 46
-Time: 0.052s">
-<div class="time" style="width: 9.5764272559853%"></div>
+Time: 0.053s">
+<div class="time" style="width: 9.5840867992767%"></div>
 <pre> destruct (int_abs_sig Z N x) as [[n E]|[n E]].</pre>
 </div>
 <div class="code" title="File: int_abs.v
@@ -319,7 +319,7 @@ Time: 0s">
 <div class="code" title="File: int_abs.v
 Line: 48
 Time: 0.02s">
-<div class="time" style="width: 3.683241252302%"></div>
+<div class="time" style="width: 3.6166365280289%"></div>
 <pre> eapply @to_semiring_nonneg;apply _.</pre>
 </div>
 <div class="code" title="File: int_abs.v
@@ -331,8 +331,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: int_abs.v
 Line: 49
-Time: 0.019s">
-<div class="time" style="width: 3.4990791896869%"></div>
+Time: 0.02s">
+<div class="time" style="width: 3.6166365280289%"></div>
 <pre> apply (naturals.to_semiring_unique_alt _ _).</pre>
 </div>
 <div class="code" title="File: int_abs.v
@@ -363,8 +363,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: int_abs.v
 Line: 51
-Time: 0.024s">
-<div class="time" style="width: 4.4198895027624%"></div>
+Time: 0.022s">
+<div class="time" style="width: 3.9783001808318%"></div>
 <pre> apply flip_nonpos_negate.</pre>
 </div>
 <div class="code" title="File: int_abs.v
@@ -376,7 +376,7 @@ Time: 0s">
 <div class="code" title="File: int_abs.v
 Line: 51
 Time: 0.02s">
-<div class="time" style="width: 3.683241252302%"></div>
+<div class="time" style="width: 3.6166365280289%"></div>
 <pre> eapply @to_semiring_nonneg;apply _.</pre>
 </div>
 <div class="code" title="File: int_abs.v
@@ -395,20 +395,20 @@ Time: 0s">
 <div class="code" title="File: int_abs.v
 Line: 52
 Time: 0.018s">
-<div class="time" style="width: 3.3149171270718%"></div>
+<div class="time" style="width: 3.254972875226%"></div>
 <pre> apply (naturals.to_semiring_unique_alt _ _).</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 52
 Time: 0.005s">
-<div class="time" style="width: 0.92081031307551%"></div>
+<div class="time" style="width: 0.90415913200723%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 53
 Time: 0.001s">
-<div class="time" style="width: 0.1841620626151%"></div>
+<div class="time" style="width: 0.18083182640145%"></div>
 <pre>
 
 Lemma int_abs_sig_alt x :
@@ -423,20 +423,20 @@ Proof.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 57
-Time: 0.012s">
-<div class="time" style="width: 2.2099447513812%"></div>
+Time: 0.013s">
+<div class="time" style="width: 2.3508137432188%"></div>
 <pre> destruct (int_abs_spec x) as [[??]|[??]]; eauto.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 57
 Time: 0.002s">
-<div class="time" style="width: 0.3683241252302%"></div>
+<div class="time" style="width: 0.36166365280289%"></div>
 <pre> Qed.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 57
-Time: 0.052s">
-<div class="time" style="width: 9.5764272559853%"></div>
+Time: 0.053s">
+<div class="time" style="width: 9.5840867992767%"></div>
 <pre>
 
 Lemma int_abs_nat n :
@@ -451,29 +451,29 @@ Proof.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 61
-Time: 0.016s">
-<div class="time" style="width: 2.9465930018416%"></div>
+Time: 0.017s">
+<div class="time" style="width: 3.0741410488246%"></div>
 <pre>
 apply (injective f).</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 62
 Time: 0.005s">
-<div class="time" style="width: 0.92081031307551%"></div>
+<div class="time" style="width: 0.90415913200723%"></div>
 <pre>
 destruct (int_abs_spec (f n)) as [[? E]|[? E]];trivial.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 63
-Time: 0.029s">
-<div class="time" style="width: 5.3406998158379%"></div>
+Time: 0.031s">
+<div class="time" style="width: 5.6057866184448%"></div>
 <pre>
 apply naturals.negate_to_ring.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 64
 Time: 0.014s">
-<div class="time" style="width: 2.5782688766114%"></div>
+<div class="time" style="width: 2.5316455696203%"></div>
 <pre> rewrite E, involutive.</pre>
 </div>
 <div class="code" title="File: int_abs.v
@@ -485,14 +485,14 @@ Time: 0s">
 <div class="code" title="File: int_abs.v
 Line: 64
 Time: 0.002s">
-<div class="time" style="width: 0.3683241252302%"></div>
+<div class="time" style="width: 0.36166365280289%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 65
 Time: 0.046s">
-<div class="time" style="width: 8.4714548802947%"></div>
+<div class="time" style="width: 8.3182640144665%"></div>
 <pre>
 
 Lemma int_abs_negate_nat n :
@@ -507,15 +507,15 @@ Proof.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 69
-Time: 0.017s">
-<div class="time" style="width: 3.1307550644567%"></div>
+Time: 0.018s">
+<div class="time" style="width: 3.254972875226%"></div>
 <pre>
 apply (injective f).</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 70
 Time: 0.008s">
-<div class="time" style="width: 1.4732965009208%"></div>
+<div class="time" style="width: 1.4466546112116%"></div>
 <pre> destruct (int_abs_spec (-f n)) as [[? E]|[? E]].</pre>
 </div>
 <div class="code" title="File: int_abs.v
@@ -528,19 +528,19 @@ Time: 0s">
 <div class="code" title="File: int_abs.v
 Line: 71
 Time: 0.002s">
-<div class="time" style="width: 0.3683241252302%"></div>
+<div class="time" style="width: 0.36166365280289%"></div>
 <pre> symmetry.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 71
 Time: 0.031s">
-<div class="time" style="width: 5.7090239410681%"></div>
+<div class="time" style="width: 5.6057866184448%"></div>
 <pre> apply naturals.negate_to_ring.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 71
 Time: 0.003s">
-<div class="time" style="width: 0.5524861878453%"></div>
+<div class="time" style="width: 0.54249547920434%"></div>
 <pre> apply symmetry; trivial.</pre>
 </div>
 <div class="code" title="File: int_abs.v
@@ -552,8 +552,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: int_abs.v
 Line: 72
-Time: 0.014s">
-<div class="time" style="width: 2.5782688766114%"></div>
+Time: 0.015s">
+<div class="time" style="width: 2.7124773960217%"></div>
 <pre> rewrite involutive in E.</pre>
 </div>
 <div class="code" title="File: int_abs.v
@@ -565,14 +565,14 @@ Time: 0s">
 <div class="code" title="File: int_abs.v
 Line: 72
 Time: 0.003s">
-<div class="time" style="width: 0.5524861878453%"></div>
+<div class="time" style="width: 0.54249547920434%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 73
-Time: 0.104s">
-<div class="time" style="width: 19.152854511971%"></div>
+Time: 0.105s">
+<div class="time" style="width: 18.987341772152%"></div>
 <pre>
 
 Lemma int_abs_negate x :
@@ -588,7 +588,7 @@ Proof.</pre>
 <div class="code" title="File: int_abs.v
 Line: 77
 Time: 0.004s">
-<div class="time" style="width: 0.73664825046041%"></div>
+<div class="time" style="width: 0.72332730560579%"></div>
 <pre>
 destruct (int_abs_spec x) as [[_ E]|[_ E]].</pre>
 </div>
@@ -601,8 +601,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: int_abs.v
 Line: 79
-Time: 0.118s">
-<div class="time" style="width: 21.731123388582%"></div>
+Time: 0.121s">
+<div class="time" style="width: 21.880650994575%"></div>
 <pre> path_via (int_abs Z N (- f (int_abs Z N x))).</pre>
 </div>
 <div class="code" title="File: int_abs.v
@@ -634,14 +634,14 @@ Time: 0s">
 <div class="code" title="File: int_abs.v
 Line: 81
 Time: 0.003s">
-<div class="time" style="width: 0.5524861878453%"></div>
+<div class="time" style="width: 0.54249547920434%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 82
-Time: 0.051s">
-<div class="time" style="width: 9.3922651933702%"></div>
+Time: 0.049s">
+<div class="time" style="width: 8.8607594936709%"></div>
 <pre>
 
 Lemma int_abs_0_alt x : int_abs Z N x = 0 &lt;-&gt; x = 0.</pre>
@@ -669,8 +669,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: int_abs.v
 Line: 87
-Time: 0.022s">
-<div class="time" style="width: 4.0515653775322%"></div>
+Time: 0.026s">
+<div class="time" style="width: 4.7016274864376%"></div>
 <pre> destruct (int_abs_spec x) as [[_ E2]|[_ E2]];[|apply flip_negate_0];
   rewrite &lt;-E2, E1, (preserves_0 (f:=f)); trivial.</pre>
 </div>
@@ -684,7 +684,7 @@ Time: 0s">
 <div class="code" title="File: int_abs.v
 Line: 89
 Time: 0.003s">
-<div class="time" style="width: 0.5524861878453%"></div>
+<div class="time" style="width: 0.54249547920434%"></div>
 <pre> rewrite E1, &lt;-(preserves_0 (f:=f)).</pre>
 </div>
 <div class="code" title="File: int_abs.v
@@ -695,15 +695,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: int_abs.v
 Line: 89
-Time: 0.006s">
-<div class="time" style="width: 1.1049723756906%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.54249547920434%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 90
-Time: 0.049s">
-<div class="time" style="width: 9.02394106814%"></div>
+Time: 0.047s">
+<div class="time" style="width: 8.499095840868%"></div>
 <pre>
 
 Lemma int_abs_ne_0 x : int_abs Z N x &lt;&gt; 0 &lt;-&gt; x &lt;&gt; 0.</pre>
@@ -717,29 +717,29 @@ Proof.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 93
-Time: 0.002s">
-<div class="time" style="width: 0.3683241252302%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.54249547920434%"></div>
 <pre>
 destruct (int_abs_0_alt x).</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 94
 Time: 0.002s">
-<div class="time" style="width: 0.3683241252302%"></div>
+<div class="time" style="width: 0.36166365280289%"></div>
 <pre>
 split;intros E1 E2;auto.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 95
 Time: 0.001s">
-<div class="time" style="width: 0.1841620626151%"></div>
+<div class="time" style="width: 0.18083182640145%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 96
-Time: 0.046s">
-<div class="time" style="width: 8.4714548802947%"></div>
+Time: 0.047s">
+<div class="time" style="width: 8.499095840868%"></div>
 <pre>
 
 Lemma int_abs_0 : int_abs Z N 0 = 0.</pre>
@@ -754,7 +754,7 @@ Proof.</pre>
 <div class="code" title="File: int_abs.v
 Line: 99
 Time: 0.001s">
-<div class="time" style="width: 0.1841620626151%"></div>
+<div class="time" style="width: 0.18083182640145%"></div>
 <pre> apply int_abs_0_alt;trivial.</pre>
 </div>
 <div class="code" title="File: int_abs.v
@@ -765,8 +765,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: int_abs.v
 Line: 99
-Time: 0.047s">
-<div class="time" style="width: 8.6556169429098%"></div>
+Time: 0.049s">
+<div class="time" style="width: 8.8607594936709%"></div>
 <pre>
 
 Lemma int_abs_nonneg x :
@@ -788,8 +788,8 @@ intros E1.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 104
-Time: 0.005s">
-<div class="time" style="width: 0.92081031307551%"></div>
+Time: 0.006s">
+<div class="time" style="width: 1.0849909584087%"></div>
 <pre> destruct (int_abs_spec x) as [[n E2]|[n E2]];trivial.</pre>
 </div>
 <div class="code" title="File: int_abs.v
@@ -808,8 +808,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: int_abs.v
 Line: 106
-Time: 0.08s">
-<div class="time" style="width: 14.732965009208%"></div>
+Time: 0.082s">
+<div class="time" style="width: 14.828209764919%"></div>
 <pre> apply (antisymmetry (&lt;=));trivial.</pre>
 </div>
 <div class="code" title="File: int_abs.v
@@ -821,8 +821,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: int_abs.v
 Line: 107
-Time: 0.005s">
-<div class="time" style="width: 0.92081031307551%"></div>
+Time: 0.008s">
+<div class="time" style="width: 1.4466546112116%"></div>
 <pre> rewrite Hrw,int_abs_0, (preserves_0 (f:=f)).</pre>
 </div>
 <div class="code" title="File: int_abs.v
@@ -834,14 +834,14 @@ Time: 0s">
 <div class="code" title="File: int_abs.v
 Line: 107
 Time: 0.002s">
-<div class="time" style="width: 0.3683241252302%"></div>
+<div class="time" style="width: 0.36166365280289%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 108
-Time: 0.048s">
-<div class="time" style="width: 8.8397790055249%"></div>
+Time: 0.054s">
+<div class="time" style="width: 9.7649186256781%"></div>
 <pre>
 
 Lemma int_abs_nonpos x :
@@ -863,14 +863,14 @@ intros E.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 113
-Time: 0.076s">
-<div class="time" style="width: 13.996316758748%"></div>
+Time: 0.077s">
+<div class="time" style="width: 13.924050632911%"></div>
 <pre> rewrite &lt;-int_abs_negate, int_abs_nonneg; auto.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 113
 Time: 0.018s">
-<div class="time" style="width: 3.3149171270718%"></div>
+<div class="time" style="width: 3.254972875226%"></div>
 <pre>
 apply flip_nonpos_negate.</pre>
 </div>
@@ -883,14 +883,14 @@ Time: 0s">
 <div class="code" title="File: int_abs.v
 Line: 114
 Time: 0.001s">
-<div class="time" style="width: 0.1841620626151%"></div>
+<div class="time" style="width: 0.18083182640145%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 115
-Time: 0.046s">
-<div class="time" style="width: 8.4714548802947%"></div>
+Time: 0.047s">
+<div class="time" style="width: 8.499095840868%"></div>
 <pre>
 
 Lemma int_abs_1 : int_abs Z N 1 = 1.</pre>
@@ -904,35 +904,35 @@ Proof.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 118
-Time: 0.018s">
-<div class="time" style="width: 3.3149171270718%"></div>
+Time: 0.017s">
+<div class="time" style="width: 3.0741410488246%"></div>
 <pre>
 apply (injective f).</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 119
 Time: 0.003s">
-<div class="time" style="width: 0.5524861878453%"></div>
+<div class="time" style="width: 0.54249547920434%"></div>
 <pre> rewrite (preserves_1 (f:=f)).</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 119
-Time: 0.011s">
-<div class="time" style="width: 2.0257826887661%"></div>
+Time: 0.012s">
+<div class="time" style="width: 2.1699819168174%"></div>
 <pre>
 apply int_abs_nonneg; solve_propholds.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 120
 Time: 0.001s">
-<div class="time" style="width: 0.1841620626151%"></div>
+<div class="time" style="width: 0.18083182640145%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 121
-Time: 0.158s">
-<div class="time" style="width: 29.097605893186%"></div>
+Time: 0.16s">
+<div class="time" style="width: 28.933092224231%"></div>
 <pre>
 
 Lemma int_abs_nonneg_plus x y :
@@ -955,34 +955,34 @@ intros.</pre>
 <div class="code" title="File: int_abs.v
 Line: 126
 Time: 0.019s">
-<div class="time" style="width: 3.4990791896869%"></div>
+<div class="time" style="width: 3.4358047016275%"></div>
 <pre> apply (injective f).</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 126
-Time: 0.088s">
-<div class="time" style="width: 16.206261510129%"></div>
+Time: 0.089s">
+<div class="time" style="width: 16.094032549729%"></div>
 <pre>
 rewrite (preserves_plus (f:=f)), !int_abs_nonneg;auto.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 127
-Time: 0.023s">
-<div class="time" style="width: 4.2357274401473%"></div>
+Time: 0.024s">
+<div class="time" style="width: 4.3399638336347%"></div>
 <pre>
 apply nonneg_plus_compat;trivial.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 128
 Time: 0.003s">
-<div class="time" style="width: 0.5524861878453%"></div>
+<div class="time" style="width: 0.54249547920434%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 129
-Time: 0.151s">
-<div class="time" style="width: 27.80847145488%"></div>
+Time: 0.153s">
+<div class="time" style="width: 27.667269439421%"></div>
 <pre>
 
 Lemma int_abs_mult x y :
@@ -998,20 +998,20 @@ Proof.</pre>
 <div class="code" title="File: int_abs.v
 Line: 133
 Time: 0.018s">
-<div class="time" style="width: 3.3149171270718%"></div>
+<div class="time" style="width: 3.254972875226%"></div>
 <pre>
 apply (injective f).</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 134
 Time: 0.004s">
-<div class="time" style="width: 0.73664825046041%"></div>
+<div class="time" style="width: 0.72332730560579%"></div>
 <pre> rewrite (preserves_mult (f:=f)).</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 134
-Time: 0.021s">
-<div class="time" style="width: 3.8674033149171%"></div>
+Time: 0.02s">
+<div class="time" style="width: 3.6166365280289%"></div>
 <pre>
 destruct (int_abs_spec x) as [[? Ex]|[? Ex]],
    (int_abs_spec y) as [[? Ey]|[? Ey]]; rewrite Ex, Ey.</pre>
@@ -1025,14 +1025,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: int_abs.v
 Line: 137
-Time: 0.002s">
-<div class="time" style="width: 0.3683241252302%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.54249547920434%"></div>
 <pre> rewrite int_abs_nonneg;trivial.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 137
-Time: 0.015s">
-<div class="time" style="width: 2.7624309392265%"></div>
+Time: 0.016s">
+<div class="time" style="width: 2.8933092224231%"></div>
 <pre> apply nonneg_mult_compat;trivial.</pre>
 </div>
 <div class="code" title="File: int_abs.v
@@ -1045,7 +1045,7 @@ Time: 0s">
 <div class="code" title="File: int_abs.v
 Line: 138
 Time: 0.001s">
-<div class="time" style="width: 0.1841620626151%"></div>
+<div class="time" style="width: 0.18083182640145%"></div>
 <pre> rewrite int_abs_nonpos.</pre>
 </div>
 <div class="code" title="File: int_abs.v
@@ -1058,7 +1058,7 @@ Time: 0s">
 <div class="code" title="File: int_abs.v
 Line: 139
 Time: 0.009s">
-<div class="time" style="width: 1.6574585635359%"></div>
+<div class="time" style="width: 1.627486437613%"></div>
 <pre> apply negate_mult_distr_r.</pre>
 </div>
 <div class="code" title="File: int_abs.v
@@ -1071,7 +1071,7 @@ Time: 0s">
 <div class="code" title="File: int_abs.v
 Line: 140
 Time: 0.031s">
-<div class="time" style="width: 5.7090239410681%"></div>
+<div class="time" style="width: 5.6057866184448%"></div>
 <pre> apply nonneg_nonpos_mult;trivial.</pre>
 </div>
 <div class="code" title="File: int_abs.v
@@ -1084,7 +1084,7 @@ Time: 0s">
 <div class="code" title="File: int_abs.v
 Line: 141
 Time: 0.001s">
-<div class="time" style="width: 0.1841620626151%"></div>
+<div class="time" style="width: 0.18083182640145%"></div>
 <pre> rewrite int_abs_nonpos.</pre>
 </div>
 <div class="code" title="File: int_abs.v
@@ -1097,7 +1097,7 @@ Time: 0s">
 <div class="code" title="File: int_abs.v
 Line: 142
 Time: 0.009s">
-<div class="time" style="width: 1.6574585635359%"></div>
+<div class="time" style="width: 1.627486437613%"></div>
 <pre> apply negate_mult_distr_l.</pre>
 </div>
 <div class="code" title="File: int_abs.v
@@ -1110,7 +1110,7 @@ Time: 0s">
 <div class="code" title="File: int_abs.v
 Line: 143
 Time: 0.026s">
-<div class="time" style="width: 4.7882136279926%"></div>
+<div class="time" style="width: 4.7016274864376%"></div>
 <pre> apply nonpos_nonneg_mult;trivial.</pre>
 </div>
 <div class="code" title="File: int_abs.v
@@ -1123,7 +1123,7 @@ Time: 0s">
 <div class="code" title="File: int_abs.v
 Line: 144
 Time: 0.001s">
-<div class="time" style="width: 0.1841620626151%"></div>
+<div class="time" style="width: 0.18083182640145%"></div>
 <pre> rewrite int_abs_nonneg.</pre>
 </div>
 <div class="code" title="File: int_abs.v
@@ -1136,7 +1136,7 @@ Time: 0s">
 <div class="code" title="File: int_abs.v
 Line: 145
 Time: 0.012s">
-<div class="time" style="width: 2.2099447513812%"></div>
+<div class="time" style="width: 2.1699819168174%"></div>
 <pre> symmetry;apply negate_mult_negate.</pre>
 </div>
 <div class="code" title="File: int_abs.v
@@ -1149,20 +1149,20 @@ Time: 0s">
 <div class="code" title="File: int_abs.v
 Line: 146
 Time: 0.026s">
-<div class="time" style="width: 4.7882136279926%"></div>
+<div class="time" style="width: 4.7016274864376%"></div>
 <pre> apply nonpos_mult;trivial.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 146
 Time: 0.01s">
-<div class="time" style="width: 1.841620626151%"></div>
+<div class="time" style="width: 1.8083182640145%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: int_abs.v
 Line: 147
 Time: 0.039s">
-<div class="time" style="width: 7.1823204419889%"></div>
+<div class="time" style="width: 7.0524412296564%"></div>
 <pre>
 End contents.</pre>
 </div>
