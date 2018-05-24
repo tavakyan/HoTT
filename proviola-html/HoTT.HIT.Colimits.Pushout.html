@@ -998,12 +998,12 @@
           
 
             i = 196;
-            data = "1 subgoal (ID 230)	  	  H : Funext	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  Y : Type	  Co : forall i : PO_graph.(graph0), (span f g).(diagram0) i -> Y	  Co' : forall (i j : PO_graph.(graph0)) (g0 : PO_graph.(graph1) i j)	        (x : (span f g).(diagram0) i),	        Co j ((span f g).(diagram1) i j g0 x) = Co i x	  ============================	  forall i : Unit + Bool,	  (fun x : match i with	           | inl _ => A	           | inr true => B	           | inr false => C	           end =>	   pushout_rec Y	     (sum_rect (fun _ : B + C => Y) (Co (inr true)) (Co (inr false)))	     (popp' {| q := Co; qq := Co' |})	     (match	        i as s	        return	          (match s with	           | inl _ => A	           | inr true => B	           | inr false => C	           end -> pushout f g)	      with	      | inl _ => fun x0 : A => push (inr (g x0))	      | inr b =>	          if b as b0 return ((if b0 then B else C) -> pushout f g)	          then fun x0 : B => push (inl x0)	          else fun x0 : C => push (inr x0)	      end x)) == Co i	3 subgoals (ID 251)	  	  H : Funext	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  Y : Type	  Co : forall i : PO_graph.(graph0), (span f g).(diagram0) i -> Y	  Co' : forall (i j : PO_graph.(graph0)) (g0 : PO_graph.(graph1) i j)	        (x : (span f g).(diagram0) i),	        Co j ((span f g).(diagram1) i j g0 x) = Co i x	  x : A	  ============================	  Co (inr false) (g x) = Co (inl tt) x		subgoal 2 (ID 252) is:	 Co (inr true) x = Co (inr true) x	subgoal 3 (ID 253) is:	 Co (inr false) x = Co (inr false) x	";
+            data = "1 subgoal (ID 230)	  	  H : Funext	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  Y : Type	  Co : forall i : PO_graph.(graph0), (span f g).(diagram0) i -> Y	  Co' : forall (i j : PO_graph.(graph0)) (g0 : PO_graph.(graph1) i j)	        (x : (span f g).(diagram0) i),	        Co j ((span f g).(diagram1) i j g0 x) = Co i x	  ============================	  forall i : Unit + Bool,	  (fun x : match i with	           | inl _ => A	           | inr true => B	           | inr false => C	           end =>	   pushout_rec Y	     (sum_rect (fun _ : B + C => Y) (Co (inr true)) (Co (inr false)))	     (popp' {| q := Co; qq := Co' |})	     (match	        i as s	        return	          (match s with	           | inl _ => A	           | inr true => B	           | inr false => C	           end -> pushout f g)	      with	      | inl _ => fun x0 : A => push (inr (g x0))	      | inr b =>	          if b as b0 return ((if b0 then B else C) -> pushout f g)	          then fun x0 : B => push (inl x0)	          else fun x0 : C => push (inr x0)	      end x)) == Co i	";
             responses[i]=data;
           
 
             i = 197;
-            data = "2 subgoals (ID 252)	  	  H : Funext	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  Y : Type	  Co : forall i : PO_graph.(graph0), (span f g).(diagram0) i -> Y	  Co' : forall (i j : PO_graph.(graph0)) (g0 : PO_graph.(graph1) i j)	        (x : (span f g).(diagram0) i),	        Co j ((span f g).(diagram1) i j g0 x) = Co i x	  x : B	  ============================	  Co (inr true) x = Co (inr true) x		subgoal 2 (ID 253) is:	 Co (inr false) x = Co (inr false) x	";
+            data = "3 subgoals (ID 251)	  	  H : Funext	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  Y : Type	  Co : forall i : PO_graph.(graph0), (span f g).(diagram0) i -> Y	  Co' : forall (i j : PO_graph.(graph0)) (g0 : PO_graph.(graph1) i j)	        (x : (span f g).(diagram0) i),	        Co j ((span f g).(diagram1) i j g0 x) = Co i x	  x : A	  ============================	  Co (inr false) (g x) = Co (inl tt) x		subgoal 2 (ID 252) is:	 Co (inr true) x = Co (inr true) x	subgoal 3 (ID 253) is:	 Co (inr false) x = Co (inr false) x	2 subgoals (ID 252)	  	  H : Funext	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  Y : Type	  Co : forall i : PO_graph.(graph0), (span f g).(diagram0) i -> Y	  Co' : forall (i j : PO_graph.(graph0)) (g0 : PO_graph.(graph1) i j)	        (x : (span f g).(diagram0) i),	        Co j ((span f g).(diagram1) i j g0 x) = Co i x	  x : B	  ============================	  Co (inr true) x = Co (inr true) x		subgoal 2 (ID 253) is:	 Co (inr false) x = Co (inr false) x	";
             responses[i]=data;
           
 
@@ -1248,12 +1248,12 @@
 </div>
 <div class="goal" id="goal0_3_3"><pre><span></span></pre></div>
 <div class="doc" scenenumber="5">
-<a name="lab505"></a><h1 class="section">Pushout as a colimit</h1>
+<a name="lab507"></a><h1 class="section">Pushout as a colimit</h1>
 <div class="doc" scenenumber="4"> </div>
 
  In this file, we define <span class="inlinecode"><a class="idref" href="HoTT.HIT.Colimits.Pushout.html#PO"><span class="id" title="definition">PO</span></a></span> the pushout of two maps as the colimit of a particuliar diagram, and then show that it is equivalent to <span class="inlinecode"><a class="idref" href="HoTT.HIT.Pushout.html#pushout"><span class="id" title="definition">pushout</span></a></span> the primitive pushout defined as an HIT. 
 <div class="doc" scenenumber="10"> </div>
-<a name="lab506"></a><h2 class="section"><span class="inlinecode"><a class="idref" href="HoTT.HIT.Colimits.Pushout.html#PO"><span class="id" title="definition">PO</span></a></span></h2>
+<a name="lab508"></a><h2 class="section"><span class="inlinecode"><a class="idref" href="HoTT.HIT.Colimits.Pushout.html#PO"><span class="id" title="definition">PO</span></a></span></h2>
 <div class="doc" scenenumber="15"> </div>
 
  The shape of a pushout diagram. 
@@ -1942,7 +1942,7 @@ A nice property: the pushout of an equivalence is an equivalence.
 </div>
 <div class="goal" id="goal0_3_19"><pre><span></span></pre></div>
 <div class="doc" scenenumber="21">
-<a name="lab507"></a><h2 class="section">Equivalence with <span class="inlinecode"><a class="idref" href="HoTT.HIT.Pushout.html#pushout"><span class="id" title="definition">pushout</span></a></span>
+<a name="lab509"></a><h2 class="section">Equivalence with <span class="inlinecode"><a class="idref" href="HoTT.HIT.Pushout.html#pushout"><span class="id" title="definition">pushout</span></a></span>
 </h2>
 </div>
 <div scenenumber="23" class="code">

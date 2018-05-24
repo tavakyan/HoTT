@@ -1508,42 +1508,42 @@
           
 
             i = 298;
-            data = "<infomsg>isequiv_precompose is defined</infomsg>	";
+            data = "1 subgoal (ID 888)	  	  A : Type	  P : A -> Type	  H : forall x : A, Contr (P x)	  ============================	  IsEquiv pr1	";
             responses[i]=data;
           
 
             i = 299;
-            data = "<infomsg>equiv_precompose is defined</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
             i = 300;
-            data = "<infomsg>equiv_precompose' is defined</infomsg>	";
+            data = "1 subgoal (ID 922)	  	  A : Type	  P : A -> Type	  H : forall x : A, Contr (P x)	  ============================	  forall x : {x : _ & P x},	  1 =	  ap pr1	    (ap (exist P x.(proj1_sig))	       ((H (x.(proj1_sig); x.(proj2_sig)).1).(contr) x.(proj2_sig)))	";
             responses[i]=data;
           
 
             i = 301;
-            data = "<infomsg>isequiv_postcompose is defined</infomsg>	";
+            data = "1 subgoal (ID 927)	  	  A : Type	  P : A -> Type	  H : forall x : A, Contr (P x)	  x : A	  y : P x	  ============================	  1 = ap pr1 (ap (exist P x) ((H (x; y).1).(contr) y))	";
             responses[i]=data;
           
 
             i = 302;
-            data = "<infomsg>equiv_postcompose is defined</infomsg>	";
+            data = "1 subgoal (ID 931)	  	  A : Type	  P : A -> Type	  H : forall x : A, Contr (P x)	  x : A	  y : P x	  ============================	  1 = ap (fun x0 : P x => (x; x0).1) ((H (x; y).1).(contr) y)	";
             responses[i]=data;
           
 
             i = 303;
-            data = "<infomsg>equiv_postcompose' is defined</infomsg>	";
+            data = "No more subgoals.	";
             responses[i]=data;
           
 
             i = 304;
-            data = "";
+            data = "<infomsg>isequiv_pr1 is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 305;
-            data = "";
+            data = "<infomsg>equiv_pr1 is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -1558,7 +1558,7 @@
           
 
             i = 308;
-            data = "1 subgoal (ID 1312)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  ============================	  IsEquiv f	";
+            data = "";
             responses[i]=data;
           
 
@@ -1568,152 +1568,152 @@
           
 
             i = 310;
-            data = "2 subgoals (ID 1349)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  ============================	  forall (C D : Type) (Ceq : IsEquiv (precomp C)) 	  (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	  (fun x : B => k (Ceq.(equiv_inv) h x)) =	  Deq.(equiv_inv) (fun x : A => k (h x))		subgoal 2 (ID 1351) is:	 IsEquiv f	";
+            data = "<infomsg>isequiv_precompose is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 311;
-            data = "1 subgoal (ID 1349)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  ============================	  forall (C D : Type) (Ceq : IsEquiv (precomp C)) 	  (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	  (fun x : B => k (Ceq.(equiv_inv) h x)) =	  Deq.(equiv_inv) (fun x : A => k (h x))	1 subgoal (ID 1357)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  C : Type	  D : Type	  Ceq : IsEquiv (precomp C)	  Deq : IsEquiv (precomp D)	  k : C -> D	  h : A -> C	  ============================	  (fun x : B => k (Ceq.(equiv_inv) h x)) =	  Deq.(equiv_inv) (fun x : A => k (h x))	";
+            data = "<infomsg>equiv_precompose is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 312;
-            data = "2 subgoals (ID 1402)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  C : Type	  D : Type	  Ceq : IsEquiv (precomp C)	  Deq : IsEquiv (precomp D)	  k : C -> D	  h : A -> C	  ============================	  (fun x : B => k (Ceq.(equiv_inv) h x)) =	  Deq.(equiv_inv) (k o precomp C (Ceq.(equiv_inv) h))		subgoal 2 (ID 1403) is:	 Deq.(equiv_inv) (k o precomp C (Ceq.(equiv_inv) h)) =	 Deq.(equiv_inv) (fun x : A => k (h x))	";
+            data = "<infomsg>equiv_precompose' is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 313;
-            data = "1 subgoal (ID 1402)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  C : Type	  D : Type	  Ceq : IsEquiv (precomp C)	  Deq : IsEquiv (precomp D)	  k : C -> D	  h : A -> C	  ============================	  (fun x : B => k (Ceq.(equiv_inv) h x)) =	  Deq.(equiv_inv) (k o precomp C (Ceq.(equiv_inv) h))	2 subgoals (ID 1448)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  C : Type	  D : Type	  Ceq : IsEquiv (precomp C)	  Deq : IsEquiv (precomp D)	  k : C -> D	  h : A -> C	  ============================	  (fun x : B => k (Ceq.(equiv_inv) h x)) =	  Deq.(equiv_inv) (precomp D (k o Ceq.(equiv_inv) h))		subgoal 2 (ID 1449) is:	 Deq.(equiv_inv) (precomp D (k o Ceq.(equiv_inv) h)) =	 Deq.(equiv_inv) (k o precomp C (Ceq.(equiv_inv) h))	";
+            data = "<infomsg>isequiv_postcompose is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 314;
-            data = "1 subgoal (ID 1448)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  C : Type	  D : Type	  Ceq : IsEquiv (precomp C)	  Deq : IsEquiv (precomp D)	  k : C -> D	  h : A -> C	  ============================	  (fun x : B => k (Ceq.(equiv_inv) h x)) =	  Deq.(equiv_inv) (precomp D (k o Ceq.(equiv_inv) h))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	3 subgoals (ID 1449)		subgoal 1 (ID 1449) is:	 Deq.(equiv_inv) (precomp D (k o Ceq.(equiv_inv) h)) =	 Deq.(equiv_inv) (k o precomp C (Ceq.(equiv_inv) h))	subgoal 2 (ID 1403) is:	 Deq.(equiv_inv) (k o precomp C (Ceq.(equiv_inv) h)) =	 Deq.(equiv_inv) (fun x : A => k (h x))	subgoal 3 (ID 1351) is:	 IsEquiv f	";
+            data = "<infomsg>equiv_postcompose is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 315;
-            data = "1 subgoal (ID 1449)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  C : Type	  D : Type	  Ceq : IsEquiv (precomp C)	  Deq : IsEquiv (precomp D)	  k : C -> D	  h : A -> C	  ============================	  Deq.(equiv_inv) (precomp D (k o Ceq.(equiv_inv) h)) =	  Deq.(equiv_inv) (k o precomp C (Ceq.(equiv_inv) h))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 1403)		subgoal 1 (ID 1403) is:	 Deq.(equiv_inv) (k o precomp C (Ceq.(equiv_inv) h)) =	 Deq.(equiv_inv) (fun x : A => k (h x))	subgoal 2 (ID 1351) is:	 IsEquiv f	";
+            data = "<infomsg>equiv_postcompose' is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 316;
-            data = "1 subgoal (ID 1403)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  C : Type	  D : Type	  Ceq : IsEquiv (precomp C)	  Deq : IsEquiv (precomp D)	  k : C -> D	  h : A -> C	  ============================	  Deq.(equiv_inv) (k o precomp C (Ceq.(equiv_inv) h)) =	  Deq.(equiv_inv) (fun x : A => k (h x))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 1351)		subgoal 1 (ID 1351) is:	 IsEquiv f	1 subgoal (ID 1351)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o Ceq.(equiv_inv) h = Deq.(equiv_inv) (k o h)	  ============================	  IsEquiv f	2 subgoals (ID 1484)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o Ceq.(equiv_inv) h = Deq.(equiv_inv) (k o h)	  ============================	  Sect (Aeq.(equiv_inv) idmap) f		subgoal 2 (ID 1485) is:	 Sect f (Aeq.(equiv_inv) idmap)	";
+            data = "";
             responses[i]=data;
           
 
             i = 317;
-            data = "1 subgoal (ID 1484)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o Ceq.(equiv_inv) h = Deq.(equiv_inv) (k o h)	  ============================	  Sect (Aeq.(equiv_inv) idmap) f	1 subgoal (ID 1487)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o Ceq.(equiv_inv) h = Deq.(equiv_inv) (k o h)	  x : B	  ============================	  f (Aeq.(equiv_inv) idmap x) = x	";
+            data = "";
             responses[i]=data;
           
 
             i = 318;
-            data = "1 subgoal (ID 1507)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o Ceq.(equiv_inv) h = Deq.(equiv_inv) (k o h)	  x : B	  ============================	  (f o Aeq.(equiv_inv) idmap) x = idmap x	";
+            data = "";
             responses[i]=data;
           
 
             i = 319;
-            data = "1 subgoal (ID 1512)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o Ceq.(equiv_inv) h = Deq.(equiv_inv) (k o h)	  x : B	  ============================	  (fun x0 : B => f (Aeq.(equiv_inv) idmap x0)) = idmap	";
+            data = "";
             responses[i]=data;
           
 
             i = 320;
-            data = "1 subgoal (ID 1513)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o Ceq.(equiv_inv) h = Deq.(equiv_inv) (k o h)	  x : B	  ============================	  Beq.(equiv_inv) (fun x0 : A => f x0) = idmap	";
+            data = "1 subgoal (ID 1332)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  ============================	  IsEquiv f	";
             responses[i]=data;
           
 
             i = 321;
-            data = "1 subgoal (ID 1524)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o Ceq.(equiv_inv) h = Deq.(equiv_inv) (k o h)	  x : B	  ============================	  Beq.(equiv_inv) (precomp B idmap) = idmap	";
+            data = "";
             responses[i]=data;
           
 
             i = 322;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1485)		subgoal 1 (ID 1485) is:	 Sect f (Aeq.(equiv_inv) idmap)	";
+            data = "2 subgoals (ID 1369)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  ============================	  forall (C D : Type) (Ceq : IsEquiv (precomp C)) 	  (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	  (fun x : B => k (Ceq.(equiv_inv) h x)) =	  Deq.(equiv_inv) (fun x : A => k (h x))		subgoal 2 (ID 1371) is:	 IsEquiv f	";
             responses[i]=data;
           
 
             i = 323;
-            data = "1 subgoal (ID 1485)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o Ceq.(equiv_inv) h = Deq.(equiv_inv) (k o h)	  ============================	  Sect f (Aeq.(equiv_inv) idmap)	1 subgoal (ID 1528)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o Ceq.(equiv_inv) h = Deq.(equiv_inv) (k o h)	  x : A	  ============================	  Aeq.(equiv_inv) idmap (f x) = x	";
+            data = "1 subgoal (ID 1369)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  ============================	  forall (C D : Type) (Ceq : IsEquiv (precomp C)) 	  (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	  (fun x : B => k (Ceq.(equiv_inv) h x)) =	  Deq.(equiv_inv) (fun x : A => k (h x))	1 subgoal (ID 1377)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  C : Type	  D : Type	  Ceq : IsEquiv (precomp C)	  Deq : IsEquiv (precomp D)	  k : C -> D	  h : A -> C	  ============================	  (fun x : B => k (Ceq.(equiv_inv) h x)) =	  Deq.(equiv_inv) (fun x : A => k (h x))	";
             responses[i]=data;
           
 
             i = 324;
-            data = "1 subgoal (ID 1539)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o Ceq.(equiv_inv) h = Deq.(equiv_inv) (k o h)	  x : A	  ============================	  precomp A (Aeq.(equiv_inv) idmap) x = idmap x	";
+            data = "2 subgoals (ID 1422)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  C : Type	  D : Type	  Ceq : IsEquiv (precomp C)	  Deq : IsEquiv (precomp D)	  k : C -> D	  h : A -> C	  ============================	  (fun x : B => k (Ceq.(equiv_inv) h x)) =	  Deq.(equiv_inv) (k o precomp C (Ceq.(equiv_inv) h))		subgoal 2 (ID 1423) is:	 Deq.(equiv_inv) (k o precomp C (Ceq.(equiv_inv) h)) =	 Deq.(equiv_inv) (fun x : A => k (h x))	";
             responses[i]=data;
           
 
             i = 325;
-            data = "No more subgoals.	";
+            data = "1 subgoal (ID 1422)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  C : Type	  D : Type	  Ceq : IsEquiv (precomp C)	  Deq : IsEquiv (precomp D)	  k : C -> D	  h : A -> C	  ============================	  (fun x : B => k (Ceq.(equiv_inv) h x)) =	  Deq.(equiv_inv) (k o precomp C (Ceq.(equiv_inv) h))	2 subgoals (ID 1468)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  C : Type	  D : Type	  Ceq : IsEquiv (precomp C)	  Deq : IsEquiv (precomp D)	  k : C -> D	  h : A -> C	  ============================	  (fun x : B => k (Ceq.(equiv_inv) h x)) =	  Deq.(equiv_inv) (precomp D (k o Ceq.(equiv_inv) h))		subgoal 2 (ID 1469) is:	 Deq.(equiv_inv) (precomp D (k o Ceq.(equiv_inv) h)) =	 Deq.(equiv_inv) (k o precomp C (Ceq.(equiv_inv) h))	";
             responses[i]=data;
           
 
             i = 326;
-            data = "<infomsg>isequiv_isequiv_precompose is defined</infomsg>	";
+            data = "1 subgoal (ID 1468)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  C : Type	  D : Type	  Ceq : IsEquiv (precomp C)	  Deq : IsEquiv (precomp D)	  k : C -> D	  h : A -> C	  ============================	  (fun x : B => k (Ceq.(equiv_inv) h x)) =	  Deq.(equiv_inv) (precomp D (k o Ceq.(equiv_inv) h))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	3 subgoals (ID 1469)		subgoal 1 (ID 1469) is:	 Deq.(equiv_inv) (precomp D (k o Ceq.(equiv_inv) h)) =	 Deq.(equiv_inv) (k o precomp C (Ceq.(equiv_inv) h))	subgoal 2 (ID 1423) is:	 Deq.(equiv_inv) (k o precomp C (Ceq.(equiv_inv) h)) =	 Deq.(equiv_inv) (fun x : A => k (h x))	subgoal 3 (ID 1371) is:	 IsEquiv f	";
             responses[i]=data;
           
 
             i = 327;
-            data = "";
+            data = "1 subgoal (ID 1469)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  C : Type	  D : Type	  Ceq : IsEquiv (precomp C)	  Deq : IsEquiv (precomp D)	  k : C -> D	  h : A -> C	  ============================	  Deq.(equiv_inv) (precomp D (k o Ceq.(equiv_inv) h)) =	  Deq.(equiv_inv) (k o precomp C (Ceq.(equiv_inv) h))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 1423)		subgoal 1 (ID 1423) is:	 Deq.(equiv_inv) (k o precomp C (Ceq.(equiv_inv) h)) =	 Deq.(equiv_inv) (fun x : A => k (h x))	subgoal 2 (ID 1371) is:	 IsEquiv f	";
             responses[i]=data;
           
 
             i = 328;
-            data = "";
+            data = "1 subgoal (ID 1423)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  C : Type	  D : Type	  Ceq : IsEquiv (precomp C)	  Deq : IsEquiv (precomp D)	  k : C -> D	  h : A -> C	  ============================	  Deq.(equiv_inv) (k o precomp C (Ceq.(equiv_inv) h)) =	  Deq.(equiv_inv) (fun x : A => k (h x))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 1371)		subgoal 1 (ID 1371) is:	 IsEquiv f	1 subgoal (ID 1371)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o Ceq.(equiv_inv) h = Deq.(equiv_inv) (k o h)	  ============================	  IsEquiv f	2 subgoals (ID 1504)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o Ceq.(equiv_inv) h = Deq.(equiv_inv) (k o h)	  ============================	  Sect (Aeq.(equiv_inv) idmap) f		subgoal 2 (ID 1505) is:	 Sect f (Aeq.(equiv_inv) idmap)	";
             responses[i]=data;
           
 
             i = 329;
-            data = "";
+            data = "1 subgoal (ID 1504)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o Ceq.(equiv_inv) h = Deq.(equiv_inv) (k o h)	  ============================	  Sect (Aeq.(equiv_inv) idmap) f	1 subgoal (ID 1507)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o Ceq.(equiv_inv) h = Deq.(equiv_inv) (k o h)	  x : B	  ============================	  f (Aeq.(equiv_inv) idmap x) = x	";
             responses[i]=data;
           
 
             i = 330;
-            data = "";
+            data = "1 subgoal (ID 1527)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o Ceq.(equiv_inv) h = Deq.(equiv_inv) (k o h)	  x : B	  ============================	  (f o Aeq.(equiv_inv) idmap) x = idmap x	";
             responses[i]=data;
           
 
             i = 331;
-            data = "";
+            data = "1 subgoal (ID 1532)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o Ceq.(equiv_inv) h = Deq.(equiv_inv) (k o h)	  x : B	  ============================	  (fun x0 : B => f (Aeq.(equiv_inv) idmap x0)) = idmap	";
             responses[i]=data;
           
 
             i = 332;
-            data = "";
+            data = "1 subgoal (ID 1533)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o Ceq.(equiv_inv) h = Deq.(equiv_inv) (k o h)	  x : B	  ============================	  Beq.(equiv_inv) (fun x0 : A => f x0) = idmap	";
             responses[i]=data;
           
 
             i = 333;
-            data = "";
+            data = "1 subgoal (ID 1544)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o Ceq.(equiv_inv) h = Deq.(equiv_inv) (k o h)	  x : B	  ============================	  Beq.(equiv_inv) (precomp B idmap) = idmap	";
             responses[i]=data;
           
 
             i = 334;
-            data = "";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1505)		subgoal 1 (ID 1505) is:	 Sect f (Aeq.(equiv_inv) idmap)	";
             responses[i]=data;
           
 
             i = 335;
-            data = "";
+            data = "1 subgoal (ID 1505)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o Ceq.(equiv_inv) h = Deq.(equiv_inv) (k o h)	  ============================	  Sect f (Aeq.(equiv_inv) idmap)	1 subgoal (ID 1548)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o Ceq.(equiv_inv) h = Deq.(equiv_inv) (k o h)	  x : A	  ============================	  Aeq.(equiv_inv) idmap (f x) = x	";
             responses[i]=data;
           
 
             i = 336;
-            data = "";
+            data = "1 subgoal (ID 1559)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o Ceq.(equiv_inv) h = Deq.(equiv_inv) (k o h)	  x : A	  ============================	  precomp A (Aeq.(equiv_inv) idmap) x = idmap x	";
             responses[i]=data;
           
 
             i = 337;
-            data = "";
+            data = "No more subgoals.	";
             responses[i]=data;
           
 
             i = 338;
-            data = "";
+            data = "<infomsg>isequiv_isequiv_precompose is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 339;
-            data = "<infomsg>isequiv_ap is defined</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
@@ -1773,7 +1773,7 @@
           
 
             i = 351;
-            data = "";
+            data = "<infomsg>isequiv_ap is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -1898,7 +1898,7 @@
           
 
             i = 376;
-            data = "<infomsg>equiv_ind is defined</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
@@ -1908,7 +1908,7 @@
           
 
             i = 378;
-            data = "1 subgoal (ID 1599)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  P : B -> Type	  df : forall x : A, P (f x)	  x : A	  ============================	  equiv_ind f P df (f x) = df x	";
+            data = "";
             responses[i]=data;
           
 
@@ -1918,27 +1918,27 @@
           
 
             i = 380;
-            data = "1 subgoal (ID 1600)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  P : B -> Type	  df : forall x : A, P (f x)	  x : A	  ============================	  transport P (H.(eisretr) (f x)) (df (H.(equiv_inv) (f x))) = df x	";
+            data = "";
             responses[i]=data;
           
 
             i = 381;
-            data = "1 subgoal (ID 1603)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  P : B -> Type	  df : forall x : A, P (f x)	  x : A	  ============================	  transport P (ap f (H.(eissect) x)) (df (H.(equiv_inv) (f x))) = df x	";
+            data = "";
             responses[i]=data;
           
 
             i = 382;
-            data = "1 subgoal (ID 1610)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  P : B -> Type	  df : forall x : A, P (f x)	  x : A	  ============================	  transport (fun x0 : A => P (f x0)) (H.(eissect) x)	    (df (H.(equiv_inv) (f x))) = df x	";
+            data = "";
             responses[i]=data;
           
 
             i = 383;
-            data = "No more subgoals.	";
+            data = "";
             responses[i]=data;
           
 
             i = 384;
-            data = "<infomsg>equiv_ind_comp is defined</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
@@ -1958,7 +1958,7 @@
           
 
             i = 388;
-            data = "";
+            data = "<infomsg>equiv_ind is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -1968,37 +1968,37 @@
           
 
             i = 390;
-            data = "";
+            data = "1 subgoal (ID 1619)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  P : B -> Type	  df : forall x : A, P (f x)	  x : A	  ============================	  equiv_ind f P df (f x) = df x	";
             responses[i]=data;
           
 
             i = 391;
-            data = "<infomsg>equiv_intro is defined</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
             i = 392;
-            data = "";
+            data = "1 subgoal (ID 1620)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  P : B -> Type	  df : forall x : A, P (f x)	  x : A	  ============================	  transport P (H.(eisretr) (f x)) (df (H.(equiv_inv) (f x))) = df x	";
             responses[i]=data;
           
 
             i = 393;
-            data = "";
+            data = "1 subgoal (ID 1623)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  P : B -> Type	  df : forall x : A, P (f x)	  x : A	  ============================	  transport P (ap f (H.(eissect) x)) (df (H.(equiv_inv) (f x))) = df x	";
             responses[i]=data;
           
 
             i = 394;
-            data = "";
+            data = "1 subgoal (ID 1630)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  P : B -> Type	  df : forall x : A, P (f x)	  x : A	  ============================	  transport (fun x0 : A => P (f x0)) (H.(eissect) x)	    (df (H.(equiv_inv) (f x))) = df x	";
             responses[i]=data;
           
 
             i = 395;
-            data = "";
+            data = "No more subgoals.	";
             responses[i]=data;
           
 
             i = 396;
-            data = "";
+            data = "<infomsg>equiv_ind_comp is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -2033,7 +2033,7 @@
           
 
             i = 403;
-            data = "";
+            data = "<infomsg>equiv_intro is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -2083,12 +2083,12 @@
           
 
             i = 413;
-            data = "<infomsg>equiv_composeR' is defined</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
             i = 414;
-            data = "<infomsg>equiv_via is defined</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
@@ -2143,12 +2143,12 @@
           
 
             i = 425;
-            data = "<infomsg>ev_equiv is defined</infomsg>	";
+            data = "<infomsg>equiv_composeR' is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 426;
-            data = "";
+            data = "<infomsg>equiv_via is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -2198,6 +2198,66 @@
           
 
             i = 436;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 437;
+            data = "<infomsg>ev_equiv is defined</infomsg>	";
+            responses[i]=data;
+          
+
+            i = 438;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 439;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 440;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 441;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 442;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 443;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 444;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 445;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 446;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 447;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 448;
             data = "";
             responses[i]=data;
           
@@ -3277,13 +3337,76 @@ Any two contractible types are equivalent.
 </div>
 <div class="goal" id="goal0_3_79"><pre><span></span></pre></div>
 <div class="doc" scenenumber="81">
-Assuming function extensionality, composing with an equivalence is itself an equivalence 
+The projection from the sum of a family of contractible types is an equivalence. 
 </div>
 <div scenenumber="83" class="code">
 <span class="command" onmouseout="
       mouseout('0_3_83');
       " onmouseover="
       mouseover(298, '0_3_83');
+      ">
+<span class="id" title="keyword">Global Instance</span> <a name="isequiv_pr1"><span class="id" title="instance">isequiv_pr1</span></a> {<span class="id" title="var">A</span> : <span class="id" title="keyword">Type</span>} (<span class="id" title="var">P</span> : <a class="idref" href="HoTT.Basics.Equivalences.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>) `{<a class="idref" href="HoTT.Basics.Notations.html#d2ec56b4b399745cfaad1420e500e21b"><span class="id" title="notation">∀</span></a> <span class="id" title="var">x</span><a class="idref" href="HoTT.Basics.Notations.html#d2ec56b4b399745cfaad1420e500e21b"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Basics.Overture.html#Contr"><span class="id" title="abbreviation">Contr</span></a> (<a class="idref" href="HoTT.Basics.Equivalences.html#P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#x"><span class="id" title="variable">x</span></a>)}<br>
+  : <a class="idref" href="HoTT.Basics.Overture.html#IsEquiv"><span class="id" title="class">IsEquiv</span></a> (@<a class="idref" href="HoTT.Basics.Overture.html#pr1"><span class="id" title="abbreviation">pr1</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#P"><span class="id" title="variable">P</span></a>).</span><span class="command" onmouseout="
+      mouseout('0_3_83');
+      " onmouseover="
+      mouseover(299, '0_3_83');
+      "><br>
+<span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_83');
+      " onmouseover="
+      mouseover(300, '0_3_83');
+      "><br>
+  <span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.Basics.Overture.html#BuildIsEquiv"><span class="id" title="constructor">BuildIsEquiv</span></a><br>
+           <span class="id" title="var">_</span> <span class="id" title="var">_</span> (@<a class="idref" href="HoTT.Basics.Overture.html#pr1"><span class="id" title="abbreviation">pr1</span></a> <span class="id" title="var">A</span> <span class="id" title="var">P</span>)<br>
+           (<span class="id" title="keyword">fun</span> <span class="id" title="var">x</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#6219320773dc83ab7d1d441169459b9d"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Equivalences.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6219320773dc83ab7d1d441169459b9d"><span class="id" title="notation">;</span></a> <a class="idref" href="HoTT.Basics.Overture.html#center"><span class="id" title="projection">center</span></a> (<span class="id" title="var">P</span> <a class="idref" href="HoTT.Basics.Equivalences.html#x"><span class="id" title="variable">x</span></a>)<a class="idref" href="HoTT.Basics.Overture.html#6219320773dc83ab7d1d441169459b9d"><span class="id" title="notation">)</span></a>)<br>
+           (<span class="id" title="keyword">fun</span> <span class="id" title="var">x</span> ⇒ 1)<br>
+           (<span class="id" title="keyword">fun</span> <span class="id" title="var">xy</span> ⇒ <span class="id" title="keyword">match</span> <a class="idref" href="HoTT.Basics.Equivalences.html#xy"><span class="id" title="variable">xy</span></a> <span class="id" title="keyword">with</span><br>
+                      | <span class="id" title="var">existT</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> (<a class="idref" href="Coq.Init.Specif.html#exist"><span class="id" title="constructor">exist</span></a> <span class="id" title="var">_</span> <span class="id" title="var">x</span>) (<a class="idref" href="HoTT.Basics.Overture.html#contr"><span class="id" title="projection">contr</span></a> <span class="id" title="var">_</span>)<br>
+                      <span class="id" title="keyword">end</span>)).</span><span class="command" onmouseout="
+      mouseout('0_3_83');
+      " onmouseover="
+      mouseover(301, '0_3_83');
+      "><br>
+  <span class="id" title="tactic">intros</span> [<span class="id" title="var">x</span> <span class="id" title="var">y</span>].</span><span class="command" onmouseout="
+      mouseout('0_3_83');
+      " onmouseover="
+      mouseover(302, '0_3_83');
+      "><br>
+  <span class="id" title="tactic">rewrite</span> &lt;- <a class="idref" href="HoTT.Basics.PathGroupoids.html#ap_compose"><span class="id" title="definition">ap_compose</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_83');
+      " onmouseover="
+      mouseover(303, '0_3_83');
+      "><br>
+  <span class="id" title="tactic">symmetry</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#ap_const"><span class="id" title="definition">ap_const</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_83');
+      " onmouseover="
+      mouseover(304, '0_3_83');
+      "><br>
+<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_83');
+      " onmouseover="
+      mouseover(305, '0_3_83');
+      "><br>
+<br>
+<span class="id" title="keyword">Definition</span> <a name="equiv_pr1"><span class="id" title="definition">equiv_pr1</span></a> {<span class="id" title="var">A</span> : <span class="id" title="keyword">Type</span>} (<span class="id" title="var">P</span> : <a class="idref" href="HoTT.Basics.Equivalences.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>) `{<a class="idref" href="HoTT.Basics.Notations.html#d2ec56b4b399745cfaad1420e500e21b"><span class="id" title="notation">∀</span></a> <span class="id" title="var">x</span><a class="idref" href="HoTT.Basics.Notations.html#d2ec56b4b399745cfaad1420e500e21b"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Basics.Overture.html#Contr"><span class="id" title="abbreviation">Contr</span></a> (<a class="idref" href="HoTT.Basics.Equivalences.html#P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#x"><span class="id" title="variable">x</span></a>)}<br>
+  : <a class="idref" href="Coq.Init.Specif.html#50b5d8dd6be4fba768e35617e518ad76"><span class="id" title="notation">{</span></a> <span class="id" title="var">x</span> <a class="idref" href="Coq.Init.Specif.html#50b5d8dd6be4fba768e35617e518ad76"><span class="id" title="notation">:</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Specif.html#50b5d8dd6be4fba768e35617e518ad76"><span class="id" title="notation">&amp;</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="Coq.Init.Specif.html#50b5d8dd6be4fba768e35617e518ad76"><span class="id" title="notation">}</span></a> <a class="idref" href="HoTT.Basics.Overture.html#fdd951a86e2a1b4ef3630e8a03060363"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#A"><span class="id" title="variable">A</span></a><br>
+  := <a class="idref" href="HoTT.Basics.Overture.html#BuildEquiv"><span class="id" title="constructor">BuildEquiv</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> (@<a class="idref" href="HoTT.Basics.Overture.html#pr1"><span class="id" title="abbreviation">pr1</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#P"><span class="id" title="variable">P</span></a>) <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_83');
+      " onmouseover="
+      mouseover(306, '0_3_83');
+      "><br>
+<br>
+</span>
+</div>
+<div class="goal" id="goal0_3_83"><pre><span></span></pre></div>
+<div class="doc" scenenumber="85">
+Assuming function extensionality, composing with an equivalence is itself an equivalence 
+</div>
+<div scenenumber="87" class="code">
+<span class="command" onmouseout="
+      mouseout('0_3_87');
+      " onmouseover="
+      mouseover(310, '0_3_87');
       ">
 <br>
 <span class="id" title="keyword">Global Instance</span> <a name="isequiv_precompose"><span class="id" title="instance">isequiv_precompose</span></a> `{<a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="class">Funext</span></a>} {<span class="id" title="var">A</span> <span class="id" title="var">B</span> <span class="id" title="var">C</span> : <span class="id" title="keyword">Type</span>}<br>
@@ -3293,26 +3416,26 @@ Assuming function extensionality, composing with an equivalence is itself an equ
     (<span class="id" title="keyword">fun</span> <span class="id" title="var">h</span> ⇒ <a class="idref" href="HoTT.Basics.Equivalences.html#h"><span class="id" title="variable">h</span></a> <a class="idref" href="HoTT.Basics.Overture.html#edadc0d66ba2e614f03a8e21622242b7"><span class="id" title="notation">o</span></a> <span class="id" title="var">f</span><a class="idref" href="HoTT.Basics.Overture.html#77ed8f3b30fae66d423e9f3dab28cba2"><span class="id" title="notation">^-1</span></a>)<br>
     (<span class="id" title="keyword">fun</span> <span class="id" title="var">h</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#path_forall"><span class="id" title="definition">path_forall</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> (<span class="id" title="keyword">fun</span> <span class="id" title="var">x</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#h"><span class="id" title="variable">h</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#eissect"><span class="id" title="projection">eissect</span></a> <span class="id" title="var">f</span> <a class="idref" href="HoTT.Basics.Equivalences.html#x"><span class="id" title="variable">x</span></a>)))<br>
     (<span class="id" title="keyword">fun</span> <span class="id" title="var">g</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#path_forall"><span class="id" title="definition">path_forall</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> (<span class="id" title="keyword">fun</span> <span class="id" title="var">y</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#g"><span class="id" title="variable">g</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="projection">eisretr</span></a> <span class="id" title="var">f</span> <a class="idref" href="HoTT.Basics.Equivalences.html#y"><span class="id" title="variable">y</span></a>))).</span><span class="command" onmouseout="
-      mouseout('0_3_83');
+      mouseout('0_3_87');
       " onmouseover="
-      mouseover(299, '0_3_83');
+      mouseover(311, '0_3_87');
       "><br>
 <br>
 <span class="id" title="keyword">Definition</span> <a name="equiv_precompose"><span class="id" title="definition">equiv_precompose</span></a> `{<a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="class">Funext</span></a>} {<span class="id" title="var">A</span> <span class="id" title="var">B</span> <span class="id" title="var">C</span> : <span class="id" title="keyword">Type</span>}<br>
   (<span class="id" title="var">f</span> : <a class="idref" href="HoTT.Basics.Equivalences.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#B"><span class="id" title="variable">B</span></a>) `{<a class="idref" href="HoTT.Basics.Overture.html#IsEquiv"><span class="id" title="class">IsEquiv</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#f"><span class="id" title="variable">f</span></a>}<br>
   : <a class="idref" href="HoTT.Basics.Overture.html#fdd951a86e2a1b4ef3630e8a03060363"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Equivalences.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#C"><span class="id" title="variable">C</span></a><a class="idref" href="HoTT.Basics.Overture.html#fdd951a86e2a1b4ef3630e8a03060363"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Basics.Overture.html#fdd951a86e2a1b4ef3630e8a03060363"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.Basics.Overture.html#fdd951a86e2a1b4ef3630e8a03060363"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Equivalences.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#C"><span class="id" title="variable">C</span></a><a class="idref" href="HoTT.Basics.Overture.html#fdd951a86e2a1b4ef3630e8a03060363"><span class="id" title="notation">)</span></a><br>
   := <a class="idref" href="HoTT.Basics.Overture.html#BuildEquiv"><span class="id" title="constructor">BuildEquiv</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> (<span class="id" title="keyword">fun</span> (<span class="id" title="var">g</span>:<a class="idref" href="HoTT.Basics.Equivalences.html#B"><span class="id" title="variable">B</span></a><a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a><a class="idref" href="HoTT.Basics.Equivalences.html#C"><span class="id" title="variable">C</span></a>) ⇒ <a class="idref" href="HoTT.Basics.Equivalences.html#g"><span class="id" title="variable">g</span></a> <a class="idref" href="HoTT.Basics.Overture.html#edadc0d66ba2e614f03a8e21622242b7"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#f"><span class="id" title="variable">f</span></a>) <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_83');
+      mouseout('0_3_87');
       " onmouseover="
-      mouseover(300, '0_3_83');
+      mouseover(312, '0_3_87');
       "><br>
 <br>
 <span class="id" title="keyword">Definition</span> <a name="equiv_precompose'"><span class="id" title="definition">equiv_precompose'</span></a> `{<a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="class">Funext</span></a>} {<span class="id" title="var">A</span> <span class="id" title="var">B</span> <span class="id" title="var">C</span> : <span class="id" title="keyword">Type</span>} (<span class="id" title="var">f</span> : <a class="idref" href="HoTT.Basics.Equivalences.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Overture.html#fdd951a86e2a1b4ef3630e8a03060363"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#B"><span class="id" title="variable">B</span></a>)<br>
   : <a class="idref" href="HoTT.Basics.Overture.html#fdd951a86e2a1b4ef3630e8a03060363"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Equivalences.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#C"><span class="id" title="variable">C</span></a><a class="idref" href="HoTT.Basics.Overture.html#fdd951a86e2a1b4ef3630e8a03060363"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Basics.Overture.html#fdd951a86e2a1b4ef3630e8a03060363"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.Basics.Overture.html#fdd951a86e2a1b4ef3630e8a03060363"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Equivalences.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#C"><span class="id" title="variable">C</span></a><a class="idref" href="HoTT.Basics.Overture.html#fdd951a86e2a1b4ef3630e8a03060363"><span class="id" title="notation">)</span></a><br>
   := <a class="idref" href="HoTT.Basics.Overture.html#BuildEquiv"><span class="id" title="constructor">BuildEquiv</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> (<span class="id" title="keyword">fun</span> (<span class="id" title="var">g</span>:<a class="idref" href="HoTT.Basics.Equivalences.html#B"><span class="id" title="variable">B</span></a><a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a><a class="idref" href="HoTT.Basics.Equivalences.html#C"><span class="id" title="variable">C</span></a>) ⇒ <a class="idref" href="HoTT.Basics.Equivalences.html#g"><span class="id" title="variable">g</span></a> <a class="idref" href="HoTT.Basics.Overture.html#edadc0d66ba2e614f03a8e21622242b7"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#f"><span class="id" title="variable">f</span></a>) <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_83');
+      mouseout('0_3_87');
       " onmouseover="
-      mouseover(301, '0_3_83');
+      mouseover(313, '0_3_87');
       "><br>
 <br>
 <span class="id" title="keyword">Global Instance</span> <a name="isequiv_postcompose"><span class="id" title="instance">isequiv_postcompose</span></a> `{<a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="class">Funext</span></a>} {<span class="id" title="var">A</span> <span class="id" title="var">B</span> <span class="id" title="var">C</span> : <span class="id" title="keyword">Type</span>}<br>
@@ -3322,156 +3445,156 @@ Assuming function extensionality, composing with an equivalence is itself an equ
     (<span class="id" title="keyword">fun</span> <span class="id" title="var">h</span> ⇒ <span class="id" title="var">f</span><a class="idref" href="HoTT.Basics.Overture.html#77ed8f3b30fae66d423e9f3dab28cba2"><span class="id" title="notation">^-1</span></a> <a class="idref" href="HoTT.Basics.Overture.html#edadc0d66ba2e614f03a8e21622242b7"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#h"><span class="id" title="variable">h</span></a>)<br>
     (<span class="id" title="keyword">fun</span> <span class="id" title="var">h</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#path_forall"><span class="id" title="definition">path_forall</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> (<span class="id" title="keyword">fun</span> <span class="id" title="var">x</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="projection">eisretr</span></a> <span class="id" title="var">f</span> (<a class="idref" href="HoTT.Basics.Equivalences.html#h"><span class="id" title="variable">h</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#x"><span class="id" title="variable">x</span></a>)))<br>
     (<span class="id" title="keyword">fun</span> <span class="id" title="var">g</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#path_forall"><span class="id" title="definition">path_forall</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> (<span class="id" title="keyword">fun</span> <span class="id" title="var">y</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#eissect"><span class="id" title="projection">eissect</span></a> <span class="id" title="var">f</span> (<a class="idref" href="HoTT.Basics.Equivalences.html#g"><span class="id" title="variable">g</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#y"><span class="id" title="variable">y</span></a>))).</span><span class="command" onmouseout="
-      mouseout('0_3_83');
+      mouseout('0_3_87');
       " onmouseover="
-      mouseover(302, '0_3_83');
+      mouseover(314, '0_3_87');
       "><br>
 <br>
 <span class="id" title="keyword">Definition</span> <a name="equiv_postcompose"><span class="id" title="definition">equiv_postcompose</span></a> `{<a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="class">Funext</span></a>} {<span class="id" title="var">A</span> <span class="id" title="var">B</span> <span class="id" title="var">C</span> : <span class="id" title="keyword">Type</span>}<br>
   (<span class="id" title="var">f</span> : <a class="idref" href="HoTT.Basics.Equivalences.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#C"><span class="id" title="variable">C</span></a>) `{<a class="idref" href="HoTT.Basics.Overture.html#IsEquiv"><span class="id" title="class">IsEquiv</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#C"><span class="id" title="variable">C</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#f"><span class="id" title="variable">f</span></a>}<br>
   : <a class="idref" href="HoTT.Basics.Overture.html#fdd951a86e2a1b4ef3630e8a03060363"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Equivalences.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#B"><span class="id" title="variable">B</span></a><a class="idref" href="HoTT.Basics.Overture.html#fdd951a86e2a1b4ef3630e8a03060363"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Basics.Overture.html#fdd951a86e2a1b4ef3630e8a03060363"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.Basics.Overture.html#fdd951a86e2a1b4ef3630e8a03060363"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Equivalences.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#C"><span class="id" title="variable">C</span></a><a class="idref" href="HoTT.Basics.Overture.html#fdd951a86e2a1b4ef3630e8a03060363"><span class="id" title="notation">)</span></a><br>
   := <a class="idref" href="HoTT.Basics.Overture.html#BuildEquiv"><span class="id" title="constructor">BuildEquiv</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> (<span class="id" title="keyword">fun</span> (<span class="id" title="var">g</span>:<a class="idref" href="HoTT.Basics.Equivalences.html#A"><span class="id" title="variable">A</span></a><a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a><a class="idref" href="HoTT.Basics.Equivalences.html#B"><span class="id" title="variable">B</span></a>) ⇒ <a class="idref" href="HoTT.Basics.Equivalences.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Basics.Overture.html#edadc0d66ba2e614f03a8e21622242b7"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#g"><span class="id" title="variable">g</span></a>) <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_83');
+      mouseout('0_3_87');
       " onmouseover="
-      mouseover(303, '0_3_83');
+      mouseover(315, '0_3_87');
       "><br>
 <br>
 <span class="id" title="keyword">Definition</span> <a name="equiv_postcompose'"><span class="id" title="definition">equiv_postcompose'</span></a> `{<a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="class">Funext</span></a>} {<span class="id" title="var">A</span> <span class="id" title="var">B</span> <span class="id" title="var">C</span> : <span class="id" title="keyword">Type</span>} (<span class="id" title="var">f</span> : <a class="idref" href="HoTT.Basics.Equivalences.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Basics.Overture.html#fdd951a86e2a1b4ef3630e8a03060363"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#C"><span class="id" title="variable">C</span></a>)<br>
   : <a class="idref" href="HoTT.Basics.Overture.html#fdd951a86e2a1b4ef3630e8a03060363"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Equivalences.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#B"><span class="id" title="variable">B</span></a><a class="idref" href="HoTT.Basics.Overture.html#fdd951a86e2a1b4ef3630e8a03060363"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Basics.Overture.html#fdd951a86e2a1b4ef3630e8a03060363"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.Basics.Overture.html#fdd951a86e2a1b4ef3630e8a03060363"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Equivalences.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#C"><span class="id" title="variable">C</span></a><a class="idref" href="HoTT.Basics.Overture.html#fdd951a86e2a1b4ef3630e8a03060363"><span class="id" title="notation">)</span></a><br>
   := <a class="idref" href="HoTT.Basics.Overture.html#BuildEquiv"><span class="id" title="constructor">BuildEquiv</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> (<span class="id" title="keyword">fun</span> (<span class="id" title="var">g</span>:<a class="idref" href="HoTT.Basics.Equivalences.html#A"><span class="id" title="variable">A</span></a><a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a><a class="idref" href="HoTT.Basics.Equivalences.html#B"><span class="id" title="variable">B</span></a>) ⇒ <a class="idref" href="HoTT.Basics.Equivalences.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Basics.Overture.html#edadc0d66ba2e614f03a8e21622242b7"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#g"><span class="id" title="variable">g</span></a>) <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_83');
+      mouseout('0_3_87');
       " onmouseover="
-      mouseover(304, '0_3_83');
+      mouseover(316, '0_3_87');
       "><br>
 <br>
 </span>
 </div>
-<div class="goal" id="goal0_3_83"><pre><span></span></pre></div>
-<div class="doc" scenenumber="85">
+<div class="goal" id="goal0_3_87"><pre><span></span></pre></div>
+<div class="doc" scenenumber="89">
 Conversely, if pre- or post-composing with a function is always an equivalence, then that function is also an equivalence.  It's convenient to know that we only need to assume the equivalence when the other type is the domain or the codomain. 
 </div>
-<div scenenumber="87" class="code">
+<div scenenumber="91" class="code">
 <span class="command" onmouseout="
-      mouseout('0_3_87');
+      mouseout('0_3_91');
       " onmouseover="
-      mouseover(308, '0_3_87');
+      mouseover(320, '0_3_91');
       ">
 <br>
 <span class="id" title="keyword">Definition</span> <a name="isequiv_isequiv_precompose"><span class="id" title="definition">isequiv_isequiv_precompose</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span> : <span class="id" title="keyword">Type</span>} (<span class="id" title="var">f</span> : <a class="idref" href="HoTT.Basics.Equivalences.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#B"><span class="id" title="variable">B</span></a>)<br>
   (<span class="id" title="var">precomp</span> := (<span class="id" title="keyword">fun</span> (<span class="id" title="var">C</span> : <span class="id" title="keyword">Type</span>) (<span class="id" title="var">h</span> : <a class="idref" href="HoTT.Basics.Equivalences.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#C"><span class="id" title="variable">C</span></a>) ⇒ <a class="idref" href="HoTT.Basics.Equivalences.html#h"><span class="id" title="variable">h</span></a> <a class="idref" href="HoTT.Basics.Overture.html#edadc0d66ba2e614f03a8e21622242b7"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#f"><span class="id" title="variable">f</span></a>))<br>
   (<span class="id" title="var">Aeq</span> : <a class="idref" href="HoTT.Basics.Overture.html#IsEquiv"><span class="id" title="class">IsEquiv</span></a> (<a class="idref" href="HoTT.Basics.Equivalences.html#precomp"><span class="id" title="variable">precomp</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#A"><span class="id" title="variable">A</span></a>)) (<span class="id" title="var">Beq</span> : <a class="idref" href="HoTT.Basics.Overture.html#IsEquiv"><span class="id" title="class">IsEquiv</span></a> (<a class="idref" href="HoTT.Basics.Equivalences.html#precomp"><span class="id" title="variable">precomp</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#B"><span class="id" title="variable">B</span></a>))<br>
   : <a class="idref" href="HoTT.Basics.Overture.html#IsEquiv"><span class="id" title="class">IsEquiv</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#f"><span class="id" title="variable">f</span></a>.</span><span class="command" onmouseout="
-      mouseout('0_3_87');
+      mouseout('0_3_91');
       " onmouseover="
-      mouseover(309, '0_3_87');
+      mouseover(321, '0_3_91');
       "><br>
 <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_87');
+      mouseout('0_3_91');
       " onmouseover="
-      mouseover(310, '0_3_87');
+      mouseover(322, '0_3_91');
       "><br>
   <span class="id" title="tactic">assert</span> (<span class="id" title="var">H</span> : <a class="idref" href="HoTT.Basics.Notations.html#d2ec56b4b399745cfaad1420e500e21b"><span class="id" title="notation">∀</span></a> <a class="idref" href="HoTT.Basics.Notations.html#d2ec56b4b399745cfaad1420e500e21b"><span class="id" title="notation">(</span></a><span class="id" title="var">C</span> <span class="id" title="var">D</span> : <span class="id" title="keyword">Type</span>)<br>
                      (<span class="id" title="var">Ceq</span> : <a class="idref" href="HoTT.Basics.Overture.html#IsEquiv"><span class="id" title="class">IsEquiv</span></a> (<span class="id" title="var">precomp</span> <a class="idref" href="HoTT.Basics.Equivalences.html#C"><span class="id" title="variable">C</span></a>)) (<span class="id" title="var">Deq</span> : <a class="idref" href="HoTT.Basics.Overture.html#IsEquiv"><span class="id" title="class">IsEquiv</span></a> (<span class="id" title="var">precomp</span> <a class="idref" href="HoTT.Basics.Equivalences.html#D"><span class="id" title="variable">D</span></a>))<br>
                      (<span class="id" title="var">k</span> : <a class="idref" href="HoTT.Basics.Equivalences.html#C"><span class="id" title="variable">C</span></a> <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#D"><span class="id" title="variable">D</span></a>) (<span class="id" title="var">h</span> : <span class="id" title="var">A</span> <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#C"><span class="id" title="variable">C</span></a><a class="idref" href="HoTT.Basics.Notations.html#d2ec56b4b399745cfaad1420e500e21b"><span class="id" title="notation">),</span></a><br>
                 <a class="idref" href="HoTT.Basics.Equivalences.html#k"><span class="id" title="variable">k</span></a> <a class="idref" href="HoTT.Basics.Overture.html#edadc0d66ba2e614f03a8e21622242b7"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Basics.Overture.html#77ed8f3b30fae66d423e9f3dab28cba2"><span class="id" title="notation">(</span></a><span class="id" title="var">precomp</span> <a class="idref" href="HoTT.Basics.Equivalences.html#C"><span class="id" title="variable">C</span></a><a class="idref" href="HoTT.Basics.Overture.html#77ed8f3b30fae66d423e9f3dab28cba2"><span class="id" title="notation">)^-1</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#h"><span class="id" title="variable">h</span></a> <a class="idref" href="HoTT.Basics.Overture.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Basics.Overture.html#77ed8f3b30fae66d423e9f3dab28cba2"><span class="id" title="notation">(</span></a><span class="id" title="var">precomp</span> <a class="idref" href="HoTT.Basics.Equivalences.html#D"><span class="id" title="variable">D</span></a><a class="idref" href="HoTT.Basics.Overture.html#77ed8f3b30fae66d423e9f3dab28cba2"><span class="id" title="notation">)^-1</span></a> (<a class="idref" href="HoTT.Basics.Equivalences.html#k"><span class="id" title="variable">k</span></a> <a class="idref" href="HoTT.Basics.Overture.html#edadc0d66ba2e614f03a8e21622242b7"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#h"><span class="id" title="variable">h</span></a>)).</span><span class="command" onmouseout="
-      mouseout('0_3_87');
+      mouseout('0_3_91');
       " onmouseover="
-      mouseover(311, '0_3_87');
+      mouseover(323, '0_3_91');
       "><br>
   { <span class="id" title="tactic">intros</span> <span class="id" title="var">C</span> <span class="id" title="var">D</span> ? ? <span class="id" title="var">k</span> <span class="id" title="var">h</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_87');
+      mouseout('0_3_91');
       " onmouseover="
-      mouseover(312, '0_3_87');
+      mouseover(324, '0_3_91');
       "><br>
     <span class="id" title="tactic">transitivity</span> (<a class="idref" href="HoTT.Basics.Overture.html#77ed8f3b30fae66d423e9f3dab28cba2"><span class="id" title="notation">(</span></a><span class="id" title="var">precomp</span> <span class="id" title="var">D</span><a class="idref" href="HoTT.Basics.Overture.html#77ed8f3b30fae66d423e9f3dab28cba2"><span class="id" title="notation">)^-1</span></a> (<span class="id" title="var">k</span> <a class="idref" href="HoTT.Basics.Overture.html#edadc0d66ba2e614f03a8e21622242b7"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Basics.Overture.html#edadc0d66ba2e614f03a8e21622242b7"><span class="id" title="notation">(</span></a><span class="id" title="var">precomp</span> <span class="id" title="var">C</span> (<a class="idref" href="HoTT.Basics.Overture.html#77ed8f3b30fae66d423e9f3dab28cba2"><span class="id" title="notation">(</span></a><span class="id" title="var">precomp</span> <span class="id" title="var">C</span><a class="idref" href="HoTT.Basics.Overture.html#77ed8f3b30fae66d423e9f3dab28cba2"><span class="id" title="notation">)^-1</span></a> <span class="id" title="var">h</span>)<a class="idref" href="HoTT.Basics.Overture.html#edadc0d66ba2e614f03a8e21622242b7"><span class="id" title="notation">)</span></a>)).</span><span class="command" onmouseout="
-      mouseout('0_3_87');
+      mouseout('0_3_91');
       " onmouseover="
-      mouseover(313, '0_3_87');
+      mouseover(325, '0_3_91');
       "><br>
     - <span class="id" title="tactic">transitivity</span> (<a class="idref" href="HoTT.Basics.Overture.html#77ed8f3b30fae66d423e9f3dab28cba2"><span class="id" title="notation">(</span></a><span class="id" title="var">precomp</span> <span class="id" title="var">D</span><a class="idref" href="HoTT.Basics.Overture.html#77ed8f3b30fae66d423e9f3dab28cba2"><span class="id" title="notation">)^-1</span></a> (<span class="id" title="var">precomp</span> <span class="id" title="var">D</span> (<span class="id" title="var">k</span> <a class="idref" href="HoTT.Basics.Overture.html#edadc0d66ba2e614f03a8e21622242b7"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Basics.Overture.html#edadc0d66ba2e614f03a8e21622242b7"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Overture.html#77ed8f3b30fae66d423e9f3dab28cba2"><span class="id" title="notation">(</span></a><span class="id" title="var">precomp</span> <span class="id" title="var">C</span><a class="idref" href="HoTT.Basics.Overture.html#77ed8f3b30fae66d423e9f3dab28cba2"><span class="id" title="notation">)^-1</span></a> <span class="id" title="var">h</span><a class="idref" href="HoTT.Basics.Overture.html#edadc0d66ba2e614f03a8e21622242b7"><span class="id" title="notation">)</span></a>))).</span><span class="command" onmouseout="
-      mouseout('0_3_87');
+      mouseout('0_3_91');
       " onmouseover="
-      mouseover(314, '0_3_87');
+      mouseover(326, '0_3_91');
       "><br>
       + <span class="id" title="tactic">rewrite</span> (<a class="idref" href="HoTT.Basics.Overture.html#eissect"><span class="id" title="projection">eissect</span></a> (<span class="id" title="var">precomp</span> <span class="id" title="var">D</span>) <span class="id" title="var">_</span>); <span class="id" title="tactic">reflexivity</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_87');
+      mouseout('0_3_91');
       " onmouseover="
-      mouseover(315, '0_3_87');
+      mouseover(327, '0_3_91');
       "><br>
       + <span class="id" title="tactic">reflexivity</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_87');
+      mouseout('0_3_91');
       " onmouseover="
-      mouseover(316, '0_3_87');
+      mouseover(328, '0_3_91');
       "><br>
     - <span class="id" title="tactic">rewrite</span> (<a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="projection">eisretr</span></a> (<span class="id" title="var">precomp</span> <span class="id" title="var">C</span>) <span class="id" title="var">h</span>); <span class="id" title="tactic">reflexivity</span>. }<br>
   <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Basics.Equivalences.html#isequiv_adjointify"><span class="id" title="definition">isequiv_adjointify</span></a> <span class="id" title="var">f</span> (<a class="idref" href="HoTT.Basics.Overture.html#77ed8f3b30fae66d423e9f3dab28cba2"><span class="id" title="notation">(</span></a><span class="id" title="var">precomp</span> <span class="id" title="var">A</span><a class="idref" href="HoTT.Basics.Overture.html#77ed8f3b30fae66d423e9f3dab28cba2"><span class="id" title="notation">)^-1</span></a> <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a>) <span class="id" title="var">_</span> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
-      mouseout('0_3_87');
+      mouseout('0_3_91');
       " onmouseover="
-      mouseover(317, '0_3_87');
+      mouseover(329, '0_3_91');
       "><br>
   - <span class="id" title="tactic">intros</span> <span class="id" title="var">x</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_87');
+      mouseout('0_3_91');
       " onmouseover="
-      mouseover(318, '0_3_87');
+      mouseover(330, '0_3_91');
       "><br>
     <span class="id" title="tactic">change</span> ((<span class="id" title="var">f</span> <a class="idref" href="HoTT.Basics.Overture.html#edadc0d66ba2e614f03a8e21622242b7"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Basics.Overture.html#77ed8f3b30fae66d423e9f3dab28cba2"><span class="id" title="notation">(</span></a><span class="id" title="var">precomp</span> <span class="id" title="var">A</span><a class="idref" href="HoTT.Basics.Overture.html#77ed8f3b30fae66d423e9f3dab28cba2"><span class="id" title="notation">)^-1</span></a> <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a>) <span class="id" title="var">x</span> <a class="idref" href="HoTT.Basics.Overture.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a> <span class="id" title="var">x</span>).</span><span class="command" onmouseout="
-      mouseout('0_3_87');
+      mouseout('0_3_91');
       " onmouseover="
-      mouseover(319, '0_3_87');
+      mouseover(331, '0_3_91');
       "><br>
     <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap10"><span class="id" title="definition">ap10</span></a>.</span><span class="command" onmouseout="
-      mouseout('0_3_87');
+      mouseout('0_3_91');
       " onmouseover="
-      mouseover(320, '0_3_87');
+      mouseover(332, '0_3_91');
       "><br>
     <span class="id" title="tactic">rewrite</span> (<span class="id" title="var">H</span> <span class="id" title="var">A</span> <span class="id" title="var">B</span> <span class="id" title="var">Aeq</span> <span class="id" title="var">Beq</span>).</span><span class="command" onmouseout="
-      mouseout('0_3_87');
+      mouseout('0_3_91');
       " onmouseover="
-      mouseover(321, '0_3_87');
+      mouseover(333, '0_3_91');
       "><br>
     <span class="id" title="tactic">change</span> (<a class="idref" href="HoTT.Basics.Overture.html#77ed8f3b30fae66d423e9f3dab28cba2"><span class="id" title="notation">(</span></a><span class="id" title="var">precomp</span> <span class="id" title="var">B</span><a class="idref" href="HoTT.Basics.Overture.html#77ed8f3b30fae66d423e9f3dab28cba2"><span class="id" title="notation">)^-1</span></a> (<span class="id" title="var">precomp</span> <span class="id" title="var">B</span> <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a>) <a class="idref" href="HoTT.Basics.Overture.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a>).</span><span class="command" onmouseout="
-      mouseout('0_3_87');
+      mouseout('0_3_91');
       " onmouseover="
-      mouseover(322, '0_3_87');
+      mouseover(334, '0_3_91');
       "><br>
     <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#eissect"><span class="id" title="projection">eissect</span></a>.</span><span class="command" onmouseout="
-      mouseout('0_3_87');
+      mouseout('0_3_91');
       " onmouseover="
-      mouseover(323, '0_3_87');
+      mouseover(335, '0_3_91');
       "><br>
   - <span class="id" title="tactic">intros</span> <span class="id" title="var">x</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_87');
+      mouseout('0_3_91');
       " onmouseover="
-      mouseover(324, '0_3_87');
+      mouseover(336, '0_3_91');
       "><br>
     <span class="id" title="tactic">change</span> ((<span class="id" title="var">precomp</span> <span class="id" title="var">A</span> (<a class="idref" href="HoTT.Basics.Overture.html#77ed8f3b30fae66d423e9f3dab28cba2"><span class="id" title="notation">(</span></a><span class="id" title="var">precomp</span> <span class="id" title="var">A</span><a class="idref" href="HoTT.Basics.Overture.html#77ed8f3b30fae66d423e9f3dab28cba2"><span class="id" title="notation">)^-1</span></a> <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a>)) <span class="id" title="var">x</span> <a class="idref" href="HoTT.Basics.Overture.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a> <span class="id" title="var">x</span>).</span><span class="command" onmouseout="
-      mouseout('0_3_87');
+      mouseout('0_3_91');
       " onmouseover="
-      mouseover(325, '0_3_87');
+      mouseover(337, '0_3_91');
       "><br>
     <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap10"><span class="id" title="definition">ap10</span></a>, <a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="projection">eisretr</span></a>.</span><span class="command" onmouseout="
-      mouseout('0_3_87');
+      mouseout('0_3_91');
       " onmouseover="
-      mouseover(326, '0_3_87');
+      mouseover(338, '0_3_91');
       "><br>
 <span class="id" title="keyword">Qed</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_87');
+      mouseout('0_3_91');
       " onmouseover="
-      mouseover(327, '0_3_87');
+      mouseover(339, '0_3_91');
       "><br>
 <br>
 <br>
 </span>
 </div>
-<div class="goal" id="goal0_3_87"><pre><span></span></pre></div>
-<div class="doc" scenenumber="89">
+<div class="goal" id="goal0_3_91"><pre><span></span></pre></div>
+<div class="doc" scenenumber="93">
 If <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.f"><span class="id" title="variable">f</span></a></span> is an equivalence, then so is <span class="inlinecode"><a class="idref" href="HoTT.Tactics.EquivalenceInduction.html#ap"><span class="id" title="section">ap</span></a></span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.f"><span class="id" title="variable">f</span></a></span>.  We are lazy and use <span class="inlinecode"><span class="id" title="var">adjointify</span></span>. 
 </div>
-<div scenenumber="91" class="code">
+<div scenenumber="95" class="code">
 <span class="command" onmouseout="
-      mouseout('0_3_91');
+      mouseout('0_3_95');
       " onmouseover="
-      mouseover(339, '0_3_91');
+      mouseover(351, '0_3_95');
       ">
 <span class="id" title="keyword">Global Instance</span> <a name="isequiv_ap"><span class="id" title="instance">isequiv_ap</span></a> `{<a class="idref" href="HoTT.Basics.Overture.html#IsEquiv"><span class="id" title="class">IsEquiv</span></a> <span class="id" title="var">A</span> <span class="id" title="var">B</span> <span class="id" title="var">f</span>} (<span class="id" title="var">x</span> <span class="id" title="var">y</span> : <a class="idref" href="HoTT.Basics.Equivalences.html#A"><span class="id" title="variable">A</span></a>)<br>
   : <a class="idref" href="HoTT.Basics.Overture.html#IsEquiv"><span class="id" title="class">IsEquiv</span></a> (@<a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#y"><span class="id" title="variable">y</span></a>) | 1000<br>
@@ -3491,91 +3614,91 @@ If <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4
     <a class="idref" href="HoTT.Basics.Overture.html#3351948a6e0d36c4877ab109ffc3dfc9"><span class="id" title="notation">@</span></a> <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_pA1_p"><span class="id" title="definition">concat_pA1_p</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#eissect"><span class="id" title="projection">eissect</span></a> <span class="id" title="var">f</span>) <span class="id" title="var">_</span> <span class="id" title="var">_</span><br>
     <a class="idref" href="HoTT.Basics.Overture.html#3351948a6e0d36c4877ab109ffc3dfc9"><span class="id" title="notation">@</span></a> <a class="idref" href="HoTT.Basics.PathGroupoids.html#whiskerR"><span class="id" title="definition">whiskerR</span></a> (<a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_Vp"><span class="id" title="definition">concat_Vp</span></a> <span class="id" title="var">_</span>) <span class="id" title="var">_</span><br>
     <a class="idref" href="HoTT.Basics.Overture.html#3351948a6e0d36c4877ab109ffc3dfc9"><span class="id" title="notation">@</span></a> <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_1p"><span class="id" title="definition">concat_1p</span></a> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
-      mouseout('0_3_91');
-      " onmouseover="
-      mouseover(340, '0_3_91');
-      "><br>
-<br>
-</span>
-</div>
-<div class="goal" id="goal0_3_91"><pre><span></span></pre></div>
-<div class="doc" scenenumber="93">
-The function <span class="inlinecode"><a class="idref" href="HoTT.Basics.Equivalences.html#equiv_ind"><span class="id" title="definition">equiv_ind</span></a></span> says that given an equivalence <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode">&lt;~&gt;</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.B"><span class="id" title="variable">B</span></a></span>, and a hypothesis from <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.B"><span class="id" title="variable">B</span></a></span>, one may always assume that the hypothesis is in the image of <span class="inlinecode"><a class="idref" href="HoTT.HIT.V.html#AssumingUA.MonicSetPresent_Uniqueness.e"><span class="id" title="variable">e</span></a></span>.
-
-<div class="doc" scenenumber="17"> </div>
-
-In fibrational terms, if we have a fibration over <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.B"><span class="id" title="variable">B</span></a></span> which has a section once pulled back along an equivalence <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode">&lt;~&gt;</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.B"><span class="id" title="variable">B</span></a></span>, then it has a section over all of <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.B"><span class="id" title="variable">B</span></a></span>.  
-</div>
-<div scenenumber="95" class="code">
-<span class="command" onmouseout="
       mouseout('0_3_95');
       " onmouseover="
-      mouseover(376, '0_3_95');
-      ">
-<br>
-<span class="id" title="keyword">Definition</span> <a name="equiv_ind"><span class="id" title="definition">equiv_ind</span></a> `{<a class="idref" href="HoTT.Basics.Overture.html#IsEquiv"><span class="id" title="class">IsEquiv</span></a> <span class="id" title="var">A</span> <span class="id" title="var">B</span> <span class="id" title="var">f</span>} (<span class="id" title="var">P</span> : <a class="idref" href="HoTT.Basics.Equivalences.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>)<br>
-  : <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Notations.html#d2ec56b4b399745cfaad1420e500e21b"><span class="id" title="notation">∀</span></a> <span class="id" title="var">x</span>:<a class="idref" href="HoTT.Basics.Equivalences.html#A"><span class="id" title="variable">A</span></a><a class="idref" href="HoTT.Basics.Notations.html#d2ec56b4b399745cfaad1420e500e21b"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#P"><span class="id" title="variable">P</span></a> (<a class="idref" href="HoTT.Basics.Equivalences.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#x"><span class="id" title="variable">x</span></a>)<a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">)</span></a> <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Notations.html#d2ec56b4b399745cfaad1420e500e21b"><span class="id" title="notation">∀</span></a> <span class="id" title="var">y</span>:<a class="idref" href="HoTT.Basics.Equivalences.html#B"><span class="id" title="variable">B</span></a><a class="idref" href="HoTT.Basics.Notations.html#d2ec56b4b399745cfaad1420e500e21b"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#y"><span class="id" title="variable">y</span></a><br>
-  := <span class="id" title="keyword">fun</span> <span class="id" title="var">g</span> <span class="id" title="var">y</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#transport"><span class="id" title="definition">transport</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#P"><span class="id" title="variable">P</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="projection">eisretr</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#y"><span class="id" title="variable">y</span></a>) (<a class="idref" href="HoTT.Basics.Equivalences.html#g"><span class="id" title="variable">g</span></a> (<a class="idref" href="HoTT.Basics.Equivalences.html#f"><span class="id" title="variable">f</span></a><a class="idref" href="HoTT.Basics.Overture.html#77ed8f3b30fae66d423e9f3dab28cba2"><span class="id" title="notation">^-1</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#y"><span class="id" title="variable">y</span></a>)).</span><span class="command" onmouseout="
-      mouseout('0_3_95');
-      " onmouseover="
-      mouseover(377, '0_3_95');
-      "><br>
-<br>
-<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Equivalences.html#equiv_ind"><span class="id" title="definition">equiv_ind</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span>} <span class="id" title="var">f</span> {<span class="id" title="var">_</span>} <span class="id" title="var">P</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_95');
-      " onmouseover="
-      mouseover(378, '0_3_95');
-      "><br>
-<br>
-<span class="id" title="keyword">Definition</span> <a name="equiv_ind_comp"><span class="id" title="definition">equiv_ind_comp</span></a> `{<a class="idref" href="HoTT.Basics.Overture.html#IsEquiv"><span class="id" title="class">IsEquiv</span></a> <span class="id" title="var">A</span> <span class="id" title="var">B</span> <span class="id" title="var">f</span>} (<span class="id" title="var">P</span> : <a class="idref" href="HoTT.Basics.Equivalences.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>)<br>
-  (<span class="id" title="var">df</span> : <a class="idref" href="HoTT.Basics.Notations.html#d2ec56b4b399745cfaad1420e500e21b"><span class="id" title="notation">∀</span></a> <span class="id" title="var">x</span>:<a class="idref" href="HoTT.Basics.Equivalences.html#A"><span class="id" title="variable">A</span></a><a class="idref" href="HoTT.Basics.Notations.html#d2ec56b4b399745cfaad1420e500e21b"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#P"><span class="id" title="variable">P</span></a> (<a class="idref" href="HoTT.Basics.Equivalences.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#x"><span class="id" title="variable">x</span></a>)) (<span class="id" title="var">x</span> : <a class="idref" href="HoTT.Basics.Equivalences.html#A"><span class="id" title="variable">A</span></a>)<br>
-  : <a class="idref" href="HoTT.Basics.Equivalences.html#equiv_ind"><span class="id" title="definition">equiv_ind</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#df"><span class="id" title="variable">df</span></a> (<a class="idref" href="HoTT.Basics.Equivalences.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#x"><span class="id" title="variable">x</span></a>) <a class="idref" href="HoTT.Basics.Overture.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#df"><span class="id" title="variable">df</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#x"><span class="id" title="variable">x</span></a>.</span><span class="command" onmouseout="
-      mouseout('0_3_95');
-      " onmouseover="
-      mouseover(379, '0_3_95');
-      "><br>
-<span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_95');
-      " onmouseover="
-      mouseover(380, '0_3_95');
-      "><br>
-  <span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.Basics.Equivalences.html#equiv_ind"><span class="id" title="definition">equiv_ind</span></a>.</span><span class="command" onmouseout="
-      mouseout('0_3_95');
-      " onmouseover="
-      mouseover(381, '0_3_95');
-      "><br>
-  <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Basics.Overture.html#eisadj"><span class="id" title="projection">eisadj</span></a>.</span><span class="command" onmouseout="
-      mouseout('0_3_95');
-      " onmouseover="
-      mouseover(382, '0_3_95');
-      "><br>
-  <span class="id" title="tactic">rewrite</span> &lt;- <a class="idref" href="HoTT.Basics.PathGroupoids.html#transport_compose"><span class="id" title="lemma">transport_compose</span></a>.</span><span class="command" onmouseout="
-      mouseout('0_3_95');
-      " onmouseover="
-      mouseover(383, '0_3_95');
-      "><br>
-  <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Basics.Overture.html#apD"><span class="id" title="definition">apD</span></a> <span class="id" title="var">df</span> (<a class="idref" href="HoTT.Basics.Overture.html#eissect"><span class="id" title="projection">eissect</span></a> <span class="id" title="var">f</span> <span class="id" title="var">x</span>)).</span><span class="command" onmouseout="
-      mouseout('0_3_95');
-      " onmouseover="
-      mouseover(384, '0_3_95');
-      "><br>
-<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_95');
-      " onmouseover="
-      mouseover(385, '0_3_95');
+      mouseover(352, '0_3_95');
       "><br>
 <br>
 </span>
 </div>
 <div class="goal" id="goal0_3_95"><pre><span></span></pre></div>
 <div class="doc" scenenumber="97">
-Using <span class="inlinecode"><a class="idref" href="HoTT.Basics.Equivalences.html#equiv_ind"><span class="id" title="definition">equiv_ind</span></a></span>, we define a handy little tactic which introduces a variable and simultaneously substitutes it along an equivalence. 
+The function <span class="inlinecode"><a class="idref" href="HoTT.Basics.Equivalences.html#equiv_ind"><span class="id" title="definition">equiv_ind</span></a></span> says that given an equivalence <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode">&lt;~&gt;</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.B"><span class="id" title="variable">B</span></a></span>, and a hypothesis from <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.B"><span class="id" title="variable">B</span></a></span>, one may always assume that the hypothesis is in the image of <span class="inlinecode"><a class="idref" href="HoTT.HIT.V.html#AssumingUA.MonicSetPresent_Uniqueness.e"><span class="id" title="variable">e</span></a></span>.
+
+<div class="doc" scenenumber="17"> </div>
+
+In fibrational terms, if we have a fibration over <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.B"><span class="id" title="variable">B</span></a></span> which has a section once pulled back along an equivalence <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode">&lt;~&gt;</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.B"><span class="id" title="variable">B</span></a></span>, then it has a section over all of <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.B"><span class="id" title="variable">B</span></a></span>.  
 </div>
 <div scenenumber="99" class="code">
 <span class="command" onmouseout="
       mouseout('0_3_99');
       " onmouseover="
+      mouseover(388, '0_3_99');
+      ">
+<br>
+<span class="id" title="keyword">Definition</span> <a name="equiv_ind"><span class="id" title="definition">equiv_ind</span></a> `{<a class="idref" href="HoTT.Basics.Overture.html#IsEquiv"><span class="id" title="class">IsEquiv</span></a> <span class="id" title="var">A</span> <span class="id" title="var">B</span> <span class="id" title="var">f</span>} (<span class="id" title="var">P</span> : <a class="idref" href="HoTT.Basics.Equivalences.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>)<br>
+  : <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Notations.html#d2ec56b4b399745cfaad1420e500e21b"><span class="id" title="notation">∀</span></a> <span class="id" title="var">x</span>:<a class="idref" href="HoTT.Basics.Equivalences.html#A"><span class="id" title="variable">A</span></a><a class="idref" href="HoTT.Basics.Notations.html#d2ec56b4b399745cfaad1420e500e21b"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#P"><span class="id" title="variable">P</span></a> (<a class="idref" href="HoTT.Basics.Equivalences.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#x"><span class="id" title="variable">x</span></a>)<a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">)</span></a> <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Notations.html#d2ec56b4b399745cfaad1420e500e21b"><span class="id" title="notation">∀</span></a> <span class="id" title="var">y</span>:<a class="idref" href="HoTT.Basics.Equivalences.html#B"><span class="id" title="variable">B</span></a><a class="idref" href="HoTT.Basics.Notations.html#d2ec56b4b399745cfaad1420e500e21b"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#y"><span class="id" title="variable">y</span></a><br>
+  := <span class="id" title="keyword">fun</span> <span class="id" title="var">g</span> <span class="id" title="var">y</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#transport"><span class="id" title="definition">transport</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#P"><span class="id" title="variable">P</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="projection">eisretr</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#y"><span class="id" title="variable">y</span></a>) (<a class="idref" href="HoTT.Basics.Equivalences.html#g"><span class="id" title="variable">g</span></a> (<a class="idref" href="HoTT.Basics.Equivalences.html#f"><span class="id" title="variable">f</span></a><a class="idref" href="HoTT.Basics.Overture.html#77ed8f3b30fae66d423e9f3dab28cba2"><span class="id" title="notation">^-1</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#y"><span class="id" title="variable">y</span></a>)).</span><span class="command" onmouseout="
+      mouseout('0_3_99');
+      " onmouseover="
+      mouseover(389, '0_3_99');
+      "><br>
+<br>
+<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Basics.Equivalences.html#equiv_ind"><span class="id" title="definition">equiv_ind</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span>} <span class="id" title="var">f</span> {<span class="id" title="var">_</span>} <span class="id" title="var">P</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_99');
+      " onmouseover="
+      mouseover(390, '0_3_99');
+      "><br>
+<br>
+<span class="id" title="keyword">Definition</span> <a name="equiv_ind_comp"><span class="id" title="definition">equiv_ind_comp</span></a> `{<a class="idref" href="HoTT.Basics.Overture.html#IsEquiv"><span class="id" title="class">IsEquiv</span></a> <span class="id" title="var">A</span> <span class="id" title="var">B</span> <span class="id" title="var">f</span>} (<span class="id" title="var">P</span> : <a class="idref" href="HoTT.Basics.Equivalences.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>)<br>
+  (<span class="id" title="var">df</span> : <a class="idref" href="HoTT.Basics.Notations.html#d2ec56b4b399745cfaad1420e500e21b"><span class="id" title="notation">∀</span></a> <span class="id" title="var">x</span>:<a class="idref" href="HoTT.Basics.Equivalences.html#A"><span class="id" title="variable">A</span></a><a class="idref" href="HoTT.Basics.Notations.html#d2ec56b4b399745cfaad1420e500e21b"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#P"><span class="id" title="variable">P</span></a> (<a class="idref" href="HoTT.Basics.Equivalences.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#x"><span class="id" title="variable">x</span></a>)) (<span class="id" title="var">x</span> : <a class="idref" href="HoTT.Basics.Equivalences.html#A"><span class="id" title="variable">A</span></a>)<br>
+  : <a class="idref" href="HoTT.Basics.Equivalences.html#equiv_ind"><span class="id" title="definition">equiv_ind</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#df"><span class="id" title="variable">df</span></a> (<a class="idref" href="HoTT.Basics.Equivalences.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#x"><span class="id" title="variable">x</span></a>) <a class="idref" href="HoTT.Basics.Overture.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#df"><span class="id" title="variable">df</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#x"><span class="id" title="variable">x</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_99');
+      " onmouseover="
       mouseover(391, '0_3_99');
+      "><br>
+<span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_99');
+      " onmouseover="
+      mouseover(392, '0_3_99');
+      "><br>
+  <span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.Basics.Equivalences.html#equiv_ind"><span class="id" title="definition">equiv_ind</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_99');
+      " onmouseover="
+      mouseover(393, '0_3_99');
+      "><br>
+  <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Basics.Overture.html#eisadj"><span class="id" title="projection">eisadj</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_99');
+      " onmouseover="
+      mouseover(394, '0_3_99');
+      "><br>
+  <span class="id" title="tactic">rewrite</span> &lt;- <a class="idref" href="HoTT.Basics.PathGroupoids.html#transport_compose"><span class="id" title="lemma">transport_compose</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_99');
+      " onmouseover="
+      mouseover(395, '0_3_99');
+      "><br>
+  <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Basics.Overture.html#apD"><span class="id" title="definition">apD</span></a> <span class="id" title="var">df</span> (<a class="idref" href="HoTT.Basics.Overture.html#eissect"><span class="id" title="projection">eissect</span></a> <span class="id" title="var">f</span> <span class="id" title="var">x</span>)).</span><span class="command" onmouseout="
+      mouseout('0_3_99');
+      " onmouseover="
+      mouseover(396, '0_3_99');
+      "><br>
+<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_99');
+      " onmouseover="
+      mouseover(397, '0_3_99');
+      "><br>
+<br>
+</span>
+</div>
+<div class="goal" id="goal0_3_99"><pre><span></span></pre></div>
+<div class="doc" scenenumber="101">
+Using <span class="inlinecode"><a class="idref" href="HoTT.Basics.Equivalences.html#equiv_ind"><span class="id" title="definition">equiv_ind</span></a></span>, we define a handy little tactic which introduces a variable and simultaneously substitutes it along an equivalence. 
+</div>
+<div scenenumber="103" class="code">
+<span class="command" onmouseout="
+      mouseout('0_3_103');
+      " onmouseover="
+      mouseover(403, '0_3_103');
       ">
 <br>
 <span class="id" title="keyword">Ltac</span> <span class="id" title="var">equiv_intro</span> <span class="id" title="var">E</span> <span class="id" title="var">x</span> :=<br>
@@ -3583,80 +3706,80 @@ Using <span class="inlinecode"><a class="idref" href="HoTT.Basics.Equivalences.h
     | |- <a class="idref" href="HoTT.Basics.Notations.html#d2ec56b4b399745cfaad1420e500e21b"><span class="id" title="notation">∀</span></a> <span class="id" title="var">y</span><a class="idref" href="HoTT.Basics.Notations.html#d2ec56b4b399745cfaad1420e500e21b"><span class="id" title="notation">,</span></a> @?<span class="id" title="var">Q</span> <a class="idref" href="HoTT.Basics.Equivalences.html#y"><span class="id" title="variable">y</span></a> ⇒<br>
       <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Basics.Equivalences.html#equiv_ind"><span class="id" title="definition">equiv_ind</span></a> <span class="id" title="var">E</span> <span class="id" title="var">Q</span> <span class="id" title="var">_</span>); <span class="id" title="tactic">intros</span> <span class="id" title="var">x</span><br>
   <span class="id" title="keyword">end</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_99');
-      " onmouseover="
-      mouseover(392, '0_3_99');
-      "><br>
-<br>
-</span>
-</div>
-<div class="goal" id="goal0_3_99"><pre><span></span></pre></div>
-<div class="doc" scenenumber="101">
-The same, but for several variables. 
-</div>
-<div scenenumber="103" class="code">
-<span class="command" onmouseout="
       mouseout('0_3_103');
       " onmouseover="
-      mouseover(396, '0_3_103');
-      ">
-<br>
-<span class="id" title="keyword">Tactic Notation</span> "equiv_intros" <span class="id" title="keyword">constr</span>(<span class="id" title="var">E</span>) <span class="id" title="var">ident</span>(<span class="id" title="var">x</span>)<br>
-  := <span class="id" title="var">equiv_intro</span> <span class="id" title="var">E</span> <span class="id" title="var">x</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_103');
-      " onmouseover="
-      mouseover(397, '0_3_103');
-      "><br>
-<span class="id" title="keyword">Tactic Notation</span> "equiv_intros" <span class="id" title="keyword">constr</span>(<span class="id" title="var">E</span>) <span class="id" title="var">ident</span>(<span class="id" title="var">x</span>) <span class="id" title="var">ident</span>(<span class="id" title="var">y</span>)<br>
-  := <span class="id" title="var">equiv_intro</span> <span class="id" title="var">E</span> <span class="id" title="var">x</span>; <span class="id" title="var">equiv_intro</span> <span class="id" title="var">E</span> <span class="id" title="var">y</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_103');
-      " onmouseover="
-      mouseover(398, '0_3_103');
-      "><br>
-<span class="id" title="keyword">Tactic Notation</span> "equiv_intros" <span class="id" title="keyword">constr</span>(<span class="id" title="var">E</span>) <span class="id" title="var">ident</span>(<span class="id" title="var">x</span>) <span class="id" title="var">ident</span>(<span class="id" title="var">y</span>) <span class="id" title="var">ident</span>(<span class="id" title="var">z</span>)<br>
-  := <span class="id" title="var">equiv_intro</span> <span class="id" title="var">E</span> <span class="id" title="var">x</span>; <span class="id" title="var">equiv_intro</span> <span class="id" title="var">E</span> <span class="id" title="var">y</span>; <span class="id" title="var">equiv_intro</span> <span class="id" title="var">E</span> <span class="id" title="var">z</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_103');
-      " onmouseover="
-      mouseover(399, '0_3_103');
+      mouseover(404, '0_3_103');
       "><br>
 <br>
 </span>
 </div>
 <div class="goal" id="goal0_3_103"><pre><span></span></pre></div>
 <div class="doc" scenenumber="105">
-<span class="inlinecode"><a class="idref" href="HoTT.Basics.Equivalences.html#equiv_composeR'"><span class="id" title="definition">equiv_composeR'</span></a></span>, a flipped version of <span class="inlinecode"><a class="idref" href="HoTT.Basics.Equivalences.html#equiv_compose'"><span class="id" title="definition">equiv_compose'</span></a></span>, is (like <span class="inlinecode"><a class="idref" href="HoTT.Basics.PathGroupoids.html#concatR"><span class="id" title="abbreviation">concatR</span></a></span>) most often useful partially applied, to give the “first half” of an equivalence one is constructing and leave the rest as a subgoal. One could similarly define <span class="inlinecode"><span class="id" title="var">equiv_composeR</span></span> as a flip of <span class="inlinecode"><a class="idref" href="HoTT.Basics.Equivalences.html#equiv_compose"><span class="id" title="definition">equiv_compose</span></a></span>, but it doesn’t seem so useful since it doesn’t leave the remaining equivalence as a subgoal. 
+The same, but for several variables. 
 </div>
 <div scenenumber="107" class="code">
 <span class="command" onmouseout="
       mouseout('0_3_107');
       " onmouseover="
-      mouseover(413, '0_3_107');
+      mouseover(408, '0_3_107');
       ">
-<span class="id" title="keyword">Definition</span> <a name="equiv_composeR'"><span class="id" title="definition">equiv_composeR'</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span> <span class="id" title="var">C</span>} (<span class="id" title="var">f</span> : <a class="idref" href="HoTT.Basics.Equivalences.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Overture.html#fdd951a86e2a1b4ef3630e8a03060363"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#B"><span class="id" title="variable">B</span></a>) (<span class="id" title="var">g</span> : <a class="idref" href="HoTT.Basics.Equivalences.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Basics.Overture.html#fdd951a86e2a1b4ef3630e8a03060363"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#C"><span class="id" title="variable">C</span></a>)<br>
-  := <a class="idref" href="HoTT.Basics.Equivalences.html#equiv_compose'"><span class="id" title="definition">equiv_compose'</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#g"><span class="id" title="variable">g</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#f"><span class="id" title="variable">f</span></a>.</span><span class="command" onmouseout="
-      mouseout('0_3_107');
-      " onmouseover="
-      mouseover(414, '0_3_107');
-      "><br>
 <br>
-<span class="id" title="keyword">Ltac</span> <span class="id" title="var">equiv_via</span> <span class="id" title="var">mid</span> :=<br>
-  <span class="id" title="tactic">apply</span> @<a class="idref" href="HoTT.Basics.Equivalences.html#equiv_composeR'"><span class="id" title="definition">equiv_composeR'</span></a> <span class="id" title="keyword">with</span> (<span class="id" title="var">B</span> := <span class="id" title="var">mid</span>).</span><span class="command" onmouseout="
+<span class="id" title="keyword">Tactic Notation</span> "equiv_intros" <span class="id" title="keyword">constr</span>(<span class="id" title="var">E</span>) <span class="id" title="var">ident</span>(<span class="id" title="var">x</span>)<br>
+  := <span class="id" title="var">equiv_intro</span> <span class="id" title="var">E</span> <span class="id" title="var">x</span>.</span><span class="command" onmouseout="
       mouseout('0_3_107');
       " onmouseover="
-      mouseover(415, '0_3_107');
+      mouseover(409, '0_3_107');
+      "><br>
+<span class="id" title="keyword">Tactic Notation</span> "equiv_intros" <span class="id" title="keyword">constr</span>(<span class="id" title="var">E</span>) <span class="id" title="var">ident</span>(<span class="id" title="var">x</span>) <span class="id" title="var">ident</span>(<span class="id" title="var">y</span>)<br>
+  := <span class="id" title="var">equiv_intro</span> <span class="id" title="var">E</span> <span class="id" title="var">x</span>; <span class="id" title="var">equiv_intro</span> <span class="id" title="var">E</span> <span class="id" title="var">y</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_107');
+      " onmouseover="
+      mouseover(410, '0_3_107');
+      "><br>
+<span class="id" title="keyword">Tactic Notation</span> "equiv_intros" <span class="id" title="keyword">constr</span>(<span class="id" title="var">E</span>) <span class="id" title="var">ident</span>(<span class="id" title="var">x</span>) <span class="id" title="var">ident</span>(<span class="id" title="var">y</span>) <span class="id" title="var">ident</span>(<span class="id" title="var">z</span>)<br>
+  := <span class="id" title="var">equiv_intro</span> <span class="id" title="var">E</span> <span class="id" title="var">x</span>; <span class="id" title="var">equiv_intro</span> <span class="id" title="var">E</span> <span class="id" title="var">y</span>; <span class="id" title="var">equiv_intro</span> <span class="id" title="var">E</span> <span class="id" title="var">z</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_107');
+      " onmouseover="
+      mouseover(411, '0_3_107');
       "><br>
 <br>
 </span>
 </div>
 <div class="goal" id="goal0_3_107"><pre><span></span></pre></div>
 <div class="doc" scenenumber="109">
-It's often convenient when constructing a chain of equivalences to use <span class="inlinecode"><a class="idref" href="HoTT.Basics.Equivalences.html#equiv_compose'"><span class="id" title="definition">equiv_compose'</span></a></span>, etc.  But when we treat an <span class="inlinecode"><a class="idref" href="HoTT.HIT.quotient.html#Equiv"><span class="id" title="section">Equiv</span></a></span> object constructed in that way as a function, via the coercion <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#equiv_fun"><span class="id" title="projection">equiv_fun</span></a></span>, Coq sometimes needs a little help to realize that the result is the same as ordinary composition.  This tactic provides that help. 
+<span class="inlinecode"><a class="idref" href="HoTT.Basics.Equivalences.html#equiv_composeR'"><span class="id" title="definition">equiv_composeR'</span></a></span>, a flipped version of <span class="inlinecode"><a class="idref" href="HoTT.Basics.Equivalences.html#equiv_compose'"><span class="id" title="definition">equiv_compose'</span></a></span>, is (like <span class="inlinecode"><a class="idref" href="HoTT.Basics.PathGroupoids.html#concatR"><span class="id" title="abbreviation">concatR</span></a></span>) most often useful partially applied, to give the “first half” of an equivalence one is constructing and leave the rest as a subgoal. One could similarly define <span class="inlinecode"><span class="id" title="var">equiv_composeR</span></span> as a flip of <span class="inlinecode"><a class="idref" href="HoTT.Basics.Equivalences.html#equiv_compose"><span class="id" title="definition">equiv_compose</span></a></span>, but it doesn’t seem so useful since it doesn’t leave the remaining equivalence as a subgoal. 
 </div>
 <div scenenumber="111" class="code">
 <span class="command" onmouseout="
       mouseout('0_3_111');
       " onmouseover="
       mouseover(425, '0_3_111');
+      ">
+<span class="id" title="keyword">Definition</span> <a name="equiv_composeR'"><span class="id" title="definition">equiv_composeR'</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span> <span class="id" title="var">C</span>} (<span class="id" title="var">f</span> : <a class="idref" href="HoTT.Basics.Equivalences.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Overture.html#fdd951a86e2a1b4ef3630e8a03060363"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#B"><span class="id" title="variable">B</span></a>) (<span class="id" title="var">g</span> : <a class="idref" href="HoTT.Basics.Equivalences.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Basics.Overture.html#fdd951a86e2a1b4ef3630e8a03060363"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#C"><span class="id" title="variable">C</span></a>)<br>
+  := <a class="idref" href="HoTT.Basics.Equivalences.html#equiv_compose'"><span class="id" title="definition">equiv_compose'</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#g"><span class="id" title="variable">g</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#f"><span class="id" title="variable">f</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_111');
+      " onmouseover="
+      mouseover(426, '0_3_111');
+      "><br>
+<br>
+<span class="id" title="keyword">Ltac</span> <span class="id" title="var">equiv_via</span> <span class="id" title="var">mid</span> :=<br>
+  <span class="id" title="tactic">apply</span> @<a class="idref" href="HoTT.Basics.Equivalences.html#equiv_composeR'"><span class="id" title="definition">equiv_composeR'</span></a> <span class="id" title="keyword">with</span> (<span class="id" title="var">B</span> := <span class="id" title="var">mid</span>).</span><span class="command" onmouseout="
+      mouseout('0_3_111');
+      " onmouseover="
+      mouseover(427, '0_3_111');
+      "><br>
+<br>
+</span>
+</div>
+<div class="goal" id="goal0_3_111"><pre><span></span></pre></div>
+<div class="doc" scenenumber="113">
+It's often convenient when constructing a chain of equivalences to use <span class="inlinecode"><a class="idref" href="HoTT.Basics.Equivalences.html#equiv_compose'"><span class="id" title="definition">equiv_compose'</span></a></span>, etc.  But when we treat an <span class="inlinecode"><a class="idref" href="HoTT.HIT.quotient.html#Equiv"><span class="id" title="section">Equiv</span></a></span> object constructed in that way as a function, via the coercion <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#equiv_fun"><span class="id" title="projection">equiv_fun</span></a></span>, Coq sometimes needs a little help to realize that the result is the same as ordinary composition.  This tactic provides that help. 
+</div>
+<div scenenumber="115" class="code">
+<span class="command" onmouseout="
+      mouseout('0_3_115');
+      " onmouseover="
+      mouseover(437, '0_3_115');
       ">
 <span class="id" title="keyword">Ltac</span> <span class="id" title="var">ev_equiv</span> :=<br>
   <span class="id" title="tactic">repeat</span> <span class="id" title="keyword">match</span> <span class="id" title="keyword">goal</span> <span class="id" title="keyword">with</span><br>
@@ -3667,13 +3790,13 @@ It's often convenient when constructing a chain of equivalences to use <span cla
            | [ |- <span class="id" title="keyword">context</span>[<a class="idref" href="HoTT.Basics.Overture.html#equiv_fun"><span class="id" title="projection">equiv_fun</span></a> (<a class="idref" href="HoTT.Basics.Equivalences.html#equiv_inverse"><span class="id" title="lemma">equiv_inverse</span></a> ?<span class="id" title="var">f</span>) ?<span class="id" title="var">a</span>] ] ⇒<br>
              <span class="id" title="tactic">change</span> ((<a class="idref" href="HoTT.Basics.Equivalences.html#equiv_inverse"><span class="id" title="lemma">equiv_inverse</span></a> <span class="id" title="var">f</span>) <span class="id" title="var">a</span>) <span class="id" title="keyword">with</span> (<span class="id" title="var">f</span><a class="idref" href="HoTT.Basics.Overture.html#77ed8f3b30fae66d423e9f3dab28cba2"><span class="id" title="notation">^-1</span></a> <span class="id" title="var">a</span>)<br>
          <span class="id" title="keyword">end</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_111');
+      mouseout('0_3_115');
       " onmouseover="
-      mouseover(426, '0_3_111');
+      mouseover(438, '0_3_115');
       "><br>
 </span>
 </div>
-<div class="goal" id="goal0_3_111"><pre><span></span></pre></div>
+<div class="goal" id="goal0_3_115"><pre><span></span></pre></div>
 </div>
 <div id="footer" scenenumber="5" class="doc">
 <hr>
