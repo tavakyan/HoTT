@@ -53,8 +53,8 @@ Require Import Types.Universe Types.Sigma Types.Arrow.</pre>
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 5
-Time: 0.018s">
-<div class="time" style="width: 94.736842105263%"></div>
+Time: 0.017s">
+<div class="time" style="width: 89.473684210526%"></div>
 <pre>
 Require Import Fibrations HProp EquivalenceVarieties UnivalenceImpliesFunext Pullback.</pre>
 </div>
@@ -111,15 +111,15 @@ Definition Fam A:=sigT (fun I:Type  =&gt; I-&gt;A).</pre>
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 15
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 5.2631578947368%"></div>
 <pre>
 Definition p2f: (A-&gt;Type)-&gt; Fam A:=  fun Q:(A-&gt;Type) =&gt; ( (sigT Q) ; @pr1 _ _).</pre>
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 16
-Time: 0.001s">
-<div class="time" style="width: 5.2631578947368%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Definition f2p: Fam A -&gt; (A-&gt;Type):=
  fun F =&gt; let (I, f) := F in (fun a =&gt; (hfiber f a)).</pre>
@@ -148,8 +148,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 22
-Time: 0.001s">
-<div class="time" style="width: 5.2631578947368%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   intros f; apply path_arrow; intros y.</pre>
 </div>
@@ -247,8 +247,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 36
-Time: 0.001s">
-<div class="time" style="width: 5.2631578947368%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   set (w:=@equiv_fibration_replacement A I f).</pre>
 </div>
@@ -549,8 +549,8 @@ apply ((P i).2).</pre>
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 85
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 5.2631578947368%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -688,22 +688,22 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 104
-Time: 0.006s">
-<div class="time" style="width: 31.578947368421%"></div>
+Time: 0.005s">
+<div class="time" style="width: 26.315789473684%"></div>
 <pre>
   set (p:=@eissect _ _ (FamequivPow A) _).</pre>
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 105
-Time: 0.001s">
-<div class="time" style="width: 5.2631578947368%"></div>
+Time: 0.002s">
+<div class="time" style="width: 10.526315789474%"></div>
 <pre>
   apply (ap10 (p (pr1 o P)) a).</pre>
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 106
-Time: 0.001s">
-<div class="time" style="width: 5.2631578947368%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 by apply path_sigma_hprop.</pre>
 </div>
@@ -723,8 +723,8 @@ End Subobjectclassifier.</pre>
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 109
-Time: 0.008s">
-<div class="time" style="width: 42.105263157895%"></div>
+Time: 0.009s">
+<div class="time" style="width: 47.368421052632%"></div>
 <pre>
 
 End AssumeUnivalence.</pre>
