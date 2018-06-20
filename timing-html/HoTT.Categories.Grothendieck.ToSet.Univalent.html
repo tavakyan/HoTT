@@ -37,13 +37,13 @@ Time: 0s">
 <div class="code" title="File: Univalent.v
 Line: 1
 Time: 0.007s">
-<div class="time" style="width: 0.30501089324619%"></div>
+<div class="time" style="width: 0.29723991507431%"></div>
 <pre>Require Import Category.Core Functor.Core.</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 1
-Time: 0.042s">
-<div class="time" style="width: 1.8300653594771%"></div>
+Time: 0.043s">
+<div class="time" style="width: 1.8259023354565%"></div>
 <pre>
 Require Import Category.Univalent.</pre>
 </div>
@@ -57,14 +57,14 @@ Require Import Category.Morphisms.</pre>
 <div class="code" title="File: Univalent.v
 Line: 3
 Time: 0.005s">
-<div class="time" style="width: 0.21786492374728%"></div>
+<div class="time" style="width: 0.21231422505308%"></div>
 <pre>
 Require Import SetCategory.Core.</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 4
 Time: 0.002s">
-<div class="time" style="width: 0.087145969498911%"></div>
+<div class="time" style="width: 0.084925690021231%"></div>
 <pre>
 Require Import Grothendieck.ToSet.Core Grothendieck.ToSet.Morphisms.</pre>
 </div>
@@ -78,7 +78,7 @@ Require Import HoTT.Basics.Equivalences HoTT.Basics.Trunc.</pre>
 <div class="code" title="File: Univalent.v
 Line: 6
 Time: 0.001s">
-<div class="time" style="width: 0.043572984749455%"></div>
+<div class="time" style="width: 0.042462845010616%"></div>
 <pre>
 Require Import HoTT.Types.Universe HoTT.Types.Paths HoTT.Types.Sigma.</pre>
 </div>
@@ -166,7 +166,7 @@ Time: 0s">
 <div class="code" title="File: Univalent.v
 Line: 22
 Time: 0.005s">
-<div class="time" style="width: 0.21786492374728%"></div>
+<div class="time" style="width: 0.21231422505308%"></div>
 <pre>
 
   Definition category_isotoid_helper {s d} (a : c s = c d)
@@ -190,28 +190,28 @@ Time: 0s">
 <div class="code" title="File: Univalent.v
 Line: 28
 Time: 0.001s">
-<div class="time" style="width: 0.043572984749455%"></div>
+<div class="time" style="width: 0.042462845010616%"></div>
 <pre>
     apply ap10, ap.</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 29
 Time: 0.001s">
-<div class="time" style="width: 0.043572984749455%"></div>
+<div class="time" style="width: 0.042462845010616%"></div>
 <pre>
     destruct a; simpl.</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 30
 Time: 0.001s">
-<div class="time" style="width: 0.043572984749455%"></div>
+<div class="time" style="width: 0.042462845010616%"></div>
 <pre>
     exact (ap10 (identity_of F _)^ _).</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 31
-Time: 0.003s">
-<div class="time" style="width: 0.13071895424837%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.084925690021231%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -226,7 +226,7 @@ Time: 0s">
 <div class="code" title="File: Univalent.v
 Line: 34
 Time: 0.001s">
-<div class="time" style="width: 0.043572984749455%"></div>
+<div class="time" style="width: 0.042462845010616%"></div>
 <pre>
 
   Definition category_isotoid {s d : category F}
@@ -242,7 +242,7 @@ Time: 0s">
 <div class="code" title="File: Univalent.v
 Line: 38
 Time: 0.002s">
-<div class="time" style="width: 0.087145969498911%"></div>
+<div class="time" style="width: 0.084925690021231%"></div>
 <pre>
     refine (isequiv_sigma_category_isomorphism^-1 oE _ oE (equiv_ap' (issig_pair F)^-1 s d)).</pre>
 </div>
@@ -277,7 +277,7 @@ Time: 0s">
 <div class="code" title="File: Univalent.v
 Line: 43
 Time: 0.001s">
-<div class="time" style="width: 0.043572984749455%"></div>
+<div class="time" style="width: 0.042462845010616%"></div>
 <pre> exists (@idtoiso C _ _).</pre>
 </div>
 <div class="code" title="File: Univalent.v
@@ -314,15 +314,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 45
-Time: 0.017s">
-<div class="time" style="width: 0.74074074074074%"></div>
+Time: 0.016s">
+<div class="time" style="width: 0.67940552016985%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 46
 Time: 0.001s">
-<div class="time" style="width: 0.043572984749455%"></div>
+<div class="time" style="width: 0.042462845010616%"></div>
 <pre>
 
   Global Instance preservation : IsCategory (category F).</pre>
@@ -343,7 +343,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 50
-Time: 2.295s">
+Time: 2.355s">
 <div class="time" style="width: 100%"></div>
 <pre>
     refine (@isequiv_homotopic _ _ category_isotoid (idtoiso (category F) (x:=s) (y:=d)) _ _).</pre>
@@ -357,29 +357,29 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 52
-Time: 0.021s">
-<div class="time" style="width: 0.91503267973856%"></div>
+Time: 0.018s">
+<div class="time" style="width: 0.76433121019108%"></div>
 <pre>
     destruct x; apply path_isomorphic, path_sigma_hprop.</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 53
-Time: 0.003s">
-<div class="time" style="width: 0.13071895424837%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.084925690021231%"></div>
 <pre>
     reflexivity.</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 54
 Time: 0.006s">
-<div class="time" style="width: 0.26143790849673%"></div>
+<div class="time" style="width: 0.25477707006369%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 55
 Time: 0.014s">
-<div class="time" style="width: 0.61002178649237%"></div>
+<div class="time" style="width: 0.59447983014862%"></div>
 <pre>
 End Grothendieck.</pre>
 </div>

@@ -1518,12 +1518,12 @@
           
 
             i = 300;
-            data = "1 subgoal (ID 922)	  	  A : Type	  P : A -> Type	  H : forall x : A, Contr (P x)	  ============================	  forall x : {x : _ & P x},	  1 =	  ap pr1	    (ap (exist P x.(proj1_sig))	       ((H (x.(proj1_sig); x.(proj2_sig)).1).(contr) x.(proj2_sig)))	";
+            data = "1 subgoal (ID 922)	  	  A : Type	  P : A -> Type	  H : forall x : A, Contr (P x)	  ============================	  forall x : {x : _ & P x},	  1 =	  ap pr1	    (let xy := x in	     let x0 := xy.(proj1_sig) in	     let y := xy.(proj2_sig) in ap (exist P x0) ((H (x0; y).1).(contr) y))	";
             responses[i]=data;
           
 
             i = 301;
-            data = "1 subgoal (ID 927)	  	  A : Type	  P : A -> Type	  H : forall x : A, Contr (P x)	  x : A	  y : P x	  ============================	  1 = ap pr1 (ap (exist P x) ((H (x; y).1).(contr) y))	";
+            data = "1 subgoal (ID 927)	  	  A : Type	  P : A -> Type	  H : forall x : A, Contr (P x)	  x : A	  y : P x	  ============================	  1 =	  ap pr1	    (let xy := (x; y) in	     let x0 := xy.(proj1_sig) in	     let y0 := xy.(proj2_sig) in ap (exist P x0) ((H (x0; y0).1).(contr) y0))	";
             responses[i]=data;
           
 
