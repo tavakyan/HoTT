@@ -36,28 +36,28 @@ Time: 0s">
 </div>
 <div class="code" title="File: PseudofunctorToCat.v
 Line: 1
-Time: 0.008s">
-<div class="time" style="width: 2.5236593059937%"></div>
+Time: 0.009s">
+<div class="time" style="width: 2.6785714285714%"></div>
 <pre>Require Import Category.Core Functor.Core NaturalTransformation.Core.</pre>
 </div>
 <div class="code" title="File: PseudofunctorToCat.v
 Line: 1
-Time: 0.052s">
-<div class="time" style="width: 16.403785488959%"></div>
+Time: 0.057s">
+<div class="time" style="width: 16.964285714286%"></div>
 <pre>
 Require Import Pseudofunctor.Core Pseudofunctor.RewriteLaws.</pre>
 </div>
 <div class="code" title="File: PseudofunctorToCat.v
 Line: 2
 Time: 0.001s">
-<div class="time" style="width: 0.31545741324921%"></div>
+<div class="time" style="width: 0.29761904761905%"></div>
 <pre>
 Require Import Category.Morphisms NaturalTransformation.Isomorphisms Cat.Morphisms.</pre>
 </div>
 <div class="code" title="File: PseudofunctorToCat.v
 Line: 3
-Time: 0.002s">
-<div class="time" style="width: 0.63091482649842%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.29761904761905%"></div>
 <pre>
 Require Import Functor.Composition.Core Functor.Composition.Laws.</pre>
 </div>
@@ -77,8 +77,8 @@ Require Import FunctorCategory.Core.</pre>
 </div>
 <div class="code" title="File: PseudofunctorToCat.v
 Line: 6
-Time: 0.005s">
-<div class="time" style="width: 1.5772870662461%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.1904761904762%"></div>
 <pre>
 Require Import Types.Sigma HoTT.Tactics PathGroupoids.</pre>
 </div>
@@ -152,7 +152,7 @@ Time: 0s">
 <div class="code" title="File: PseudofunctorToCat.v
 Line: 20
 Time: 0.002s">
-<div class="time" style="width: 0.63091482649842%"></div>
+<div class="time" style="width: 0.5952380952381%"></div>
 <pre>
 
   Record Pair :=
@@ -173,8 +173,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: PseudofunctorToCat.v
 Line: 30
-Time: 0.004s">
-<div class="time" style="width: 1.2618296529968%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.89285714285714%"></div>
 <pre>
 
   Definition compose s d d'
@@ -191,36 +191,36 @@ Time: 0s">
 </div>
 <div class="code" title="File: PseudofunctorToCat.v
 Line: 36
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.29761904761905%"></div>
 <pre>
     exists (m1.1 o m2.1).</pre>
 </div>
 <div class="code" title="File: PseudofunctorToCat.v
 Line: 37
 Time: 0.002s">
-<div class="time" style="width: 0.63091482649842%"></div>
+<div class="time" style="width: 0.5952380952381%"></div>
 <pre>
     refine (m1.2 o ((p_morphism_of F m1.1) _1 m2.2 o _)).</pre>
 </div>
 <div class="code" title="File: PseudofunctorToCat.v
 Line: 38
 Time: 0.002s">
-<div class="time" style="width: 0.63091482649842%"></div>
+<div class="time" style="width: 0.5952380952381%"></div>
 <pre>
     apply (p_composition_of F).</pre>
 </div>
 <div class="code" title="File: PseudofunctorToCat.v
 Line: 39
-Time: 0.002s">
-<div class="time" style="width: 0.63091482649842%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.29761904761905%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: PseudofunctorToCat.v
 Line: 40
 Time: 0.001s">
-<div class="time" style="width: 0.31545741324921%"></div>
+<div class="time" style="width: 0.29761904761905%"></div>
 <pre>
 
   Definition identity s : morphism s s.</pre>
@@ -242,14 +242,14 @@ Time: 0s">
 <div class="code" title="File: PseudofunctorToCat.v
 Line: 44
 Time: 0.001s">
-<div class="time" style="width: 0.31545741324921%"></div>
+<div class="time" style="width: 0.29761904761905%"></div>
 <pre>
     apply (p_identity_of F).</pre>
 </div>
 <div class="code" title="File: PseudofunctorToCat.v
 Line: 45
-Time: 0.001s">
-<div class="time" style="width: 0.31545741324921%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -433,8 +433,8 @@ intros a b c d [f f'] [g g'] [h h']; simpl.
 </div>
 <div class="code" title="File: PseudofunctorToCat.v
 Line: 182
-Time: 0.048s">
-<div class="time" style="width: 15.141955835962%"></div>
+Time: 0.049s">
+<div class="time" style="width: 14.583333333333%"></div>
 <pre>Lemma pseudofunctor_to_cat_assoc_helper
   : forall {x x0 : C} {x2 : Category.Core.morphism C x x0} {x1 : C}
            {x5 : Category.Core.morphism C x0 x1} {x4 : C} {x7 : Category.Core.morphism C x1 x4}
@@ -468,29 +468,29 @@ Time: 0s">
 </div>
 <div class="code" title="File: PseudofunctorToCat.v
 Line: 205
-Time: 0.317s">
+Time: 0.336s">
 <div class="time" style="width: 100%"></div>
 <pre>
     helper_t assoc_before_commutes_tac.</pre>
 </div>
 <div class="code" title="File: PseudofunctorToCat.v
 Line: 206
-Time: 0.179s">
-<div class="time" style="width: 56.466876971609%"></div>
+Time: 0.211s">
+<div class="time" style="width: 62.797619047619%"></div>
 <pre>
     assoc_fin_tac.</pre>
 </div>
 <div class="code" title="File: PseudofunctorToCat.v
 Line: 207
-Time: 0.102s">
-<div class="time" style="width: 32.17665615142%"></div>
+Time: 0.129s">
+<div class="time" style="width: 38.392857142857%"></div>
 <pre>
   Qed.</pre>
 </div>
 <div class="code" title="File: PseudofunctorToCat.v
 Line: 208
-Time: 0.014s">
-<div class="time" style="width: 4.416403785489%"></div>
+Time: 0.018s">
+<div class="time" style="width: 5.3571428571429%"></div>
 <pre>
 
   Lemma pseudofunctor_to_cat_left_identity_helper
@@ -519,22 +519,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: PseudofunctorToCat.v
 Line: 226
-Time: 0.062s">
-<div class="time" style="width: 19.558359621451%"></div>
+Time: 0.076s">
+<div class="time" style="width: 22.619047619048%"></div>
 <pre>
     helper_t idtac.</pre>
 </div>
 <div class="code" title="File: PseudofunctorToCat.v
 Line: 227
-Time: 0.031s">
-<div class="time" style="width: 9.7791798107256%"></div>
+Time: 0.035s">
+<div class="time" style="width: 10.416666666667%"></div>
 <pre>
   Qed.</pre>
 </div>
 <div class="code" title="File: PseudofunctorToCat.v
 Line: 228
-Time: 0.013s">
-<div class="time" style="width: 4.1009463722397%"></div>
+Time: 0.017s">
+<div class="time" style="width: 5.0595238095238%"></div>
 <pre>
 
   Lemma pseudofunctor_to_cat_right_identity_helper
@@ -563,15 +563,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: PseudofunctorToCat.v
 Line: 246
-Time: 0.031s">
-<div class="time" style="width: 9.7791798107256%"></div>
+Time: 0.038s">
+<div class="time" style="width: 11.309523809524%"></div>
 <pre>
     helper_t idtac.</pre>
 </div>
 <div class="code" title="File: PseudofunctorToCat.v
 Line: 247
-Time: 0.015s">
-<div class="time" style="width: 4.7318611987382%"></div>
+Time: 0.019s">
+<div class="time" style="width: 5.6547619047619%"></div>
 <pre>
   Qed.</pre>
 </div>
@@ -599,8 +599,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: PseudofunctorToCat.v
 Line: 252
-Time: 0.078s">
-<div class="time" style="width: 24.605678233438%"></div>
+Time: 0.093s">
+<div class="time" style="width: 27.678571428571%"></div>
 <pre>
     refine (@Build_PreCategory
               Pair
@@ -635,8 +635,8 @@ Time: 0.078s">
 </div>
 <div class="code" title="File: PseudofunctorToCat.v
 Line: 282
-Time: 0.002s">
-<div class="time" style="width: 0.63091482649842%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.89285714285714%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -651,8 +651,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: PseudofunctorToCat.v
 Line: 286
-Time: 0.004s">
-<div class="time" style="width: 1.2618296529968%"></div>
+Time: 0.005s">
+<div class="time" style="width: 1.4880952380952%"></div>
 <pre>Definition pr1 : Functor category C
     := Build_Functor category C
                      c
@@ -662,8 +662,8 @@ Time: 0.004s">
 </div>
 <div class="code" title="File: PseudofunctorToCat.v
 Line: 291
-Time: 0.07s">
-<div class="time" style="width: 22.082018927445%"></div>
+Time: 0.082s">
+<div class="time" style="width: 24.404761904762%"></div>
 <pre>
 End Grothendieck.</pre>
 </div>
