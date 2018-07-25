@@ -30,7 +30,7 @@ pre {
 
 <div class="code" title="File: surjective_factor.v
 Line: 1
-Time: 0.257s">
+Time: 0.216s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import
         HoTT.Types.Arrow
@@ -65,7 +65,7 @@ Time: 0s">
 <div class="code" title="File: surjective_factor.v
 Line: 10
 Time: 0.001s">
-<div class="time" style="width: 0.38910505836576%"></div>
+<div class="time" style="width: 0.46296296296296%"></div>
 <pre>
   Context {A B C} `{IsHSet C} `(f : A -&gt; C) `(g : A -&gt; B) {Esurj : IsSurjection g}.</pre>
 </div>
@@ -100,8 +100,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: surjective_factor.v
 Line: 16
-Time: 0.052s">
-<div class="time" style="width: 20.233463035019%"></div>
+Time: 0.044s">
+<div class="time" style="width: 20.37037037037%"></div>
 <pre> apply Sigma.ishprop_sigma_disjoint.</pre>
 </div>
 <div class="code" title="File: surjective_factor.v
@@ -113,36 +113,36 @@ Time: 0s">
 </div>
 <div class="code" title="File: surjective_factor.v
 Line: 17
-Time: 0.046s">
-<div class="time" style="width: 17.898832684825%"></div>
+Time: 0.039s">
+<div class="time" style="width: 18.055555555556%"></div>
 <pre>
     generalize (center _ (Esurj b));apply (Trunc_ind _).</pre>
 </div>
 <div class="code" title="File: surjective_factor.v
 Line: 18
 Time: 0.001s">
-<div class="time" style="width: 0.38910505836576%"></div>
+<div class="time" style="width: 0.46296296296296%"></div>
 <pre>
     intros [a p];destruct p.</pre>
 </div>
 <div class="code" title="File: surjective_factor.v
 Line: 19
 Time: 0.002s">
-<div class="time" style="width: 0.77821011673152%"></div>
+<div class="time" style="width: 0.92592592592593%"></div>
 <pre>
     path_via (f a).</pre>
 </div>
 <div class="code" title="File: surjective_factor.v
 Line: 20
 Time: 0.001s">
-<div class="time" style="width: 0.38910505836576%"></div>
+<div class="time" style="width: 0.46296296296296%"></div>
 <pre>
   Qed.</pre>
 </div>
 <div class="code" title="File: surjective_factor.v
 Line: 21
 Time: 0.002s">
-<div class="time" style="width: 0.77821011673152%"></div>
+<div class="time" style="width: 0.92592592592593%"></div>
 <pre>
 
   Definition surjective_factor_aux :=
@@ -154,7 +154,7 @@ Time: 0.002s">
 <div class="code" title="File: surjective_factor.v
 Line: 27
 Time: 0.001s">
-<div class="time" style="width: 0.38910505836576%"></div>
+<div class="time" style="width: 0.46296296296296%"></div>
 <pre>
 
   Definition surjective_factor : B -&gt; C
@@ -162,8 +162,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: surjective_factor.v
 Line: 30
-Time: 0.001s">
-<div class="time" style="width: 0.38910505836576%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
   Lemma surjective_factor_pr : f == compose surjective_factor g.</pre>
@@ -184,8 +184,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: surjective_factor.v
 Line: 34
-Time: 0.001s">
-<div class="time" style="width: 0.38910505836576%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     apply (surjective_factor_aux (g a)).2.</pre>
 </div>
@@ -205,7 +205,7 @@ Time: 0s">
 <div class="code" title="File: surjective_factor.v
 Line: 36
 Time: 0.002s">
-<div class="time" style="width: 0.77821011673152%"></div>
+<div class="time" style="width: 0.92592592592593%"></div>
 <pre>
 
 End surjective_factor.</pre>

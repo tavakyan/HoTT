@@ -787,8 +787,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 156
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 100%"></div>
 <pre>Instance iff_inverse : Symmetric iff | 1
   := fun A B f =&gt; (snd f , fst f).</pre>
 </div>
@@ -1396,8 +1396,8 @@ Notation "f == g" := (pointwise_paths f g) : type_scope.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 298
-Time: 0.001s">
-<div class="time" style="width: 100%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition apD10 {A} {B:A-&gt;Type} {f g : forall x, B x} (h:f=g)
@@ -1460,8 +1460,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 314
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 100%"></div>
 <pre>
   case h, p; reflexivity.</pre>
 </div>
@@ -1980,8 +1980,8 @@ Notation "2" := (1.+1) : trunc_scope.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 452
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 100%"></div>
 <pre>
 
 Fixpoint nat_to_trunc_index (n : nat) : trunc_index
@@ -2067,8 +2067,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 476
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 100%"></div>
 <pre>Global Instance istrunc_paths (A : Type) n `{H : IsTrunc n.+1 A} (x y : A)
 : IsTrunc n (x = y)
   := H x y.</pre>
@@ -2119,8 +2119,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 484
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 100%"></div>
 <pre>Hint Extern 10 =&gt;
 progress match goal with
            | [ H : forall x y : ?T, IsTrunc ?n (x = y) |- _ ]
@@ -2249,8 +2249,8 @@ Global Existing Instance isequiv_apD10.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 529
-Time: 0.001s">
-<div class="time" style="width: 100%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition path_forall `{Funext} {A : Type} {P : A -&gt; Type} (f g : forall x : A, P x) :
@@ -2319,8 +2319,8 @@ Hint Resolve @idpath : core.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 557
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 100%"></div>
 <pre>
 
 Ltac path_via mid :=
@@ -2416,8 +2416,8 @@ Definition symmetric_neq {A} {x y : A} : x &lt;&gt; y -&gt; y &lt;&gt; x
 </div>
 <div class="code" title="File: Overture.v
 Line: 576
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 100%"></div>
 <pre>
 
 Definition complement {A} (R : relation A) : relation A :=
@@ -2880,8 +2880,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 737
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 100%"></div>
 <pre>Ltac path_induction :=
   intros; repeat progress (
     match goal with
