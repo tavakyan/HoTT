@@ -49,15 +49,15 @@ Require Import Functor.Composition.Core NaturalTransformation.Composition.Core.<
 </div>
 <div class="code" title="File: Functorial.v
 Line: 2
-Time: 0.024s">
-<div class="time" style="width: 5.0847457627119%"></div>
+Time: 0.026s">
+<div class="time" style="width: 5.5084745762712%"></div>
 <pre>
 Require Import NaturalTransformation.Composition.Laws.</pre>
 </div>
 <div class="code" title="File: Functorial.v
 Line: 3
-Time: 0.036s">
-<div class="time" style="width: 7.6271186440678%"></div>
+Time: 0.041s">
+<div class="time" style="width: 8.6864406779661%"></div>
 <pre>
 Require Import InitialTerminalCategory.</pre>
 </div>
@@ -84,8 +84,8 @@ Require Import Category.Strict.</pre>
 </div>
 <div class="code" title="File: Functorial.v
 Line: 7
-Time: 0.002s">
-<div class="time" style="width: 0.42372881355932%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.63559322033898%"></div>
 <pre>
 Require Comma.Core.</pre>
 </div>
@@ -217,8 +217,8 @@ Local Tactic Notation "helper" tactic(fin) constr(hyp_fwd) constr(hyp_bak) :=
 </div>
 <div class="code" title="File: Functorial.v
 Line: 43
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.21186440677966%"></div>
 <pre>
 
 Local Ltac functorial_helper_t unfold_lem :=
@@ -382,8 +382,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Functorial.v
 Line: 94
-Time: 0.003s">
-<div class="time" style="width: 0.63559322033898%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.84745762711864%"></div>
 <pre>
         refine (CommaCategory.Build_morphism
                   (functorial_morphism_of_object_of s)
@@ -394,8 +394,8 @@ Time: 0.003s">
 </div>
 <div class="code" title="File: Functorial.v
 Line: 100
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.21186440677966%"></div>
 <pre>
         unfold functorial_morphism_of_object_of; simpl.</pre>
 </div>
@@ -408,15 +408,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Functorial.v
 Line: 102
-Time: 0.092s">
-<div class="time" style="width: 19.491525423729%"></div>
+Time: 0.109s">
+<div class="time" style="width: 23.093220338983%"></div>
 <pre>
         abstract helper (exact (CommaCategory.p m)) (commutes TA) (commutes TB).</pre>
 </div>
 <div class="code" title="File: Functorial.v
 Line: 103
-Time: 0.014s">
-<div class="time" style="width: 2.9661016949153%"></div>
+Time: 0.018s">
+<div class="time" style="width: 3.8135593220339%"></div>
 <pre>
       Defined.</pre>
 </div>
@@ -437,8 +437,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Functorial.v
 Line: 107
-Time: 0.028s">
-<div class="time" style="width: 5.9322033898305%"></div>
+Time: 0.029s">
+<div class="time" style="width: 6.1440677966102%"></div>
 <pre>
         refine (Build_Functor
                   (S / T) (S' / T')
@@ -461,8 +461,8 @@ Time: 0.003s">
 </div>
 <div class="code" title="File: Functorial.v
 Line: 119
-Time: 0.009s">
-<div class="time" style="width: 1.9067796610169%"></div>
+Time: 0.01s">
+<div class="time" style="width: 2.1186440677966%"></div>
 <pre>
     End morphism_of.</pre>
 </div>
@@ -491,8 +491,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Functorial.v
 Line: 125
-Time: 0.001s">
-<div class="time" style="width: 0.21186440677966%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.42372881355932%"></div>
 <pre>
         let A := match goal with |- ?A = ?B =&gt; constr:(A) end in
         let B := match goal with |- ?A = ?B =&gt; constr:(B) end in
@@ -507,15 +507,15 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Functorial.v
 Line: 129
-Time: 0.011s">
-<div class="time" style="width: 2.3305084745763%"></div>
+Time: 0.012s">
+<div class="time" style="width: 2.5423728813559%"></div>
 <pre>
       Defined.</pre>
 </div>
 <div class="code" title="File: Functorial.v
 Line: 130
-Time: 0.003s">
-<div class="time" style="width: 0.63559322033898%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.84745762711864%"></div>
 <pre>
 
       Definition functorial_identity_of `{Funext}
@@ -554,8 +554,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Functorial.v
 Line: 140
-Time: 0.232s">
-<div class="time" style="width: 49.152542372881%"></div>
+Time: 0.23s">
+<div class="time" style="width: 48.728813559322%"></div>
 <pre>
         functorial_helper_t functorial_identity_of_helper.</pre>
 </div>
@@ -575,8 +575,8 @@ Time: 0.006s">
 </div>
 <div class="code" title="File: Functorial.v
 Line: 143
-Time: 0.027s">
-<div class="time" style="width: 5.7203389830508%"></div>
+Time: 0.029s">
+<div class="time" style="width: 6.1440677966102%"></div>
 <pre>
   End single_source.</pre>
 </div>
@@ -751,8 +751,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Functorial.v
 Line: 175
-Time: 0.009s">
-<div class="time" style="width: 1.9067796610169%"></div>
+Time: 0.025s">
+<div class="time" style="width: 5.2966101694915%"></div>
 <pre>
 
     Let TA'' : NaturalTransformation (S'' o AF'') (CF'' o S)
@@ -764,8 +764,8 @@ Time: 0.009s">
 </div>
 <div class="code" title="File: Functorial.v
 Line: 182
-Time: 0.01s">
-<div class="time" style="width: 2.1186440677966%"></div>
+Time: 0.009s">
+<div class="time" style="width: 1.9067796610169%"></div>
 <pre>
     Let TB'' : NaturalTransformation (CF'' o T) (T'' o BF'')
       := ((associator_1 _ _ _)
@@ -816,8 +816,8 @@ Time: 0.004s">
 </div>
 <div class="code" title="File: Functorial.v
 Line: 198
-Time: 0.151s">
-<div class="time" style="width: 31.991525423729%"></div>
+Time: 0.134s">
+<div class="time" style="width: 28.389830508475%"></div>
 <pre>
       abstract (
           autorewrite with morphism; simpl;
@@ -826,8 +826,8 @@ Time: 0.151s">
 </div>
 <div class="code" title="File: Functorial.v
 Line: 202
-Time: 0.023s">
-<div class="time" style="width: 4.8728813559322%"></div>
+Time: 0.026s">
+<div class="time" style="width: 5.5084745762712%"></div>
 <pre>
     Defined.</pre>
 </div>
@@ -857,36 +857,36 @@ Time: 0.01s">
 </div>
 <div class="code" title="File: Functorial.v
 Line: 209
-Time: 0.002s">
-<div class="time" style="width: 0.42372881355932%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.63559322033898%"></div>
 <pre>
       exists (path_forall _ _ functorial_composition_of_helper).</pre>
 </div>
 <div class="code" title="File: Functorial.v
 Line: 210
-Time: 0.244s">
-<div class="time" style="width: 51.694915254237%"></div>
+Time: 0.252s">
+<div class="time" style="width: 53.389830508475%"></div>
 <pre>
       functorial_helper_t functorial_composition_of_helper.</pre>
 </div>
 <div class="code" title="File: Functorial.v
 Line: 211
-Time: 0.426s">
-<div class="time" style="width: 90.254237288136%"></div>
+Time: 0.425s">
+<div class="time" style="width: 90.042372881356%"></div>
 <pre>
     Qed.</pre>
 </div>
 <div class="code" title="File: Functorial.v
 Line: 212
-Time: 0.09s">
-<div class="time" style="width: 19.067796610169%"></div>
+Time: 0.095s">
+<div class="time" style="width: 20.127118644068%"></div>
 <pre>
   End composition_of.</pre>
 </div>
 <div class="code" title="File: Functorial.v
 Line: 213
-Time: 0.133s">
-<div class="time" style="width: 28.177966101695%"></div>
+Time: 0.151s">
+<div class="time" style="width: 31.991525423729%"></div>
 <pre>
 End functorial.</pre>
 </div>

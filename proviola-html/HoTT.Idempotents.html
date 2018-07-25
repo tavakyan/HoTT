@@ -553,12 +553,12 @@
           
 
             i = 107;
-            data = "1 subgoal (ID 153)	  	  X : Type	  Y : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  f : X -> Y	  g : A -> Y	  p : (fun x : X => g (r x)) == f	  y : Y	  a : A	  q : g a = y	  ============================	  transport (fun x : A => g x = y) (H a)	    (p (s a) @ (((p (s a))^ @ ap g (H a)) @ q)) = q	No more subgoals.	";
+            data = "1 subgoal (ID 153)	  	  X : Type	  Y : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  f : X -> Y	  g : A -> Y	  p : (fun x : X => g (r x)) == f	  y : Y	  a : A	  q : g a = y	  ============================	  transport (fun x : A => g x = y) (H a)	    (p (s a) @ (((p (s a))^ @ ap g (H a)) @ q)) = q	";
             responses[i]=data;
           
 
             i = 108;
-            data = "<infomsg>retractof_hfiber is defined</infomsg>	";
+            data = "No more subgoals.	<infomsg>retractof_hfiber is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -1923,12 +1923,12 @@
           
 
             i = 381;
-            data = "1 subgoal (ID 277)	  	  X : Type	  f : PreIdempotent X	  ss : forall x : X, Collapsible (f x = x)	  ============================	  (fun x : X =>	   (f x; (ss (f x)).(collapse) (isidem f x);	   wconst ((ss (f x)).(collapse) (isidem f x)) (isidem f x))) o pr1 == idmap	1 subgoal (ID 304)	  	  X : Type	  f : PreIdempotent X	  ss : forall x : X, Collapsible (f x = x)	  x : X	  p : f x = x	  q : (ss x).(collapse) p = p	  ============================	  (f x; (ss (f x)).(collapse) (isidem f x);	  wconst ((ss (f x)).(collapse) (isidem f x)) (isidem f x)) = 	  (x; p; q)	";
+            data = "1 subgoal (ID 277)	  	  X : Type	  f : PreIdempotent X	  ss : forall x : X, Collapsible (f x = x)	  ============================	  (fun x : X =>	   (f x; (ss (f x)).(collapse) (isidem f x);	   wconst ((ss (f x)).(collapse) (isidem f x)) (isidem f x))) o pr1 == idmap	";
             responses[i]=data;
           
 
             i = 382;
-            data = "1 subgoal (ID 309)	  	  X : Type	  f : PreIdempotent X	  ss : forall x : X, Collapsible (f x = x)	  x : X	  p : f x = x	  q : (ss x).(collapse) p = p	  ============================	  transport (fun x0 : X => FixedBy (ss x0).(collapse)) p	    (f x; (ss (f x)).(collapse) (isidem f x);	    wconst ((ss (f x)).(collapse) (isidem f x)) (isidem f x)).(	    proj2_sig) = (x; p; q).(proj2_sig)	";
+            data = "1 subgoal (ID 304)	  	  X : Type	  f : PreIdempotent X	  ss : forall x : X, Collapsible (f x = x)	  x : X	  p : f x = x	  q : (ss x).(collapse) p = p	  ============================	  (f x; (ss (f x)).(collapse) (isidem f x);	  wconst ((ss (f x)).(collapse) (isidem f x)) (isidem f x)) = 	  (x; p; q)	1 subgoal (ID 309)	  	  X : Type	  f : PreIdempotent X	  ss : forall x : X, Collapsible (f x = x)	  x : X	  p : f x = x	  q : (ss x).(collapse) p = p	  ============================	  transport (fun x0 : X => FixedBy (ss x0).(collapse)) p	    (f x; (ss (f x)).(collapse) (isidem f x);	    wconst ((ss (f x)).(collapse) (isidem f x)) (isidem f x)).(	    proj2_sig) = (x; p; q).(proj2_sig)	";
             responses[i]=data;
           
 

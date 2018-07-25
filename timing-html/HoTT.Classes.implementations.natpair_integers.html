@@ -30,8 +30,8 @@ pre {
 
 <div class="code" title="File: natpair_integers.v
 Line: 1
-Time: 0.211s">
-<div class="time" style="width: 13.171036204744%"></div>
+Time: 0.239s">
+<div class="time" style="width: 14.371617558629%"></div>
 <pre>Require Import HoTT.HIT.quotient
   HoTT.Basics.PathGroupoids
   HoTT.Types.Universe
@@ -45,8 +45,8 @@ Time: 0.211s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 10
-Time: 0.295s">
-<div class="time" style="width: 18.414481897628%"></div>
+Time: 0.328s">
+<div class="time" style="width: 19.723391461215%"></div>
 <pre>
 Require Import
   HoTT.Classes.interfaces.abstract_algebra
@@ -86,7 +86,7 @@ Module PairT.</pre>
 <div class="code" title="File: natpair_integers.v
 Line: 26
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 
 Record T (N : Type) := C { pos : N ; neg : N }.</pre>
@@ -130,7 +130,7 @@ Universe UN UNalt.</pre>
 <div class="code" title="File: natpair_integers.v
 Line: 34
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 Context (N : Type@{UN}) `{Naturals@{UN UN UN UN UN UN UN UNalt} N}.</pre>
 </div>
@@ -166,7 +166,7 @@ Time: 0s">
 <div class="code" title="File: natpair_integers.v
 Line: 40
 Time: 0.002s">
-<div class="time" style="width: 0.12484394506866%"></div>
+<div class="time" style="width: 0.12026458208058%"></div>
 <pre> issig (@C N) (@pos N) (@neg N).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -178,14 +178,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 41
-Time: 0.097s">
-<div class="time" style="width: 6.0549313358302%"></div>
+Time: 0.099s">
+<div class="time" style="width: 5.9530968129886%"></div>
 <pre> apply (trunc_equiv' _ E).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 41
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -200,7 +200,7 @@ Global Instance inject : Cast N (T N) := fun x =&gt; C x 0.</pre>
 <div class="code" title="File: natpair_integers.v
 Line: 44
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 
 Definition equiv := fun x y =&gt; pos x + neg y = pos y + neg x.</pre>
@@ -301,35 +301,35 @@ Time: 0s">
 <div class="code" title="File: natpair_integers.v
 Line: 55
 Time: 0.012s">
-<div class="time" style="width: 0.74906367041198%"></div>
+<div class="time" style="width: 0.72158749248346%"></div>
 <pre>
   apply (left_cancellation (+) (neg b)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 56
-Time: 0.005s">
-<div class="time" style="width: 0.31210986267166%"></div>
+Time: 0.006s">
+<div class="time" style="width: 0.36079374624173%"></div>
 <pre>
   rewrite (plus_assoc (neg b) (pos a)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 57
 Time: 0.006s">
-<div class="time" style="width: 0.37453183520599%"></div>
+<div class="time" style="width: 0.36079374624173%"></div>
 <pre>
   rewrite (plus_comm (neg b) (pos a)), E1.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 58
 Time: 0.006s">
-<div class="time" style="width: 0.37453183520599%"></div>
+<div class="time" style="width: 0.36079374624173%"></div>
 <pre>
   rewrite (plus_comm (pos b)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 59
-Time: 0.073s">
-<div class="time" style="width: 4.5568039950062%"></div>
+Time: 0.076s">
+<div class="time" style="width: 4.5700541190619%"></div>
 <pre> rewrite &lt;-plus_assoc.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -341,34 +341,34 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 60
-Time: 0.004s">
-<div class="time" style="width: 0.24968789013733%"></div>
+Time: 0.006s">
+<div class="time" style="width: 0.36079374624173%"></div>
 <pre> rewrite (plus_comm (pos c) (neg b)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 60
-Time: 0.011s">
-<div class="time" style="width: 0.68664169787765%"></div>
+Time: 0.01s">
+<div class="time" style="width: 0.60132291040289%"></div>
 <pre>
   rewrite plus_assoc.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 61
-Time: 0.005s">
-<div class="time" style="width: 0.31210986267166%"></div>
+Time: 0.006s">
+<div class="time" style="width: 0.36079374624173%"></div>
 <pre> rewrite (plus_comm (neg a)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 61
-Time: 0.01s">
-<div class="time" style="width: 0.62421972534332%"></div>
+Time: 0.011s">
+<div class="time" style="width: 0.66145520144317%"></div>
 <pre>
   rewrite &lt;-plus_assoc.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 62
-Time: 0.005s">
-<div class="time" style="width: 0.31210986267166%"></div>
+Time: 0.006s">
+<div class="time" style="width: 0.36079374624173%"></div>
 <pre> rewrite (plus_comm (neg a)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -381,14 +381,14 @@ Time: 0s">
 <div class="code" title="File: natpair_integers.v
 Line: 63
 Time: 0.002s">
-<div class="time" style="width: 0.12484394506866%"></div>
+<div class="time" style="width: 0.12026458208058%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 64
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 
 Instance pl : Plus (T N) := fun x y =&gt; C (pos x + pos y) (neg x + neg y).</pre>
@@ -396,7 +396,7 @@ Instance pl : Plus (T N) := fun x y =&gt; C (pos x + pos y) (neg x + neg y).</pr
 <div class="code" title="File: natpair_integers.v
 Line: 66
 Time: 0.002s">
-<div class="time" style="width: 0.12484394506866%"></div>
+<div class="time" style="width: 0.12026458208058%"></div>
 <pre>
 
 Instance ml : Mult (T N) := fun x y =&gt;
@@ -459,28 +459,28 @@ intros q1 q2 Eq r1 r2 Er.</pre>
 <div class="code" title="File: natpair_integers.v
 Line: 81
 Time: 0.006s">
-<div class="time" style="width: 0.37453183520599%"></div>
+<div class="time" style="width: 0.36079374624173%"></div>
 <pre>
 rewrite (plus_assoc _ (neg q2)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 82
 Time: 0.006s">
-<div class="time" style="width: 0.37453183520599%"></div>
+<div class="time" style="width: 0.36079374624173%"></div>
 <pre>
 rewrite &lt;-(plus_assoc (pos q1)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 83
-Time: 0.006s">
-<div class="time" style="width: 0.37453183520599%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.30066145520144%"></div>
 <pre>
 rewrite (plus_comm (pos r1)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 84
 Time: 0.006s">
-<div class="time" style="width: 0.37453183520599%"></div>
+<div class="time" style="width: 0.36079374624173%"></div>
 <pre>
 rewrite (plus_assoc (pos q1)).</pre>
 </div>
@@ -493,7 +493,7 @@ Time: 0s">
 <div class="code" title="File: natpair_integers.v
 Line: 85
 Time: 0.006s">
-<div class="time" style="width: 0.37453183520599%"></div>
+<div class="time" style="width: 0.36079374624173%"></div>
 <pre>
 rewrite &lt;-(plus_assoc _ (pos r1)).</pre>
 </div>
@@ -506,27 +506,27 @@ Time: 0s">
 <div class="code" title="File: natpair_integers.v
 Line: 86
 Time: 0.011s">
-<div class="time" style="width: 0.68664169787765%"></div>
+<div class="time" style="width: 0.66145520144317%"></div>
 <pre>
 rewrite plus_assoc.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 87
 Time: 0.006s">
-<div class="time" style="width: 0.37453183520599%"></div>
+<div class="time" style="width: 0.36079374624173%"></div>
 <pre> rewrite &lt;-(plus_assoc (pos q2)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 87
 Time: 0.006s">
-<div class="time" style="width: 0.37453183520599%"></div>
+<div class="time" style="width: 0.36079374624173%"></div>
 <pre>
 rewrite (plus_comm (neg q1)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 88
-Time: 0.027s">
-<div class="time" style="width: 1.685393258427%"></div>
+Time: 0.028s">
+<div class="time" style="width: 1.6837041491281%"></div>
 <pre> rewrite !plus_assoc.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -539,7 +539,7 @@ reflexivity.</pre>
 <div class="code" title="File: natpair_integers.v
 Line: 89
 Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+<div class="time" style="width: 0.18039687312087%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -569,7 +569,7 @@ intros q1 q2 Eq r1 r2 Er.</pre>
 <div class="code" title="File: natpair_integers.v
 Line: 95
 Time: 0.022s">
-<div class="time" style="width: 1.3732833957553%"></div>
+<div class="time" style="width: 1.3229104028863%"></div>
 <pre> transitivity (q1 * r2);unfold equiv in *;simpl.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -582,7 +582,7 @@ Time: 0s">
 <div class="code" title="File: natpair_integers.v
 Line: 96
 Time: 0.002s">
-<div class="time" style="width: 0.12484394506866%"></div>
+<div class="time" style="width: 0.12026458208058%"></div>
 <pre> transitivity (pos q1 * (pos r1 + neg r2) + neg q1 * (neg r1 + pos r2)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -595,13 +595,13 @@ Time: 0s">
 <div class="code" title="File: natpair_integers.v
 Line: 97
 Time: 0.023s">
-<div class="time" style="width: 1.4357053682896%"></div>
+<div class="time" style="width: 1.3830426939266%"></div>
 <pre> rewrite 2!plus_mult_distr_l.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 97
-Time: 0.031s">
-<div class="time" style="width: 1.9350811485643%"></div>
+Time: 0.032s">
+<div class="time" style="width: 1.9242333132892%"></div>
 <pre>
     rewrite &lt;-2!plus_assoc.</pre>
 </div>
@@ -615,14 +615,14 @@ Time: 0s">
 <div class="code" title="File: natpair_integers.v
 Line: 99
 Time: 0.023s">
-<div class="time" style="width: 1.4357053682896%"></div>
+<div class="time" style="width: 1.3830426939266%"></div>
 <pre>
     rewrite 2!plus_assoc.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 100
 Time: 0.006s">
-<div class="time" style="width: 0.37453183520599%"></div>
+<div class="time" style="width: 0.36079374624173%"></div>
 <pre> rewrite (plus_comm (neg q1 * neg r1)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -648,13 +648,13 @@ Time: 0s">
 <div class="code" title="File: natpair_integers.v
 Line: 102
 Time: 0.011s">
-<div class="time" style="width: 0.68664169787765%"></div>
+<div class="time" style="width: 0.66145520144317%"></div>
 <pre> rewrite plus_mult_distr_l.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 102
 Time: 0.006s">
-<div class="time" style="width: 0.37453183520599%"></div>
+<div class="time" style="width: 0.36079374624173%"></div>
 <pre>
     rewrite (plus_comm (neg r1)).</pre>
 </div>
@@ -667,14 +667,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 104
-Time: 0.011s">
-<div class="time" style="width: 0.68664169787765%"></div>
+Time: 0.012s">
+<div class="time" style="width: 0.72158749248346%"></div>
 <pre> rewrite plus_mult_distr_l.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 104
 Time: 0.024s">
-<div class="time" style="width: 1.498127340824%"></div>
+<div class="time" style="width: 1.4431749849669%"></div>
 <pre>
     rewrite &lt;-2!plus_assoc.</pre>
 </div>
@@ -686,22 +686,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 105
-Time: 0.006s">
-<div class="time" style="width: 0.37453183520599%"></div>
+Time: 0.007s">
+<div class="time" style="width: 0.42092603728202%"></div>
 <pre>
     rewrite (plus_comm (neg q1 * pos r1)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 106
-Time: 0.023s">
-<div class="time" style="width: 1.4357053682896%"></div>
+Time: 0.024s">
+<div class="time" style="width: 1.4431749849669%"></div>
 <pre>
     rewrite 2!plus_assoc.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 107
 Time: 0.007s">
-<div class="time" style="width: 0.43695380774032%"></div>
+<div class="time" style="width: 0.42092603728202%"></div>
 <pre>
     rewrite (plus_comm (pos q1 * neg r1)).</pre>
 </div>
@@ -721,7 +721,7 @@ Time: 0s">
 <div class="code" title="File: natpair_integers.v
 Line: 109
 Time: 0.002s">
-<div class="time" style="width: 0.12484394506866%"></div>
+<div class="time" style="width: 0.12026458208058%"></div>
 <pre> transitivity ((pos q1 + neg q2) * pos r2 + (neg q1 + pos q2) * neg r2).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -733,35 +733,35 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 110
-Time: 0.023s">
-<div class="time" style="width: 1.4357053682896%"></div>
+Time: 0.024s">
+<div class="time" style="width: 1.4431749849669%"></div>
 <pre> rewrite 2!plus_mult_distr_r.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 110
-Time: 0.024s">
-<div class="time" style="width: 1.498127340824%"></div>
+Time: 0.025s">
+<div class="time" style="width: 1.5033072760072%"></div>
 <pre>
     rewrite &lt;-2!plus_assoc;apply ap.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 111
-Time: 0.006s">
-<div class="time" style="width: 0.37453183520599%"></div>
+Time: 0.007s">
+<div class="time" style="width: 0.42092603728202%"></div>
 <pre>
     rewrite (plus_comm (pos q2 * neg r2)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 112
 Time: 0.024s">
-<div class="time" style="width: 1.498127340824%"></div>
+<div class="time" style="width: 1.4431749849669%"></div>
 <pre>
     rewrite 2!plus_assoc.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 113
-Time: 0.015s">
-<div class="time" style="width: 0.93632958801498%"></div>
+Time: 0.016s">
+<div class="time" style="width: 0.96211665664462%"></div>
 <pre> rewrite (plus_comm (neg q1 * neg r2)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -781,20 +781,20 @@ Time: 0s">
 <div class="code" title="File: natpair_integers.v
 Line: 115
 Time: 0.012s">
-<div class="time" style="width: 0.74906367041198%"></div>
+<div class="time" style="width: 0.72158749248346%"></div>
 <pre> rewrite Eq,plus_mult_distr_r.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 115
 Time: 0.019s">
-<div class="time" style="width: 1.1860174781523%"></div>
+<div class="time" style="width: 1.1425135297655%"></div>
 <pre>
     rewrite (plus_comm (neg q1)),&lt;-Eq,plus_mult_distr_r.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 116
-Time: 0.025s">
-<div class="time" style="width: 1.5605493133583%"></div>
+Time: 0.027s">
+<div class="time" style="width: 1.6235718580878%"></div>
 <pre>
     rewrite &lt;-2!plus_assoc.</pre>
 </div>
@@ -807,21 +807,21 @@ Time: 0s">
 <div class="code" title="File: natpair_integers.v
 Line: 117
 Time: 0.019s">
-<div class="time" style="width: 1.1860174781523%"></div>
+<div class="time" style="width: 1.1425135297655%"></div>
 <pre>
     rewrite plus_assoc,(plus_comm (neg q1 * pos r2)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 118
-Time: 0.005s">
-<div class="time" style="width: 0.31210986267166%"></div>
+Time: 0.008s">
+<div class="time" style="width: 0.48105832832231%"></div>
 <pre>
     apply plus_comm.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 119
-Time: 0.016s">
-<div class="time" style="width: 0.99875156054931%"></div>
+Time: 0.015s">
+<div class="time" style="width: 0.90198436560433%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -856,15 +856,15 @@ intros q1 q2 E.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 125
-Time: 0.012s">
-<div class="time" style="width: 0.74906367041198%"></div>
+Time: 0.013s">
+<div class="time" style="width: 0.78171978352375%"></div>
 <pre>
 rewrite !(plus_comm (neg _)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 126
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre> symmetry.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -883,7 +883,7 @@ Qed.</pre>
 <div class="code" title="File: natpair_integers.v
 Line: 127
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 
 Definition Tle : Le (T N)
@@ -892,7 +892,7 @@ Definition Tle : Le (T N)
 <div class="code" title="File: natpair_integers.v
 Line: 130
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 Definition Tlt : Lt (T N)
   := fun a b =&gt; pos a + neg b &lt; pos b + neg a.</pre>
@@ -900,7 +900,7 @@ Definition Tlt : Lt (T N)
 <div class="code" title="File: natpair_integers.v
 Line: 132
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 Definition Tapart : Apart (T N)
   := fun a b =&gt; apart (pos a + neg b) (pos b + neg a).</pre>
@@ -931,7 +931,7 @@ intros;unfold Tle.</pre>
 <div class="code" title="File: natpair_integers.v
 Line: 139
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 apply full_pseudo_srorder_le_hprop.</pre>
 </div>
@@ -960,8 +960,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 145
-Time: 0.005s">
-<div class="time" style="width: 0.31210986267166%"></div>
+Time: 0.006s">
+<div class="time" style="width: 0.36079374624173%"></div>
 <pre>
 intros;unfold Tlt;apply _.</pre>
 </div>
@@ -997,7 +997,7 @@ Proof.</pre>
 <div class="code" title="File: natpair_integers.v
 Line: 151
 Time: 0.01s">
-<div class="time" style="width: 0.62421972534332%"></div>
+<div class="time" style="width: 0.60132291040289%"></div>
 <pre>
 intros;unfold Tapart;apply _.</pre>
 </div>
@@ -1027,22 +1027,22 @@ Proof.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 158
-Time: 0.002s">
-<div class="time" style="width: 0.12484394506866%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.18039687312087%"></div>
 <pre>
 unfold equiv,Tle;intros [pa na] [pb nb] Eq [pc nc] [pd nd] Er E;simpl in *.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 159
-Time: 0.016s">
-<div class="time" style="width: 0.99875156054931%"></div>
+Time: 0.017s">
+<div class="time" style="width: 1.0222489476849%"></div>
 <pre>
 apply (order_reflecting (+ (pc + na))).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 160
-Time: 0.129s">
-<div class="time" style="width: 8.0524344569288%"></div>
+Time: 0.133s">
+<div class="time" style="width: 7.9975947083584%"></div>
 <pre>
 assert (Erw : pb + nd + (pc + na)
   = (pb + na) + (pc + nd)) by ring_with_nat.</pre>
@@ -1050,14 +1050,14 @@ assert (Erw : pb + nd + (pc + na)
 <div class="code" title="File: natpair_integers.v
 Line: 162
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 rewrite Erw,&lt;-Eq,Er;clear Erw.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 163
-Time: 0.117s">
-<div class="time" style="width: 7.3033707865169%"></div>
+Time: 0.119s">
+<div class="time" style="width: 7.1557426337943%"></div>
 <pre>
 assert (Erw : pa + nb + (pd + nc) = pd + nb + (pa + nc)) by ring_with_nat.</pre>
 </div>
@@ -1070,15 +1070,15 @@ rewrite Erw.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 165
-Time: 0.01s">
-<div class="time" style="width: 0.62421972534332%"></div>
+Time: 0.011s">
+<div class="time" style="width: 0.66145520144317%"></div>
 <pre>
 apply (order_preserving _), E.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 166
-Time: 0.048s">
-<div class="time" style="width: 2.9962546816479%"></div>
+Time: 0.059s">
+<div class="time" style="width: 3.547805171377%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -1108,13 +1108,13 @@ intros.</pre>
 <div class="code" title="File: natpair_integers.v
 Line: 172
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre> apply equiv_iff_hprop_uncurried.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 172
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.24052916416115%"></div>
 <pre>
 split;apply le_respects_aux;
 trivial;apply symmetry;trivial.</pre>
@@ -1144,22 +1144,22 @@ Proof.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 179
-Time: 0.002s">
-<div class="time" style="width: 0.12484394506866%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.18039687312087%"></div>
 <pre>
 unfold equiv,Tlt;intros [pa na] [pb nb] Eq [pc nc] [pd nd] Er E;simpl in *.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 180
-Time: 0.011s">
-<div class="time" style="width: 0.68664169787765%"></div>
+Time: 0.012s">
+<div class="time" style="width: 0.72158749248346%"></div>
 <pre>
 apply (strictly_order_reflecting (+ (pc + na))).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 181
-Time: 0.11s">
-<div class="time" style="width: 6.8664169787765%"></div>
+Time: 0.121s">
+<div class="time" style="width: 7.2760072158749%"></div>
 <pre>
 assert (Erw : pb + nd + (pc + na)
   = (pb + na) + (pc + nd)) by ring_with_nat.</pre>
@@ -1167,14 +1167,14 @@ assert (Erw : pb + nd + (pc + na)
 <div class="code" title="File: natpair_integers.v
 Line: 183
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 rewrite Erw,&lt;-Eq,Er;clear Erw.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 184
-Time: 0.122s">
-<div class="time" style="width: 7.6154806491885%"></div>
+Time: 0.133s">
+<div class="time" style="width: 7.9975947083584%"></div>
 <pre>
 assert (Erw : pa + nb + (pd + nc) = pd + nb + (pa + nc)) by ring_with_nat.</pre>
 </div>
@@ -1188,14 +1188,14 @@ rewrite Erw.</pre>
 <div class="code" title="File: natpair_integers.v
 Line: 186
 Time: 0.006s">
-<div class="time" style="width: 0.37453183520599%"></div>
+<div class="time" style="width: 0.36079374624173%"></div>
 <pre>
 apply (strictly_order_preserving _), E.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 187
-Time: 0.039s">
-<div class="time" style="width: 2.434456928839%"></div>
+Time: 0.041s">
+<div class="time" style="width: 2.4654239326518%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -1225,13 +1225,13 @@ intros.</pre>
 <div class="code" title="File: natpair_integers.v
 Line: 193
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre> apply equiv_iff_hprop_uncurried.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 193
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.24052916416115%"></div>
 <pre>
 split;apply lt_respects_aux;
 trivial;apply symmetry;trivial.</pre>
@@ -1280,15 +1280,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 201
-Time: 0.002s">
-<div class="time" style="width: 0.12484394506866%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.18039687312087%"></div>
 <pre>
 apply (strong_left_cancellation (+) (neg r)) in Eq.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 202
-Time: 0.006s">
-<div class="time" style="width: 0.37453183520599%"></div>
+Time: 0.008s">
+<div class="time" style="width: 0.48105832832231%"></div>
 <pre>
 apply (merely_destruct (cotransitive Eq (pos r + neg q1 + neg q2)));
 intros [E|E];apply tr.</pre>
@@ -1308,14 +1308,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 205
-Time: 0.018s">
-<div class="time" style="width: 1.123595505618%"></div>
+Time: 0.02s">
+<div class="time" style="width: 1.2026458208058%"></div>
 <pre> apply (strong_extensionality (+ (neg q2))).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 205
-Time: 0.076s">
-<div class="time" style="width: 4.7440699126092%"></div>
+Time: 0.084s">
+<div class="time" style="width: 5.0511124473842%"></div>
 <pre>
   assert (Hrw : pos q1 + neg r + neg q2
     = neg r + (pos q1 + neg q2)) by ring_with_nat.</pre>
@@ -1349,14 +1349,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 210
-Time: 0.02s">
-<div class="time" style="width: 1.2484394506866%"></div>
+Time: 0.021s">
+<div class="time" style="width: 1.2627781118461%"></div>
 <pre> apply (strong_extensionality (+ (neg q1))).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 210
-Time: 0.073s">
-<div class="time" style="width: 4.5568039950062%"></div>
+Time: 0.071s">
+<div class="time" style="width: 4.2693926638605%"></div>
 <pre>
   assert (Hrw : pos r + neg q2 + neg q1 = pos r + neg q1 + neg q2)
   by ring_with_nat.</pre>
@@ -1370,8 +1370,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 213
-Time: 0.072s">
-<div class="time" style="width: 4.4943820224719%"></div>
+Time: 0.074s">
+<div class="time" style="width: 4.4497895369814%"></div>
 <pre>
   assert (Hrw : pos q2 + neg r + neg q1 = neg r + (pos q2 + neg q1))
   by ring_with_nat.</pre>
@@ -1392,8 +1392,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 217
-Time: 0.039s">
-<div class="time" style="width: 2.434456928839%"></div>
+Time: 0.047s">
+<div class="time" style="width: 2.8262176788936%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -1435,8 +1435,8 @@ unfold Tapart.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 224
-Time: 0.006s">
-<div class="time" style="width: 0.37453183520599%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.18039687312087%"></div>
 <pre>
 intros ??;apply symmetry.</pre>
 </div>
@@ -1494,15 +1494,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 235
-Time: 0.019s">
-<div class="time" style="width: 1.1860174781523%"></div>
+Time: 0.02s">
+<div class="time" style="width: 1.2026458208058%"></div>
 <pre>
   apply (strong_extensionality (+ (neg q1))).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 236
-Time: 0.072s">
-<div class="time" style="width: 4.4943820224719%"></div>
+Time: 0.073s">
+<div class="time" style="width: 4.3896572459411%"></div>
 <pre>
   assert (Hrw : pos q2 + neg r + neg q1 = (pos q2 + neg q1) + neg r)
   by ring_with_nat.</pre>
@@ -1523,8 +1523,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 240
-Time: 0.067s">
-<div class="time" style="width: 4.1822721598002%"></div>
+Time: 0.072s">
+<div class="time" style="width: 4.3295249549008%"></div>
 <pre>
   assert (Hrw : pos q1 + neg q2 + neg r = neg q2 + (pos q1 + neg r))
   by ring_with_nat.</pre>
@@ -1538,8 +1538,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 243
-Time: 0.083s">
-<div class="time" style="width: 5.1810237203496%"></div>
+Time: 0.084s">
+<div class="time" style="width: 5.0511124473842%"></div>
 <pre>
   assert (Hrw : pos r + neg q2 + neg q1 = neg q2 + (pos r + neg q1))
   by ring_with_nat;rewrite Hrw;clear Hrw.</pre>
@@ -1547,7 +1547,7 @@ Time: 0.083s">
 <div class="code" title="File: natpair_integers.v
 Line: 245
 Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+<div class="time" style="width: 0.18039687312087%"></div>
 <pre>
   apply (strong_left_cancellation _ _),Er.</pre>
 </div>
@@ -1574,21 +1574,21 @@ Time: 0s">
 <div class="code" title="File: natpair_integers.v
 Line: 248
 Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+<div class="time" style="width: 0.18039687312087%"></div>
 <pre>
   apply symmetry;apply E with r1;apply symmetry;trivial.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 249
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
   apply symmetry;trivial.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 250
-Time: 0.038s">
-<div class="time" style="width: 2.3720349563046%"></div>
+Time: 0.036s">
+<div class="time" style="width: 2.1647624774504%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -1624,8 +1624,8 @@ apply equiv_iff_hprop_uncurried.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 257
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.24052916416115%"></div>
 <pre>
 split;apply apart_respects_aux;
 trivial;apply symmetry;trivial.</pre>
@@ -1677,7 +1677,7 @@ intros p.</pre>
 <div class="code" title="File: natpair_integers.v
 Line: 267
 Time: 0.002s">
-<div class="time" style="width: 0.12484394506866%"></div>
+<div class="time" style="width: 0.12026458208058%"></div>
 <pre>
 exact (naturals_to_semiring N B (pos p) - naturals_to_semiring N B (neg p)).</pre>
 </div>
@@ -1721,15 +1721,15 @@ unfold to_ring;simpl in *.</pre>
 <div class="code" title="File: natpair_integers.v
 Line: 275
 Time: 0.007s">
-<div class="time" style="width: 0.43695380774032%"></div>
+<div class="time" style="width: 0.42092603728202%"></div>
 <pre>
 apply (left_cancellation (+)
   (naturals_to_semiring N B na + naturals_to_semiring N B nb)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 277
-Time: 0.159s">
-<div class="time" style="width: 9.9250936329588%"></div>
+Time: 0.164s">
+<div class="time" style="width: 9.8616957306073%"></div>
 <pre>
 path_via (naturals_to_semiring N B pa + naturals_to_semiring N B nb + 0);
 [rewrite &lt;-(plus_negate_r (naturals_to_semiring N B na));ring_with_nat
@@ -1737,8 +1737,8 @@ path_via (naturals_to_semiring N B pa + naturals_to_semiring N B nb + 0);
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 280
-Time: 0.152s">
-<div class="time" style="width: 9.4881398252185%"></div>
+Time: 0.171s">
+<div class="time" style="width: 10.282621767889%"></div>
 <pre>
 path_via (naturals_to_semiring N B pb + naturals_to_semiring N B na + 0);
 [rewrite plus_0_r|
@@ -1746,8 +1746,8 @@ rewrite &lt;-(plus_negate_r (naturals_to_semiring N B nb));ring_with_nat].</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 283
-Time: 0.011s">
-<div class="time" style="width: 0.68664169787765%"></div>
+Time: 0.012s">
+<div class="time" style="width: 0.72158749248346%"></div>
 <pre>
 rewrite &lt;-2!preserves_plus.</pre>
 </div>
@@ -1759,23 +1759,23 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 284
-Time: 0.089s">
-<div class="time" style="width: 5.5555555555556%"></div>
+Time: 0.096s">
+<div class="time" style="width: 5.7726999398677%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 285
 Time: 0.013s">
-<div class="time" style="width: 0.81148564294632%"></div>
+<div class="time" style="width: 0.78171978352375%"></div>
 <pre>
 
 End to_ring.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 287
-Time: 0.151s">
-<div class="time" style="width: 9.4257178526841%"></div>
+Time: 0.16s">
+<div class="time" style="width: 9.6211665664462%"></div>
 <pre>
 
 End contents.</pre>
@@ -1819,7 +1819,7 @@ Arguments to_ring N {_} B {_ _ _ _ _ _} / _.</pre>
 <div class="code" title="File: natpair_integers.v
 Line: 295
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 
 End PairT.</pre>
@@ -1842,7 +1842,7 @@ Universe UN UNalt.</pre>
 <div class="code" title="File: natpair_integers.v
 Line: 300
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 Context `{Funext} `{Univalence} (N : Type@{UN})
   `{Naturals@{UN UN UN UN UN UN UN UNalt} N}.</pre>
@@ -1858,14 +1858,14 @@ Time: 0s">
 <div class="code" title="File: natpair_integers.v
 Line: 304
 Time: 0.002s">
-<div class="time" style="width: 0.12484394506866%"></div>
+<div class="time" style="width: 0.12026458208058%"></div>
 <pre>Instance N_fullpartial : FullPartialOrder Ale Alt
   := fullpseudo_fullpartial@{UN UN UN UN UN UN UN Ularge}.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 305
-Time: 0.088s">
-<div class="time" style="width: 5.4931335830212%"></div>
+Time: 0.096s">
+<div class="time" style="width: 5.7726999398677%"></div>
 <pre>
 
 Definition Z@{} : Type@{UN} := @quotient _ PairT.equiv@{UN UNalt} _.</pre>
@@ -1889,7 +1889,7 @@ Global Instance Z_of_N : Cast N Z := Compose Z_of_pair (PairT.inject@{UN UNalt} 
 <div class="code" title="File: natpair_integers.v
 Line: 311
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 
 Definition Z_path {x y} : PairT.equiv x y -&gt; Z_of_pair x = Z_of_pair y
@@ -1898,7 +1898,7 @@ Definition Z_path {x y} : PairT.equiv x y -&gt; Z_of_pair x = Z_of_pair y
 <div class="code" title="File: natpair_integers.v
 Line: 314
 Time: 0.022s">
-<div class="time" style="width: 1.3732833957553%"></div>
+<div class="time" style="width: 1.3229104028863%"></div>
 <pre>
 
 Definition related_path {x y} : Z_of_pair x = Z_of_pair y -&gt; PairT.equiv x y
@@ -1907,7 +1907,7 @@ Definition related_path {x y} : Z_of_pair x = Z_of_pair y -&gt; PairT.equiv x y
 <div class="code" title="File: natpair_integers.v
 Line: 317
 Time: 0.004s">
-<div class="time" style="width: 0.24968789013733%"></div>
+<div class="time" style="width: 0.24052916416115%"></div>
 <pre>
 
 Definition Z_rect@{i} (P : Z -&gt; Type@{i}) {sP : forall x, IsHSet (P x)}
@@ -1918,8 +1918,8 @@ Definition Z_rect@{i} (P : Z -&gt; Type@{i}) {sP : forall x, IsHSet (P x)}
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 323
-Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.12026458208058%"></div>
 <pre>
 
 Definition Z_compute P {sP} dclass dequiv x
@@ -1927,8 +1927,8 @@ Definition Z_compute P {sP} dclass dequiv x
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 326
-Time: 0.005s">
-<div class="time" style="width: 0.31210986267166%"></div>
+Time: 0.006s">
+<div class="time" style="width: 0.36079374624173%"></div>
 <pre>
 
 Definition Z_compute_path P {sP} dclass dequiv q r (E : PairT.equiv q r)
@@ -1954,7 +1954,7 @@ Proof.</pre>
 <div class="code" title="File: natpair_integers.v
 Line: 334
 Time: 0.006s">
-<div class="time" style="width: 0.37453183520599%"></div>
+<div class="time" style="width: 0.36079374624173%"></div>
 <pre>
 apply (Z_rect@{i} P dclass).</pre>
 </div>
@@ -1975,7 +1975,7 @@ Defined.</pre>
 <div class="code" title="File: natpair_integers.v
 Line: 337
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 
 Definition Z_ind2 (P : Z -&gt; Z -&gt; Type) {sP : forall x y, IsHProp (P x y)}
@@ -1990,8 +1990,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 341
-Time: 0.02s">
-<div class="time" style="width: 1.2484394506866%"></div>
+Time: 0.021s">
+<div class="time" style="width: 1.2627781118461%"></div>
 <pre>
 apply (Z_ind (fun x =&gt; forall y, _));intros x.</pre>
 </div>
@@ -2019,7 +2019,7 @@ Defined.</pre>
 <div class="code" title="File: natpair_integers.v
 Line: 345
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 
 Definition Z_ind3@{i j} (P : Z -&gt; Z -&gt; Z -&gt; Type@{i})
@@ -2044,7 +2044,7 @@ apply (@Z_ind (fun x =&gt; forall y z, _));intros x.</pre>
 <div class="code" title="File: natpair_integers.v
 Line: 352
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 2:apply (Z_ind2@{i j} _);auto.</pre>
 </div>
@@ -2078,7 +2078,7 @@ Defined.</pre>
 <div class="code" title="File: natpair_integers.v
 Line: 356
 Time: 0.002s">
-<div class="time" style="width: 0.12484394506866%"></div>
+<div class="time" style="width: 0.12026458208058%"></div>
 <pre>
 
 Definition Z_rec@{i} {T : Type@{i} } {sT : IsHSet T}
@@ -2090,7 +2090,7 @@ Definition Z_rec@{i} {T : Type@{i} } {sT : IsHSet T}
 <div class="code" title="File: natpair_integers.v
 Line: 362
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 
 Definition Z_rec_compute T sT dclass dequiv x
@@ -2100,7 +2100,7 @@ Definition Z_rec_compute T sT dclass dequiv x
 <div class="code" title="File: natpair_integers.v
 Line: 366
 Time: 0.005s">
-<div class="time" style="width: 0.31210986267166%"></div>
+<div class="time" style="width: 0.30066145520144%"></div>
 <pre>
 
 Definition Z_rec2@{i j} {T:Type@{i} } {sT : IsHSet T}
@@ -2113,7 +2113,7 @@ Definition Z_rec2@{i j} {T:Type@{i} } {sT : IsHSet T}
 <div class="code" title="File: natpair_integers.v
 Line: 373
 Time: 0.002s">
-<div class="time" style="width: 0.12484394506866%"></div>
+<div class="time" style="width: 0.12026458208058%"></div>
 <pre>
 
 Definition Z_rec2_compute {T sT} dclass dequiv x y
@@ -2123,7 +2123,7 @@ Definition Z_rec2_compute {T sT} dclass dequiv x y
 <div class="code" title="File: natpair_integers.v
 Line: 377
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 
 Lemma dec_Z_of_pair `{DecidablePaths N} : forall q r : PairT.T N,
@@ -2145,8 +2145,8 @@ intros q r.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 382
-Time: 0.041s">
-<div class="time" style="width: 2.5593008739076%"></div>
+Time: 0.046s">
+<div class="time" style="width: 2.7660853878533%"></div>
 <pre>
 destruct (dec (PairT.equiv q r)) as [E|E].</pre>
 </div>
@@ -2204,7 +2204,7 @@ Time: 0s">
 <div class="code" title="File: natpair_integers.v
 Line: 386
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -2233,8 +2233,8 @@ hnf.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 392
-Time: 0.073s">
-<div class="time" style="width: 4.5568039950062%"></div>
+Time: 0.077s">
+<div class="time" style="width: 4.6301864101022%"></div>
 <pre> apply (Z_ind2 _).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -2292,28 +2292,28 @@ Proof.</pre>
 <div class="code" title="File: natpair_integers.v
 Line: 401
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 refine (Z_rec2 (fun x y =&gt; ' (PairT.pl@{UN UNalt} _ x y)) _).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 402
 Time: 0.002s">
-<div class="time" style="width: 0.12484394506866%"></div>
+<div class="time" style="width: 0.12026458208058%"></div>
 <pre>
 intros;apply Z_path;eapply PairT.pl_respects;trivial.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 403
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 404
 Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+<div class="time" style="width: 0.18039687312087%"></div>
 <pre>
 
 Definition Z_plus_compute q r : (' q) + (' r) = ' (PairT.pl _ q r)
@@ -2337,28 +2337,28 @@ Proof.</pre>
 <div class="code" title="File: natpair_integers.v
 Line: 410
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 refine (Z_rec2 (fun x y =&gt; ' (PairT.ml@{UN UNalt} _ x y)) _).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 411
-Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.12026458208058%"></div>
 <pre>
 intros;apply Z_path;eapply PairT.ml_respects;trivial.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 412
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 413
 Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+<div class="time" style="width: 0.18039687312087%"></div>
 <pre>
 
 Definition Z_mult_compute q r : (' q) * (' r) = ' (PairT.ml _ q r)
@@ -2389,13 +2389,13 @@ red.</pre>
 <div class="code" title="File: natpair_integers.v
 Line: 420
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre> apply (Z_rec (fun x =&gt; ' (PairT.opp@{UN UNalt} _ x))).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 420
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 intros;apply Z_path;eapply PairT.opp_respects;trivial.</pre>
 </div>
@@ -2409,7 +2409,7 @@ Defined.</pre>
 <div class="code" title="File: natpair_integers.v
 Line: 422
 Time: 0.002s">
-<div class="time" style="width: 0.12484394506866%"></div>
+<div class="time" style="width: 0.12026458208058%"></div>
 <pre>
 
 Definition Z_negate_compute q : - (' q) = ' (PairT.opp _ q)
@@ -2432,8 +2432,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 428
-Time: 0.286s">
-<div class="time" style="width: 17.852684144819%"></div>
+Time: 0.302s">
+<div class="time" style="width: 18.159951894167%"></div>
 <pre>
 repeat split;try apply _;
 first [change sg_op with mult; change mon_unit with 1|
@@ -2448,21 +2448,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 432
-Time: 0.065s">
-<div class="time" style="width: 4.0574282147316%"></div>
+Time: 0.068s">
+<div class="time" style="width: 4.0889957907396%"></div>
 <pre> apply (Z_ind3 _).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 432
 Time: 0.007s">
-<div class="time" style="width: 0.43695380774032%"></div>
+<div class="time" style="width: 0.42092603728202%"></div>
 <pre>
   intros a b c;apply Z_path;red;simpl.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 433
-Time: 0.057s">
-<div class="time" style="width: 3.5580524344569%"></div>
+Time: 0.059s">
+<div class="time" style="width: 3.547805171377%"></div>
 <pre>
   rewrite !plus_assoc.</pre>
 </div>
@@ -2481,21 +2481,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 435
-Time: 0.054s">
-<div class="time" style="width: 3.3707865168539%"></div>
+Time: 0.061s">
+<div class="time" style="width: 3.6680697534576%"></div>
 <pre> apply (Z_ind _).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 435
 Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+<div class="time" style="width: 0.18039687312087%"></div>
 <pre>
   intros a;apply Z_path;red;simpl.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 436
-Time: 0.025s">
-<div class="time" style="width: 1.5605493133583%"></div>
+Time: 0.027s">
+<div class="time" style="width: 1.6235718580878%"></div>
 <pre>
   rewrite !plus_0_l.</pre>
 </div>
@@ -2514,21 +2514,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 438
-Time: 0.054s">
-<div class="time" style="width: 3.3707865168539%"></div>
+Time: 0.059s">
+<div class="time" style="width: 3.547805171377%"></div>
 <pre> apply (Z_ind _).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 438
 Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+<div class="time" style="width: 0.18039687312087%"></div>
 <pre>
   intros a;apply Z_path;red;simpl.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 439
-Time: 0.028s">
-<div class="time" style="width: 1.7478152309613%"></div>
+Time: 0.03s">
+<div class="time" style="width: 1.8039687312087%"></div>
 <pre>
   rewrite !plus_0_r.</pre>
 </div>
@@ -2547,28 +2547,28 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 441
-Time: 0.055s">
-<div class="time" style="width: 3.4332084893883%"></div>
+Time: 0.06s">
+<div class="time" style="width: 3.6079374624173%"></div>
 <pre> apply (Z_ind _).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 441
 Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+<div class="time" style="width: 0.18039687312087%"></div>
 <pre>
   intros a;apply Z_path;red;simpl.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 442
-Time: 0.019s">
-<div class="time" style="width: 1.1860174781523%"></div>
+Time: 0.02s">
+<div class="time" style="width: 1.2026458208058%"></div>
 <pre>
   rewrite plus_0_l,plus_0_r.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 443
 Time: 0.004s">
-<div class="time" style="width: 0.24968789013733%"></div>
+<div class="time" style="width: 0.24052916416115%"></div>
 <pre> apply plus_comm.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -2580,28 +2580,28 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 444
-Time: 0.056s">
-<div class="time" style="width: 3.4956304619226%"></div>
+Time: 0.06s">
+<div class="time" style="width: 3.6079374624173%"></div>
 <pre> apply (Z_ind _).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 444
 Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+<div class="time" style="width: 0.18039687312087%"></div>
 <pre>
   intros a;apply Z_path;red;simpl.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 445
-Time: 0.018s">
-<div class="time" style="width: 1.123595505618%"></div>
+Time: 0.02s">
+<div class="time" style="width: 1.2026458208058%"></div>
 <pre>
   rewrite plus_0_l,plus_0_r.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 446
 Time: 0.004s">
-<div class="time" style="width: 0.24968789013733%"></div>
+<div class="time" style="width: 0.24052916416115%"></div>
 <pre> apply plus_comm.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -2613,21 +2613,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 447
-Time: 0.065s">
-<div class="time" style="width: 4.0574282147316%"></div>
+Time: 0.069s">
+<div class="time" style="width: 4.1491280817799%"></div>
 <pre> apply (Z_ind2 _).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 447
 Time: 0.005s">
-<div class="time" style="width: 0.31210986267166%"></div>
+<div class="time" style="width: 0.30066145520144%"></div>
 <pre>
   intros a b;apply Z_path;red;simpl.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 448
-Time: 0.009s">
-<div class="time" style="width: 0.56179775280899%"></div>
+Time: 0.011s">
+<div class="time" style="width: 0.66145520144317%"></div>
 <pre>
   apply ap2;apply plus_comm.</pre>
 </div>
@@ -2640,20 +2640,20 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 450
-Time: 0.068s">
-<div class="time" style="width: 4.2446941323346%"></div>
+Time: 0.075s">
+<div class="time" style="width: 4.5099218280216%"></div>
 <pre> apply (Z_ind3 _).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 450
-Time: 0.009s">
-<div class="time" style="width: 0.56179775280899%"></div>
+Time: 0.01s">
+<div class="time" style="width: 0.60132291040289%"></div>
 <pre>
   intros [pa na] [pb nb] [pc nc];apply Z_path;red;simpl.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 451
-Time: 1.602s">
+Time: 1.663s">
 <div class="time" style="width: 100%"></div>
 <pre>
   ring_with_nat.</pre>
@@ -2667,21 +2667,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 453
-Time: 0.059s">
-<div class="time" style="width: 3.6828963795256%"></div>
+Time: 0.062s">
+<div class="time" style="width: 3.7282020444979%"></div>
 <pre> apply (Z_ind _).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 453
 Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+<div class="time" style="width: 0.18039687312087%"></div>
 <pre>
   intros;apply Z_path;red;simpl.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 454
-Time: 0.162s">
-<div class="time" style="width: 10.112359550562%"></div>
+Time: 0.17s">
+<div class="time" style="width: 10.222489476849%"></div>
 <pre>
   ring_with_nat.</pre>
 </div>
@@ -2695,20 +2695,20 @@ Time: 0s">
 <div class="code" title="File: natpair_integers.v
 Line: 456
 Time: 0.061s">
-<div class="time" style="width: 3.8077403245943%"></div>
+<div class="time" style="width: 3.6680697534576%"></div>
 <pre> apply (Z_ind _).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 456
 Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+<div class="time" style="width: 0.18039687312087%"></div>
 <pre>
   intros;apply Z_path;red;simpl.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 457
-Time: 0.097s">
-<div class="time" style="width: 6.0549313358302%"></div>
+Time: 0.111s">
+<div class="time" style="width: 6.674684305472%"></div>
 <pre>
   ring_with_nat.</pre>
 </div>
@@ -2721,21 +2721,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 459
-Time: 0.081s">
-<div class="time" style="width: 5.0561797752809%"></div>
+Time: 0.066s">
+<div class="time" style="width: 3.9687312086591%"></div>
 <pre> apply (Z_ind2 _).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 459
 Time: 0.005s">
-<div class="time" style="width: 0.31210986267166%"></div>
+<div class="time" style="width: 0.30066145520144%"></div>
 <pre>
   intros;apply Z_path;red;simpl.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 460
-Time: 0.278s">
-<div class="time" style="width: 17.353308364544%"></div>
+Time: 0.277s">
+<div class="time" style="width: 16.65664461816%"></div>
 <pre>
   ring_with_nat.</pre>
 </div>
@@ -2748,28 +2748,28 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 462
-Time: 0.071s">
-<div class="time" style="width: 4.4319600499376%"></div>
+Time: 0.074s">
+<div class="time" style="width: 4.4497895369814%"></div>
 <pre> apply (Z_ind3 _).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 462
-Time: 0.01s">
-<div class="time" style="width: 0.62421972534332%"></div>
+Time: 0.011s">
+<div class="time" style="width: 0.66145520144317%"></div>
 <pre>
   intros [pa na] [pb nb] [pc nc];apply Z_path;red;simpl.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 463
-Time: 0.78s">
-<div class="time" style="width: 48.689138576779%"></div>
+Time: 0.821s">
+<div class="time" style="width: 49.368610944077%"></div>
 <pre>
   ring_with_nat.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 464
-Time: 1.271s">
-<div class="time" style="width: 79.338327091136%"></div>
+Time: 1.307s">
+<div class="time" style="width: 78.592904389657%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -2784,7 +2784,7 @@ Time: 0s">
 <div class="code" title="File: natpair_integers.v
 Line: 467
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>Lemma Z_of_N_morphism@{} : SemiRingPreserving (cast N Z).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -2797,7 +2797,7 @@ Proof.</pre>
 <div class="code" title="File: natpair_integers.v
 Line: 468
 Time: 0.041s">
-<div class="time" style="width: 2.5593008739076%"></div>
+<div class="time" style="width: 2.4654239326518%"></div>
 <pre>
 repeat (constructor; try apply _).</pre>
 </div>
@@ -2817,7 +2817,7 @@ Time: 0s">
 <div class="code" title="File: natpair_integers.v
 Line: 470
 Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+<div class="time" style="width: 0.18039687312087%"></div>
 <pre>
   apply Z_path.</pre>
 </div>
@@ -2835,8 +2835,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 471
-Time: 0.058s">
-<div class="time" style="width: 3.6204744069913%"></div>
+Time: 0.057s">
+<div class="time" style="width: 3.4275405892965%"></div>
 <pre> ring_with_nat.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -2855,7 +2855,7 @@ Time: 0s">
 <div class="code" title="File: natpair_integers.v
 Line: 472
 Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+<div class="time" style="width: 0.18039687312087%"></div>
 <pre> apply Z_path.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -2866,15 +2866,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 472
-Time: 0.097s">
-<div class="time" style="width: 6.0549313358302%"></div>
+Time: 0.094s">
+<div class="time" style="width: 5.6524353577871%"></div>
 <pre>
   ring_with_nat.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 473
-Time: 0.043s">
-<div class="time" style="width: 2.6841448189763%"></div>
+Time: 0.046s">
+<div class="time" style="width: 2.7660853878533%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -2928,8 +2928,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 480
-Time: 0.018s">
-<div class="time" style="width: 1.123595505618%"></div>
+Time: 0.019s">
+<div class="time" style="width: 1.1425135297655%"></div>
 <pre> rewrite 2!plus_0_r in E.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -2948,7 +2948,7 @@ Qed.</pre>
 <div class="code" title="File: natpair_integers.v
 Line: 481
 Time: 0.002s">
-<div class="time" style="width: 0.12484394506866%"></div>
+<div class="time" style="width: 0.12026458208058%"></div>
 <pre>
 
 Lemma Npair_splits@{} : forall n m : N, ' (PairT.C n m) = ' n + - ' m.</pre>
@@ -2970,21 +2970,21 @@ intros.</pre>
 <div class="code" title="File: natpair_integers.v
 Line: 485
 Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+<div class="time" style="width: 0.18039687312087%"></div>
 <pre>
 apply Z_path;red;simpl.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 486
-Time: 0.05s">
-<div class="time" style="width: 3.1210986267166%"></div>
+Time: 0.053s">
+<div class="time" style="width: 3.1870114251353%"></div>
 <pre>
 ring_with_nat.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 487
-Time: 0.01s">
-<div class="time" style="width: 0.62421972534332%"></div>
+Time: 0.011s">
+<div class="time" style="width: 0.66145520144317%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -3005,8 +3005,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 491
-Time: 0.069s">
-<div class="time" style="width: 4.3071161048689%"></div>
+Time: 0.072s">
+<div class="time" style="width: 4.3295249549008%"></div>
 <pre>
 apply (@Z_rec2@{Ularge Ularge} _ (@istrunc_trunctype@{Ularge Uhuge UN} _ _)
   (fun q r =&gt; BuildhProp (PairT.Tle q r))).</pre>
@@ -3033,7 +3033,7 @@ Time: 0s">
 <div class="code" title="File: natpair_integers.v
 Line: 494
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 apply (PairT.le_respects _);trivial.</pre>
 </div>
@@ -3069,8 +3069,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 501
-Time: 0.05s">
-<div class="time" style="width: 3.1210986267166%"></div>
+Time: 0.051s">
+<div class="time" style="width: 3.0667468430547%"></div>
 <pre> unfold Zle;exact _.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -3082,7 +3082,7 @@ Time: 0s">
 <div class="code" title="File: natpair_integers.v
 Line: 501
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 
 Lemma Zle_def@{} : forall a b : PairT.T N,
@@ -3125,7 +3125,7 @@ Proof.</pre>
 <div class="code" title="File: natpair_integers.v
 Line: 508
 Time: 0.013s">
-<div class="time" style="width: 0.81148564294632%"></div>
+<div class="time" style="width: 0.78171978352375%"></div>
 <pre>
 split;[apply _|apply _|split|].</pre>
 </div>
@@ -3144,8 +3144,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 510
-Time: 0.01s">
-<div class="time" style="width: 0.62421972534332%"></div>
+Time: 0.011s">
+<div class="time" style="width: 0.66145520144317%"></div>
 <pre> apply (Z_ind _).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -3169,8 +3169,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 511
-Time: 0.007s">
-<div class="time" style="width: 0.43695380774032%"></div>
+Time: 0.008s">
+<div class="time" style="width: 0.48105832832231%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -3188,21 +3188,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 512
-Time: 0.041s">
-<div class="time" style="width: 2.5593008739076%"></div>
+Time: 0.046s">
+<div class="time" style="width: 2.7660853878533%"></div>
 <pre> apply (Z_ind3 (fun _ _ _ =&gt; _ -&gt; _ -&gt; _)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 512
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
   intros [pa na] [pb nb] [pc nc].</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 513
-Time: 0.002s">
-<div class="time" style="width: 0.12484394506866%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.18039687312087%"></div>
 <pre> rewrite !Zle_def;unfold PairT.Tle;simpl.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -3215,14 +3215,14 @@ Time: 0s">
 <div class="code" title="File: natpair_integers.v
 Line: 514
 Time: 0.016s">
-<div class="time" style="width: 0.99875156054931%"></div>
+<div class="time" style="width: 0.96211665664462%"></div>
 <pre>
   apply (order_reflecting (+ (nb + pb))).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 515
-Time: 0.132s">
-<div class="time" style="width: 8.2397003745318%"></div>
+Time: 0.146s">
+<div class="time" style="width: 8.7793144918821%"></div>
 <pre>
   assert (Hrw : pa + nc + (nb + pb) = (pa + nb) + (pb + nc))
     by abstract ring_with_nat.</pre>
@@ -3236,8 +3236,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 518
-Time: 0.087s">
-<div class="time" style="width: 5.4307116104869%"></div>
+Time: 0.142s">
+<div class="time" style="width: 8.538785327721%"></div>
 <pre>
   assert (Hrw : pc + na + (nb + pb) = (pb + na) + (pc + nb))
     by abstract ring_with_nat.</pre>
@@ -3251,8 +3251,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 521
-Time: 0.009s">
-<div class="time" style="width: 0.56179775280899%"></div>
+Time: 0.019s">
+<div class="time" style="width: 1.1425135297655%"></div>
 <pre>
   apply plus_le_compat;trivial.</pre>
 </div>
@@ -3271,14 +3271,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 523
-Time: 0.065s">
-<div class="time" style="width: 4.0574282147316%"></div>
+Time: 0.102s">
+<div class="time" style="width: 6.1334936861094%"></div>
 <pre> apply (Z_ind2 (fun _ _ =&gt; _ -&gt; _ -&gt; _)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 523
-Time: 0.002s">
-<div class="time" style="width: 0.12484394506866%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.18039687312087%"></div>
 <pre>
   intros [pa na] [pb nb];rewrite !Zle_def;unfold PairT.Tle;simpl.</pre>
 </div>
@@ -3291,15 +3291,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 525
-Time: 0.007s">
-<div class="time" style="width: 0.43695380774032%"></div>
+Time: 0.011s">
+<div class="time" style="width: 0.66145520144317%"></div>
 <pre>
   apply (antisymmetry le);trivial.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 526
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.006s">
+<div class="time" style="width: 0.36079374624173%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -3356,8 +3356,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 536
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre> rewrite Zle_def.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -3374,8 +3374,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 536
-Time: 0.012s">
-<div class="time" style="width: 0.74906367041198%"></div>
+Time: 0.02s">
+<div class="time" style="width: 1.2026458208058%"></div>
 <pre>
   rewrite 2!plus_0_r;trivial.</pre>
 </div>
@@ -3394,8 +3394,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 538
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre> rewrite Zle_def.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -3412,15 +3412,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 538
-Time: 0.012s">
-<div class="time" style="width: 0.74906367041198%"></div>
+Time: 0.019s">
+<div class="time" style="width: 1.1425135297655%"></div>
 <pre>
   rewrite 2!plus_0_r;trivial.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 539
-Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.12026458208058%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -3434,8 +3434,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 542
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>Global Instance Zle_cast_embedding@{} : OrderEmbedding (cast N Z)
   := ltac:(first [exact Zle_cast_embedding'@{Ularge Ularge}|
                   exact Zle_cast_embedding']).</pre>
@@ -3464,22 +3464,22 @@ red.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 548
-Time: 0.018s">
-<div class="time" style="width: 1.123595505618%"></div>
+Time: 0.03s">
+<div class="time" style="width: 1.8039687312087%"></div>
 <pre>
 apply (Z_ind3 (fun _ _ _ =&gt; _ -&gt; _)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 549
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 intros [pc nc] [pa na] [pb nb].</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 550
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.30066145520144%"></div>
 <pre> rewrite !Zle_def;unfold PairT.Tle;simpl.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -3491,8 +3491,8 @@ intros E.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 551
-Time: 0.073s">
-<div class="time" style="width: 4.5568039950062%"></div>
+Time: 0.113s">
+<div class="time" style="width: 6.7949488875526%"></div>
 <pre>
 assert (Hrw : pc + pa + (nc + nb) = (pc + nc) + (pa + nb)) by ring_with_nat.</pre>
 </div>
@@ -3505,8 +3505,8 @@ rewrite Hrw;clear Hrw.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 553
-Time: 0.07s">
-<div class="time" style="width: 4.3695380774032%"></div>
+Time: 0.102s">
+<div class="time" style="width: 6.1334936861094%"></div>
 <pre>
 assert (Hrw : pc + pb + (nc + na) = (pc + nc) + (pb + na)) by ring_with_nat.</pre>
 </div>
@@ -3519,15 +3519,15 @@ rewrite Hrw;clear Hrw.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 555
-Time: 0.006s">
-<div class="time" style="width: 0.37453183520599%"></div>
+Time: 0.009s">
+<div class="time" style="width: 0.5411906193626%"></div>
 <pre>
 apply (order_preserving _),E.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 556
-Time: 0.03s">
-<div class="time" style="width: 1.87265917603%"></div>
+Time: 0.048s">
+<div class="time" style="width: 2.8863499699339%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -3541,8 +3541,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 559
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>Instance Zle_plus_preserving_l@{} : forall z : Z, OrderPreserving ((+) z)
   := ltac:(first [exact Zle_plus_preserving_l'@{Ularge Ularge}|
                   exact Zle_plus_preserving_l']).</pre>
@@ -3550,7 +3550,7 @@ Time: 0s">
 <div class="code" title="File: natpair_integers.v
 Line: 561
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 
 Lemma Zmult_nonneg' : forall x y : Z, PropHolds (0 ≤ x) -&gt; PropHolds (0 ≤ y) -&gt;
@@ -3572,28 +3572,28 @@ unfold PropHolds.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 566
-Time: 0.027s">
-<div class="time" style="width: 1.685393258427%"></div>
+Time: 0.041s">
+<div class="time" style="width: 2.4654239326518%"></div>
 <pre>
 apply (Z_ind2 (fun _ _ =&gt; _ -&gt; _ -&gt; _)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 567
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 intros [pa na] [pb nb].</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 568
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.30066145520144%"></div>
 <pre> rewrite !Zle_def;unfold PairT.Tle;simpl.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 568
-Time: 0.053s">
-<div class="time" style="width: 3.3083645443196%"></div>
+Time: 0.081s">
+<div class="time" style="width: 4.8707155742634%"></div>
 <pre>
 rewrite !plus_0_l,!plus_0_r.</pre>
 </div>
@@ -3606,8 +3606,8 @@ intros E1 E2.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 570
-Time: 0.023s">
-<div class="time" style="width: 1.4357053682896%"></div>
+Time: 0.034s">
+<div class="time" style="width: 2.0444978953698%"></div>
 <pre>
 destruct (decompose_le E1) as [a [Ea1 Ea2]], (decompose_le E2) as [b [Eb1 Eb2]].</pre>
 </div>
@@ -3620,8 +3620,8 @@ rewrite Ea2, Eb2.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 572
-Time: 0.011s">
-<div class="time" style="width: 0.68664169787765%"></div>
+Time: 0.023s">
+<div class="time" style="width: 1.3830426939266%"></div>
 <pre>
 apply compose_le with (a * b).</pre>
 </div>
@@ -3634,8 +3634,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 574
-Time: 0.01s">
-<div class="time" style="width: 0.62421972534332%"></div>
+Time: 0.011s">
+<div class="time" style="width: 0.66145520144317%"></div>
 <pre> apply nonneg_mult_compat;trivial.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -3647,14 +3647,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 575
-Time: 0.206s">
-<div class="time" style="width: 12.858926342072%"></div>
+Time: 0.307s">
+<div class="time" style="width: 18.460613349369%"></div>
 <pre> ring_with_nat.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 575
-Time: 0.045s">
-<div class="time" style="width: 2.8089887640449%"></div>
+Time: 0.072s">
+<div class="time" style="width: 4.3295249549008%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -3668,8 +3668,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 578
-Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.12026458208058%"></div>
 <pre>Instance Zmult_nonneg@{} : forall x y : Z, PropHolds (0 ≤ x) -&gt; PropHolds (0 ≤ y) -&gt;
   PropHolds (0 ≤ x * y)
   := ltac:(first [exact Zmult_nonneg'@{Ularge Ularge Ularge}|
@@ -3692,14 +3692,14 @@ Proof.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 584
-Time: 0.119s">
-<div class="time" style="width: 7.4282147315855%"></div>
+Time: 0.182s">
+<div class="time" style="width: 10.944076969333%"></div>
 <pre> pose proof Z_ring; apply rings.from_ring_order; apply _.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 584
-Time: 0.007s">
-<div class="time" style="width: 0.43695380774032%"></div>
+Time: 0.01s">
+<div class="time" style="width: 0.60132291040289%"></div>
 <pre> Qed.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -3712,8 +3712,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 586
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>Global Instance Zle_dec `{forall x y : N, Decidable (x &lt;= y)}
   : forall x y : Z, Decidable (x &lt;= y).</pre>
 </div>
@@ -3726,8 +3726,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 588
-Time: 0.016s">
-<div class="time" style="width: 0.99875156054931%"></div>
+Time: 0.023s">
+<div class="time" style="width: 1.3830426939266%"></div>
 <pre>
 apply (Z_ind2 _).</pre>
 </div>
@@ -3781,8 +3781,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 595
-Time: 0.006s">
-<div class="time" style="width: 0.37453183520599%"></div>
+Time: 0.009s">
+<div class="time" style="width: 0.5411906193626%"></div>
 <pre>
 apply (@Z_rec2@{Ularge Ularge} _ (@istrunc_trunctype@{Ularge Uhuge UN} _ _)
   (fun q r =&gt; BuildhProp (PairT.Tlt q r))).</pre>
@@ -3809,14 +3809,14 @@ Time: 0s">
 <div class="code" title="File: natpair_integers.v
 Line: 598
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 apply (PairT.lt_respects _);trivial.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 599
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -3845,8 +3845,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 605
-Time: 0.052s">
-<div class="time" style="width: 3.2459425717853%"></div>
+Time: 0.09s">
+<div class="time" style="width: 5.411906193626%"></div>
 <pre> unfold Zlt;exact _.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -3857,8 +3857,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 605
-Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.12026458208058%"></div>
 <pre>
 
 Lemma Zlt_def' : forall a b, ' a &lt; ' b = PairT.Tlt a b.</pre>
@@ -3927,8 +3927,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 615
-Time: 0.007s">
-<div class="time" style="width: 0.43695380774032%"></div>
+Time: 0.012s">
+<div class="time" style="width: 0.72158749248346%"></div>
 <pre> apply _.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -3954,21 +3954,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 618
-Time: 0.018s">
-<div class="time" style="width: 1.123595505618%"></div>
+Time: 0.029s">
+<div class="time" style="width: 1.7438364401684%"></div>
 <pre> apply (Z_ind (fun _ =&gt; _ -&gt; _)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 618
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
   intros [pa na];rewrite Zlt_def;unfold PairT.Tlt;simpl.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 619
-Time: 0.002s">
-<div class="time" style="width: 0.12484394506866%"></div>
+Time: 0.008s">
+<div class="time" style="width: 0.48105832832231%"></div>
 <pre>
   apply irreflexivity,_.</pre>
 </div>
@@ -3987,14 +3987,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 621
-Time: 0.037s">
-<div class="time" style="width: 2.3096129837703%"></div>
+Time: 0.054s">
+<div class="time" style="width: 3.2471437161756%"></div>
 <pre> apply (Z_ind3 (fun _ _ _ =&gt; _ -&gt; _ -&gt; _)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 621
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.30066145520144%"></div>
 <pre>
   intros [pa na] [pb nb] [pc nc];rewrite !Zlt_def;unfold PairT.Tlt;simpl.</pre>
 </div>
@@ -4007,15 +4007,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 623
-Time: 0.008s">
-<div class="time" style="width: 0.49937578027466%"></div>
+Time: 0.013s">
+<div class="time" style="width: 0.78171978352375%"></div>
 <pre>
   apply (strictly_order_reflecting (+ (nb + pb))).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 624
-Time: 0.074s">
-<div class="time" style="width: 4.6192259675406%"></div>
+Time: 0.124s">
+<div class="time" style="width: 7.4564040889958%"></div>
 <pre>
   assert (Hrw : pa + nc + (nb + pb) = (pa + nb) + (pb + nc)) by ring_with_nat.</pre>
 </div>
@@ -4028,8 +4028,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 626
-Time: 0.081s">
-<div class="time" style="width: 5.0561797752809%"></div>
+Time: 0.131s">
+<div class="time" style="width: 7.8773301262778%"></div>
 <pre>
   assert (Hrw : pc + na + (nb + pb) = (pb + na) + (pc + nb)) by ring_with_nat.</pre>
 </div>
@@ -4042,15 +4042,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 628
-Time: 0.006s">
-<div class="time" style="width: 0.37453183520599%"></div>
+Time: 0.011s">
+<div class="time" style="width: 0.66145520144317%"></div>
 <pre>
   apply plus_lt_compat;trivial.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 629
-Time: 0.026s">
-<div class="time" style="width: 1.6229712858926%"></div>
+Time: 0.045s">
+<div class="time" style="width: 2.705953096813%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -4081,22 +4081,22 @@ Proof.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 637
-Time: 0.02s">
-<div class="time" style="width: 1.2484394506866%"></div>
+Time: 0.029s">
+<div class="time" style="width: 1.7438364401684%"></div>
 <pre>
 red; apply (Z_ind3 (fun _ _ _ =&gt; _ -&gt; _)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 638
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 intros [pa na] [pb nb] [pc nc].</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 639
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.30066145520144%"></div>
 <pre>
 rewrite !Zlt_def;unfold PairT.Tlt;simpl.</pre>
 </div>
@@ -4109,8 +4109,8 @@ intros E.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 641
-Time: 0.073s">
-<div class="time" style="width: 4.5568039950062%"></div>
+Time: 0.109s">
+<div class="time" style="width: 6.5544197233915%"></div>
 <pre>
 assert (Hrw : pa + pb + (na + nc) = (pa + na) + (pb + nc)) by ring_with_nat.</pre>
 </div>
@@ -4123,8 +4123,8 @@ rewrite Hrw;clear Hrw.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 643
-Time: 0.071s">
-<div class="time" style="width: 4.4319600499376%"></div>
+Time: 0.106s">
+<div class="time" style="width: 6.3740228502706%"></div>
 <pre>
 assert (Hrw : pa + pc + (na + nb) = (pa + na) + (pc + nb)) by ring_with_nat.</pre>
 </div>
@@ -4137,22 +4137,22 @@ rewrite Hrw;clear Hrw.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 645
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.30066145520144%"></div>
 <pre>
 apply (strictly_order_preserving _),E.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 646
-Time: 0.026s">
-<div class="time" style="width: 1.6229712858926%"></div>
+Time: 0.049s">
+<div class="time" style="width: 2.9464822609741%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 647
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 
 Instance Zplus_strict_order_preserving_l@{}
@@ -4162,7 +4162,7 @@ Instance Zplus_strict_order_preserving_l@{}
 <div class="code" title="File: natpair_integers.v
 Line: 651
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 
 Lemma Zmult_pos' : forall x y : Z, PropHolds (0 &lt; x) -&gt; PropHolds (0 &lt; y) -&gt;
@@ -4184,28 +4184,28 @@ unfold PropHolds.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 656
-Time: 0.032s">
-<div class="time" style="width: 1.9975031210986%"></div>
+Time: 0.043s">
+<div class="time" style="width: 2.5856885147324%"></div>
 <pre>
 apply (Z_ind2 (fun _ _ =&gt; _ -&gt; _ -&gt; _)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 657
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 intros [pa na] [pb nb].</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 658
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.30066145520144%"></div>
 <pre> rewrite !Zlt_def;unfold PairT.Tlt;simpl.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 658
-Time: 0.053s">
-<div class="time" style="width: 3.3083645443196%"></div>
+Time: 0.084s">
+<div class="time" style="width: 5.0511124473842%"></div>
 <pre>
 rewrite !plus_0_l,!plus_0_r.</pre>
 </div>
@@ -4218,8 +4218,8 @@ intros E1 E2.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 660
-Time: 0.017s">
-<div class="time" style="width: 1.0611735330836%"></div>
+Time: 0.027s">
+<div class="time" style="width: 1.6235718580878%"></div>
 <pre>
 destruct (decompose_lt E1) as [a [Ea1 Ea2]], (decompose_lt E2) as [b [Eb1 Eb2]].</pre>
 </div>
@@ -4232,8 +4232,8 @@ rewrite Ea2, Eb2.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 662
-Time: 0.008s">
-<div class="time" style="width: 0.49937578027466%"></div>
+Time: 0.012s">
+<div class="time" style="width: 0.72158749248346%"></div>
 <pre>
 apply compose_lt with (a * b).</pre>
 </div>
@@ -4246,8 +4246,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 664
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.30066145520144%"></div>
 <pre> apply pos_mult_compat;trivial.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -4259,21 +4259,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 665
-Time: 0.208s">
-<div class="time" style="width: 12.983770287141%"></div>
+Time: 0.237s">
+<div class="time" style="width: 14.251352976548%"></div>
 <pre> ring_with_nat.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 665
-Time: 0.045s">
-<div class="time" style="width: 2.8089887640449%"></div>
+Time: 0.05s">
+<div class="time" style="width: 3.0066145520144%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 666
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 
 Instance Zmult_pos@{} : forall x y : Z, PropHolds (0 &lt; x) -&gt; PropHolds (0 &lt; y) -&gt;
@@ -4297,14 +4297,14 @@ Proof.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 673
-Time: 0.075s">
-<div class="time" style="width: 4.6816479400749%"></div>
+Time: 0.086s">
+<div class="time" style="width: 5.1713770294648%"></div>
 <pre> pose proof Z_ring; apply from_strict_ring_order; apply _.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 673
 Time: 0.01s">
-<div class="time" style="width: 0.62421972534332%"></div>
+<div class="time" style="width: 0.60132291040289%"></div>
 <pre> Qed.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -4325,8 +4325,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 677
-Time: 0.017s">
-<div class="time" style="width: 1.0611735330836%"></div>
+Time: 0.019s">
+<div class="time" style="width: 1.1425135297655%"></div>
 <pre>
 apply (Z_ind2 _).</pre>
 </div>
@@ -4389,8 +4389,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 687
-Time: 0.007s">
-<div class="time" style="width: 0.43695380774032%"></div>
+Time: 0.008s">
+<div class="time" style="width: 0.48105832832231%"></div>
 <pre>
 apply (@Z_rec2@{Ularge Ularge} _ (@istrunc_trunctype@{Ularge Uhuge UN} _ _)
   (fun q r =&gt; BuildhProp (PairT.Tapart q r))).</pre>
@@ -4417,7 +4417,7 @@ Time: 0s">
 <div class="code" title="File: natpair_integers.v
 Line: 690
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 apply (PairT.apart_respects _);trivial.</pre>
 </div>
@@ -4439,7 +4439,7 @@ Global Instance Zapart@{} : Apart Z := fun x y =&gt; Zapart_hProp x y.</pre>
 <div class="code" title="File: natpair_integers.v
 Line: 694
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 
 Lemma Zapart_def' : forall a b, apart (' a) (' b) = PairT.Tapart a b.</pre>
@@ -4495,8 +4495,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 703
-Time: 0.066s">
-<div class="time" style="width: 4.1198501872659%"></div>
+Time: 0.072s">
+<div class="time" style="width: 4.3295249549008%"></div>
 <pre> unfold Zapart;exact _.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -4523,22 +4523,22 @@ Proof.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 707
-Time: 0.008s">
-<div class="time" style="width: 0.49937578027466%"></div>
+Time: 0.009s">
+<div class="time" style="width: 0.5411906193626%"></div>
 <pre>
 split;[exact _|idtac].</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 708
-Time: 0.111s">
-<div class="time" style="width: 6.9288389513109%"></div>
+Time: 0.122s">
+<div class="time" style="width: 7.3361395069152%"></div>
 <pre>
 apply (Z_ind2 _).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 709
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 intros [pa na] [pb nb];rewrite Zapart_def;unfold PairT.Tapart;simpl.</pre>
 </div>
@@ -4597,8 +4597,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 715
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre> apply trivial_apart.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -4628,8 +4628,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 716
-Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.12026458208058%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -4687,8 +4687,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 727
-Time: 0.007s">
-<div class="time" style="width: 0.43695380774032%"></div>
+Time: 0.009s">
+<div class="time" style="width: 0.5411906193626%"></div>
 <pre> apply _.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -4706,21 +4706,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 728
-Time: 0.019s">
-<div class="time" style="width: 1.1860174781523%"></div>
+Time: 0.023s">
+<div class="time" style="width: 1.3830426939266%"></div>
 <pre> apply (Z_ind2 (fun _ _ =&gt; _ -&gt; _)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 728
-Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.12026458208058%"></div>
 <pre>
   intros [pa na] [pb nb];rewrite !Zapart_def;unfold PairT.Tapart;simpl.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 729
-Time: 0.002s">
-<div class="time" style="width: 0.12484394506866%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.18039687312087%"></div>
 <pre>
   apply symmetry.</pre>
 </div>
@@ -4745,15 +4745,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 731
-Time: 0.027s">
-<div class="time" style="width: 1.685393258427%"></div>
+Time: 0.029s">
+<div class="time" style="width: 1.7438364401684%"></div>
 <pre>
   apply (Z_ind3 (fun _ _ _ =&gt; _ -&gt; _)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 732
-Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.12026458208058%"></div>
 <pre>
   intros a b c;rewrite !Zapart_def;unfold PairT.Tapart;simpl.</pre>
 </div>
@@ -4766,15 +4766,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 734
-Time: 0.002s">
-<div class="time" style="width: 0.12484394506866%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.18039687312087%"></div>
 <pre>
   apply (strong_left_cancellation (+) (PairT.neg c)) in E1.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 735
-Time: 0.008s">
-<div class="time" style="width: 0.49937578027466%"></div>
+Time: 0.009s">
+<div class="time" style="width: 0.5411906193626%"></div>
 <pre>
   eapply (merely_destruct (cotransitive E1 _));intros [E2|E2];apply tr.</pre>
 </div>
@@ -4793,14 +4793,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 737
-Time: 0.015s">
-<div class="time" style="width: 0.93632958801498%"></div>
+Time: 0.017s">
+<div class="time" style="width: 1.0222489476849%"></div>
 <pre> apply (strong_extensionality (+ (PairT.neg b))).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 737
-Time: 0.062s">
-<div class="time" style="width: 3.8701622971286%"></div>
+Time: 0.07s">
+<div class="time" style="width: 4.2092603728202%"></div>
 <pre>
     assert (Hrw : PairT.pos a + PairT.neg c + PairT.neg b =
       PairT.neg c + (PairT.pos a + PairT.neg b))
@@ -4821,14 +4821,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 741
-Time: 0.016s">
-<div class="time" style="width: 0.99875156054931%"></div>
+Time: 0.017s">
+<div class="time" style="width: 1.0222489476849%"></div>
 <pre> apply (strong_extensionality (+ (PairT.neg a))).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 741
-Time: 0.058s">
-<div class="time" style="width: 3.6204744069913%"></div>
+Time: 0.064s">
+<div class="time" style="width: 3.8484666265785%"></div>
 <pre>
     assert (Hrw : PairT.pos c + PairT.neg b + PairT.neg a =
       PairT.pos c + PairT.neg a + PairT.neg b)
@@ -4836,8 +4836,8 @@ Time: 0.058s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 744
-Time: 0.057s">
-<div class="time" style="width: 3.5580524344569%"></div>
+Time: 0.091s">
+<div class="time" style="width: 5.4720384846663%"></div>
 <pre>
     assert (Hrw : PairT.pos b + PairT.neg c + PairT.neg a =
       PairT.neg c + (PairT.pos b + PairT.neg a))
@@ -4859,8 +4859,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 749
-Time: 0.174s">
-<div class="time" style="width: 10.861423220974%"></div>
+Time: 0.218s">
+<div class="time" style="width: 13.108839446783%"></div>
 <pre> apply (Z_ind2 _).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -4892,8 +4892,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 752
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.24052916416115%"></div>
 <pre>
     apply tight_apart,E.</pre>
 </div>
@@ -4912,14 +4912,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 754
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.24052916416115%"></div>
 <pre> apply tight_apart,E.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 754
-Time: 0.032s">
-<div class="time" style="width: 1.9975031210986%"></div>
+Time: 0.037s">
+<div class="time" style="width: 2.2248947684907%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -4950,8 +4950,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 762
-Time: 0.07s">
-<div class="time" style="width: 4.3695380774032%"></div>
+Time: 0.095s">
+<div class="time" style="width: 5.7125676488274%"></div>
 <pre>
 split;[apply _|split;try apply _|].</pre>
 </div>
@@ -4964,21 +4964,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 764
-Time: 0.032s">
-<div class="time" style="width: 1.9975031210986%"></div>
+Time: 0.049s">
+<div class="time" style="width: 2.9464822609741%"></div>
 <pre> apply (Z_ind2 _).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 764
-Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.12026458208058%"></div>
 <pre>
   intros a b;rewrite !Zlt_def;unfold PairT.Tlt.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 765
-Time: 0.002s">
-<div class="time" style="width: 0.12484394506866%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.18039687312087%"></div>
 <pre>
   apply pseudo_order_antisym.</pre>
 </div>
@@ -5003,15 +5003,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 767
-Time: 0.026s">
-<div class="time" style="width: 1.6229712858926%"></div>
+Time: 0.04s">
+<div class="time" style="width: 2.4052916416115%"></div>
 <pre>
   apply (Z_ind3 (fun _ _ _ =&gt; _ -&gt; _)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 768
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.01s">
+<div class="time" style="width: 0.60132291040289%"></div>
 <pre>
   intros [pa na] [pb nb] [pc nc];rewrite !Zlt_def;unfold PairT.Tlt.</pre>
 </div>
@@ -5024,15 +5024,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 770
-Time: 0.008s">
-<div class="time" style="width: 0.49937578027466%"></div>
+Time: 0.012s">
+<div class="time" style="width: 0.72158749248346%"></div>
 <pre>
   apply (strictly_order_preserving (+ nc)) in E1.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 771
-Time: 0.008s">
-<div class="time" style="width: 0.49937578027466%"></div>
+Time: 0.014s">
+<div class="time" style="width: 0.84185207456404%"></div>
 <pre>
   eapply (merely_destruct (cotransitive E1 _));intros [E2|E2];apply tr.</pre>
 </div>
@@ -5051,14 +5051,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 773
-Time: 0.009s">
-<div class="time" style="width: 0.56179775280899%"></div>
+Time: 0.006s">
+<div class="time" style="width: 0.36079374624173%"></div>
 <pre> apply (strictly_order_reflecting ((nb) +)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 773
-Time: 0.059s">
-<div class="time" style="width: 3.6828963795256%"></div>
+Time: 0.088s">
+<div class="time" style="width: 5.2916416115454%"></div>
 <pre>
     assert (Hrw : nb + (pa + nc) = pa + nb + nc)
     by ring_with_nat;rewrite Hrw;exact E2.</pre>
@@ -5078,22 +5078,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 776
-Time: 0.004s">
-<div class="time" style="width: 0.24968789013733%"></div>
+Time: 0.007s">
+<div class="time" style="width: 0.42092603728202%"></div>
 <pre> apply (strictly_order_reflecting ((na) +)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 776
-Time: 0.06s">
-<div class="time" style="width: 3.7453183520599%"></div>
+Time: 0.091s">
+<div class="time" style="width: 5.4720384846663%"></div>
 <pre>
     assert (Hrw : na + (pc + nb) = nb + (pc + na))
     by ring_with_nat;rewrite Hrw;clear Hrw.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 778
-Time: 0.068s">
-<div class="time" style="width: 4.2446941323346%"></div>
+Time: 0.062s">
+<div class="time" style="width: 3.7282020444979%"></div>
 <pre>
     assert (Hrw : na + (pb + nc) = pb + na + nc)
     by ring_with_nat;rewrite Hrw;clear Hrw.</pre>
@@ -5133,8 +5133,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 783
-Time: 0.014s">
-<div class="time" style="width: 0.87390761548065%"></div>
+Time: 0.019s">
+<div class="time" style="width: 1.1425135297655%"></div>
 <pre>
     apply @trunc_prod;[|apply _].</pre>
 </div>
@@ -5147,22 +5147,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 785
-Time: 0.032s">
-<div class="time" style="width: 1.9975031210986%"></div>
+Time: 0.054s">
+<div class="time" style="width: 3.2471437161756%"></div>
 <pre>
     apply ishprop_sum;try apply _.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 786
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
     intros E1 E2;apply (irreflexivity lt a).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 787
-Time: 0.013s">
-<div class="time" style="width: 0.81148564294632%"></div>
+Time: 0.021s">
+<div class="time" style="width: 1.2627781118461%"></div>
 <pre>
     transitivity b;trivial.</pre>
 </div>
@@ -5175,14 +5175,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 789
-Time: 0.002s">
-<div class="time" style="width: 0.12484394506866%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.18039687312087%"></div>
 <pre> intros a b;rewrite Zapart_def,!Zlt_def;unfold PairT.Tapart,PairT.Tlt.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 789
-Time: 0.002s">
-<div class="time" style="width: 0.12484394506866%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.18039687312087%"></div>
 <pre>
     apply apart_iff_total_lt.</pre>
 </div>
@@ -5195,28 +5195,28 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 791
-Time: 0.166s">
-<div class="time" style="width: 10.362047440699%"></div>
+Time: 0.25s">
+<div class="time" style="width: 15.033072760072%"></div>
 <pre> apply (Z_ind2 _).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 791
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
   intros a b;rewrite Zle_def,Zlt_def;unfold PairT.Tlt,PairT.Tle.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 792
 Time: 0.002s">
-<div class="time" style="width: 0.12484394506866%"></div>
+<div class="time" style="width: 0.12026458208058%"></div>
 <pre>
   apply le_iff_not_lt_flip.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 793
-Time: 0.028s">
-<div class="time" style="width: 1.7478152309613%"></div>
+Time: 0.039s">
+<div class="time" style="width: 2.3451593505713%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -5230,8 +5230,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 796
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>Instance Z_full_psorder@{} : FullPseudoOrder Zle Zlt
   := ltac:(first [exact Z_full_psorder'@{Ularge Ularge Ularge Ularge Ularge
                                                 Ularge Ularge Ularge Ularge}|
@@ -5255,15 +5255,15 @@ Proof.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 803
-Time: 0.021s">
-<div class="time" style="width: 1.310861423221%"></div>
+Time: 0.027s">
+<div class="time" style="width: 1.6235718580878%"></div>
 <pre>
 red;apply (Z_ind3 (fun _ _ _ =&gt; _ -&gt; _)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 804
-Time: 0.004s">
-<div class="time" style="width: 0.24968789013733%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.30066145520144%"></div>
 <pre>
 intros [zp zn] [xp xn] [yp yn];rewrite !Zapart_def;unfold PairT.Tapart;simpl.</pre>
 </div>
@@ -5276,8 +5276,8 @@ intros E1.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 806
-Time: 0.025s">
-<div class="time" style="width: 1.5605493133583%"></div>
+Time: 0.04s">
+<div class="time" style="width: 2.4052916416115%"></div>
 <pre>
 refine (merely_destruct (strong_binary_extensionality (+)
      (zp * (xp + yn)) (zn * (yp + xn)) (zp * (yp + xn)) (zn * (xp + yn)) _) _).</pre>
@@ -5291,16 +5291,16 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 809
-Time: 0.176s">
-<div class="time" style="width: 10.986267166042%"></div>
+Time: 0.221s">
+<div class="time" style="width: 13.289236319904%"></div>
 <pre> assert (Hrw : zp * (xp + yn) + zn * (yp + xn)
   = zp * xp + zn * xn + (zp * yn + zn * yp))
   by ring_with_nat;rewrite Hrw;clear Hrw.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 811
-Time: 0.179s">
-<div class="time" style="width: 11.173533083645%"></div>
+Time: 0.245s">
+<div class="time" style="width: 14.732411304871%"></div>
 <pre>
   assert (Hrw : zp * (yp + xn) + zn * (xp + yn)
   = zp * yp + zn * yn + (zp * xn + zn * xp))
@@ -5328,8 +5328,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 816
-Time: 0.011s">
-<div class="time" style="width: 0.68664169787765%"></div>
+Time: 0.012s">
+<div class="time" style="width: 0.72158749248346%"></div>
 <pre> apply (strong_extensionality (zp *.)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -5348,8 +5348,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 818
-Time: 0.015s">
-<div class="time" style="width: 0.93632958801498%"></div>
+Time: 0.02s">
+<div class="time" style="width: 1.2026458208058%"></div>
 <pre> apply symmetry;apply (strong_extensionality (zn *.)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -5361,15 +5361,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 819
-Time: 0.096s">
-<div class="time" style="width: 5.9925093632959%"></div>
+Time: 0.124s">
+<div class="time" style="width: 7.4564040889958%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 820
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 
 Instance Zmult_strong_ext_l@{} : forall z : Z, StrongExtensionality (z *.)
@@ -5401,22 +5401,22 @@ pose proof Z_ring.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 829
-Time: 0.028s">
-<div class="time" style="width: 1.7478152309613%"></div>
+Time: 0.033s">
+<div class="time" style="width: 1.9843656043295%"></div>
 <pre>
 apply from_full_pseudo_ring_order@{UN UN UN UN UN UN UN Ularge}; try apply _.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 830
-Time: 0.274s">
-<div class="time" style="width: 17.103620474407%"></div>
+Time: 0.405s">
+<div class="time" style="width: 24.353577871317%"></div>
 <pre>
 apply apartness.strong_binary_setoid_morphism_commutative.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 831
-Time: 0.036s">
-<div class="time" style="width: 2.247191011236%"></div>
+Time: 0.045s">
+<div class="time" style="width: 2.705953096813%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -5472,15 +5472,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 840
-Time: 0.03s">
-<div class="time" style="width: 1.87265917603%"></div>
+Time: 0.034s">
+<div class="time" style="width: 2.0444978953698%"></div>
 <pre>
 eapply Z_rec.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 841
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 apply (PairT.to_ring_respects N).</pre>
 </div>
@@ -5494,7 +5494,7 @@ Defined.</pre>
 <div class="code" title="File: natpair_integers.v
 Line: 843
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 
 Lemma Z_to_ring_morphism' `{Ring B} : SemiRingPreserving (integers_to_ring Z B).</pre>
@@ -5508,8 +5508,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 846
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 split;split;red.</pre>
 </div>
@@ -5522,50 +5522,50 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 848
-Time: 0.002s">
-<div class="time" style="width: 0.12484394506866%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.18039687312087%"></div>
 <pre> change (@sg_op B _) with (@plus B _);
   change (@sg_op Z _) with (@plus Z _).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 849
-Time: 0.084s">
-<div class="time" style="width: 5.2434456928839%"></div>
+Time: 0.113s">
+<div class="time" style="width: 6.7949488875526%"></div>
 <pre>
   apply (Z_ind2 _).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 850
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
   intros [pa na] [pb nb].</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 851
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
   unfold integers_to_ring;simpl.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 852
-Time: 0.015s">
-<div class="time" style="width: 0.93632958801498%"></div>
+Time: 0.023s">
+<div class="time" style="width: 1.3830426939266%"></div>
 <pre>
   rewrite !(preserves_plus (f:=naturals_to_semiring N B)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 853
-Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.12026458208058%"></div>
 <pre>
   rewrite negate_plus_distr.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 854
-Time: 0.097s">
-<div class="time" style="width: 6.0549313358302%"></div>
+Time: 0.134s">
+<div class="time" style="width: 8.0577269993987%"></div>
 <pre> ring_with_nat.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -5577,8 +5577,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 855
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre> change (@mon_unit B _) with (@zero B _);
   change (@mon_unit Z _) with (@zero Z _).</pre>
 </div>
@@ -5591,15 +5591,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 857
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.006s">
+<div class="time" style="width: 0.36079374624173%"></div>
 <pre>
   rewrite (preserves_0 (f:=naturals_to_semiring N B)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 858
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.30066145520144%"></div>
 <pre>
   rewrite negate_0,plus_0_r;trivial.</pre>
 </div>
@@ -5613,85 +5613,85 @@ Time: 0s">
 <div class="code" title="File: natpair_integers.v
 Line: 860
 Time: 0.002s">
-<div class="time" style="width: 0.12484394506866%"></div>
+<div class="time" style="width: 0.12026458208058%"></div>
 <pre> change (@sg_op B _) with (@mult B _);
   change (@sg_op Z _) with (@mult Z _).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 861
-Time: 0.095s">
-<div class="time" style="width: 5.9300873907615%"></div>
+Time: 0.147s">
+<div class="time" style="width: 8.8394467829224%"></div>
 <pre>
   apply (Z_ind2 _).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 862
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
   intros [pa na] [pb nb].</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 863
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
   unfold integers_to_ring;simpl.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 864
-Time: 0.015s">
-<div class="time" style="width: 0.93632958801498%"></div>
+Time: 0.023s">
+<div class="time" style="width: 1.3830426939266%"></div>
 <pre>
   rewrite !(preserves_plus (f:=naturals_to_semiring N B)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 865
-Time: 0.021s">
-<div class="time" style="width: 1.310861423221%"></div>
+Time: 0.033s">
+<div class="time" style="width: 1.9843656043295%"></div>
 <pre>
   rewrite !(preserves_mult (f:=naturals_to_semiring N B)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 866
-Time: 0.006s">
-<div class="time" style="width: 0.37453183520599%"></div>
+Time: 0.007s">
+<div class="time" style="width: 0.42092603728202%"></div>
 <pre>
   rewrite (preserves_plus (f:=naturals_to_semiring N B)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 867
-Time: 0.02s">
-<div class="time" style="width: 1.2484394506866%"></div>
+Time: 0.025s">
+<div class="time" style="width: 1.5033072760072%"></div>
 <pre>
   rewrite !(preserves_mult (f:=naturals_to_semiring N B)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 868
-Time: 0.002s">
-<div class="time" style="width: 0.12484394506866%"></div>
+Time: 0.008s">
+<div class="time" style="width: 0.48105832832231%"></div>
 <pre>
   rewrite negate_plus_distr.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 869
-Time: 0.004s">
-<div class="time" style="width: 0.24968789013733%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.30066145520144%"></div>
 <pre>
   rewrite negate_mult_distr_r,negate_mult_distr_l.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 870
 Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+<div class="time" style="width: 0.18039687312087%"></div>
 <pre>
   rewrite &lt;-(negate_mult_negate (naturals_to_semiring N B na)
     (naturals_to_semiring N B nb)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 872
-Time: 0.172s">
-<div class="time" style="width: 10.736579275905%"></div>
+Time: 0.237s">
+<div class="time" style="width: 14.251352976548%"></div>
 <pre>
   ring_with_nat.</pre>
 </div>
@@ -5704,8 +5704,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 874
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre> change (@mon_unit B _) with (@one B _);
   change (@mon_unit Z _) with (@one Z _).</pre>
 </div>
@@ -5718,36 +5718,36 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 876
-Time: 0.011s">
-<div class="time" style="width: 0.68664169787765%"></div>
+Time: 0.006s">
+<div class="time" style="width: 0.36079374624173%"></div>
 <pre>
   rewrite (preserves_1 (f:=naturals_to_semiring N B)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 877
-Time: 0.004s">
-<div class="time" style="width: 0.24968789013733%"></div>
+Time: 0.006s">
+<div class="time" style="width: 0.36079374624173%"></div>
 <pre>
   rewrite (preserves_0 (f:=naturals_to_semiring N B)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 878
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.30066145520144%"></div>
 <pre>
   rewrite negate_0,plus_0_r;trivial.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 879
-Time: 0.091s">
-<div class="time" style="width: 5.6803995006242%"></div>
+Time: 0.14s">
+<div class="time" style="width: 8.4185207456404%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 880
-Time: 0.002s">
-<div class="time" style="width: 0.12484394506866%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.24052916416115%"></div>
 <pre>
 
 Instance Z_to_ring_morphism@{} `{Ring B} : SemiRingPreserving (integers_to_ring Z B)
@@ -5756,7 +5756,7 @@ Instance Z_to_ring_morphism@{} `{Ring B} : SemiRingPreserving (integers_to_ring 
 <div class="code" title="File: natpair_integers.v
 Line: 883
 Time: 0.002s">
-<div class="time" style="width: 0.12484394506866%"></div>
+<div class="time" style="width: 0.12026458208058%"></div>
 <pre>
 
 Lemma Z_to_ring_unique@{} `{Ring B} (h : Z -&gt; B) `{!SemiRingPreserving h}
@@ -5778,8 +5778,8 @@ pose proof Z_ring.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 888
-Time: 0.093s">
-<div class="time" style="width: 5.8052434456929%"></div>
+Time: 0.128s">
+<div class="time" style="width: 7.6969332531569%"></div>
 <pre>
 apply (Z_ind _).</pre>
 </div>
@@ -5799,8 +5799,8 @@ rewrite Npair_splits.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 891
-Time: 0.004s">
-<div class="time" style="width: 0.24968789013733%"></div>
+Time: 0.006s">
+<div class="time" style="width: 0.36079374624173%"></div>
 <pre>
 rewrite (preserves_plus (f:=h)),(preserves_negate (f:=h)).</pre>
 </div>
@@ -5820,29 +5820,29 @@ change (h (' na)) with (Compose h (cast N Z) na).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 894
-Time: 0.011s">
-<div class="time" style="width: 0.68664169787765%"></div>
+Time: 0.016s">
+<div class="time" style="width: 0.96211665664462%"></div>
 <pre>
 rewrite 2!(naturals_initial (h:=Compose h (cast N Z))).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 895
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 trivial.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 896
 Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+<div class="time" style="width: 0.18039687312087%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 897
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 
 Global Instance Z_integers@{} : Integers Z.</pre>
@@ -5856,8 +5856,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 900
-Time: 0.007s">
-<div class="time" style="width: 0.43695380774032%"></div>
+Time: 0.01s">
+<div class="time" style="width: 0.60132291040289%"></div>
 <pre>
 split;try apply _.</pre>
 </div>
@@ -5904,8 +5904,8 @@ Context `{!NatDistance N}.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 906
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.24052916416115%"></div>
 <pre>
 
 Lemma Z_abs_aux_0@{} : forall a b z : N, a + z = b -&gt; z = 0 -&gt;
@@ -5927,15 +5927,15 @@ intros a b z E E'.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 911
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.24052916416115%"></div>
 <pre>
 rewrite (preserves_0 (A:=N)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 912
-Time: 0.007s">
-<div class="time" style="width: 0.43695380774032%"></div>
+Time: 0.011s">
+<div class="time" style="width: 0.66145520144317%"></div>
 <pre>
 rewrite E',plus_0_r in E.</pre>
 </div>
@@ -5960,21 +5960,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 914
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.30066145520144%"></div>
 <pre> apply plus_comm.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 914
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 915
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.012s">
+<div class="time" style="width: 0.72158749248346%"></div>
 <pre>
 
 Lemma Z_abs_aux_neg@{} : forall a b z : N, a + z = b -&gt;
@@ -5996,15 +5996,15 @@ intros a b z E.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 920
-Time: 0.002s">
-<div class="time" style="width: 0.12484394506866%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.24052916416115%"></div>
 <pre>
 rewrite &lt;-(naturals.to_semiring_unique (cast N Z)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 921
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 apply Z_path.</pre>
 </div>
@@ -6016,21 +6016,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 922
-Time: 0.014s">
-<div class="time" style="width: 0.87390761548065%"></div>
+Time: 0.022s">
+<div class="time" style="width: 1.3229104028863%"></div>
 <pre> rewrite plus_0_r,plus_comm;trivial.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 922
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 923
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.24052916416115%"></div>
 <pre>
 
 Lemma Z_abs_aux_pos@{} : forall a b z : N, b + z = a -&gt;
@@ -6052,8 +6052,8 @@ intros a b z E.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 928
-Time: 0.002s">
-<div class="time" style="width: 0.12484394506866%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.24052916416115%"></div>
 <pre>
 rewrite &lt;-(naturals.to_semiring_unique (cast N Z)).</pre>
 </div>
@@ -6066,8 +6066,8 @@ apply Z_path;red;simpl.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 930
-Time: 0.019s">
-<div class="time" style="width: 1.1860174781523%"></div>
+Time: 0.022s">
+<div class="time" style="width: 1.3229104028863%"></div>
 <pre> rewrite plus_0_r,plus_comm;trivial.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -6089,8 +6089,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 935
-Time: 0.005s">
-<div class="time" style="width: 0.31210986267166%"></div>
+Time: 0.007s">
+<div class="time" style="width: 0.42092603728202%"></div>
 <pre>Definition Z_abs_def@{} : forall x : PairT.T N,
   (exists n : N, naturals_to_semiring N Z n = ' x)
   |_| (exists n : N, naturals_to_semiring N Z n = - ' x).</pre>
@@ -6112,7 +6112,7 @@ intros [a b].</pre>
 <div class="code" title="File: natpair_integers.v
 Line: 939
 Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+<div class="time" style="width: 0.18039687312087%"></div>
 <pre>
 destruct (nat_distance_sig a b) as [[z E]|[z E]].</pre>
 </div>
@@ -6125,8 +6125,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 941
-Time: 0.055s">
-<div class="time" style="width: 3.4332084893883%"></div>
+Time: 0.075s">
+<div class="time" style="width: 4.5099218280216%"></div>
 <pre> destruct (dec (z = 0)) as [E'|_].</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -6206,15 +6206,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 944
-Time: 0.002s">
-<div class="time" style="width: 0.12484394506866%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.18039687312087%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 945
-Time: 0.002s">
-<div class="time" style="width: 0.12484394506866%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.18039687312087%"></div>
 <pre>
 
 Lemma Z_abs_respects' : forall (x y : PairT.T N) (E : PairT.equiv x y),
@@ -6233,8 +6233,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 953
-Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.12026458208058%"></div>
 <pre>
 intros [pa pb] [na nb] E.</pre>
 </div>
@@ -6254,8 +6254,8 @@ unfold Z_abs_def.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 956
-Time: 0.033s">
-<div class="time" style="width: 2.059925093633%"></div>
+Time: 0.052s">
+<div class="time" style="width: 3.126879134095%"></div>
 <pre>
 destruct (nat_distance_sig pa pb) as [[z1 E1] | [z1 E1]];simpl.</pre>
 </div>
@@ -6268,8 +6268,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 958
-Time: 0.02s">
-<div class="time" style="width: 1.2484394506866%"></div>
+Time: 0.036s">
+<div class="time" style="width: 2.1647624774504%"></div>
 <pre> destruct (dec (z1 = 0)) as [E2 | E2].</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -6281,20 +6281,20 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 959
-Time: 0.005s">
-<div class="time" style="width: 0.31210986267166%"></div>
+Time: 0.008s">
+<div class="time" style="width: 0.48105832832231%"></div>
 <pre> rewrite Sum.transport_sum.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 959
-Time: 0.005s">
-<div class="time" style="width: 0.31210986267166%"></div>
+Time: 0.007s">
+<div class="time" style="width: 0.42092603728202%"></div>
 <pre> rewrite Sigma.transport_sigma.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 959
-Time: 0.042s">
-<div class="time" style="width: 2.6217228464419%"></div>
+Time: 0.059s">
+<div class="time" style="width: 3.547805171377%"></div>
 <pre>
     destruct (nat_distance_sig na nb) as [[z2 E3] | [z2 E3]];
     [destruct (dec (z2 = 0)) as [E4 | E4]|];simpl.</pre>
@@ -6308,14 +6308,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 962
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre> apply ap.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 962
-Time: 0.061s">
-<div class="time" style="width: 3.8077403245943%"></div>
+Time: 0.088s">
+<div class="time" style="width: 5.2916416115454%"></div>
 <pre>
       apply Sigma.path_sigma_hprop;simpl.</pre>
 </div>
@@ -6335,28 +6335,28 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 965
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.30066145520144%"></div>
 <pre> destruct E4.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 965
-Time: 0.016s">
-<div class="time" style="width: 0.99875156054931%"></div>
+Time: 0.034s">
+<div class="time" style="width: 2.0444978953698%"></div>
 <pre>
       rewrite &lt;-E1,&lt;-E3,E2,plus_0_r,&lt;-(plus_0_r (na+pa)) in E.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 966
-Time: 0.015s">
-<div class="time" style="width: 0.93632958801498%"></div>
+Time: 0.024s">
+<div class="time" style="width: 1.4431749849669%"></div>
 <pre>
       rewrite plus_assoc,(plus_comm pa) in E.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 967
-Time: 0.012s">
-<div class="time" style="width: 0.74906367041198%"></div>
+Time: 0.018s">
+<div class="time" style="width: 1.0823812387252%"></div>
 <pre>
       apply (left_cancellation plus _) in E.</pre>
 </div>
@@ -6375,14 +6375,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 969
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre> apply ap.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 969
-Time: 0.064s">
-<div class="time" style="width: 3.9950062421973%"></div>
+Time: 0.087s">
+<div class="time" style="width: 5.2315093205051%"></div>
 <pre> apply Sigma.path_sigma_hprop.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -6393,15 +6393,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 969
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
       rewrite PathGroupoids.transport_const.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 970
-Time: 0.01s">
-<div class="time" style="width: 0.62421972534332%"></div>
+Time: 0.014s">
+<div class="time" style="width: 0.84185207456404%"></div>
 <pre>
       rewrite E2,plus_0_r in E1.</pre>
 </div>
@@ -6414,28 +6414,28 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 972
-Time: 0.013s">
-<div class="time" style="width: 0.81148564294632%"></div>
+Time: 0.017s">
+<div class="time" style="width: 1.0222489476849%"></div>
 <pre>
       apply (left_cancellation plus (pb + nb)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 973
-Time: 0.01s">
-<div class="time" style="width: 0.62421972534332%"></div>
+Time: 0.014s">
+<div class="time" style="width: 0.84185207456404%"></div>
 <pre>
       rewrite plus_0_r.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 974
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre> etransitivity;[apply E|].</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 974
-Time: 0.065s">
-<div class="time" style="width: 4.0574282147316%"></div>
+Time: 0.089s">
+<div class="time" style="width: 5.3517739025857%"></div>
 <pre>
       ring_with_nat.</pre>
 </div>
@@ -6448,14 +6448,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 976
-Time: 0.01s">
-<div class="time" style="width: 0.62421972534332%"></div>
+Time: 0.016s">
+<div class="time" style="width: 0.96211665664462%"></div>
 <pre> rewrite Sum.transport_sum,Sigma.transport_sigma.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 976
-Time: 0.041s">
-<div class="time" style="width: 2.5593008739076%"></div>
+Time: 0.062s">
+<div class="time" style="width: 3.7282020444979%"></div>
 <pre>
     destruct (nat_distance_sig na nb) as [[z2 E3] | [z2 E3]];
     [destruct (dec (z2 = 0)) as [E4 | E4]|];simpl.</pre>
@@ -6469,42 +6469,42 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 979
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.30066145520144%"></div>
 <pre> destruct E2.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 979
-Time: 0.011s">
-<div class="time" style="width: 0.68664169787765%"></div>
+Time: 0.016s">
+<div class="time" style="width: 0.96211665664462%"></div>
 <pre>
       rewrite E4,plus_0_r in E3;rewrite &lt;-E1,&lt;-E3 in E.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 980
-Time: 0.013s">
-<div class="time" style="width: 0.81148564294632%"></div>
+Time: 0.017s">
+<div class="time" style="width: 1.0222489476849%"></div>
 <pre>
       apply (left_cancellation plus (pa+na)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 981
-Time: 0.028s">
-<div class="time" style="width: 1.7478152309613%"></div>
+Time: 0.045s">
+<div class="time" style="width: 2.705953096813%"></div>
 <pre>
       rewrite (plus_comm pa na),plus_0_r,&lt;-plus_assoc.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 982
-Time: 0.006s">
-<div class="time" style="width: 0.37453183520599%"></div>
+Time: 0.008s">
+<div class="time" style="width: 0.48105832832231%"></div>
 <pre>
       rewrite (plus_comm na pa).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 983
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre> symmetry;trivial.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -6516,14 +6516,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 984
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre> apply ap.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 984
-Time: 0.075s">
-<div class="time" style="width: 4.6816479400749%"></div>
+Time: 0.095s">
+<div class="time" style="width: 5.7125676488274%"></div>
 <pre> apply Sigma.path_sigma_hprop.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -6536,7 +6536,7 @@ Time: 0s">
 <div class="code" title="File: natpair_integers.v
 Line: 985
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre> rewrite PathGroupoids.transport_const.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -6548,22 +6548,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 986
-Time: 0.015s">
-<div class="time" style="width: 0.93632958801498%"></div>
+Time: 0.019s">
+<div class="time" style="width: 1.1425135297655%"></div>
 <pre>
       apply (left_cancellation plus (pa + na)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 987
-Time: 0.025s">
-<div class="time" style="width: 1.5605493133583%"></div>
+Time: 0.029s">
+<div class="time" style="width: 1.7438364401684%"></div>
 <pre>
       rewrite &lt;-(plus_assoc pa na z2),(plus_comm pa na),&lt;-plus_assoc.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 988
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
       symmetry;trivial.</pre>
 </div>
@@ -6576,36 +6576,36 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 990
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.008s">
+<div class="time" style="width: 0.48105832832231%"></div>
 <pre> destruct E2.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 990
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
       rewrite &lt;-E1,&lt;-E3 in E.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 991
-Time: 0.094s">
-<div class="time" style="width: 5.8676654182272%"></div>
+Time: 0.127s">
+<div class="time" style="width: 7.6368009621167%"></div>
 <pre>
       assert (Erw : nb + z2 + (pa + z1) = (pa + nb) + (z2 + z1))
       by ring_with_nat.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 993
-Time: 0.007s">
-<div class="time" style="width: 0.43695380774032%"></div>
+Time: 0.011s">
+<div class="time" style="width: 0.66145520144317%"></div>
 <pre>
       rewrite &lt;-(plus_0_r (pa+nb)),Erw in E.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 994
-Time: 0.017s">
-<div class="time" style="width: 1.0611735330836%"></div>
+Time: 0.026s">
+<div class="time" style="width: 1.5634395670475%"></div>
 <pre>
       apply (left_cancellation plus _),symmetry,naturals.zero_sum in E.</pre>
 </div>
@@ -6625,20 +6625,20 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 997
-Time: 0.01s">
-<div class="time" style="width: 0.62421972534332%"></div>
+Time: 0.016s">
+<div class="time" style="width: 0.96211665664462%"></div>
 <pre> rewrite Sum.transport_sum,Sigma.transport_sigma.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 997
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 997
-Time: 0.037s">
-<div class="time" style="width: 2.3096129837703%"></div>
+Time: 0.06s">
+<div class="time" style="width: 3.6079374624173%"></div>
 <pre>
   destruct (nat_distance_sig na nb) as [[z2 E3] | [z2 E3]];
   [destruct (dec (z2 = 0)) as [E4 | E4]|];simpl.</pre>
@@ -6652,14 +6652,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1000
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre> apply ap.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1000
-Time: 0.081s">
-<div class="time" style="width: 5.0561797752809%"></div>
+Time: 0.105s">
+<div class="time" style="width: 6.3138905592303%"></div>
 <pre> apply Sigma.path_sigma_hprop.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -6671,42 +6671,42 @@ Time: 0s">
 <div class="code" title="File: natpair_integers.v
 Line: 1000
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
     rewrite PathGroupoids.transport_const.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1001
-Time: 0.012s">
-<div class="time" style="width: 0.74906367041198%"></div>
+Time: 0.016s">
+<div class="time" style="width: 0.96211665664462%"></div>
 <pre>
     rewrite &lt;-E1,&lt;-E3,E4,plus_0_r in E.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1002
-Time: 0.015s">
-<div class="time" style="width: 0.93632958801498%"></div>
+Time: 0.019s">
+<div class="time" style="width: 1.1425135297655%"></div>
 <pre>
     apply (left_cancellation plus (na+pb)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1003
-Time: 0.012s">
-<div class="time" style="width: 0.74906367041198%"></div>
+Time: 0.016s">
+<div class="time" style="width: 0.96211665664462%"></div>
 <pre>
     rewrite plus_0_r.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1004
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.24052916416115%"></div>
 <pre>
     path_via (pb + z1 + na).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1005
-Time: 0.076s">
-<div class="time" style="width: 4.7440699126092%"></div>
+Time: 0.097s">
+<div class="time" style="width: 5.832832230908%"></div>
 <pre> ring_with_nat.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -6718,36 +6718,36 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1006
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.30066145520144%"></div>
 <pre> destruct E4.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1006
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
     rewrite &lt;-E1,&lt;-E3 in E.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1007
-Time: 0.091s">
-<div class="time" style="width: 5.6803995006242%"></div>
+Time: 0.141s">
+<div class="time" style="width: 8.4786530366807%"></div>
 <pre>
     assert (Hrw : pb + z1 + (na + z2) = (na + pb) + (z1 + z2))
     by ring_with_nat.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1009
-Time: 0.008s">
-<div class="time" style="width: 0.49937578027466%"></div>
+Time: 0.012s">
+<div class="time" style="width: 0.72158749248346%"></div>
 <pre>
     rewrite &lt;-(plus_0_r (na+pb)),Hrw in E.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1010
-Time: 0.022s">
-<div class="time" style="width: 1.3732833957553%"></div>
+Time: 0.025s">
+<div class="time" style="width: 1.5033072760072%"></div>
 <pre>
     apply (left_cancellation _ _),naturals.zero_sum in E.</pre>
 </div>
@@ -6767,8 +6767,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1013
-Time: 0.08s">
-<div class="time" style="width: 4.9937578027466%"></div>
+Time: 0.119s">
+<div class="time" style="width: 7.1557426337943%"></div>
 <pre> apply ap,Sigma.path_sigma_hprop.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -6780,7 +6780,7 @@ Time: 0s">
 <div class="code" title="File: natpair_integers.v
 Line: 1013
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
     rewrite PathGroupoids.transport_const.</pre>
 </div>
@@ -6793,29 +6793,29 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1015
-Time: 0.015s">
-<div class="time" style="width: 0.93632958801498%"></div>
+Time: 0.023s">
+<div class="time" style="width: 1.3830426939266%"></div>
 <pre>
     apply (left_cancellation plus (pb+nb)).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1016
-Time: 0.151s">
-<div class="time" style="width: 9.4257178526841%"></div>
+Time: 0.217s">
+<div class="time" style="width: 13.048707155743%"></div>
 <pre>
     path_via (pb + z1 + nb);[|path_via (nb + z2 + pb)];ring_with_nat.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1017
-Time: 0.161s">
-<div class="time" style="width: 10.049937578027%"></div>
+Time: 0.245s">
+<div class="time" style="width: 14.732411304871%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1018
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 
 Lemma Z_abs' : IntAbs Z N.</pre>
@@ -6836,8 +6836,8 @@ red.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1022
-Time: 0.274s">
-<div class="time" style="width: 17.103620474407%"></div>
+Time: 0.397s">
+<div class="time" style="width: 23.872519542995%"></div>
 <pre> apply (Z_rect _ Z_abs_def).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -6849,15 +6849,15 @@ exact Z_abs_respects'.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1023
-Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.12026458208058%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1024
-Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.12026458208058%"></div>
 <pre>
 
 Global Instance Z_abs@{} : IntAbs@{UN UN UN UN UN
@@ -6877,8 +6877,8 @@ Notation n_to_z := (naturals_to_semiring N Z).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1033
-Time: 0.01s">
-<div class="time" style="width: 0.62421972534332%"></div>
+Time: 0.015s">
+<div class="time" style="width: 0.90198436560433%"></div>
 <pre>
 
 Definition zero_product_aux a b :
@@ -6893,15 +6893,15 @@ Proof.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1037
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.30066145520144%"></div>
 <pre>
 rewrite &lt;-rings.preserves_mult.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1038
-Time: 0.009s">
-<div class="time" style="width: 0.56179775280899%"></div>
+Time: 0.014s">
+<div class="time" style="width: 0.84185207456404%"></div>
 <pre>
 rewrite &lt;-!(naturals.to_semiring_unique (cast N Z)).</pre>
 </div>
@@ -6928,21 +6928,21 @@ Time: 0s">
 <div class="code" title="File: natpair_integers.v
 Line: 1041
 Time: 0.001s">
-<div class="time" style="width: 0.062421972534332%"></div>
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
 apply zero_product in E.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1042
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.30066145520144%"></div>
 <pre>
 destruct E as [E|E];rewrite E;[left|right];apply preserves_0.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1043
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.24052916416115%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -6970,8 +6970,8 @@ intros x y E.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1048
-Time: 0.021s">
-<div class="time" style="width: 1.310861423221%"></div>
+Time: 0.032s">
+<div class="time" style="width: 1.9242333132892%"></div>
 <pre>
 destruct (int_abs_sig Z N x) as [[a Ea]|[a Ea]],
   (int_abs_sig Z N y) as [[b Eb]|[b Eb]].</pre>
@@ -6985,8 +6985,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1051
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre> rewrite &lt;-Ea,&lt;-Eb in E.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -6998,8 +6998,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1052
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
   rewrite &lt;-Ea,&lt;-Eb.</pre>
 </div>
@@ -7019,27 +7019,27 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1055
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre> apply (ap negate) in E.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1055
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.30066145520144%"></div>
 <pre> rewrite negate_mult_distr_r in E.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1055
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
   rewrite &lt;-Ea,&lt;-Eb in E.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1056
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.30066145520144%"></div>
 <pre>
   rewrite negate_0 in E.</pre>
 </div>
@@ -7052,8 +7052,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1058
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
   destruct E as [E|E].</pre>
 </div>
@@ -7066,8 +7066,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1060
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre> left;rewrite &lt;-Ea;trivial.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -7085,15 +7085,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1061
-Time: 0.005s">
-<div class="time" style="width: 0.31210986267166%"></div>
+Time: 0.008s">
+<div class="time" style="width: 0.48105832832231%"></div>
 <pre>
     apply (injective negate).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1062
-Time: 0.004s">
-<div class="time" style="width: 0.24968789013733%"></div>
+Time: 0.006s">
+<div class="time" style="width: 0.36079374624173%"></div>
 <pre>
     rewrite negate_0,&lt;-Eb;trivial.</pre>
 </div>
@@ -7106,27 +7106,27 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1064
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre> apply (ap negate) in E.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1064
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.30066145520144%"></div>
 <pre> rewrite negate_mult_distr_l in E.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1064
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
   rewrite &lt;-Ea,&lt;-Eb in E.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1065
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.30066145520144%"></div>
 <pre>
   rewrite negate_0 in E.</pre>
 </div>
@@ -7139,8 +7139,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1067
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
   destruct E as [E|E].</pre>
 </div>
@@ -7159,15 +7159,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1069
-Time: 0.005s">
-<div class="time" style="width: 0.31210986267166%"></div>
+Time: 0.008s">
+<div class="time" style="width: 0.48105832832231%"></div>
 <pre>
     apply (injective negate).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1070
-Time: 0.004s">
-<div class="time" style="width: 0.24968789013733%"></div>
+Time: 0.006s">
+<div class="time" style="width: 0.36079374624173%"></div>
 <pre>
     rewrite negate_0,&lt;-Ea;trivial.</pre>
 </div>
@@ -7180,8 +7180,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1072
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre> right;rewrite &lt;-Eb;trivial.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -7193,8 +7193,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1073
-Time: 0.004s">
-<div class="time" style="width: 0.24968789013733%"></div>
+Time: 0.007s">
+<div class="time" style="width: 0.42092603728202%"></div>
 <pre> rewrite &lt;-negate_mult_negate,&lt;-Ea,&lt;-Eb in E.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
@@ -7206,8 +7206,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1074
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.060132291040289%"></div>
 <pre>
   destruct E as [E|E].</pre>
 </div>
@@ -7226,15 +7226,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1076
-Time: 0.005s">
-<div class="time" style="width: 0.31210986267166%"></div>
+Time: 0.008s">
+<div class="time" style="width: 0.48105832832231%"></div>
 <pre>
     apply (injective negate).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1077
-Time: 0.004s">
-<div class="time" style="width: 0.24968789013733%"></div>
+Time: 0.006s">
+<div class="time" style="width: 0.36079374624173%"></div>
 <pre>
     rewrite negate_0,&lt;-Ea;trivial.</pre>
 </div>
@@ -7253,22 +7253,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1079
-Time: 0.005s">
-<div class="time" style="width: 0.31210986267166%"></div>
+Time: 0.008s">
+<div class="time" style="width: 0.48105832832231%"></div>
 <pre>
     apply (injective negate).</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1080
-Time: 0.004s">
-<div class="time" style="width: 0.24968789013733%"></div>
+Time: 0.006s">
+<div class="time" style="width: 0.36079374624173%"></div>
 <pre>
     rewrite negate_0,&lt;-Eb;trivial.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1081
-Time: 0.011s">
-<div class="time" style="width: 0.68664169787765%"></div>
+Time: 0.018s">
+<div class="time" style="width: 1.0823812387252%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -7283,16 +7283,16 @@ Global Instance Z_zero_product@{} : ZeroProduct Z
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1085
-Time: 1.086s">
-<div class="time" style="width: 67.790262172285%"></div>
+Time: 1.565s">
+<div class="time" style="width: 94.107035478052%"></div>
 <pre>
 
 End contents.</pre>
 </div>
 <div class="code" title="File: natpair_integers.v
 Line: 1087
-Time: 0.003s">
-<div class="time" style="width: 0.187265917603%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.24052916416115%"></div>
 <pre>
 
 End NatPair.</pre>
