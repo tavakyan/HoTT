@@ -158,82 +158,82 @@
           
 
             i = 28;
-            data = "1 subgoal (ID 30)	  	  A : Type	  B : Type	  Contr0 : Contr A	  ============================	  forall y : join A B, push (inl Contr0.(center)) = y	";
+            data = "1 subgoal (ID 28)	  	  A : Type	  B : Type	  Contr0 : Contr A	  ============================	  forall y : join A B, pushl Contr0.(center) = y	";
             responses[i]=data;
           
 
             i = 29;
-            data = "2 subgoals (ID 42)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  ============================	  forall a : A + B, push (inl Contr0.(center)) = push a		subgoal 2 (ID 44) is:	 forall a : A * B,	 transport (paths (push (inl Contr0.(center)))) (pp a) (?push' (inl (fst a))) =	 ?push' (inr (snd a))	";
+            data = "3 subgoals (ID 40)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  ============================	  forall b : A, pushl Contr0.(center) = pushl b		subgoal 2 (ID 42) is:	 forall c : B, pushl Contr0.(center) = pushr c	subgoal 3 (ID 44) is:	 forall a : A * B,	 transport (paths (pushl Contr0.(center))) (pp a) (?pushb (fst a)) =	 ?pushc (snd a)	";
             responses[i]=data;
           
 
             i = 30;
-            data = "1 subgoal (ID 42)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  ============================	  forall a : A + B, push (inl Contr0.(center)) = push a	2 subgoals (ID 50)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  a : A	  ============================	  push (inl Contr0.(center)) = push (inl a)		subgoal 2 (ID 51) is:	 push (inl Contr0.(center)) = push (inr b)	";
+            data = "1 subgoal (ID 40)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  ============================	  forall b : A, pushl Contr0.(center) = pushl b	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 42)		subgoal 1 (ID 42) is:	 forall c : B, pushl Contr0.(center) = pushr c	subgoal 2 (ID 44) is:	 forall a : A * B,	 transport (paths (pushl Contr0.(center))) (pp a)	   ((fun a0 : A => ap pushl (Contr0.(contr) a0)) (fst a)) = 	 ?pushc (snd a)	";
             responses[i]=data;
           
 
             i = 31;
-            data = "1 subgoal (ID 50)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  a : A	  ============================	  push (inl Contr0.(center)) = push (inl a)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	2 subgoals (ID 51)		subgoal 1 (ID 51) is:	 push (inl Contr0.(center)) = push (inr b)	subgoal 2 (ID 44) is:	 forall a : A * B,	 transport (paths (push (inl Contr0.(center)))) (pp a)	   ((fun a0 : A + B =>	     match a0 as s return (push (inl Contr0.(center)) = push s) with	     | inl a1 => ap push (ap inl (Contr0.(contr) a1))	     | inr b => ?Goal	     end) (inl (fst a))) =	 (fun a0 : A + B =>	  match a0 as s return (push (inl Contr0.(center)) = push s) with	  | inl a1 => ap push (ap inl (Contr0.(contr) a1))	  | inr b => ?Goal	  end) (inr (snd a))	";
+            data = "1 subgoal (ID 42)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  ============================	  forall c : B, pushl Contr0.(center) = pushr c	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 44)		subgoal 1 (ID 44) is:	 forall a : A * B,	 transport (paths (pushl Contr0.(center))) (pp a)	   ((fun a0 : A => ap pushl (Contr0.(contr) a0)) (fst a)) =	 (fun b : B => pp (Contr0.(center), b)) (snd a)	";
             responses[i]=data;
           
 
             i = 32;
-            data = "1 subgoal (ID 51)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  b : B	  ============================	  push (inl Contr0.(center)) = push (inr b)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 44)		subgoal 1 (ID 44) is:	 forall a : A * B,	 transport (paths (push (inl Contr0.(center)))) (pp a)	   ((fun a0 : A + B =>	     match a0 as s return (push (inl Contr0.(center)) = push s) with	     | inl a1 => ap push (ap inl (Contr0.(contr) a1))	     | inr b => pp (Contr0.(center), b)	     end) (inl (fst a))) =	 (fun a0 : A + B =>	  match a0 as s return (push (inl Contr0.(center)) = push s) with	  | inl a1 => ap push (ap inl (Contr0.(contr) a1))	  | inr b => pp (Contr0.(center), b)	  end) (inr (snd a))	";
+            data = "1 subgoal (ID 44)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  ============================	  forall a : A * B,	  transport (paths (pushl Contr0.(center))) (pp a)	    ((fun a0 : A => ap pushl (Contr0.(contr) a0)) (fst a)) =	  (fun b : B => pp (Contr0.(center), b)) (snd a)	1 subgoal (ID 65)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  a : A	  b : B	  ============================	  transport (paths (pushl Contr0.(center))) (pp (a, b))	    (ap pushl (Contr0.(contr) a)) = pp (Contr0.(center), b)	";
             responses[i]=data;
           
 
             i = 33;
-            data = "1 subgoal (ID 44)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  ============================	  forall a : A * B,	  transport (paths (push (inl Contr0.(center)))) (pp a)	    ((fun a0 : A + B =>	      match a0 as s return (push (inl Contr0.(center)) = push s) with	      | inl a1 => ap push (ap inl (Contr0.(contr) a1))	      | inr b => pp (Contr0.(center), b)	      end) (inl (fst a))) =	  (fun a0 : A + B =>	   match a0 as s return (push (inl Contr0.(center)) = push s) with	   | inl a1 => ap push (ap inl (Contr0.(contr) a1))	   | inr b => pp (Contr0.(center), b)	   end) (inr (snd a))	1 subgoal (ID 72)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  a : A	  b : B	  ============================	  transport (paths (push (inl Contr0.(center)))) (pp (a, b))	    (ap push (ap inl (Contr0.(contr) (fst (a, b))))) =	  pp (Contr0.(center), snd (a, b))	";
+            data = "1 subgoal (ID 85)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  a : A	  b : B	  ============================	  transport (paths (pushl Contr0.(center))) (pp (a, b))	    (ap pushl (Contr0.(contr) a)) =	  transport (fun a' : A => pushl (fst (a', b)) = pushr (snd (a', b)))	    (Contr0.(contr) a)^ (joinpp A B (a, b))	";
             responses[i]=data;
           
 
             i = 34;
-            data = "1 subgoal (ID 73)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  a : A	  b : B	  ============================	  transport (paths (push (inl Contr0.(center)))) (pp (a, b))	    (ap push (ap inl (Contr0.(contr) a))) = pp (Contr0.(center), b)	";
+            data = "1 subgoal (ID 108)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  a : A	  b : B	  ============================	  ap pushl (Contr0.(contr) a) @ pp (a, b) =	  ((ap (fun x : A => pushl x) (Contr0.(contr) a)^)^ @ joinpp A B (a, b)) @	  ap (fun _ : A => pushr b) (Contr0.(contr) a)^	";
             responses[i]=data;
           
 
             i = 35;
-            data = "1 subgoal (ID 93)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  a : A	  b : B	  ============================	  transport (paths (push (inl Contr0.(center)))) (pp (a, b))	    (ap push (ap inl (Contr0.(contr) a))) =	  transport (fun a' : A => pushl (a', b) = pushr (a', b)) 	    (Contr0.(contr) a)^ (joinpp A B (a, b))	";
+            data = "1 subgoal (ID 126)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  a : A	  b : B	  ============================	  ap pushl (Contr0.(contr) a) @ pp (a, b) =	  ap (fun x : A => pushl x) (Contr0.(contr) a) @	  (joinpp A B (a, b) @ ap (fun _ : A => pushr b) (Contr0.(contr) a)^)	";
             responses[i]=data;
           
 
             i = 36;
-            data = "1 subgoal (ID 109)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  a : A	  b : B	  ============================	  ap push (ap inl (Contr0.(contr) a)) @ pp (a, b) =	  ((ap (fun x : A => pushl (x, b)) (Contr0.(contr) a)^)^ @ joinpp A B (a, b)) @	  ap (fun x : A => pushr (x, b)) (Contr0.(contr) a)^	";
+            data = "1 subgoal (ID 144)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  a : A	  b : B	  ============================	  ap pushl (Contr0.(contr) a) @ pp (a, b) =	  ap (fun x : A => pushl x) (Contr0.(contr) a) @ joinpp A B (a, b)	";
             responses[i]=data;
           
 
             i = 37;
-            data = "1 subgoal (ID 133)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  a : A	  b : B	  ============================	  ap push (ap inl (Contr0.(contr) a)) @ pp (a, b) =	  ap (fun x : A => pushl (x, b)) (Contr0.(contr) a) @	  (joinpp A B (a, b) @ ap (fun x : A => pushr (x, b)) (Contr0.(contr) a)^)	";
-            responses[i]=data;
-          
-
-            i = 38;
-            data = "1 subgoal (ID 140)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  a : A	  b : B	  ============================	  ap push (ap inl (Contr0.(contr) a)) @ pp (a, b) =	  ap (fun x : A => push (inl x)) (Contr0.(contr) a) @	  (joinpp A B (a, b) @ ap (fun _ : A => push (inr b)) (Contr0.(contr) a)^)	";
-            responses[i]=data;
-          
-
-            i = 39;
-            data = "1 subgoal (ID 148)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  a : A	  b : B	  ============================	  ap (fun x : A => push (inl x)) (Contr0.(contr) a) @ pp (a, b) =	  ap (fun x : A => push (inl x)) (Contr0.(contr) a) @	  (pp (a, b) @ ap (fun _ : A => push (inr b)) (Contr0.(contr) a)^)	";
-            responses[i]=data;
-          
-
-            i = 40;
-            data = "1 subgoal (ID 161)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  a : A	  b : B	  ============================	  ap (fun x : A => push (inl x)) (Contr0.(contr) a) @ pp (a, b) =	  ap (fun x : A => push (inl x)) (Contr0.(contr) a) @ pp (a, b)	";
-            responses[i]=data;
-          
-
-            i = 41;
             data = "No more subgoals.	";
             responses[i]=data;
           
 
-            i = 42;
+            i = 38;
             data = "<infomsg>contr_join is defined</infomsg>	";
             responses[i]=data;
           
 
-            i = 43;
+            i = 39;
             data = "";
+            responses[i]=data;
+          
+
+            i = 40;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 41;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 42;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 43;
+            data = "1 subgoal (ID 20)	  	  A : Type	  B : Type	  ============================	  join A B <~> join B A	";
             responses[i]=data;
           
 
@@ -243,17 +243,17 @@
           
 
             i = 45;
-            data = "";
+            data = "1 subgoal (ID 32)	  	  A : Type	  B : Type	  ============================	  pushout fst snd <~> pushout snd fst	";
             responses[i]=data;
           
 
             i = 46;
-            data = "";
+            data = "No more subgoals.	";
             responses[i]=data;
           
 
             i = 47;
-            data = "1 subgoal (ID 20)	  	  A : Type	  B : Type	  ============================	  join A B <~> join B A	";
+            data = "<infomsg>join_sym is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -263,22 +263,22 @@
           
 
             i = 49;
-            data = "1 subgoal (ID 32)	  	  A : Type	  B : Type	  ============================	  pushout fst snd <~> pushout snd fst	";
+            data = "";
             responses[i]=data;
           
 
             i = 50;
-            data = "No more subgoals.	";
+            data = "";
             responses[i]=data;
           
 
             i = 51;
-            data = "<infomsg>join_sym is defined</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
             i = 52;
-            data = "";
+            data = "1 subgoal (ID 28)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  ============================	  IsHProp (join A B)	";
             responses[i]=data;
           
 
@@ -288,72 +288,72 @@
           
 
             i = 54;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 55;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 56;
-            data = "1 subgoal (ID 28)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  ============================	  IsHProp (join A B)	";
-            responses[i]=data;
-          
-
-            i = 57;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 58;
             data = "1 subgoal (ID 29)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  ============================	  join A B -> Contr (join A B)	";
             responses[i]=data;
           
 
-            i = 59;
+            i = 55;
             data = "1 subgoal (ID 30)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  ============================	  pushout fst snd -> Contr (pushout fst snd)	";
             responses[i]=data;
           
 
+            i = 56;
+            data = "2 subgoals (ID 221)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  ============================	  A -> Contr (pushout fst snd)		subgoal 2 (ID 222) is:	 B -> Contr (pushout fst snd)	";
+            responses[i]=data;
+          
+
+            i = 57;
+            data = "1 subgoal (ID 221)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  ============================	  A -> Contr (pushout fst snd)	1 subgoal (ID 224)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  a : A	  ============================	  Contr A	";
+            responses[i]=data;
+          
+
+            i = 58;
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 222)		subgoal 1 (ID 222) is:	 B -> Contr (pushout fst snd)	";
+            responses[i]=data;
+          
+
+            i = 59;
+            data = "1 subgoal (ID 222)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  ============================	  B -> Contr (pushout fst snd)	";
+            responses[i]=data;
+          
+
             i = 60;
-            data = "1 subgoal (ID 134)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  ============================	  A + B -> Contr (pushout fst snd)	";
+            data = "1 subgoal (ID 309)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  b : B	  ============================	  Contr (join B A)	1 subgoal (ID 310)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  b : B	  ============================	  Contr B	";
             responses[i]=data;
           
 
             i = 61;
-            data = "2 subgoals (ID 140)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  a : A	  ============================	  Contr (pushout fst snd)		subgoal 2 (ID 141) is:	 Contr (pushout fst snd)	";
-            responses[i]=data;
-          
-
-            i = 62;
-            data = "1 subgoal (ID 140)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  a : A	  ============================	  Contr (pushout fst snd)	1 subgoal (ID 142)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  a : A	  ============================	  Contr A	";
-            responses[i]=data;
-          
-
-            i = 63;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 141)		subgoal 1 (ID 141) is:	 Contr (pushout fst snd)	";
-            responses[i]=data;
-          
-
-            i = 64;
-            data = "1 subgoal (ID 141)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  b : B	  ============================	  Contr (pushout fst snd)	";
-            responses[i]=data;
-          
-
-            i = 65;
-            data = "1 subgoal (ID 226)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  b : B	  ============================	  Contr (join B A)	1 subgoal (ID 227)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  b : B	  ============================	  Contr B	";
-            responses[i]=data;
-          
-
-            i = 66;
             data = "No more subgoals.	";
             responses[i]=data;
           
 
-            i = 67;
+            i = 62;
             data = "<infomsg>ishprop_join is defined</infomsg>	";
+            responses[i]=data;
+          
+
+            i = 63;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 64;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 65;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 66;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 67;
+            data = "1 subgoal (ID 36)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  ============================	  join A B <~> (A \/ B).(trunctype_type)	";
             responses[i]=data;
           
 
@@ -363,22 +363,22 @@
           
 
             i = 69;
-            data = "";
+            data = "2 subgoals (ID 83)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  ============================	  join A B -> (A \/ B).(trunctype_type)		subgoal 2 (ID 84) is:	 (A \/ B).(trunctype_type) -> join A B	";
             responses[i]=data;
           
 
             i = 70;
-            data = "";
+            data = "1 subgoal (ID 83)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  ============================	  join A B -> (A \/ B).(trunctype_type)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 84)		subgoal 1 (ID 84) is:	 (A \/ B).(trunctype_type) -> join A B	";
             responses[i]=data;
           
 
             i = 71;
-            data = "";
+            data = "1 subgoal (ID 84)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  ============================	  (A \/ B).(trunctype_type) -> join A B	No more subgoals.	";
             responses[i]=data;
           
 
             i = 72;
-            data = "1 subgoal (ID 36)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  ============================	  join A B <~> (A \/ B).(trunctype_type)	";
+            data = "<infomsg>equiv_join_hor is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -388,22 +388,22 @@
           
 
             i = 74;
-            data = "2 subgoals (ID 83)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  ============================	  join A B -> (A \/ B).(trunctype_type)		subgoal 2 (ID 84) is:	 (A \/ B).(trunctype_type) -> join A B	";
+            data = "";
             responses[i]=data;
           
 
             i = 75;
-            data = "1 subgoal (ID 83)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  ============================	  join A B -> (A \/ B).(trunctype_type)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 84)		subgoal 1 (ID 84) is:	 (A \/ B).(trunctype_type) -> join A B	";
+            data = "";
             responses[i]=data;
           
 
             i = 76;
-            data = "1 subgoal (ID 84)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  ============================	  (A \/ B).(trunctype_type) -> join A B	No more subgoals.	";
+            data = "";
             responses[i]=data;
           
 
             i = 77;
-            data = "<infomsg>equiv_join_hor is defined</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
@@ -438,31 +438,6 @@
           
 
             i = 84;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 85;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 86;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 87;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 88;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 89;
             data = "";
             responses[i]=data;
           
@@ -543,7 +518,7 @@
       mouseover(21, '0_3_7');
       "><br>
 <br>
-  <span class="id" title="keyword">Definition</span> <a name="joinpp"><span class="id" title="definition">joinpp</span></a> <span class="id" title="var">A</span> <span class="id" title="var">B</span> := @<a class="idref" href="HoTT.HIT.Pushout.html#pp"><span class="id" title="definition">pp</span></a> (<a class="idref" href="HoTT.HIT.Join.html#A"><span class="id" title="variable">A</span></a><a class="idref" href="Coq.Init.Datatypes.html#d19c7eafd0e2d195d10df94b392087b5"><span class="id" title="notation">×</span></a><a class="idref" href="HoTT.HIT.Join.html#B"><span class="id" title="variable">B</span></a>) <a class="idref" href="HoTT.HIT.Join.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.HIT.Join.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="Coq.Init.Datatypes.html#fst"><span class="id" title="projection">fst</span></a> <a class="idref" href="Coq.Init.Datatypes.html#snd"><span class="id" title="projection">snd</span></a>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Definition</span> <a name="joinpp"><span class="id" title="definition">joinpp</span></a> <span class="id" title="var">A</span> <span class="id" title="var">B</span> := @<a class="idref" href="HoTT.HIT.Pushout.html#pp"><span class="id" title="definition">pp</span></a> (<a class="idref" href="HoTT.HIT.Join.html#A"><span class="id" title="variable">A</span></a><a class="idref" href="Coq.Init.Datatypes.html#11c698c8685bb8ab1cf725545c085ac4"><span class="id" title="notation">×</span></a><a class="idref" href="HoTT.HIT.Join.html#B"><span class="id" title="variable">B</span></a>) <a class="idref" href="HoTT.HIT.Join.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.HIT.Join.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="Coq.Init.Datatypes.html#fst"><span class="id" title="projection">fst</span></a> <a class="idref" href="Coq.Init.Datatypes.html#snd"><span class="id" title="projection">snd</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(22, '0_3_7');
@@ -571,79 +546,60 @@ Joining with a contractible type produces a contractible type
       " onmouseover="
       mouseover(28, '0_3_11');
       "><br>
-    <span class="id" title="tactic">∃</span> (<a class="idref" href="HoTT.HIT.Pushout.html#push"><span class="id" title="definition">push</span></a> (<a class="idref" href="Coq.Init.Datatypes.html#inl"><span class="id" title="constructor">inl</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#center"><span class="id" title="projection">center</span></a> <span class="id" title="var">A</span>))).</span><span class="command" onmouseout="
+    <span class="id" title="tactic">∃</span> (<a class="idref" href="HoTT.HIT.Pushout.html#pushl"><span class="id" title="definition">pushl</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#center"><span class="id" title="projection">center</span></a> <span class="id" title="var">A</span>)).</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(29, '0_3_11');
       "><br>
-    <span class="id" title="tactic">intros</span> <span class="id" title="var">y</span>; <span class="id" title="tactic">simple</span> <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.Pushout.html#pushout_ind"><span class="id" title="definition">pushout_ind</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">y</span>).</span><span class="command" onmouseout="
+    <span class="id" title="tactic">intros</span> <span class="id" title="var">y</span>; <span class="id" title="tactic">simple</span> <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.Pushout.html#pushout_ind"><span class="id" title="definition">pushout_ind</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">y</span>).</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(30, '0_3_11');
       "><br>
-    - <span class="id" title="tactic">intros</span> [<span class="id" title="var">a</span> | <span class="id" title="var">b</span>].</span><span class="command" onmouseout="
+    - <span class="id" title="tactic">intros</span> <span class="id" title="var">a</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>, <a class="idref" href="HoTT.Basics.Overture.html#contr"><span class="id" title="projection">contr</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(31, '0_3_11');
       "><br>
-      × <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>, <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>, <a class="idref" href="HoTT.Basics.Overture.html#contr"><span class="id" title="projection">contr</span></a>.</span><span class="command" onmouseout="
+    - <span class="id" title="tactic">intros</span> <span class="id" title="var">b</span>; <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.HIT.Pushout.html#pp"><span class="id" title="definition">pp</span></a> <a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Overture.html#center"><span class="id" title="projection">center</span></a> <span class="id" title="var">A</span> <a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">,</span></a> <span class="id" title="var">b</span><a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">)</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(32, '0_3_11');
       "><br>
-      × <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.HIT.Pushout.html#pp"><span class="id" title="definition">pp</span></a> <a class="idref" href="Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Overture.html#center"><span class="id" title="projection">center</span></a> <span class="id" title="var">A</span> <a class="idref" href="Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">,</span></a> <span class="id" title="var">b</span><a class="idref" href="Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">)</span></a>).</span><span class="command" onmouseout="
+    - <span class="id" title="tactic">intros</span> [<span class="id" title="var">a</span> <span class="id" title="var">b</span>]; <span class="id" title="var">cbn</span>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(33, '0_3_11');
       "><br>
-    - <span class="id" title="tactic">intros</span> [<span class="id" title="var">a</span> <span class="id" title="var">b</span>]. </span><span class="command" onmouseout="
+      <span class="id" title="tactic">refine</span> ( <span class="id" title="var">_</span> <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <a class="idref" href="HoTT.Basics.Overture.html#apD"><span class="id" title="definition">apD</span></a> (<span class="id" title="keyword">fun</span> <span class="id" title="var">a'</span> ⇒ <a class="idref" href="HoTT.HIT.Join.html#joinpp"><span class="id" title="definition">joinpp</span></a> <span class="id" title="var">A</span> <span class="id" title="var">B</span> <a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.HIT.Join.html#a'"><span class="id" title="variable">a'</span></a><a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">,</span></a><span class="id" title="var">b</span><a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">)</span></a>) <a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Overture.html#contr"><span class="id" title="projection">contr</span></a> <span class="id" title="var">a</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(34, '0_3_11');
-      "><span class="id" title="var">cbn</span>.</span><span class="command" onmouseout="
+      "><br>
+      <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Types.Paths.html#transport_paths_r"><span class="id" title="definition">transport_paths_r</span></a>, <a class="idref" href="HoTT.Types.Paths.html#transport_paths_FlFr"><span class="id" title="definition">transport_paths_FlFr</span></a>; <span class="id" title="var">cbn</span>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(35, '0_3_11');
       "><br>
-      <span class="id" title="tactic">refine</span> (<span class="id" title="var">_</span> <a class="idref" href="HoTT.Basics.Overture.html#3351948a6e0d36c4877ab109ffc3dfc9"><span class="id" title="notation">@</span></a> <a class="idref" href="HoTT.Basics.Overture.html#apD"><span class="id" title="definition">apD</span></a> (<span class="id" title="keyword">fun</span> <span class="id" title="var">a'</span> ⇒ <a class="idref" href="HoTT.HIT.Join.html#joinpp"><span class="id" title="definition">joinpp</span></a> <span class="id" title="var">A</span> <span class="id" title="var">B</span> <a class="idref" href="Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.HIT.Join.html#a'"><span class="id" title="variable">a'</span></a><a class="idref" href="Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">,</span></a><span class="id" title="var">b</span><a class="idref" href="Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">)</span></a>) <a class="idref" href="HoTT.Basics.Overture.html#29af923c7a8513334b9f1a5189c731d3"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Overture.html#contr"><span class="id" title="projection">contr</span></a> <span class="id" title="var">a</span><a class="idref" href="HoTT.Basics.Overture.html#29af923c7a8513334b9f1a5189c731d3"><span class="id" title="notation">)^</span></a>).</span><span class="command" onmouseout="
+      <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#ap_V"><span class="id" title="definition">ap_V</span></a>, <a class="idref" href="HoTT.Basics.PathGroupoids.html#inv_V"><span class="id" title="definition">inv_V</span></a>, <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_pp_p"><span class="id" title="definition">concat_pp_p</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(36, '0_3_11');
       "><br>
-      <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Types.Paths.html#transport_paths_r"><span class="id" title="definition">transport_paths_r</span></a>, <a class="idref" href="HoTT.Types.Paths.html#transport_paths_FlFr"><span class="id" title="definition">transport_paths_FlFr</span></a>.</span><span class="command" onmouseout="
+      <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#ap_const"><span class="id" title="definition">ap_const</span></a>, <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_p1"><span class="id" title="definition">concat_p1</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(37, '0_3_11');
       "><br>
-      <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#ap_V"><span class="id" title="definition">ap_V</span></a>, <a class="idref" href="HoTT.Basics.PathGroupoids.html#inv_V"><span class="id" title="definition">inv_V</span></a>, <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_pp_p"><span class="id" title="definition">concat_pp_p</span></a>.</span><span class="command" onmouseout="
+      <span class="id" title="tactic">reflexivity</span>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(38, '0_3_11');
       "><br>
-      <span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.HIT.Pushout.html#pushl"><span class="id" title="definition">pushl</span></a>, <a class="idref" href="HoTT.HIT.Pushout.html#pushr"><span class="id" title="definition">pushr</span></a>; <span class="id" title="tactic">simpl</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_11');
-      " onmouseover="
-      mouseover(39, '0_3_11');
-      "><br>
-      <span class="id" title="tactic">rewrite</span> &lt;- <a class="idref" href="HoTT.Basics.PathGroupoids.html#ap_compose"><span class="id" title="definition">ap_compose</span></a>; <span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.HIT.Join.html#joinpp"><span class="id" title="definition">joinpp</span></a>.</span><span class="command" onmouseout="
-      mouseout('0_3_11');
-      " onmouseover="
-      mouseover(40, '0_3_11');
-      "><br>
-      <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#ap_const"><span class="id" title="definition">ap_const</span></a>, <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_p1"><span class="id" title="definition">concat_p1</span></a>.</span><span class="command" onmouseout="
-      mouseout('0_3_11');
-      " onmouseover="
-      mouseover(41, '0_3_11');
-      "><br>
-      <span class="id" title="tactic">reflexivity</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_11');
-      " onmouseover="
-      mouseover(42, '0_3_11');
-      "><br>
   <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
-      mouseover(43, '0_3_11');
+      mouseover(39, '0_3_11');
       "><br>
 <br>
 </span>
@@ -656,33 +612,33 @@ Join is symmetric
 <span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
-      mouseover(47, '0_3_15');
+      mouseover(43, '0_3_15');
       ">
-  <span class="id" title="keyword">Definition</span> <a name="join_sym"><span class="id" title="definition">join_sym</span></a> <span class="id" title="var">A</span> <span class="id" title="var">B</span> : <a class="idref" href="HoTT.HIT.Join.html#join"><span class="id" title="definition">join</span></a> <a class="idref" href="HoTT.HIT.Join.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.HIT.Join.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Basics.Overture.html#fdd951a86e2a1b4ef3630e8a03060363"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.HIT.Join.html#join"><span class="id" title="definition">join</span></a> <a class="idref" href="HoTT.HIT.Join.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.HIT.Join.html#A"><span class="id" title="variable">A</span></a>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Definition</span> <a name="join_sym"><span class="id" title="definition">join_sym</span></a> <span class="id" title="var">A</span> <span class="id" title="var">B</span> : <a class="idref" href="HoTT.HIT.Join.html#join"><span class="id" title="definition">join</span></a> <a class="idref" href="HoTT.HIT.Join.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.HIT.Join.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.HIT.Join.html#join"><span class="id" title="definition">join</span></a> <a class="idref" href="HoTT.HIT.Join.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.HIT.Join.html#A"><span class="id" title="variable">A</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
-      mouseover(48, '0_3_15');
+      mouseover(44, '0_3_15');
       "><br>
   <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
-      mouseover(49, '0_3_15');
+      mouseover(45, '0_3_15');
       "><br>
-    <span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.HIT.Join.html#join"><span class="id" title="definition">join</span></a>; <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.Pushout.html#pushout_sym"><span class="id" title="definition">pushout_sym</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#e4f125badd7d48f77249897c8bdc044f"><span class="id" title="notation">oE</span></a> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
+    <span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.HIT.Join.html#join"><span class="id" title="definition">join</span></a>; <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.Pushout.html#pushout_sym"><span class="id" title="definition">pushout_sym</span></a> <a class="idref" href="HoTT.Basics.Equivalences.html#68564a0dae726954e87d0b3370608d69"><span class="id" title="notation">oE</span></a> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
-      mouseover(50, '0_3_15');
+      mouseover(46, '0_3_15');
       "><br>
     <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.Pushout.html#equiv_pushout"><span class="id" title="lemma">equiv_pushout</span></a> (<a class="idref" href="HoTT.Types.Prod.html#equiv_prod_symm"><span class="id" title="definition">equiv_prod_symm</span></a> <span class="id" title="var">A</span> <span class="id" title="var">B</span>) 1 1 <span class="id" title="var">_</span> <span class="id" title="var">_</span>);<br>
       <span class="id" title="tactic">intros</span> [<span class="id" title="var">a</span> <span class="id" title="var">b</span>]; <span class="id" title="tactic">reflexivity</span>.</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
-      mouseover(51, '0_3_15');
+      mouseover(47, '0_3_15');
       "><br>
   <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
-      mouseover(52, '0_3_15');
+      mouseover(48, '0_3_15');
       "><br>
 <br>
 </span>
@@ -695,67 +651,62 @@ The join of hprops is an hprop
 <span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
-      mouseover(56, '0_3_19');
+      mouseover(52, '0_3_19');
       ">
   <span class="id" title="keyword">Global Instance</span> <a name="ishprop_join"><span class="id" title="instance">ishprop_join</span></a> `{<a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="class">Funext</span></a>} <span class="id" title="var">A</span> <span class="id" title="var">B</span> `{<a class="idref" href="HoTT.Basics.Overture.html#IsHProp"><span class="id" title="abbreviation">IsHProp</span></a> <a class="idref" href="HoTT.HIT.Join.html#A"><span class="id" title="variable">A</span></a>} `{<a class="idref" href="HoTT.Basics.Overture.html#IsHProp"><span class="id" title="abbreviation">IsHProp</span></a> <a class="idref" href="HoTT.HIT.Join.html#B"><span class="id" title="variable">B</span></a>} : <a class="idref" href="HoTT.Basics.Overture.html#IsHProp"><span class="id" title="abbreviation">IsHProp</span></a> (<a class="idref" href="HoTT.HIT.Join.html#join"><span class="id" title="definition">join</span></a> <a class="idref" href="HoTT.HIT.Join.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.HIT.Join.html#B"><span class="id" title="variable">B</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
-      mouseover(57, '0_3_19');
+      mouseover(53, '0_3_19');
       "><br>
   <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
-      mouseover(58, '0_3_19');
+      mouseover(54, '0_3_19');
       "><br>
     <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Trunc.html#hprop_inhabited_contr"><span class="id" title="instance">hprop_inhabited_contr</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
-      mouseover(59, '0_3_19');
+      mouseover(55, '0_3_19');
       "><br>
     <span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.HIT.Join.html#join"><span class="id" title="definition">join</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
-      mouseover(60, '0_3_19');
+      mouseover(56, '0_3_19');
       "><br>
-    <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.Pushout.html#pushout_rec"><span class="id" title="definition">pushout_rec</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> (<span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> ⇒ <a class="idref" href="HoTT.Basics.Trunc.html#path_ishprop"><span class="id" title="lemma">path_ishprop</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span>)).</span><span class="command" onmouseout="
+    <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.Pushout.html#pushout_rec"><span class="id" title="definition">pushout_rec</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> (<span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> ⇒ <a class="idref" href="HoTT.Basics.Trunc.html#path_ishprop"><span class="id" title="lemma">path_ishprop</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span>)).</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
-      mouseover(61, '0_3_19');
+      mouseover(57, '0_3_19');
       "><br>
-    <span class="id" title="tactic">intros</span> [<span class="id" title="var">a</span>|<span class="id" title="var">b</span>].</span><span class="command" onmouseout="
+    - <span class="id" title="tactic">intros</span> <span class="id" title="var">a</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Join.html#contr_join"><span class="id" title="instance">contr_join</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
-      mouseover(62, '0_3_19');
-      "><br>
-    - <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Join.html#contr_join"><span class="id" title="instance">contr_join</span></a>.</span><span class="command" onmouseout="
-      mouseout('0_3_19');
-      " onmouseover="
-      mouseover(63, '0_3_19');
+      mouseover(58, '0_3_19');
       "><br>
       <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Basics.Trunc.html#contr_inhabited_hprop"><span class="id" title="lemma">contr_inhabited_hprop</span></a> <span class="id" title="var">A</span> <span class="id" title="var">a</span>).</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
-      mouseover(64, '0_3_19');
+      mouseover(59, '0_3_19');
       "><br>
-    - <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Basics.Trunc.html#trunc_equiv"><span class="id" title="definition">trunc_equiv</span></a> (<a class="idref" href="HoTT.HIT.Join.html#join"><span class="id" title="definition">join</span></a> <span class="id" title="var">B</span> <span class="id" title="var">A</span>) (<a class="idref" href="HoTT.HIT.Join.html#join_sym"><span class="id" title="definition">join_sym</span></a> <span class="id" title="var">B</span> <span class="id" title="var">A</span>)).</span><span class="command" onmouseout="
+    - <span class="id" title="tactic">intros</span> <span class="id" title="var">b</span>; <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Basics.Trunc.html#trunc_equiv"><span class="id" title="definition">trunc_equiv</span></a> (<a class="idref" href="HoTT.HIT.Join.html#join"><span class="id" title="definition">join</span></a> <span class="id" title="var">B</span> <span class="id" title="var">A</span>) (<a class="idref" href="HoTT.HIT.Join.html#join_sym"><span class="id" title="definition">join_sym</span></a> <span class="id" title="var">B</span> <span class="id" title="var">A</span>)).</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
-      mouseover(65, '0_3_19');
+      mouseover(60, '0_3_19');
       "><br>
       <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Join.html#contr_join"><span class="id" title="instance">contr_join</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
-      mouseover(66, '0_3_19');
+      mouseover(61, '0_3_19');
       "><br>
       <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Basics.Trunc.html#contr_inhabited_hprop"><span class="id" title="lemma">contr_inhabited_hprop</span></a> <span class="id" title="var">B</span> <span class="id" title="var">b</span>).</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
-      mouseover(67, '0_3_19');
+      mouseover(62, '0_3_19');
       "><br>
   <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
-      mouseover(68, '0_3_19');
+      mouseover(63, '0_3_19');
       "><br>
 <br>
 </span>
@@ -768,44 +719,44 @@ And coincides with their disjunction
 <span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(72, '0_3_23');
+      mouseover(67, '0_3_23');
       ">
   <span class="id" title="keyword">Definition</span> <a name="equiv_join_hor"><span class="id" title="definition">equiv_join_hor</span></a> `{<a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="class">Funext</span></a>} <span class="id" title="var">A</span> <span class="id" title="var">B</span> `{<a class="idref" href="HoTT.Basics.Overture.html#IsHProp"><span class="id" title="abbreviation">IsHProp</span></a> <a class="idref" href="HoTT.HIT.Join.html#A"><span class="id" title="variable">A</span></a>} `{<a class="idref" href="HoTT.Basics.Overture.html#IsHProp"><span class="id" title="abbreviation">IsHProp</span></a> <a class="idref" href="HoTT.HIT.Join.html#B"><span class="id" title="variable">B</span></a>} <br>
-    : <a class="idref" href="HoTT.HIT.Join.html#join"><span class="id" title="definition">join</span></a> <a class="idref" href="HoTT.HIT.Join.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.HIT.Join.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Basics.Overture.html#fdd951a86e2a1b4ef3630e8a03060363"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.HIT.Truncations.html#hor"><span class="id" title="definition">hor</span></a> <a class="idref" href="HoTT.HIT.Join.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.HIT.Join.html#B"><span class="id" title="variable">B</span></a>.</span><span class="command" onmouseout="
+    : <a class="idref" href="HoTT.HIT.Join.html#join"><span class="id" title="definition">join</span></a> <a class="idref" href="HoTT.HIT.Join.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.HIT.Join.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.HIT.Truncations.html#hor"><span class="id" title="definition">hor</span></a> <a class="idref" href="HoTT.HIT.Join.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.HIT.Join.html#B"><span class="id" title="variable">B</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(73, '0_3_23');
+      mouseover(68, '0_3_23');
       "><br>
   <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(74, '0_3_23');
+      mouseover(69, '0_3_23');
       "><br>
     <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Trunc.html#equiv_iff_hprop"><span class="id" title="definition">equiv_iff_hprop</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(75, '0_3_23');
+      mouseover(70, '0_3_23');
       "><br>
-    - <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.Pushout.html#pushout_rec"><span class="id" title="definition">pushout_rec</span></a> <span class="id" title="var">_</span> <a class="idref" href="HoTT.HIT.Truncations.html#Trunc.tr"><span class="id" title="constructor">tr</span></a> (<span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> ⇒ <a class="idref" href="HoTT.Basics.Trunc.html#path_ishprop"><span class="id" title="lemma">path_ishprop</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span>)).</span><span class="command" onmouseout="
+    - <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.Pushout.html#pushout_rec"><span class="id" title="definition">pushout_rec</span></a> <span class="id" title="var">_</span> (<span class="id" title="keyword">fun</span> <span class="id" title="var">a</span> ⇒ <a class="idref" href="HoTT.HIT.Truncations.html#Trunc.tr"><span class="id" title="constructor">tr</span></a> (<a class="idref" href="Coq.Init.Datatypes.html#inl"><span class="id" title="constructor">inl</span></a> <a class="idref" href="HoTT.HIT.Join.html#a"><span class="id" title="variable">a</span></a>)) (<span class="id" title="keyword">fun</span> <span class="id" title="var">b</span> ⇒ <a class="idref" href="HoTT.HIT.Truncations.html#Trunc.tr"><span class="id" title="constructor">tr</span></a> (<a class="idref" href="Coq.Init.Datatypes.html#inr"><span class="id" title="constructor">inr</span></a> <a class="idref" href="HoTT.HIT.Join.html#b"><span class="id" title="variable">b</span></a>)) (<span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> ⇒ <a class="idref" href="HoTT.Basics.Trunc.html#path_ishprop"><span class="id" title="lemma">path_ishprop</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span>)).</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(76, '0_3_23');
+      mouseover(71, '0_3_23');
       "><br>
     - <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Truncations.html#Trunc_rec"><span class="id" title="definition">Trunc_rec</span></a>, <a class="idref" href="HoTT.HIT.Pushout.html#push"><span class="id" title="definition">push</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(77, '0_3_23');
+      mouseover(72, '0_3_23');
       "><br>
   <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(78, '0_3_23');
+      mouseover(73, '0_3_23');
       "><br>
 <br>
 <span class="id" title="keyword">End</span> <a class="idref" href="HoTT.HIT.Join.html#Join"><span class="id" title="section">Join</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(79, '0_3_23');
+      mouseover(74, '0_3_23');
       "><br>
 </span>
 </div>

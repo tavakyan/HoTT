@@ -40,14 +40,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Suspension.v
 Line: 4
-Time: 0.045s">
-<div class="time" style="width: 10.227272727273%"></div>
+Time: 0.047s">
+<div class="time" style="width: 8.7360594795539%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 4
-Time: 0.202s">
-<div class="time" style="width: 45.909090909091%"></div>
+Time: 0.193s">
+<div class="time" style="width: 35.873605947955%"></div>
 <pre>
 Require Import Pointed NullHomotopy.</pre>
 </div>
@@ -139,7 +139,7 @@ Global Arguments merid {X} x.</pre>
 <div class="code" title="File: Suspension.v
 Line: 23
 Time: 0.002s">
-<div class="time" style="width: 0.45454545454545%"></div>
+<div class="time" style="width: 0.37174721189591%"></div>
 <pre>
 
 Definition Susp_ind {X : Type} (P : Susp X -&gt; Type)
@@ -151,8 +151,8 @@ Definition Susp_ind {X : Type} (P : Susp X -&gt; Type)
 </div>
 <div class="code" title="File: Suspension.v
 Line: 30
-Time: 0.002s">
-<div class="time" style="width: 0.45454545454545%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.55762081784387%"></div>
 <pre>
 
 Axiom Susp_ind_beta_merid : forall {X : Type} (P : Susp X -&gt; Type)
@@ -210,8 +210,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Suspension.v
 Line: 46
-Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> exact (transport_const _ _ @ H_merid x).</pre>
 </div>
 <div class="code" title="File: Suspension.v
@@ -248,22 +248,22 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 54
-Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   apply (cancelL (transport_const (merid x) H_N)).</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 55
 Time: 0.002s">
-<div class="time" style="width: 0.45454545454545%"></div>
+<div class="time" style="width: 0.37174721189591%"></div>
 <pre>
   transitivity (apD (Susp_rec H_N H_S H_merid) (merid x)).</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 56
 Time: 0.002s">
-<div class="time" style="width: 0.45454545454545%"></div>
+<div class="time" style="width: 0.37174721189591%"></div>
 <pre>
   symmetry; refine (apD_const (Susp_rec H_N H_S H_merid) _).</pre>
 </div>
@@ -276,8 +276,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Suspension.v
 Line: 58
-Time: 0.003s">
-<div class="time" style="width: 0.68181818181818%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.74349442379182%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -293,8 +293,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Suspension.v
 Line: 63
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>Definition Susp_eta_homot {X : Type} {P : Susp X -&gt; Type} (f : forall y, P y)
   : f == Susp_ind P (f North) (f South) (fun x =&gt; apD f (merid x)).</pre>
 </div>
@@ -328,7 +328,7 @@ Time: 0s">
 <div class="code" title="File: Suspension.v
 Line: 67
 Time: 0.002s">
-<div class="time" style="width: 0.45454545454545%"></div>
+<div class="time" style="width: 0.37174721189591%"></div>
 <pre>
   refine (transport_paths_FlFr_D
     (g := Susp_ind P (f North) (f South) (fun x : X =&gt; apD f (merid x)))
@@ -344,13 +344,13 @@ Time: 0s">
 <div class="code" title="File: Suspension.v
 Line: 71
 Time: 0.002s">
-<div class="time" style="width: 0.45454545454545%"></div>
+<div class="time" style="width: 0.37174721189591%"></div>
 <pre> apply (concat (concat_p1 _)), (concatR (concat_1p _)^).</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 71
 Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
   apply ap, inverse.</pre>
 </div>
@@ -362,15 +362,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Suspension.v
 Line: 72
-Time: 0.011s">
-<div class="time" style="width: 2.5%"></div>
+Time: 0.02s">
+<div class="time" style="width: 3.7174721189591%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 73
 Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
 
 Definition Susp_rec_eta_homot {X Y : Type} (f : Susp X -&gt; Y)
@@ -399,8 +399,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Suspension.v
 Line: 79
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
   refine ((transport_paths_FlFr _ _) @ _).</pre>
 </div>
@@ -419,8 +419,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Suspension.v
 Line: 81
-Time: 0.175s">
-<div class="time" style="width: 39.772727272727%"></div>
+Time: 0.186s">
+<div class="time" style="width: 34.57249070632%"></div>
 <pre> hott_simpl.</pre>
 </div>
 <div class="code" title="File: Suspension.v
@@ -432,8 +432,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Suspension.v
 Line: 82
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre> f_ap.</pre>
 </div>
 <div class="code" title="File: Suspension.v
@@ -445,15 +445,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Suspension.v
 Line: 83
-Time: 0.009s">
-<div class="time" style="width: 2.0454545454545%"></div>
+Time: 0.01s">
+<div class="time" style="width: 1.8587360594796%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 84
 Time: 0.002s">
-<div class="time" style="width: 0.45454545454545%"></div>
+<div class="time" style="width: 0.37174721189591%"></div>
 <pre>  
 
 Definition Susp_eta `{Funext}
@@ -464,7 +464,7 @@ Definition Susp_eta `{Funext}
 <div class="code" title="File: Suspension.v
 Line: 89
 Time: 0.002s">
-<div class="time" style="width: 0.45454545454545%"></div>
+<div class="time" style="width: 0.37174721189591%"></div>
 <pre>
 
 Definition Susp_rec_eta `{Funext} {X Y : Type} (f : Susp X -&gt; Y)
@@ -497,8 +497,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 98
-Time: 0.037s">
-<div class="time" style="width: 8.4090909090909%"></div>
+Time: 0.047s">
+<div class="time" style="width: 8.7360594795539%"></div>
 <pre>
   simple refine (BuildEquiv (Susp X -&gt; Y)
                      { NS : Y * Y &amp; X -&gt; fst NS = snd NS } _ _).</pre>
@@ -578,14 +578,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Suspension.v
 Line: 107
-Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.37174721189591%"></div>
 <pre> intros [[N S] m].</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 107
 Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
     apply ap, path_arrow.</pre>
 </div>
@@ -610,8 +610,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Suspension.v
 Line: 109
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
     symmetry.</pre>
 </div>
@@ -645,8 +645,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Suspension.v
 Line: 114
-Time: 0.004s">
-<div class="time" style="width: 0.90909090909091%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.92936802973978%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -663,7 +663,7 @@ Time: 0s">
 <div class="code" title="File: Suspension.v
 Line: 118
 Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>Definition nullhomot_susp_from_paths {X Z: Type} (f : Susp X -&gt; Z)
   (n : NullHomotopy (fun x =&gt; ap f (merid x)))
 : NullHomotopy f.</pre>
@@ -699,7 +699,7 @@ Time: 0s">
 <div class="code" title="File: Suspension.v
 Line: 124
 Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
   apply (concat (concat_p1 _)), ap.</pre>
 </div>
@@ -711,8 +711,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Suspension.v
 Line: 125
-Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.37174721189591%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -736,7 +736,7 @@ Proof.</pre>
 <div class="code" title="File: Suspension.v
 Line: 131
 Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
   exists (n.2 North @ (n.2 South)^).</pre>
 </div>
@@ -756,28 +756,28 @@ Time: 0s">
 <div class="code" title="File: Suspension.v
 Line: 133
 Time: 0.002s">
-<div class="time" style="width: 0.45454545454545%"></div>
+<div class="time" style="width: 0.37174721189591%"></div>
 <pre>
   transitivity (ap (Susp_rec H_N H_S f) (merid x) @ n.2 South).</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 134
 Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
   apply whiskerR, inverse, Susp_rec_beta_merid.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 135
 Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
   refine (concat_Ap n.2 (merid x) @ _).</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 136
-Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.37174721189591%"></div>
 <pre>
   apply (concatR (concat_p1 _)), whiskerL.</pre>
 </div>
@@ -790,7 +790,7 @@ Time: 0s">
 <div class="code" title="File: Suspension.v
 Line: 137
 Time: 0.003s">
-<div class="time" style="width: 0.68181818181818%"></div>
+<div class="time" style="width: 0.55762081784387%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -812,8 +812,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Suspension.v
 Line: 142
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
 
 Global Instance ispointed_path_susp `{IsPointed X} : IsPointed (North = South :&gt; Susp X) | 0
@@ -822,7 +822,7 @@ Global Instance ispointed_path_susp `{IsPointed X} : IsPointed (North = South :&
 <div class="code" title="File: Suspension.v
 Line: 145
 Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
 
 Global Instance ispointed_path_susp' `{IsPointed X} : IsPointed (South = North :&gt; Susp X) | 0
@@ -863,8 +863,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 156
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
   refine (Build_pMap (psusp X) (psusp Y)
                      (Susp_rec North South (fun x =&gt; merid (f x))) 1).</pre>
@@ -878,8 +878,8 @@ Defined.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 159
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
 
 Definition psusp_functor_compose {X Y Z : pType}
@@ -895,8 +895,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 164
-Time: 0.01s">
-<div class="time" style="width: 2.2727272727273%"></div>
+Time: 0.013s">
+<div class="time" style="width: 2.4163568773234%"></div>
 <pre>
   pointed_reduce; simple refine (Build_pHomotopy _ _); cbn.</pre>
 </div>
@@ -909,8 +909,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Suspension.v
 Line: 166
-Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.37174721189591%"></div>
 <pre> refine (Susp_ind _ _ _ _); cbn; try reflexivity.</pre>
 </div>
 <div class="code" title="File: Suspension.v
@@ -922,29 +922,29 @@ Time: 0s">
 </div>
 <div class="code" title="File: Suspension.v
 Line: 167
-Time: 0.003s">
-<div class="time" style="width: 0.68181818181818%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.74349442379182%"></div>
 <pre>
     rewrite transport_paths_FlFr.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 168
-Time: 0.006s">
-<div class="time" style="width: 1.3636363636364%"></div>
+Time: 0.007s">
+<div class="time" style="width: 1.3011152416357%"></div>
 <pre>
     rewrite concat_p1; apply moveR_Vp; rewrite concat_p1.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 169
 Time: 0.002s">
-<div class="time" style="width: 0.45454545454545%"></div>
+<div class="time" style="width: 0.37174721189591%"></div>
 <pre>
     rewrite ap_compose.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 170
-Time: 0.007s">
-<div class="time" style="width: 1.5909090909091%"></div>
+Time: 0.009s">
+<div class="time" style="width: 1.6728624535316%"></div>
 <pre>
     rewrite !Susp_rec_beta_merid.</pre>
 </div>
@@ -965,13 +965,13 @@ Time: 0s">
 <div class="code" title="File: Suspension.v
 Line: 173
 Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 173
-Time: 0.031s">
-<div class="time" style="width: 7.0454545454545%"></div>
+Time: 0.04s">
+<div class="time" style="width: 7.4349442379182%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -1024,7 +1024,7 @@ Time: 0s">
 <div class="code" title="File: Suspension.v
 Line: 183
 Time: 0.002s">
-<div class="time" style="width: 0.45454545454545%"></div>
+<div class="time" style="width: 0.37174721189591%"></div>
 <pre>
     refine (_ oE (equiv_functor_sigma'
                  (Q := fun NSm =&gt; fst NSm.1 = point B)
@@ -1033,15 +1033,15 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: Suspension.v
 Line: 187
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
     refine (_ oE (equiv_sigma_assoc _ _)^-1); simpl.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 188
 Time: 0.003s">
-<div class="time" style="width: 0.68181818181818%"></div>
+<div class="time" style="width: 0.55762081784387%"></div>
 <pre>
     refine (_ oE
               (equiv_functor_sigma'
@@ -1053,15 +1053,15 @@ Time: 0.003s">
 </div>
 <div class="code" title="File: Suspension.v
 Line: 195
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
     refine (_ oE (equiv_sigma_prod _)^-1); simpl.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 196
-Time: 0.002s">
-<div class="time" style="width: 0.45454545454545%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.55762081784387%"></div>
 <pre>
     refine (_ oE
               (equiv_functor_sigma'
@@ -1072,8 +1072,8 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: Suspension.v
 Line: 202
-Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.37174721189591%"></div>
 <pre>
     refine (_ oE
               (equiv_sigma_assoc (fun b =&gt; b = point B)
@@ -1081,15 +1081,15 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Suspension.v
 Line: 205
-Time: 0.024s">
-<div class="time" style="width: 5.4545454545455%"></div>
+Time: 0.028s">
+<div class="time" style="width: 5.2044609665428%"></div>
 <pre>
     refine (_ oE equiv_contr_sigma _); simpl.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 206
-Time: 0.097s">
-<div class="time" style="width: 22.045454545455%"></div>
+Time: 0.117s">
+<div class="time" style="width: 21.747211895911%"></div>
 <pre>
     refine (_ oE (equiv_sigma_contr
                    (A := {p : B &amp; A -&gt; point B = p})
@@ -1098,14 +1098,14 @@ Time: 0.097s">
 <div class="code" title="File: Suspension.v
 Line: 209
 Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
     refine (_ oE (equiv_sigma_assoc _ _)^-1); simpl.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 210
-Time: 0.003s">
-<div class="time" style="width: 0.68181818181818%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.74349442379182%"></div>
 <pre>
     refine (_ oE
               (equiv_functor_sigma'
@@ -1115,8 +1115,8 @@ Time: 0.003s">
 </div>
 <div class="code" title="File: Suspension.v
 Line: 215
-Time: 0.002s">
-<div class="time" style="width: 0.45454545454545%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.55762081784387%"></div>
 <pre>
     refine (_ oE
               (equiv_sigma_assoc
@@ -1125,8 +1125,8 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: Suspension.v
 Line: 219
-Time: 0.02s">
-<div class="time" style="width: 4.5454545454545%"></div>
+Time: 0.024s">
+<div class="time" style="width: 4.4609665427509%"></div>
 <pre>
     refine (_ oE equiv_contr_sigma _); simpl.</pre>
 </div>
@@ -1139,8 +1139,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Suspension.v
 Line: 221
-Time: 0.016s">
-<div class="time" style="width: 3.6363636363636%"></div>
+Time: 0.02s">
+<div class="time" style="width: 3.7174721189591%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -1209,7 +1209,7 @@ Proof.</pre>
 <div class="code" title="File: Suspension.v
 Line: 252
 Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
   refine (Build_pMap X (loops (psusp X))
                      (fun x =&gt; merid x @ (merid (point X))^) _).</pre>
@@ -1230,8 +1230,8 @@ Defined.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 256
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
 
 Definition loop_susp_unit_natural {X Y : pType} (f : X -&gt;* Y)
@@ -1247,15 +1247,15 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 261
-Time: 0.006s">
-<div class="time" style="width: 1.3636363636364%"></div>
+Time: 0.007s">
+<div class="time" style="width: 1.3011152416357%"></div>
 <pre>
   pointed_reduce.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 262
-Time: 0.004s">
-<div class="time" style="width: 0.90909090909091%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.92936802973978%"></div>
 <pre>
   simple refine (Build_pHomotopy _ _); cbn.</pre>
 </div>
@@ -1269,20 +1269,20 @@ Time: 0s">
 <div class="code" title="File: Suspension.v
 Line: 264
 Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre> intros x; symmetry.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 264
 Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
     refine (concat_1p _@ (concat_p1 _ @ _)).</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 265
-Time: 0.002s">
-<div class="time" style="width: 0.45454545454545%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.55762081784387%"></div>
 <pre>
     refine (ap_pp (Susp_rec North South (merid o f))
                   (merid x) (merid (point X))^ @ _).</pre>
@@ -1290,14 +1290,14 @@ Time: 0.002s">
 <div class="code" title="File: Suspension.v
 Line: 267
 Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
     refine ((1 @@ ap_V _ _) @ _).</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 268
 Time: 0.002s">
-<div class="time" style="width: 0.45454545454545%"></div>
+<div class="time" style="width: 0.37174721189591%"></div>
 <pre>
     refine (Susp_rec_beta_merid _ @@ inverse2 (Susp_rec_beta_merid _)).</pre>
 </div>
@@ -1310,76 +1310,76 @@ Time: 0s">
 </div>
 <div class="code" title="File: Suspension.v
 Line: 270
-Time: 0.006s">
-<div class="time" style="width: 1.3636363636364%"></div>
+Time: 0.008s">
+<div class="time" style="width: 1.4869888475836%"></div>
 <pre> cbn.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 270
-Time: 0.252s">
-<div class="time" style="width: 57.272727272727%"></div>
+Time: 0.299s">
+<div class="time" style="width: 55.576208178439%"></div>
 <pre> rewrite !inv_pp, !concat_pp_p, concat_1p; symmetry.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 270
 Time: 0.004s">
-<div class="time" style="width: 0.90909090909091%"></div>
+<div class="time" style="width: 0.74349442379182%"></div>
 <pre>
     apply moveL_Vp.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 271
-Time: 0.005s">
-<div class="time" style="width: 1.1363636363636%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.74349442379182%"></div>
 <pre>
     refine (concat_pV_inverse2 _ _ (Susp_rec_beta_merid (point X)) @ _).</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 272
 Time: 0.009s">
-<div class="time" style="width: 2.0454545454545%"></div>
+<div class="time" style="width: 1.6728624535316%"></div>
 <pre>
     do 2 apply moveL_Vp.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 273
 Time: 0.003s">
-<div class="time" style="width: 0.68181818181818%"></div>
+<div class="time" style="width: 0.55762081784387%"></div>
 <pre>
     refine (ap_pp_concat_pV _ _ @ _).</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 274
-Time: 0.005s">
-<div class="time" style="width: 1.1363636363636%"></div>
+Time: 0.006s">
+<div class="time" style="width: 1.1152416356877%"></div>
 <pre>
     do 2 apply moveL_Vp.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 275
-Time: 0.021s">
-<div class="time" style="width: 4.7727272727273%"></div>
+Time: 0.023s">
+<div class="time" style="width: 4.275092936803%"></div>
 <pre>
     rewrite concat_p1_1, concat_1p_1.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 276
-Time: 0.004s">
-<div class="time" style="width: 0.90909090909091%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.92936802973978%"></div>
 <pre>
     cbn; symmetry.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 277
-Time: 0.019s">
-<div class="time" style="width: 4.3181818181818%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
     refine (concat_p1 _ @ _).</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 278
-Time: 0.009s">
-<div class="time" style="width: 2.0454545454545%"></div>
+Time: 0.029s">
+<div class="time" style="width: 5.3903345724907%"></div>
 <pre>
     refine (ap_compose (fun p' =&gt; (ap (Susp_rec North South (merid o f))) p' @ 1)
                        (fun p' =&gt; 1 @ p')
@@ -1387,22 +1387,22 @@ Time: 0.009s">
 </div>
 <div class="code" title="File: Suspension.v
 Line: 281
-Time: 0.004s">
-<div class="time" style="width: 0.90909090909091%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.92936802973978%"></div>
 <pre>
     apply ap.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 282
-Time: 0.004s">
-<div class="time" style="width: 0.90909090909091%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.92936802973978%"></div>
 <pre>
     refine (ap_compose (ap (Susp_rec North South (merid o f)))
                        (fun p' =&gt; p' @ 1) _).</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 284
-Time: 0.44s">
+Time: 0.538s">
 <div class="time" style="width: 100%"></div>
 <pre>
 Qed.</pre>
@@ -1424,8 +1424,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 288
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
   refine (Build_pMap (psusp (loops X)) X
                      (Susp_rec (point X) (point X) idmap) 1).</pre>
@@ -1439,8 +1439,8 @@ Defined.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 291
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
 
 Definition loop_susp_counit_natural {X Y : pType} (f : X -&gt;* Y)
@@ -1457,14 +1457,14 @@ Proof.</pre>
 <div class="code" title="File: Suspension.v
 Line: 296
 Time: 0.006s">
-<div class="time" style="width: 1.3636363636364%"></div>
+<div class="time" style="width: 1.1152416356877%"></div>
 <pre>
   pointed_reduce.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 297
-Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.37174721189591%"></div>
 <pre>
   simple refine (Build_pHomotopy _ _); simpl.</pre>
 </div>
@@ -1477,28 +1477,28 @@ Time: 0s">
 </div>
 <div class="code" title="File: Suspension.v
 Line: 299
-Time: 0.002s">
-<div class="time" style="width: 0.45454545454545%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.55762081784387%"></div>
 <pre> simple refine (Susp_ind _ _ _ _); cbn; try reflexivity; intros p.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 299
-Time: 0.021s">
-<div class="time" style="width: 4.7727272727273%"></div>
+Time: 0.026s">
+<div class="time" style="width: 4.8327137546468%"></div>
 <pre>
     rewrite transport_paths_FlFr, ap_compose, concat_p1.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 300
 Time: 0.002s">
-<div class="time" style="width: 0.45454545454545%"></div>
+<div class="time" style="width: 0.37174721189591%"></div>
 <pre>
     apply moveR_Vp.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 301
-Time: 0.006s">
-<div class="time" style="width: 1.3636363636364%"></div>
+Time: 0.007s">
+<div class="time" style="width: 1.3011152416357%"></div>
 <pre>
     refine (ap_compose
               (Susp_rec North South (fun x0 =&gt; merid (1 @ (ap f x0 @ 1))))
@@ -1506,34 +1506,34 @@ Time: 0.006s">
 </div>
 <div class="code" title="File: Suspension.v
 Line: 304
-Time: 0.017s">
-<div class="time" style="width: 3.8636363636364%"></div>
+Time: 0.02s">
+<div class="time" style="width: 3.7174721189591%"></div>
 <pre>
     do 2 rewrite Susp_rec_beta_merid.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 305
 Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
     refine (concat_1p _ @ _).</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 306
-Time: 0.018s">
-<div class="time" style="width: 4.0909090909091%"></div>
+Time: 0.016s">
+<div class="time" style="width: 2.9739776951673%"></div>
 <pre> f_ap.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 306
 Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre> f_ap.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 306
 Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre> symmetry.</pre>
 </div>
 <div class="code" title="File: Suspension.v
@@ -1552,14 +1552,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Suspension.v
 Line: 308
-Time: 0.009s">
-<div class="time" style="width: 2.0454545454545%"></div>
+Time: 0.007s">
+<div class="time" style="width: 1.3011152416357%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 308
-Time: 0.152s">
-<div class="time" style="width: 34.545454545455%"></div>
+Time: 0.187s">
+<div class="time" style="width: 34.758364312268%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -1604,21 +1604,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: Suspension.v
 Line: 317
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre> intros p; cbn.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 317
 Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
     refine (concat_1p _ @ (concat_p1 _ @ _)).</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 318
-Time: 0.002s">
-<div class="time" style="width: 0.45454545454545%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.55762081784387%"></div>
 <pre>
     refine (ap_pp (Susp_rec (point X) (point X) idmap)
                   (merid p) (merid (point (point X = point X)))^ @ _).</pre>
@@ -1626,14 +1626,14 @@ Time: 0.002s">
 <div class="code" title="File: Suspension.v
 Line: 320
 Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
     refine ((1 @@ ap_V _ _) @ _).</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 321
 Time: 0.003s">
-<div class="time" style="width: 0.68181818181818%"></div>
+<div class="time" style="width: 0.55762081784387%"></div>
 <pre>
     refine ((Susp_rec_beta_merid p @@ inverse2 (Susp_rec_beta_merid (point (loops X)))) @ _).</pre>
 </div>
@@ -1653,21 +1653,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: Suspension.v
 Line: 324
-Time: 0.065s">
-<div class="time" style="width: 14.772727272727%"></div>
+Time: 0.069s">
+<div class="time" style="width: 12.825278810409%"></div>
 <pre> destruct X as [X x]; cbn; unfold point.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 324
 Time: 0.003s">
-<div class="time" style="width: 0.68181818181818%"></div>
+<div class="time" style="width: 0.55762081784387%"></div>
 <pre>
     apply whiskerR.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 325
-Time: 0.031s">
-<div class="time" style="width: 7.0454545454545%"></div>
+Time: 0.036s">
+<div class="time" style="width: 6.6914498141264%"></div>
 <pre>
     rewrite (concat_pV_inverse2
                (ap (Susp_rec x x idmap) (merid 1))
@@ -1675,36 +1675,36 @@ Time: 0.031s">
 </div>
 <div class="code" title="File: Suspension.v
 Line: 328
-Time: 0.023s">
-<div class="time" style="width: 5.2272727272727%"></div>
+Time: 0.026s">
+<div class="time" style="width: 4.8327137546468%"></div>
 <pre>
     rewrite (ap_pp_concat_pV (Susp_rec x x idmap) (merid 1)).</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 329
-Time: 0.022s">
-<div class="time" style="width: 5%"></div>
+Time: 0.026s">
+<div class="time" style="width: 4.8327137546468%"></div>
 <pre>
     rewrite ap_compose, (ap_compose _ (fun p =&gt; p @ 1)).</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 330
-Time: 0.013s">
-<div class="time" style="width: 2.9545454545455%"></div>
+Time: 0.014s">
+<div class="time" style="width: 2.6022304832714%"></div>
 <pre>
     rewrite concat_1p_1; apply ap.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 331
 Time: 0.002s">
-<div class="time" style="width: 0.45454545454545%"></div>
+<div class="time" style="width: 0.37174721189591%"></div>
 <pre>
     apply concat_p1_1.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 332
-Time: 0.166s">
-<div class="time" style="width: 37.727272727273%"></div>
+Time: 0.189s">
+<div class="time" style="width: 35.130111524164%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -1728,7 +1728,7 @@ Proof.</pre>
 <div class="code" title="File: Suspension.v
 Line: 338
 Time: 0.004s">
-<div class="time" style="width: 0.90909090909091%"></div>
+<div class="time" style="width: 0.74349442379182%"></div>
 <pre>
   simple refine (Build_pHomotopy _ _);
   [ simple refine (Susp_ind _ _ _ _) | ]; try reflexivity; cbn.</pre>
@@ -1761,43 +1761,43 @@ Time: 0s">
 </div>
 <div class="code" title="File: Suspension.v
 Line: 342
-Time: 0.019s">
-<div class="time" style="width: 4.3181818181818%"></div>
+Time: 0.021s">
+<div class="time" style="width: 3.9033457249071%"></div>
 <pre>
     rewrite transport_paths_FlFr, ap_idmap, ap_compose.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 343
-Time: 0.009s">
-<div class="time" style="width: 2.0454545454545%"></div>
+Time: 0.01s">
+<div class="time" style="width: 1.8587360594796%"></div>
 <pre>
     rewrite Susp_rec_beta_merid.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 344
 Time: 0.009s">
-<div class="time" style="width: 2.0454545454545%"></div>
+<div class="time" style="width: 1.6728624535316%"></div>
 <pre>
     apply moveR_pM; rewrite concat_p1.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 345
 Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
     refine (inverse2 (Susp_rec_beta_merid _) @ _).</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 346
-Time: 0.006s">
-<div class="time" style="width: 1.3636363636364%"></div>
+Time: 0.008s">
+<div class="time" style="width: 1.4869888475836%"></div>
 <pre>
     rewrite inv_pp, inv_V; reflexivity.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 347
-Time: 0.059s">
-<div class="time" style="width: 13.409090909091%"></div>
+Time: 0.068s">
+<div class="time" style="width: 12.639405204461%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -1827,8 +1827,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 353
-Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.37174721189591%"></div>
 <pre>
   refine (equiv_adjointify
             (fun f =&gt; loops_functor f o* loop_susp_unit A)
@@ -1856,7 +1856,7 @@ Time: 0s">
 <div class="code" title="File: Suspension.v
 Line: 357
 Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
     refine (pmap_prewhisker _ (loops_functor_compose _ _) @* _).</pre>
 </div>
@@ -1870,14 +1870,14 @@ Time: 0s">
 <div class="code" title="File: Suspension.v
 Line: 359
 Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
     refine (pmap_postwhisker _ (loop_susp_unit_natural g)^* @* _).</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 360
 Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
     refine ((pmap_compose_assoc _ _ _)^* @* _).</pre>
 </div>
@@ -1917,21 +1917,21 @@ Time: 0s">
 <div class="code" title="File: Suspension.v
 Line: 364
 Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
     refine (pmap_postwhisker _ (psusp_functor_compose _ _) @* _).</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 365
 Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
     refine ((pmap_compose_assoc _ _ _)^* @* _).</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 366
 Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
     refine (pmap_prewhisker _ (loop_susp_counit_natural f)^* @* _).</pre>
 </div>
@@ -1958,8 +1958,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Suspension.v
 Line: 370
-Time: 0.007s">
-<div class="time" style="width: 1.5909090909091%"></div>
+Time: 0.008s">
+<div class="time" style="width: 1.4869888475836%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1976,7 +1976,7 @@ Time: 0s">
 <div class="code" title="File: Suspension.v
 Line: 374
 Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>Definition loop_susp_adjoint_nat_r `{Funext} (A B B' : pType)
            (f : psusp A -&gt;* B) (g : B -&gt;* B')
 : loop_susp_adjoint A B' (g o* f)
@@ -1991,15 +1991,15 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 378
-Time: 0.009s">
-<div class="time" style="width: 2.0454545454545%"></div>
+Time: 0.01s">
+<div class="time" style="width: 1.8587360594796%"></div>
 <pre>
   cbn.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 379
 Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
   refine (_ @* pmap_compose_assoc _ _ _).</pre>
 </div>
@@ -2019,15 +2019,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Suspension.v
 Line: 382
-Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.37174721189591%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 383
-Time: 0.051s">
-<div class="time" style="width: 11.590909090909%"></div>
+Time: 0.053s">
+<div class="time" style="width: 9.8513011152416%"></div>
 <pre>
 
 Definition loop_susp_adjoint_nat_l `{Funext} (A A' B : pType)
@@ -2045,14 +2045,14 @@ Proof.</pre>
 <div class="code" title="File: Suspension.v
 Line: 389
 Time: 0.024s">
-<div class="time" style="width: 5.4545454545455%"></div>
+<div class="time" style="width: 4.4609665427509%"></div>
 <pre>
   cbn.</pre>
 </div>
 <div class="code" title="File: Suspension.v
 Line: 390
 Time: 0.001s">
-<div class="time" style="width: 0.22727272727273%"></div>
+<div class="time" style="width: 0.18587360594796%"></div>
 <pre>
   refine (_ @* (pmap_compose_assoc _ _ _)^*).</pre>
 </div>
@@ -2073,7 +2073,7 @@ Time: 0s">
 <div class="code" title="File: Suspension.v
 Line: 393
 Time: 0.002s">
-<div class="time" style="width: 0.45454545454545%"></div>
+<div class="time" style="width: 0.37174721189591%"></div>
 <pre>
 Defined.</pre>
 </div>

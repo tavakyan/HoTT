@@ -158,127 +158,127 @@
           
 
             i = 28;
-            data = "1 subgoal (ID 21)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  ============================	  join U.(trunctype_type) A -> A	2 subgoals (ID 32)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  ============================	  U.(trunctype_type) + A -> A		subgoal 2 (ID 34) is:	 forall a : U.(trunctype_type) * A,	 ?push' (inl (fst a)) = ?push' (inr (snd a))	";
+            data = "1 subgoal (ID 21)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  ============================	  join U.(trunctype_type) A -> A	3 subgoals (ID 32)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  ============================	  U.(trunctype_type) -> A		subgoal 2 (ID 34) is:	 A -> A	subgoal 3 (ID 36) is:	 forall a : U.(trunctype_type) * A, ?pushb (fst a) = ?pushc (snd a)	";
             responses[i]=data;
           
 
             i = 29;
-            data = "1 subgoal (ID 32)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  ============================	  U.(trunctype_type) + A -> A	2 subgoals (ID 40)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  u : U.(trunctype_type)	  ============================	  A		subgoal 2 (ID 41) is:	 A	";
+            data = "1 subgoal (ID 32)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  ============================	  U.(trunctype_type) -> A	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	5 subgoals (ID 34)		subgoal 1 (ID 34) is:	 A -> A	subgoal 2 (ID 36) is:	 forall a : U.(trunctype_type) * A,	 (fun u : U.(trunctype_type) => let i := uac u in i.(center)) (fst a) =	 ?pushc (snd a)	subgoal 3 (ID 23) is:	 Sect	   (pushout_rec A	      (fun u : U.(trunctype_type) => let i := uac u in i.(center)) 	      ?pushc ?pp') (fun a : A => push (inr a))	subgoal 4 (ID 25) is:	 Sect (fun a : A => push (inr a))	   (pushout_rec A	      (fun u : U.(trunctype_type) => let i := uac u in i.(center)) 	      ?pushc ?pp')	subgoal 5 (ID 14) is:	 IsEquiv (fun a : A => push (inr a)) -> U.(trunctype_type) -> Contr A	";
             responses[i]=data;
           
 
             i = 30;
-            data = "1 subgoal (ID 40)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  u : U.(trunctype_type)	  ============================	  A	1 subgoal (ID 43)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  u : U.(trunctype_type)	  i := uac u : Contr A	  ============================	  A	";
+            data = "1 subgoal (ID 34)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  ============================	  A -> A	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	4 subgoals (ID 36)		subgoal 1 (ID 36) is:	 forall a : U.(trunctype_type) * A,	 (fun u : U.(trunctype_type) => let i := uac u in i.(center)) (fst a) =	 idmap (snd a)	subgoal 2 (ID 23) is:	 Sect	   (pushout_rec A	      (fun u : U.(trunctype_type) => let i := uac u in i.(center)) idmap 	      ?pp') (fun a : A => push (inr a))	subgoal 3 (ID 25) is:	 Sect (fun a : A => push (inr a))	   (pushout_rec A	      (fun u : U.(trunctype_type) => let i := uac u in i.(center)) idmap 	      ?pp')	subgoal 4 (ID 14) is:	 IsEquiv (fun a : A => push (inr a)) -> U.(trunctype_type) -> Contr A	";
             responses[i]=data;
           
 
             i = 31;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	5 subgoals (ID 41)		subgoal 1 (ID 41) is:	 A	subgoal 2 (ID 34) is:	 forall a : U.(trunctype_type) * A,	 (fun X : U.(trunctype_type) + A =>	  match X with	  | inl u => let i := uac u in i.(center)	  | inr a0 => ?Goal0@{a:=a0}	  end) (inl (fst a)) =	 (fun X : U.(trunctype_type) + A =>	  match X with	  | inl u => let i := uac u in i.(center)	  | inr a0 => ?Goal0@{a:=a0}	  end) (inr (snd a))	subgoal 3 (ID 23) is:	 Sect	   (pushout_rec A	      (fun X : U.(trunctype_type) + A =>	       match X with	       | inl u => let i := uac u in i.(center)	       | inr a => ?Goal0	       end) ?pp') (fun a : A => push (inr a))	subgoal 4 (ID 25) is:	 Sect (fun a : A => push (inr a))	   (pushout_rec A	      (fun X : U.(trunctype_type) + A =>	       match X with	       | inl u => let i := uac u in i.(center)	       | inr a => ?Goal0	       end) ?pp')	subgoal 5 (ID 14) is:	 IsEquiv (fun a : A => push (inr a)) -> U.(trunctype_type) -> Contr A	";
+            data = "1 subgoal (ID 36)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  ============================	  forall a : U.(trunctype_type) * A,	  (fun u : U.(trunctype_type) => let i := uac u in i.(center)) (fst a) =	  idmap (snd a)	1 subgoal (ID 52)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  u : U.(trunctype_type)	  a : A	  ============================	  (let i := uac (fst (u, a)) in i.(center)) = snd (u, a)	";
             responses[i]=data;
           
 
             i = 32;
-            data = "1 subgoal (ID 41)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  a : A	  ============================	  A	1 subgoal (ID 41)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  a : A	  ============================	  A	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	4 subgoals (ID 34)		subgoal 1 (ID 34) is:	 forall a : U.(trunctype_type) * A,	 (fun X : U.(trunctype_type) + A =>	  match X with	  | inl u => let i := uac u in i.(center)	  | inr a0 => a0	  end) (inl (fst a)) =	 (fun X : U.(trunctype_type) + A =>	  match X with	  | inl u => let i := uac u in i.(center)	  | inr a0 => a0	  end) (inr (snd a))	subgoal 2 (ID 23) is:	 Sect	   (pushout_rec A	      (fun X : U.(trunctype_type) + A =>	       match X with	       | inl u => let i := uac u in i.(center)	       | inr a => a	       end) ?pp') (fun a : A => push (inr a))	subgoal 3 (ID 25) is:	 Sect (fun a : A => push (inr a))	   (pushout_rec A	      (fun X : U.(trunctype_type) + A =>	       match X with	       | inl u => let i := uac u in i.(center)	       | inr a => a	       end) ?pp')	subgoal 4 (ID 14) is:	 IsEquiv (fun a : A => push (inr a)) -> U.(trunctype_type) -> Contr A	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	4 subgoals (ID 34)		subgoal 1 (ID 34) is:	 forall a : U.(trunctype_type) * A,	 (fun X : U.(trunctype_type) + A =>	  match X with	  | inl u => let i := uac u in i.(center)	  | inr a0 => a0	  end) (inl (fst a)) =	 (fun X : U.(trunctype_type) + A =>	  match X with	  | inl u => let i := uac u in i.(center)	  | inr a0 => a0	  end) (inr (snd a))	subgoal 2 (ID 23) is:	 Sect	   (pushout_rec A	      (fun X : U.(trunctype_type) + A =>	       match X with	       | inl u => let i := uac u in i.(center)	       | inr a => a	       end) ?pp') (fun a : A => push (inr a))	subgoal 3 (ID 25) is:	 Sect (fun a : A => push (inr a))	   (pushout_rec A	      (fun X : U.(trunctype_type) + A =>	       match X with	       | inl u => let i := uac u in i.(center)	       | inr a => a	       end) ?pp')	subgoal 4 (ID 14) is:	 IsEquiv (fun a : A => push (inr a)) -> U.(trunctype_type) -> Contr A	1 subgoal (ID 34)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  ============================	  forall a : U.(trunctype_type) * A,	  (fun X : U.(trunctype_type) + A =>	   match X with	   | inl u => let i := uac u in i.(center)	   | inr a0 => a0	   end) (inl (fst a)) =	  (fun X : U.(trunctype_type) + A =>	   match X with	   | inl u => let i := uac u in i.(center)	   | inr a0 => a0	   end) (inr (snd a))	1 subgoal (ID 55)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  u : U.(trunctype_type)	  a : A	  ============================	  (let i := uac (fst (u, a)) in i.(center)) = snd (u, a)	";
+            data = "1 subgoal (ID 53)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  u : U.(trunctype_type)	  a : A	  ============================	  (uac u).(center) = a	";
             responses[i]=data;
           
 
             i = 33;
-            data = "1 subgoal (ID 56)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  u : U.(trunctype_type)	  a : A	  ============================	  (uac u).(center) = a	";
+            data = "1 subgoal (ID 55)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  u : U.(trunctype_type)	  a : A	  i := uac u : Contr A	  ============================	  (uac u).(center) = a	";
             responses[i]=data;
           
 
             i = 34;
-            data = "1 subgoal (ID 58)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  u : U.(trunctype_type)	  a : A	  i := uac u : Contr A	  ============================	  (uac u).(center) = a	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	3 subgoals (ID 23)		subgoal 1 (ID 23) is:	 Sect	   (pushout_rec A	      (fun u : U.(trunctype_type) => let i := uac u in i.(center)) idmap	      (fun a0 : U.(trunctype_type) * A =>	       (fun (u : U.(trunctype_type)) (a : A) =>	        let i := uac u in (uac u).(contr) a) a0.(fst) 	         a0.(snd))) (fun a : A => push (inr a))	subgoal 2 (ID 25) is:	 Sect (fun a : A => push (inr a))	   (pushout_rec A	      (fun u : U.(trunctype_type) => let i := uac u in i.(center)) idmap	      (fun a0 : U.(trunctype_type) * A =>	       (fun (u : U.(trunctype_type)) (a : A) =>	        let i := uac u in (uac u).(contr) a) a0.(fst) 	         a0.(snd)))	subgoal 3 (ID 14) is:	 IsEquiv (fun a : A => push (inr a)) -> U.(trunctype_type) -> Contr A	";
             responses[i]=data;
           
 
             i = 35;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	3 subgoals (ID 23)		subgoal 1 (ID 23) is:	 Sect	   (pushout_rec A	      (fun X : U.(trunctype_type) + A =>	       match X with	       | inl u => let i := uac u in i.(center)	       | inr a => a	       end)	      (fun a0 : U.(trunctype_type) * A =>	       (fun (u : U.(trunctype_type)) (a : A) =>	        let i := uac u in (uac u).(contr) a) a0.(fst) 	         a0.(snd))) (fun a : A => push (inr a))	subgoal 2 (ID 25) is:	 Sect (fun a : A => push (inr a))	   (pushout_rec A	      (fun X : U.(trunctype_type) + A =>	       match X with	       | inl u => let i := uac u in i.(center)	       | inr a => a	       end)	      (fun a0 : U.(trunctype_type) * A =>	       (fun (u : U.(trunctype_type)) (a : A) =>	        let i := uac u in (uac u).(contr) a) a0.(fst) 	         a0.(snd)))	subgoal 3 (ID 14) is:	 IsEquiv (fun a : A => push (inr a)) -> U.(trunctype_type) -> Contr A	";
+            data = "1 subgoal (ID 23)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  ============================	  Sect	    (pushout_rec A	       (fun u : U.(trunctype_type) => let i := uac u in i.(center)) idmap	       (fun a0 : U.(trunctype_type) * A =>	        (fun (u : U.(trunctype_type)) (a : A) =>	         let i := uac u in (uac u).(contr) a) a0.(fst) 	          a0.(snd))) (fun a : A => push (inr a))	1 subgoal (ID 59)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  z : join U.(trunctype_type) A	  ============================	  push	    (inr	       (pushout_rec A	          (fun u : U.(trunctype_type) => let i := uac u in i.(center)) idmap	          (fun a0 : U.(trunctype_type) * A =>	           let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) z)) = z	";
             responses[i]=data;
           
 
             i = 36;
-            data = "1 subgoal (ID 23)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  ============================	  Sect	    (pushout_rec A	       (fun X : U.(trunctype_type) + A =>	        match X with	        | inl u => let i := uac u in i.(center)	        | inr a => a	        end)	       (fun a0 : U.(trunctype_type) * A =>	        (fun (u : U.(trunctype_type)) (a : A) =>	         let i := uac u in (uac u).(contr) a) a0.(fst) 	          a0.(snd))) (fun a : A => push (inr a))	1 subgoal (ID 62)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  z : join U.(trunctype_type) A	  ============================	  push	    (inr	       (pushout_rec A	          (fun X : U.(trunctype_type) + A =>	           match X with	           | inl u => let i := uac u in i.(center)	           | inr a => a	           end)	          (fun a0 : U.(trunctype_type) * A =>	           let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) z)) = z	";
+            data = "1 subgoal (ID 60)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  z : join U.(trunctype_type) A	  ============================	  (fun j : join U.(trunctype_type) A =>	   push	     (inr	        (pushout_rec A	           (fun u : U.(trunctype_type) => let i := uac u in i.(center)) idmap	           (fun a0 : U.(trunctype_type) * A =>	            let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) = j)	    z	";
             responses[i]=data;
           
 
             i = 37;
-            data = "1 subgoal (ID 63)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  z : join U.(trunctype_type) A	  ============================	  (fun j : join U.(trunctype_type) A =>	   push	     (inr	        (pushout_rec A	           (fun X : U.(trunctype_type) + A =>	            match X with	            | inl u => let i := uac u in i.(center)	            | inr a => a	            end)	           (fun a0 : U.(trunctype_type) * A =>	            let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) = j)	    z	";
+            data = "3 subgoals (ID 71)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  z : join U.(trunctype_type) A	  ============================	  forall b : U.(trunctype_type),	  (fun j : join U.(trunctype_type) A =>	   push	     (inr	        (pushout_rec A	           (fun u : U.(trunctype_type) => let i := uac u in i.(center)) idmap	           (fun a0 : U.(trunctype_type) * A =>	            let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) = j)	    (pushl b)		subgoal 2 (ID 73) is:	 forall c : A,	 (fun j : join U.(trunctype_type) A =>	  push	    (inr	       (pushout_rec A	          (fun u : U.(trunctype_type) => let i := uac u in i.(center)) idmap	          (fun a0 : U.(trunctype_type) * A =>	           let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) = j)	   (pushr c)	subgoal 3 (ID 75) is:	 forall a : U.(trunctype_type) * A,	 transport	   (fun j : join U.(trunctype_type) A =>	    push	      (inr	         (pushout_rec A	            (fun u : U.(trunctype_type) => let i := uac u in i.(center))	            idmap	            (fun a0 : U.(trunctype_type) * A =>	             let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) =	    j) (pp a) (?pushb (fst a)) = ?pushc (snd a)	";
             responses[i]=data;
           
 
             i = 38;
-            data = "2 subgoals (ID 74)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  z : join U.(trunctype_type) A	  ============================	  forall a : U.(trunctype_type) + A,	  (fun j : join U.(trunctype_type) A =>	   push	     (inr	        (pushout_rec A	           (fun X : U.(trunctype_type) + A =>	            match X with	            | inl u => let i := uac u in i.(center)	            | inr a0 => a0	            end)	           (fun a0 : U.(trunctype_type) * A =>	            let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) = j)	    (push a)		subgoal 2 (ID 76) is:	 forall a : U.(trunctype_type) * A,	 transport	   (fun j : join U.(trunctype_type) A =>	    push	      (inr	         (pushout_rec A	            (fun X : U.(trunctype_type) + A =>	             match X with	             | inl u => let i := uac u in i.(center)	             | inr a0 => a0	             end)	            (fun a0 : U.(trunctype_type) * A =>	             let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) =	    j) (pp a) (?push' (inl (fst a))) = ?push' (inr (snd a))	";
+            data = "1 subgoal (ID 71)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  z : join U.(trunctype_type) A	  ============================	  forall b : U.(trunctype_type),	  (fun j : join U.(trunctype_type) A =>	   push	     (inr	        (pushout_rec A	           (fun u : U.(trunctype_type) => let i := uac u in i.(center)) idmap	           (fun a0 : U.(trunctype_type) * A =>	            let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) = j)	    (pushl b)	1 subgoal (ID 76)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  z : join U.(trunctype_type) A	  u : U.(trunctype_type)	  ============================	  (fun j : join U.(trunctype_type) A =>	   push	     (inr	        (pushout_rec A	           (fun u0 : U.(trunctype_type) => let i := uac u0 in i.(center))	           idmap	           (fun a0 : U.(trunctype_type) * A =>	            let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) = j)	    (pushl u)	";
             responses[i]=data;
           
 
             i = 39;
-            data = "1 subgoal (ID 74)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  z : join U.(trunctype_type) A	  ============================	  forall a : U.(trunctype_type) + A,	  (fun j : join U.(trunctype_type) A =>	   push	     (inr	        (pushout_rec A	           (fun X : U.(trunctype_type) + A =>	            match X with	            | inl u => let i := uac u in i.(center)	            | inr a0 => a0	            end)	           (fun a0 : U.(trunctype_type) * A =>	            let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) = j)	    (push a)	2 subgoals (ID 82)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  z : join U.(trunctype_type) A	  u : U.(trunctype_type)	  ============================	  push	    (inr	       (pushout_rec A	          (fun X : U.(trunctype_type) + A =>	           match X with	           | inl u0 => let i := uac u0 in i.(center)	           | inr a => a	           end)	          (fun a0 : U.(trunctype_type) * A =>	           let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd))	          (push (inl u)))) = push (inl u)		subgoal 2 (ID 83) is:	 push	   (inr	      (pushout_rec A	         (fun X : U.(trunctype_type) + A =>	          match X with	          | inl u => let i := uac u in i.(center)	          | inr a0 => a0	          end)	         (fun a0 : U.(trunctype_type) * A =>	          let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd))	         (push (inr a)))) = push (inr a)	";
+            data = "1 subgoal (ID 79)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  z : join U.(trunctype_type) A	  u : U.(trunctype_type)	  i := contr_inhabited_hprop U.(trunctype_type) u : Contr U.(trunctype_type)	  ============================	  (fun j : join U.(trunctype_type) A =>	   push	     (inr	        (pushout_rec A	           (fun u0 : U.(trunctype_type) => let i0 := uac u0 in i0.(center))	           idmap	           (fun a0 : U.(trunctype_type) * A =>	            let i0 := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) =	   j) (pushl u)	";
             responses[i]=data;
           
 
             i = 40;
-            data = "1 subgoal (ID 82)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  z : join U.(trunctype_type) A	  u : U.(trunctype_type)	  ============================	  push	    (inr	       (pushout_rec A	          (fun X : U.(trunctype_type) + A =>	           match X with	           | inl u0 => let i := uac u0 in i.(center)	           | inr a => a	           end)	          (fun a0 : U.(trunctype_type) * A =>	           let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd))	          (push (inl u)))) = push (inl u)	1 subgoal (ID 86)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  z : join U.(trunctype_type) A	  u : U.(trunctype_type)	  i := contr_inhabited_hprop U.(trunctype_type) u : Contr U.(trunctype_type)	  ============================	  push	    (inr	       (pushout_rec A	          (fun X : U.(trunctype_type) + A =>	           match X with	           | inl u0 => let i0 := uac u0 in i0.(center)	           | inr a => a	           end)	          (fun a0 : U.(trunctype_type) * A =>	           let i0 := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd))	          (push (inl u)))) = push (inl u)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	4 subgoals (ID 73)		subgoal 1 (ID 73) is:	 forall c : A,	 (fun j : join U.(trunctype_type) A =>	  push	    (inr	       (pushout_rec A	          (fun u : U.(trunctype_type) => let i := uac u in i.(center)) idmap	          (fun a0 : U.(trunctype_type) * A =>	           let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) = j)	   (pushr c)	subgoal 2 (ID 75) is:	 forall a : U.(trunctype_type) * A,	 transport	   (fun j : join U.(trunctype_type) A =>	    push	      (inr	         (pushout_rec A	            (fun u : U.(trunctype_type) => let i := uac u in i.(center))	            idmap	            (fun a0 : U.(trunctype_type) * A =>	             let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) =	    j) (pp a)	   ((fun u : U.(trunctype_type) =>	     let i := contr_inhabited_hprop U.(trunctype_type) u in	     path_contr	       (push	          (inr	             (pushout_rec A	                (fun u0 : U.(trunctype_type) =>	                 let i0 := uac u0 in i0.(center)) idmap	                (fun a0 : U.(trunctype_type) * A =>	                 let i0 := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd))	                (pushl u)))) (pushl u)) (fst a)) = 	 ?pushc (snd a)	subgoal 3 (ID 25) is:	 Sect (fun a : A => push (inr a))	   (pushout_rec A	      (fun u : U.(trunctype_type) => let i := uac u in i.(center)) idmap	      (fun a0 : U.(trunctype_type) * A =>	       (fun (u : U.(trunctype_type)) (a : A) =>	        let i := uac u in (uac u).(contr) a) a0.(fst) 	         a0.(snd)))	subgoal 4 (ID 14) is:	 IsEquiv (fun a : A => push (inr a)) -> U.(trunctype_type) -> Contr A	";
             responses[i]=data;
           
 
             i = 41;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	4 subgoals (ID 83)		subgoal 1 (ID 83) is:	 push	   (inr	      (pushout_rec A	         (fun X : U.(trunctype_type) + A =>	          match X with	          | inl u => let i := uac u in i.(center)	          | inr a0 => a0	          end)	         (fun a0 : U.(trunctype_type) * A =>	          let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd))	         (push (inr a)))) = push (inr a)	subgoal 2 (ID 76) is:	 forall a : U.(trunctype_type) * A,	 transport	   (fun j : join U.(trunctype_type) A =>	    push	      (inr	         (pushout_rec A	            (fun X : U.(trunctype_type) + A =>	             match X with	             | inl u => let i := uac u in i.(center)	             | inr a0 => a0	             end)	            (fun a0 : U.(trunctype_type) * A =>	             let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) =	    j) (pp a)	   ((fun a0 : U.(trunctype_type) + A =>	     match	       a0 as s	       return	         (push	            (inr	               (pushout_rec A	                  (fun X : U.(trunctype_type) + A =>	                   match X with	                   | inl u => let i := uac u in i.(center)	                   | inr a1 => a1	                   end)	                  (fun a1 : U.(trunctype_type) * A =>	                   let i := uac a1.(fst) in (uac a1.(fst)).(contr) a1.(snd))	                  (push s))) = push s)	     with	     | inl u =>	         let i := contr_inhabited_hprop U.(trunctype_type) u in	         path_contr	           (push	              (inr	                 (pushout_rec A	                    (fun X : U.(trunctype_type) + A =>	                     match X with	                     | inl u0 => let i0 := uac u0 in i0.(center)	                     | inr a1 => a1	                     end)	                    (fun a1 : U.(trunctype_type) * A =>	                     let i0 := uac a1.(fst) in	                     (uac a1.(fst)).(contr) a1.(snd)) 	                    (push (inl u))))) (push (inl u))	     | inr a1 => ?Goal0@{a:=a1}	     end) (inl (fst a))) =	 (fun a0 : U.(trunctype_type) + A =>	  match	    a0 as s	    return	      (push	         (inr	            (pushout_rec A	               (fun X : U.(trunctype_type) + A =>	                match X with	                | inl u => let i := uac u in i.(center)	                | inr a1 => a1	                end)	               (fun a1 : U.(trunctype_type) * A =>	                let i := uac a1.(fst) in (uac a1.(fst)).(contr) a1.(snd))	               (push s))) = push s)	  with	  | inl u =>	      let i := contr_inhabited_hprop U.(trunctype_type) u in	      path_contr	        (push	           (inr	              (pushout_rec A	                 (fun X : U.(trunctype_type) + A =>	                  match X with	                  | inl u0 => let i0 := uac u0 in i0.(center)	                  | inr a1 => a1	                  end)	                 (fun a1 : U.(trunctype_type) * A =>	                  let i0 := uac a1.(fst) in (uac a1.(fst)).(contr) a1.(snd))	                 (push (inl u))))) (push (inl u))	  | inr a1 => ?Goal0@{a:=a1}	  end) (inr (snd a))	subgoal 3 (ID 25) is:	 Sect (fun a : A => push (inr a))	   (pushout_rec A	      (fun X : U.(trunctype_type) + A =>	       match X with	       | inl u => let i := uac u in i.(center)	       | inr a => a	       end)	      (fun a0 : U.(trunctype_type) * A =>	       (fun (u : U.(trunctype_type)) (a : A) =>	        let i := uac u in (uac u).(contr) a) a0.(fst) 	         a0.(snd)))	subgoal 4 (ID 14) is:	 IsEquiv (fun a : A => push (inr a)) -> U.(trunctype_type) -> Contr A	1 subgoal (ID 83)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  z : join U.(trunctype_type) A	  a : A	  ============================	  push	    (inr	       (pushout_rec A	          (fun X : U.(trunctype_type) + A =>	           match X with	           | inl u => let i := uac u in i.(center)	           | inr a0 => a0	           end)	          (fun a0 : U.(trunctype_type) * A =>	           let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd))	          (push (inr a)))) = push (inr a)	1 subgoal (ID 83)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  z : join U.(trunctype_type) A	  a : A	  ============================	  push	    (inr	       (pushout_rec A	          (fun X : U.(trunctype_type) + A =>	           match X with	           | inl u => let i := uac u in i.(center)	           | inr a0 => a0	           end)	          (fun a0 : U.(trunctype_type) * A =>	           let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd))	          (push (inr a)))) = push (inr a)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	3 subgoals (ID 76)		subgoal 1 (ID 76) is:	 forall a : U.(trunctype_type) * A,	 transport	   (fun j : join U.(trunctype_type) A =>	    push	      (inr	         (pushout_rec A	            (fun X : U.(trunctype_type) + A =>	             match X with	             | inl u => let i := uac u in i.(center)	             | inr a0 => a0	             end)	            (fun a0 : U.(trunctype_type) * A =>	             let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) =	    j) (pp a)	   ((fun a0 : U.(trunctype_type) + A =>	     match	       a0 as s	       return	         (push	            (inr	               (pushout_rec A	                  (fun X : U.(trunctype_type) + A =>	                   match X with	                   | inl u => let i := uac u in i.(center)	                   | inr a1 => a1	                   end)	                  (fun a1 : U.(trunctype_type) * A =>	                   let i := uac a1.(fst) in (uac a1.(fst)).(contr) a1.(snd))	                  (push s))) = push s)	     with	     | inl u =>	         let i := contr_inhabited_hprop U.(trunctype_type) u in	         path_contr	           (push	              (inr	                 (pushout_rec A	                    (fun X : U.(trunctype_type) + A =>	                     match X with	                     | inl u0 => let i0 := uac u0 in i0.(center)	                     | inr a1 => a1	                     end)	                    (fun a1 : U.(trunctype_type) * A =>	                     let i0 := uac a1.(fst) in	                     (uac a1.(fst)).(contr) a1.(snd)) 	                    (push (inl u))))) (push (inl u))	     | inr a1 => 1	     end) (inl (fst a))) =	 (fun a0 : U.(trunctype_type) + A =>	  match	    a0 as s	    return	      (push	         (inr	            (pushout_rec A	               (fun X : U.(trunctype_type) + A =>	                match X with	                | inl u => let i := uac u in i.(center)	                | inr a1 => a1	                end)	               (fun a1 : U.(trunctype_type) * A =>	                let i := uac a1.(fst) in (uac a1.(fst)).(contr) a1.(snd))	               (push s))) = push s)	  with	  | inl u =>	      let i := contr_inhabited_hprop U.(trunctype_type) u in	      path_contr	        (push	           (inr	              (pushout_rec A	                 (fun X : U.(trunctype_type) + A =>	                  match X with	                  | inl u0 => let i0 := uac u0 in i0.(center)	                  | inr a1 => a1	                  end)	                 (fun a1 : U.(trunctype_type) * A =>	                  let i0 := uac a1.(fst) in (uac a1.(fst)).(contr) a1.(snd))	                 (push (inl u))))) (push (inl u))	  | inr a1 => 1	  end) (inr (snd a))	subgoal 2 (ID 25) is:	 Sect (fun a : A => push (inr a))	   (pushout_rec A	      (fun X : U.(trunctype_type) + A =>	       match X with	       | inl u => let i := uac u in i.(center)	       | inr a => a	       end)	      (fun a0 : U.(trunctype_type) * A =>	       (fun (u : U.(trunctype_type)) (a : A) =>	        let i := uac u in (uac u).(contr) a) a0.(fst) 	         a0.(snd)))	subgoal 3 (ID 14) is:	 IsEquiv (fun a : A => push (inr a)) -> U.(trunctype_type) -> Contr A	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	3 subgoals (ID 76)		subgoal 1 (ID 76) is:	 forall a : U.(trunctype_type) * A,	 transport	   (fun j : join U.(trunctype_type) A =>	    push	      (inr	         (pushout_rec A	            (fun X : U.(trunctype_type) + A =>	             match X with	             | inl u => let i := uac u in i.(center)	             | inr a0 => a0	             end)	            (fun a0 : U.(trunctype_type) * A =>	             let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) =	    j) (pp a)	   ((fun a0 : U.(trunctype_type) + A =>	     match	       a0 as s	       return	         (push	            (inr	               (pushout_rec A	                  (fun X : U.(trunctype_type) + A =>	                   match X with	                   | inl u => let i := uac u in i.(center)	                   | inr a1 => a1	                   end)	                  (fun a1 : U.(trunctype_type) * A =>	                   let i := uac a1.(fst) in (uac a1.(fst)).(contr) a1.(snd))	                  (push s))) = push s)	     with	     | inl u =>	         let i := contr_inhabited_hprop U.(trunctype_type) u in	         path_contr	           (push	              (inr	                 (pushout_rec A	                    (fun X : U.(trunctype_type) + A =>	                     match X with	                     | inl u0 => let i0 := uac u0 in i0.(center)	                     | inr a1 => a1	                     end)	                    (fun a1 : U.(trunctype_type) * A =>	                     let i0 := uac a1.(fst) in	                     (uac a1.(fst)).(contr) a1.(snd)) 	                    (push (inl u))))) (push (inl u))	     | inr a1 => 1	     end) (inl (fst a))) =	 (fun a0 : U.(trunctype_type) + A =>	  match	    a0 as s	    return	      (push	         (inr	            (pushout_rec A	               (fun X : U.(trunctype_type) + A =>	                match X with	                | inl u => let i := uac u in i.(center)	                | inr a1 => a1	                end)	               (fun a1 : U.(trunctype_type) * A =>	                let i := uac a1.(fst) in (uac a1.(fst)).(contr) a1.(snd))	               (push s))) = push s)	  with	  | inl u =>	      let i := contr_inhabited_hprop U.(trunctype_type) u in	      path_contr	        (push	           (inr	              (pushout_rec A	                 (fun X : U.(trunctype_type) + A =>	                  match X with	                  | inl u0 => let i0 := uac u0 in i0.(center)	                  | inr a1 => a1	                  end)	                 (fun a1 : U.(trunctype_type) * A =>	                  let i0 := uac a1.(fst) in (uac a1.(fst)).(contr) a1.(snd))	                 (push (inl u))))) (push (inl u))	  | inr a1 => 1	  end) (inr (snd a))	subgoal 2 (ID 25) is:	 Sect (fun a : A => push (inr a))	   (pushout_rec A	      (fun X : U.(trunctype_type) + A =>	       match X with	       | inl u => let i := uac u in i.(center)	       | inr a => a	       end)	      (fun a0 : U.(trunctype_type) * A =>	       (fun (u : U.(trunctype_type)) (a : A) =>	        let i := uac u in (uac u).(contr) a) a0.(fst) 	         a0.(snd)))	subgoal 3 (ID 14) is:	 IsEquiv (fun a : A => push (inr a)) -> U.(trunctype_type) -> Contr A	1 subgoal (ID 76)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  z : join U.(trunctype_type) A	  ============================	  forall a : U.(trunctype_type) * A,	  transport	    (fun j : join U.(trunctype_type) A =>	     push	       (inr	          (pushout_rec A	             (fun X : U.(trunctype_type) + A =>	              match X with	              | inl u => let i := uac u in i.(center)	              | inr a0 => a0	              end)	             (fun a0 : U.(trunctype_type) * A =>	              let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) =	     j) (pp a)	    ((fun a0 : U.(trunctype_type) + A =>	      match	        a0 as s	        return	          (push	             (inr	                (pushout_rec A	                   (fun X : U.(trunctype_type) + A =>	                    match X with	                    | inl u => let i := uac u in i.(center)	                    | inr a1 => a1	                    end)	                   (fun a1 : U.(trunctype_type) * A =>	                    let i := uac a1.(fst) in (uac a1.(fst)).(contr) a1.(snd))	                   (push s))) = push s)	      with	      | inl u =>	          let i := contr_inhabited_hprop U.(trunctype_type) u in	          path_contr	            (push	               (inr	                  (pushout_rec A	                     (fun X : U.(trunctype_type) + A =>	                      match X with	                      | inl u0 => let i0 := uac u0 in i0.(center)	                      | inr a1 => a1	                      end)	                     (fun a1 : U.(trunctype_type) * A =>	                      let i0 := uac a1.(fst) in	                      (uac a1.(fst)).(contr) a1.(snd)) 	                     (push (inl u))))) (push (inl u))	      | inr a1 => 1	      end) (inl (fst a))) =	  (fun a0 : U.(trunctype_type) + A =>	   match	     a0 as s	     return	       (push	          (inr	             (pushout_rec A	                (fun X : U.(trunctype_type) + A =>	                 match X with	                 | inl u => let i := uac u in i.(center)	                 | inr a1 => a1	                 end)	                (fun a1 : U.(trunctype_type) * A =>	                 let i := uac a1.(fst) in (uac a1.(fst)).(contr) a1.(snd))	                (push s))) = push s)	   with	   | inl u =>	       let i := contr_inhabited_hprop U.(trunctype_type) u in	       path_contr	         (push	            (inr	               (pushout_rec A	                  (fun X : U.(trunctype_type) + A =>	                   match X with	                   | inl u0 => let i0 := uac u0 in i0.(center)	                   | inr a1 => a1	                   end)	                  (fun a1 : U.(trunctype_type) * A =>	                   let i0 := uac a1.(fst) in (uac a1.(fst)).(contr) a1.(snd))	                  (push (inl u))))) (push (inl u))	   | inr a1 => 1	   end) (inr (snd a))	1 subgoal (ID 112)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  z : join U.(trunctype_type) A	  u : U.(trunctype_type)	  a : A	  i := contr_inhabited_hprop U.(trunctype_type) u : Contr U.(trunctype_type)	  ============================	  transport	    (fun j : join U.(trunctype_type) A =>	     push	       (inr	          (pushout_rec A	             (fun X : U.(trunctype_type) + A =>	              match X with	              | inl u0 => let i0 := uac u0 in i0.(center)	              | inr a0 => a0	              end)	             (fun a0 : U.(trunctype_type) * A =>	              let i0 := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) =	     j) (pp (u, a))	    (let i0 := contr_inhabited_hprop U.(trunctype_type) (fst (u, a)) in	     path_contr	       (push	          (inr	             (pushout_rec A	                (fun X : U.(trunctype_type) + A =>	                 match X with	                 | inl u0 => let i1 := uac u0 in i1.(center)	                 | inr a0 => a0	                 end)	                (fun a0 : U.(trunctype_type) * A =>	                 let i1 := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd))	                (push (inl (fst (u, a))))))) (push (inl (fst (u, a))))) = 1	";
+            data = "1 subgoal (ID 73)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  z : join U.(trunctype_type) A	  ============================	  forall c : A,	  (fun j : join U.(trunctype_type) A =>	   push	     (inr	        (pushout_rec A	           (fun u : U.(trunctype_type) => let i := uac u in i.(center)) idmap	           (fun a0 : U.(trunctype_type) * A =>	            let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) = j)	    (pushr c)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	3 subgoals (ID 75)		subgoal 1 (ID 75) is:	 forall a : U.(trunctype_type) * A,	 transport	   (fun j : join U.(trunctype_type) A =>	    push	      (inr	         (pushout_rec A	            (fun u : U.(trunctype_type) => let i := uac u in i.(center))	            idmap	            (fun a0 : U.(trunctype_type) * A =>	             let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) =	    j) (pp a)	   ((fun u : U.(trunctype_type) =>	     let i := contr_inhabited_hprop U.(trunctype_type) u in	     path_contr	       (push	          (inr	             (pushout_rec A	                (fun u0 : U.(trunctype_type) =>	                 let i0 := uac u0 in i0.(center)) idmap	                (fun a0 : U.(trunctype_type) * A =>	                 let i0 := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd))	                (pushl u)))) (pushl u)) (fst a)) = 	 (fun a0 : A => 1) (snd a)	subgoal 2 (ID 25) is:	 Sect (fun a : A => push (inr a))	   (pushout_rec A	      (fun u : U.(trunctype_type) => let i := uac u in i.(center)) idmap	      (fun a0 : U.(trunctype_type) * A =>	       (fun (u : U.(trunctype_type)) (a : A) =>	        let i := uac u in (uac u).(contr) a) a0.(fst) 	         a0.(snd)))	subgoal 3 (ID 14) is:	 IsEquiv (fun a : A => push (inr a)) -> U.(trunctype_type) -> Contr A	";
             responses[i]=data;
           
 
             i = 42;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	2 subgoals (ID 25)		subgoal 1 (ID 25) is:	 Sect (fun a : A => push (inr a))	   (pushout_rec A	      (fun X : U.(trunctype_type) + A =>	       match X with	       | inl u => let i := uac u in i.(center)	       | inr a => a	       end)	      (fun a0 : U.(trunctype_type) * A =>	       (fun (u : U.(trunctype_type)) (a : A) =>	        let i := uac u in (uac u).(contr) a) a0.(fst) 	         a0.(snd)))	subgoal 2 (ID 14) is:	 IsEquiv (fun a : A => push (inr a)) -> U.(trunctype_type) -> Contr A	";
+            data = "1 subgoal (ID 75)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  z : join U.(trunctype_type) A	  ============================	  forall a : U.(trunctype_type) * A,	  transport	    (fun j : join U.(trunctype_type) A =>	     push	       (inr	          (pushout_rec A	             (fun u : U.(trunctype_type) => let i := uac u in i.(center))	             idmap	             (fun a0 : U.(trunctype_type) * A =>	              let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) =	     j) (pp a)	    ((fun u : U.(trunctype_type) =>	      let i := contr_inhabited_hprop U.(trunctype_type) u in	      path_contr	        (push	           (inr	              (pushout_rec A	                 (fun u0 : U.(trunctype_type) =>	                  let i0 := uac u0 in i0.(center)) idmap	                 (fun a0 : U.(trunctype_type) * A =>	                  let i0 := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd))	                 (pushl u)))) (pushl u)) (fst a)) = 	  (fun a0 : A => 1) (snd a)	1 subgoal (ID 106)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  z : join U.(trunctype_type) A	  u : U.(trunctype_type)	  a : A	  i := contr_inhabited_hprop U.(trunctype_type) u : Contr U.(trunctype_type)	  ============================	  transport	    (fun j : join U.(trunctype_type) A =>	     push	       (inr	          (pushout_rec A	             (fun u0 : U.(trunctype_type) => let i0 := uac u0 in i0.(center))	             idmap	             (fun a0 : U.(trunctype_type) * A =>	              let i0 := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) =	     j) (pp (u, a))	    (let i0 := contr_inhabited_hprop U.(trunctype_type) (fst (u, a)) in	     path_contr	       (push	          (inr	             (pushout_rec A	                (fun u0 : U.(trunctype_type) =>	                 let i1 := uac u0 in i1.(center)) idmap	                (fun a0 : U.(trunctype_type) * A =>	                 let i1 := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd))	                (pushl (fst (u, a)))))) (pushl (fst (u, a)))) = 1	";
             responses[i]=data;
           
 
             i = 43;
-            data = "1 subgoal (ID 25)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  ============================	  Sect (fun a : A => push (inr a))	    (pushout_rec A	       (fun X : U.(trunctype_type) + A =>	        match X with	        | inl u => let i := uac u in i.(center)	        | inr a => a	        end)	       (fun a0 : U.(trunctype_type) * A =>	        (fun (u : U.(trunctype_type)) (a : A) =>	         let i := uac u in (uac u).(contr) a) a0.(fst) 	          a0.(snd)))	1 subgoal (ID 236)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  a : A	  ============================	  pushout_rec A	    (fun X : U.(trunctype_type) + A =>	     match X with	     | inl u => let i := uac u in i.(center)	     | inr a0 => a0	     end)	    (fun a0 : U.(trunctype_type) * A =>	     let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) 	    (push (inr a)) = a	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	2 subgoals (ID 25)		subgoal 1 (ID 25) is:	 Sect (fun a : A => push (inr a))	   (pushout_rec A	      (fun u : U.(trunctype_type) => let i := uac u in i.(center)) idmap	      (fun a0 : U.(trunctype_type) * A =>	       (fun (u : U.(trunctype_type)) (a : A) =>	        let i := uac u in (uac u).(contr) a) a0.(fst) 	         a0.(snd)))	subgoal 2 (ID 14) is:	 IsEquiv (fun a : A => push (inr a)) -> U.(trunctype_type) -> Contr A	";
             responses[i]=data;
           
 
             i = 44;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 14)		subgoal 1 (ID 14) is:	 IsEquiv (fun a : A => push (inr a)) -> U.(trunctype_type) -> Contr A	";
+            data = "1 subgoal (ID 25)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  ============================	  Sect (fun a : A => push (inr a))	    (pushout_rec A	       (fun u : U.(trunctype_type) => let i := uac u in i.(center)) idmap	       (fun a0 : U.(trunctype_type) * A =>	        (fun (u : U.(trunctype_type)) (a : A) =>	         let i := uac u in (uac u).(contr) a) a0.(fst) 	          a0.(snd)))	1 subgoal (ID 230)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  a : A	  ============================	  pushout_rec A (fun u : U.(trunctype_type) => let i := uac u in i.(center))	    idmap	    (fun a0 : U.(trunctype_type) * A =>	     let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) 	    (push (inr a)) = a	";
             responses[i]=data;
           
 
             i = 45;
-            data = "1 subgoal (ID 14)	  	  U : hProp	  A : Type	  ============================	  IsEquiv (fun a : A => push (inr a)) -> U.(trunctype_type) -> Contr A	1 subgoal (ID 239)	  	  U : hProp	  A : Type	  X : IsEquiv (fun a : A => push (inr a))	  u : U.(trunctype_type)	  ============================	  Contr A	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 14)		subgoal 1 (ID 14) is:	 IsEquiv (fun a : A => push (inr a)) -> U.(trunctype_type) -> Contr A	";
             responses[i]=data;
           
 
             i = 46;
-            data = "1 subgoal (ID 315)	  	  U : hProp	  A : Type	  X : IsEquiv (fun a : A => push (inr a))	  u : U.(trunctype_type)	  ============================	  Contr (join U.(trunctype_type) A)	";
+            data = "1 subgoal (ID 14)	  	  U : hProp	  A : Type	  ============================	  IsEquiv (fun a : A => push (inr a)) -> U.(trunctype_type) -> Contr A	1 subgoal (ID 233)	  	  U : hProp	  A : Type	  X : IsEquiv (fun a : A => push (inr a))	  u : U.(trunctype_type)	  ============================	  Contr A	";
             responses[i]=data;
           
 
             i = 47;
-            data = "1 subgoal (ID 318)	  	  U : hProp	  A : Type	  X : IsEquiv (fun a : A => push (inr a))	  u : U.(trunctype_type)	  i := contr_inhabited_hprop U.(trunctype_type) u : Contr U.(trunctype_type)	  ============================	  Contr (join U.(trunctype_type) A)	";
+            data = "1 subgoal (ID 309)	  	  U : hProp	  A : Type	  X : IsEquiv (fun a : A => push (inr a))	  u : U.(trunctype_type)	  ============================	  Contr (join U.(trunctype_type) A)	";
             responses[i]=data;
           
 
             i = 48;
-            data = "No more subgoals.	";
+            data = "1 subgoal (ID 312)	  	  U : hProp	  A : Type	  X : IsEquiv (fun a : A => push (inr a))	  u : U.(trunctype_type)	  i := contr_inhabited_hprop U.(trunctype_type) u : Contr U.(trunctype_type)	  ============================	  Contr (join U.(trunctype_type) A)	";
             responses[i]=data;
           
 
             i = 49;
-            data = "<infomsg>equiv_inO_closed is defined</infomsg>	";
+            data = "No more subgoals.	";
             responses[i]=data;
           
 
             i = 50;
-            data = "";
+            data = "<infomsg>equiv_inO_closed is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 51;
-            data = "<infomsg>Closed_Modality is defined</infomsg>	<infomsg>Closed_Modality_rect is defined</infomsg>	<infomsg>Closed_Modality_ind is defined</infomsg>	<infomsg>Closed_Modality_rec is defined</infomsg>	<infomsg>unCl is defined</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
             i = 52;
-            data = "";
+            data = "<infomsg>Closed_Modality is defined</infomsg>	<infomsg>Closed_Modality_rect is defined</infomsg>	<infomsg>Closed_Modality_ind is defined</infomsg>	<infomsg>Closed_Modality_rec is defined</infomsg>	<infomsg>unCl is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -298,147 +298,147 @@
           
 
             i = 56;
-            data = "<infomsg>Interactive Module ClosedModalities started</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
             i = 57;
-            data = "<infomsg>Modality is defined</infomsg>	";
+            data = "<infomsg>Interactive Module ClosedModalities started</infomsg>	";
             responses[i]=data;
           
 
             i = 58;
-            data = "<infomsg>O_reflector is defined</infomsg>	";
+            data = "<infomsg>Modality is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 59;
-            data = "<infomsg>In is defined</infomsg>	";
+            data = "<infomsg>O_reflector is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 60;
-            data = "1 subgoal (ID 7)	  	  O : Modality	  T : Type	  ============================	  In O (O_reflector O T)	";
+            data = "<infomsg>In is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 61;
-            data = "";
+            data = "1 subgoal (ID 7)	  	  O : Modality	  T : Type	  ============================	  In O (O_reflector O T)	";
             responses[i]=data;
           
 
             i = 62;
-            data = "1 subgoal (ID 9)	  	  O : Modality	  T : Type	  u : O.(unCl).(trunctype_type)	  ============================	  Contr (O_reflector O T)	";
+            data = "";
             responses[i]=data;
           
 
             i = 63;
-            data = "1 subgoal (ID 14)	  	  O : Modality	  T : Type	  u : O.(unCl).(trunctype_type)	  i := contr_inhabited_hprop O.(unCl).(trunctype_type) u	   : Contr O.(unCl).(trunctype_type)	  ============================	  Contr (O_reflector O T)	";
+            data = "1 subgoal (ID 9)	  	  O : Modality	  T : Type	  u : O.(unCl).(trunctype_type)	  ============================	  Contr (O_reflector O T)	";
             responses[i]=data;
           
 
             i = 64;
-            data = "No more subgoals.	";
+            data = "1 subgoal (ID 14)	  	  O : Modality	  T : Type	  u : O.(unCl).(trunctype_type)	  i := contr_inhabited_hprop O.(unCl).(trunctype_type) u	   : Contr O.(unCl).(trunctype_type)	  ============================	  Contr (O_reflector O T)	";
             responses[i]=data;
           
 
             i = 65;
-            data = "<infomsg>O_inO is defined</infomsg>	";
+            data = "No more subgoals.	";
             responses[i]=data;
           
 
             i = 66;
-            data = "<infomsg>to is defined</infomsg>	";
+            data = "<infomsg>O_inO is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 67;
-            data = "1 subgoal (ID 26)	  	  O : Modality	  T : Type	  U : Type	  T_inO : In O T	  f : T -> U	  feq : IsEquiv f	  ============================	  let gei := idmap in let gej := idmap in In O U	";
+            data = "<infomsg>to is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 68;
-            data = "";
+            data = "1 subgoal (ID 26)	  	  O : Modality	  T : Type	  U : Type	  T_inO : In O T	  f : T -> U	  feq : IsEquiv f	  ============================	  let gei := idmap in let gej := idmap in In O U	";
             responses[i]=data;
           
 
             i = 69;
-            data = "1 subgoal (ID 31)	  	  O : Modality	  T : Type	  U : Type	  T_inO : In O T	  f : T -> U	  feq : IsEquiv f	  u : O.(unCl).(trunctype_type)	  i := T_inO u : Contr T	  ============================	  Contr U	";
+            data = "";
             responses[i]=data;
           
 
             i = 70;
-            data = "No more subgoals.	";
+            data = "1 subgoal (ID 31)	  	  O : Modality	  T : Type	  U : Type	  T_inO : In O T	  f : T -> U	  feq : IsEquiv f	  u : O.(unCl).(trunctype_type)	  i := T_inO u : Contr T	  ============================	  Contr U	";
             responses[i]=data;
           
 
             i = 71;
-            data = "<infomsg>inO_equiv_inO is defined</infomsg>	";
-            responses[i]=data;
-          
-
-            i = 72;
-            data = "1 subgoal (ID 30)	  	  H : Funext	  O : Modality	  T : Type	  ============================	  IsHProp (In O T)	";
-            responses[i]=data;
-          
-
-            i = 73;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 74;
             data = "No more subgoals.	";
             responses[i]=data;
           
 
-            i = 75;
-            data = "<infomsg>hprop_inO is defined</infomsg>	";
+            i = 72;
+            data = "<infomsg>inO_equiv_inO is defined</infomsg>	";
             responses[i]=data;
           
 
-            i = 76;
-            data = "1 subgoal (ID 40)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  ============================	  let gei := idmap in	  let gej := idmap in	  (forall a : A, B (to O A a)) -> forall a : O_reflector O A, B a	";
+            i = 73;
+            data = "1 subgoal (ID 30)	  	  H : Funext	  O : Modality	  T : Type	  ============================	  IsHProp (In O T)	";
             responses[i]=data;
           
 
-            i = 77;
+            i = 74;
             data = "";
             responses[i]=data;
           
 
+            i = 75;
+            data = "No more subgoals.	";
+            responses[i]=data;
+          
+
+            i = 76;
+            data = "<infomsg>hprop_inO is defined</infomsg>	";
+            responses[i]=data;
+          
+
+            i = 77;
+            data = "1 subgoal (ID 40)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  ============================	  let gei := idmap in	  let gej := idmap in	  (forall a : A, B (to O A a)) -> forall a : O_reflector O A, B a	";
+            responses[i]=data;
+          
+
             i = 78;
-            data = "1 subgoal (ID 43)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  f : forall a : A, B (to O A a)	  z : O_reflector O A	  ============================	  B z	";
+            data = "";
             responses[i]=data;
           
 
             i = 79;
-            data = "2 subgoals (ID 52)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  f : forall a : A, B (to O A a)	  z : O_reflector O A	  ============================	  forall a : O.(unCl).(trunctype_type) + A, B (push a)		subgoal 2 (ID 54) is:	 forall a : O.(unCl).(trunctype_type) * A,	 transport B (pp a) (?push' (inl (fst a))) = ?push' (inr (snd a))	";
+            data = "1 subgoal (ID 43)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  f : forall a : A, B (to O A a)	  z : O_reflector O A	  ============================	  B z	";
             responses[i]=data;
           
 
             i = 80;
-            data = "1 subgoal (ID 52)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  f : forall a : A, B (to O A a)	  z : O_reflector O A	  ============================	  forall a : O.(unCl).(trunctype_type) + A, B (push a)	2 subgoals (ID 60)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  f : forall a : A, B (to O A a)	  z : O_reflector O A	  u : O.(unCl).(trunctype_type)	  ============================	  B (push (inl u))		subgoal 2 (ID 61) is:	 B (push (inr a))	";
+            data = "3 subgoals (ID 52)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  f : forall a : A, B (to O A a)	  z : O_reflector O A	  ============================	  forall b : O.(unCl).(trunctype_type), B (pushl b)		subgoal 2 (ID 54) is:	 forall c : A, B (pushr c)	subgoal 3 (ID 56) is:	 forall a : O.(unCl).(trunctype_type) * A,	 transport B (pp a) (?pushb (fst a)) = ?pushc (snd a)	";
             responses[i]=data;
           
 
             i = 81;
-            data = "1 subgoal (ID 60)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  f : forall a : A, B (to O A a)	  z : O_reflector O A	  u : O.(unCl).(trunctype_type)	  ============================	  B (push (inl u))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 61)		subgoal 1 (ID 61) is:	 B (push (inr a))	subgoal 2 (ID 54) is:	 forall a : O.(unCl).(trunctype_type) * A,	 transport B (pp a)	   ((fun a0 : O.(unCl).(trunctype_type) + A =>	     match a0 as s return (B (push s)) with	     | inl u => center (B (push (inl u)))	     | inr a1 => ?Goal@{a:=a1}	     end) (inl (fst a))) =	 (fun a0 : O.(unCl).(trunctype_type) + A =>	  match a0 as s return (B (push s)) with	  | inl u => center (B (push (inl u)))	  | inr a1 => ?Goal@{a:=a1}	  end) (inr (snd a))	";
+            data = "1 subgoal (ID 52)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  f : forall a : A, B (to O A a)	  z : O_reflector O A	  ============================	  forall b : O.(unCl).(trunctype_type), B (pushl b)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 54)		subgoal 1 (ID 54) is:	 forall c : A, B (pushr c)	subgoal 2 (ID 56) is:	 forall a : O.(unCl).(trunctype_type) * A,	 transport B (pp a)	   ((fun u : O.(unCl).(trunctype_type) => center (B (pushl u))) (fst a)) =	 ?pushc (snd a)	";
             responses[i]=data;
           
 
             i = 82;
-            data = "1 subgoal (ID 61)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  f : forall a : A, B (to O A a)	  z : O_reflector O A	  a : A	  ============================	  B (push (inr a))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 54)		subgoal 1 (ID 54) is:	 forall a : O.(unCl).(trunctype_type) * A,	 transport B (pp a)	   ((fun a0 : O.(unCl).(trunctype_type) + A =>	     match a0 as s return (B (push s)) with	     | inl u => center (B (push (inl u)))	     | inr a1 => f a1	     end) (inl (fst a))) =	 (fun a0 : O.(unCl).(trunctype_type) + A =>	  match a0 as s return (B (push s)) with	  | inl u => center (B (push (inl u)))	  | inr a1 => f a1	  end) (inr (snd a))	";
+            data = "1 subgoal (ID 54)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  f : forall a : A, B (to O A a)	  z : O_reflector O A	  ============================	  forall c : A, B (pushr c)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 56)		subgoal 1 (ID 56) is:	 forall a : O.(unCl).(trunctype_type) * A,	 transport B (pp a)	   ((fun u : O.(unCl).(trunctype_type) => center (B (pushl u))) (fst a)) =	 (fun a0 : A => f a0) (snd a)	";
             responses[i]=data;
           
 
             i = 83;
-            data = "1 subgoal (ID 54)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  f : forall a : A, B (to O A a)	  z : O_reflector O A	  ============================	  forall a : O.(unCl).(trunctype_type) * A,	  transport B (pp a)	    ((fun a0 : O.(unCl).(trunctype_type) + A =>	      match a0 as s return (B (push s)) with	      | inl u => center (B (push (inl u)))	      | inr a1 => f a1	      end) (inl (fst a))) =	  (fun a0 : O.(unCl).(trunctype_type) + A =>	   match a0 as s return (B (push s)) with	   | inl u => center (B (push (inl u)))	   | inr a1 => f a1	   end) (inr (snd a))	1 subgoal (ID 68)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  f : forall a : A, B (to O A a)	  z : O_reflector O A	  u : O.(unCl).(trunctype_type)	  a : A	  ============================	  transport B (pp (u, a)) (center (B (push (inl (fst (u, a)))))) =	  f (snd (u, a))	";
+            data = "1 subgoal (ID 56)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  f : forall a : A, B (to O A a)	  z : O_reflector O A	  ============================	  forall a : O.(unCl).(trunctype_type) * A,	  transport B (pp a)	    ((fun u : O.(unCl).(trunctype_type) => center (B (pushl u))) (fst a)) =	  (fun a0 : A => f a0) (snd a)	1 subgoal (ID 65)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  f : forall a : A, B (to O A a)	  z : O_reflector O A	  u : O.(unCl).(trunctype_type)	  a : A	  ============================	  transport B (pp (u, a)) (center (B (pushl (fst (u, a))))) = f (snd (u, a))	";
             responses[i]=data;
           
 
             i = 84;
-            data = "1 subgoal (ID 77)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  f : forall a : A, B (to O A a)	  z : O_reflector O A	  u : O.(unCl).(trunctype_type)	  a : A	  i := B_inO (push (inr a)) u : Contr (B (push (inr a)))	  ============================	  transport B (pp (u, a)) (center (B (push (inl (fst (u, a)))))) =	  f (snd (u, a))	";
+            data = "1 subgoal (ID 74)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  f : forall a : A, B (to O A a)	  z : O_reflector O A	  u : O.(unCl).(trunctype_type)	  a : A	  i := B_inO (push (inr a)) u : Contr (B (push (inr a)))	  ============================	  transport B (pp (u, a)) (center (B (pushl (fst (u, a))))) = f (snd (u, a))	";
             responses[i]=data;
           
 
@@ -828,7 +828,7 @@
       "><br>
 <br>
   <span class="id" title="keyword">Definition</span> <a name="equiv_inO_closed"><span class="id" title="definition">equiv_inO_closed</span></a> (<span class="id" title="var">A</span> : <span class="id" title="keyword">Type</span>)<br>
-  : <a class="idref" href="Coq.Init.Datatypes.html#df1ced36fc33ce188051218bca314374"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalTypes.U"><span class="id" title="variable">U</span></a> <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Overture.html#Contr"><span class="id" title="abbreviation">Contr</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#A"><span class="id" title="variable">A</span></a><a class="idref" href="Coq.Init.Datatypes.html#df1ced36fc33ce188051218bca314374"><span class="id" title="notation">)</span></a> <a class="idref" href="Coq.Init.Datatypes.html#df1ced36fc33ce188051218bca314374"><span class="id" title="notation">↔</span></a> <a class="idref" href="HoTT.Basics.Overture.html#IsEquiv"><span class="id" title="class">IsEquiv</span></a> (<span class="id" title="keyword">fun</span> <span class="id" title="var">a</span>:<a class="idref" href="HoTT.Modalities.Closed.html#A"><span class="id" title="variable">A</span></a> ⇒ <a class="idref" href="HoTT.HIT.Pushout.html#push"><span class="id" title="definition">push</span></a> (<a class="idref" href="Coq.Init.Datatypes.html#inr"><span class="id" title="constructor">inr</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#a"><span class="id" title="variable">a</span></a>) : <a class="idref" href="HoTT.HIT.Join.html#join"><span class="id" title="definition">join</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalTypes.U"><span class="id" title="variable">U</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#A"><span class="id" title="variable">A</span></a>).</span><span class="command" onmouseout="
+  : <a class="idref" href="Coq.Init.Datatypes.html#4bfb4f2d0721ba668e3a802ab1b745a1"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalTypes.U"><span class="id" title="variable">U</span></a> <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Overture.html#Contr"><span class="id" title="abbreviation">Contr</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#A"><span class="id" title="variable">A</span></a><a class="idref" href="Coq.Init.Datatypes.html#4bfb4f2d0721ba668e3a802ab1b745a1"><span class="id" title="notation">)</span></a> <a class="idref" href="Coq.Init.Datatypes.html#4bfb4f2d0721ba668e3a802ab1b745a1"><span class="id" title="notation">↔</span></a> <a class="idref" href="HoTT.Basics.Overture.html#IsEquiv"><span class="id" title="class">IsEquiv</span></a> (<span class="id" title="keyword">fun</span> <span class="id" title="var">a</span>:<a class="idref" href="HoTT.Modalities.Closed.html#A"><span class="id" title="variable">A</span></a> ⇒ <a class="idref" href="HoTT.HIT.Pushout.html#push"><span class="id" title="definition">push</span></a> (<a class="idref" href="Coq.Init.Datatypes.html#inr"><span class="id" title="constructor">inr</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#a"><span class="id" title="variable">a</span></a>) : <a class="idref" href="HoTT.HIT.Join.html#join"><span class="id" title="definition">join</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalTypes.U"><span class="id" title="variable">U</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#A"><span class="id" title="variable">A</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(24, '0_3_7');
@@ -853,125 +853,128 @@
       " onmouseover="
       mouseover(28, '0_3_7');
       "><br>
-      × <span class="id" title="tactic">simple</span> <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.Pushout.html#pushout_rec"><span class="id" title="definition">pushout_rec</span></a> <span class="id" title="var">A</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
+      × <span class="id" title="tactic">simple</span> <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.Pushout.html#pushout_rec"><span class="id" title="definition">pushout_rec</span></a> <span class="id" title="var">A</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(29, '0_3_7');
       "><br>
-        + <span class="id" title="tactic">intros</span> [<span class="id" title="var">u</span> | <span class="id" title="var">a</span>].</span><span class="command" onmouseout="
+        + <span class="id" title="tactic">intros</span> <span class="id" title="var">u</span>; <span class="id" title="tactic">pose</span> (<span class="id" title="var">uac</span> <span class="id" title="var">u</span>); <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Basics.Overture.html#center"><span class="id" title="projection">center</span></a> <span class="id" title="var">A</span>).</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(30, '0_3_7');
       "><br>
-          { <span class="id" title="tactic">pose</span> (<span class="id" title="var">uac</span> <span class="id" title="var">u</span>). </span><span class="command" onmouseout="
+        + <span class="id" title="tactic">intros</span> <span class="id" title="var">a</span>; <span class="id" title="tactic">assumption</span>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(31, '0_3_7');
-      "><span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Basics.Overture.html#center"><span class="id" title="projection">center</span></a> <span class="id" title="var">A</span>). }</span><span class="command" onmouseout="
-      mouseout('0_3_7');
-      " onmouseover="
-      mouseover(32, '0_3_7');
       "><br>
-          { <span class="id" title="tactic">assumption</span>. }<br>
         + <span class="id" title="tactic">intros</span> [<span class="id" title="var">u</span> <span class="id" title="var">a</span>]. </span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
-      mouseover(33, '0_3_7');
+      mouseover(32, '0_3_7');
       "><span class="id" title="tactic">simpl</span>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
-      mouseover(34, '0_3_7');
+      mouseover(33, '0_3_7');
       "><br>
           <span class="id" title="tactic">pose</span> (<span class="id" title="var">uac</span> <span class="id" title="var">u</span>). </span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
-      mouseover(35, '0_3_7');
+      mouseover(34, '0_3_7');
       "><span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#contr"><span class="id" title="projection">contr</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
-      mouseover(36, '0_3_7');
+      mouseover(35, '0_3_7');
       "><br>
       × <span class="id" title="tactic">intros</span> <span class="id" title="var">z</span>. </span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
-      mouseover(37, '0_3_7');
+      mouseover(36, '0_3_7');
       "><span class="id" title="tactic">pattern</span> <span class="id" title="var">z</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_7');
+      " onmouseover="
+      mouseover(37, '0_3_7');
+      "><br>
+        <span class="id" title="tactic">simple</span> <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.Pushout.html#pushout_ind"><span class="id" title="definition">pushout_ind</span></a> <a class="idref" href="Coq.Init.Datatypes.html#fst"><span class="id" title="projection">fst</span></a> <a class="idref" href="Coq.Init.Datatypes.html#snd"><span class="id" title="projection">snd</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">z</span>).</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(38, '0_3_7');
       "><br>
-        <span class="id" title="tactic">simple</span> <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.Pushout.html#pushout_ind"><span class="id" title="definition">pushout_ind</span></a> <a class="idref" href="Coq.Init.Datatypes.html#fst"><span class="id" title="projection">fst</span></a> <a class="idref" href="Coq.Init.Datatypes.html#snd"><span class="id" title="projection">snd</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">z</span>).</span><span class="command" onmouseout="
+        + <span class="id" title="tactic">intros</span> <span class="id" title="var">u</span>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(39, '0_3_7');
       "><br>
-        + <span class="id" title="tactic">intros</span> [<span class="id" title="var">u</span> | <span class="id" title="var">a</span>].</span><span class="command" onmouseout="
+          <span class="id" title="tactic">pose</span> (<a class="idref" href="HoTT.Basics.Trunc.html#contr_inhabited_hprop"><span class="id" title="lemma">contr_inhabited_hprop</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalTypes.U"><span class="id" title="variable">U</span></a> <span class="id" title="var">u</span>).</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(40, '0_3_7');
       "><br>
-          { <span class="id" title="tactic">pose</span> (<a class="idref" href="HoTT.Basics.Trunc.html#contr_inhabited_hprop"><span class="id" title="lemma">contr_inhabited_hprop</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalTypes.U"><span class="id" title="variable">U</span></a> <span class="id" title="var">u</span>).</span><span class="command" onmouseout="
+          <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Contractible.html#path_contr"><span class="id" title="definition">path_contr</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(41, '0_3_7');
       "><br>
-            <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Contractible.html#path_contr"><span class="id" title="definition">path_contr</span></a>. }<br>
-          { <span class="id" title="tactic">reflexivity</span>. }<br>
-        + <span class="id" title="tactic">intros</span> [<span class="id" title="var">u</span> <span class="id" title="var">a</span>]; <span class="id" title="tactic">pose</span> (<a class="idref" href="HoTT.Basics.Trunc.html#contr_inhabited_hprop"><span class="id" title="lemma">contr_inhabited_hprop</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalTypes.U"><span class="id" title="variable">U</span></a> <span class="id" title="var">u</span>).</span><span class="command" onmouseout="
+        + <span class="id" title="tactic">intros</span> <span class="id" title="var">a</span>; <span class="id" title="tactic">reflexivity</span>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(42, '0_3_7');
       "><br>
-          <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Contractible.html#path_contr"><span class="id" title="definition">path_contr</span></a>.</span><span class="command" onmouseout="
+        + <span class="id" title="tactic">intros</span> [<span class="id" title="var">u</span> <span class="id" title="var">a</span>]; <span class="id" title="tactic">pose</span> (<a class="idref" href="HoTT.Basics.Trunc.html#contr_inhabited_hprop"><span class="id" title="lemma">contr_inhabited_hprop</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalTypes.U"><span class="id" title="variable">U</span></a> <span class="id" title="var">u</span>).</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(43, '0_3_7');
       "><br>
-      × <span class="id" title="tactic">intros</span> <span class="id" title="var">a</span>. </span><span class="command" onmouseout="
+          <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Contractible.html#path_contr"><span class="id" title="definition">path_contr</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(44, '0_3_7');
-      "><span class="id" title="tactic">reflexivity</span>.</span><span class="command" onmouseout="
+      "><br>
+      × <span class="id" title="tactic">intros</span> <span class="id" title="var">a</span>. </span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(45, '0_3_7');
-      "><br>
-    - <span class="id" title="tactic">intros</span> ? <span class="id" title="var">u</span>.</span><span class="command" onmouseout="
+      "><span class="id" title="tactic">reflexivity</span>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(46, '0_3_7');
       "><br>
-      <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Basics.Equivalences.html#contr_equiv"><span class="id" title="lemma">contr_equiv</span></a> (<a class="idref" href="HoTT.HIT.Join.html#join"><span class="id" title="definition">join</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalTypes.U"><span class="id" title="variable">U</span></a> <span class="id" title="var">A</span>) <a class="idref" href="HoTT.Basics.Overture.html#77ed8f3b30fae66d423e9f3dab28cba2"><span class="id" title="notation">(</span></a><span class="id" title="keyword">fun</span> <span class="id" title="var">a</span>:<span class="id" title="var">A</span> ⇒ <a class="idref" href="HoTT.HIT.Pushout.html#push"><span class="id" title="definition">push</span></a> (<a class="idref" href="Coq.Init.Datatypes.html#inr"><span class="id" title="constructor">inr</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#a"><span class="id" title="variable">a</span></a>)<a class="idref" href="HoTT.Basics.Overture.html#77ed8f3b30fae66d423e9f3dab28cba2"><span class="id" title="notation">)^-1</span></a>).</span><span class="command" onmouseout="
+    - <span class="id" title="tactic">intros</span> ? <span class="id" title="var">u</span>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(47, '0_3_7');
       "><br>
-      <span class="id" title="tactic">pose</span> (<a class="idref" href="HoTT.Basics.Trunc.html#contr_inhabited_hprop"><span class="id" title="lemma">contr_inhabited_hprop</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalTypes.U"><span class="id" title="variable">U</span></a> <span class="id" title="var">u</span>).</span><span class="command" onmouseout="
+      <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Basics.Equivalences.html#contr_equiv"><span class="id" title="lemma">contr_equiv</span></a> (<a class="idref" href="HoTT.HIT.Join.html#join"><span class="id" title="definition">join</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalTypes.U"><span class="id" title="variable">U</span></a> <span class="id" title="var">A</span>) <a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">(</span></a><span class="id" title="keyword">fun</span> <span class="id" title="var">a</span>:<span class="id" title="var">A</span> ⇒ <a class="idref" href="HoTT.HIT.Pushout.html#push"><span class="id" title="definition">push</span></a> (<a class="idref" href="Coq.Init.Datatypes.html#inr"><span class="id" title="constructor">inr</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#a"><span class="id" title="variable">a</span></a>)<a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">)^-1</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(48, '0_3_7');
       "><br>
-      <span class="id" title="tactic">exact</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
+      <span class="id" title="tactic">pose</span> (<a class="idref" href="HoTT.Basics.Trunc.html#contr_inhabited_hprop"><span class="id" title="lemma">contr_inhabited_hprop</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalTypes.U"><span class="id" title="variable">U</span></a> <span class="id" title="var">u</span>).</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(49, '0_3_7');
       "><br>
-  <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+      <span class="id" title="tactic">exact</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(50, '0_3_7');
       "><br>
-<br>
-<span class="id" title="keyword">End</span> <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalTypes"><span class="id" title="section">ClosedModalTypes</span></a>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(51, '0_3_7');
       "><br>
 <br>
-<span class="id" title="keyword">Record</span> <a name="Closed_Modality"><span class="id" title="record">Closed_Modality</span></a> := <a name="Cl"><span class="id" title="constructor">Cl</span></a> { <a name="unCl"><span class="id" title="projection">unCl</span></a> : <a class="idref" href="HoTT.Basics.Trunc.html#hProp"><span class="id" title="abbreviation">hProp</span></a> }.</span><span class="command" onmouseout="
+<span class="id" title="keyword">End</span> <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalTypes"><span class="id" title="section">ClosedModalTypes</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(52, '0_3_7');
+      "><br>
+<br>
+<span class="id" title="keyword">Record</span> <a name="Closed_Modality"><span class="id" title="record">Closed_Modality</span></a> := <a name="Cl"><span class="id" title="constructor">Cl</span></a> { <a name="unCl"><span class="id" title="projection">unCl</span></a> : <a class="idref" href="HoTT.Basics.Trunc.html#hProp"><span class="id" title="abbreviation">hProp</span></a> }.</span><span class="command" onmouseout="
+      mouseout('0_3_7');
+      " onmouseover="
+      mouseover(53, '0_3_7');
       "><br>
 <br>
 </span>
@@ -984,102 +987,102 @@ Exercise 7.13(ii): Closed modalities
 <span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
-      mouseover(56, '0_3_11');
+      mouseover(57, '0_3_11');
       ">
 <span class="id" title="keyword">Module</span> <a name="ClosedModalities"><span class="id" title="module">ClosedModalities</span></a> &lt;: <a class="idref" href="HoTT.Modalities.Modality.html#Modalities"><span class="id" title="module">Modalities</span></a>.</span><span class="command" onmouseout="
-      mouseout('0_3_11');
-      " onmouseover="
-      mouseover(57, '0_3_11');
-      "><br>
-<br>
-  <span class="id" title="keyword">Definition</span> <a name="ClosedModalities.Modality"><span class="id" title="definition">Modality</span></a> : <span class="id" title="var">Type@</span>{<span class="id" title="var">u</span>} := <a class="idref" href="HoTT.Modalities.Closed.html#Closed_Modality"><span class="id" title="record">Closed_Modality@</span></a>{<span class="id" title="var">a</span>}.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(58, '0_3_11');
       "><br>
 <br>
-  <span class="id" title="keyword">Definition</span> <a name="ClosedModalities.O_reflector"><span class="id" title="definition">O_reflector</span></a> : <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.Modality"><span class="id" title="definition">Modality@</span></a>{<span class="id" title="var">u</span> <span class="id" title="var">a</span>} <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>} <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>}<br>
-    := <span class="id" title="keyword">fun</span> <span class="id" title="var">O</span> <span class="id" title="var">X</span> ⇒ <a class="idref" href="HoTT.HIT.Join.html#join"><span class="id" title="definition">join@</span></a>{<span class="id" title="var">a</span> <span class="id" title="var">i</span> <span class="id" title="var">i</span>} (<a class="idref" href="HoTT.Modalities.Closed.html#unCl"><span class="id" title="projection">unCl</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#O"><span class="id" title="variable">O</span></a>) <a class="idref" href="HoTT.Modalities.Closed.html#X"><span class="id" title="variable">X</span></a>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Definition</span> <a name="ClosedModalities.Modality"><span class="id" title="definition">Modality</span></a> : <span class="id" title="var">Type@</span>{<span class="id" title="var">u</span>} := <a class="idref" href="HoTT.Modalities.Closed.html#Closed_Modality"><span class="id" title="record">Closed_Modality@</span></a>{<span class="id" title="var">a</span>}.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(59, '0_3_11');
       "><br>
 <br>
-  <span class="id" title="keyword">Definition</span> <a name="ClosedModalities.In"><span class="id" title="definition">In</span></a> : <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.Modality"><span class="id" title="definition">Modality@</span></a>{<span class="id" title="var">u</span> <span class="id" title="var">a</span>} <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>} <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>}<br>
-    := <span class="id" title="keyword">fun</span> <span class="id" title="var">O</span> <span class="id" title="var">X</span> ⇒ <a class="idref" href="HoTT.Modalities.Closed.html#unCl"><span class="id" title="projection">unCl</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#O"><span class="id" title="variable">O</span></a> <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Overture.html#Contr"><span class="id" title="abbreviation">Contr</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#X"><span class="id" title="variable">X</span></a>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Definition</span> <a name="ClosedModalities.O_reflector"><span class="id" title="definition">O_reflector</span></a> : <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.Modality"><span class="id" title="definition">Modality@</span></a>{<span class="id" title="var">u</span> <span class="id" title="var">a</span>} <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>} <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>}<br>
+    := <span class="id" title="keyword">fun</span> <span class="id" title="var">O</span> <span class="id" title="var">X</span> ⇒ <a class="idref" href="HoTT.HIT.Join.html#join"><span class="id" title="definition">join@</span></a>{<span class="id" title="var">a</span> <span class="id" title="var">i</span> <span class="id" title="var">i</span>} (<a class="idref" href="HoTT.Modalities.Closed.html#unCl"><span class="id" title="projection">unCl</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#O"><span class="id" title="variable">O</span></a>) <a class="idref" href="HoTT.Modalities.Closed.html#X"><span class="id" title="variable">X</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(60, '0_3_11');
+      "><br>
+<br>
+  <span class="id" title="keyword">Definition</span> <a name="ClosedModalities.In"><span class="id" title="definition">In</span></a> : <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.Modality"><span class="id" title="definition">Modality@</span></a>{<span class="id" title="var">u</span> <span class="id" title="var">a</span>} <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>} <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>}<br>
+    := <span class="id" title="keyword">fun</span> <span class="id" title="var">O</span> <span class="id" title="var">X</span> ⇒ <a class="idref" href="HoTT.Modalities.Closed.html#unCl"><span class="id" title="projection">unCl</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#O"><span class="id" title="variable">O</span></a> <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Overture.html#Contr"><span class="id" title="abbreviation">Contr</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#X"><span class="id" title="variable">X</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_11');
+      " onmouseover="
+      mouseover(61, '0_3_11');
       "><br>
 <br>
   <span class="id" title="keyword">Definition</span> <a name="ClosedModalities.O_inO"><span class="id" title="definition">O_inO</span></a> (<span class="id" title="var">O</span> : <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.Modality"><span class="id" title="definition">Modality@</span></a>{<span class="id" title="var">u</span> <span class="id" title="var">a</span>}) (<span class="id" title="var">T</span> : <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>})<br>
   : <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.In"><span class="id" title="definition">In@</span></a>{<span class="id" title="var">u</span> <span class="id" title="var">a</span> <span class="id" title="var">i</span>} <a class="idref" href="HoTT.Modalities.Closed.html#O"><span class="id" title="variable">O</span></a> (<a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.O_reflector"><span class="id" title="definition">O_reflector@</span></a>{<span class="id" title="var">u</span> <span class="id" title="var">a</span> <span class="id" title="var">i</span>} <a class="idref" href="HoTT.Modalities.Closed.html#O"><span class="id" title="variable">O</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#T"><span class="id" title="variable">T</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
-      mouseover(61, '0_3_11');
+      mouseover(62, '0_3_11');
       "><br>
   <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
-      mouseover(62, '0_3_11');
+      mouseover(63, '0_3_11');
       "><br>
     <span class="id" title="tactic">intros</span> <span class="id" title="var">u</span>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
-      mouseover(63, '0_3_11');
+      mouseover(64, '0_3_11');
       "><br>
     <span class="id" title="tactic">pose</span> (<a class="idref" href="HoTT.Basics.Trunc.html#contr_inhabited_hprop"><span class="id" title="lemma">contr_inhabited_hprop</span></a> <span class="id" title="var">_</span> <span class="id" title="var">u</span>).</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
-      mouseover(64, '0_3_11');
+      mouseover(65, '0_3_11');
       "><br>
     <span class="id" title="tactic">exact</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
-      mouseover(65, '0_3_11');
-      "><br>
-  <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_11');
-      " onmouseover="
       mouseover(66, '0_3_11');
       "><br>
-<br>
-  <span class="id" title="keyword">Definition</span> <a name="ClosedModalities.to"><span class="id" title="definition">to</span></a> (<span class="id" title="var">O</span> : <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.Modality"><span class="id" title="definition">Modality@</span></a>{<span class="id" title="var">u</span> <span class="id" title="var">a</span>}) (<span class="id" title="var">T</span> : <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>})<br>
-  : <a class="idref" href="HoTT.Modalities.Closed.html#T"><span class="id" title="variable">T</span></a> <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.O_reflector"><span class="id" title="definition">O_reflector@</span></a>{<span class="id" title="var">u</span> <span class="id" title="var">a</span> <span class="id" title="var">i</span>} <a class="idref" href="HoTT.Modalities.Closed.html#O"><span class="id" title="variable">O</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#T"><span class="id" title="variable">T</span></a><br>
-    := <span class="id" title="keyword">fun</span> <span class="id" title="var">x</span> ⇒ <a class="idref" href="HoTT.HIT.Pushout.html#push"><span class="id" title="definition">push</span></a> (<a class="idref" href="Coq.Init.Datatypes.html#inr"><span class="id" title="constructor">inr</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#x"><span class="id" title="variable">x</span></a>).</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(67, '0_3_11');
       "><br>
 <br>
-  <span class="id" title="keyword">Definition</span> <a name="ClosedModalities.inO_equiv_inO"><span class="id" title="definition">inO_equiv_inO</span></a> (<span class="id" title="var">O</span> : <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.Modality"><span class="id" title="definition">Modality@</span></a>{<span class="id" title="var">u</span> <span class="id" title="var">a</span>}) (<span class="id" title="var">T</span> : <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>}) (<span class="id" title="var">U</span> : <span class="id" title="var">Type@</span>{<span class="id" title="var">j</span>})<br>
-     (<span class="id" title="var">T_inO</span> : <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.In"><span class="id" title="definition">In@</span></a>{<span class="id" title="var">u</span> <span class="id" title="var">a</span> <span class="id" title="var">i</span>} <a class="idref" href="HoTT.Modalities.Closed.html#O"><span class="id" title="variable">O</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#T"><span class="id" title="variable">T</span></a>) (<span class="id" title="var">f</span> : <a class="idref" href="HoTT.Modalities.Closed.html#T"><span class="id" title="variable">T</span></a> <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#U"><span class="id" title="variable">U</span></a>) (<span class="id" title="var">feq</span> : <a class="idref" href="HoTT.Basics.Overture.html#IsEquiv"><span class="id" title="class">IsEquiv</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#f"><span class="id" title="variable">f</span></a>)<br>
-  : <span class="id" title="keyword">let</span> <span class="id" title="var">gei</span> := ((<span class="id" title="keyword">fun</span> <span class="id" title="var">x</span> ⇒ <a class="idref" href="HoTT.Modalities.Closed.html#x"><span class="id" title="variable">x</span></a>) : <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>} <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="var">Type@</span>{<span class="id" title="var">k</span>}) <span class="id" title="tactic">in</span><br>
-    <span class="id" title="keyword">let</span> <span class="id" title="var">gej</span> := ((<span class="id" title="keyword">fun</span> <span class="id" title="var">x</span> ⇒ <a class="idref" href="HoTT.Modalities.Closed.html#x"><span class="id" title="variable">x</span></a>) : <span class="id" title="var">Type@</span>{<span class="id" title="var">j</span>} <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="var">Type@</span>{<span class="id" title="var">k</span>}) <span class="id" title="tactic">in</span><br>
-    <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.In"><span class="id" title="definition">In@</span></a>{<span class="id" title="var">u</span> <span class="id" title="var">a</span> <span class="id" title="var">j</span>} <a class="idref" href="HoTT.Modalities.Closed.html#O"><span class="id" title="variable">O</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#U"><span class="id" title="variable">U</span></a>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Definition</span> <a name="ClosedModalities.to"><span class="id" title="definition">to</span></a> (<span class="id" title="var">O</span> : <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.Modality"><span class="id" title="definition">Modality@</span></a>{<span class="id" title="var">u</span> <span class="id" title="var">a</span>}) (<span class="id" title="var">T</span> : <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>})<br>
+  : <a class="idref" href="HoTT.Modalities.Closed.html#T"><span class="id" title="variable">T</span></a> <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.O_reflector"><span class="id" title="definition">O_reflector@</span></a>{<span class="id" title="var">u</span> <span class="id" title="var">a</span> <span class="id" title="var">i</span>} <a class="idref" href="HoTT.Modalities.Closed.html#O"><span class="id" title="variable">O</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#T"><span class="id" title="variable">T</span></a><br>
+    := <span class="id" title="keyword">fun</span> <span class="id" title="var">x</span> ⇒ <a class="idref" href="HoTT.HIT.Pushout.html#push"><span class="id" title="definition">push</span></a> (<a class="idref" href="Coq.Init.Datatypes.html#inr"><span class="id" title="constructor">inr</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#x"><span class="id" title="variable">x</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(68, '0_3_11');
       "><br>
-  <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+<br>
+  <span class="id" title="keyword">Definition</span> <a name="ClosedModalities.inO_equiv_inO"><span class="id" title="definition">inO_equiv_inO</span></a> (<span class="id" title="var">O</span> : <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.Modality"><span class="id" title="definition">Modality@</span></a>{<span class="id" title="var">u</span> <span class="id" title="var">a</span>}) (<span class="id" title="var">T</span> : <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>}) (<span class="id" title="var">U</span> : <span class="id" title="var">Type@</span>{<span class="id" title="var">j</span>})<br>
+     (<span class="id" title="var">T_inO</span> : <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.In"><span class="id" title="definition">In@</span></a>{<span class="id" title="var">u</span> <span class="id" title="var">a</span> <span class="id" title="var">i</span>} <a class="idref" href="HoTT.Modalities.Closed.html#O"><span class="id" title="variable">O</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#T"><span class="id" title="variable">T</span></a>) (<span class="id" title="var">f</span> : <a class="idref" href="HoTT.Modalities.Closed.html#T"><span class="id" title="variable">T</span></a> <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#U"><span class="id" title="variable">U</span></a>) (<span class="id" title="var">feq</span> : <a class="idref" href="HoTT.Basics.Overture.html#IsEquiv"><span class="id" title="class">IsEquiv</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#f"><span class="id" title="variable">f</span></a>)<br>
+  : <span class="id" title="keyword">let</span> <span class="id" title="var">gei</span> := ((<span class="id" title="keyword">fun</span> <span class="id" title="var">x</span> ⇒ <a class="idref" href="HoTT.Modalities.Closed.html#x"><span class="id" title="variable">x</span></a>) : <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>} <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <span class="id" title="var">Type@</span>{<span class="id" title="var">k</span>}) <span class="id" title="tactic">in</span><br>
+    <span class="id" title="keyword">let</span> <span class="id" title="var">gej</span> := ((<span class="id" title="keyword">fun</span> <span class="id" title="var">x</span> ⇒ <a class="idref" href="HoTT.Modalities.Closed.html#x"><span class="id" title="variable">x</span></a>) : <span class="id" title="var">Type@</span>{<span class="id" title="var">j</span>} <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <span class="id" title="var">Type@</span>{<span class="id" title="var">k</span>}) <span class="id" title="tactic">in</span><br>
+    <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.In"><span class="id" title="definition">In@</span></a>{<span class="id" title="var">u</span> <span class="id" title="var">a</span> <span class="id" title="var">j</span>} <a class="idref" href="HoTT.Modalities.Closed.html#O"><span class="id" title="variable">O</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#U"><span class="id" title="variable">U</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(69, '0_3_11');
       "><br>
-    <span class="id" title="var">cbn</span>; <span class="id" title="tactic">intros</span> <span class="id" title="var">u</span>; <span class="id" title="tactic">pose</span> (<span class="id" title="var">T_inO</span> <span class="id" title="var">u</span>).</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(70, '0_3_11');
       "><br>
-    <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Basics.Equivalences.html#contr_equiv"><span class="id" title="lemma">contr_equiv</span></a> <span class="id" title="var">_</span> <span class="id" title="var">f</span>); <span class="id" title="tactic">exact</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
+    <span class="id" title="var">cbn</span>; <span class="id" title="tactic">intros</span> <span class="id" title="var">u</span>; <span class="id" title="tactic">pose</span> (<span class="id" title="var">T_inO</span> <span class="id" title="var">u</span>).</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(71, '0_3_11');
       "><br>
-  <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+    <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Basics.Equivalences.html#contr_equiv"><span class="id" title="lemma">contr_equiv</span></a> <span class="id" title="var">_</span> <span class="id" title="var">f</span>); <span class="id" title="tactic">exact</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(72, '0_3_11');
+      "><br>
+  <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_11');
+      " onmouseover="
+      mouseover(73, '0_3_11');
       "><br>
 <br>
   <span class="id" title="keyword">Definition</span> <a name="ClosedModalities.hprop_inO"><span class="id" title="definition">hprop_inO</span></a> `{<a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="class">Funext</span></a>}<br>
@@ -1087,60 +1090,55 @@ Exercise 7.13(ii): Closed modalities
   : <a class="idref" href="HoTT.Basics.Overture.html#IsHProp"><span class="id" title="abbreviation">IsHProp</span></a> (<a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.In"><span class="id" title="definition">In@</span></a>{<span class="id" title="var">u</span> <span class="id" title="var">a</span> <span class="id" title="var">i</span>} <a class="idref" href="HoTT.Modalities.Closed.html#O"><span class="id" title="variable">O</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#T"><span class="id" title="variable">T</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
-      mouseover(73, '0_3_11');
-      "><br>
-  <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_11');
-      " onmouseover="
       mouseover(74, '0_3_11');
       "><br>
-    <span class="id" title="tactic">exact</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(75, '0_3_11');
       "><br>
-  <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+    <span class="id" title="tactic">exact</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(76, '0_3_11');
       "><br>
-<br>
-  <span class="id" title="keyword">Definition</span> <a name="ClosedModalities.O_ind_internal"><span class="id" title="definition">O_ind_internal</span></a> (<span class="id" title="var">O</span> : <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.Modality"><span class="id" title="definition">Modality@</span></a>{<span class="id" title="var">u</span> <span class="id" title="var">a</span>})<br>
-             (<span class="id" title="var">A</span> : <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>}) (<span class="id" title="var">B</span> : <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.O_reflector"><span class="id" title="definition">O_reflector</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#O"><span class="id" title="variable">O</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="var">Type@</span>{<span class="id" title="var">j</span>})<br>
-             (<span class="id" title="var">B_inO</span> : <a class="idref" href="HoTT.Basics.Notations.html#d2ec56b4b399745cfaad1420e500e21b"><span class="id" title="notation">∀</span></a> <span class="id" title="var">oa</span><a class="idref" href="HoTT.Basics.Notations.html#d2ec56b4b399745cfaad1420e500e21b"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.In"><span class="id" title="definition">In@</span></a>{<span class="id" title="var">u</span> <span class="id" title="var">a</span> <span class="id" title="var">j</span>} <a class="idref" href="HoTT.Modalities.Closed.html#O"><span class="id" title="variable">O</span></a> (<a class="idref" href="HoTT.Modalities.Closed.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#oa"><span class="id" title="variable">oa</span></a>))<br>
-  : <span class="id" title="keyword">let</span> <span class="id" title="var">gei</span> := ((<span class="id" title="keyword">fun</span> <span class="id" title="var">x</span> ⇒ <a class="idref" href="HoTT.Modalities.Closed.html#x"><span class="id" title="variable">x</span></a>) : <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>} <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="var">Type@</span>{<span class="id" title="var">k</span>}) <span class="id" title="tactic">in</span><br>
-    <span class="id" title="keyword">let</span> <span class="id" title="var">gej</span> := ((<span class="id" title="keyword">fun</span> <span class="id" title="var">x</span> ⇒ <a class="idref" href="HoTT.Modalities.Closed.html#x"><span class="id" title="variable">x</span></a>) : <span class="id" title="var">Type@</span>{<span class="id" title="var">j</span>} <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="var">Type@</span>{<span class="id" title="var">k</span>}) <span class="id" title="tactic">in</span><br>
-    <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Notations.html#d2ec56b4b399745cfaad1420e500e21b"><span class="id" title="notation">∀</span></a> <span class="id" title="var">a</span><a class="idref" href="HoTT.Basics.Notations.html#d2ec56b4b399745cfaad1420e500e21b"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#B"><span class="id" title="variable">B</span></a> (<a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.to"><span class="id" title="definition">to@</span></a>{<span class="id" title="var">u</span> <span class="id" title="var">a</span> <span class="id" title="var">i</span>} <a class="idref" href="HoTT.Modalities.Closed.html#O"><span class="id" title="variable">O</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#a"><span class="id" title="variable">a</span></a>)<a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">)</span></a> <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Notations.html#d2ec56b4b399745cfaad1420e500e21b"><span class="id" title="notation">∀</span></a> <span class="id" title="var">a</span><a class="idref" href="HoTT.Basics.Notations.html#d2ec56b4b399745cfaad1420e500e21b"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#a"><span class="id" title="variable">a</span></a>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(77, '0_3_11');
       "><br>
-  <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+<br>
+  <span class="id" title="keyword">Definition</span> <a name="ClosedModalities.O_ind_internal"><span class="id" title="definition">O_ind_internal</span></a> (<span class="id" title="var">O</span> : <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.Modality"><span class="id" title="definition">Modality@</span></a>{<span class="id" title="var">u</span> <span class="id" title="var">a</span>})<br>
+             (<span class="id" title="var">A</span> : <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>}) (<span class="id" title="var">B</span> : <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.O_reflector"><span class="id" title="definition">O_reflector</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#O"><span class="id" title="variable">O</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <span class="id" title="var">Type@</span>{<span class="id" title="var">j</span>})<br>
+             (<span class="id" title="var">B_inO</span> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <span class="id" title="var">oa</span><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.In"><span class="id" title="definition">In@</span></a>{<span class="id" title="var">u</span> <span class="id" title="var">a</span> <span class="id" title="var">j</span>} <a class="idref" href="HoTT.Modalities.Closed.html#O"><span class="id" title="variable">O</span></a> (<a class="idref" href="HoTT.Modalities.Closed.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#oa"><span class="id" title="variable">oa</span></a>))<br>
+  : <span class="id" title="keyword">let</span> <span class="id" title="var">gei</span> := ((<span class="id" title="keyword">fun</span> <span class="id" title="var">x</span> ⇒ <a class="idref" href="HoTT.Modalities.Closed.html#x"><span class="id" title="variable">x</span></a>) : <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>} <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <span class="id" title="var">Type@</span>{<span class="id" title="var">k</span>}) <span class="id" title="tactic">in</span><br>
+    <span class="id" title="keyword">let</span> <span class="id" title="var">gej</span> := ((<span class="id" title="keyword">fun</span> <span class="id" title="var">x</span> ⇒ <a class="idref" href="HoTT.Modalities.Closed.html#x"><span class="id" title="variable">x</span></a>) : <span class="id" title="var">Type@</span>{<span class="id" title="var">j</span>} <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <span class="id" title="var">Type@</span>{<span class="id" title="var">k</span>}) <span class="id" title="tactic">in</span><br>
+    <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <span class="id" title="var">a</span><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#B"><span class="id" title="variable">B</span></a> (<a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.to"><span class="id" title="definition">to@</span></a>{<span class="id" title="var">u</span> <span class="id" title="var">a</span> <span class="id" title="var">i</span>} <a class="idref" href="HoTT.Modalities.Closed.html#O"><span class="id" title="variable">O</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#a"><span class="id" title="variable">a</span></a>)<a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">)</span></a> <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <span class="id" title="var">a</span><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#a"><span class="id" title="variable">a</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(78, '0_3_11');
       "><br>
-    <span class="id" title="tactic">simpl</span>; <span class="id" title="tactic">intros</span> <span class="id" title="var">f</span> <span class="id" title="var">z</span>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(79, '0_3_11');
       "><br>
-    <span class="id" title="tactic">simple</span> <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.Pushout.html#pushout_ind"><span class="id" title="definition">pushout_ind@</span></a>{<span class="id" title="var">i</span> <span class="id" title="var">a</span> <span class="id" title="var">i</span> <span class="id" title="var">j</span> <span class="id" title="var">i</span>} <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">B</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">z</span>).</span><span class="command" onmouseout="
+    <span class="id" title="tactic">simpl</span>; <span class="id" title="tactic">intros</span> <span class="id" title="var">f</span> <span class="id" title="var">z</span>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(80, '0_3_11');
       "><br>
-    - <span class="id" title="tactic">intros</span> [<span class="id" title="var">u</span> | <span class="id" title="var">a</span>].</span><span class="command" onmouseout="
+    <span class="id" title="tactic">simple</span> <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.Pushout.html#pushout_ind"><span class="id" title="definition">pushout_ind@</span></a>{<span class="id" title="var">i</span> <span class="id" title="var">a</span> <span class="id" title="var">i</span> <span class="id" title="var">j</span> <span class="id" title="var">i</span>} <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">B</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">z</span>).</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(81, '0_3_11');
       "><br>
-      + <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#center"><span class="id" title="projection">center</span></a>, <span class="id" title="var">B_inO</span>, <span class="id" title="var">u</span>.</span><span class="command" onmouseout="
+    - <span class="id" title="tactic">intros</span> <span class="id" title="var">u</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#center"><span class="id" title="projection">center</span></a>, <span class="id" title="var">B_inO</span>, <span class="id" title="var">u</span>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(82, '0_3_11');
       "><br>
-      + <span class="id" title="tactic">apply</span> <span class="id" title="var">f</span>.</span><span class="command" onmouseout="
+    - <span class="id" title="tactic">intros</span> <span class="id" title="var">a</span>; <span class="id" title="tactic">apply</span> <span class="id" title="var">f</span>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(83, '0_3_11');
@@ -1167,10 +1165,10 @@ Exercise 7.13(ii): Closed modalities
       "><br>
 <br>
   <span class="id" title="keyword">Definition</span> <a name="ClosedModalities.O_ind_beta_internal"><span class="id" title="definition">O_ind_beta_internal</span></a> (<span class="id" title="var">O</span> : <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.Modality"><span class="id" title="definition">Modality@</span></a>{<span class="id" title="var">u</span> <span class="id" title="var">a</span>}) (<span class="id" title="var">A</span> : <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>})<br>
-             (<span class="id" title="var">B</span> : <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.O_reflector"><span class="id" title="definition">O_reflector@</span></a>{<span class="id" title="var">u</span> <span class="id" title="var">a</span> <span class="id" title="var">i</span>} <a class="idref" href="HoTT.Modalities.Closed.html#O"><span class="id" title="variable">O</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="var">Type@</span>{<span class="id" title="var">j</span>})<br>
-             (<span class="id" title="var">B_inO</span> : <a class="idref" href="HoTT.Basics.Notations.html#d2ec56b4b399745cfaad1420e500e21b"><span class="id" title="notation">∀</span></a> <span class="id" title="var">oa</span><a class="idref" href="HoTT.Basics.Notations.html#d2ec56b4b399745cfaad1420e500e21b"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.In"><span class="id" title="definition">In@</span></a>{<span class="id" title="var">u</span> <span class="id" title="var">a</span> <span class="id" title="var">j</span>} <a class="idref" href="HoTT.Modalities.Closed.html#O"><span class="id" title="variable">O</span></a> (<a class="idref" href="HoTT.Modalities.Closed.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#oa"><span class="id" title="variable">oa</span></a>))<br>
-             (<span class="id" title="var">f</span> : <a class="idref" href="HoTT.Basics.Notations.html#d2ec56b4b399745cfaad1420e500e21b"><span class="id" title="notation">∀</span></a> <span class="id" title="var">a</span> : <a class="idref" href="HoTT.Modalities.Closed.html#A"><span class="id" title="variable">A</span></a><a class="idref" href="HoTT.Basics.Notations.html#d2ec56b4b399745cfaad1420e500e21b"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#B"><span class="id" title="variable">B</span></a> (<a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.to"><span class="id" title="definition">to</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#O"><span class="id" title="variable">O</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#a"><span class="id" title="variable">a</span></a>)) (<span class="id" title="var">a</span> : <a class="idref" href="HoTT.Modalities.Closed.html#A"><span class="id" title="variable">A</span></a>)<br>
-  : <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.O_ind_internal"><span class="id" title="definition">O_ind_internal</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#O"><span class="id" title="variable">O</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#B_inO"><span class="id" title="variable">B_inO</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#f"><span class="id" title="variable">f</span></a> (<a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.to"><span class="id" title="definition">to</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#O"><span class="id" title="variable">O</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#a"><span class="id" title="variable">a</span></a>) <a class="idref" href="HoTT.Basics.Overture.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#a"><span class="id" title="variable">a</span></a><br>
+             (<span class="id" title="var">B</span> : <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.O_reflector"><span class="id" title="definition">O_reflector@</span></a>{<span class="id" title="var">u</span> <span class="id" title="var">a</span> <span class="id" title="var">i</span>} <a class="idref" href="HoTT.Modalities.Closed.html#O"><span class="id" title="variable">O</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <span class="id" title="var">Type@</span>{<span class="id" title="var">j</span>})<br>
+             (<span class="id" title="var">B_inO</span> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <span class="id" title="var">oa</span><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.In"><span class="id" title="definition">In@</span></a>{<span class="id" title="var">u</span> <span class="id" title="var">a</span> <span class="id" title="var">j</span>} <a class="idref" href="HoTT.Modalities.Closed.html#O"><span class="id" title="variable">O</span></a> (<a class="idref" href="HoTT.Modalities.Closed.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#oa"><span class="id" title="variable">oa</span></a>))<br>
+             (<span class="id" title="var">f</span> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <span class="id" title="var">a</span> : <a class="idref" href="HoTT.Modalities.Closed.html#A"><span class="id" title="variable">A</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#B"><span class="id" title="variable">B</span></a> (<a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.to"><span class="id" title="definition">to</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#O"><span class="id" title="variable">O</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#a"><span class="id" title="variable">a</span></a>)) (<span class="id" title="var">a</span> : <a class="idref" href="HoTT.Modalities.Closed.html#A"><span class="id" title="variable">A</span></a>)<br>
+  : <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.O_ind_internal"><span class="id" title="definition">O_ind_internal</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#O"><span class="id" title="variable">O</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#B_inO"><span class="id" title="variable">B_inO</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#f"><span class="id" title="variable">f</span></a> (<a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.to"><span class="id" title="definition">to</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#O"><span class="id" title="variable">O</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#a"><span class="id" title="variable">a</span></a>) <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#a"><span class="id" title="variable">a</span></a><br>
   := 1.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
@@ -1180,7 +1178,7 @@ Exercise 7.13(ii): Closed modalities
   <span class="id" title="keyword">Definition</span> <a name="ClosedModalities.minO_paths"><span class="id" title="definition">minO_paths</span></a> (<span class="id" title="var">O</span> : <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.Modality"><span class="id" title="definition">Modality@</span></a>{<span class="id" title="var">u</span> <span class="id" title="var">a</span>}) (<span class="id" title="var">A</span> : <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>})<br>
              (<span class="id" title="var">A_inO</span> : <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.In"><span class="id" title="definition">In@</span></a>{<span class="id" title="var">u</span> <span class="id" title="var">a</span> <span class="id" title="var">i</span>} <a class="idref" href="HoTT.Modalities.Closed.html#O"><span class="id" title="variable">O</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#A"><span class="id" title="variable">A</span></a>)<br>
              (<span class="id" title="var">z</span> <span class="id" title="var">z'</span> : <a class="idref" href="HoTT.Modalities.Closed.html#A"><span class="id" title="variable">A</span></a>)<br>
-  : <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.In"><span class="id" title="definition">In@</span></a>{<span class="id" title="var">u</span> <span class="id" title="var">a</span> <span class="id" title="var">i</span>} <a class="idref" href="HoTT.Modalities.Closed.html#O"><span class="id" title="variable">O</span></a> (<a class="idref" href="HoTT.Modalities.Closed.html#z"><span class="id" title="variable">z</span></a> <a class="idref" href="HoTT.Basics.Overture.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#z'"><span class="id" title="variable">z'</span></a>).</span><span class="command" onmouseout="
+  : <a class="idref" href="HoTT.Modalities.Closed.html#ClosedModalities.In"><span class="id" title="definition">In@</span></a>{<span class="id" title="var">u</span> <span class="id" title="var">a</span> <span class="id" title="var">i</span>} <a class="idref" href="HoTT.Modalities.Closed.html#O"><span class="id" title="variable">O</span></a> (<a class="idref" href="HoTT.Modalities.Closed.html#z"><span class="id" title="variable">z</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#z'"><span class="id" title="variable">z'</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(89, '0_3_11');
@@ -1224,7 +1222,7 @@ Exercise 7.13(ii): Closed modalities
       "><br>
 <br>
 <span class="id" title="keyword">Coercion</span> <span class="id" title="var">Closed_Modality_to_Modality</span> :=<br>
-  <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a> : <a class="idref" href="HoTT.Modalities.Closed.html#Closed_Modality"><span class="id" title="record">Closed_Modality</span></a> <a class="idref" href="Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#Modality"><span class="id" title="definition">ClosedModalities.Modality</span></a>.</span><span class="command" onmouseout="
+  <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a> : <a class="idref" href="HoTT.Modalities.Closed.html#Closed_Modality"><span class="id" title="record">Closed_Modality</span></a> <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Modalities.Closed.html#Modality"><span class="id" title="definition">ClosedModalities.Modality</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(97, '0_3_11');
@@ -1302,7 +1300,7 @@ The closed modality is accessible.
       " onmouseover="
       mouseover(111, '0_3_15');
       "><br>
-      <span class="id" title="tactic">∃</span> (<a class="idref" href="HoTT.Basics.Overture.html#70142a8c3dba04f5a64047914b5e18ea"><span class="id" title="notation">(</span></a><a class="idref" href="Coq.Init.Datatypes.html#fst"><span class="id" title="projection">fst</span></a> (<span class="id" title="var">ext</span> <span class="id" title="var">u</span> 1%<span class="id" title="var">nat</span>) <a class="idref" href="HoTT.Types.Empty.html#Empty_rec"><span class="id" title="lemma">Empty_rec</span></a><a class="idref" href="HoTT.Basics.Overture.html#70142a8c3dba04f5a64047914b5e18ea"><span class="id" title="notation">).1</span></a> <a class="idref" href="HoTT.Basics.Overture.html#tt"><span class="id" title="constructor">tt</span></a>); <span class="id" title="tactic">intros</span> <span class="id" title="var">x</span>.</span><span class="command" onmouseout="
+      <span class="id" title="tactic">∃</span> (<a class="idref" href="HoTT.Basics.Overture.html#a0d4c290984547f24aacc208636427e2"><span class="id" title="notation">(</span></a><a class="idref" href="Coq.Init.Datatypes.html#fst"><span class="id" title="projection">fst</span></a> (<span class="id" title="var">ext</span> <span class="id" title="var">u</span> 1%<span class="id" title="var">nat</span>) <a class="idref" href="HoTT.Types.Empty.html#Empty_rec"><span class="id" title="lemma">Empty_rec</span></a><a class="idref" href="HoTT.Basics.Overture.html#a0d4c290984547f24aacc208636427e2"><span class="id" title="notation">).1</span></a> <a class="idref" href="HoTT.Basics.Overture.html#tt"><span class="id" title="constructor">tt</span></a>); <span class="id" title="tactic">intros</span> <span class="id" title="var">x</span>.</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(112, '0_3_15');
@@ -1312,8 +1310,8 @@ The closed modality is accessible.
       " onmouseover="
       mouseover(113, '0_3_15');
       "><br>
-      <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Basics.Overture.html#70142a8c3dba04f5a64047914b5e18ea"><span class="id" title="notation">(</span></a><a class="idref" href="Coq.Init.Datatypes.html#fst"><span class="id" title="projection">fst</span></a> (<a class="idref" href="Coq.Init.Datatypes.html#snd"><span class="id" title="projection">snd</span></a> (<span class="id" title="var">ext</span> <span class="id" title="var">u</span> 2) <a class="idref" href="HoTT.Basics.Overture.html#70142a8c3dba04f5a64047914b5e18ea"><span class="id" title="notation">(</span></a><a class="idref" href="Coq.Init.Datatypes.html#fst"><span class="id" title="projection">fst</span></a> (<span class="id" title="var">ext</span> <span class="id" title="var">u</span> 1%<span class="id" title="var">nat</span>) <a class="idref" href="HoTT.Types.Empty.html#Empty_rec"><span class="id" title="lemma">Empty_rec</span></a><a class="idref" href="HoTT.Basics.Overture.html#70142a8c3dba04f5a64047914b5e18ea"><span class="id" title="notation">).1</span></a><br>
-                       (<span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> ⇒ <span class="id" title="var">x</span>)) (<a class="idref" href="HoTT.Basics.Overture.html#Empty_ind"><span class="id" title="definition">Empty_ind</span></a> <span class="id" title="var">_</span>)<a class="idref" href="HoTT.Basics.Overture.html#70142a8c3dba04f5a64047914b5e18ea"><span class="id" title="notation">).1</span></a> <a class="idref" href="HoTT.Basics.Overture.html#tt"><span class="id" title="constructor">tt</span></a>).</span><span class="command" onmouseout="
+      <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Basics.Overture.html#a0d4c290984547f24aacc208636427e2"><span class="id" title="notation">(</span></a><a class="idref" href="Coq.Init.Datatypes.html#fst"><span class="id" title="projection">fst</span></a> (<a class="idref" href="Coq.Init.Datatypes.html#snd"><span class="id" title="projection">snd</span></a> (<span class="id" title="var">ext</span> <span class="id" title="var">u</span> 2) <a class="idref" href="HoTT.Basics.Overture.html#a0d4c290984547f24aacc208636427e2"><span class="id" title="notation">(</span></a><a class="idref" href="Coq.Init.Datatypes.html#fst"><span class="id" title="projection">fst</span></a> (<span class="id" title="var">ext</span> <span class="id" title="var">u</span> 1%<span class="id" title="var">nat</span>) <a class="idref" href="HoTT.Types.Empty.html#Empty_rec"><span class="id" title="lemma">Empty_rec</span></a><a class="idref" href="HoTT.Basics.Overture.html#a0d4c290984547f24aacc208636427e2"><span class="id" title="notation">).1</span></a><br>
+                       (<span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> ⇒ <span class="id" title="var">x</span>)) (<a class="idref" href="HoTT.Basics.Overture.html#Empty_ind"><span class="id" title="definition">Empty_ind</span></a> <span class="id" title="var">_</span>)<a class="idref" href="HoTT.Basics.Overture.html#a0d4c290984547f24aacc208636427e2"><span class="id" title="notation">).1</span></a> <a class="idref" href="HoTT.Basics.Overture.html#tt"><span class="id" title="constructor">tt</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(114, '0_3_15');
