@@ -31,7 +31,7 @@ pre {
 <div class="code" title="File: CoreLaws.v
 Line: 1
 Time: 0.008s">
-<div class="time" style="width: 2.2160664819945%"></div>
+<div class="time" style="width: 2.4464831804281%"></div>
 <pre>Require Import Category.Core Functor.Core NaturalTransformation.Core.</pre>
 </div>
 <div class="code" title="File: CoreLaws.v
@@ -57,22 +57,22 @@ Require Import Functor.Composition.Core.</pre>
 </div>
 <div class="code" title="File: CoreLaws.v
 Line: 4
-Time: 0.025s">
-<div class="time" style="width: 6.9252077562327%"></div>
+Time: 0.023s">
+<div class="time" style="width: 7.0336391437309%"></div>
 <pre>
 Require Import NaturalTransformation.Paths NaturalTransformation.Composition.Core.</pre>
 </div>
 <div class="code" title="File: CoreLaws.v
 Line: 5
-Time: 0.024s">
-<div class="time" style="width: 6.6481994459834%"></div>
+Time: 0.023s">
+<div class="time" style="width: 7.0336391437309%"></div>
 <pre>
 Require Import Category.Morphisms FunctorCategory.Core.</pre>
 </div>
 <div class="code" title="File: CoreLaws.v
 Line: 6
 Time: 0.004s">
-<div class="time" style="width: 1.1080332409972%"></div>
+<div class="time" style="width: 1.2232415902141%"></div>
 <pre>
 Require Import Pseudofunctor.Core Pseudofunctor.RewriteLaws.</pre>
 </div>
@@ -92,15 +92,15 @@ Require Import FunctorCategory.Morphisms.</pre>
 </div>
 <div class="code" title="File: CoreLaws.v
 Line: 9
-Time: 0.002s">
-<div class="time" style="width: 0.55401662049861%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.30581039755352%"></div>
 <pre>
 Require LaxComma.CoreParts.</pre>
 </div>
 <div class="code" title="File: CoreLaws.v
 Line: 10
-Time: 0.006s">
-<div class="time" style="width: 1.6620498614958%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.2232415902141%"></div>
 <pre>
 Require Import Types.Record Trunc HoTT.Tactics Types.Paths Types.Sigma.</pre>
 </div>
@@ -200,7 +200,7 @@ Time: 0s">
 <div class="code" title="File: CoreLaws.v
 Line: 49
 Time: 0.003s">
-<div class="time" style="width: 0.83102493074792%"></div>
+<div class="time" style="width: 0.91743119266055%"></div>
 <pre>
   Include LaxComma.CoreParts.LaxCommaCategoryParts.</pre>
 </div>
@@ -227,8 +227,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: CoreLaws.v
 Line: 53
-Time: 0.001s">
-<div class="time" style="width: 0.27700831024931%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
     Variable S : Pseudofunctor A.</pre>
@@ -242,8 +242,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: CoreLaws.v
 Line: 56
-Time: 0.002s">
-<div class="time" style="width: 0.55401662049861%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.30581039755352%"></div>
 <pre>
 
     Context `{forall a b, IsHSet (Functor (S a) (T b))}.</pre>
@@ -396,8 +396,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: CoreLaws.v
 Line: 156
-Time: 0.253s">
-<div class="time" style="width: 70.083102493075%"></div>
+Time: 0.235s">
+<div class="time" style="width: 71.865443425076%"></div>
 <pre>Lemma associativity_helper
           {x x0 : PreCategory} {x1 : Functor x0 x}
           {x2 x3 : PreCategory} {x4 : Functor x3 x2} {x5 x6 : PreCategory}
@@ -458,14 +458,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: CoreLaws.v
 Line: 200
-Time: 0.361s">
+Time: 0.327s">
 <div class="time" style="width: 100%"></div>
 <pre>Qed.</pre>
 </div>
 <div class="code" title="File: CoreLaws.v
 Line: 200
-Time: 0.013s">
-<div class="time" style="width: 3.601108033241%"></div>
+Time: 0.012s">
+<div class="time" style="width: 3.6697247706422%"></div>
 <pre>
 
     Lemma associativity x1 x2 x3 x4
@@ -482,7 +482,7 @@ Time: 0s">
 <div class="code" title="File: CoreLaws.v
 Line: 205
 Time: 0.014s">
-<div class="time" style="width: 3.8781163434903%"></div>
+<div class="time" style="width: 4.2813455657492%"></div>
 <pre>
       refine (@path_morphism' _ A B S T _ _
                               (compose (compose m3 m2) m1)
@@ -493,8 +493,8 @@ Time: 0.014s">
 </div>
 <div class="code" title="File: CoreLaws.v
 Line: 211
-Time: 0.022s">
-<div class="time" style="width: 6.0941828254848%"></div>
+Time: 0.02s">
+<div class="time" style="width: 6.1162079510703%"></div>
 <pre>
       simpl.</pre>
 </div>
@@ -534,8 +534,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: CoreLaws.v
 Line: 216
-Time: 0.057s">
-<div class="time" style="width: 15.789473684211%"></div>
+Time: 0.054s">
+<div class="time" style="width: 16.51376146789%"></div>
 <pre>Defined.</pre>
 </div>
 <div class="code" title="File: CoreLaws.v
@@ -604,8 +604,8 @@ Lemma left_identity (s d : object) (m : morphism s d)
 </div>
 <div class="code" title="File: CoreLaws.v
 Line: 274
-Time: 0.082s">
-<div class="time" style="width: 22.714681440443%"></div>
+Time: 0.077s">
+<div class="time" style="width: 23.547400611621%"></div>
 <pre>Lemma left_identity_helper
           {x x0 : PreCategory} {x1 : Functor x0 x}
           {x2 x3 : PreCategory} {x4 : Functor x3 x2} {x5 x6 : Functor x3 x0}
@@ -645,14 +645,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: CoreLaws.v
 Line: 297
-Time: 0.086s">
-<div class="time" style="width: 23.82271468144%"></div>
+Time: 0.084s">
+<div class="time" style="width: 25.688073394495%"></div>
 <pre>Qed.</pre>
 </div>
 <div class="code" title="File: CoreLaws.v
 Line: 297
 Time: 0.007s">
-<div class="time" style="width: 1.9390581717452%"></div>
+<div class="time" style="width: 2.1406727828746%"></div>
 <pre>
 
     Lemma left_identity (s d : object) (m : morphism s d)
@@ -668,7 +668,7 @@ Time: 0s">
 <div class="code" title="File: CoreLaws.v
 Line: 301
 Time: 0.007s">
-<div class="time" style="width: 1.9390581717452%"></div>
+<div class="time" style="width: 2.1406727828746%"></div>
 <pre>
       refine (@path_morphism' _ A B S T _ _
                               (compose (identity _) m) m
@@ -679,7 +679,7 @@ Time: 0.007s">
 <div class="code" title="File: CoreLaws.v
 Line: 306
 Time: 0.006s">
-<div class="time" style="width: 1.6620498614958%"></div>
+<div class="time" style="width: 1.8348623853211%"></div>
 <pre>
       simpl.</pre>
 </div>
@@ -700,7 +700,7 @@ Time: 0s">
 <div class="code" title="File: CoreLaws.v
 Line: 309
 Time: 0.002s">
-<div class="time" style="width: 0.55401662049861%"></div>
+<div class="time" style="width: 0.61162079510703%"></div>
 <pre> exact (p_left_identity_of_coherent_for_rewrite _ _ _ _).</pre>
 </div>
 <div class="code" title="File: CoreLaws.v
@@ -712,14 +712,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: CoreLaws.v
 Line: 310
-Time: 0.002s">
-<div class="time" style="width: 0.55401662049861%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.30581039755352%"></div>
 <pre> exact (p_left_identity_of_coherent_inverse_for_rewrite _ _ _ _).</pre>
 </div>
 <div class="code" title="File: CoreLaws.v
 Line: 310
-Time: 0.027s">
-<div class="time" style="width: 7.4792243767313%"></div>
+Time: 0.024s">
+<div class="time" style="width: 7.3394495412844%"></div>
 <pre>
     Defined.</pre>
 </div>
@@ -789,8 +789,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: CoreLaws.v
 Line: 369
-Time: 0.1s">
-<div class="time" style="width: 27.700831024931%"></div>
+Time: 0.098s">
+<div class="time" style="width: 29.969418960245%"></div>
 <pre>Lemma right_identity_helper
           {x x0 : PreCategory} {x1 : Functor x0 x}
           {x2 x3 : PreCategory} {x4 : Functor x3 x2} {x5 x6 : Functor x3 x0}
@@ -831,14 +831,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: CoreLaws.v
 Line: 393
-Time: 0.093s">
-<div class="time" style="width: 25.761772853186%"></div>
+Time: 0.079s">
+<div class="time" style="width: 24.159021406728%"></div>
 <pre>Qed.</pre>
 </div>
 <div class="code" title="File: CoreLaws.v
 Line: 393
-Time: 0.008s">
-<div class="time" style="width: 2.2160664819945%"></div>
+Time: 0.007s">
+<div class="time" style="width: 2.1406727828746%"></div>
 <pre>
 
     Lemma right_identity (s d : object) (m : morphism s d)
@@ -854,7 +854,7 @@ Time: 0s">
 <div class="code" title="File: CoreLaws.v
 Line: 397
 Time: 0.007s">
-<div class="time" style="width: 1.9390581717452%"></div>
+<div class="time" style="width: 2.1406727828746%"></div>
 <pre>
       refine (@path_morphism' _ A B S T _ _
                               (compose m (identity _)) m
@@ -865,7 +865,7 @@ Time: 0.007s">
 <div class="code" title="File: CoreLaws.v
 Line: 402
 Time: 0.006s">
-<div class="time" style="width: 1.6620498614958%"></div>
+<div class="time" style="width: 1.8348623853211%"></div>
 <pre>
       simpl.</pre>
 </div>
@@ -886,7 +886,7 @@ Time: 0s">
 <div class="code" title="File: CoreLaws.v
 Line: 405
 Time: 0.002s">
-<div class="time" style="width: 0.55401662049861%"></div>
+<div class="time" style="width: 0.61162079510703%"></div>
 <pre> exact (p_right_identity_of_coherent_for_rewrite _ _ _ _).</pre>
 </div>
 <div class="code" title="File: CoreLaws.v
@@ -899,27 +899,27 @@ Time: 0s">
 <div class="code" title="File: CoreLaws.v
 Line: 406
 Time: 0.002s">
-<div class="time" style="width: 0.55401662049861%"></div>
+<div class="time" style="width: 0.61162079510703%"></div>
 <pre> exact (p_right_identity_of_coherent_inverse_for_rewrite _ _ _ _).</pre>
 </div>
 <div class="code" title="File: CoreLaws.v
 Line: 406
-Time: 0.043s">
-<div class="time" style="width: 11.91135734072%"></div>
+Time: 0.04s">
+<div class="time" style="width: 12.232415902141%"></div>
 <pre>
     Defined.</pre>
 </div>
 <div class="code" title="File: CoreLaws.v
 Line: 407
-Time: 0.255s">
-<div class="time" style="width: 70.637119113573%"></div>
+Time: 0.241s">
+<div class="time" style="width: 73.700305810398%"></div>
 <pre>
   End lax_comma_category_parts.</pre>
 </div>
 <div class="code" title="File: CoreLaws.v
 Line: 408
 Time: 0.002s">
-<div class="time" style="width: 0.55401662049861%"></div>
+<div class="time" style="width: 0.61162079510703%"></div>
 <pre>
 End LaxCommaCategory.</pre>
 </div>
