@@ -808,7 +808,7 @@
           
 
             i = 158;
-            data = "No more subgoals.	";
+            data = "";
             responses[i]=data;
           
 
@@ -1873,7 +1873,7 @@
           
 
             i = 371;
-            data = "1 subgoal (ID 483)	  	  H : Univalence	  factsys : FactorizationSystem	  A, B, X, Y : Type	  i : A -> B	  c1i : factsys.(class1) A B i	  p : X -> Y	  c2p : factsys.(class2) X Y p	  f : A -> X	  g : B -> Y	  h : p o f == g o i	  C := (factsys.(factor) A X f).(intermediate) : Type	  f1 := (factsys.(factor) A X f).(factor1) : A -> C	  f2 := (factsys.(factor) A X f).(factor2) : C -> X	  ff := (factsys.(factor) A X f).(fact_factors) : f2 o f1 == f	  D := (factsys.(factor) B Y g).(intermediate) : Type	  g1 := (factsys.(factor) B Y g).(factor1) : B -> D	  g2 := (factsys.(factor) B Y g).(factor2) : D -> Y	  gf := (factsys.(factor) B Y g).(fact_factors) : g2 o g1 == g	  fact := Build_Factorization' (p o f) C f1 (p o f2)	            (fun a : A => ap p (ff a)) (factsys.(factor) A X f).(inclass1)	            (factsys.(class2_compose) C X Y f2 p	               (factsys.(factor) A X f).(inclass2) c2p)	   : Factorization factsys.(class1) factsys.(class2) (p o f)	  fact' := Build_Factorization' (p o f) D (g1 o i) g2	             (fun a : A => gf (i a)	                           @' (h a)^)	             (factsys.(class1_compose) A B D i g1 c1i	                (factsys.(factor) B Y g).(inclass1))	             (factsys.(factor) B Y g).(inclass2)	   : Factorization factsys.(class1) factsys.(class2) (p o f)	  q := (factsys.(path_factor) A Y (p o f) fact fact').(path_intermediate)	   : C <~> D	  q1 := (factsys.(path_factor) A Y (p o f) fact fact').(path_factor1)	   : q.(equiv_fun) o f1 == g1 o i	  q2 := (factsys.(path_factor) A Y (p o f) fact fact').(path_factor2)	   : p o f2 == g2 o q.(equiv_fun)	  x : A	  ============================	  ap p	    (ap (fun x0 : D => f2 (q.(equiv_isequiv).(equiv_inv) x0)) (q1 x)^	     @' (ap f2 (eissect q (f1 x))	         @' ff x))^	  @' (q2 (q.(equiv_isequiv).(equiv_inv) (g1 (i x)))	      @' (ap g2 (eisretr q.(equiv_fun) (g1 (i x)))	          @' gf (i x))) = h x	";
+            data = "";
             responses[i]=data;
           
 
@@ -1983,7 +1983,7 @@
           
 
             i = 393;
-            data = "No more subgoals.	";
+            data = "";
             responses[i]=data;
           
 

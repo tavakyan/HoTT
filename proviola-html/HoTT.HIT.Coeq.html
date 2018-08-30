@@ -418,7 +418,7 @@
           
 
             i = 80;
-            data = "1 subgoal (ID 704)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B -> B'	  k' : A -> A'	  p' : k' o f == f' o h'	  q' : k' o g == g' o h'	  r : h == h'	  s : k == k'	  u : forall b : B, s (f b)	                    @' p' b = p b	                              @' ap f' (r b)	  v : forall b : B, s (g b)	                    @' q' b = q b	                              @' ap g' (r b)	  b : B	  ============================	  ap coeq (s (f b))	  @' (ap coeq (p' b)	      @' cp (h' b)	      @' ap coeq (q' b)^) =	  ap coeq (p b)	  @' cp (h b)	  @' ap coeq (q b)^	  @' ap coeq (s (g b))	";
+            data = "";
             responses[i]=data;
           
 
@@ -463,7 +463,7 @@
           
 
             i = 89;
-            data = "No more subgoals.	";
+            data = "";
             responses[i]=data;
           
 
@@ -513,7 +513,7 @@
           
 
             i = 99;
-            data = "1 subgoal (ID 918)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  h' : B' -> B	  k' : A' -> A	  p' : k' o f' == f o h'	  q' : k' o g' == g o h'	  r : Sect h h'	  s : Sect k k'	  u : forall b : B, ap k' (p b)	                    @' p' (h b)	                    @' ap f (r b) = s (f b)	  v : forall b : B, ap k' (q b)	                    @' q' (h b)	                    @' ap g (r b) = s (g b)	  b : B	  ============================	  ap coeq (s (f b))	  @' cp b =	  ap (fun x : A' => coeq (k' x)) (p b)	  @' (ap coeq (p' (h b))	      @' cp (h' (h b))	      @' ap coeq (q' (h b))^)	  @' ap (fun x : A' => coeq (k' x)) (q b)^	  @' ap coeq (s (g b))	";
+            data = "";
             responses[i]=data;
           
 
@@ -558,7 +558,7 @@
           
 
             i = 108;
-            data = "No more subgoals.	";
+            data = "";
             responses[i]=data;
           
 
@@ -768,7 +768,7 @@
           
 
             i = 150;
-            data = "No more subgoals.	";
+            data = "";
             responses[i]=data;
           
 
@@ -843,7 +843,7 @@
           
 
             i = 165;
-            data = "No more subgoals.	";
+            data = "";
             responses[i]=data;
           
 
@@ -1303,12 +1303,12 @@
           
 
             i = 257;
-            data = "1 subgoal (ID 1072)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Coeq f g -> Coeq f' g' -> Type	  coeq' : forall (a : A) (a' : A'), P (coeq a) (coeq a')	  cpl : forall (b : B) (a' : A'),	        transport (fun x : Coeq f g => P x (coeq a')) (cp b) (coeq' (f b) a') =	        coeq' (g b) a'	  cpr : forall (a : A) (b' : B'),	        transport (fun y : Coeq f' g' => P (coeq a) y) 	          (cp b') (coeq' a (f' b')) = coeq' a (g' b')	  cplr : forall (b : B) (b' : B'),	         ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b')) @	         cpr (g b) b' =	         (transport_transport P (cp b) (cp b') (coeq' (f b) (f' b')) @	          ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	            (cpr (f b) b')) @ cpl b (g' b')	  b : B	  ============================	  forall b0 : B',	  transport	    (fun w : Coeq f' g' =>	     transport (fun w0 : Coeq f g => forall y : Coeq f' g', P w0 y) 	       (cp b)	       (Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	          (fun b' : B' => cpr (f b) b')) w =	     Coeq_ind (P (coeq (g b))) (fun a' : A' => coeq' (g b) a')	       (fun b' : B' => cpr (g b) b') w) (cp b0)	    ((fun a' : A' =>	      transport_forall_constant (cp b)	        (Coeq_ind (P (coeq (f b))) (fun a'0 : A' => coeq' (f b) a'0)	           (fun b' : B' => cpr (f b) b')) (coeq a') @ 	      cpl b a') (f' b0)) =	  (fun a' : A' =>	   transport_forall_constant (cp b)	     (Coeq_ind (P (coeq (f b))) (fun a'0 : A' => coeq' (f b) a'0)	        (fun b' : B' => cpr (f b) b')) (coeq a') @ 	   cpl b a') (g' b0)	";
+            data = "1 subgoal (ID 1072)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Coeq f g -> Coeq f' g' -> Type	  coeq' : forall (a : A) (a' : A'), P (coeq a) (coeq a')	  cpl : forall (b : B) (a' : A'),	        transport (fun x : Coeq f g => P x (coeq a')) (cp b) (coeq' (f b) a') =	        coeq' (g b) a'	  cpr : forall (a : A) (b' : B'),	        transport (fun y : Coeq f' g' => P (coeq a) y) 	          (cp b') (coeq' a (f' b')) = coeq' a (g' b')	  cplr : forall (b : B) (b' : B'),	         ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b')) @	         cpr (g b) b' =	         (transport_transport P (cp b) (cp b') (coeq' (f b) (f' b')) @	          ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	            (cpr (f b) b')) @ cpl b (g' b')	  b : B	  ============================	  forall b0 : B',	  transport	    (fun w : Coeq f' g' =>	     transport (fun w0 : Coeq f g => forall y : Coeq f' g', P w0 y) 	       (cp b)	       (Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	          (fun b' : B' => cpr (f b) b')) w =	     Coeq_ind (P (coeq (g b))) (fun a' : A' => coeq' (g b) a')	       (fun b' : B' => cpr (g b) b') w) (cp b0)	    ((fun a' : A' =>	      transport_forall_constant (cp b)	        (Coeq_ind (P (coeq (f b))) (fun a'0 : A' => coeq' (f b) a'0)	           (fun b' : B' => cpr (f b) b')) (coeq a') @ 	      cpl b a') (f' b0)) =	  (fun a' : A' =>	   transport_forall_constant (cp b)	     (Coeq_ind (P (coeq (f b))) (fun a'0 : A' => coeq' (f b) a'0)	        (fun b' : B' => cpr (f b) b')) (coeq a') @ 	   cpl b a') (g' b0)	1 subgoal (ID 1094)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Coeq f g -> Coeq f' g' -> Type	  coeq' : forall (a : A) (a' : A'), P (coeq a) (coeq a')	  cpl : forall (b : B) (a' : A'),	        transport (fun x : Coeq f g => P x (coeq a')) (cp b) (coeq' (f b) a') =	        coeq' (g b) a'	  cpr : forall (a : A) (b' : B'),	        transport (fun y : Coeq f' g' => P (coeq a) y) 	          (cp b') (coeq' a (f' b')) = coeq' a (g' b')	  cplr : forall (b : B) (b' : B'),	         ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b')) @	         cpr (g b) b' =	         (transport_transport P (cp b) (cp b') (coeq' (f b) (f' b')) @	          ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	            (cpr (f b) b')) @ cpl b (g' b')	  b : B	  b' : B'	  ============================	  transport	    (fun w : Coeq f' g' =>	     transport (fun w0 : Coeq f g => forall y : Coeq f' g', P w0 y) 	       (cp b)	       (Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	          (fun b'0 : B' => cpr (f b) b'0)) w =	     Coeq_ind (P (coeq (g b))) (fun a' : A' => coeq' (g b) a')	       (fun b'0 : B' => cpr (g b) b'0) w) (cp b')	    (transport_forall_constant (cp b)	       (Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	          (fun b'0 : B' => cpr (f b) b'0)) (coeq (f' b')) @ 	     cpl b (f' b')) =	  transport_forall_constant (cp b)	    (Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	       (fun b'0 : B' => cpr (f b) b'0)) (coeq (g' b')) @ 	  cpl b (g' b')	";
             responses[i]=data;
           
 
             i = 258;
-            data = "1 subgoal (ID 1094)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Coeq f g -> Coeq f' g' -> Type	  coeq' : forall (a : A) (a' : A'), P (coeq a) (coeq a')	  cpl : forall (b : B) (a' : A'),	        transport (fun x : Coeq f g => P x (coeq a')) (cp b) (coeq' (f b) a') =	        coeq' (g b) a'	  cpr : forall (a : A) (b' : B'),	        transport (fun y : Coeq f' g' => P (coeq a) y) 	          (cp b') (coeq' a (f' b')) = coeq' a (g' b')	  cplr : forall (b : B) (b' : B'),	         ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b')) @	         cpr (g b) b' =	         (transport_transport P (cp b) (cp b') (coeq' (f b) (f' b')) @	          ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	            (cpr (f b) b')) @ cpl b (g' b')	  b : B	  b' : B'	  ============================	  transport	    (fun w : Coeq f' g' =>	     transport (fun w0 : Coeq f g => forall y : Coeq f' g', P w0 y) 	       (cp b)	       (Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	          (fun b'0 : B' => cpr (f b) b'0)) w =	     Coeq_ind (P (coeq (g b))) (fun a' : A' => coeq' (g b) a')	       (fun b'0 : B' => cpr (g b) b'0) w) (cp b')	    (transport_forall_constant (cp b)	       (Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	          (fun b'0 : B' => cpr (f b) b'0)) (coeq (f' b')) @ 	     cpl b (f' b')) =	  transport_forall_constant (cp b)	    (Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	       (fun b'0 : B' => cpr (f b) b'0)) (coeq (g' b')) @ 	  cpl b (g' b')	1 subgoal (ID 1113)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Coeq f g -> Coeq f' g' -> Type	  coeq' : forall (a : A) (a' : A'), P (coeq a) (coeq a')	  cpl : forall (b : B) (a' : A'),	        transport (fun x : Coeq f g => P x (coeq a')) (cp b) (coeq' (f b) a') =	        coeq' (g b) a'	  cpr : forall (a : A) (b' : B'),	        transport (fun y : Coeq f' g' => P (coeq a) y) 	          (cp b') (coeq' a (f' b')) = coeq' a (g' b')	  cplr : forall (b : B) (b' : B'),	         ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b')) @	         cpr (g b) b' =	         (transport_transport P (cp b) (cp b') (coeq' (f b) (f' b')) @	          ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	            (cpr (f b) b')) @ cpl b (g' b')	  b : B	  b' : B'	  ============================	  ((apD	      (transport (fun w : Coeq f g => forall y : Coeq f' g', P w y) 	         (cp b)	         (Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	            (fun b'0 : B' => cpr (f b) b'0))) (cp b'))^ @	   ap (transport (P (coeq (g b))) (cp b'))	     (transport_forall_constant (cp b)	        (Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	           (fun b'0 : B' => cpr (f b) b'0)) (coeq (f' b')) @ 	      cpl b (f' b'))) @	  apD	    (Coeq_ind (P (coeq (g b))) (fun a' : A' => coeq' (g b) a')	       (fun b'0 : B' => cpr (g b) b'0)) (cp b') =	  transport_forall_constant (cp b)	    (Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	       (fun b'0 : B' => cpr (f b) b'0)) (coeq (g' b')) @ 	  cpl b (g' b')	";
+            data = "1 subgoal (ID 1113)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Coeq f g -> Coeq f' g' -> Type	  coeq' : forall (a : A) (a' : A'), P (coeq a) (coeq a')	  cpl : forall (b : B) (a' : A'),	        transport (fun x : Coeq f g => P x (coeq a')) (cp b) (coeq' (f b) a') =	        coeq' (g b) a'	  cpr : forall (a : A) (b' : B'),	        transport (fun y : Coeq f' g' => P (coeq a) y) 	          (cp b') (coeq' a (f' b')) = coeq' a (g' b')	  cplr : forall (b : B) (b' : B'),	         ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b')) @	         cpr (g b) b' =	         (transport_transport P (cp b) (cp b') (coeq' (f b) (f' b')) @	          ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	            (cpr (f b) b')) @ cpl b (g' b')	  b : B	  b' : B'	  ============================	  ((apD	      (transport (fun w : Coeq f g => forall y : Coeq f' g', P w y) 	         (cp b)	         (Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	            (fun b'0 : B' => cpr (f b) b'0))) (cp b'))^ @	   ap (transport (P (coeq (g b))) (cp b'))	     (transport_forall_constant (cp b)	        (Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	           (fun b'0 : B' => cpr (f b) b'0)) (coeq (f' b')) @ 	      cpl b (f' b'))) @	  apD	    (Coeq_ind (P (coeq (g b))) (fun a' : A' => coeq' (g b) a')	       (fun b'0 : B' => cpr (g b) b'0)) (cp b') =	  transport_forall_constant (cp b)	    (Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	       (fun b'0 : B' => cpr (f b) b'0)) (coeq (g' b')) @ 	  cpl b (g' b')	";
             responses[i]=data;
           
 
@@ -1338,7 +1338,7 @@
           
 
             i = 264;
-            data = "1 subgoal (ID 1118)	  	  H : Funext	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  P : Coeq f g -> Coeq f' g' -> Type	  coeq' : forall (a : A) (a' : A'), P (coeq a) (coeq a')	  cpl : forall (b : B) (a' : A'),	        transport (fun x : Coeq f g => P x (coeq a')) (cp b) (coeq' (f b) a') =	        coeq' (g b) a'	  cpr : forall (a : A) (b' : B'),	        transport (fun y : Coeq f' g' => P (coeq a) y) 	          (cp b') (coeq' a (f' b')) = coeq' a (g' b')	  cplr : forall (b : B) (b' : B'),	         ap (transport (P (coeq (g b))) (cp b')) (cpl b (f' b'))	         @' cpr (g b) b' =	         transport_transport P (cp b) (cp b') (coeq' (f b) (f' b'))	         @' ap (transport (fun x : Coeq f g => P x (coeq (g' b'))) (cp b))	              (cpr (f b) b')	         @' cpl b (g' b')	  b : B	  b' : B'	  ============================	  (apD	     (transport (fun w : Coeq f g => forall y : Coeq f' g', P w y) 	        (cp b)	        (Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	           (fun b'0 : B' => cpr (f b) b'0))) (cp b'))^	  @' ap (transport (P (coeq (g b))) (cp b'))	       (transport_forall_constant (cp b)	          (Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	             (fun b'0 : B' => cpr (f b) b'0)) (coeq (f' b'))	        @' cpl b (f' b'))	  @' cpr (g b) b' =	  transport_forall_constant (cp b)	    (Coeq_ind (P (coeq (f b))) (fun a' : A' => coeq' (f b) a')	       (fun b'0 : B' => cpr (f b) b'0)) (coeq (g' b'))	  @' cpl b (g' b')	";
+            data = "";
             responses[i]=data;
           
 
@@ -1593,7 +1593,7 @@
           
 
             i = 315;
-            data = "No more subgoals.	";
+            data = "";
             responses[i]=data;
           
 

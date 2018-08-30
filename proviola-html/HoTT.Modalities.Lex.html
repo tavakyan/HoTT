@@ -553,7 +553,7 @@
           
 
             i = 107;
-            data = "1 subgoal (ID 5873)	  	  O : Modality	  H : Lex O	  A : Type	  B : Type	  C : Type	  f : B -> A	  g : C -> A	  b : B	  c : C	  e : f b = g c	  ============================	  (ap (O_functor O f) (to_O_natural O pullback_pr1 (b; c; e))^)^	  @' (to_O_natural O f b	      @' ap (to O A) e	      @' (to_O_natural O g c)^)	  @' ap (O_functor O g) (to_O_natural O pullback_pr2 (b; c; e))^ =	  O_functor_square O pullback_pr1 pullback_pr2 f g 	    (pullback_commsq f g) (to O (Pullback f g) (b; c; e))	";
+            data = "";
             responses[i]=data;
           
 
@@ -598,7 +598,7 @@
           
 
             i = 116;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 5766)		subgoal 1 (ID 5766) is:	 IsConnMap O	   (functor_pullback f g (O_functor O f) (O_functor O g) 	      (to O A) (to O B) (to O C) (to_O_natural O f) 	      (to_O_natural O g))	";
+            data = "";
             responses[i]=data;
           
 
@@ -1478,12 +1478,12 @@
           
 
             i = 292;
-            data = "1 subgoal (ID 343)	  	  H : Funext	  O : Modality	  H0 : Lex O	  n : trunc_index	  IHn : forall A : Type, IsTrunc n A -> IsTrunc n (O A)	  A : Type	  H1 : IsTrunc n.+1 A	  ============================	  IsTrunc n.+1 (O A)	";
+            data = "1 subgoal (ID 343)	  	  H : Funext	  O : Modality	  H0 : Lex O	  n : trunc_index	  IHn : forall A : Type, IsTrunc n A -> IsTrunc n (O A)	  A : Type	  H1 : IsTrunc n.+1 A	  ============================	  IsTrunc n.+1 (O A)	1 subgoal (ID 614)	  	  H : Funext	  O : Modality	  H0 : Lex O	  n : trunc_index	  IHn : forall A : Type, IsTrunc n A -> IsTrunc n (O A)	  A : Type	  H1 : IsTrunc n.+1 A	  x : A	  ============================	  forall y : O A, IsTrunc n (to O A x = y)	";
             responses[i]=data;
           
 
             i = 293;
-            data = "1 subgoal (ID 614)	  	  H : Funext	  O : Modality	  H0 : Lex O	  n : trunc_index	  IHn : forall A : Type, IsTrunc n A -> IsTrunc n (O A)	  A : Type	  H1 : IsTrunc n.+1 A	  x : A	  ============================	  forall y : O A, IsTrunc n (to O A x = y)	1 subgoal (ID 702)	  	  H : Funext	  O : Modality	  H0 : Lex O	  n : trunc_index	  IHn : forall A : Type, IsTrunc n A -> IsTrunc n (O A)	  A : Type	  H1 : IsTrunc n.+1 A	  x, y : A	  ============================	  IsTrunc n (to O A x = to O A y)	";
+            data = "1 subgoal (ID 702)	  	  H : Funext	  O : Modality	  H0 : Lex O	  n : trunc_index	  IHn : forall A : Type, IsTrunc n A -> IsTrunc n (O A)	  A : Type	  H1 : IsTrunc n.+1 A	  x, y : A	  ============================	  IsTrunc n (to O A x = to O A y)	";
             responses[i]=data;
           
 
@@ -1738,17 +1738,17 @@
           
 
             i = 344;
-            data = "1 subgoal (ID 790)	  	  O : ReflectiveSubuniverse	  A : Type	  B : A -> Type	  A_inO : In O A	  B_inO : forall a : A, In O (B a)	  g := (O_rec pr1 : O {x : A & B x} -> A) : O {x : A & B x} -> A	  p := fun x : {x : A & B x} => O_rec_beta pr1 x	   : forall x : {x : A & B x}, g (to O {x0 : A & B x0} x) = x.(proj1_sig)	  x : O {x : A & B x}	  a : A	  b : B a	  q : g (to O {x : A & B x} (a; b)) = g x	  ============================	  ((isequiv_to_O_inO O A).(eissect) (g (to O {x : _ & B x} (a; b))))^	  @' ap (isequiv_to_O_inO O A).(equiv_inv)	       (ap (to O A) (O_rec_beta pr1 (a; b))	        @' (O_rec_beta (fun x0 : {x : _ & B x} => to O A x0.(proj1_sig))	              (a; b))^)	  @' (ap (isequiv_to_O_inO O A).(equiv_inv)	        (to_O_natural O pr1 (a; b)	         @' ap (to O A) ((p (a; b))^	                         @' q))	      @' (isequiv_to_O_inO O A).(eissect) (g x)) = q	";
+            data = "";
             responses[i]=data;
           
 
             i = 345;
-            data = "1 subgoal (ID 790)	  	  O : ReflectiveSubuniverse	  A : Type	  B : A -> Type	  A_inO : In O A	  B_inO : forall a : A, In O (B a)	  g := (O_rec pr1 : O {x : A & B x} -> A) : O {x : A & B x} -> A	  p := fun x : {x : A & B x} => O_rec_beta pr1 x	   : forall x : {x : A & B x}, g (to O {x0 : A & B x0} x) = x.(proj1_sig)	  x : O {x : A & B x}	  a : A	  b : B a	  q : g (to O {x : A & B x} (a; b)) = g x	  ============================	  ((isequiv_to_O_inO O A).(eissect) (g (to O {x : _ & B x} (a; b))))^	  @' ap (isequiv_to_O_inO O A).(equiv_inv)	       (ap (to O A) (O_rec_beta pr1 (a; b))	        @' (O_rec_beta (fun x0 : {x : _ & B x} => to O A x0.(proj1_sig))	              (a; b))^)	  @' (ap (isequiv_to_O_inO O A).(equiv_inv)	        (to_O_natural O pr1 (a; b)	         @' ap (to O A) ((p (a; b))^	                         @' q))	      @' (isequiv_to_O_inO O A).(eissect) (g x)) = q	1 subgoal (ID 795)	  	  O : ReflectiveSubuniverse	  A : Type	  B : A -> Type	  A_inO : In O A	  B_inO : forall a : A, In O (B a)	  g := (O_rec pr1 : O {x : A & B x} -> A) : O {x : A & B x} -> A	  p := fun x : {x : A & B x} => O_rec_beta pr1 x	   : forall x : {x : A & B x}, g (to O {x0 : A & B x0} x) = x.(proj1_sig)	  x : O {x : A & B x}	  a : A	  b : B a	  q : g (to O {x : A & B x} (a; b)) = g x	  ============================	  (eissect (to O A) (g (to O {x : _ & B x} (a; b))))^	  @' ap (isequiv_to_O_inO O A).(equiv_inv)	       (ap (to O A) (O_rec_beta pr1 (a; b))	        @' (O_rec_beta (fun x0 : {x : _ & B x} => to O A x0.(proj1_sig))	              (a; b))^)	  @' (ap (isequiv_to_O_inO O A).(equiv_inv)	        (to_O_natural O pr1 (a; b)	         @' ap (to O A) ((p (a; b))^	                         @' q))	      @' eissect (to O A) (g x)) = q	";
+            data = "1 subgoal (ID 795)	  	  O : ReflectiveSubuniverse	  A : Type	  B : A -> Type	  A_inO : In O A	  B_inO : forall a : A, In O (B a)	  g := (O_rec pr1 : O {x : A & B x} -> A) : O {x : A & B x} -> A	  p := fun x : {x : A & B x} => O_rec_beta pr1 x	   : forall x : {x : A & B x}, g (to O {x0 : A & B x0} x) = x.(proj1_sig)	  x : O {x : A & B x}	  a : A	  b : B a	  q : g (to O {x : A & B x} (a; b)) = g x	  ============================	  (eissect (to O A) (g (to O {x : _ & B x} (a; b))))^	  @' ap (isequiv_to_O_inO O A).(equiv_inv)	       (ap (to O A) (O_rec_beta pr1 (a; b))	        @' (O_rec_beta (fun x0 : {x : _ & B x} => to O A x0.(proj1_sig))	              (a; b))^)	  @' (ap (isequiv_to_O_inO O A).(equiv_inv)	        (to_O_natural O pr1 (a; b)	         @' ap (to O A) ((p (a; b))^	                         @' q))	      @' eissect (to O A) (g x)) = q	1 subgoal (ID 854)	  	  O : ReflectiveSubuniverse	  A : Type	  B : A -> Type	  A_inO : In O A	  B_inO : forall a : A, In O (B a)	  g := (O_rec pr1 : O {x : A & B x} -> A) : O {x : A & B x} -> A	  p := fun x : {x : A & B x} => O_rec_beta pr1 x	   : forall x : {x : A & B x}, g (to O {x0 : A & B x0} x) = x.(proj1_sig)	  x : O {x : A & B x}	  a : A	  b : B a	  q : g (to O {x : A & B x} (a; b)) = g x	  ============================	  (eissect (to O A) (g (to O {x : _ & B x} (a; b))))^	  @' ap (isequiv_to_O_inO O A).(equiv_inv)	       (ap (to O A) (O_rec_beta pr1 (a; b)))	  @' (ap (isequiv_to_O_inO O A).(equiv_inv)	        (O_rec_beta (fun x0 : {x : _ & B x} => to O A x0.(proj1_sig)) (a; b)))^	  @' ap (isequiv_to_O_inO O A).(equiv_inv) (to_O_natural O pr1 (a; b))	  @' (ap (isequiv_to_O_inO O A).(equiv_inv) (ap (to O A) (p (a; b))))^	  @' ap (isequiv_to_O_inO O A).(equiv_inv) (ap (to O A) q)	  @' eissect (to O A) (g x) = q	";
             responses[i]=data;
           
 
             i = 346;
-            data = "1 subgoal (ID 854)	  	  O : ReflectiveSubuniverse	  A : Type	  B : A -> Type	  A_inO : In O A	  B_inO : forall a : A, In O (B a)	  g := (O_rec pr1 : O {x : A & B x} -> A) : O {x : A & B x} -> A	  p := fun x : {x : A & B x} => O_rec_beta pr1 x	   : forall x : {x : A & B x}, g (to O {x0 : A & B x0} x) = x.(proj1_sig)	  x : O {x : A & B x}	  a : A	  b : B a	  q : g (to O {x : A & B x} (a; b)) = g x	  ============================	  (eissect (to O A) (g (to O {x : _ & B x} (a; b))))^	  @' ap (isequiv_to_O_inO O A).(equiv_inv)	       (ap (to O A) (O_rec_beta pr1 (a; b)))	  @' (ap (isequiv_to_O_inO O A).(equiv_inv)	        (O_rec_beta (fun x0 : {x : _ & B x} => to O A x0.(proj1_sig)) (a; b)))^	  @' ap (isequiv_to_O_inO O A).(equiv_inv) (to_O_natural O pr1 (a; b))	  @' (ap (isequiv_to_O_inO O A).(equiv_inv) (ap (to O A) (p (a; b))))^	  @' ap (isequiv_to_O_inO O A).(equiv_inv) (ap (to O A) q)	  @' eissect (to O A) (g x) = q	1 subgoal (ID 859)	  	  O : ReflectiveSubuniverse	  A : Type	  B : A -> Type	  A_inO : In O A	  B_inO : forall a : A, In O (B a)	  g := (O_rec pr1 : O {x : A & B x} -> A) : O {x : A & B x} -> A	  p := fun x : {x : A & B x} => O_rec_beta pr1 x	   : forall x : {x : A & B x}, g (to O {x0 : A & B x0} x) = x.(proj1_sig)	  x : O {x : A & B x}	  a : A	  b : B a	  q : g (to O {x : A & B x} (a; b)) = g x	  ============================	  (eissect (to O A) (g (to O {x : _ & B x} (a; b))))^	  @' ap (isequiv_to_O_inO O A).(equiv_inv)	       (ap (to O A) (O_rec_beta pr1 (a; b)))	  @' (ap (isequiv_to_O_inO O A).(equiv_inv)	        (O_rec_beta (fun x0 : {x : _ & B x} => to O A x0.(proj1_sig)) (a; b)))^	  @' ap (isequiv_to_O_inO O A).(equiv_inv)	       (O_rec_beta (fun x0 : {x : _ & B x} => to O A x0.1) (a; b))	  @' (ap (isequiv_to_O_inO O A).(equiv_inv) (ap (to O A) (p (a; b))))^	  @' ap (isequiv_to_O_inO O A).(equiv_inv) (ap (to O A) q)	  @' eissect (to O A) (g x) = q	";
+            data = "1 subgoal (ID 859)	  	  O : ReflectiveSubuniverse	  A : Type	  B : A -> Type	  A_inO : In O A	  B_inO : forall a : A, In O (B a)	  g := (O_rec pr1 : O {x : A & B x} -> A) : O {x : A & B x} -> A	  p := fun x : {x : A & B x} => O_rec_beta pr1 x	   : forall x : {x : A & B x}, g (to O {x0 : A & B x0} x) = x.(proj1_sig)	  x : O {x : A & B x}	  a : A	  b : B a	  q : g (to O {x : A & B x} (a; b)) = g x	  ============================	  (eissect (to O A) (g (to O {x : _ & B x} (a; b))))^	  @' ap (isequiv_to_O_inO O A).(equiv_inv)	       (ap (to O A) (O_rec_beta pr1 (a; b)))	  @' (ap (isequiv_to_O_inO O A).(equiv_inv)	        (O_rec_beta (fun x0 : {x : _ & B x} => to O A x0.(proj1_sig)) (a; b)))^	  @' ap (isequiv_to_O_inO O A).(equiv_inv)	       (O_rec_beta (fun x0 : {x : _ & B x} => to O A x0.1) (a; b))	  @' (ap (isequiv_to_O_inO O A).(equiv_inv) (ap (to O A) (p (a; b))))^	  @' ap (isequiv_to_O_inO O A).(equiv_inv) (ap (to O A) q)	  @' eissect (to O A) (g x) = q	";
             responses[i]=data;
           
 
@@ -1783,7 +1783,7 @@
           
 
             i = 353;
-            data = "No more subgoals.	No more subgoals.	";
+            data = "";
             responses[i]=data;
           
 
