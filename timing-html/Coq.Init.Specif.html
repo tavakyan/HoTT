@@ -64,8 +64,8 @@ Require Import Notations.</pre>
 </div>
 <div class="code" title="File: Specif.v
 Line: 16
-Time: 0.001s">
-<div class="time" style="width: 8.3333333333333%"></div>
+Time: 0.002s">
+<div class="time" style="width: 16.666666666667%"></div>
 <pre>
 Require Import Datatypes.</pre>
 </div>
@@ -147,8 +147,8 @@ Arguments proj2_sig {A P} _ / .</pre>
 </div>
 <div class="code" title="File: Specif.v
 Line: 31
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 8.3333333333333%"></div>
 <pre>
 
 Inductive sig2 (A:Type) (P Q:A -&gt; Type) : Type :=
@@ -484,8 +484,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Specif.v
 Line: 111
-Time: 0.001s">
-<div class="time" style="width: 8.3333333333333%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     intro z; destruct (H z); assumption.</pre>
 </div>
@@ -546,8 +546,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Specif.v
 Line: 130
-Time: 0.001s">
-<div class="time" style="width: 8.3333333333333%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
   Lemma dependent_choice :
@@ -570,8 +570,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Specif.v
 Line: 136
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.002s">
+<div class="time" style="width: 16.666666666667%"></div>
 <pre>
     set (f:=fix f n := match n with O =&gt; x0 | S n' =&gt; projT1 (H (f n')) end).</pre>
 </div>
@@ -597,8 +597,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Specif.v
 Line: 139
-Time: 0.002s">
-<div class="time" style="width: 16.666666666667%"></div>
+Time: 0.001s">
+<div class="time" style="width: 8.3333333333333%"></div>
 <pre>
     induction n; simpl; apply projT2.</pre>
 </div>
@@ -611,8 +611,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Specif.v
 Line: 141
-Time: 0.001s">
-<div class="time" style="width: 8.3333333333333%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 End Dependent_choice_lemmas.</pre>
@@ -735,55 +735,10 @@ Time: 0s">
 Hint Resolve existT existT2: core.</pre>
 </div>
 <div class="code" title="File: Specif.v
-Line: 168
+Line: 169
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-
-
-(* Compatibility with ssreflect *)
-
-(* Notation sigS := sigT (compat "8.2"). *)</pre>
-</div>
-<div class="code" title="File: Specif.v
-Line: 173
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>Notation existS := existT (compat "8.6").</pre>
-</div>
-<div class="code" title="File: Specif.v
-Line: 173
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-(* Notation sigS_rect := sigT_rect (compat "8.2"). *)
-(* Notation sigS_rec := sigT_rec (compat "8.2"). *)
-(* Notation sigS_ind := sigT_ind (compat "8.2"). *)</pre>
-</div>
-<div class="code" title="File: Specif.v
-Line: 176
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>Notation projS1 := projT1 (compat "8.6").</pre>
-</div>
-<div class="code" title="File: Specif.v
-Line: 176
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Notation projS2 := projT2 (compat "8.6").</pre>
-</div>
-<div class="code" title="File: Specif.v
-Line: 178
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
-(* Notation sigS2 := sigT2 (compat "8.2"). *)
-(* Notation existS2 := existT2 (compat "8.2"). *)
-(* Notation sigS2_rect := sigT2_rect (compat "8.2"). *)
-(* Notation sigS2_rec := sigT2_rec (compat "8.2"). *)
-(* Notation sigS2_ind := sigT2_ind (compat "8.2"). *)
 
 </pre>
 </div>
