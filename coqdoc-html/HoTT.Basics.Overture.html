@@ -24,7 +24,7 @@
 </div>
 
 <div class="doc">
-<a name="lab3"></a><h1 class="section">Basic definitions of homotopy type theory, particularly the groupoid structure of identity types.</h1>
+<a name="lab16"></a><h1 class="section">Basic definitions of homotopy type theory, particularly the groupoid structure of identity types.</h1>
  Import the file of reserved notations so we maintain consistent level notations throughout the library 
 </div>
 <div class="code">
@@ -43,7 +43,7 @@ Change in introduction patterns not adding an implicit <font size=-2>&#9744;</fo
 </div>
 
 <div class="doc">
-<a name="lab4"></a><h2 class="section">Type classes</h2>
+<a name="lab17"></a><h2 class="section">Type classes</h2>
 
 <div class="paragraph"> </div>
 
@@ -83,7 +83,7 @@ This command makes it so that when defining an <span class="inlinecode"><span cl
 </div>
 
 <div class="doc">
-This command makes it so that you don't have to declare universes explicitly when mentioning them in the type.  (Without this command, if you want to say <span class="inlinecode"><span class="id" title="keyword">Definition</span></span> <span class="inlinecode"><span class="id" title="var">foo</span></span> <span class="inlinecode">:=</span> <span class="inlinecode"><span class="id" title="var">Type@</span>{<a class="idref" href="HoTT.Basics.PathGroupoids.html#i"><span class="id" title="variable">i</span></a>}.</span>, you must instead say <span class="inlinecode"><span class="id" title="keyword">Definition</span></span> <span class="inlinecode"><span class="id" title="var">foo@</span>{<a class="idref" href="HoTT.Basics.PathGroupoids.html#i"><span class="id" title="variable">i</span></a>}</span> <span class="inlinecode">:=</span> <span class="inlinecode"><span class="id" title="var">Type@</span>{<a class="idref" href="HoTT.Basics.PathGroupoids.html#i"><span class="id" title="variable">i</span></a>}.</span>. 
+This command makes it so that you don't have to declare universes explicitly when mentioning them in the type.  (Without this command, if you want to say <span class="inlinecode"><span class="id" title="keyword">Definition</span></span> <span class="inlinecode"><span class="id" title="var">foo</span></span> <span class="inlinecode">:=</span> <span class="inlinecode"><span class="id" title="var">Type@</span>{<a class="idref" href="Coq.Init.Decimal.html#i"><span class="id" title="variable">i</span></a>}.</span>, you must instead say <span class="inlinecode"><span class="id" title="keyword">Definition</span></span> <span class="inlinecode"><span class="id" title="var">foo@</span>{<a class="idref" href="Coq.Init.Decimal.html#i"><span class="id" title="variable">i</span></a>}</span> <span class="inlinecode">:=</span> <span class="inlinecode"><span class="id" title="var">Type@</span>{<a class="idref" href="Coq.Init.Decimal.html#i"><span class="id" title="variable">i</span></a>}.</span>. 
 </div>
 <div class="code">
 <span class="id" title="keyword">Global</span> <span class="id" title="keyword">Unset</span> <span class="id" title="keyword">Strict</span> <span class="id" title="var">Universe</span> <span class="id" title="var">Declaration</span>.<br/>
@@ -92,7 +92,7 @@ This command makes it so that you don't have to declare universes explicitly whe
 </div>
 
 <div class="doc">
-This command makes it so that when we say something like <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#IsHSet"><span class="id" title="abbreviation">IsHSet</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.nat"><span class="id" title="inductive">nat</span></a></span> we get <span class="inlinecode"><span class="id" title="var">IsHSet@</span>{<a class="idref" href="HoTT.Basics.PathGroupoids.html#i"><span class="id" title="variable">i</span></a>}</span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.nat"><span class="id" title="inductive">nat</span></a></span> instead of <span class="inlinecode"><span class="id" title="var">IsHSet@</span>{<span class="id" title="keyword">Set</span>}</span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.nat"><span class="id" title="inductive">nat</span></a></span>. 
+This command makes it so that when we say something like <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#IsHSet"><span class="id" title="abbreviation">IsHSet</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.nat"><span class="id" title="inductive">nat</span></a></span> we get <span class="inlinecode"><span class="id" title="var">IsHSet@</span>{<a class="idref" href="Coq.Init.Decimal.html#i"><span class="id" title="variable">i</span></a>}</span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.nat"><span class="id" title="inductive">nat</span></a></span> instead of <span class="inlinecode"><span class="id" title="var">IsHSet@</span>{<span class="id" title="keyword">Set</span>}</span> <span class="inlinecode"><a class="idref" href="HoTT.Tests.html#Issue754_1.nat"><span class="id" title="inductive">nat</span></a></span>. 
 </div>
 <div class="code">
 <span class="id" title="keyword">Global</span> <span class="id" title="keyword">Unset</span> <span class="id" title="var">Universe</span> <span class="id" title="var">Minimization</span> <span class="id" title="var">ToSet</span>.<br/>
@@ -203,7 +203,7 @@ We redefine <span class="inlinecode"><span class="id" title="tactic">transitivit
 </div>
 
 <div class="doc">
-<a name="lab5"></a><h2 class="section">Basic definitions</h2>
+<a name="lab18"></a><h2 class="section">Basic definitions</h2>
 
 <div class="paragraph"> </div>
 
@@ -216,7 +216,7 @@ We redefine <span class="inlinecode"><span class="id" title="tactic">transitivit
 </div>
 
 <div class="doc">
-Define <span class="inlinecode"><span class="id" title="var">Type₁</span></span> (really, <span class="inlinecode"><span class="id" title="var">Type_i</span></span> for any <span class="inlinecode"><a class="idref" href="HoTT.Basics.PathGroupoids.html#i"><span class="id" title="variable">i</span></a></span> <span class="inlinecode">&gt;</span> <span class="inlinecode">0</span>) so that we can enforce having universes that are not <span class="inlinecode"><span class="id" title="keyword">Set</span></span>.  In trunk, universes will not be unified with <span class="inlinecode"><span class="id" title="keyword">Set</span></span> in most places, so we want to never use <span class="inlinecode"><span class="id" title="keyword">Set</span></span> at all. 
+Define <span class="inlinecode"><span class="id" title="var">Type₁</span></span> (really, <span class="inlinecode"><span class="id" title="var">Type_i</span></span> for any <span class="inlinecode"><a class="idref" href="Coq.Init.Decimal.html#i"><span class="id" title="variable">i</span></a></span> <span class="inlinecode">&gt;</span> <span class="inlinecode">0</span>) so that we can enforce having universes that are not <span class="inlinecode"><span class="id" title="keyword">Set</span></span>.  In trunk, universes will not be unified with <span class="inlinecode"><span class="id" title="keyword">Set</span></span> in most places, so we want to never use <span class="inlinecode"><span class="id" title="keyword">Set</span></span> at all. 
 </div>
 <div class="code">
 <span class="id" title="keyword">Definition</span> <a name="Type1"><span class="id" title="definition">Type1@</span></a>{<span class="id" title="var">i</span>} := <span class="id" title="keyword">Eval</span> <span class="id" title="tactic">hnf</span> <span class="id" title="tactic">in</span> <span class="id" title="keyword">let</span> <span class="id" title="var">gt</span> := (<span class="id" title="keyword">Set</span> : <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>}) <span class="id" title="tactic">in</span> <span class="id" title="var">Type@</span>{<span class="id" title="var">i</span>}.<br/>
@@ -294,7 +294,7 @@ We define various scopes and open them in the order we expect to use them.
 </div>
 
 <div class="doc">
-<a name="lab6"></a><h3 class="section">Constant functions</h3>
+<a name="lab19"></a><h3 class="section">Constant functions</h3>
 
 </div>
 <div class="code">
@@ -431,7 +431,7 @@ Dependent composition of functions.
 </div>
 
 <div class="doc">
-<a name="lab7"></a><h2 class="section">The groupoid structure of identity types.</h2>
+<a name="lab20"></a><h2 class="section">The groupoid structure of identity types.</h2>
 
 <div class="paragraph"> </div>
 
@@ -627,7 +627,7 @@ An important instance of <span class="inlinecode"><a class="idref" href="HoTT.Ba
 
 <div class="paragraph"> </div>
 
-   <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#transport"><span class="id" title="definition">transport</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.DependentProduct.html#dependent_product.P"><span class="id" title="variable">P</span></a></span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_2_1_Proofs_Are_Equal.p"><span class="id" title="variable">p</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#u"><span class="id" title="variable">u</span></a></span> transports <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#u"><span class="id" title="variable">u</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.DependentProduct.html#dependent_product.P"><span class="id" title="variable">P</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Grothendieck.PseudofunctorToCat.html#x"><span class="id" title="projection">x</span></a></span> to <span class="inlinecode"><a class="idref" href="HoTT.Categories.DependentProduct.html#dependent_product.P"><span class="id" title="variable">P</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Functor.Attributes.html#fully_faithful_helpers.y"><span class="id" title="variable">y</span></a></span> along <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_2_1_Proofs_Are_Equal.p"><span class="id" title="variable">p</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Grothendieck.PseudofunctorToCat.html#x"><span class="id" title="projection">x</span></a></span> <span class="inlinecode">=</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Functor.Attributes.html#fully_faithful_helpers.y"><span class="id" title="variable">y</span></a></span>. 
+   <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#transport"><span class="id" title="definition">transport</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.DependentProduct.html#dependent_product.P"><span class="id" title="variable">P</span></a></span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_2_1_Proofs_Are_Equal.p"><span class="id" title="variable">p</span></a></span> <span class="inlinecode"><a class="idref" href="Coq.Init.Nat.html#u"><span class="id" title="variable">u</span></a></span> transports <span class="inlinecode"><a class="idref" href="Coq.Init.Nat.html#u"><span class="id" title="variable">u</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.DependentProduct.html#dependent_product.P"><span class="id" title="variable">P</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Grothendieck.PseudofunctorToCat.html#x"><span class="id" title="projection">x</span></a></span> to <span class="inlinecode"><a class="idref" href="HoTT.Categories.DependentProduct.html#dependent_product.P"><span class="id" title="variable">P</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Functor.Attributes.html#fully_faithful_helpers.y"><span class="id" title="variable">y</span></a></span> along <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_2_1_Proofs_Are_Equal.p"><span class="id" title="variable">p</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Grothendieck.PseudofunctorToCat.html#x"><span class="id" title="projection">x</span></a></span> <span class="inlinecode">=</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Functor.Attributes.html#fully_faithful_helpers.y"><span class="id" title="variable">y</span></a></span>. 
 </div>
 <div class="code">
 <span class="id" title="keyword">Definition</span> <a name="transport"><span class="id" title="definition">transport</span></a> {<span class="id" title="var">A</span> : <span class="id" title="keyword">Type</span>} (<span class="id" title="var">P</span> : <a class="idref" href="HoTT.Basics.Overture.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>) {<span class="id" title="var">x</span> <span class="id" title="var">y</span> : <a class="idref" href="HoTT.Basics.Overture.html#A"><span class="id" title="variable">A</span></a>} (<span class="id" title="var">p</span> : <a class="idref" href="HoTT.Basics.Overture.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Basics.Overture.html#y"><span class="id" title="variable">y</span></a>) (<span class="id" title="var">u</span> : <a class="idref" href="HoTT.Basics.Overture.html#P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Basics.Overture.html#x"><span class="id" title="variable">x</span></a>) : <a class="idref" href="HoTT.Basics.Overture.html#P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Basics.Overture.html#y"><span class="id" title="variable">y</span></a> :=<br/>
@@ -785,7 +785,7 @@ See above for the meaning of <span class="inlinecode"><span class="id" title="ta
 </div>
 
 <div class="doc">
-<a name="lab8"></a><h2 class="section">Equivalences</h2>
+<a name="lab21"></a><h2 class="section">Equivalences</h2>
 
 <div class="paragraph"> </div>
 
@@ -887,7 +887,7 @@ A notation for the inverse of an equivalence.  We can apply this to a function a
 </div>
 
 <div class="doc">
-<a name="lab9"></a><h2 class="section">Applying paths between equivalences like functions</h2>
+<a name="lab22"></a><h2 class="section">Applying paths between equivalences like functions</h2>
 
 </div>
 <div class="code">
@@ -900,7 +900,7 @@ A notation for the inverse of an equivalence.  We can apply this to a function a
 </div>
 
 <div class="doc">
-<a name="lab10"></a><h2 class="section">Contractibility and truncation levels</h2>
+<a name="lab23"></a><h2 class="section">Contractibility and truncation levels</h2>
 
 <div class="paragraph"> </div>
 
@@ -926,7 +926,7 @@ In order to achieve moderate coverage and speedy resolution, we currently follow
 
 <div class="paragraph"> </div>
 
-<a name="lab11"></a><h3 class="section">Contractibility</h3>
+<a name="lab24"></a><h3 class="section">Contractibility</h3>
 
 <div class="paragraph"> </div>
 
@@ -948,7 +948,7 @@ In order to achieve moderate coverage and speedy resolution, we currently follow
 </div>
 
 <div class="doc">
-<a name="lab12"></a><h3 class="section">Truncation levels</h3>
+<a name="lab25"></a><h3 class="section">Truncation levels</h3>
 
 <div class="paragraph"> </div>
 
@@ -1005,21 +1005,54 @@ Include the basic numerals, so we don't need to go through the coercion from <sp
 <span class="id" title="keyword">Notation</span> <a name="ba79f1be6d9db398bf949da51dd4368c"><span class="id" title="notation">&quot;</span></a>n .+5" := (<span class="id" title="var">n</span><a class="idref" href="HoTT.Basics.Overture.html#b76e54fb8c8bc6b885dddb77bd7d01b8"><span class="id" title="notation">.+1</span></a><a class="idref" href="HoTT.Basics.Overture.html#0e74824220dac13bb350c8ce2458ad23"><span class="id" title="notation">.+4</span></a>)%<span class="id" title="var">trunc</span> : <span class="id" title="var">trunc_scope</span>.<br/>
 <span class="id" title="keyword">Notation</span> <a name="f78f3853e8d6bffffe9b6bc1ce727fd3"><span class="id" title="notation">&quot;</span></a>n .+5" := (<span class="id" title="var">n</span><a class="idref" href="HoTT.Basics.Overture.html#bda89d73ec4a8f23ae92b565ffb5aaa6"><span class="id" title="notation">.+1</span></a><a class="idref" href="HoTT.Basics.Overture.html#854d640e6c55155f8eda90636a67ef35"><span class="id" title="notation">.+4</span></a>)%<span class="id" title="var">nat</span>   : <span class="id" title="var">nat_scope</span>.<br/>
 <span class="id" title="keyword">Local Open</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">trunc_scope</span>.<br/>
-<span class="id" title="keyword">Notation</span> <a name="e47d7aae8d47823f116e25f0da4f217f"><span class="id" title="notation">&quot;</span></a>-2" := <a class="idref" href="HoTT.Basics.Overture.html#minus_two"><span class="id" title="constructor">minus_two</span></a> (<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 0) : <span class="id" title="var">trunc_scope</span>.<br/>
-<span class="id" title="keyword">Notation</span> <a name="1a8ec123dd7d8a39d00bfcc0b46c8dd4"><span class="id" title="notation">&quot;</span></a>-1" := (<a class="idref" href="HoTT.Basics.Overture.html#e47d7aae8d47823f116e25f0da4f217f"><span class="id" title="notation">-2</span></a><a class="idref" href="HoTT.Basics.Overture.html#b76e54fb8c8bc6b885dddb77bd7d01b8"><span class="id" title="notation">.+1</span></a>) (<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 0) : <span class="id" title="var">trunc_scope</span>.<br/>
-<span class="id" title="keyword">Notation</span> <a name="04bcf7d31812ab94e82dc934208cb136"><span class="id" title="notation">&quot;</span></a>0" := (<a class="idref" href="HoTT.Basics.Overture.html#1a8ec123dd7d8a39d00bfcc0b46c8dd4"><span class="id" title="notation">-1</span></a><a class="idref" href="HoTT.Basics.Overture.html#b76e54fb8c8bc6b885dddb77bd7d01b8"><span class="id" title="notation">.+1</span></a>) : <span class="id" title="var">trunc_scope</span>.<br/>
-<span class="id" title="keyword">Notation</span> <a name="517d3f8b94b6608df069d21ad5190dcb"><span class="id" title="notation">&quot;</span></a>1" := (0<a class="idref" href="HoTT.Basics.Overture.html#b76e54fb8c8bc6b885dddb77bd7d01b8"><span class="id" title="notation">.+1</span></a>) : <span class="id" title="var">trunc_scope</span>.<br/>
-<span class="id" title="keyword">Notation</span> <a name="188cfb09e4f77de8d702f1c6906c2c81"><span class="id" title="notation">&quot;</span></a>2" := (1<a class="idref" href="HoTT.Basics.Overture.html#b76e54fb8c8bc6b885dddb77bd7d01b8"><span class="id" title="notation">.+1</span></a>) : <span class="id" title="var">trunc_scope</span>.<br/>
-
-<br/>
 <span class="id" title="keyword">Fixpoint</span> <a name="nat_to_trunc_index"><span class="id" title="definition">nat_to_trunc_index</span></a> (<span class="id" title="var">n</span> : <a class="idref" href="Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>) : <a class="idref" href="HoTT.Basics.Overture.html#trunc_index"><span class="id" title="inductive">trunc_index</span></a><br/>
 &nbsp;&nbsp;:= <span class="id" title="keyword">match</span> <a class="idref" href="HoTT.Basics.Overture.html#n"><span class="id" title="variable">n</span></a> <span class="id" title="keyword">with</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 0%<span class="id" title="var">nat</span> ⇒ 0<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 0%<span class="id" title="var">nat</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#minus_two"><span class="id" title="constructor">minus_two</span></a><a class="idref" href="HoTT.Basics.Overture.html#ca42b5f7240c4d2bdbfa8417567961e4"><span class="id" title="notation">.+2</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <a class="idref" href="Coq.Init.Datatypes.html#S"><span class="id" title="constructor">S</span></a> <span class="id" title="var">n'</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#b76e54fb8c8bc6b885dddb77bd7d01b8"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Overture.html#nat_to_trunc_index"><span class="id" title="definition">nat_to_trunc_index</span></a> <span class="id" title="var">n'</span><a class="idref" href="HoTT.Basics.Overture.html#b76e54fb8c8bc6b885dddb77bd7d01b8"><span class="id" title="notation">).+1</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">end</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Coercion</span> <a class="idref" href="HoTT.Basics.Overture.html#nat_to_trunc_index"><span class="id" title="definition">nat_to_trunc_index</span></a> <a class="idref" href="HoTT.Basics.Overture.html#nat_to_trunc_index"><span class="id" title="definition">:</span></a> <a class="idref" href="HoTT.Basics.Overture.html#nat_to_trunc_index"><span class="id" title="definition">nat</span></a> <a class="idref" href="HoTT.Basics.Overture.html#nat_to_trunc_index"><span class="id" title="definition">&gt;-&gt;</span></a> <a class="idref" href="HoTT.Basics.Overture.html#nat_to_trunc_index"><span class="id" title="definition">trunc_index</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a name="int_to_trunc_index"><span class="id" title="definition">int_to_trunc_index</span></a> (<span class="id" title="var">v</span> : <a class="idref" href="Coq.Init.Decimal.html#int"><span class="id" title="inductive">Decimal.int</span></a>) : <a class="idref" href="Coq.Init.Datatypes.html#option"><span class="id" title="inductive">option</span></a> <a class="idref" href="HoTT.Basics.Overture.html#trunc_index"><span class="id" title="inductive">trunc_index</span></a><br/>
+&nbsp;&nbsp;:= <span class="id" title="keyword">match</span> <a class="idref" href="HoTT.Basics.Overture.html#v"><span class="id" title="variable">v</span></a> <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <a class="idref" href="Coq.Init.Decimal.html#Pos"><span class="id" title="constructor">Decimal.Pos</span></a> <span class="id" title="var">d</span> ⇒ <a class="idref" href="Coq.Init.Datatypes.html#Some"><span class="id" title="constructor">Some</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#nat_to_trunc_index"><span class="id" title="definition">nat_to_trunc_index</span></a> (<a class="idref" href="Coq.Init.Nat.html#of_uint"><span class="id" title="definition">Nat.of_uint</span></a> <span class="id" title="var">d</span>))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <a class="idref" href="Coq.Init.Decimal.html#Neg"><span class="id" title="constructor">Decimal.Neg</span></a> <span class="id" title="var">d</span> ⇒ <span class="id" title="keyword">match</span> <a class="idref" href="Coq.Init.Nat.html#of_uint"><span class="id" title="definition">Nat.of_uint</span></a> <span class="id" title="var">d</span> <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 2%<span class="id" title="var">nat</span> ⇒ <a class="idref" href="Coq.Init.Datatypes.html#Some"><span class="id" title="constructor">Some</span></a> <a class="idref" href="HoTT.Basics.Overture.html#minus_two"><span class="id" title="constructor">minus_two</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 1%<span class="id" title="var">nat</span> ⇒ <a class="idref" href="Coq.Init.Datatypes.html#Some"><span class="id" title="constructor">Some</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#minus_two"><span class="id" title="constructor">minus_two</span></a><a class="idref" href="HoTT.Basics.Overture.html#b76e54fb8c8bc6b885dddb77bd7d01b8"><span class="id" title="notation">.+1</span></a>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 0%<span class="id" title="var">nat</span> ⇒ <a class="idref" href="Coq.Init.Datatypes.html#Some"><span class="id" title="constructor">Some</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#minus_two"><span class="id" title="constructor">minus_two</span></a><a class="idref" href="HoTT.Basics.Overture.html#ca42b5f7240c4d2bdbfa8417567961e4"><span class="id" title="notation">.+2</span></a>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id" title="var">_</span> ⇒ <a class="idref" href="Coq.Init.Datatypes.html#None"><span class="id" title="constructor">None</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">end</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">end</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Fixpoint</span> <a name="trunc_index_to_little_uint"><span class="id" title="definition">trunc_index_to_little_uint</span></a> <span class="id" title="var">n</span> <span class="id" title="var">acc</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">match</span> <a class="idref" href="HoTT.Basics.Overture.html#n"><span class="id" title="variable">n</span></a> <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;| <a class="idref" href="HoTT.Basics.Overture.html#minus_two"><span class="id" title="constructor">minus_two</span></a> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#acc"><span class="id" title="variable">acc</span></a><br/>
+&nbsp;&nbsp;| <a class="idref" href="HoTT.Basics.Overture.html#minus_two"><span class="id" title="constructor">minus_two</span></a><a class="idref" href="HoTT.Basics.Overture.html#b76e54fb8c8bc6b885dddb77bd7d01b8"><span class="id" title="notation">.+1</span></a> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#acc"><span class="id" title="variable">acc</span></a><br/>
+&nbsp;&nbsp;| <a class="idref" href="HoTT.Basics.Overture.html#minus_two"><span class="id" title="constructor">minus_two</span></a><a class="idref" href="HoTT.Basics.Overture.html#ca42b5f7240c4d2bdbfa8417567961e4"><span class="id" title="notation">.+2</span></a> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#acc"><span class="id" title="variable">acc</span></a><br/>
+&nbsp;&nbsp;| <a class="idref" href="HoTT.Basics.Overture.html#trunc_S"><span class="id" title="constructor">trunc_S</span></a> <span class="id" title="var">n</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#trunc_index_to_little_uint"><span class="id" title="definition">trunc_index_to_little_uint</span></a> <a class="idref" href="HoTT.Basics.Overture.html#n"><span class="id" title="variable">n</span></a> (<a class="idref" href="Coq.Init.Decimal.html#Little.succ"><span class="id" title="definition">Decimal.Little.succ</span></a> <a class="idref" href="HoTT.Basics.Overture.html#acc"><span class="id" title="variable">acc</span></a>)<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">end</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a name="trunc_index_to_int"><span class="id" title="definition">trunc_index_to_int</span></a> <span class="id" title="var">n</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">match</span> <a class="idref" href="HoTT.Basics.Overture.html#n"><span class="id" title="variable">n</span></a> <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;| <a class="idref" href="HoTT.Basics.Overture.html#minus_two"><span class="id" title="constructor">minus_two</span></a> ⇒ <a class="idref" href="Coq.Init.Decimal.html#Neg"><span class="id" title="constructor">Decimal.Neg</span></a> (<a class="idref" href="Coq.Init.Nat.html#to_uint"><span class="id" title="definition">Nat.to_uint</span></a> 2)<br/>
+&nbsp;&nbsp;| <a class="idref" href="HoTT.Basics.Overture.html#minus_two"><span class="id" title="constructor">minus_two</span></a><a class="idref" href="HoTT.Basics.Overture.html#b76e54fb8c8bc6b885dddb77bd7d01b8"><span class="id" title="notation">.+1</span></a> ⇒ <a class="idref" href="Coq.Init.Decimal.html#Neg"><span class="id" title="constructor">Decimal.Neg</span></a> (<a class="idref" href="Coq.Init.Nat.html#to_uint"><span class="id" title="definition">Nat.to_uint</span></a> 1)<br/>
+&nbsp;&nbsp;| <span class="id" title="var">n</span> ⇒ <a class="idref" href="Coq.Init.Decimal.html#Pos"><span class="id" title="constructor">Decimal.Pos</span></a> (<a class="idref" href="Coq.Init.Decimal.html#rev"><span class="id" title="definition">Decimal.rev</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#trunc_index_to_little_uint"><span class="id" title="definition">trunc_index_to_little_uint</span></a> <a class="idref" href="HoTT.Basics.Overture.html#n"><span class="id" title="variable">n</span></a> <a class="idref" href="Coq.Init.Decimal.html#zero"><span class="id" title="abbreviation">Decimal.zero</span></a>))<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">end</span>.<br/>
+
+<br/>
+<span class="id" title="var">Numeral</span> <span class="id" title="keyword">Notation</span> <a class="idref" href="HoTT.Basics.Overture.html#trunc_index"><span class="id" title="inductive">trunc_index</span></a> <a class="idref" href="HoTT.Basics.Overture.html#int_to_trunc_index"><span class="id" title="definition">int_to_trunc_index</span></a> <a class="idref" href="HoTT.Basics.Overture.html#trunc_index_to_int"><span class="id" title="definition">trunc_index_to_int</span></a> : <span class="id" title="var">trunc_scope</span> (<span class="id" title="var">warning</span> <span class="id" title="keyword">after</span> 5000).<br/>
+</div>
+
+<div class="doc">
+We declare <span class="inlinecode">-2</span> and <span class="inlinecode">-1</span> as notations so that they bind tighter than application, so we can write <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#IsTrunc"><span class="id" title="record">IsTrunc</span></a></span> <span class="inlinecode">-1</span> rather than <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#IsTrunc"><span class="id" title="record">IsTrunc</span></a></span> <span class="inlinecode">(-1)</span>. 
+</div>
+<div class="code">
+<span class="id" title="keyword">Notation</span> <a name="e47d7aae8d47823f116e25f0da4f217f"><span class="id" title="notation">&quot;</span></a>-2" := (- 2) : <span class="id" title="var">trunc_scope</span>.<br/>
+<span class="id" title="keyword">Notation</span> <a name="1a8ec123dd7d8a39d00bfcc0b46c8dd4"><span class="id" title="notation">&quot;</span></a>-1" := (- 1) : <span class="id" title="var">trunc_scope</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Fixpoint</span> <a name="IsTrunc_internal"><span class="id" title="definition">IsTrunc_internal</span></a> (<span class="id" title="var">n</span> : <a class="idref" href="HoTT.Basics.Overture.html#trunc_index"><span class="id" title="inductive">trunc_index</span></a>) (<span class="id" title="var">A</span> : <span class="id" title="keyword">Type</span>) : <span class="id" title="keyword">Type</span> :=<br/>
@@ -1091,7 +1124,7 @@ Picking up the <span class="inlinecode"><span class="id" title="keyword">∀</sp
 </div>
 
 <div class="doc">
-<a name="lab13"></a><h3 class="section">Simple induction</h3>
+<a name="lab26"></a><h3 class="section">Simple induction</h3>
 
 <div class="paragraph"> </div>
 
@@ -1110,7 +1143,7 @@ Picking up the <span class="inlinecode"><span class="id" title="keyword">∀</sp
 </div>
 
 <div class="doc">
-<a name="lab14"></a><h3 class="section">Truncated relations</h3>
+<a name="lab27"></a><h3 class="section">Truncated relations</h3>
 
 <div class="paragraph"> </div>
 
@@ -1123,11 +1156,11 @@ Picking up the <span class="inlinecode"><span class="id" title="keyword">∀</sp
 </div>
 
 <div class="doc">
-<a name="lab15"></a><h3 class="section">Function extensionality</h3>
+<a name="lab28"></a><h3 class="section">Function extensionality</h3>
 
 <div class="paragraph"> </div>
 
- The function extensionality axiom is formulated as a class. To use it in a theorem, just assume it with <span class="inlinecode">`{<a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="axiom">Funext</span></a>}</span>, and then you can use <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#path_forall"><span class="id" title="definition">path_forall</span></a></span>, defined below.  If you need function extensionality for a whole development, you can assume it for an entire Section with <span class="inlinecode"><span class="id" title="keyword">Context</span></span> <span class="inlinecode">`{<a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="axiom">Funext</span></a>}</span>.   We use a dummy class and an axiom to get universe polymorphism of <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="axiom">Funext</span></a></span> while still tracking its uses.  Coq's universe polymorphism is parametric; in all definitions, all universes are quantified over before any other variables.  It's impossible to state a theorem like <span class="inlinecode">(<span class="id" title="keyword">∀</span></span> <span class="inlinecode"><a class="idref" href="HoTT.Basics.PathGroupoids.html#i"><span class="id" title="variable">i</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><span class="id" title="var">Level</span>,</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.DependentProduct.html#dependent_product.P"><span class="id" title="variable">P</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Basics.PathGroupoids.html#i"><span class="id" title="variable">i</span></a>)</span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.assume_rationals.html#Q"><span class="id" title="axiom">Q</span></a></span> (e.g., "if <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.C"><span class="id" title="variable">C</span></a></span> has all limits of all sizes, then <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.C"><span class="id" title="variable">C</span></a></span> is a preorder" isn't statable).*  By making <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#isequiv_apD10"><span class="id" title="axiom">isequiv_apD10</span></a></span> an <span class="inlinecode"><span class="id" title="keyword">Axiom</span></span> rather than a per-theorem hypothesis, we can use it at multiple incompatible universe levels.  By only allowing use of the axiom when we have a <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="axiom">Funext</span></a></span> in the context, we can still track what theorems depend on it (because their type will mention <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="axiom">Funext</span></a></span>).
+ The function extensionality axiom is formulated as a class. To use it in a theorem, just assume it with <span class="inlinecode">`{<a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="axiom">Funext</span></a>}</span>, and then you can use <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#path_forall"><span class="id" title="definition">path_forall</span></a></span>, defined below.  If you need function extensionality for a whole development, you can assume it for an entire Section with <span class="inlinecode"><span class="id" title="keyword">Context</span></span> <span class="inlinecode">`{<a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="axiom">Funext</span></a>}</span>.   We use a dummy class and an axiom to get universe polymorphism of <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="axiom">Funext</span></a></span> while still tracking its uses.  Coq's universe polymorphism is parametric; in all definitions, all universes are quantified over before any other variables.  It's impossible to state a theorem like <span class="inlinecode">(<span class="id" title="keyword">∀</span></span> <span class="inlinecode"><a class="idref" href="Coq.Init.Decimal.html#i"><span class="id" title="variable">i</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><span class="id" title="var">Level</span>,</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.DependentProduct.html#dependent_product.P"><span class="id" title="variable">P</span></a></span> <span class="inlinecode"><a class="idref" href="Coq.Init.Decimal.html#i"><span class="id" title="variable">i</span></a>)</span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.assume_rationals.html#Q"><span class="id" title="axiom">Q</span></a></span> (e.g., "if <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.C"><span class="id" title="variable">C</span></a></span> has all limits of all sizes, then <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.C"><span class="id" title="variable">C</span></a></span> is a preorder" isn't statable).*  By making <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#isequiv_apD10"><span class="id" title="axiom">isequiv_apD10</span></a></span> an <span class="inlinecode"><span class="id" title="keyword">Axiom</span></span> rather than a per-theorem hypothesis, we can use it at multiple incompatible universe levels.  By only allowing use of the axiom when we have a <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="axiom">Funext</span></a></span> in the context, we can still track what theorems depend on it (because their type will mention <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="axiom">Funext</span></a></span>).
 
 <div class="paragraph"> </div>
 
@@ -1139,7 +1172,7 @@ Picking up the <span class="inlinecode"><span class="id" title="keyword">∀</sp
 
 <div class="paragraph"> </div>
 
-<a name="lab16"></a><h1 class="section">That's not technically true; it might be possible to get non-parametric universe polymorphism using <span class="inlinecode"><span class="id" title="keyword">Module</span></span>s and (<span class="inlinecode"><span class="id" title="keyword">Module</span></span>) Functors; we can use functors to quantify over a <span class="inlinecode"><span class="id" title="keyword">Module</span></span> <span class="inlinecode"><span class="id" title="keyword">Type</span></span> which requires a polymorphic proof of a given hypothesis, and then use that hypothesis polymorphically in any theorem we prove in our new <span class="inlinecode"><span class="id" title="keyword">Module</span></span> Functor.  But that is far beyond the scope of this file.</h1>
+<a name="lab29"></a><h1 class="section">That's not technically true; it might be possible to get non-parametric universe polymorphism using <span class="inlinecode"><span class="id" title="keyword">Module</span></span>s and (<span class="inlinecode"><span class="id" title="keyword">Module</span></span>) Functors; we can use functors to quantify over a <span class="inlinecode"><span class="id" title="keyword">Module</span></span> <span class="inlinecode"><span class="id" title="keyword">Type</span></span> which requires a polymorphic proof of a given hypothesis, and then use that hypothesis polymorphically in any theorem we prove in our new <span class="inlinecode"><span class="id" title="keyword">Module</span></span> Functor.  But that is far beyond the scope of this file.</h1>
 
 </div>
 <div class="code">
@@ -1170,7 +1203,7 @@ Picking up the <span class="inlinecode"><span class="id" title="keyword">∀</sp
 </div>
 
 <div class="doc">
-<a name="lab17"></a><h3 class="section">Tactics</h3>
+<a name="lab30"></a><h3 class="section">Tactics</h3>
 
 <div class="paragraph"> </div>
 
@@ -1268,7 +1301,7 @@ A <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Unit
 </div>
 
 <div class="doc">
-<a name="lab18"></a><h3 class="section">Pointed types</h3>
+<a name="lab31"></a><h3 class="section">Pointed types</h3>
 
 <div class="paragraph"> </div>
 
@@ -1295,7 +1328,7 @@ A <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Unit
 </div>
 
 <div class="doc">
-<a name="lab19"></a><h3 class="section">Homotopy fibers</h3>
+<a name="lab32"></a><h3 class="section">Homotopy fibers</h3>
 
 <div class="paragraph"> </div>
 
@@ -1313,7 +1346,7 @@ A <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Unit
 </div>
 
 <div class="doc">
-<a name="lab20"></a><h3 class="section">More tactics</h3>
+<a name="lab33"></a><h3 class="section">More tactics</h3>
 
 <div class="paragraph"> </div>
 

@@ -48,7 +48,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: Tactics.v
 Line: 12
-Time: 0.015s">
+Time: 0.014s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import Datatypes Specif Logic.</pre>
 </div>
@@ -116,7 +116,7 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac do_nat n tac :=
   match n with
-    | 0 =&gt; idtac
+    | O =&gt; idtac
     | S ?n' =&gt; tac ; do_nat n' tac
   end.</pre>
 </div>
@@ -189,12 +189,12 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac destruct_one_ex :=
   let tac H := let ph := fresh "H" in (destruct H as [H ph]) in
-  let tac2 H := let ph := fresh "H" in let ph' := fresh "H" in 
-    (destruct H as [H ph ph']) 
+  let tac2 H := let ph := fresh "H" in let ph' := fresh "H" in
+    (destruct H as [H ph ph'])
   in
   let tacT H := let ph := fresh "X" in (destruct H as [H ph]) in
-  let tacT2 H := let ph := fresh "X" in let ph' := fresh "X" in 
-    (destruct H as [H ph ph']) 
+  let tacT2 H := let ph := fresh "X" in let ph' := fresh "X" in
+    (destruct H as [H ph ph'])
   in
     match goal with
       (* | [H : (ex _) |- _] =&gt; tac H *)
@@ -394,7 +394,7 @@ Time: 0s">
 Line: 130
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>Ltac clear_except hyp := 
+<pre>Ltac clear_except hyp :=
   repeat match goal with [ H : _ |- _ ] =&gt;
            match H with
              | hyp =&gt; fail 1
@@ -884,6 +884,14 @@ Time: 0s">
 <pre>
 
 Definition obligation (A : Type) {a : A} := a.</pre>
+</div>
+<div class="code" title="File: Tactics.v
+Line: 303
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+</pre>
 </div>
 </body>
 </html>

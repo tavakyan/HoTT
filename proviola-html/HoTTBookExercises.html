@@ -1358,12 +1358,12 @@
           
 
             i = 268;
-            data = "1 subgoal (ID 336)	  	  A : Type	  B : Type	  X : Type	  H : Funext	  ============================	  Sect coprod_ump2 coprod_ump1	";
+            data = "1 subgoal (ID 336)	  	  A : Type	  B : Type	  X : Type	  H : Funext	  ============================	  Sect coprod_ump2 coprod_ump1	1 subgoal (ID 358)	  	  A : Type	  B : Type	  X : Type	  H : Funext	  f : A -> X	  g : B -> X	  ============================	  coprod_ump1 (coprod_ump2 (f, g)) = (f, g)	";
             responses[i]=data;
           
 
             i = 269;
-            data = "1 subgoal (ID 358)	  	  A : Type	  B : Type	  X : Type	  H : Funext	  f : A -> X	  g : B -> X	  ============================	  coprod_ump1 (coprod_ump2 (f, g)) = (f, g)	No more subgoals.	";
+            data = "No more subgoals.	";
             responses[i]=data;
           
 
@@ -2798,27 +2798,27 @@
           
 
             i = 556;
-            data = "1 subgoal (ID 421)	  	  H : Univalence	  ============================	  ~ (forall A : Type, Trunc -1 A -> A)	";
+            data = "1 subgoal (ID 421)	  	  H : Univalence	  ============================	  ~ (forall A : Type, Trunc (-1) A -> A)	";
             responses[i]=data;
           
 
             i = 557;
-            data = "1 subgoal (ID 423)	  	  H : Univalence	  g : forall A : Type, Trunc -1 A -> A	  ============================	  Empty	";
+            data = "1 subgoal (ID 423)	  	  H : Univalence	  g : forall A : Type, Trunc (-1) A -> A	  ============================	  Empty	";
             responses[i]=data;
           
 
             i = 558;
-            data = "2 subgoals (ID 425)	  	  H : Univalence	  g : forall A : Type, Trunc -1 A -> A	  ============================	  forall A : Type, Contr (Trunc -1 A -> Trunc -1 A)		subgoal 2 (ID 427) is:	 Empty	";
+            data = "2 subgoals (ID 425)	  	  H : Univalence	  g : forall A : Type, Trunc (-1) A -> A	  ============================	  forall A : Type, Contr (Trunc (-1) A -> Trunc (-1) A)		subgoal 2 (ID 427) is:	 Empty	";
             responses[i]=data;
           
 
             i = 559;
-            data = "1 subgoal (ID 425)	  	  H : Univalence	  g : forall A : Type, Trunc -1 A -> A	  ============================	  forall A : Type, Contr (Trunc -1 A -> Trunc -1 A)	1 subgoal (ID 428)	  	  H : Univalence	  g : forall A : Type, Trunc -1 A -> A	  A : Type	  ============================	  Contr (Trunc -1 A -> Trunc -1 A)	";
+            data = "1 subgoal (ID 425)	  	  H : Univalence	  g : forall A : Type, Trunc (-1) A -> A	  ============================	  forall A : Type, Contr (Trunc (-1) A -> Trunc (-1) A)	1 subgoal (ID 428)	  	  H : Univalence	  g : forall A : Type, Trunc (-1) A -> A	  A : Type	  ============================	  Contr (Trunc (-1) A -> Trunc (-1) A)	";
             responses[i]=data;
           
 
             i = 560;
-            data = "1 subgoal (ID 438)	  	  H : Univalence	  g : forall A : Type, Trunc -1 A -> A	  A : Type	  ============================	  IsHProp (Trunc -1 A)	";
+            data = "1 subgoal (ID 438)	  	  H : Univalence	  g : forall A : Type, Trunc (-1) A -> A	  A : Type	  ============================	  IsHProp (Trunc (-1) A)	";
             responses[i]=data;
           
 
@@ -2858,12 +2858,12 @@
           
 
             i = 568;
-            data = "1 subgoal (ID 427)	  	  H : Univalence	  g : forall A : Type, Trunc -1 A -> A	  end_contr : forall A : Type, Contr (Trunc -1 A -> Trunc -1 A)	  ============================	  Empty	1 subgoal (ID 452)	  	  H : Univalence	  g : forall A : Type, Trunc -1 A -> A	  end_contr : forall A : Type, Contr (Trunc -1 A -> Trunc -1 A)	  contr := fun b : Trunc -1 Bool =>	           not_fixed_negb (g Bool b)	             (ap10	                (univalence_func_natural_equiv (Trunc -1) end_contr g	                   equiv_negb) b) : Trunc -1 Bool -> Empty	  ============================	  Empty	";
+            data = "1 subgoal (ID 427)	  	  H : Univalence	  g : forall A : Type, Trunc (-1) A -> A	  end_contr : forall A : Type, Contr (Trunc (-1) A -> Trunc (-1) A)	  ============================	  Empty	";
             responses[i]=data;
           
 
             i = 569;
-            data = "No more subgoals.	";
+            data = "1 subgoal (ID 452)	  	  H : Univalence	  g : forall A : Type, Trunc (-1) A -> A	  end_contr : forall A : Type, Contr (Trunc (-1) A -> Trunc (-1) A)	  contr := fun b : Trunc (-1) Bool =>	           not_fixed_negb (g Bool b)	             (ap10	                (univalence_func_natural_equiv (Trunc (-1)) end_contr g	                   equiv_negb) b) : Trunc (-1) Bool -> Empty	  ============================	  Empty	No more subgoals.	";
             responses[i]=data;
           
 
@@ -3938,17 +3938,17 @@
           
 
             i = 784;
-            data = "1 subgoal (ID 505)	  	  fa : Funext_type	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : B -> A	  g : forall b : B, P (f b) -> Q b	  H : IsEquiv f	  H0 : forall b : B, IsEquiv (g b)	  h : forall b : B, Q b	  ============================	  functor_forall f g	    (functor_forall H.(equiv_inv)	       (fun (x : A) (y : Q (H.(equiv_inv) x)) =>	        transport P (H.(eisretr) x) ((H0 (H.(equiv_inv) x)).(equiv_inv) y)) h) =	  h	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 507)		subgoal 1 (ID 507) is:	 functor_forall H.(equiv_inv)	   (fun (x : A) (y : Q (H.(equiv_inv) x)) =>	    transport P (H.(eisretr) x) ((H0 (H.(equiv_inv) x)).(equiv_inv) y))	   (functor_forall f g h) = h	";
+            data = "1 subgoal (ID 505)	  	  fa : Funext_type	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : B -> A	  g : forall b : B, P (f b) -> Q b	  H : IsEquiv f	  H0 : forall b : B, IsEquiv (g b)	  h : forall b : B, Q b	  ============================	  functor_forall f g	    (functor_forall H.(equiv_inv)	       (fun (x : A) (y : Q (H.(equiv_inv) x)) =>	        transport P (H.(eisretr) x) ((H0 (H.(equiv_inv) x)).(equiv_inv) y)) h) =	  h	";
             responses[i]=data;
           
 
             i = 785;
-            data = "1 subgoal (ID 507)	  	  fa : Funext_type	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : B -> A	  g : forall b : B, P (f b) -> Q b	  H : IsEquiv f	  H0 : forall b : B, IsEquiv (g b)	  h : forall a : A, P a	  ============================	  functor_forall H.(equiv_inv)	    (fun (x : A) (y : Q (H.(equiv_inv) x)) =>	     transport P (H.(eisretr) x) ((H0 (H.(equiv_inv) x)).(equiv_inv) y))	    (functor_forall f g h) = h	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 507)		subgoal 1 (ID 507) is:	 functor_forall H.(equiv_inv)	   (fun (x : A) (y : Q (H.(equiv_inv) x)) =>	    transport P (H.(eisretr) x) ((H0 (H.(equiv_inv) x)).(equiv_inv) y))	   (functor_forall f g h) = h	1 subgoal (ID 507)	  	  fa : Funext_type	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : B -> A	  g : forall b : B, P (f b) -> Q b	  H : IsEquiv f	  H0 : forall b : B, IsEquiv (g b)	  h : forall a : A, P a	  ============================	  functor_forall H.(equiv_inv)	    (fun (x : A) (y : Q (H.(equiv_inv) x)) =>	     transport P (H.(eisretr) x) ((H0 (H.(equiv_inv) x)).(equiv_inv) y))	    (functor_forall f g h) = h	No more subgoals.	";
             responses[i]=data;
           
 
             i = 786;
-            data = "No more subgoals.	<infomsg>ft_isequiv_functor_forall is defined</infomsg>	";
+            data = "<infomsg>ft_isequiv_functor_forall is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -5208,7 +5208,7 @@
           
 
             i = 1038;
-            data = "1 subgoal (ID 495)	  	  LEM : forall A : Type, IsHProp A -> A + (~ A)	  ua : Univalence	  fs : Funext	  b : Bool	  ============================	  match	    LEM	      (Contr {f : Bool <~> Bool & ~ (forall x : Bool, f.(equiv_fun) x = x)})	      (hprop_trunc -2	         {f : Bool <~> Bool & ~ (forall x : Bool, f.(equiv_fun) x = x)})	  with	  | inl i => i.(center).(proj1_sig).(equiv_fun)	  | inr _ => idmap	  end b = negb b	";
+            data = "1 subgoal (ID 495)	  	  LEM : forall A : Type, IsHProp A -> A + (~ A)	  ua : Univalence	  fs : Funext	  b : Bool	  ============================	  match	    LEM	      (Contr {f : Bool <~> Bool & ~ (forall x : Bool, f.(equiv_fun) x = x)})	      (hprop_trunc (-2)	         {f : Bool <~> Bool & ~ (forall x : Bool, f.(equiv_fun) x = x)})	  with	  | inl i => i.(center).(proj1_sig).(equiv_fun)	  | inr _ => idmap	  end b = negb b	";
             responses[i]=data;
           
 
@@ -5418,7 +5418,7 @@
           
 
             i = 1080;
-            data = "2 subgoals (ID 527)	  	  LEM : forall A : Type, IsHProp A -> A + (~ A)	  H : Funext	  Bad : solution_6_9 Bool = idmap	  Ugly : solution_6_9 Bool true = idmap true	  ============================	  sum_rect	    (fun _ : Contr (AllExistsOther Bool) + (~ Contr (AllExistsOther Bool)) =>	     Bool -> Bool)	    (fun (a : Contr (AllExistsOther Bool)) (x : Bool) =>	     (a.(center) x).(proj1_sig))	    (fun _ : ~ Contr (AllExistsOther Bool) => idmap)	    (LEM (Contr (AllExistsOther Bool)) (hprop_trunc -2 (AllExistsOther Bool)))	    true = false		subgoal 2 (ID 526) is:	 Empty	";
+            data = "2 subgoals (ID 527)	  	  LEM : forall A : Type, IsHProp A -> A + (~ A)	  H : Funext	  Bad : solution_6_9 Bool = idmap	  Ugly : solution_6_9 Bool true = idmap true	  ============================	  sum_rect	    (fun _ : Contr (AllExistsOther Bool) + (~ Contr (AllExistsOther Bool)) =>	     Bool -> Bool)	    (fun (a : Contr (AllExistsOther Bool)) (x : Bool) =>	     (a.(center) x).(proj1_sig))	    (fun _ : ~ Contr (AllExistsOther Bool) => idmap)	    (LEM (Contr (AllExistsOther Bool))	       (hprop_trunc (-2) (AllExistsOther Bool))) true = false		subgoal 2 (ID 526) is:	 Empty	";
             responses[i]=data;
           
 

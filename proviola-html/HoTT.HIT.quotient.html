@@ -933,12 +933,12 @@
           
 
             i = 183;
-            data = "1 subgoal (ID 115)	  	  H : Univalence	  A : Type	  R : relation A	  sR : is_mere_relation A R	  Htrans : Transitive R	  Hsymm : Symmetric R	  Hrefl : Reflexive R	  P : quotient R -> Type	  Hprop' : forall x : A, IsHProp (P (class_of R x))	  dclass : forall x : A, P (class_of R x)	  ============================	  forall x : quotient R, IsHSet (P x)	1 subgoal (ID 316)	  	  H : Univalence	  A : Type	  R : relation A	  sR : is_mere_relation A R	  Htrans : Transitive R	  Hsymm : Symmetric R	  Hrefl : Reflexive R	  P : quotient R -> Type	  Hprop' : forall x : A, IsHProp (P (class_of R x))	  dclass : forall x : A, P (class_of R x)	  ============================	  forall (x y : A) (H0 : R x y),	  transport (fun x0 : quotient R => IsHSet (P x0)) 	    (related_classes_eq R H0) ((fun x0 : A => trunc_hprop) x) =	  (fun x0 : A => trunc_hprop) y	";
+            data = "1 subgoal (ID 115)	  	  H : Univalence	  A : Type	  R : relation A	  sR : is_mere_relation A R	  Htrans : Transitive R	  Hsymm : Symmetric R	  Hrefl : Reflexive R	  P : quotient R -> Type	  Hprop' : forall x : A, IsHProp (P (class_of R x))	  dclass : forall x : A, P (class_of R x)	  ============================	  forall x : quotient R, IsHSet (P x)	";
             responses[i]=data;
           
 
             i = 184;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 116)		subgoal 1 (ID 116) is:	 forall (x y : A) (H0 : R x y),	 transport P (related_classes_eq R H0) (dclass x) = dclass y	";
+            data = "1 subgoal (ID 316)	  	  H : Univalence	  A : Type	  R : relation A	  sR : is_mere_relation A R	  Htrans : Transitive R	  Hsymm : Symmetric R	  Hrefl : Reflexive R	  P : quotient R -> Type	  Hprop' : forall x : A, IsHProp (P (class_of R x))	  dclass : forall x : A, P (class_of R x)	  ============================	  forall (x y : A) (H0 : R x y),	  transport (fun x0 : quotient R => IsHSet (P x0)) 	    (related_classes_eq R H0) ((fun x0 : A => trunc_hprop) x) =	  (fun x0 : A => trunc_hprop) y	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 116)		subgoal 1 (ID 116) is:	 forall (x y : A) (H0 : R x y),	 transport P (related_classes_eq R H0) (dclass x) = dclass y	";
             responses[i]=data;
           
 
@@ -1764,7 +1764,7 @@
 </div>
 <div class="goal" id="goal0_3_3"><pre><span></span></pre></div>
 <div class="doc" scenenumber="5">
-<a name="lab373"></a><h1 class="section">Quotient of a Type by an hprop-valued relation</h1>
+<a name="lab386"></a><h1 class="section">Quotient of a Type by an hprop-valued relation</h1>
 <div class="doc" scenenumber="4"> </div>
 
 We aim to model:
@@ -1814,7 +1814,7 @@ We choose to let the definition of quotient depend on the proof that <span class
 We do not require <span class="inlinecode"><a class="idref" href="HoTT.Categories.CategoryOfSections.Core.html#FunctorSectionCategory.R"><span class="id" title="variable">R</span></a></span> to be an equivalence relation, but implicitly consider its transitive-reflexive closure. 
 <div class="doc" scenenumber="7"> </div>
 
- Note: If we wanted to be really accurate, we'd need to put <span class="inlinecode">@<a class="idref" href="HoTT.HIT.quotient.html#Quotient.quotient"><span class="id" title="inductive">quotient</span></a></span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.CategoryOfSections.Core.html#FunctorSectionCategory.R"><span class="id" title="variable">R</span></a></span> <span class="inlinecode"><span class="id" title="var">sr</span></span> in the max <span class="inlinecode"><span class="id" title="var">U_</span>{<a class="idref" href="HoTT.Types.Wtype.html#sup"><span class="id" title="constructor">sup</span></a>(<a class="idref" href="HoTT.Basics.PathGroupoids.html#i"><span class="id" title="variable">i</span></a>,</span> <span class="inlinecode"><a class="idref" href="HoTT.Tactics.RewriteModuloAssociativity.html#j"><span class="id" title="variable">j</span></a>)}</span> of the universes of <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><span class="id" title="var">U_i</span></span> and <span class="inlinecode"><a class="idref" href="HoTT.Categories.CategoryOfSections.Core.html#FunctorSectionCategory.R"><span class="id" title="variable">R</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode"><span class="id" title="var">U_j</span></span>.  But this requires some hacky code, at the moment, and the only thing we gain is avoiding making use of an implicit hpropositional resizing "axiom". 
+ Note: If we wanted to be really accurate, we'd need to put <span class="inlinecode">@<a class="idref" href="HoTT.HIT.quotient.html#Quotient.quotient"><span class="id" title="inductive">quotient</span></a></span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.CategoryOfSections.Core.html#FunctorSectionCategory.R"><span class="id" title="variable">R</span></a></span> <span class="inlinecode"><span class="id" title="var">sr</span></span> in the max <span class="inlinecode"><span class="id" title="var">U_</span>{<a class="idref" href="HoTT.Types.Wtype.html#sup"><span class="id" title="constructor">sup</span></a>(<a class="idref" href="Coq.Init.Decimal.html#i"><span class="id" title="variable">i</span></a>,</span> <span class="inlinecode"><a class="idref" href="HoTT.Tactics.RewriteModuloAssociativity.html#j"><span class="id" title="variable">j</span></a>)}</span> of the universes of <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><span class="id" title="var">U_i</span></span> and <span class="inlinecode"><a class="idref" href="HoTT.Categories.CategoryOfSections.Core.html#FunctorSectionCategory.R"><span class="id" title="variable">R</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode"><span class="id" title="var">U_j</span></span>.  But this requires some hacky code, at the moment, and the only thing we gain is avoiding making use of an implicit hpropositional resizing "axiom". 
 <div class="doc" scenenumber="41"> </div>
 
  This definition has a parameter <span class="inlinecode"><a class="idref" href="HoTT.HIT.quotient.html#sR"><span class="id" title="variable">sR</span></a></span> that shadows the ambient one in the Context in order to ensure that it actually ends up depending on everything in the Context when the section is closed, since its definition doesn't actually refer to any of them.  
@@ -2777,7 +2777,7 @@ Missing
 </div>
 <div class="goal" id="goal0_3_35"><pre><span></span></pre></div>
 <div class="doc" scenenumber="37">
-<a name="lab374"></a><h2 class="section">Quotients of kernels of maps to sets give a surjection/mono factorization.</h2>
+<a name="lab387"></a><h2 class="section">Quotients of kernels of maps to sets give a surjection/mono factorization.</h2>
 </div>
 <div scenenumber="39" class="code">
 <span class="command" onmouseout="

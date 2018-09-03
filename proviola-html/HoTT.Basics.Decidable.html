@@ -883,17 +883,17 @@
           
 
             i = 173;
-            data = "1 subgoal (ID 100)	  	  A : Type	  H : PathCollapsible A	  x, y : A	  ============================	  IsTrunc_internal -1 (x = y)	";
+            data = "1 subgoal (ID 100)	  	  A : Type	  H : PathCollapsible A	  x, y : A	  ============================	  IsTrunc_internal (-1) (x = y)	";
             responses[i]=data;
           
 
             i = 174;
-            data = "2 subgoals (ID 507)	  	  A : Type	  H : PathCollapsible A	  x, y : A	  ============================	  forall p : x = y,	  p = ((path_coll x x).(collapse) 1)^ @ (path_coll x y).(collapse) p		subgoal 2 (ID 509) is:	 IsTrunc_internal -1 (x = y)	";
+            data = "2 subgoals (ID 507)	  	  A : Type	  H : PathCollapsible A	  x, y : A	  ============================	  forall p : x = y,	  p = ((path_coll x x).(collapse) 1)^ @ (path_coll x y).(collapse) p		subgoal 2 (ID 509) is:	 IsTrunc_internal (-1) (x = y)	";
             responses[i]=data;
           
 
             i = 175;
-            data = "1 subgoal (ID 507)	  	  A : Type	  H : PathCollapsible A	  x, y : A	  ============================	  forall p : x = y,	  p = ((path_coll x x).(collapse) 1)^ @ (path_coll x y).(collapse) p	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 509)		subgoal 1 (ID 509) is:	 IsTrunc_internal -1 (x = y)	1 subgoal (ID 509)	  	  A : Type	  H : PathCollapsible A	  x, y : A	  h : forall p : x = y,	      p = ((path_coll x x).(collapse) 1)^ @ (path_coll x y).(collapse) p	  ============================	  IsTrunc_internal -1 (x = y)	1 subgoal (ID 531)	  	  A : Type	  H : PathCollapsible A	  x, y : A	  h : forall p : x = y,	      p = ((path_coll x x).(collapse) 1)^ @ (path_coll x y).(collapse) p	  p, q : x = y	  ============================	  p = q	";
+            data = "1 subgoal (ID 507)	  	  A : Type	  H : PathCollapsible A	  x, y : A	  ============================	  forall p : x = y,	  p = ((path_coll x x).(collapse) 1)^ @ (path_coll x y).(collapse) p	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 509)		subgoal 1 (ID 509) is:	 IsTrunc_internal (-1) (x = y)	1 subgoal (ID 509)	  	  A : Type	  H : PathCollapsible A	  x, y : A	  h : forall p : x = y,	      p = ((path_coll x x).(collapse) 1)^ @ (path_coll x y).(collapse) p	  ============================	  IsTrunc_internal (-1) (x = y)	1 subgoal (ID 531)	  	  A : Type	  H : PathCollapsible A	  x, y : A	  h : forall p : x = y,	      p = ((path_coll x x).(collapse) 1)^ @ (path_coll x y).(collapse) p	  p, q : x = y	  ============================	  p = q	";
             responses[i]=data;
           
 
@@ -1198,9 +1198,9 @@
 </div>
 <div class="goal" id="goal0_3_3"><pre><span></span></pre></div>
 <div class="doc" scenenumber="5">
-<a name="lab44"></a><h1 class="section">Decidability</h1>
+<a name="lab57"></a><h1 class="section">Decidability</h1>
 <div class="doc" scenenumber="4"> </div>
-<a name="lab45"></a><h2 class="section">Definitions</h2>
+<a name="lab58"></a><h2 class="section">Definitions</h2>
 </div>
 <div scenenumber="7" class="code">
 <span class="command" onmouseout="
@@ -1339,7 +1339,7 @@ compute.
 </div>
 <div class="goal" id="goal0_3_15"><pre><span></span></pre></div>
 <div class="doc" scenenumber="17">
-<a name="lab46"></a><h2 class="section">Decidable hprops</h2>
+<a name="lab59"></a><h2 class="section">Decidable hprops</h2>
 <div class="doc" scenenumber="4"> </div>
 
  Contractible types are decidable. 
@@ -1402,7 +1402,7 @@ Empty types are trivial.
 </div>
 <div class="goal" id="goal0_3_27"><pre><span></span></pre></div>
 <div class="doc" scenenumber="29">
-<a name="lab47"></a><h2 class="section">Transfer along equivalences</h2>
+<a name="lab60"></a><h2 class="section">Transfer along equivalences</h2>
 </div>
 <div scenenumber="31" class="code">
 <span class="command" onmouseout="
@@ -1509,7 +1509,7 @@ Empty types are trivial.
 </div>
 <div class="goal" id="goal0_3_31"><pre><span></span></pre></div>
 <div class="doc" scenenumber="33">
-<a name="lab48"></a><h2 class="section">Hedberg's theorem: any type with decidable equality is a set.</h2>
+<a name="lab61"></a><h2 class="section">Hedberg's theorem: any type with decidable equality is a set.</h2>
 <div class="doc" scenenumber="4"> </div>
 
  A weakly constant function is one all of whose values are equal (in a specified way). 
@@ -1799,7 +1799,7 @@ We give this a relatively high-numbered priority so that in deducing <span class
 </div>
 <div class="goal" id="goal0_3_47"><pre><span></span></pre></div>
 <div class="doc" scenenumber="49">
-<a name="lab49"></a><h2 class="section">Truncation</h2>
+<a name="lab62"></a><h2 class="section">Truncation</h2>
 <div class="doc" scenenumber="4"> </div>
 
  Having decidable equality (which implies being an hset, by Hedberg's theorem above) is itself an hprop. 

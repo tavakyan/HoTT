@@ -1309,7 +1309,7 @@ The <span class="inlinecode"><span class="id" title="tactic">do</span></span> ta
 <br>
 <span class="id" title="keyword">Ltac</span> <span class="id" title="var">do_nat</span> <span class="id" title="var">n</span> <span class="id" title="var">tac</span> :=<br>
   <span class="id" title="keyword">match</span> <span class="id" title="var">n</span> <span class="id" title="keyword">with</span><br>
-    | 0 ⇒ <span class="id" title="tactic">idtac</span><br>
+    | <a class="idref" href="Coq.Init.Datatypes.html#O"><span class="id" title="constructor">O</span></a> ⇒ <span class="id" title="tactic">idtac</span><br>
     | <a class="idref" href="Coq.Init.Datatypes.html#S"><span class="id" title="constructor">S</span></a> ?<span class="id" title="var">n'</span> ⇒ <span class="id" title="var">tac</span> ; <span class="id" title="var">do_nat</span> <span class="id" title="var">n'</span> <span class="id" title="var">tac</span><br>
   <span class="id" title="keyword">end</span>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
@@ -1394,12 +1394,12 @@ Destruct one existential package, keeping the name of the hypothesis for the fir
 <br>
 <span class="id" title="keyword">Ltac</span> <span class="id" title="var">destruct_one_ex</span> :=<br>
   <span class="id" title="keyword">let</span> <span class="id" title="var">tac</span> <span class="id" title="var">H</span> := <span class="id" title="keyword">let</span> <span class="id" title="var">ph</span> := <span class="id" title="tactic">fresh</span> "H" <span class="id" title="tactic">in</span> (<span class="id" title="tactic">destruct</span> <span class="id" title="var">H</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">H</span> <span class="id" title="var">ph</span>]) <span class="id" title="tactic">in</span><br>
-  <span class="id" title="keyword">let</span> <span class="id" title="var">tac2</span> <span class="id" title="var">H</span> := <span class="id" title="keyword">let</span> <span class="id" title="var">ph</span> := <span class="id" title="tactic">fresh</span> "H" <span class="id" title="tactic">in</span> <span class="id" title="keyword">let</span> <span class="id" title="var">ph'</span> := <span class="id" title="tactic">fresh</span> "H" <span class="id" title="tactic">in</span> <br>
-    (<span class="id" title="tactic">destruct</span> <span class="id" title="var">H</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">H</span> <span class="id" title="var">ph</span> <span class="id" title="var">ph'</span>]) <br>
+  <span class="id" title="keyword">let</span> <span class="id" title="var">tac2</span> <span class="id" title="var">H</span> := <span class="id" title="keyword">let</span> <span class="id" title="var">ph</span> := <span class="id" title="tactic">fresh</span> "H" <span class="id" title="tactic">in</span> <span class="id" title="keyword">let</span> <span class="id" title="var">ph'</span> := <span class="id" title="tactic">fresh</span> "H" <span class="id" title="tactic">in</span><br>
+    (<span class="id" title="tactic">destruct</span> <span class="id" title="var">H</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">H</span> <span class="id" title="var">ph</span> <span class="id" title="var">ph'</span>])<br>
   <span class="id" title="tactic">in</span><br>
   <span class="id" title="keyword">let</span> <span class="id" title="var">tacT</span> <span class="id" title="var">H</span> := <span class="id" title="keyword">let</span> <span class="id" title="var">ph</span> := <span class="id" title="tactic">fresh</span> "X" <span class="id" title="tactic">in</span> (<span class="id" title="tactic">destruct</span> <span class="id" title="var">H</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">H</span> <span class="id" title="var">ph</span>]) <span class="id" title="tactic">in</span><br>
-  <span class="id" title="keyword">let</span> <span class="id" title="var">tacT2</span> <span class="id" title="var">H</span> := <span class="id" title="keyword">let</span> <span class="id" title="var">ph</span> := <span class="id" title="tactic">fresh</span> "X" <span class="id" title="tactic">in</span> <span class="id" title="keyword">let</span> <span class="id" title="var">ph'</span> := <span class="id" title="tactic">fresh</span> "X" <span class="id" title="tactic">in</span> <br>
-    (<span class="id" title="tactic">destruct</span> <span class="id" title="var">H</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">H</span> <span class="id" title="var">ph</span> <span class="id" title="var">ph'</span>]) <br>
+  <span class="id" title="keyword">let</span> <span class="id" title="var">tacT2</span> <span class="id" title="var">H</span> := <span class="id" title="keyword">let</span> <span class="id" title="var">ph</span> := <span class="id" title="tactic">fresh</span> "X" <span class="id" title="tactic">in</span> <span class="id" title="keyword">let</span> <span class="id" title="var">ph'</span> := <span class="id" title="tactic">fresh</span> "X" <span class="id" title="tactic">in</span><br>
+    (<span class="id" title="tactic">destruct</span> <span class="id" title="var">H</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">H</span> <span class="id" title="var">ph</span> <span class="id" title="var">ph'</span>])<br>
   <span class="id" title="tactic">in</span><br>
     <span class="id" title="keyword">match</span> <span class="id" title="keyword">goal</span> <span class="id" title="keyword">with</span><br>
       <br>
@@ -1456,7 +1456,7 @@ Repeateadly destruct conjunctions and existentials.
 </div>
 <div class="goal" id="goal0_3_35"><pre><span></span></pre></div>
 <div class="doc" scenenumber="37">
-Destruct an existential hypothesis <span class="inlinecode"><a class="idref" href="HoTT.Basics.PathGroupoids.html#t"><span class="id" title="variable">t</span></a></span> keeping its name for the first component
+Destruct an existential hypothesis <span class="inlinecode"><a class="idref" href="Coq.Init.Nat.html#t"><span class="id" title="definition">t</span></a></span> keeping its name for the first component
    and using <span class="inlinecode"><span class="id" title="var">Ht</span></span> for the second 
 </div>
 <div scenenumber="39" class="code">
@@ -1627,7 +1627,7 @@ Try to clear everything except some hyp
       mouseover(103, '0_3_67');
       ">
 <br>
-<span class="id" title="keyword">Ltac</span> <span class="id" title="var">clear_except</span> <span class="id" title="var">hyp</span> := <br>
+<span class="id" title="keyword">Ltac</span> <span class="id" title="var">clear_except</span> <span class="id" title="var">hyp</span> :=<br>
   <span class="id" title="tactic">repeat</span> <span class="id" title="keyword">match</span> <span class="id" title="keyword">goal</span> <span class="id" title="keyword">with</span> [ <span class="id" title="var">H</span> : <span class="id" title="var">_</span> |- <span class="id" title="var">_</span> ] ⇒<br>
            <span class="id" title="keyword">match</span> <span class="id" title="var">H</span> <span class="id" title="keyword">with</span><br>
              | <span class="id" title="var">hyp</span> ⇒ <span class="id" title="tactic">fail</span> 1<br>

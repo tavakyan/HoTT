@@ -1,0 +1,665 @@
+<html>
+<head>
+<title>Nat.v</title>
+<style>
+.time {
+  background-color: #ffaaaa;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+}
+.code {
+  z-index: 0;
+  position: relative;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 1px;
+}
+.code:hover {
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
+pre {
+  margin: 1px;
+}
+</style>
+</head>
+<body>
+<h1>Timings for Nat.v</h1>
+
+<div class="code" title="File: Nat.v
+Line: 1
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>(************************************************************************)
+(*         *   The Coq Proof Assistant / The Coq Development Team       *)
+(*  v      *   INRIA, CNRS and contributors - Copyright 1999-2018       *)
+(* &lt;O___,, *       (see CREDITS file for the list of authors)           *)
+(*   \VV/  **************************************************************)
+(*    //   *    This file is distributed under the terms of the         *)
+(*         *     GNU Lesser General Public License Version 2.1          *)
+(*         *     (see LICENSE file for the text of the license)         *)
+(************************************************************************)
+
+</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 10
+Time: 0.013s">
+<div class="time" style="width: 100%"></div>
+<pre>Require Import Notations Logic Datatypes.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 10
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Require Decimal.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 11
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Local Open Scope nat_scope.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 12
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Local Unset Universe Polymorphism.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 13
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+(**********************************************************************)
+(** * Peano natural numbers, definitions of operations *)
+(**********************************************************************)
+
+(** This file is meant to be used as a whole module,
+    without importing it, leading to qualified definitions
+    (e.g. Nat.pred) *)
+
+</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 21
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Definition t := nat.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 21
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** ** Constants *)
+
+</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 24
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Local Notation "0" := O.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 24
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Local Notation "1" := (S O).</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 25
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Local Notation "2" := (S (S O)).</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 26
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Definition zero := 0.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 28
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Definition one := 1.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 29
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Definition two := 2.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 30
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** ** Basic operations *)
+
+</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 33
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Definition succ := S.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 33
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Definition pred n :=
+  match n with
+    | 0 =&gt; n
+    | S u =&gt; u
+  end.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 39
+Time: 0.001s">
+<div class="time" style="width: 7.6923076923077%"></div>
+<pre>
+
+Fixpoint add n m :=
+  match n with
+  | 0 =&gt; m
+  | S p =&gt; S (p + m)
+  end
+
+where "n + m" := (add n m) : nat_scope.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 47
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Definition double n := n + n.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 49
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Fixpoint mul n m :=
+  match n with
+  | 0 =&gt; 0
+  | S p =&gt; m + p * m
+  end
+
+where "n * m" := (mul n m) : nat_scope.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 57
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** Truncated subtraction: [n-m] is [0] if [n&lt;=m] *)
+
+</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 60
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Fixpoint sub n m :=
+  match n, m with
+  | S k, S l =&gt; k - l
+  | _, _ =&gt; n
+  end
+
+where "n - m" := (sub n m) : nat_scope.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 66
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** ** Minimum, maximum *)
+
+</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 69
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Fixpoint max n m :=
+  match n, m with
+    | 0, _ =&gt; m
+    | S n', 0 =&gt; n
+    | S n', S m' =&gt; S (max n' m')
+  end.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 74
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Fixpoint min n m :=
+  match n, m with
+    | 0, _ =&gt; 0
+    | S n', 0 =&gt; 0
+    | S n', S m' =&gt; S (min n' m')
+  end.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 81
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** ** Power *)
+
+</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 84
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Fixpoint pow n m :=
+  match m with
+    | 0 =&gt; 1
+    | S m =&gt; n * (n^m)
+  end
+
+where "n ^ m" := (pow n m) : nat_scope.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 90
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** ** Tail-recursive versions of [add] and [mul] *)
+
+</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 93
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Fixpoint tail_add n m :=
+  match n with
+    | O =&gt; m
+    | S n =&gt; tail_add n (S m)
+  end.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 97
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** [tail_addmul r n m] is [r + n * m]. *)
+
+</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 100
+Time: 0.001s">
+<div class="time" style="width: 7.6923076923077%"></div>
+<pre>Fixpoint tail_addmul r n m :=
+  match n with
+    | O =&gt; r
+    | S n =&gt; tail_addmul (tail_add m r) n m
+  end.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 104
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Definition tail_mul n m := tail_addmul 0 n m.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 106
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** ** Conversion with a decimal representation for printing/parsing *)
+
+</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 109
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Local Notation ten := (S (S (S (S (S (S (S (S (S (S O)))))))))).</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 109
+Time: 0.004s">
+<div class="time" style="width: 30.769230769231%"></div>
+<pre>
+
+Fixpoint of_uint_acc (d:Decimal.uint)(acc:nat) :=
+  match d with
+  | Decimal.Nil =&gt; acc
+  | Decimal.D0 d =&gt; of_uint_acc d (tail_mul ten acc)
+  | Decimal.D1 d =&gt; of_uint_acc d (S (tail_mul ten acc))
+  | Decimal.D2 d =&gt; of_uint_acc d (S (S (tail_mul ten acc)))
+  | Decimal.D3 d =&gt; of_uint_acc d (S (S (S (tail_mul ten acc))))
+  | Decimal.D4 d =&gt; of_uint_acc d (S (S (S (S (tail_mul ten acc)))))
+  | Decimal.D5 d =&gt; of_uint_acc d (S (S (S (S (S (tail_mul ten acc))))))
+  | Decimal.D6 d =&gt; of_uint_acc d (S (S (S (S (S (S (tail_mul ten acc)))))))
+  | Decimal.D7 d =&gt; of_uint_acc d (S (S (S (S (S (S (S (tail_mul ten acc))))))))
+  | Decimal.D8 d =&gt; of_uint_acc d (S (S (S (S (S (S (S (S (tail_mul ten acc)))))))))
+  | Decimal.D9 d =&gt; of_uint_acc d (S (S (S (S (S (S (S (S (S (tail_mul ten acc))))))))))
+  end.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 124
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Definition of_uint (d:Decimal.uint) := of_uint_acc d O.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 126
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Fixpoint to_little_uint n acc :=
+  match n with
+  | O =&gt; acc
+  | S n =&gt; to_little_uint n (Decimal.Little.succ acc)
+  end.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 132
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Definition to_uint n :=
+  Decimal.rev (to_little_uint n Decimal.zero).</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 135
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Definition of_int (d:Decimal.int) : option nat :=
+  match Decimal.norm d with
+    | Decimal.Pos u =&gt; Some (of_uint u)
+    | _ =&gt; None
+  end.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 141
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Definition to_int n := Decimal.Pos (to_uint n).</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 143
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** ** Euclidean division *)
+
+(** This division is linear and tail-recursive.
+    In [divmod], [y] is the predecessor of the actual divisor,
+    and [u] is [y] minus the real remainder
+*)
+
+</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 151
+Time: 0.001s">
+<div class="time" style="width: 7.6923076923077%"></div>
+<pre>Fixpoint divmod x y q u :=
+  match x with
+    | 0 =&gt; (q,u)
+    | S x' =&gt; match u with
+                | 0 =&gt; divmod x' y (S q) y
+                | S u' =&gt; divmod x' y q u'
+              end
+  end.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 158
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Definition div x y :=
+  match y with
+    | 0 =&gt; y
+    | S y' =&gt; fst (divmod x y' 0 y')
+  end.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 164
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Definition modulo x y :=
+  match y with
+    | 0 =&gt; y
+    | S y' =&gt; y' - snd (divmod x y' 0 y')
+  end.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 170
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Infix "/" := div : nat_scope.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 172
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Infix "mod" := modulo (at level 40, no associativity) : nat_scope.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 173
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+
+(** ** Greatest common divisor *)
+
+(** We use Euclid algorithm, which is normally not structural,
+    but Coq is now clever enough to accept this (behind modulo
+    there is a subtraction, which now preserves being a subterm)
+*)
+
+</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 182
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Fixpoint gcd a b :=
+  match a with
+   | O =&gt; b
+   | S a' =&gt; gcd (b mod (S a')) (S a')
+  end.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 186
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** ** Square *)
+
+</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 189
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Definition square n := n * n.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 189
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** ** Square root *)
+
+(** The following square root function is linear (and tail-recursive).
+  With Peano representation, we can't do better. For faster algorithm,
+  see Psqrt/Zsqrt/Nsqrt...
+
+  We search the square root of n = k + p^2 + (q - r)
+  with q = 2p and 0&lt;=r&lt;=q. We start with p=q=r=0, hence
+  looking for the square root of n = k. Then we progressively
+  decrease k and r. When k = S k' and r=0, it means we can use (S p)
+  as new sqrt candidate, since (S k')+p^2+2p = k'+(S p)^2.
+  When k reaches 0, we have found the biggest p^2 square contained
+  in n, hence the square root of n is p.
+*)
+
+</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 205
+Time: 0.001s">
+<div class="time" style="width: 7.6923076923077%"></div>
+<pre>Fixpoint sqrt_iter k p q r :=
+  match k with
+    | O =&gt; p
+    | S k' =&gt; match r with
+                | O =&gt; sqrt_iter k' (S p) (S (S q)) (S (S q))
+                | S r' =&gt; sqrt_iter k' p q r'
+              end
+  end.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 212
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Definition sqrt n := sqrt_iter n 0 0 0.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 214
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** ** Log2 *)
+
+(** This base-2 logarithm is linear and tail-recursive.
+
+  In [log2_iter], we maintain the logarithm [p] of the counter [q],
+  while [r] is the distance between [q] and the next power of 2,
+  more precisely [q + S r = 2^(S p)] and [r&lt;2^p]. At each
+  recursive call, [q] goes up while [r] goes down. When [r]
+  is 0, we know that [q] has almost reached a power of 2,
+  and we increase [p] at the next call, while resetting [r]
+  to [q].
+
+  Graphically (numbers are [q], stars are [r]) :
+
+&lt;&lt;
+                    10
+                  9
+                8
+              7   *
+            6       *
+          5           ...
+        4
+      3   *
+    2       *
+  1   *       *
+0   *   *       *
+&gt;&gt;
+
+  We stop when [k], the global downward counter reaches 0.
+  At that moment, [q] is the number we're considering (since
+  [k+q] is invariant), and [p] its logarithm.
+*)
+
+</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 248
+Time: 0.001s">
+<div class="time" style="width: 7.6923076923077%"></div>
+<pre>Fixpoint log2_iter k p q r :=
+  match k with
+    | O =&gt; p
+    | S k' =&gt; match r with
+                | O =&gt; log2_iter k' (S p) (S q) q
+                | S r' =&gt; log2_iter k' p (S q) r'
+              end
+  end.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 255
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Definition log2 n := log2_iter (pred n) 0 1 0.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 257
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** Iterator on natural numbers *)
+
+</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 260
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Definition iter (n:nat) {A} (f:A-&gt;A) (x:A) : A :=
+ nat_rect (fun _ =&gt; A) x (fun _ =&gt; f) n.</pre>
+</div>
+<div class="code" title="File: Nat.v
+Line: 262
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+</pre>
+</div>
+</body>
+</html>
+

@@ -958,17 +958,17 @@
           
 
             i = 188;
-            data = "1 subgoal (ID 492)	  	  S : OptionSort	  A : GenNo -> Type	  dle : forall x y : GenNo, x <= y -> A x -> A y -> Type	  dlt : forall x y : GenNo, x < y -> A x -> A y -> Type	  dcut : forall (L R : Type) (s : InSort S L R) (xL : L -> GenNo)	         (xR : R -> GenNo) (xcut : forall (l : L) (r : R), xL l < xR r)	         (fxL : forall l : L, A (xL l)) (fxR : forall r : R, A (xR r)),	         (forall (l : L) (r : R),	          dlt (xL l) (xR r) (xcut l r) (fxL l) (fxR r)) ->	         A {{ xL | xR // xcut }}	  No_ind_internal : forall (x : Game) (xno : is_surreal x),	                    A {| game_of := x; isno_game_of := xno |}	  L, R : Type	  s : InSort S L R	  xL : L -> Game	  xR : R -> Game	  Lno : forall l : L, is_surreal (xL l)	  Rno : forall r : R, is_surreal (xR r)	  xcut : forall (l : L) (r : R), game_lt (xL l) (xR r)	  ishprop_le : forall (x y : GenNo) (a : A x) (b : A y) 	               (p : x <= y), IsHProp (dle x y p a b)	  ishprop_lt : forall (x y : GenNo) (a : A x) (b : A y) 	               (p : x < y), IsHProp (dlt x y p a b)	  dpath : forall (x y : GenNo) (a : A x) (b : A y) 	          (p : x <= y) (q : y <= x),	          dle x y p a b -> dle y x q b a -> transport A (path_No p q) a = b	  dle_lr : forall (L R : Type) (s : InSort S L R) 	           (xL : L -> GenNo) (xR : R -> GenNo)	           (xcut : forall (l : L) (r : R), xL l < xR r)	           (fxL : forall l : L, A (xL l)) (fxR : forall r : R, A (xR r))	           (fxcut : forall (l : L) (r : R),	                    dlt (xL l) (xR r) (xcut l r) (fxL l) (fxR r))	           (L' R' : Type) (s' : InSort S L' R') (yL : L' -> GenNo)	           (yR : R' -> GenNo) (ycut : forall (l : L') (r : R'), yL l < yR r)	           (fyL : forall l : L', A (yL l)) (fyR : forall r : R', A (yR r))	           (fycut : forall (l : L') (r : R'),	                    dlt (yL l) (yR r) (ycut l r) (fyL l) (fyR r))	           (p : forall l : L, xL l < {{ yL | yR // ycut }}),	           (forall l : L,	            dlt (xL l) {{ yL | yR // ycut }} (p l) 	              (fxL l) (dcut L' R' s' yL yR ycut fyL fyR fycut)) ->	           forall q : forall r : R', {{ xL | xR // xcut }} < yR r,	           (forall r : R',	            dlt {{ xL | xR // xcut }} (yR r) (q r)	              (dcut L R s xL xR xcut fxL fxR fxcut) 	              (fyR r)) ->	           dle {{ xL | xR // xcut }} {{ yL | yR // ycut }}	             (le_lr xL xR xcut yL yR ycut p q)	             (dcut L R s xL xR xcut fxL fxR fxcut)	             (dcut L' R' s' yL yR ycut fyL fyR fycut)	  dlt_l : forall (L R : Type) (s : InSort S L R) (xL : L -> GenNo)	          (xR : R -> GenNo) (xcut : forall (l : L) (r : R), xL l < xR r)	          (fxL : forall l : L, A (xL l)) (fxR : forall r : R, A (xR r))	          (fxcut : forall (l : L) (r : R),	                   dlt (xL l) (xR r) (xcut l r) (fxL l) (fxR r))	          (L' R' : Type) (s' : InSort S L' R') (yL : L' -> GenNo)	          (yR : R' -> GenNo) (ycut : forall (l : L') (r : R'), yL l < yR r)	          (fyL : forall l : L', A (yL l)) (fyR : forall r : R', A (yR r))	          (fycut : forall (l : L') (r : R'),	                   dlt (yL l) (yR r) (ycut l r) (fyL l) (fyR r)) 	          (l : L') (p : {{ xL | xR // xcut }} <= yL l),	          dle {{ xL | xR // xcut }} (yL l) p	            (dcut L R s xL xR xcut fxL fxR fxcut) 	            (fyL l) ->	          dlt {{ xL | xR // xcut }} {{ yL | yR // ycut }}	            (lt_l xL xR xcut yL yR ycut l p)	            (dcut L R s xL xR xcut fxL fxR fxcut)	            (dcut L' R' s' yL yR ycut fyL fyR fycut)	  dlt_r : forall (L R : Type) (s : InSort S L R) (xL : L -> GenNo)	          (xR : R -> GenNo) (xcut : forall (l : L) (r : R), xL l < xR r)	          (fxL : forall l : L, A (xL l)) (fxR : forall r : R, A (xR r))	          (fxcut : forall (l : L) (r : R),	                   dlt (xL l) (xR r) (xcut l r) (fxL l) (fxR r))	          (L' R' : Type) (s' : InSort S L' R') (yL : L' -> GenNo)	          (yR : R' -> GenNo) (ycut : forall (l : L') (r : R'), yL l < yR r)	          (fyL : forall l : L', A (yL l)) (fyR : forall r : R', A (yR r))	          (fycut : forall (l : L') (r : R'),	                   dlt (yL l) (yR r) (ycut l r) (fyL l) (fyR r)) 	          (r : R) (p : xR r <= {{ yL | yR // ycut }}),	          dle (xR r) {{ yL | yR // ycut }} p (fxR r)	            (dcut L' R' s' yL yR ycut fyL fyR fycut) ->	          dlt {{ xL | xR // xcut }} {{ yL | yR // ycut }}	            (lt_r xL xR xcut yL yR ycut r p)	            (dcut L R s xL xR xcut fxL fxR fxcut)	            (dcut L' R' s' yL yR ycut fyL fyR fycut)	  ============================	  forall (l : L) (r : R),	  dlt ((fun l0 : L => {| game_of := xL l0; isno_game_of := Lno l0 |}) l)	    ((fun r0 : R => {| game_of := xR r0; isno_game_of := Rno r0 |}) r)	    (xcut l r) ((fun l0 : L => No_ind_internal (xL l0) (Lno l0)) l)	    ((fun r0 : R => No_ind_internal (xR r0) (Rno r0)) r)	";
+            data = "1 subgoal (ID 492)	  	  S : OptionSort	  A : GenNo -> Type	  dle : forall x y : GenNo, x <= y -> A x -> A y -> Type	  dlt : forall x y : GenNo, x < y -> A x -> A y -> Type	  dcut : forall (L R : Type) (s : InSort S L R) (xL : L -> GenNo)	         (xR : R -> GenNo) (xcut : forall (l : L) (r : R), xL l < xR r)	         (fxL : forall l : L, A (xL l)) (fxR : forall r : R, A (xR r)),	         (forall (l : L) (r : R),	          dlt (xL l) (xR r) (xcut l r) (fxL l) (fxR r)) ->	         A {{ xL | xR // xcut }}	  No_ind_internal : forall (x : Game) (xno : is_surreal x),	                    A {| game_of := x; isno_game_of := xno |}	  L, R : Type	  s : InSort S L R	  xL : L -> Game	  xR : R -> Game	  Lno : forall l : L, is_surreal (xL l)	  Rno : forall r : R, is_surreal (xR r)	  xcut : forall (l : L) (r : R), game_lt (xL l) (xR r)	  ishprop_le : forall (x y : GenNo) (a : A x) (b : A y) 	               (p : x <= y), IsHProp (dle x y p a b)	  ishprop_lt : forall (x y : GenNo) (a : A x) (b : A y) 	               (p : x < y), IsHProp (dlt x y p a b)	  dpath : forall (x y : GenNo) (a : A x) (b : A y) 	          (p : x <= y) (q : y <= x),	          dle x y p a b -> dle y x q b a -> transport A (path_No p q) a = b	  dle_lr : forall (L R : Type) (s : InSort S L R) 	           (xL : L -> GenNo) (xR : R -> GenNo)	           (xcut : forall (l : L) (r : R), xL l < xR r)	           (fxL : forall l : L, A (xL l)) (fxR : forall r : R, A (xR r))	           (fxcut : forall (l : L) (r : R),	                    dlt (xL l) (xR r) (xcut l r) (fxL l) (fxR r))	           (L' R' : Type) (s' : InSort S L' R') (yL : L' -> GenNo)	           (yR : R' -> GenNo) (ycut : forall (l : L') (r : R'), yL l < yR r)	           (fyL : forall l : L', A (yL l)) (fyR : forall r : R', A (yR r))	           (fycut : forall (l : L') (r : R'),	                    dlt (yL l) (yR r) (ycut l r) (fyL l) (fyR r))	           (p : forall l : L, xL l < {{ yL | yR // ycut }}),	           (forall l : L,	            dlt (xL l) {{ yL | yR // ycut }} (p l) 	              (fxL l) (dcut L' R' s' yL yR ycut fyL fyR fycut)) ->	           forall q : forall r : R', {{ xL | xR // xcut }} < yR r,	           (forall r : R',	            dlt {{ xL | xR // xcut }} (yR r) (q r)	              (dcut L R s xL xR xcut fxL fxR fxcut) 	              (fyR r)) ->	           dle {{ xL | xR // xcut }} {{ yL | yR // ycut }}	             (le_lr xL xR xcut yL yR ycut p q)	             (dcut L R s xL xR xcut fxL fxR fxcut)	             (dcut L' R' s' yL yR ycut fyL fyR fycut)	  dlt_l : forall (L R : Type) (s : InSort S L R) (xL : L -> GenNo)	          (xR : R -> GenNo) (xcut : forall (l : L) (r : R), xL l < xR r)	          (fxL : forall l : L, A (xL l)) (fxR : forall r : R, A (xR r))	          (fxcut : forall (l : L) (r : R),	                   dlt (xL l) (xR r) (xcut l r) (fxL l) (fxR r))	          (L' R' : Type) (s' : InSort S L' R') (yL : L' -> GenNo)	          (yR : R' -> GenNo) (ycut : forall (l : L') (r : R'), yL l < yR r)	          (fyL : forall l : L', A (yL l)) (fyR : forall r : R', A (yR r))	          (fycut : forall (l : L') (r : R'),	                   dlt (yL l) (yR r) (ycut l r) (fyL l) (fyR r)) 	          (l : L') (p : {{ xL | xR // xcut }} <= yL l),	          dle {{ xL | xR // xcut }} (yL l) p	            (dcut L R s xL xR xcut fxL fxR fxcut) 	            (fyL l) ->	          dlt {{ xL | xR // xcut }} {{ yL | yR // ycut }}	            (lt_l xL xR xcut yL yR ycut l p)	            (dcut L R s xL xR xcut fxL fxR fxcut)	            (dcut L' R' s' yL yR ycut fyL fyR fycut)	  dlt_r : forall (L R : Type) (s : InSort S L R) (xL : L -> GenNo)	          (xR : R -> GenNo) (xcut : forall (l : L) (r : R), xL l < xR r)	          (fxL : forall l : L, A (xL l)) (fxR : forall r : R, A (xR r))	          (fxcut : forall (l : L) (r : R),	                   dlt (xL l) (xR r) (xcut l r) (fxL l) (fxR r))	          (L' R' : Type) (s' : InSort S L' R') (yL : L' -> GenNo)	          (yR : R' -> GenNo) (ycut : forall (l : L') (r : R'), yL l < yR r)	          (fyL : forall l : L', A (yL l)) (fyR : forall r : R', A (yR r))	          (fycut : forall (l : L') (r : R'),	                   dlt (yL l) (yR r) (ycut l r) (fyL l) (fyR r)) 	          (r : R) (p : xR r <= {{ yL | yR // ycut }}),	          dle (xR r) {{ yL | yR // ycut }} p (fxR r)	            (dcut L' R' s' yL yR ycut fyL fyR fycut) ->	          dlt {{ xL | xR // xcut }} {{ yL | yR // ycut }}	            (lt_r xL xR xcut yL yR ycut r p)	            (dcut L R s xL xR xcut fxL fxR fxcut)	            (dcut L' R' s' yL yR ycut fyL fyR fycut)	  ============================	  forall (l : L) (r : R),	  dlt ((fun l0 : L => {| game_of := xL l0; isno_game_of := Lno l0 |}) l)	    ((fun r0 : R => {| game_of := xR r0; isno_game_of := Rno r0 |}) r)	    (xcut l r) ((fun l0 : L => No_ind_internal (xL l0) (Lno l0)) l)	    ((fun r0 : R => No_ind_internal (xR r0) (Rno r0)) r)	No more subgoals.	";
             responses[i]=data;
           
 
             i = 189;
-            data = "No more subgoals.	";
+            data = "<infomsg>No_ind_internal_step is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 190;
-            data = "<infomsg>No_ind_internal_step is defined</infomsg>	1 subgoal (ID 466)	  	  S : OptionSort	  A : GenNo -> Type	  dle : forall x y : GenNo, x <= y -> A x -> A y -> Type	  dlt : forall x y : GenNo, x < y -> A x -> A y -> Type	  ishprop_le : forall (x y : GenNo) (a : A x) (b : A y) 	               (p : x <= y), IsHProp (dle x y p a b)	  ishprop_lt : forall (x y : GenNo) (a : A x) (b : A y) 	               (p : x < y), IsHProp (dlt x y p a b)	  dcut : forall (L R : Type) (s : InSort S L R) (xL : L -> GenNo)	         (xR : R -> GenNo) (xcut : forall (l : L) (r : R), xL l < xR r)	         (fxL : forall l : L, A (xL l)) (fxR : forall r : R, A (xR r)),	         (forall (l : L) (r : R),	          dlt (xL l) (xR r) (xcut l r) (fxL l) (fxR r)) ->	         A {{ xL | xR // xcut }}	  dpath : forall (x y : GenNo) (a : A x) (b : A y) 	          (p : x <= y) (q : y <= x),	          dle x y p a b -> dle y x q b a -> transport A (path_No p q) a = b	  dle_lr : forall (L R : Type) (s : InSort S L R) 	           (xL : L -> GenNo) (xR : R -> GenNo)	           (xcut : forall (l : L) (r : R), xL l < xR r)	           (fxL : forall l : L, A (xL l)) (fxR : forall r : R, A (xR r))	           (fxcut : forall (l : L) (r : R),	                    dlt (xL l) (xR r) (xcut l r) (fxL l) (fxR r))	           (L' R' : Type) (s' : InSort S L' R') (yL : L' -> GenNo)	           (yR : R' -> GenNo) (ycut : forall (l : L') (r : R'), yL l < yR r)	           (fyL : forall l : L', A (yL l)) (fyR : forall r : R', A (yR r))	           (fycut : forall (l : L') (r : R'),	                    dlt (yL l) (yR r) (ycut l r) (fyL l) (fyR r))	           (p : forall l : L, xL l < {{ yL | yR // ycut }}),	           (forall l : L,	            dlt (xL l) {{ yL | yR // ycut }} (p l) 	              (fxL l) (dcut L' R' s' yL yR ycut fyL fyR fycut)) ->	           forall q : forall r : R', {{ xL | xR // xcut }} < yR r,	           (forall r : R',	            dlt {{ xL | xR // xcut }} (yR r) (q r)	              (dcut L R s xL xR xcut fxL fxR fxcut) 	              (fyR r)) ->	           dle {{ xL | xR // xcut }} {{ yL | yR // ycut }}	             (le_lr xL xR xcut yL yR ycut p q)	             (dcut L R s xL xR xcut fxL fxR fxcut)	             (dcut L' R' s' yL yR ycut fyL fyR fycut)	  dlt_l : forall (L R : Type) (s : InSort S L R) (xL : L -> GenNo)	          (xR : R -> GenNo) (xcut : forall (l : L) (r : R), xL l < xR r)	          (fxL : forall l : L, A (xL l)) (fxR : forall r : R, A (xR r))	          (fxcut : forall (l : L) (r : R),	                   dlt (xL l) (xR r) (xcut l r) (fxL l) (fxR r))	          (L' R' : Type) (s' : InSort S L' R') (yL : L' -> GenNo)	          (yR : R' -> GenNo) (ycut : forall (l : L') (r : R'), yL l < yR r)	          (fyL : forall l : L', A (yL l)) (fyR : forall r : R', A (yR r))	          (fycut : forall (l : L') (r : R'),	                   dlt (yL l) (yR r) (ycut l r) (fyL l) (fyR r)) 	          (l : L') (p : {{ xL | xR // xcut }} <= yL l),	          dle {{ xL | xR // xcut }} (yL l) p	            (dcut L R s xL xR xcut fxL fxR fxcut) 	            (fyL l) ->	          dlt {{ xL | xR // xcut }} {{ yL | yR // ycut }}	            (lt_l xL xR xcut yL yR ycut l p)	            (dcut L R s xL xR xcut fxL fxR fxcut)	            (dcut L' R' s' yL yR ycut fyL fyR fycut)	  dlt_r : forall (L R : Type) (s : InSort S L R) (xL : L -> GenNo)	          (xR : R -> GenNo) (xcut : forall (l : L) (r : R), xL l < xR r)	          (fxL : forall l : L, A (xL l)) (fxR : forall r : R, A (xR r))	          (fxcut : forall (l : L) (r : R),	                   dlt (xL l) (xR r) (xcut l r) (fxL l) (fxR r))	          (L' R' : Type) (s' : InSort S L' R') (yL : L' -> GenNo)	          (yR : R' -> GenNo) (ycut : forall (l : L') (r : R'), yL l < yR r)	          (fyL : forall l : L', A (yL l)) (fyR : forall r : R', A (yR r))	          (fycut : forall (l : L') (r : R'),	                   dlt (yL l) (yR r) (ycut l r) (fyL l) (fyR r)) 	          (r : R) (p : xR r <= {{ yL | yR // ycut }}),	          dle (xR r) {{ yL | yR // ycut }} p (fxR r)	            (dcut L' R' s' yL yR ycut fyL fyR fycut) ->	          dlt {{ xL | xR // xcut }} {{ yL | yR // ycut }}	            (lt_r xL xR xcut yL yR ycut r p)	            (dcut L R s xL xR xcut fxL fxR fxcut)	            (dcut L' R' s' yL yR ycut fyL fyR fycut)	  No_ind_internal : forall (x : Game) (xno : is_surreal x),	                    A {| game_of := x; isno_game_of := xno |}	  x : Game	  xno : is_surreal x	  ============================	  A {| game_of := x; isno_game_of := xno |}	";
+            data = "1 subgoal (ID 466)	  	  S : OptionSort	  A : GenNo -> Type	  dle : forall x y : GenNo, x <= y -> A x -> A y -> Type	  dlt : forall x y : GenNo, x < y -> A x -> A y -> Type	  ishprop_le : forall (x y : GenNo) (a : A x) (b : A y) 	               (p : x <= y), IsHProp (dle x y p a b)	  ishprop_lt : forall (x y : GenNo) (a : A x) (b : A y) 	               (p : x < y), IsHProp (dlt x y p a b)	  dcut : forall (L R : Type) (s : InSort S L R) (xL : L -> GenNo)	         (xR : R -> GenNo) (xcut : forall (l : L) (r : R), xL l < xR r)	         (fxL : forall l : L, A (xL l)) (fxR : forall r : R, A (xR r)),	         (forall (l : L) (r : R),	          dlt (xL l) (xR r) (xcut l r) (fxL l) (fxR r)) ->	         A {{ xL | xR // xcut }}	  dpath : forall (x y : GenNo) (a : A x) (b : A y) 	          (p : x <= y) (q : y <= x),	          dle x y p a b -> dle y x q b a -> transport A (path_No p q) a = b	  dle_lr : forall (L R : Type) (s : InSort S L R) 	           (xL : L -> GenNo) (xR : R -> GenNo)	           (xcut : forall (l : L) (r : R), xL l < xR r)	           (fxL : forall l : L, A (xL l)) (fxR : forall r : R, A (xR r))	           (fxcut : forall (l : L) (r : R),	                    dlt (xL l) (xR r) (xcut l r) (fxL l) (fxR r))	           (L' R' : Type) (s' : InSort S L' R') (yL : L' -> GenNo)	           (yR : R' -> GenNo) (ycut : forall (l : L') (r : R'), yL l < yR r)	           (fyL : forall l : L', A (yL l)) (fyR : forall r : R', A (yR r))	           (fycut : forall (l : L') (r : R'),	                    dlt (yL l) (yR r) (ycut l r) (fyL l) (fyR r))	           (p : forall l : L, xL l < {{ yL | yR // ycut }}),	           (forall l : L,	            dlt (xL l) {{ yL | yR // ycut }} (p l) 	              (fxL l) (dcut L' R' s' yL yR ycut fyL fyR fycut)) ->	           forall q : forall r : R', {{ xL | xR // xcut }} < yR r,	           (forall r : R',	            dlt {{ xL | xR // xcut }} (yR r) (q r)	              (dcut L R s xL xR xcut fxL fxR fxcut) 	              (fyR r)) ->	           dle {{ xL | xR // xcut }} {{ yL | yR // ycut }}	             (le_lr xL xR xcut yL yR ycut p q)	             (dcut L R s xL xR xcut fxL fxR fxcut)	             (dcut L' R' s' yL yR ycut fyL fyR fycut)	  dlt_l : forall (L R : Type) (s : InSort S L R) (xL : L -> GenNo)	          (xR : R -> GenNo) (xcut : forall (l : L) (r : R), xL l < xR r)	          (fxL : forall l : L, A (xL l)) (fxR : forall r : R, A (xR r))	          (fxcut : forall (l : L) (r : R),	                   dlt (xL l) (xR r) (xcut l r) (fxL l) (fxR r))	          (L' R' : Type) (s' : InSort S L' R') (yL : L' -> GenNo)	          (yR : R' -> GenNo) (ycut : forall (l : L') (r : R'), yL l < yR r)	          (fyL : forall l : L', A (yL l)) (fyR : forall r : R', A (yR r))	          (fycut : forall (l : L') (r : R'),	                   dlt (yL l) (yR r) (ycut l r) (fyL l) (fyR r)) 	          (l : L') (p : {{ xL | xR // xcut }} <= yL l),	          dle {{ xL | xR // xcut }} (yL l) p	            (dcut L R s xL xR xcut fxL fxR fxcut) 	            (fyL l) ->	          dlt {{ xL | xR // xcut }} {{ yL | yR // ycut }}	            (lt_l xL xR xcut yL yR ycut l p)	            (dcut L R s xL xR xcut fxL fxR fxcut)	            (dcut L' R' s' yL yR ycut fyL fyR fycut)	  dlt_r : forall (L R : Type) (s : InSort S L R) (xL : L -> GenNo)	          (xR : R -> GenNo) (xcut : forall (l : L) (r : R), xL l < xR r)	          (fxL : forall l : L, A (xL l)) (fxR : forall r : R, A (xR r))	          (fxcut : forall (l : L) (r : R),	                   dlt (xL l) (xR r) (xcut l r) (fxL l) (fxR r))	          (L' R' : Type) (s' : InSort S L' R') (yL : L' -> GenNo)	          (yR : R' -> GenNo) (ycut : forall (l : L') (r : R'), yL l < yR r)	          (fyL : forall l : L', A (yL l)) (fyR : forall r : R', A (yR r))	          (fycut : forall (l : L') (r : R'),	                   dlt (yL l) (yR r) (ycut l r) (fyL l) (fyR r)) 	          (r : R) (p : xR r <= {{ yL | yR // ycut }}),	          dle (xR r) {{ yL | yR // ycut }} p (fxR r)	            (dcut L' R' s' yL yR ycut fyL fyR fycut) ->	          dlt {{ xL | xR // xcut }} {{ yL | yR // ycut }}	            (lt_r xL xR xcut yL yR ycut r p)	            (dcut L R s xL xR xcut fxL fxR fxcut)	            (dcut L' R' s' yL yR ycut fyL fyR fycut)	  No_ind_internal : forall (x : Game) (xno : is_surreal x),	                    A {| game_of := x; isno_game_of := xno |}	  x : Game	  xno : is_surreal x	  ============================	  A {| game_of := x; isno_game_of := xno |}	";
             responses[i]=data;
           
 
@@ -2253,12 +2253,12 @@
           
 
             i = 447;
-            data = "No more subgoals.	";
+            data = "No more subgoals.	<infomsg>No_codes_package is defined</infomsg>	<infomsg>le' is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 448;
-            data = "<infomsg>No_codes_package is defined</infomsg>	<infomsg>le' is defined</infomsg>	<infomsg>lt' is defined</infomsg>	";
+            data = "<infomsg>lt' is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -3969,7 +3969,7 @@
 </div>
 <div class="goal" id="goal0_3_3"><pre><span></span></pre></div>
 <div class="doc" scenenumber="5">
-<a name="lab435"></a><h1 class="section">The surreal numbers</h1>
+<a name="lab448"></a><h1 class="section">The surreal numbers</h1>
 <div class="doc" scenenumber="4"> </div>
 
  Based on section 11.6 of the HoTT Book. 
@@ -3996,7 +3996,7 @@
 </div>
 <div class="goal" id="goal0_3_7"><pre><span></span></pre></div>
 <div class="doc" scenenumber="9">
-<a name="lab436"></a><h2 class="section">Option sorts</h2>
+<a name="lab449"></a><h2 class="section">Option sorts</h2>
 <div class="doc" scenenumber="4"> </div>
 
  We refine the surreal numbers by parametrizing them by "option sorts", which are predicates on the types that index the options.  A surreal number with given option sorts "hereditarily" has all options parametrized by types belonging to that sort. 
@@ -4026,7 +4026,7 @@
 <div class="doc" scenenumber="13">
 The surreal numbers use a lot of universes.  We include some universe annotations here and there to reduce the number of overall universe parameters from an unmanageable number to a slightly less unmanageable number.  This improves performance significantly.  We also use <span class="inlinecode"><span class="id" title="tactic">abstract</span></span> and <span class="inlinecode"><span class="id" title="keyword">Qed</span></span> whenever possible, for the same reason. 
 <div class="doc" scenenumber="5"> </div>
-<a name="lab437"></a><h2 class="section">Definition</h2>
+<a name="lab450"></a><h2 class="section">Definition</h2>
 </div>
 <div scenenumber="15" class="code">
 <span class="command" onmouseout="
@@ -4056,7 +4056,7 @@ The surreal numbers use a lot of universes.  We include some universe annotation
 </div>
 <div class="goal" id="goal0_3_15"><pre><span></span></pre></div>
 <div class="doc" scenenumber="17">
-<a name="lab438"></a><h3 class="section">Games first</h3>
+<a name="lab451"></a><h3 class="section">Games first</h3>
 <div class="doc" scenenumber="4"> </div>
 
  Since Coq doesn't support inductive-inductive types natively, we have to hack a bit.  Inspired by Conway, we define <span class="inlinecode"><a class="idref" href="HoTT.Spaces.No.Core.html#Surreals.Game"><span class="id" title="inductive">Game</span></a></span>s to be constructed by the point-constructor of <span class="inlinecode"><a class="idref" href="Freudenthal.html#No"><span class="id" title="abbreviation">No</span></a></span> but without the hypothesis on inequality of options.  Then we define the inequalities as a mutual inductive family over <span class="inlinecode"><a class="idref" href="HoTT.Spaces.No.Core.html#Surreals.Game"><span class="id" title="inductive">Game</span></a></span>, and put an inductive predicate on <span class="inlinecode"><a class="idref" href="HoTT.Spaces.No.Core.html#Surreals.Game"><span class="id" title="inductive">Game</span></a></span> characterizing those that are Numbers.  (This is roughly a standard technique described by Fredrik Nordvall Forsberg for reducing induction-induction to parametrized induction.)  We then proceed to add axioms for the path-constructors of <span class="inlinecode"><a class="idref" href="Freudenthal.html#No"><span class="id" title="abbreviation">No</span></a></span>.
@@ -4139,7 +4139,7 @@ The surreal numbers use a lot of universes.  We include some universe annotation
 </div>
 <div class="goal" id="goal0_3_19"><pre><span></span></pre></div>
 <div class="doc" scenenumber="21">
-<a name="lab439"></a><h3 class="section">Now the surreals</h3>
+<a name="lab452"></a><h3 class="section">Now the surreals</h3>
 </div>
 <div scenenumber="23" class="code">
 <span class="command" onmouseout="
@@ -4322,7 +4322,7 @@ We call these "general surreal numbers" since they are parametrized by an option
 </div>
 <div class="goal" id="goal0_3_27"><pre><span></span></pre></div>
 <div class="doc" scenenumber="29">
-<a name="lab440"></a><h3 class="section">Now the induction principle.</h3>
+<a name="lab453"></a><h3 class="section">Now the induction principle.</h3>
 </div>
 <div scenenumber="31" class="code">
 <span class="command" onmouseout="
@@ -4716,7 +4716,7 @@ We verify that our definition computes judgmentally.
 </div>
 <div class="goal" id="goal0_3_51"><pre><span></span></pre></div>
 <div class="doc" scenenumber="53">
-<a name="lab441"></a><h2 class="section">A few surreal numbers</h2>
+<a name="lab454"></a><h2 class="section">A few surreal numbers</h2>
 </div>
 <div scenenumber="55" class="code">
 <span class="command" onmouseout="
@@ -4766,9 +4766,9 @@ We verify that our definition computes judgmentally.
 </div>
 <div class="goal" id="goal0_3_55"><pre><span></span></pre></div>
 <div class="doc" scenenumber="57">
-<a name="lab442"></a><h2 class="section">More induction principles</h2>
+<a name="lab455"></a><h2 class="section">More induction principles</h2>
 <div class="doc" scenenumber="4"> </div>
-<a name="lab443"></a><h3 class="section">The simplified induction principle for hprops</h3>
+<a name="lab456"></a><h3 class="section">The simplified induction principle for hprops</h3>
 </div>
 <div scenenumber="59" class="code">
 <span class="command" onmouseout="
@@ -4820,7 +4820,7 @@ We verify that our definition computes judgmentally.
 <div class="doc" scenenumber="61">
 See also <span class="inlinecode"><span class="id" title="var">repeat_No_ind_hprop</span></span>, below 
 <div class="doc" scenenumber="3"> </div>
-<a name="lab444"></a><h3 class="section">The non-dependent recursion principle</h3>
+<a name="lab457"></a><h3 class="section">The non-dependent recursion principle</h3>
 </div>
 <div scenenumber="63" class="code">
 <span class="command" onmouseout="
@@ -5006,7 +5006,7 @@ See also <span class="inlinecode"><span class="id" title="var">repeat_No_ind_hpr
 </div>
 <div class="goal" id="goal0_3_63"><pre><span></span></pre></div>
 <div class="doc" scenenumber="65">
-<a name="lab445"></a><h2 class="section">Conway's Theorem 0</h2>
+<a name="lab458"></a><h2 class="section">Conway's Theorem 0</h2>
 <div class="doc" scenenumber="4"> </div>
 
  First we prove that *if* a left option of <span class="inlinecode"><a class="idref" href="HoTT.Categories.Functor.Attributes.html#fully_faithful_helpers.y"><span class="id" title="variable">y</span></a></span> is <span class="inlinecode">≤</span> itself, then it is <span class="inlinecode">&lt;</span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Functor.Attributes.html#fully_faithful_helpers.y"><span class="id" title="variable">y</span></a></span>. 
@@ -5286,7 +5286,7 @@ Theorem 0 Part (ii), right half
 </div>
 <div class="goal" id="goal0_3_83"><pre><span></span></pre></div>
 <div class="doc" scenenumber="85">
-<a name="lab446"></a><h2 class="section">"One-line proofs"</h2>
+<a name="lab459"></a><h2 class="section">"One-line proofs"</h2>
 <div class="doc" scenenumber="4"> </div>
 
  In particular, the proofs of cut-ness don't impact equality of surreals.  However, in practice we generally need more than this: we need to be able to modify the indexing types along equivalences. 
@@ -5387,7 +5387,7 @@ When we want to do induction on several variables at once, we have to be careful
 </div>
 <div class="goal" id="goal0_3_91"><pre><span></span></pre></div>
 <div class="doc" scenenumber="93">
-<a name="lab447"></a><h2 class="section">Encode-decode to characterize <span class="inlinecode">&lt;</span> and <span class="inlinecode">≤</span> recursively (Theorem 11.6.7).</h2>
+<a name="lab460"></a><h2 class="section">Encode-decode to characterize <span class="inlinecode">&lt;</span> and <span class="inlinecode">≤</span> recursively (Theorem 11.6.7).</h2>
 </div>
 <div scenenumber="95" class="code">
 <span class="command" onmouseout="
@@ -6366,7 +6366,7 @@ Conway's theorem 1
 </div>
 <div class="goal" id="goal0_3_119"><pre><span></span></pre></div>
 <div class="doc" scenenumber="121">
-<a name="lab448"></a><h2 class="section">Changing option sorts</h2>
+<a name="lab461"></a><h2 class="section">Changing option sorts</h2>
 <div class="doc" scenenumber="4"> </div>
 
  There is of course a "maximal" option sort, which defines "the" surreal numbers as in the book. 
@@ -6739,7 +6739,7 @@ See discussion at <span class="inlinecode"><a class="idref" href="HoTT.Spaces.No
 </div>
 <div class="goal" id="goal0_3_135"><pre><span></span></pre></div>
 <div class="doc" scenenumber="137">
-<a name="lab449"></a><h2 class="section">Ordinals</h2>
+<a name="lab462"></a><h2 class="section">Ordinals</h2>
 <div class="doc" scenenumber="4"> </div>
 
  The type of "plump ordinals" can be identified with surreal numbers that hereditarily have no right options. 
@@ -6772,7 +6772,7 @@ See discussion at <span class="inlinecode"><a class="idref" href="HoTT.Spaces.No
 </div>
 <div class="goal" id="goal0_3_139"><pre><span></span></pre></div>
 <div class="doc" scenenumber="141">
-<a name="lab450"></a><h2 class="section">Decidable options</h2>
+<a name="lab463"></a><h2 class="section">Decidable options</h2>
 <div class="doc" scenenumber="4"> </div>
 
  A particularly interesting option sort restricts <span class="inlinecode"><a class="idref" href="HoTT.Categories.NaturalTransformation.Composition.Core.html#composition.whisker.L"><span class="id" title="section">L</span></a></span> and <span class="inlinecode"><a class="idref" href="HoTT.Categories.CategoryOfSections.Core.html#FunctorSectionCategory.R"><span class="id" title="variable">R</span></a></span> to be decidable, i.e. either inhabited or empty. 
