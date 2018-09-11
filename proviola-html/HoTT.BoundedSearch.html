@@ -653,62 +653,62 @@
           
 
             i = 127;
-            data = "contr_inhab_prop:	  forall A : Type, IsHProp A -> (merely A).(trunctype_type) -> Contr A	BuildIsSurjection:	  forall (A B : Type) (f : A -> B),	  (forall b : B, (merely (hfiber f b)).(trunctype_type)) -> IsSurjection f	";
-            responses[i]=data;
-          
-
-            i = 128;
             data = "2 subgoals (ID 348)	  	  H : Funext	  P : nat -> Type	  P_hprop : forall n : nat, IsHProp (P n)	  P_dec : forall n : nat, Decidable (P n)	  P_inhab : (hexists (fun n : nat => P n)).(trunctype_type)	  ============================	  IsHProp min_n_Type		subgoal 2 (ID 349) is:	 {n : nat & P n} -> min_n_Type	";
             responses[i]=data;
           
 
-            i = 129;
+            i = 128;
             data = "1 subgoal (ID 348)	  	  H : Funext	  P : nat -> Type	  P_hprop : forall n : nat, IsHProp (P n)	  P_dec : forall n : nat, Decidable (P n)	  P_inhab : (hexists (fun n : nat => P n)).(trunctype_type)	  ============================	  IsHProp min_n_Type	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 349)		subgoal 1 (ID 349) is:	 {n : nat & P n} -> min_n_Type	";
             responses[i]=data;
           
 
-            i = 130;
+            i = 129;
             data = "1 subgoal (ID 349)	  	  H : Funext	  P : nat -> Type	  P_hprop : forall n : nat, IsHProp (P n)	  P_dec : forall n : nat, Decidable (P n)	  P_inhab : (hexists (fun n : nat => P n)).(trunctype_type)	  ============================	  {n : nat & P n} -> min_n_Type	1 subgoal (ID 355)	  	  H : Funext	  P : nat -> Type	  P_hprop : forall n : nat, IsHProp (P n)	  P_dec : forall n : nat, Decidable (P n)	  P_inhab : (hexists (fun n : nat => P n)).(trunctype_type)	  n : nat	  Pn : P n	  ============================	  min_n_Type	";
             responses[i]=data;
           
 
-            i = 131;
+            i = 130;
             data = "No more subgoals.	";
             responses[i]=data;
           
 
-            i = 132;
+            i = 131;
             data = "<infomsg>prop_n_to_min_n is defined</infomsg>	";
             responses[i]=data;
           
 
-            i = 133;
+            i = 132;
             data = "1 subgoal (ID 20)	  	  H : Funext	  P : nat -> Type	  P_hprop : forall n : nat, IsHProp (P n)	  P_dec : forall n : nat, Decidable (P n)	  P_inhab : (hexists (fun n : nat => P n)).(trunctype_type)	  ============================	  {n : nat & P n}	";
             responses[i]=data;
           
 
-            i = 134;
+            i = 133;
             data = "";
             responses[i]=data;
           
 
-            i = 135;
+            i = 134;
             data = "1 subgoal (ID 26)	  	  H : Funext	  P : nat -> Type	  P_hprop : forall n : nat, IsHProp (P n)	  P_dec : forall n : nat, Decidable (P n)	  P_inhab : (hexists (fun n : nat => P n)).(trunctype_type)	  n : nat	  pl : P n * minimal n	  ============================	  {n0 : nat & P n0}	";
             responses[i]=data;
           
 
-            i = 136;
+            i = 135;
             data = "1 subgoal (ID 32)	  	  H : Funext	  P : nat -> Type	  P_hprop : forall n : nat, IsHProp (P n)	  P_dec : forall n : nat, Decidable (P n)	  P_inhab : (hexists (fun n : nat => P n)).(trunctype_type)	  n : nat	  p : P n	  ============================	  {n0 : nat & P n0}	";
             responses[i]=data;
           
 
-            i = 137;
+            i = 136;
             data = "No more subgoals.	";
             responses[i]=data;
           
 
-            i = 138;
+            i = 137;
             data = "<infomsg>minimal_n is defined</infomsg>	";
+            responses[i]=data;
+          
+
+            i = 138;
+            data = "";
             responses[i]=data;
           
 
@@ -763,11 +763,6 @@
           
 
             i = 149;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 150;
             data = "";
             responses[i]=data;
           
@@ -1251,70 +1246,65 @@ But in this file, we want to be able to use the usual symbols for natural number
       " onmouseover="
       mouseover(127, '0_3_11');
       "><br>
-    <span class="id" title="keyword">SearchAbout</span> (<a class="idref" href="HoTT.HIT.Truncations.html#merely"><span class="id" title="definition">merely</span></a>).</span><span class="command" onmouseout="
+    <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.Truncations.html#Trunc_rec"><span class="id" title="definition">Trunc_rec</span></a> <span class="id" title="var">_</span> <a class="idref" href="HoTT.BoundedSearch.html#bounded_search.P_inhab"><span class="id" title="variable">P_inhab</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(128, '0_3_11');
       "><br>
-    <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.Truncations.html#Trunc_rec"><span class="id" title="definition">Trunc_rec</span></a> <span class="id" title="var">_</span> <a class="idref" href="HoTT.BoundedSearch.html#bounded_search.P_inhab"><span class="id" title="variable">P_inhab</span></a>).</span><span class="command" onmouseout="
+    - <span class="id" title="tactic">exact</span> <a class="idref" href="HoTT.BoundedSearch.html#ishpropmin_n"><span class="id" title="definition">ishpropmin_n</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(129, '0_3_11');
       "><br>
-    - <span class="id" title="tactic">exact</span> <a class="idref" href="HoTT.BoundedSearch.html#ishpropmin_n"><span class="id" title="definition">ishpropmin_n</span></a>.</span><span class="command" onmouseout="
-      mouseout('0_3_11');
-      " onmouseover="
-      mouseover(130, '0_3_11');
-      "><br>
     - <span class="id" title="tactic">induction</span> 1 <span class="id" title="keyword">as</span> [<span class="id" title="var">n</span> <span class="id" title="var">Pn</span>]. </span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
-      mouseover(131, '0_3_11');
+      mouseover(130, '0_3_11');
       "><span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.BoundedSearch.html#n_to_min_n"><span class="id" title="definition">n_to_min_n</span></a> <span class="id" title="var">n</span> <span class="id" title="var">Pn</span>).</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
-      mouseover(132, '0_3_11');
+      mouseover(131, '0_3_11');
       "><br>
   <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
-      mouseover(133, '0_3_11');
+      mouseover(132, '0_3_11');
       "><br>
 <br>
   <span class="id" title="keyword">Definition</span> <a name="minimal_n"><span class="id" title="definition">minimal_n</span></a> : <a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">{</span></a> <span class="id" title="var">n</span> <a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">:</span></a> <a class="idref" href="Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a> <a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">&amp;</span></a> <a class="idref" href="HoTT.BoundedSearch.html#bounded_search.P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.BoundedSearch.html#n"><span class="id" title="variable">n</span></a> <a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">}</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
-      mouseover(134, '0_3_11');
+      mouseover(133, '0_3_11');
       "><br>
   <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
-      mouseover(135, '0_3_11');
+      mouseover(134, '0_3_11');
       "><br>
     <span class="id" title="tactic">induction</span> <a class="idref" href="HoTT.BoundedSearch.html#prop_n_to_min_n"><span class="id" title="definition">prop_n_to_min_n</span></a> <span class="id" title="keyword">as</span> [<span class="id" title="var">n</span> <span class="id" title="var">pl</span>]. </span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
-      mouseover(136, '0_3_11');
+      mouseover(135, '0_3_11');
       "><span class="id" title="tactic">induction</span> <span class="id" title="var">pl</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">p</span> <span class="id" title="var">_</span>].</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
-      mouseover(137, '0_3_11');
+      mouseover(136, '0_3_11');
       "><br>
     <span class="id" title="tactic">exact</span> <a class="idref" href="HoTT.Basics.Overture.html#9302c87983df9fcf813fed38017558ae"><span class="id" title="notation">(</span></a><span class="id" title="var">n</span><a class="idref" href="HoTT.Basics.Overture.html#9302c87983df9fcf813fed38017558ae"><span class="id" title="notation">;</span></a><span class="id" title="var">p</span><a class="idref" href="HoTT.Basics.Overture.html#9302c87983df9fcf813fed38017558ae"><span class="id" title="notation">)</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
-      mouseover(138, '0_3_11');
+      mouseover(137, '0_3_11');
       "><br>
   <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
-      mouseover(139, '0_3_11');
+      mouseover(138, '0_3_11');
       "><br>
 <br>
 <span class="id" title="keyword">End</span> <a class="idref" href="HoTT.BoundedSearch.html#bounded_search"><span class="id" title="section">bounded_search</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
-      mouseover(140, '0_3_11');
+      mouseover(139, '0_3_11');
       "><br>
 </span>
 </div>
