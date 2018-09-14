@@ -2133,12 +2133,12 @@
           
 
             i = 423;
-            data = "1 subgoal (ID 671)	  	  A : Type	  A' : Type	  B : Type	  B' : Type	  h : A + B -> A' + B'	  Ha : forall a : A, is_inl (h (inl a))	  Hb : forall b : B, is_inr (h (inr b))	  a' : A'	  ============================	  Sect	    (fun X : hfiber (unfunctor_sum_l h Ha) a' =>	     (fun (a : A) (p : unfunctor_sum_l h Ha a = a') =>	      (inl a; (inl_un_inl (h (inl a)) (Ha a))^ @ ap inl p)) 	       X.(proj1_sig) X.(proj2_sig))	    (fun X : hfiber h (inl a') =>	     (fun proj1_sig : A + B =>	      match	        proj1_sig as s	        return (h s = inl a' -> hfiber (unfunctor_sum_l h Ha) a')	      with	      | inl a =>	          fun p : h (inl a) = inl a' =>	          (a; path_sum_inl B' (inl_un_inl (h (inl a)) (Ha a) @ p))	      | inr b =>	          fun p : h (inr b) = inl a' =>	          let Hb0 := Hb b in	          hfiber_unfunctor_sum_l_subproof A A' B B' h Ha b Hb0 a' p	      end) X.(proj1_sig) X.(proj2_sig))	";
+            data = "1 subgoal (ID 671)	  	  A : Type	  A' : Type	  B : Type	  B' : Type	  h : A + B -> A' + B'	  Ha : forall a : A, is_inl (h (inl a))	  Hb : forall b : B, is_inr (h (inr b))	  a' : A'	  ============================	  Sect	    (fun X : hfiber (unfunctor_sum_l h Ha) a' =>	     (fun (a : A) (p : unfunctor_sum_l h Ha a = a') =>	      (inl a; (inl_un_inl (h (inl a)) (Ha a))^ @ ap inl p)) 	       X.(proj1_sig) X.(proj2_sig))	    (fun X : hfiber h (inl a') =>	     (fun proj1_sig : A + B =>	      match	        proj1_sig as s	        return (h s = inl a' -> hfiber (unfunctor_sum_l h Ha) a')	      with	      | inl a =>	          fun p : h (inl a) = inl a' =>	          (a; path_sum_inl B' (inl_un_inl (h (inl a)) (Ha a) @ p))	      | inr b =>	          fun p : h (inr b) = inl a' =>	          let Hb0 := Hb b in	          hfiber_unfunctor_sum_l_subproof A A' B B' h Ha b Hb0 a' p	      end) X.(proj1_sig) X.(proj2_sig))	1 subgoal (ID 815)	  	  A : Type	  A' : Type	  B : Type	  B' : Type	  h : A + B -> A' + B'	  Ha : forall a : A, is_inl (h (inl a))	  Hb : forall b : B, is_inr (h (inr b))	  a' : A'	  a : A	  p : unfunctor_sum_l h Ha a = a'	  ============================	  (a;	  path_sum_inl B'	    (inl_un_inl (h (inl a)) (Ha a) @	     ((inl_un_inl (h (inl a)) (Ha a))^ @ ap inl p))) = 	  (a; p)	";
             responses[i]=data;
           
 
             i = 424;
-            data = "1 subgoal (ID 815)	  	  A : Type	  A' : Type	  B : Type	  B' : Type	  h : A + B -> A' + B'	  Ha : forall a : A, is_inl (h (inl a))	  Hb : forall b : B, is_inr (h (inr b))	  a' : A'	  a : A	  p : unfunctor_sum_l h Ha a = a'	  ============================	  (a;	  path_sum_inl B'	    (inl_un_inl (h (inl a)) (Ha a) @	     ((inl_un_inl (h (inl a)) (Ha a))^ @ ap inl p))) = 	  (a; p)	1 subgoal (ID 818)	  	  A : Type	  A' : Type	  B : Type	  B' : Type	  h : A + B -> A' + B'	  Ha : forall a : A, is_inl (h (inl a))	  Hb : forall b : B, is_inr (h (inr b))	  a' : A'	  a : A	  p : unfunctor_sum_l h Ha a = a'	  ============================	  path_sum_inl B'	    (inl_un_inl (h (inl a)) (Ha a) @	     ((inl_un_inl (h (inl a)) (Ha a))^ @ ap inl p)) = p	";
+            data = "1 subgoal (ID 818)	  	  A : Type	  A' : Type	  B : Type	  B' : Type	  h : A + B -> A' + B'	  Ha : forall a : A, is_inl (h (inl a))	  Hb : forall b : B, is_inr (h (inr b))	  a' : A'	  a : A	  p : unfunctor_sum_l h Ha a = a'	  ============================	  path_sum_inl B'	    (inl_un_inl (h (inl a)) (Ha a) @	     ((inl_un_inl (h (inl a)) (Ha a))^ @ ap inl p)) = p	";
             responses[i]=data;
           
 
@@ -3103,12 +3103,12 @@
           
 
             i = 617;
-            data = "1 subgoal (ID 978)	  	  A : Type	  B : Type	  C : Type	  f : C -> A + B	  ============================	  Sect	    (fun c : C =>	     let s := is_inl_or_is_inr (f c) in	     match s with	     | inl i => inl (c; i)	     | inr i => inr (c; i)	     end)	    (sum_ind (fun _ : {c : C & is_inl (f c)} + {c : C & is_inr (f c)} => C)	       pr1 pr1)	";
+            data = "1 subgoal (ID 978)	  	  A : Type	  B : Type	  C : Type	  f : C -> A + B	  ============================	  Sect	    (fun c : C =>	     let s := is_inl_or_is_inr (f c) in	     match s with	     | inl i => inl (c; i)	     | inr i => inr (c; i)	     end)	    (sum_ind (fun _ : {c : C & is_inl (f c)} + {c : C & is_inr (f c)} => C)	       pr1 pr1)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 980)		subgoal 1 (ID 980) is:	 Sect	   (sum_ind (fun _ : {c : C & is_inl (f c)} + {c : C & is_inr (f c)} => C)	      pr1 pr1)	   (fun c : C =>	    let s := is_inl_or_is_inr (f c) in	    match s with	    | inl i => inl (c; i)	    | inr i => inr (c; i)	    end)	";
             responses[i]=data;
           
 
             i = 618;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 980)		subgoal 1 (ID 980) is:	 Sect	   (sum_ind (fun _ : {c : C & is_inl (f c)} + {c : C & is_inr (f c)} => C)	      pr1 pr1)	   (fun c : C =>	    let s := is_inl_or_is_inr (f c) in	    match s with	    | inl i => inl (c; i)	    | inr i => inr (c; i)	    end)	1 subgoal (ID 980)	  	  A : Type	  B : Type	  C : Type	  f : C -> A + B	  ============================	  Sect	    (sum_ind (fun _ : {c : C & is_inl (f c)} + {c : C & is_inr (f c)} => C)	       pr1 pr1)	    (fun c : C =>	     let s := is_inl_or_is_inr (f c) in	     match s with	     | inl i => inl (c; i)	     | inr i => inr (c; i)	     end)	4 subgoals (ID 1044)	  	  A : Type	  B : Type	  C : Type	  f : C -> A + B	  c : C	  l : is_inl (f c)	  i : is_inl (f c)	  ============================	  inl (c; i) = inl (c; l)		subgoal 2 (ID 1045) is:	 inr (c; i) = inl (c; l)	subgoal 3 (ID 1056) is:	 inl (c; i) = inr (c; r)	subgoal 4 (ID 1057) is:	 inr (c; i) = inr (c; r)	";
+            data = "1 subgoal (ID 980)	  	  A : Type	  B : Type	  C : Type	  f : C -> A + B	  ============================	  Sect	    (sum_ind (fun _ : {c : C & is_inl (f c)} + {c : C & is_inr (f c)} => C)	       pr1 pr1)	    (fun c : C =>	     let s := is_inl_or_is_inr (f c) in	     match s with	     | inl i => inl (c; i)	     | inr i => inr (c; i)	     end)	4 subgoals (ID 1044)	  	  A : Type	  B : Type	  C : Type	  f : C -> A + B	  c : C	  l : is_inl (f c)	  i : is_inl (f c)	  ============================	  inl (c; i) = inl (c; l)		subgoal 2 (ID 1045) is:	 inr (c; i) = inl (c; l)	subgoal 3 (ID 1056) is:	 inl (c; i) = inr (c; r)	subgoal 4 (ID 1057) is:	 inr (c; i) = inr (c; r)	";
             responses[i]=data;
           
 
@@ -3658,12 +3658,12 @@
           
 
             i = 728;
-            data = "1 subgoal (ID 1122)	  	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  H : A -> B -> Empty	  b1 : B	  a2 : A	  ============================	  inr b1 = inl a2	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1123)		subgoal 1 (ID 1123) is:	 inr b1 = inr b2	";
+            data = "1 subgoal (ID 1122)	  	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  H : A -> B -> Empty	  b1 : B	  a2 : A	  ============================	  inr b1 = inl a2	";
             responses[i]=data;
           
 
             i = 729;
-            data = "1 subgoal (ID 1123)	  	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  H : A -> B -> Empty	  b1, b2 : B	  ============================	  inr b1 = inr b2	No more subgoals.	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1123)		subgoal 1 (ID 1123) is:	 inr b1 = inr b2	1 subgoal (ID 1123)	  	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  H : A -> B -> Empty	  b1, b2 : B	  ============================	  inr b1 = inr b2	No more subgoals.	";
             responses[i]=data;
           
 
