@@ -1333,17 +1333,17 @@
           
 
             i = 263;
-            data = "1 subgoal (ID 24)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  f : forall a : A, B (to O A a)	  oa : O_reflector O A	  H := B_inO oa : IsEquiv (to O (B oa))	  ============================	  B oa	";
+            data = "1 subgoal (ID 23)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  f : forall a : A, B (to O A a)	  oa : O_reflector O A	  H := B_inO oa : IsEquiv (to O (B oa))	  ============================	  B oa	";
             responses[i]=data;
           
 
             i = 264;
-            data = "1 subgoal (ID 31)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  f : forall a : A, B (to O A a)	  oa : O_reflector O A	  H := B_inO oa : IsEquiv (to O (B oa))	  ============================	  Os.O_reflector O (B oa)	";
+            data = "1 subgoal (ID 30)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  f : forall a : A, B (to O A a)	  oa : O_reflector O A	  H := B_inO oa : IsEquiv (to O (B oa))	  ============================	  Os.O_reflector O (B oa)	";
             responses[i]=data;
           
 
             i = 265;
-            data = "1 subgoal (ID 32)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  f : forall a : A, B (to O A a)	  oa : O_reflector O A	  H := B_inO oa : IsEquiv (to O (B oa))	  ============================	  forall a : A, Os.O_reflector O (B (Os.to O A a))	";
+            data = "1 subgoal (ID 31)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  f : forall a : A, B (to O A a)	  oa : O_reflector O A	  H := B_inO oa : IsEquiv (to O (B oa))	  ============================	  forall a : A, Os.O_reflector O (B (Os.to O A a))	";
             responses[i]=data;
           
 
@@ -1553,12 +1553,12 @@
           
 
             i = 307;
-            data = "1 subgoal (ID 189)	  	  O : Modality	  A : Type	  B : Type	  A_inO : In O A	  f : A -> B	  feq : IsEquiv f	  x : O_reflector O A	  a : A	  ============================	  O_ind_internal O B (fun _ : O_reflector O B => O_reflector O A)	    (fun _ : O_reflector O B => O_inO O A)	    (fun b : B => to O A (feq.(equiv_inv) b))	    (O_ind_internal O A (fun _ : O_reflector O A => O_reflector O B)	       (fun _ : O_reflector O A => O_inO O B) (fun a0 : A => to O B (f a0))	       (to O A a)) = to O A a	";
+            data = "1 subgoal (ID 189)	  	  O : Modality	  A : Type	  B : Type	  A_inO : In O A	  f : A -> B	  feq : IsEquiv f	  x : O_reflector O A	  a : A	  ============================	  O_ind_internal O B (fun _ : O_reflector O B => O_reflector O A)	    (fun _ : O_reflector O B => O_inO O A)	    (fun b : B => to O A (feq.(equiv_inv) b))	    (O_ind_internal O A (fun _ : O_reflector O A => O_reflector O B)	       (fun _ : O_reflector O A => O_inO O B) (fun a0 : A => to O B (f a0))	       (to O A a)) = to O A a	No more subgoals.	";
             responses[i]=data;
           
 
             i = 308;
-            data = "No more subgoals.	<infomsg>inO_equiv_inO is defined</infomsg>	";
+            data = "<infomsg>inO_equiv_inO is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -2583,12 +2583,12 @@
           
 
             i = 513;
-            data = "1 subgoal (ID 1105)	  	  fs : Funext	  O : Modality	  A : Type	  B : Type	  f : A -> B	  fact : Factorization (@IsConnMap O) (@MapIn O) f	  b : B	  ============================	  O {w : hfiber fact.(factor2) b & hfiber fact.(factor1) w.(proj1_sig)} <~>	  {w : {x : fact.(intermediate) & fact.(factor2) x = b} &	  O (hfiber fact.(factor1) w.(proj1_sig))}	1 subgoal (ID 1415)	  	  fs : Funext	  O : Modality	  A : Type	  B : Type	  f : A -> B	  fact : Factorization (@IsConnMap O) (@MapIn O) f	  b : B	  ============================	  In O {x : fact.(intermediate) & fact.(factor2) x = b}	";
+            data = "1 subgoal (ID 1105)	  	  fs : Funext	  O : Modality	  A : Type	  B : Type	  f : A -> B	  fact : Factorization (@IsConnMap O) (@MapIn O) f	  b : B	  ============================	  O {w : hfiber fact.(factor2) b & hfiber fact.(factor1) w.(proj1_sig)} <~>	  {w : {x : fact.(intermediate) & fact.(factor2) x = b} &	  O (hfiber fact.(factor1) w.(proj1_sig))}	";
             responses[i]=data;
           
 
             i = 514;
-            data = "No more subgoals.	";
+            data = "1 subgoal (ID 1415)	  	  fs : Funext	  O : Modality	  A : Type	  B : Type	  f : A -> B	  fact : Factorization (@IsConnMap O) (@MapIn O) f	  b : B	  ============================	  In O {x : fact.(intermediate) & fact.(factor2) x = b}	No more subgoals.	";
             responses[i]=data;
           
 
