@@ -248,12 +248,12 @@
           
 
             i = 46;
-            data = "2 subgoals (ID 8)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  ============================	  coequalizer_graph.(graph0) -> Type		subgoal 2 (ID 10) is:	 forall i j : coequalizer_graph.(graph0),	 coequalizer_graph.(graph1) i j -> ?diagram0 i -> ?diagram0 j	";
+            data = "2 subgoals (ID 8)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  ============================	  coequalizer_graph -> Type		subgoal 2 (ID 10) is:	 forall i j : coequalizer_graph,	 coequalizer_graph i j -> ?diagram0 i -> ?diagram0 j	";
             responses[i]=data;
           
 
             i = 47;
-            data = "1 subgoal (ID 8)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  ============================	  coequalizer_graph.(graph0) -> Type	2 subgoals (ID 15)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  ============================	  Type		subgoal 2 (ID 16) is:	 Type	";
+            data = "1 subgoal (ID 8)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  ============================	  coequalizer_graph -> Type	2 subgoals (ID 15)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  ============================	  Type		subgoal 2 (ID 16) is:	 Type	";
             responses[i]=data;
           
 
@@ -263,12 +263,12 @@
           
 
             i = 49;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 10)		subgoal 1 (ID 10) is:	 forall i j : coequalizer_graph.(graph0),	 coequalizer_graph.(graph1) i j ->	 (fun x : coequalizer_graph.(graph0) => if x then B else A) i ->	 (fun x : coequalizer_graph.(graph0) => if x then B else A) j	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 10)		subgoal 1 (ID 10) is:	 forall i j : coequalizer_graph,	 coequalizer_graph i j ->	 (fun x : coequalizer_graph => if x then B else A) i ->	 (fun x : coequalizer_graph => if x then B else A) j	";
             responses[i]=data;
           
 
             i = 50;
-            data = "1 subgoal (ID 10)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  ============================	  forall i j : coequalizer_graph.(graph0),	  coequalizer_graph.(graph1) i j ->	  (fun x : coequalizer_graph.(graph0) => if x then B else A) i ->	  (fun x : coequalizer_graph.(graph0) => if x then B else A) j	2 subgoals (ID 42)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  ============================	  B -> A		subgoal 2 (ID 43) is:	 B -> A	";
+            data = "1 subgoal (ID 10)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  ============================	  forall i j : coequalizer_graph,	  coequalizer_graph i j ->	  (fun x : coequalizer_graph => if x then B else A) i ->	  (fun x : coequalizer_graph => if x then B else A) j	2 subgoals (ID 42)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  ============================	  B -> A		subgoal 2 (ID 43) is:	 B -> A	";
             responses[i]=data;
           
 
@@ -298,12 +298,12 @@
           
 
             i = 56;
-            data = "2 subgoals (ID 37)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  Q : Type	  q : A -> Q	  Hq : q o g == q o f	  ============================	  forall i : coequalizer_graph.(graph0),	  (coequalizer_diag f g).(diagram0) i -> Q		subgoal 2 (ID 39) is:	 forall (i j : coequalizer_graph.(graph0))	 (g0 : coequalizer_graph.(graph1) i j)	 (x : (coequalizer_diag f g).(diagram0) i),	 ?q j ((coequalizer_diag f g).(diagram1) i j g0 x) = ?q i x	";
+            data = "2 subgoals (ID 37)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  Q : Type	  q : A -> Q	  Hq : q o g == q o f	  ============================	  forall i : coequalizer_graph, (coequalizer_diag f g) i -> Q		subgoal 2 (ID 39) is:	 forall (i j : coequalizer_graph) (g0 : coequalizer_graph i j)	 (x : (coequalizer_diag f g) i),	 ?q j (((coequalizer_diag f g) _f g0) x) = ?q i x	";
             responses[i]=data;
           
 
             i = 57;
-            data = "1 subgoal (ID 37)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  Q : Type	  q : A -> Q	  Hq : q o g == q o f	  ============================	  forall i : coequalizer_graph.(graph0),	  (coequalizer_diag f g).(diagram0) i -> Q	2 subgoals (ID 46)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  Q : Type	  q : A -> Q	  Hq : q o g == q o f	  ============================	  B -> Q		subgoal 2 (ID 47) is:	 A -> Q	";
+            data = "1 subgoal (ID 37)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  Q : Type	  q : A -> Q	  Hq : q o g == q o f	  ============================	  forall i : coequalizer_graph, (coequalizer_diag f g) i -> Q	2 subgoals (ID 46)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  Q : Type	  q : A -> Q	  Hq : q o g == q o f	  ============================	  B -> Q		subgoal 2 (ID 47) is:	 A -> Q	";
             responses[i]=data;
           
 
@@ -313,12 +313,12 @@
           
 
             i = 59;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 39)		subgoal 1 (ID 39) is:	 forall (i j : coequalizer_graph.(graph0))	 (g0 : coequalizer_graph.(graph1) i j)	 (x : (coequalizer_diag f g).(diagram0) i),	 (fun i0 : coequalizer_graph.(graph0) =>	  if i0 as b return ((coequalizer_diag f g).(diagram0) b -> Q)	  then q o f	  else q) j ((coequalizer_diag f g).(diagram1) i j g0 x) =	 (fun i0 : coequalizer_graph.(graph0) =>	  if i0 as b return ((coequalizer_diag f g).(diagram0) b -> Q)	  then q o f	  else q) i x	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 39)		subgoal 1 (ID 39) is:	 forall (i j : coequalizer_graph) (g0 : coequalizer_graph i j)	 (x : (coequalizer_diag f g) i),	 (fun i0 : coequalizer_graph =>	  if i0 as b return ((coequalizer_diag f g) b -> Q) then q o f else q) j	   (((coequalizer_diag f g) _f g0) x) =	 (fun i0 : coequalizer_graph =>	  if i0 as b return ((coequalizer_diag f g) b -> Q) then q o f else q) i x	";
             responses[i]=data;
           
 
             i = 60;
-            data = "1 subgoal (ID 39)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  Q : Type	  q : A -> Q	  Hq : q o g == q o f	  ============================	  forall (i j : coequalizer_graph.(graph0))	  (g0 : coequalizer_graph.(graph1) i j)	  (x : (coequalizer_diag f g).(diagram0) i),	  (fun i0 : coequalizer_graph.(graph0) =>	   if i0 as b return ((coequalizer_diag f g).(diagram0) b -> Q)	   then q o f	   else q) j ((coequalizer_diag f g).(diagram1) i j g0 x) =	  (fun i0 : coequalizer_graph.(graph0) =>	   if i0 as b return ((coequalizer_diag f g).(diagram0) b -> Q)	   then q o f	   else q) i x	2 subgoals (ID 87)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  Q : Type	  q : A -> Q	  Hq : q o g == q o f	  ============================	  forall x : B, q (f x) = q (f x)		subgoal 2 (ID 88) is:	 forall x : B, q (g x) = q (f x)	";
+            data = "1 subgoal (ID 39)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  Q : Type	  q : A -> Q	  Hq : q o g == q o f	  ============================	  forall (i j : coequalizer_graph) (g0 : coequalizer_graph i j)	  (x : (coequalizer_diag f g) i),	  (fun i0 : coequalizer_graph =>	   if i0 as b return ((coequalizer_diag f g) b -> Q) then q o f else q) j	    (((coequalizer_diag f g) _f g0) x) =	  (fun i0 : coequalizer_graph =>	   if i0 as b return ((coequalizer_diag f g) b -> Q) then q o f else q) i x	2 subgoals (ID 87)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  Q : Type	  q : A -> Q	  Hq : q o g == q o f	  ============================	  forall x : B, q (f x) = q (f x)		subgoal 2 (ID 88) is:	 forall x : B, q (g x) = q (f x)	";
             responses[i]=data;
           
 
@@ -398,12 +398,12 @@
           
 
             i = 76;
-            data = "2 subgoals (ID 43)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  ============================	  forall i : coequalizer_graph.(graph0),	  (coequalizer_diag f g).(diagram0) i -> Coeq f g		subgoal 2 (ID 45) is:	 forall (i j : coequalizer_graph.(graph0))	 (g0 : coequalizer_graph.(graph1) i j)	 (x : (coequalizer_diag f g).(diagram0) i),	 ?q j ((coequalizer_diag f g).(diagram1) i j g0 x) = ?q i x	";
+            data = "2 subgoals (ID 43)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  ============================	  forall i : coequalizer_graph, (coequalizer_diag f g) i -> Coeq f g		subgoal 2 (ID 45) is:	 forall (i j : coequalizer_graph) (g0 : coequalizer_graph i j)	 (x : (coequalizer_diag f g) i),	 ?q j (((coequalizer_diag f g) _f g0) x) = ?q i x	";
             responses[i]=data;
           
 
             i = 77;
-            data = "1 subgoal (ID 43)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  ============================	  forall i : coequalizer_graph.(graph0),	  (coequalizer_diag f g).(diagram0) i -> Coeq f g	2 subgoals (ID 64)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  x : B	  ============================	  Coeq f g		subgoal 2 (ID 71) is:	 Coeq f g	";
+            data = "1 subgoal (ID 43)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  ============================	  forall i : coequalizer_graph, (coequalizer_diag f g) i -> Coeq f g	2 subgoals (ID 64)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  x : B	  ============================	  Coeq f g		subgoal 2 (ID 71) is:	 Coeq f g	";
             responses[i]=data;
           
 
@@ -413,17 +413,17 @@
           
 
             i = 79;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 45)		subgoal 1 (ID 45) is:	 forall (i j : coequalizer_graph.(graph0))	 (g0 : coequalizer_graph.(graph1) i j)	 (x : (coequalizer_diag f g).(diagram0) i),	 (fun (i0 : coequalizer_graph.(graph0))	    (x0 : (coequalizer_diag f g).(diagram0) i0) =>	  (if i0 as b return ((coequalizer_diag f g).(diagram0) b -> Coeq f g)	   then fun x1 : (coequalizer_diag f g).(diagram0) true => coeq (g x1)	   else fun x1 : (coequalizer_diag f g).(diagram0) false => coeq x1) x0) j	   ((coequalizer_diag f g).(diagram1) i j g0 x) =	 (fun (i0 : coequalizer_graph.(graph0))	    (x0 : (coequalizer_diag f g).(diagram0) i0) =>	  (if i0 as b return ((coequalizer_diag f g).(diagram0) b -> Coeq f g)	   then fun x1 : (coequalizer_diag f g).(diagram0) true => coeq (g x1)	   else fun x1 : (coequalizer_diag f g).(diagram0) false => coeq x1) x0) i x	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 45)		subgoal 1 (ID 45) is:	 forall (i j : coequalizer_graph) (g0 : coequalizer_graph i j)	 (x : (coequalizer_diag f g) i),	 (fun (i0 : coequalizer_graph) (x0 : (coequalizer_diag f g) i0) =>	  (if i0 as b return ((coequalizer_diag f g) b -> Coeq f g)	   then fun x1 : (coequalizer_diag f g) true => coeq (g x1)	   else fun x1 : (coequalizer_diag f g) false => coeq x1) x0) j	   (((coequalizer_diag f g) _f g0) x) =	 (fun (i0 : coequalizer_graph) (x0 : (coequalizer_diag f g) i0) =>	  (if i0 as b return ((coequalizer_diag f g) b -> Coeq f g)	   then fun x1 : (coequalizer_diag f g) true => coeq (g x1)	   else fun x1 : (coequalizer_diag f g) false => coeq x1) x0) i x	";
             responses[i]=data;
           
 
             i = 80;
-            data = "1 subgoal (ID 45)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  ============================	  forall (i j : coequalizer_graph.(graph0))	  (g0 : coequalizer_graph.(graph1) i j)	  (x : (coequalizer_diag f g).(diagram0) i),	  (fun (i0 : coequalizer_graph.(graph0))	     (x0 : (coequalizer_diag f g).(diagram0) i0) =>	   (if i0 as b return ((coequalizer_diag f g).(diagram0) b -> Coeq f g)	    then fun x1 : (coequalizer_diag f g).(diagram0) true => coeq (g x1)	    else fun x1 : (coequalizer_diag f g).(diagram0) false => coeq x1) x0) j	    ((coequalizer_diag f g).(diagram1) i j g0 x) =	  (fun (i0 : coequalizer_graph.(graph0))	     (x0 : (coequalizer_diag f g).(diagram0) i0) =>	   (if i0 as b return ((coequalizer_diag f g).(diagram0) b -> Coeq f g)	    then fun x1 : (coequalizer_diag f g).(diagram0) true => coeq (g x1)	    else fun x1 : (coequalizer_diag f g).(diagram0) false => coeq x1) x0) i x	2 subgoals (ID 130)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  x : (coequalizer_diag f g).(diagram0) true	  ============================	  coeq (f x) = coeq (g x)		subgoal 2 (ID 131) is:	 coeq (g x) = coeq (g x)	";
+            data = "1 subgoal (ID 45)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  ============================	  forall (i j : coequalizer_graph) (g0 : coequalizer_graph i j)	  (x : (coequalizer_diag f g) i),	  (fun (i0 : coequalizer_graph) (x0 : (coequalizer_diag f g) i0) =>	   (if i0 as b return ((coequalizer_diag f g) b -> Coeq f g)	    then fun x1 : (coequalizer_diag f g) true => coeq (g x1)	    else fun x1 : (coequalizer_diag f g) false => coeq x1) x0) j	    (((coequalizer_diag f g) _f g0) x) =	  (fun (i0 : coequalizer_graph) (x0 : (coequalizer_diag f g) i0) =>	   (if i0 as b return ((coequalizer_diag f g) b -> Coeq f g)	    then fun x1 : (coequalizer_diag f g) true => coeq (g x1)	    else fun x1 : (coequalizer_diag f g) false => coeq x1) x0) i x	2 subgoals (ID 130)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  x : (coequalizer_diag f g) true	  ============================	  coeq (f x) = coeq (g x)		subgoal 2 (ID 131) is:	 coeq (g x) = coeq (g x)	";
             responses[i]=data;
           
 
             i = 81;
-            data = "1 subgoal (ID 131)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  x : (coequalizer_diag f g).(diagram0) true	  ============================	  coeq (g x) = coeq (g x)	";
+            data = "1 subgoal (ID 131)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  x : (coequalizer_diag f g) true	  ============================	  coeq (g x) = coeq (g x)	";
             responses[i]=data;
           
 
@@ -473,107 +473,107 @@
           
 
             i = 91;
-            data = "1 subgoal (ID 70)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  C : cocone (coequalizer_diag f g) X	  ============================	  forall b : B, C.(q) false (f b) = C.(q) false (g b)	";
+            data = "1 subgoal (ID 70)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  C : cocone (coequalizer_diag f g) X	  ============================	  forall b : B, C false (f b) = C false (g b)	";
             responses[i]=data;
           
 
             i = 92;
-            data = "1 subgoal (ID 74)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  C : cocone (coequalizer_diag f g) X	  b : B	  ============================	  C.(q) false (f b) = C.(q) false (g b)	";
+            data = "1 subgoal (ID 74)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  C : cocone (coequalizer_diag f g) X	  b : B	  ============================	  C false (f b) = C false (g b)	";
             responses[i]=data;
           
 
             i = 93;
-            data = "2 focused subgoals	(shelved: 1) (ID 98)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  C : cocone (coequalizer_diag f g) X	  b : B	  ============================	  C.(q) false (f b) = ?Goal		subgoal 2 (ID 99) is:	 ?Goal = C.(q) false (g b)	";
+            data = "2 focused subgoals	(shelved: 1) (ID 98)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  C : cocone (coequalizer_diag f g) X	  b : B	  ============================	  C false (f b) = ?Goal		subgoal 2 (ID 99) is:	 ?Goal = C false (g b)	";
             responses[i]=data;
           
 
             i = 94;
-            data = "1 subgoal (ID 99)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  C : cocone (coequalizer_diag f g) X	  b : B	  ============================	  C.(q) true b = C.(q) false (g b)	";
+            data = "1 subgoal (ID 99)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  C : cocone (coequalizer_diag f g) X	  b : B	  ============================	  C true b = C false (g b)	";
             responses[i]=data;
           
 
             i = 95;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 57)		subgoal 1 (ID 57) is:	 Sect	   (fun C : cocone (coequalizer_diag f g) X =>	    Coeq_rec X (C.(q) false)	      (fun b : B => C.(qq) true false true b @ (C.(qq) true false false b)^))	   (postcompose_cocone Coeq_cocone)	subgoal 2 (ID 59) is:	 Sect (postcompose_cocone Coeq_cocone)	   (fun C : cocone (coequalizer_diag f g) X =>	    Coeq_rec X (C.(q) false)	      (fun b : B => C.(qq) true false true b @ (C.(qq) true false false b)^))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 57)		subgoal 1 (ID 57) is:	 Sect	   (fun C : cocone (coequalizer_diag f g) X =>	    Coeq_rec X (C false)	      (fun b : B => qq C true false true b @ (qq C true false false b)^))	   (postcompose_cocone Coeq_cocone)	subgoal 2 (ID 59) is:	 Sect (postcompose_cocone Coeq_cocone)	   (fun C : cocone (coequalizer_diag f g) X =>	    Coeq_rec X (C false)	      (fun b : B => qq C true false true b @ (qq C true false false b)^))	";
             responses[i]=data;
           
 
             i = 96;
-            data = "1 subgoal (ID 57)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  ============================	  Sect	    (fun C : cocone (coequalizer_diag f g) X =>	     Coeq_rec X (C.(q) false)	       (fun b : B => C.(qq) true false true b @ (C.(qq) true false false b)^))	    (postcompose_cocone Coeq_cocone)	1 subgoal (ID 110)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  C : cocone (coequalizer_diag f g) X	  ============================	  postcompose_cocone Coeq_cocone	    (Coeq_rec X (C.(q) false)	       (fun b : B => C.(qq) true false true b @ (C.(qq) true false false b)^)) =	  C	";
+            data = "1 subgoal (ID 57)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  ============================	  Sect	    (fun C : cocone (coequalizer_diag f g) X =>	     Coeq_rec X (C false)	       (fun b : B => qq C true false true b @ (qq C true false false b)^))	    (postcompose_cocone Coeq_cocone)	1 subgoal (ID 110)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  C : cocone (coequalizer_diag f g) X	  ============================	  postcompose_cocone Coeq_cocone	    (Coeq_rec X (C false)	       (fun b : B => qq C true false true b @ (qq C true false false b)^)) =	  C	";
             responses[i]=data;
           
 
             i = 97;
-            data = "2 subgoals (ID 118)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  C : cocone (coequalizer_diag f g) X	  ============================	  forall i : coequalizer_graph.(graph0),	  (postcompose_cocone Coeq_cocone	     (Coeq_rec X (C.(q) false)	        (fun b : B => C.(qq) true false true b @ (C.(qq) true false false b)^)))	  .(q) i == C.(q) i		subgoal 2 (ID 120) is:	 forall (i j : coequalizer_graph.(graph0))	 (g0 : coequalizer_graph.(graph1) i j)	 (x : (coequalizer_diag f g).(diagram0) i),	 (postcompose_cocone Coeq_cocone	    (Coeq_rec X (C.(q) false)	       (fun b : B => C.(qq) true false true b @ (C.(qq) true false false b)^)))	 .(qq) i j g0 x @ ?eq1 i x =	 ?eq1 j ((coequalizer_diag f g).(diagram1) i j g0 x) @ C.(qq) i j g0 x	";
+            data = "2 subgoals (ID 118)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  C : cocone (coequalizer_diag f g) X	  ============================	  forall i : coequalizer_graph,	  (postcompose_cocone Coeq_cocone	     (Coeq_rec X (C false)	        (fun b : B => qq C true false true b @ (qq C true false false b)^)))	    i == C i		subgoal 2 (ID 120) is:	 forall (i j : coequalizer_graph) (g0 : coequalizer_graph i j)	 (x : (coequalizer_diag f g) i),	 qq	   (postcompose_cocone Coeq_cocone	      (Coeq_rec X (C false)	         (fun b : B => qq C true false true b @ (qq C true false false b)^)))	   i j g0 x @ ?eq1 i x =	 ?eq1 j (((coequalizer_diag f g) _f g0) x) @ qq C i j g0 x	";
             responses[i]=data;
           
 
             i = 98;
-            data = "1 subgoal (ID 118)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  C : cocone (coequalizer_diag f g) X	  ============================	  forall i : coequalizer_graph.(graph0),	  (postcompose_cocone Coeq_cocone	     (Coeq_rec X (C.(q) false)	        (fun b : B => C.(qq) true false true b @ (C.(qq) true false false b)^)))	  .(q) i == C.(q) i	2 subgoals (ID 134)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  C : cocone (coequalizer_diag f g) X	  x : (coequalizer_diag f g).(diagram0) true	  ============================	  C.(q) false (g x) = C.(q) true x		subgoal 2 (ID 135) is:	 C.(q) false x = C.(q) false x	";
+            data = "1 subgoal (ID 118)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  C : cocone (coequalizer_diag f g) X	  ============================	  forall i : coequalizer_graph,	  (postcompose_cocone Coeq_cocone	     (Coeq_rec X (C false)	        (fun b : B => qq C true false true b @ (qq C true false false b)^)))	    i == C i	2 subgoals (ID 134)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  C : cocone (coequalizer_diag f g) X	  x : (coequalizer_diag f g) true	  ============================	  C false (g x) = C true x		subgoal 2 (ID 135) is:	 C false x = C false x	";
             responses[i]=data;
           
 
             i = 99;
-            data = "1 subgoal (ID 135)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  C : cocone (coequalizer_diag f g) X	  x : (coequalizer_diag f g).(diagram0) false	  ============================	  C.(q) false x = C.(q) false x	";
+            data = "1 subgoal (ID 135)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  C : cocone (coequalizer_diag f g) X	  x : (coequalizer_diag f g) false	  ============================	  C false x = C false x	";
             responses[i]=data;
           
 
             i = 100;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 120)		subgoal 1 (ID 120) is:	 forall (i j : coequalizer_graph.(graph0))	 (g0 : coequalizer_graph.(graph1) i j)	 (x : (coequalizer_diag f g).(diagram0) i),	 (postcompose_cocone Coeq_cocone	    (Coeq_rec X (C.(q) false)	       (fun b : B => C.(qq) true false true b @ (C.(qq) true false false b)^)))	 .(qq) i j g0 x @	 (fun (i0 : coequalizer_graph.(graph0))	    (x0 : (coequalizer_diag f g).(diagram0) i0) =>	  (if i0 as b	    return	      (forall x1 : (coequalizer_diag f g).(diagram0) b,	       (postcompose_cocone Coeq_cocone	          (Coeq_rec X (C.(q) false)	             (fun b0 : B =>	              C.(qq) true false true b0 @ (C.(qq) true false false b0)^)))	       .(q) b x1 = C.(q) b x1)	   then	    fun x1 : (coequalizer_diag f g).(diagram0) true =>	    C.(qq) true false false x1	   else fun x1 : (coequalizer_diag f g).(diagram0) false => 1) x0) i x =	 (fun (i0 : coequalizer_graph.(graph0))	    (x0 : (coequalizer_diag f g).(diagram0) i0) =>	  (if i0 as b	    return	      (forall x1 : (coequalizer_diag f g).(diagram0) b,	       (postcompose_cocone Coeq_cocone	          (Coeq_rec X (C.(q) false)	             (fun b0 : B =>	              C.(qq) true false true b0 @ (C.(qq) true false false b0)^)))	       .(q) b x1 = C.(q) b x1)	   then	    fun x1 : (coequalizer_diag f g).(diagram0) true =>	    C.(qq) true false false x1	   else fun x1 : (coequalizer_diag f g).(diagram0) false => 1) x0) j	   ((coequalizer_diag f g).(diagram1) i j g0 x) @ 	 C.(qq) i j g0 x	subgoal 2 (ID 59) is:	 Sect (postcompose_cocone Coeq_cocone)	   (fun C : cocone (coequalizer_diag f g) X =>	    Coeq_rec X (C.(q) false)	      (fun b : B => C.(qq) true false true b @ (C.(qq) true false false b)^))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 120)		subgoal 1 (ID 120) is:	 forall (i j : coequalizer_graph) (g0 : coequalizer_graph i j)	 (x : (coequalizer_diag f g) i),	 qq	   (postcompose_cocone Coeq_cocone	      (Coeq_rec X (C false)	         (fun b : B => qq C true false true b @ (qq C true false false b)^)))	   i j g0 x @	 (fun (i0 : coequalizer_graph) (x0 : (coequalizer_diag f g) i0) =>	  (if i0 as b	    return	      (forall x1 : (coequalizer_diag f g) b,	       (postcompose_cocone Coeq_cocone	          (Coeq_rec X (C false)	             (fun b0 : B =>	              qq C true false true b0 @ (qq C true false false b0)^))) b x1 =	       C b x1)	   then fun x1 : (coequalizer_diag f g) true => qq C true false false x1	   else fun x1 : (coequalizer_diag f g) false => 1) x0) i x =	 (fun (i0 : coequalizer_graph) (x0 : (coequalizer_diag f g) i0) =>	  (if i0 as b	    return	      (forall x1 : (coequalizer_diag f g) b,	       (postcompose_cocone Coeq_cocone	          (Coeq_rec X (C false)	             (fun b0 : B =>	              qq C true false true b0 @ (qq C true false false b0)^))) b x1 =	       C b x1)	   then fun x1 : (coequalizer_diag f g) true => qq C true false false x1	   else fun x1 : (coequalizer_diag f g) false => 1) x0) j	   (((coequalizer_diag f g) _f g0) x) @ qq C i j g0 x	subgoal 2 (ID 59) is:	 Sect (postcompose_cocone Coeq_cocone)	   (fun C : cocone (coequalizer_diag f g) X =>	    Coeq_rec X (C false)	      (fun b : B => qq C true false true b @ (qq C true false false b)^))	";
             responses[i]=data;
           
 
             i = 101;
-            data = "1 subgoal (ID 120)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  C : cocone (coequalizer_diag f g) X	  ============================	  forall (i j : coequalizer_graph.(graph0))	  (g0 : coequalizer_graph.(graph1) i j)	  (x : (coequalizer_diag f g).(diagram0) i),	  (postcompose_cocone Coeq_cocone	     (Coeq_rec X (C.(q) false)	        (fun b : B => C.(qq) true false true b @ (C.(qq) true false false b)^)))	  .(qq) i j g0 x @	  (fun (i0 : coequalizer_graph.(graph0))	     (x0 : (coequalizer_diag f g).(diagram0) i0) =>	   (if i0 as b	     return	       (forall x1 : (coequalizer_diag f g).(diagram0) b,	        (postcompose_cocone Coeq_cocone	           (Coeq_rec X (C.(q) false)	              (fun b0 : B =>	               C.(qq) true false true b0 @ (C.(qq) true false false b0)^)))	        .(q) b x1 = C.(q) b x1)	    then	     fun x1 : (coequalizer_diag f g).(diagram0) true =>	     C.(qq) true false false x1	    else fun x1 : (coequalizer_diag f g).(diagram0) false => 1) x0) i x =	  (fun (i0 : coequalizer_graph.(graph0))	     (x0 : (coequalizer_diag f g).(diagram0) i0) =>	   (if i0 as b	     return	       (forall x1 : (coequalizer_diag f g).(diagram0) b,	        (postcompose_cocone Coeq_cocone	           (Coeq_rec X (C.(q) false)	              (fun b0 : B =>	               C.(qq) true false true b0 @ (C.(qq) true false false b0)^)))	        .(q) b x1 = C.(q) b x1)	    then	     fun x1 : (coequalizer_diag f g).(diagram0) true =>	     C.(qq) true false false x1	    else fun x1 : (coequalizer_diag f g).(diagram0) false => 1) x0) j	    ((coequalizer_diag f g).(diagram1) i j g0 x) @ 	  C.(qq) i j g0 x	2 subgoals (ID 190)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  C : cocone (coequalizer_diag f g) X	  x : (coequalizer_diag f g).(diagram0) true	  ============================	  ap	    (Coeq_rec X (C.(q) false)	       (fun b : B => C.(qq) true false true b @ (C.(qq) true false false b)^))	    (cp x) @ C.(qq) true false false x = 1 @ C.(qq) true false true x		subgoal 2 (ID 191) is:	 1 @ C.(qq) true false false x = 1 @ C.(qq) true false false x	";
+            data = "1 subgoal (ID 120)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  C : cocone (coequalizer_diag f g) X	  ============================	  forall (i j : coequalizer_graph) (g0 : coequalizer_graph i j)	  (x : (coequalizer_diag f g) i),	  qq	    (postcompose_cocone Coeq_cocone	       (Coeq_rec X (C false)	          (fun b : B => qq C true false true b @ (qq C true false false b)^)))	    i j g0 x @	  (fun (i0 : coequalizer_graph) (x0 : (coequalizer_diag f g) i0) =>	   (if i0 as b	     return	       (forall x1 : (coequalizer_diag f g) b,	        (postcompose_cocone Coeq_cocone	           (Coeq_rec X (C false)	              (fun b0 : B =>	               qq C true false true b0 @ (qq C true false false b0)^))) b x1 =	        C b x1)	    then fun x1 : (coequalizer_diag f g) true => qq C true false false x1	    else fun x1 : (coequalizer_diag f g) false => 1) x0) i x =	  (fun (i0 : coequalizer_graph) (x0 : (coequalizer_diag f g) i0) =>	   (if i0 as b	     return	       (forall x1 : (coequalizer_diag f g) b,	        (postcompose_cocone Coeq_cocone	           (Coeq_rec X (C false)	              (fun b0 : B =>	               qq C true false true b0 @ (qq C true false false b0)^))) b x1 =	        C b x1)	    then fun x1 : (coequalizer_diag f g) true => qq C true false false x1	    else fun x1 : (coequalizer_diag f g) false => 1) x0) j	    (((coequalizer_diag f g) _f g0) x) @ qq C i j g0 x	2 subgoals (ID 190)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  C : cocone (coequalizer_diag f g) X	  x : (coequalizer_diag f g) true	  ============================	  ap	    (Coeq_rec X (C false)	       (fun b : B => qq C true false true b @ (qq C true false false b)^))	    (cp x) @ qq C true false false x = 1 @ qq C true false true x		subgoal 2 (ID 191) is:	 1 @ qq C true false false x = 1 @ qq C true false false x	";
             responses[i]=data;
           
 
             i = 102;
-            data = "1 subgoal (ID 190)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  C : cocone (coequalizer_diag f g) X	  x : (coequalizer_diag f g).(diagram0) true	  ============================	  ap	    (Coeq_rec X (C.(q) false)	       (fun b : B => C.(qq) true false true b @ (C.(qq) true false false b)^))	    (cp x) @ C.(qq) true false false x = 1 @ C.(qq) true false true x	";
+            data = "1 subgoal (ID 190)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  C : cocone (coequalizer_diag f g) X	  x : (coequalizer_diag f g) true	  ============================	  ap	    (Coeq_rec X (C false)	       (fun b : B => qq C true false true b @ (qq C true false false b)^))	    (cp x) @ qq C true false false x = 1 @ qq C true false true x	";
             responses[i]=data;
           
 
             i = 103;
-            data = "1 subgoal (ID 192)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  C : cocone (coequalizer_diag f g) X	  x : (coequalizer_diag f g).(diagram0) true	  ============================	  ap	    (Coeq_rec X (C.(q) false)	       (fun b : B => C.(qq) true false true b @ (C.(qq) true false false b)^))	    (cp x) @ C.(qq) true false false x = C.(qq) true false true x	1 subgoal (ID 298)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  C : cocone (coequalizer_diag f g) X	  x : (coequalizer_diag f g).(diagram0) true	  ============================	  (C.(qq) true false true x @ (C.(qq) true false false x)^) @	  C.(qq) true false false x = C.(qq) true false true x	";
+            data = "1 subgoal (ID 192)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  C : cocone (coequalizer_diag f g) X	  x : (coequalizer_diag f g) true	  ============================	  ap	    (Coeq_rec X (C false)	       (fun b : B => qq C true false true b @ (qq C true false false b)^))	    (cp x) @ qq C true false false x = qq C true false true x	1 subgoal (ID 298)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  C : cocone (coequalizer_diag f g) X	  x : (coequalizer_diag f g) true	  ============================	  (qq C true false true x @ (qq C true false false x)^) @	  qq C true false false x = qq C true false true x	";
             responses[i]=data;
           
 
             i = 104;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	2 subgoals (ID 191)		subgoal 1 (ID 191) is:	 1 @ C.(qq) true false false x = 1 @ C.(qq) true false false x	subgoal 2 (ID 59) is:	 Sect (postcompose_cocone Coeq_cocone)	   (fun C : cocone (coequalizer_diag f g) X =>	    Coeq_rec X (C.(q) false)	      (fun b : B => C.(qq) true false true b @ (C.(qq) true false false b)^))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	2 subgoals (ID 191)		subgoal 1 (ID 191) is:	 1 @ qq C true false false x = 1 @ qq C true false false x	subgoal 2 (ID 59) is:	 Sect (postcompose_cocone Coeq_cocone)	   (fun C : cocone (coequalizer_diag f g) X =>	    Coeq_rec X (C false)	      (fun b : B => qq C true false true b @ (qq C true false false b)^))	";
             responses[i]=data;
           
 
             i = 105;
-            data = "1 subgoal (ID 191)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  C : cocone (coequalizer_diag f g) X	  x : (coequalizer_diag f g).(diagram0) true	  ============================	  1 @ C.(qq) true false false x = 1 @ C.(qq) true false false x	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 59)		subgoal 1 (ID 59) is:	 Sect (postcompose_cocone Coeq_cocone)	   (fun C : cocone (coequalizer_diag f g) X =>	    Coeq_rec X (C.(q) false)	      (fun b : B => C.(qq) true false true b @ (C.(qq) true false false b)^))	";
+            data = "1 subgoal (ID 191)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  C : cocone (coequalizer_diag f g) X	  x : (coequalizer_diag f g) true	  ============================	  1 @ qq C true false false x = 1 @ qq C true false false x	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 59)		subgoal 1 (ID 59) is:	 Sect (postcompose_cocone Coeq_cocone)	   (fun C : cocone (coequalizer_diag f g) X =>	    Coeq_rec X (C false)	      (fun b : B => qq C true false true b @ (qq C true false false b)^))	";
             responses[i]=data;
           
 
             i = 106;
-            data = "1 subgoal (ID 59)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  ============================	  Sect (postcompose_cocone Coeq_cocone)	    (fun C : cocone (coequalizer_diag f g) X =>	     Coeq_rec X (C.(q) false)	       (fun b : B => C.(qq) true false true b @ (C.(qq) true false false b)^))	1 subgoal (ID 402)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  F : Coeq f g -> X	  ============================	  Coeq_rec X ((postcompose_cocone Coeq_cocone F).(q) false)	    (fun b : B =>	     (postcompose_cocone Coeq_cocone F).(qq) true false true b @	     ((postcompose_cocone Coeq_cocone F).(qq) true false false b)^) = F	";
+            data = "1 subgoal (ID 59)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  ============================	  Sect (postcompose_cocone Coeq_cocone)	    (fun C : cocone (coequalizer_diag f g) X =>	     Coeq_rec X (C false)	       (fun b : B => qq C true false true b @ (qq C true false false b)^))	1 subgoal (ID 402)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  F : Coeq f g -> X	  ============================	  Coeq_rec X ((postcompose_cocone Coeq_cocone F) false)	    (fun b : B =>	     qq (postcompose_cocone Coeq_cocone F) true false true b @	     (qq (postcompose_cocone Coeq_cocone F) true false false b)^) = F	";
             responses[i]=data;
           
 
             i = 107;
-            data = "1 subgoal (ID 406)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  F : Coeq f g -> X	  ============================	  Coeq_rec X ((postcompose_cocone Coeq_cocone F).(q) false)	    (fun b : B =>	     (postcompose_cocone Coeq_cocone F).(qq) true false true b @	     ((postcompose_cocone Coeq_cocone F).(qq) true false false b)^) == F	";
+            data = "1 subgoal (ID 406)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  F : Coeq f g -> X	  ============================	  Coeq_rec X ((postcompose_cocone Coeq_cocone F) false)	    (fun b : B =>	     qq (postcompose_cocone Coeq_cocone F) true false true b @	     (qq (postcompose_cocone Coeq_cocone F) true false false b)^) == F	";
             responses[i]=data;
           
 
             i = 108;
-            data = "2 subgoals (ID 415)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  F : Coeq f g -> X	  ============================	  forall a : A,	  (fun w : Coeq f g =>	   Coeq_rec X ((postcompose_cocone Coeq_cocone F).(q) false)	     (fun b : B =>	      (postcompose_cocone Coeq_cocone F).(qq) true false true b @	      ((postcompose_cocone Coeq_cocone F).(qq) true false false b)^) w = 	   F w) (coeq a)		subgoal 2 (ID 417) is:	 forall b : B,	 transport	   (fun w : Coeq f g =>	    Coeq_rec X ((postcompose_cocone Coeq_cocone F).(q) false)	      (fun b0 : B =>	       (postcompose_cocone Coeq_cocone F).(qq) true false true b0 @	       ((postcompose_cocone Coeq_cocone F).(qq) true false false b0)^) w =	    F w) (cp b) (?coeq' (f b)) = ?coeq' (g b)	";
+            data = "2 subgoals (ID 415)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  F : Coeq f g -> X	  ============================	  forall a : A,	  (fun w : Coeq f g =>	   Coeq_rec X ((postcompose_cocone Coeq_cocone F) false)	     (fun b : B =>	      qq (postcompose_cocone Coeq_cocone F) true false true b @	      (qq (postcompose_cocone Coeq_cocone F) true false false b)^) w = 	   F w) (coeq a)		subgoal 2 (ID 417) is:	 forall b : B,	 transport	   (fun w : Coeq f g =>	    Coeq_rec X ((postcompose_cocone Coeq_cocone F) false)	      (fun b0 : B =>	       qq (postcompose_cocone Coeq_cocone F) true false true b0 @	       (qq (postcompose_cocone Coeq_cocone F) true false false b0)^) w = 	    F w) (cp b) (?coeq' (f b)) = ?coeq' (g b)	";
             responses[i]=data;
           
 
             i = 109;
-            data = "1 subgoal (ID 415)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  F : Coeq f g -> X	  ============================	  forall a : A,	  (fun w : Coeq f g =>	   Coeq_rec X ((postcompose_cocone Coeq_cocone F).(q) false)	     (fun b : B =>	      (postcompose_cocone Coeq_cocone F).(qq) true false true b @	      ((postcompose_cocone Coeq_cocone F).(qq) true false false b)^) w = 	   F w) (coeq a)	1 subgoal (ID 418)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  F : Coeq f g -> X	  ============================	  forall a : A, F (coeq a) = F (coeq a)	";
+            data = "1 subgoal (ID 415)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  F : Coeq f g -> X	  ============================	  forall a : A,	  (fun w : Coeq f g =>	   Coeq_rec X ((postcompose_cocone Coeq_cocone F) false)	     (fun b : B =>	      qq (postcompose_cocone Coeq_cocone F) true false true b @	      (qq (postcompose_cocone Coeq_cocone F) true false false b)^) w = 	   F w) (coeq a)	1 subgoal (ID 418)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  F : Coeq f g -> X	  ============================	  forall a : A, F (coeq a) = F (coeq a)	";
             responses[i]=data;
           
 
             i = 110;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 417)		subgoal 1 (ID 417) is:	 forall b : B,	 transport	   (fun w : Coeq f g =>	    Coeq_rec X ((postcompose_cocone Coeq_cocone F).(q) false)	      (fun b0 : B =>	       (postcompose_cocone Coeq_cocone F).(qq) true false true b0 @	       ((postcompose_cocone Coeq_cocone F).(qq) true false false b0)^) w =	    F w) (cp b) ((fun a : A => 1) (f b)) = (fun a : A => 1) (g b)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 417)		subgoal 1 (ID 417) is:	 forall b : B,	 transport	   (fun w : Coeq f g =>	    Coeq_rec X ((postcompose_cocone Coeq_cocone F) false)	      (fun b0 : B =>	       qq (postcompose_cocone Coeq_cocone F) true false true b0 @	       (qq (postcompose_cocone Coeq_cocone F) true false false b0)^) w = 	    F w) (cp b) ((fun a : A => 1) (f b)) = (fun a : A => 1) (g b)	";
             responses[i]=data;
           
 
             i = 111;
-            data = "1 subgoal (ID 417)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  F : Coeq f g -> X	  ============================	  forall b : B,	  transport	    (fun w : Coeq f g =>	     Coeq_rec X ((postcompose_cocone Coeq_cocone F).(q) false)	       (fun b0 : B =>	        (postcompose_cocone Coeq_cocone F).(qq) true false true b0 @	        ((postcompose_cocone Coeq_cocone F).(qq) true false false b0)^) w =	     F w) (cp b) ((fun a : A => 1) (f b)) = (fun a : A => 1) (g b)	1 subgoal (ID 421)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  F : Coeq f g -> X	  b : B	  ============================	  transport	    (fun w : Coeq f g =>	     Coeq_rec X ((postcompose_cocone Coeq_cocone F).(q) false)	       (fun b0 : B =>	        (postcompose_cocone Coeq_cocone F).(qq) true false true b0 @	        ((postcompose_cocone Coeq_cocone F).(qq) true false false b0)^) w =	     F w) (cp b) ((fun a : A => 1) (f b)) = (fun a : A => 1) (g b)	";
+            data = "1 subgoal (ID 417)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  F : Coeq f g -> X	  ============================	  forall b : B,	  transport	    (fun w : Coeq f g =>	     Coeq_rec X ((postcompose_cocone Coeq_cocone F) false)	       (fun b0 : B =>	        qq (postcompose_cocone Coeq_cocone F) true false true b0 @	        (qq (postcompose_cocone Coeq_cocone F) true false false b0)^) w = 	     F w) (cp b) ((fun a : A => 1) (f b)) = (fun a : A => 1) (g b)	1 subgoal (ID 421)	  	  fs : Funext	  B : Type	  A : Type	  f, g : B -> A	  X : Type	  F : Coeq f g -> X	  b : B	  ============================	  transport	    (fun w : Coeq f g =>	     Coeq_rec X ((postcompose_cocone Coeq_cocone F) false)	       (fun b0 : B =>	        qq (postcompose_cocone Coeq_cocone F) true false true b0 @	        (qq (postcompose_cocone Coeq_cocone F) true false false b0)^) w = 	     F w) (cp b) ((fun a : A => 1) (f b)) = (fun a : A => 1) (g b)	";
             responses[i]=data;
           
 

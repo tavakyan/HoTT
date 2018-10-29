@@ -303,7 +303,7 @@
           
 
             i = 57;
-            data = "1 subgoal (ID 27)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c : C.(object)	  d, d' : D.(object)	  f : D.(morphism) (F.(object_of) c) d	  g : D.(morphism) d d'	  adjunction_naturalityT := C.(Category.Core.compose) c 	                              (G.(object_of) d) (G.(object_of) d')	                              (G.(morphism_of) d d' g)	                              ((natural_transformation_of_natural_isomorphism	                                  A.(mate_of)).(components_of) 	                                 (c, d) f) =	                            (natural_transformation_of_natural_isomorphism	                               A.(mate_of)).(components_of) 	                              (c, d')	                              (D.(Category.Core.compose) 	                                 (F.(object_of) c) d d' g f) : Type	  ============================	  adjunction_naturalityT	";
+            data = "1 subgoal (ID 27)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c : C	  d, d' : D	  f : morphism D (F c) d	  g : morphism D d d'	  adjunction_naturalityT := G _1 g o A (c, d) f = A (c, d') (g o f) : Type	  ============================	  adjunction_naturalityT	";
             responses[i]=data;
           
 
@@ -313,12 +313,12 @@
           
 
             i = 59;
-            data = "1 subgoal (ID 64)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c : C.(object)	  d, d' : D.(object)	  f : D.(morphism) (F.(object_of) c) d	  g : D.(morphism) d d'	  adjunction_naturalityT := C.(Category.Core.compose) c 	                              (G.(object_of) d) (G.(object_of) d')	                              (G.(morphism_of) d d' g)	                              ((natural_transformation_of_natural_isomorphism	                                  A.(mate_of)).(components_of) 	                                 (c, d) f) =	                            (natural_transformation_of_natural_isomorphism	                               A.(mate_of)).(components_of) 	                              (c, d')	                              (D.(Category.Core.compose) 	                                 (F.(object_of) c) d d' g f) : Type	  H' : C.(Category.Core.compose) c c (G.(object_of) d')	         (C.(Category.Core.compose) c (G.(object_of) d) 	            (G.(object_of) d') (G.(morphism_of) d d' g)	            ((natural_transformation_of_natural_isomorphism A.(mate_of))	             .(components_of) (c, d) f)) (C.(Core.identity) c) =	       (natural_transformation_of_natural_isomorphism A.(mate_of))	       .(components_of) (c, d')	         (D.(Category.Core.compose) (F.(object_of) c) 	            (F.(object_of) c) d'	            (D.(Category.Core.compose) (F.(object_of) c) d d' g f)	            (F.(morphism_of) c c (C.(Core.identity) c)))	  ============================	  adjunction_naturalityT	";
+            data = "1 subgoal (ID 64)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c : C	  d, d' : D	  f : morphism D (F c) d	  g : morphism D d d'	  adjunction_naturalityT := G _1 g o A (c, d) f = A (c, d') (g o f) : Type	  H' : G _1 g o A (c, d) f o 1 = A (c, d') (g o f o F _1 1)	  ============================	  adjunction_naturalityT	";
             responses[i]=data;
           
 
             i = 60;
-            data = "1 subgoal (ID 69)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c : C.(object)	  d, d' : D.(object)	  f : D.(morphism) (F.(object_of) c) d	  g : D.(morphism) d d'	  adjunction_naturalityT := C.(Category.Core.compose) c 	                              (G.(object_of) d) (G.(object_of) d')	                              (G.(morphism_of) d d' g)	                              ((natural_transformation_of_natural_isomorphism	                                  A.(mate_of)).(components_of) 	                                 (c, d) f) =	                            (natural_transformation_of_natural_isomorphism	                               A.(mate_of)).(components_of) 	                              (c, d')	                              (D.(Category.Core.compose) 	                                 (F.(object_of) c) d d' g f) : Type	  H' : C.(Category.Core.compose) c (G.(object_of) d) 	         (G.(object_of) d') (G.(morphism_of) d d' g)	         ((natural_transformation_of_natural_isomorphism A.(mate_of))	          .(components_of) (c, d) f) =	       (natural_transformation_of_natural_isomorphism A.(mate_of))	       .(components_of) (c, d')	         (D.(Category.Core.compose) (F.(object_of) c) d d' g f)	  ============================	  adjunction_naturalityT	";
+            data = "1 subgoal (ID 69)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c : C	  d, d' : D	  f : morphism D (F c) d	  g : morphism D d d'	  adjunction_naturalityT := G _1 g o A (c, d) f = A (c, d') (g o f) : Type	  H' : G _1 g o A (c, d) f = A (c, d') (g o f)	  ============================	  adjunction_naturalityT	";
             responses[i]=data;
           
 
@@ -353,7 +353,7 @@
           
 
             i = 67;
-            data = "1 subgoal (ID 27)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c, c' : C.(object)	  d : D.(object)	  f : D.(morphism) (F.(object_of) c') d	  g : C.(morphism) c c'	  adjunction_naturalityT' := C.(Category.Core.compose) c c' 	                               (G.(object_of) d)	                               ((natural_transformation_of_natural_isomorphism	                                   A.(mate_of)).(components_of) 	                                  (c', d) f) g =	                             (natural_transformation_of_natural_isomorphism	                                A.(mate_of)).(components_of) 	                               (c, d)	                               (D.(Category.Core.compose) 	                                  (F.(object_of) c) 	                                  (F.(object_of) c') d f	                                  (F.(morphism_of) c c' g)) : Type	  ============================	  adjunction_naturalityT'	";
+            data = "1 subgoal (ID 27)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c, c' : C	  d : D	  f : morphism D (F c') d	  g : morphism C c c'	  adjunction_naturalityT' := A (c', d) f o g = A (c, d) (f o F _1 g) : Type	  ============================	  adjunction_naturalityT'	";
             responses[i]=data;
           
 
@@ -363,12 +363,12 @@
           
 
             i = 69;
-            data = "1 subgoal (ID 64)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c, c' : C.(object)	  d : D.(object)	  f : D.(morphism) (F.(object_of) c') d	  g : C.(morphism) c c'	  adjunction_naturalityT' := C.(Category.Core.compose) c c' 	                               (G.(object_of) d)	                               ((natural_transformation_of_natural_isomorphism	                                   A.(mate_of)).(components_of) 	                                  (c', d) f) g =	                             (natural_transformation_of_natural_isomorphism	                                A.(mate_of)).(components_of) 	                               (c, d)	                               (D.(Category.Core.compose) 	                                  (F.(object_of) c) 	                                  (F.(object_of) c') d f	                                  (F.(morphism_of) c c' g)) : Type	  H' : C.(Category.Core.compose) c c' (G.(object_of) d)	         (C.(Category.Core.compose) c' (G.(object_of) d) 	            (G.(object_of) d) (G.(morphism_of) d d (D.(Core.identity) d))	            ((natural_transformation_of_natural_isomorphism A.(mate_of))	             .(components_of) (c', d) f)) g =	       (natural_transformation_of_natural_isomorphism A.(mate_of))	       .(components_of) (c, d)	         (D.(Category.Core.compose) (F.(object_of) c) 	            (F.(object_of) c') d	            (D.(Category.Core.compose) (F.(object_of) c') d d	               (D.(Core.identity) d) f) (F.(morphism_of) c c' g))	  ============================	  adjunction_naturalityT'	";
+            data = "1 subgoal (ID 64)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c, c' : C	  d : D	  f : morphism D (F c') d	  g : morphism C c c'	  adjunction_naturalityT' := A (c', d) f o g = A (c, d) (f o F _1 g) : Type	  H' : G _1 1 o A (c', d) f o g = A (c, d) (1 o f o F _1 g)	  ============================	  adjunction_naturalityT'	";
             responses[i]=data;
           
 
             i = 70;
-            data = "1 subgoal (ID 69)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c, c' : C.(object)	  d : D.(object)	  f : D.(morphism) (F.(object_of) c') d	  g : C.(morphism) c c'	  adjunction_naturalityT' := C.(Category.Core.compose) c c' 	                               (G.(object_of) d)	                               ((natural_transformation_of_natural_isomorphism	                                   A.(mate_of)).(components_of) 	                                  (c', d) f) g =	                             (natural_transformation_of_natural_isomorphism	                                A.(mate_of)).(components_of) 	                               (c, d)	                               (D.(Category.Core.compose) 	                                  (F.(object_of) c) 	                                  (F.(object_of) c') d f	                                  (F.(morphism_of) c c' g)) : Type	  H' : C.(Category.Core.compose) c c' (G.(object_of) d)	         ((natural_transformation_of_natural_isomorphism A.(mate_of))	          .(components_of) (c', d) f) g =	       (natural_transformation_of_natural_isomorphism A.(mate_of))	       .(components_of) (c, d)	         (D.(Category.Core.compose) (F.(object_of) c) 	            (F.(object_of) c') d f (F.(morphism_of) c c' g))	  ============================	  adjunction_naturalityT'	";
+            data = "1 subgoal (ID 69)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c, c' : C	  d : D	  f : morphism D (F c') d	  g : morphism C c c'	  adjunction_naturalityT' := A (c', d) f o g = A (c, d) (f o F _1 g) : Type	  H' : A (c', d) f o g = A (c, d) (f o F _1 g)	  ============================	  adjunction_naturalityT'	";
             responses[i]=data;
           
 
@@ -1273,7 +1273,7 @@
           
 
             i = 251;
-            data = "1 subgoal (ID 28)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c : C.(object)	  d : D.(object)	  f : C.(morphism) c (G.(object_of) d)	  ============================	  IsHProp	    {g : D.(morphism) (F.(object_of) c) d &	    C.(Category.Core.compose)	      ((Core.pair 1 G).(object_of) (c, F.(object_of) c) : (C^op * C).(object))	      .(fst) (G.(object_of) (F.(object_of) c)) (G.(object_of) d)	      (G.(morphism_of) (F.(object_of) c) d g)	      ((natural_transformation_of_natural_isomorphism A.(mate_of))	       .(components_of) (c, F.(object_of) c)	         (D.(Core.identity)	            ((Core.pair F^op 1).(object_of) (c, F.(object_of) c)	             :	             (D^op * D).(object)).(fst))) = f}	";
+            data = "1 subgoal (ID 28)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c : C	  d : D	  f : morphism C c (G d)	  ============================	  IsHProp {g : morphism D (F c) d & G _1 g o A (c, F c) 1 = f}	";
             responses[i]=data;
           
 
@@ -1283,47 +1283,47 @@
           
 
             i = 253;
-            data = "1 subgoal (ID 29)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c : C.(object)	  d : D.(object)	  f : C.(morphism) c (G.(object_of) d)	  ============================	  forall	  x	   y : {g : D.(morphism) (F.(object_of) c) d &	       C.(Category.Core.compose)	         ((Core.pair 1 G).(object_of) (c, F.(object_of) c)).(fst)	         (G.(object_of) (F.(object_of) c)) (G.(object_of) d)	         (G.(morphism_of) (F.(object_of) c) d g)	         ((natural_transformation_of_natural_isomorphism A.(mate_of))	          .(components_of) (c, F.(object_of) c)	            (D.(Core.identity)	               ((Core.pair F^op 1).(object_of) (c, F.(object_of) c)).(fst))) =	       f}, x = y	";
+            data = "1 subgoal (ID 29)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c : C	  d : D	  f : morphism C c (G d)	  ============================	  forall x y : {g : morphism D (F c) d & G _1 g o A (c, F c) 1 = f}, x = y	";
             responses[i]=data;
           
 
             i = 254;
-            data = "1 subgoal (ID 183)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c : C.(object)	  d : D.(object)	  f : C.(morphism) c (G.(object_of) d)	  g0 : D.(morphism) (F.(object_of) c) d	  H0 : C.(Category.Core.compose)	         ((Core.pair 1 G).(object_of) (c, F.(object_of) c)).(fst)	         (G.(object_of) (F.(object_of) c)) (G.(object_of) d)	         (G.(morphism_of) (F.(object_of) c) d g0)	         ((natural_transformation_of_natural_isomorphism A.(mate_of))	          .(components_of) (c, F.(object_of) c)	            (D.(Core.identity)	               ((Core.pair F^op 1).(object_of) (c, F.(object_of) c)).(fst))) =	       f	  g1 : D.(morphism) (F.(object_of) c) d	  H1 : C.(Category.Core.compose)	         ((Core.pair 1 G).(object_of) (c, F.(object_of) c)).(fst)	         (G.(object_of) (F.(object_of) c)) (G.(object_of) d)	         (G.(morphism_of) (F.(object_of) c) d g1)	         ((natural_transformation_of_natural_isomorphism A.(mate_of))	          .(components_of) (c, F.(object_of) c)	            (D.(Core.identity)	               ((Core.pair F^op 1).(object_of) (c, F.(object_of) c)).(fst))) =	       f	  ============================	  g0 = g1	";
+            data = "1 subgoal (ID 183)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c : C	  d : D	  f : morphism C c (G d)	  g0 : morphism D (F c) d	  H0 : G _1 g0 o A (c, F c) 1 = f	  g1 : morphism D (F c) d	  H1 : G _1 g1 o A (c, F c) 1 = f	  ============================	  g0 = g1	";
             responses[i]=data;
           
 
             i = 255;
-            data = "1 subgoal (ID 191)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c : C.(object)	  d : D.(object)	  g0, g1 : D.(morphism) (F.(object_of) c) d	  H0 : C.(Category.Core.compose)	         ((Core.pair 1 G).(object_of) (c, F.(object_of) c)).(fst)	         (G.(object_of) (F.(object_of) c)) (G.(object_of) d)	         (G.(morphism_of) (F.(object_of) c) d g0)	         ((natural_transformation_of_natural_isomorphism A.(mate_of))	          .(components_of) (c, F.(object_of) c)	            (D.(Core.identity)	               ((Core.pair F^op 1).(object_of) (c, F.(object_of) c)).(fst))) =	       C.(Category.Core.compose)	         ((Core.pair 1 G).(object_of) (c, F.(object_of) c)).(fst)	         (G.(object_of) (F.(object_of) c)) (G.(object_of) d)	         (G.(morphism_of) (F.(object_of) c) d g1)	         ((natural_transformation_of_natural_isomorphism A.(mate_of))	          .(components_of) (c, F.(object_of) c)	            (D.(Core.identity)	               ((Core.pair F^op 1).(object_of) (c, F.(object_of) c)).(fst)))	  ============================	  g0 = g1	";
+            data = "1 subgoal (ID 191)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c : C	  d : D	  g0, g1 : morphism D (F c) d	  H0 : G _1 g0 o A (c, F c) 1 = G _1 g1 o A (c, F c) 1	  ============================	  g0 = g1	";
             responses[i]=data;
           
 
             i = 256;
-            data = "1 subgoal (ID 194)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c : C.(object)	  d : D.(object)	  g0, g1 : D.(morphism) (F.(object_of) c) d	  H0 : (natural_transformation_of_natural_isomorphism A.(mate_of))	       .(components_of) (c, d)	         (D.(Category.Core.compose) (F.(object_of) c) 	            (F.(object_of) c) d g0	            (D.(Core.identity)	               ((Core.pair F^op 1).(object_of) (c, F.(object_of) c)).(fst))) =	       (natural_transformation_of_natural_isomorphism A.(mate_of))	       .(components_of) (c, d)	         (D.(Category.Core.compose) (F.(object_of) c) 	            (F.(object_of) c) d g1	            (D.(Core.identity)	               ((Core.pair F^op 1).(object_of) (c, F.(object_of) c)).(fst)))	  ============================	  g0 = g1	";
+            data = "1 subgoal (ID 194)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c : C	  d : D	  g0, g1 : morphism D (F c) d	  H0 : A (c, d) (g0 o 1) = A (c, d) (g1 o 1)	  ============================	  g0 = g1	";
             responses[i]=data;
           
 
             i = 257;
-            data = "1 subgoal (ID 198)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c : C.(object)	  d : D.(object)	  g0, g1 : D.(morphism) (F.(object_of) c) d	  H0 : (natural_transformation_of_natural_isomorphism A.(mate_of))	       .(components_of) (c, d) g0 =	       (natural_transformation_of_natural_isomorphism A.(mate_of))	       .(components_of) (c, d) g1	  ============================	  g0 = g1	";
+            data = "1 subgoal (ID 198)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c : C	  d : D	  g0, g1 : morphism D (F c) d	  H0 : A (c, d) g0 = A (c, d) g1	  ============================	  g0 = g1	";
             responses[i]=data;
           
 
             i = 258;
-            data = "1 subgoal (ID 204)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c : C.(object)	  d : D.(object)	  g0, g1 : D.(morphism) (F.(object_of) c) d	  H0 : (natural_transformation_of_natural_isomorphism A.(mate_of))	       .(components_of) (c, d) g0 =	       (natural_transformation_of_natural_isomorphism A.(mate_of))	       .(components_of) (c, d) g1	  ============================	  idmap g0 = idmap g1	";
+            data = "1 subgoal (ID 204)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c : C	  d : D	  g0, g1 : morphism D (F c) d	  H0 : A (c, d) g0 = A (c, d) g1	  ============================	  idmap g0 = idmap g1	";
             responses[i]=data;
           
 
             i = 259;
-            data = "1 subgoal (ID 271)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c : C.(object)	  d : D.(object)	  g0, g1 : D.(morphism) (F.(object_of) c) d	  H0 : (natural_transformation_of_natural_isomorphism A.(mate_of))	       .(components_of) (c, d) g0 =	       (natural_transformation_of_natural_isomorphism A.(mate_of))	       .(components_of) (c, d) g1	  ============================	  set_cat.(Category.Core.compose)	    ((hom_functor D o Core.pair F^op 1)%functor.(object_of) (c, d))	    ((hom_functor C o Core.pair 1 G)%functor.(object_of) (c, d))	    ((hom_functor D o Core.pair F^op 1)%functor.(object_of) (c, d))	    (isisomorphism_components_of (c, d)).(morphism_inverse)	    ((natural_transformation_of_natural_isomorphism A.(mate_of))	     .(components_of) (c, d)) g0 = g1	";
+            data = "1 subgoal (ID 271)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c : C	  d : D	  g0, g1 : morphism D (F c) d	  H0 : A (c, d) g0 = A (c, d) g1	  ============================	  (_^-1 o A (c, d)) g0 = g1	";
             responses[i]=data;
           
 
             i = 260;
-            data = "1 subgoal (ID 292)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c : C.(object)	  d : D.(object)	  g0, g1 : D.(morphism) (F.(object_of) c) d	  H0 : (natural_transformation_of_natural_isomorphism A.(mate_of))	       .(components_of) (c, d) g0 =	       (natural_transformation_of_natural_isomorphism A.(mate_of))	       .(components_of) (c, d) g1	  ============================	  A.(mate_of).(isisomorphism_isomorphic).(morphism_inverse).(components_of)	    (c, d)	    ((natural_transformation_of_natural_isomorphism A.(mate_of))	     .(components_of) (c, d) g1) = g1	";
+            data = "1 subgoal (ID 292)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c : C	  d : D	  g0, g1 : morphism D (F c) d	  H0 : A (c, d) g0 = A (c, d) g1	  ============================	  _^-1 (c, d) (A (c, d) g1) = g1	";
             responses[i]=data;
           
 
             i = 261;
-            data = "1 subgoal (ID 339)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c : C.(object)	  d : D.(object)	  g0, g1 : D.(morphism) (F.(object_of) c) d	  H0 : (natural_transformation_of_natural_isomorphism A.(mate_of))	       .(components_of) (c, d) g0 =	       (natural_transformation_of_natural_isomorphism A.(mate_of))	       .(components_of) (c, d) g1	  ============================	  g1 = g1	No more subgoals.	";
+            data = "1 subgoal (ID 339)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c : C	  d : D	  g0, g1 : morphism D (F c) d	  H0 : A (c, d) g0 = A (c, d) g1	  ============================	  g1 = g1	No more subgoals.	";
             responses[i]=data;
           
 
@@ -1333,7 +1333,7 @@
           
 
             i = 263;
-            data = "1 subgoal (ID 72)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  s, d : C.(object)	  m : C.(morphism) s d	  ============================	  C.(Category.Core.compose) s	    ((Core.pair 1 G).(object_of) (d, F.(object_of) d) : (C^op * C).(object))	    .(fst)	    ((Core.pair 1 G).(object_of) (d, F.(object_of) d) : (C^op * C).(object))	    .(snd)	    ((natural_transformation_of_natural_isomorphism A.(mate_of))	     .(components_of) (d, F.(object_of) d)	       (D.(Core.identity)	          ((Core.pair F^op 1).(object_of) (d, F.(object_of) d)	           :	           (D^op * D).(object)).(fst))) m =	  C.(Category.Core.compose)	    ((Core.pair 1 G).(object_of) (s, F.(object_of) s) : (C^op * C).(object))	    .(fst) (G.(object_of) (F.(object_of) s))	    (G.(object_of) (F.(object_of) d))	    (G.(morphism_of) (F.(object_of) s) (F.(object_of) d)	       (F.(morphism_of) s d m))	    ((natural_transformation_of_natural_isomorphism A.(mate_of))	     .(components_of) (s, F.(object_of) s)	       (D.(Core.identity)	          ((Core.pair F^op 1).(object_of) (s, F.(object_of) s)	           :	           (D^op * D).(object)).(fst)))	";
+            data = "1 subgoal (ID 72)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  s, d : C	  m : morphism C s d	  ============================	  A (d, F d) 1 o m = G _1 (F _1 m) o A (s, F s) 1	";
             responses[i]=data;
           
 
@@ -1343,12 +1343,12 @@
           
 
             i = 265;
-            data = "1 subgoal (ID 75)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  s, d : C.(object)	  m : C.(morphism) s d	  ============================	  (natural_transformation_of_natural_isomorphism A.(mate_of)).(components_of)	    (s, F.(object_of) d)	    (D.(Category.Core.compose) (F.(object_of) s) (F.(object_of) d)	       (F.(object_of) d) (D.(Core.identity) (F.(object_of) d))	       (F.(morphism_of) s d m)) =	  (natural_transformation_of_natural_isomorphism A.(mate_of)).(components_of)	    (s, F.(object_of) d)	    (D.(Category.Core.compose) (F.(object_of) s) (F.(object_of) s)	       (F.(object_of) d) (F.(morphism_of) s d m)	       (D.(Core.identity) (F.(object_of) s)))	";
+            data = "1 subgoal (ID 75)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  s, d : C	  m : morphism C s d	  ============================	  A (s, F d) (1 o F _1 m) = A (s, F d) (F _1 m o 1)	";
             responses[i]=data;
           
 
             i = 266;
-            data = "1 subgoal (ID 77)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  s, d : C.(object)	  m : C.(morphism) s d	  ============================	  (natural_transformation_of_natural_isomorphism A.(mate_of)).(components_of)	    (s, F.(object_of) d) (F.(morphism_of) s d m) =	  (natural_transformation_of_natural_isomorphism A.(mate_of)).(components_of)	    (s, F.(object_of) d) (F.(morphism_of) s d m)	";
+            data = "1 subgoal (ID 77)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  s, d : C	  m : morphism C s d	  ============================	  A (s, F d) (F _1 m) = A (s, F d) (F _1 m)	";
             responses[i]=data;
           
 
@@ -1373,42 +1373,42 @@
           
 
             i = 271;
-            data = "1 subgoal (ID 96)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  ============================	  forall (c : C.(object)) (d : D.(object))	  (f : C.(morphism) c (G.(object_of) d)),	  Contr	    {g : D.(morphism) (F.(object_of) c) d &	    C.(Category.Core.compose) (1%functor.(object_of) c)	      (G.(object_of) (F.(object_of) c)) (G.(object_of) d)	      (G.(morphism_of) (F.(object_of) c) d g)	      ((Build_NaturalTransformation 1 (G o F)	          (fun c0 : C.(object) =>	           (natural_transformation_of_natural_isomorphism A.(mate_of))	           .(components_of) (c0, F.(object_of) c0)	             (D.(Core.identity)	                ((Core.pair F^op 1).(object_of) (c0, F.(object_of) c0)).(fst)))	          (adjunction_unit__of__adjunction_hom__mate_of__commutes A))	       .(components_of) c) = f}	";
+            data = "1 subgoal (ID 96)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  ============================	  forall (c : C) (d : D) (f : morphism C c (G d)),	  Contr	    {g : morphism D (F c) d &	    G _1 g	    o (Build_NaturalTransformation 1 (G o F) (fun c0 : C => A (c0, F c0) 1)	         (adjunction_unit__of__adjunction_hom__mate_of__commutes A)) c = f}	";
             responses[i]=data;
           
 
             i = 272;
-            data = "1 subgoal (ID 103)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  ============================	  forall (c : C.(object)) (d : D.(object))	  (f : C.(morphism) c (G.(object_of) d)),	  Contr	    {g : D.(morphism) (F.(object_of) c) d &	    C.(Category.Core.compose) c (G.(object_of) (F.(object_of) c))	      (G.(object_of) d) (G.(morphism_of) (F.(object_of) c) d g)	      ((natural_transformation_of_natural_isomorphism A.(mate_of))	       .(components_of) (c, F.(object_of) c)	         (D.(Core.identity) (F.(object_of) c))) = f}	";
+            data = "1 subgoal (ID 103)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  ============================	  forall (c : C) (d : D) (f : morphism C c (G d)),	  Contr {g : morphism D (F c) d & G _1 g o A (c, F c) 1 = f}	";
             responses[i]=data;
           
 
             i = 273;
-            data = "1 subgoal (ID 106)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c : C.(object)	  d : D.(object)	  f : C.(morphism) c (G.(object_of) d)	  ============================	  Contr	    {g : D.(morphism) (F.(object_of) c) d &	    C.(Category.Core.compose) c (G.(object_of) (F.(object_of) c))	      (G.(object_of) d) (G.(morphism_of) (F.(object_of) c) d g)	      ((natural_transformation_of_natural_isomorphism A.(mate_of))	       .(components_of) (c, F.(object_of) c)	         (D.(Core.identity) (F.(object_of) c))) = f}	";
+            data = "1 subgoal (ID 106)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c : C	  d : D	  f : morphism C c (G d)	  ============================	  Contr {g : morphism D (F c) d & G _1 g o A (c, F c) 1 = f}	";
             responses[i]=data;
           
 
             i = 274;
-            data = "2 subgoals (ID 107)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c : C.(object)	  d : D.(object)	  f : C.(morphism) c (G.(object_of) d)	  ============================	  IsHProp	    {g : D.(morphism) (F.(object_of) c) d &	    C.(Category.Core.compose) c (G.(object_of) (F.(object_of) c))	      (G.(object_of) d) (G.(morphism_of) (F.(object_of) c) d g)	      ((natural_transformation_of_natural_isomorphism A.(mate_of))	       .(components_of) (c, F.(object_of) c)	         (D.(Core.identity) (F.(object_of) c))) = f}		subgoal 2 (ID 108) is:	 {g : D.(morphism) (F.(object_of) c) d &	 C.(Category.Core.compose) c (G.(object_of) (F.(object_of) c))	   (G.(object_of) d) (G.(morphism_of) (F.(object_of) c) d g)	   ((natural_transformation_of_natural_isomorphism A.(mate_of))	    .(components_of) (c, F.(object_of) c)	      (D.(Core.identity) (F.(object_of) c))) = f}	";
+            data = "2 subgoals (ID 107)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c : C	  d : D	  f : morphism C c (G d)	  ============================	  IsHProp {g : morphism D (F c) d & G _1 g o A (c, F c) 1 = f}		subgoal 2 (ID 108) is:	 {g : morphism D (F c) d & G _1 g o A (c, F c) 1 = f}	";
             responses[i]=data;
           
 
             i = 275;
-            data = "1 subgoal (ID 107)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c : C.(object)	  d : D.(object)	  f : C.(morphism) c (G.(object_of) d)	  ============================	  IsHProp	    {g : D.(morphism) (F.(object_of) c) d &	    C.(Category.Core.compose) c (G.(object_of) (F.(object_of) c))	      (G.(object_of) d) (G.(morphism_of) (F.(object_of) c) d g)	      ((natural_transformation_of_natural_isomorphism A.(mate_of))	       .(components_of) (c, F.(object_of) c)	         (D.(Core.identity) (F.(object_of) c))) = f}	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 108)		subgoal 1 (ID 108) is:	 {g : D.(morphism) (F.(object_of) c) d &	 C.(Category.Core.compose) c (G.(object_of) (F.(object_of) c))	   (G.(object_of) d) (G.(morphism_of) (F.(object_of) c) d g)	   ((natural_transformation_of_natural_isomorphism A.(mate_of))	    .(components_of) (c, F.(object_of) c)	      (D.(Core.identity) (F.(object_of) c))) = f}	";
+            data = "1 subgoal (ID 107)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c : C	  d : D	  f : morphism C c (G d)	  ============================	  IsHProp {g : morphism D (F c) d & G _1 g o A (c, F c) 1 = f}	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 108)		subgoal 1 (ID 108) is:	 {g : morphism D (F c) d & G _1 g o A (c, F c) 1 = f}	";
             responses[i]=data;
           
 
             i = 276;
-            data = "1 subgoal (ID 108)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c : C.(object)	  d : D.(object)	  f : C.(morphism) c (G.(object_of) d)	  ============================	  {g : D.(morphism) (F.(object_of) c) d &	  C.(Category.Core.compose) c (G.(object_of) (F.(object_of) c))	    (G.(object_of) d) (G.(morphism_of) (F.(object_of) c) d g)	    ((natural_transformation_of_natural_isomorphism A.(mate_of))	     .(components_of) (c, F.(object_of) c)	       (D.(Core.identity) (F.(object_of) c))) = f}	";
+            data = "1 subgoal (ID 108)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  A : AdjunctionHom F G	  c : C	  d : D	  f : morphism C c (G d)	  ============================	  {g : morphism D (F c) d & G _1 g o A (c, F c) 1 = f}	";
             responses[i]=data;
           
 
             i = 277;
-            data = "No more subgoals.	<infomsg>adjunction_unit__of__adjunction_hom is defined</infomsg>	";
+            data = "No more subgoals.	";
             responses[i]=data;
           
 
             i = 278;
-            data = "";
+            data = "<infomsg>adjunction_unit__of__adjunction_hom is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -1473,7 +1473,7 @@
           
 
             i = 291;
-            data = "1 subgoal (ID 5)	  	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  T : AdjunctionUnit F G	  c : C.(object)	  d : D.(object)	  ============================	  C.(morphism) c (G.(object_of) d) <~> D.(morphism) (F.(object_of) c) d	";
+            data = "1 subgoal (ID 5)	  	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  T : AdjunctionUnit F G	  c : C	  d : D	  ============================	  morphism C c (G d) <~> morphism D (F c) d	";
             responses[i]=data;
           
 
@@ -1483,27 +1483,27 @@
           
 
             i = 293;
-            data = "2 subgoals (ID 40)	  	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  T : AdjunctionUnit F G	  c : C.(object)	  d : D.(object)	  x : D.(morphism) (F.(object_of) c) d	  ============================	  (T.(proj2_sig) c d	     (C.(Category.Core.compose) (1%functor.(object_of) c)	        (G.(object_of) (F.(object_of) c)) (G.(object_of) d)	        (G.(morphism_of) (F.(object_of) c) d x)	        (T.(proj1_sig).(components_of) c))).(center).(	  proj1_sig) = x		subgoal 2 (ID 42) is:	 C.(Category.Core.compose) (1%functor.(object_of) c)	   (G.(object_of) (F.(object_of) c)) (G.(object_of) d)	   (G.(morphism_of) (F.(object_of) c) d	      (T.(proj2_sig) c d x).(center).(proj1_sig))	   (T.(proj1_sig).(components_of) c) = x	";
+            data = "2 subgoals (ID 40)	  	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  T : AdjunctionUnit F G	  c : C	  d : D	  x : morphism D (F c) d	  ============================	  (center _).1 = x		subgoal 2 (ID 42) is:	 G _1 (center _).1 o T.1 c = x	";
             responses[i]=data;
           
 
             i = 294;
-            data = "1 subgoal (ID 40)	  	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  T : AdjunctionUnit F G	  c : C.(object)	  d : D.(object)	  x : D.(morphism) (F.(object_of) c) d	  ============================	  (T.(proj2_sig) c d	     (C.(Category.Core.compose) (1%functor.(object_of) c)	        (G.(object_of) (F.(object_of) c)) (G.(object_of) d)	        (G.(morphism_of) (F.(object_of) c) d x)	        (T.(proj1_sig).(components_of) c))).(center).(	  proj1_sig) = x	1 subgoal (ID 52)	  	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  T : AdjunctionUnit F G	  c : C.(object)	  d : D.(object)	  x : D.(morphism) (F.(object_of) c) d	  ============================	  (T.(proj2_sig) c d	     (C.(Category.Core.compose) (1%functor.(object_of) c)	        (G.(object_of) (F.(object_of) c)) (G.(object_of) d)	        (G.(morphism_of) (F.(object_of) c) d x)	        (T.(proj1_sig).(components_of) c))).(center).(	  proj1_sig) = (x; 1%path).(proj1_sig)	";
+            data = "1 subgoal (ID 40)	  	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  T : AdjunctionUnit F G	  c : C	  d : D	  x : morphism D (F c) d	  ============================	  (center _).1 = x	1 subgoal (ID 52)	  	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  T : AdjunctionUnit F G	  c : C	  d : D	  x : morphism D (F c) d	  ============================	  (center _).1 = (x; 1%path).1	";
             responses[i]=data;
           
 
             i = 295;
-            data = "1 subgoal (ID 59)	  	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  T : AdjunctionUnit F G	  c : C.(object)	  d : D.(object)	  x : D.(morphism) (F.(object_of) c) d	  ============================	  (T.(proj2_sig) c d	     (C.(Category.Core.compose) (1%functor.(object_of) c)	        (G.(object_of) (F.(object_of) c)) (G.(object_of) d)	        (G.(morphism_of) (F.(object_of) c) d x)	        (T.(proj1_sig).(components_of) c))).(center) = 	  (x; 1%path)	";
+            data = "1 subgoal (ID 59)	  	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  T : AdjunctionUnit F G	  c : C	  d : D	  x : morphism D (F c) d	  ============================	  center _ = (x; 1%path)	";
             responses[i]=data;
           
 
             i = 296;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 42)		subgoal 1 (ID 42) is:	 C.(Category.Core.compose) (1%functor.(object_of) c)	   (G.(object_of) (F.(object_of) c)) (G.(object_of) d)	   (G.(morphism_of) (F.(object_of) c) d	      (T.(proj2_sig) c d x).(center).(proj1_sig))	   (T.(proj1_sig).(components_of) c) = x	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 42)		subgoal 1 (ID 42) is:	 G _1 (center _).1 o T.1 c = x	";
             responses[i]=data;
           
 
             i = 297;
-            data = "1 subgoal (ID 42)	  	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  T : AdjunctionUnit F G	  c : C.(object)	  d : D.(object)	  x : C.(morphism) c (G.(object_of) d)	  ============================	  C.(Category.Core.compose) (1%functor.(object_of) c)	    (G.(object_of) (F.(object_of) c)) (G.(object_of) d)	    (G.(morphism_of) (F.(object_of) c) d	       (T.(proj2_sig) c d x).(center).(proj1_sig))	    (T.(proj1_sig).(components_of) c) = x	No more subgoals.	";
+            data = "1 subgoal (ID 42)	  	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  T : AdjunctionUnit F G	  c : C	  d : D	  x : morphism C c (G d)	  ============================	  G _1 (center _).1 o T.1 c = x	No more subgoals.	";
             responses[i]=data;
           
 
@@ -1583,7 +1583,7 @@
           
 
             i = 313;
-            data = "1 subgoal (ID 62)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  T : AdjunctionUnit F G	  sc : C.(object)	  sd : D.(object)	  dc : C.(object)	  dd : D.(object)	  mc : C.(morphism) dc sc	  md : D.(morphism) sd dd	  ============================	  (fun x : D.(morphism) (F.(object_of) sc) sd =>	   C.(Category.Core.compose) (1%functor.(object_of) dc)	     (G.(object_of) (F.(object_of) dc)) (G.(object_of) dd)	     (G.(morphism_of) (F.(object_of) dc) dd	        (D.(Category.Core.compose) (F.(object_of) dc) 	           (F.(object_of) sc) dd	           (D.(Category.Core.compose) (F.(object_of) sc) sd dd md x)	           (F.(morphism_of) dc sc mc))) (T.(proj1_sig).(components_of) dc)) =	  (fun x : D.(morphism) (F.(object_of) sc) sd =>	   C.(Category.Core.compose) dc (1%functor.(object_of) sc) 	     (G.(object_of) dd)	     (C.(Category.Core.compose) (1%functor.(object_of) sc) 	        (G.(object_of) sd) (G.(object_of) dd) (G.(morphism_of) sd dd md)	        (C.(Category.Core.compose) (1%functor.(object_of) sc)	           (G.(object_of) (F.(object_of) sc)) (G.(object_of) sd)	           (G.(morphism_of) (F.(object_of) sc) sd x)	           (T.(proj1_sig).(components_of) sc))) mc)	";
+            data = "1 subgoal (ID 62)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  T : AdjunctionUnit F G	  sc : C	  sd : D	  dc : C	  dd : D	  mc : morphism C dc sc	  md : morphism D sd dd	  ============================	  (fun x : morphism D (F sc) sd => G _1 (md o x o F _1 mc) o T.1 dc) =	  (fun x : morphism D (F sc) sd => G _1 md o (G _1 x o T.1 sc) o mc)	";
             responses[i]=data;
           
 
@@ -1593,17 +1593,17 @@
           
 
             i = 315;
-            data = "1 subgoal (ID 68)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  T : AdjunctionUnit F G	  sc : C.(object)	  sd : D.(object)	  dc : C.(object)	  dd : D.(object)	  mc : C.(morphism) dc sc	  md : D.(morphism) sd dd	  x : D.(morphism) (F.(object_of) sc) sd	  ============================	  C.(Category.Core.compose) (1%functor.(object_of) dc)	    (G.(object_of) (F.(object_of) dc)) (G.(object_of) dd)	    (G.(morphism_of) (F.(object_of) dc) dd	       (D.(Category.Core.compose) (F.(object_of) dc) 	          (F.(object_of) sc) dd	          (D.(Category.Core.compose) (F.(object_of) sc) sd dd md x)	          (F.(morphism_of) dc sc mc))) (T.(proj1_sig).(components_of) dc) =	  C.(Category.Core.compose) dc (1%functor.(object_of) sc) 	    (G.(object_of) dd)	    (C.(Category.Core.compose) (1%functor.(object_of) sc) 	       (G.(object_of) sd) (G.(object_of) dd) (G.(morphism_of) sd dd md)	       (C.(Category.Core.compose) (1%functor.(object_of) sc)	          (G.(object_of) (F.(object_of) sc)) (G.(object_of) sd)	          (G.(morphism_of) (F.(object_of) sc) sd x)	          (T.(proj1_sig).(components_of) sc))) mc	";
+            data = "1 subgoal (ID 68)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  T : AdjunctionUnit F G	  sc : C	  sd : D	  dc : C	  dd : D	  mc : morphism C dc sc	  md : morphism D sd dd	  x : morphism D (F sc) sd	  ============================	  G _1 (md o x o F _1 mc) o T.1 dc = G _1 md o (G _1 x o T.1 sc) o mc	";
             responses[i]=data;
           
 
             i = 316;
-            data = "1 subgoal (ID 74)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  T : AdjunctionUnit F G	  sc : C.(object)	  sd : D.(object)	  dc : C.(object)	  dd : D.(object)	  mc : C.(morphism) dc sc	  md : D.(morphism) sd dd	  x : D.(morphism) (F.(object_of) sc) sd	  ============================	  C.(Category.Core.compose) (1%functor.(object_of) dc) 	    (G.(object_of) sd) (G.(object_of) dd) (G.(morphism_of) sd dd md)	    (C.(Category.Core.compose) (1%functor.(object_of) dc)	       (G.(object_of) (F.(object_of) sc)) (G.(object_of) sd)	       (G.(morphism_of) (F.(object_of) sc) sd x)	       (C.(Category.Core.compose) (1%functor.(object_of) dc)	          (G.(object_of) (F.(object_of) dc))	          (G.(object_of) (F.(object_of) sc))	          (G.(morphism_of) (F.(object_of) dc) (F.(object_of) sc)	             (F.(morphism_of) dc sc mc)) (T.(proj1_sig).(components_of) dc))) =	  C.(Category.Core.compose) dc (G.(object_of) sd) 	    (G.(object_of) dd) (G.(morphism_of) sd dd md)	    (C.(Category.Core.compose) dc (G.(object_of) (F.(object_of) sc))	       (G.(object_of) sd) (G.(morphism_of) (F.(object_of) sc) sd x)	       (C.(Category.Core.compose) dc (1%functor.(object_of) sc)	          (G.(object_of) (F.(object_of) sc))	          (T.(proj1_sig).(components_of) sc) mc))	";
+            data = "1 subgoal (ID 74)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  T : AdjunctionUnit F G	  sc : C	  sd : D	  dc : C	  dd : D	  mc : morphism C dc sc	  md : morphism D sd dd	  x : morphism D (F sc) sd	  ============================	  G _1 md o (G _1 x o (G _1 (F _1 mc) o T.1 dc)) =	  G _1 md o (G _1 x o (T.1 sc o mc))	";
             responses[i]=data;
           
 
             i = 317;
-            data = "1 subgoal (ID 87)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  T : AdjunctionUnit F G	  sc : C.(object)	  sd : D.(object)	  dc : C.(object)	  dd : D.(object)	  mc : C.(morphism) dc sc	  md : D.(morphism) sd dd	  x : D.(morphism) (F.(object_of) sc) sd	  ============================	  C.(Category.Core.compose) dc (G.(object_of) sd) 	    (G.(object_of) dd) (G.(morphism_of) sd dd md)	    (C.(Category.Core.compose) dc (G.(object_of) (F.(object_of) sc))	       (G.(object_of) sd) (G.(morphism_of) (F.(object_of) sc) sd x)	       (C.(Category.Core.compose) dc (G.(object_of) (F.(object_of) dc))	          (G.(object_of) (F.(object_of) sc))	          (G.(morphism_of) (F.(object_of) dc) (F.(object_of) sc)	             (F.(morphism_of) dc sc mc)) (T.(proj1_sig).(components_of) dc))) =	  C.(Category.Core.compose) dc (G.(object_of) sd) 	    (G.(object_of) dd) (G.(morphism_of) sd dd md)	    (C.(Category.Core.compose) dc (G.(object_of) (F.(object_of) sc))	       (G.(object_of) sd) (G.(morphism_of) (F.(object_of) sc) sd x)	       (C.(Category.Core.compose) dc (G.(object_of) (F.(object_of) dc))	          (G.(object_of) (F.(object_of) sc))	          (G.(morphism_of) (F.(object_of) dc) (F.(object_of) sc)	             (F.(morphism_of) dc sc mc)) (T.(proj1_sig).(components_of) dc)))	";
+            data = "1 subgoal (ID 87)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  T : AdjunctionUnit F G	  sc : C	  sd : D	  dc : C	  dd : D	  mc : morphism C dc sc	  md : morphism D sd dd	  x : morphism D (F sc) sd	  ============================	  G _1 md o (G _1 x o (G _1 (F _1 mc) o T.1 dc)) =	  G _1 md o (G _1 x o (G _1 (F _1 mc) o T.1 dc))	";
             responses[i]=data;
           
 
@@ -1638,27 +1638,27 @@
           
 
             i = 324;
-            data = "1 focused subgoal	(shelved: 2) (ID 90)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  T : AdjunctionUnit F G	  ============================	  forall x : C.(object) * D.(object), IsIsomorphism (?CO x)	";
+            data = "1 focused subgoal	(shelved: 2) (ID 90)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  T : AdjunctionUnit F G	  ============================	  forall x : C * D, IsIsomorphism (?CO x)	";
             responses[i]=data;
           
 
             i = 325;
-            data = "<infomsg>All the remaining goals are on the shelf.</infomsg>		1 subgoal (ID 81)		subgoal 1 (ID 81) is:	 forall (s d : (C^op * D).(object)) (m : (C^op * D).(morphism) s d),	 set_cat.(Category.Core.compose)	   ((hom_functor D o Core.pair F^op 1)%functor.(object_of) s)	   ((hom_functor D o Core.pair F^op 1)%functor.(object_of) d)	   ((hom_functor C o Core.pair 1 G)%functor.(object_of) d)	   ((fun cd : C.(object) * D.(object) =>	     ((equiv_hom_set_adjunction T cd.(fst) cd.(snd))^-1)%equiv.(equiv_fun)) d)	   ((hom_functor D o Core.pair F^op 1)%functor.(morphism_of) s d m) =	 set_cat.(Category.Core.compose)	   ((hom_functor D o Core.pair F^op 1)%functor.(object_of) s)	   ((hom_functor C o Core.pair 1 G)%functor.(object_of) s)	   ((hom_functor C o Core.pair 1 G)%functor.(object_of) d)	   ((hom_functor C o Core.pair 1 G)%functor.(morphism_of) s d m)	   ((fun cd : C.(object) * D.(object) =>	     ((equiv_hom_set_adjunction T cd.(fst) cd.(snd))^-1)%equiv.(equiv_fun)) s)	";
+            data = "<infomsg>All the remaining goals are on the shelf.</infomsg>		1 subgoal (ID 81)		subgoal 1 (ID 81) is:	 forall (s d : (C^op * D)%category) (m : morphism (C^op * D) s d),	 (fun cd : C * D =>	  equiv_fun (equiv_hom_set_adjunction T (fst cd) (snd cd))^-1) d	 o (hom_functor D o Core.pair F^op 1) _1 m =	 (hom_functor C o Core.pair 1 G) _1 m	 o (fun cd : C * D =>	    equiv_fun (equiv_hom_set_adjunction T (fst cd) (snd cd))^-1) s	";
             responses[i]=data;
           
 
             i = 326;
-            data = "1 focused subgoal	(shelved: 1) (ID 81)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  T : AdjunctionUnit F G	  ============================	  forall (s d : (C^op * D).(object)) (m : (C^op * D).(morphism) s d),	  set_cat.(Category.Core.compose)	    ((hom_functor D o Core.pair F^op 1)%functor.(object_of) s)	    ((hom_functor D o Core.pair F^op 1)%functor.(object_of) d)	    ((hom_functor C o Core.pair 1 G)%functor.(object_of) d)	    ((fun cd : C.(object) * D.(object) =>	      ((equiv_hom_set_adjunction T cd.(fst) cd.(snd))^-1)%equiv.(equiv_fun))	       d) ((hom_functor D o Core.pair F^op 1)%functor.(morphism_of) s d m) =	  set_cat.(Category.Core.compose)	    ((hom_functor D o Core.pair F^op 1)%functor.(object_of) s)	    ((hom_functor C o Core.pair 1 G)%functor.(object_of) s)	    ((hom_functor C o Core.pair 1 G)%functor.(object_of) d)	    ((hom_functor C o Core.pair 1 G)%functor.(morphism_of) s d m)	    ((fun cd : C.(object) * D.(object) =>	      ((equiv_hom_set_adjunction T cd.(fst) cd.(snd))^-1)%equiv.(equiv_fun))	       s)	";
+            data = "1 focused subgoal	(shelved: 1) (ID 81)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  T : AdjunctionUnit F G	  ============================	  forall (s d : (C^op * D)%category) (m : morphism (C^op * D) s d),	  (fun cd : C * D =>	   equiv_fun (equiv_hom_set_adjunction T (fst cd) (snd cd))^-1) d	  o (hom_functor D o Core.pair F^op 1) _1 m =	  (hom_functor C o Core.pair 1 G) _1 m	  o (fun cd : C * D =>	     equiv_fun (equiv_hom_set_adjunction T (fst cd) (snd cd))^-1) s	";
             responses[i]=data;
           
 
             i = 327;
-            data = "1 subgoal (ID 123)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  T : AdjunctionUnit F G	  ============================	  forall (s d : C.(object) * D.(object))	  (m : C.(morphism) d.(fst) s.(fst) * D.(morphism) s.(snd) d.(snd)),	  (fun x : D.(morphism) (F.(object_of) s.(fst)) s.(snd) =>	   C.(Category.Core.compose) d.(fst) (G.(object_of) (F.(object_of) d.(fst)))	     (G.(object_of) d.(snd))	     (G.(morphism_of) (F.(object_of) d.(fst)) d.(snd)	        (D.(Category.Core.compose) (F.(object_of) d.(fst))	           (F.(object_of) s.(fst)) d.(snd)	           (D.(Category.Core.compose) (F.(object_of) s.(fst)) 	              s.(snd) d.(snd) m.(snd) x)	           (F.(morphism_of) d.(fst) s.(fst) m.(fst))))	     (T.(proj1_sig).(components_of) d.(fst))) =	  (fun x : D.(morphism) (F.(object_of) s.(fst)) s.(snd) =>	   C.(Category.Core.compose) d.(fst) s.(fst) (G.(object_of) d.(snd))	     (C.(Category.Core.compose) s.(fst) (G.(object_of) s.(snd))	        (G.(object_of) d.(snd)) (G.(morphism_of) s.(snd) d.(snd) m.(snd))	        (C.(Category.Core.compose) s.(fst)	           (G.(object_of) (F.(object_of) s.(fst))) 	           (G.(object_of) s.(snd))	           (G.(morphism_of) (F.(object_of) s.(fst)) s.(snd) x)	           (T.(proj1_sig).(components_of) s.(fst)))) 	     m.(fst))	";
+            data = "1 subgoal (ID 123)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  T : AdjunctionUnit F G	  ============================	  forall (s d : C * D)	  (m : morphism C (fst d) (fst s) * morphism D (snd s) (snd d)),	  (fun x : morphism D (F (fst s)) (snd s) =>	   G _1 (snd m o x o F _1 (fst m)) o T.1 (fst d)) =	  (fun x : morphism D (F (fst s)) (snd s) =>	   G _1 (snd m) o (G _1 x o T.1 (fst s)) o fst m)	";
             responses[i]=data;
           
 
             i = 328;
-            data = "1 subgoal (ID 126)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  T : AdjunctionUnit F G	  s, d : C.(object) * D.(object)	  m : C.(morphism) d.(fst) s.(fst) * D.(morphism) s.(snd) d.(snd)	  ============================	  (fun x : D.(morphism) (F.(object_of) s.(fst)) s.(snd) =>	   C.(Category.Core.compose) d.(fst) (G.(object_of) (F.(object_of) d.(fst)))	     (G.(object_of) d.(snd))	     (G.(morphism_of) (F.(object_of) d.(fst)) d.(snd)	        (D.(Category.Core.compose) (F.(object_of) d.(fst))	           (F.(object_of) s.(fst)) d.(snd)	           (D.(Category.Core.compose) (F.(object_of) s.(fst)) 	              s.(snd) d.(snd) m.(snd) x)	           (F.(morphism_of) d.(fst) s.(fst) m.(fst))))	     (T.(proj1_sig).(components_of) d.(fst))) =	  (fun x : D.(morphism) (F.(object_of) s.(fst)) s.(snd) =>	   C.(Category.Core.compose) d.(fst) s.(fst) (G.(object_of) d.(snd))	     (C.(Category.Core.compose) s.(fst) (G.(object_of) s.(snd))	        (G.(object_of) d.(snd)) (G.(morphism_of) s.(snd) d.(snd) m.(snd))	        (C.(Category.Core.compose) s.(fst)	           (G.(object_of) (F.(object_of) s.(fst))) 	           (G.(object_of) s.(snd))	           (G.(morphism_of) (F.(object_of) s.(fst)) s.(snd) x)	           (T.(proj1_sig).(components_of) s.(fst)))) 	     m.(fst))	";
+            data = "1 subgoal (ID 126)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  F : Functor C D	  G : Functor D C	  T : AdjunctionUnit F G	  s, d : C * D	  m : morphism C (fst d) (fst s) * morphism D (snd s) (snd d)	  ============================	  (fun x : morphism D (F (fst s)) (snd s) =>	   G _1 (snd m o x o F _1 (fst m)) o T.1 (fst d)) =	  (fun x : morphism D (F (fst s)) (snd s) =>	   G _1 (snd m) o (G _1 x o T.1 (fst s)) o fst m)	";
             responses[i]=data;
           
 

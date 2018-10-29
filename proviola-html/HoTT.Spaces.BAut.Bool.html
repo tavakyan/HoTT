@@ -263,12 +263,12 @@
           
 
             i = 49;
-            data = "1 subgoal (ID 10)	  	  H : Univalence	  ============================	  {f : Bool <~> Bool &	  forall g : Bool <~> Bool,	  (fun x : Bool => g.(equiv_fun) (f.(equiv_fun) x)) ==	  (fun x : Bool => f.(equiv_fun) (g.(equiv_fun) x))}	";
+            data = "1 subgoal (ID 10)	  	  H : Univalence	  ============================	  {f : Bool <~> Bool &	  forall g : Bool <~> Bool,	  (fun x : Bool => g (f x)) == (fun x : Bool => f (g x))}	";
             responses[i]=data;
           
 
             i = 50;
-            data = "1 subgoal (ID 47)	  	  H : Univalence	  ============================	  forall g : Bool <~> Bool,	  (fun x : Bool => g.(equiv_fun) (equiv_negb.(equiv_fun) x)) ==	  (fun x : Bool => equiv_negb.(equiv_fun) (g.(equiv_fun) x))	";
+            data = "1 subgoal (ID 47)	  	  H : Univalence	  ============================	  forall g : Bool <~> Bool,	  (fun x : Bool => g (equiv_negb x)) == (fun x : Bool => equiv_negb (g x))	";
             responses[i]=data;
           
 
@@ -298,7 +298,7 @@
           
 
             i = 56;
-            data = "1 subgoal (ID 4522)	  	  H : Univalence	  oops : negb_center_baut_bool = (fun Z : BAut Bool => 1)	  p := ap10_equiv	         ((isequiv_ap	             (equiv_negb;	             fun g : Bool <~> Bool => abelian_aut_bool g equiv_negb)	             (1%equiv; fun (g : Bool <~> Bool) (x : Bool) => 1)).(	          equiv_inv) (oops @ (id_center_baut Bool)^)) ..1 true	   : (equiv_negb; fun g : Bool <~> Bool => abelian_aut_bool g equiv_negb)	     .(proj1_sig).(equiv_fun) true =	     (1%equiv; fun (g : Bool <~> Bool) (x : Bool) => 1).(proj1_sig)	     .(equiv_fun) true	  ============================	  Empty	";
+            data = "1 subgoal (ID 4522)	  	  H : Univalence	  oops : negb_center_baut_bool = (fun Z : BAut Bool => 1)	  p := ap10_equiv (_^-1 (oops @ (id_center_baut Bool)^)) ..1 true	   : (equiv_negb; fun g : Bool <~> Bool => abelian_aut_bool g equiv_negb).1	       true = (1%equiv; fun (g : Bool <~> Bool) (x : Bool) => 1).1 true	  ============================	  Empty	";
             responses[i]=data;
           
 
@@ -383,12 +383,12 @@
           
 
             i = 73;
-            data = "1 subgoal (ID 33)	  	  H : Univalence	  Z : BAut Bool	  oops : negb_baut_bool Z = 1%equiv	  Z' : BAut Bool	  p := merely_path_baut Z Z' : (merely (Z = Z')).(trunctype_type)	  ============================	  negb_center_baut_bool Z' = 1	";
+            data = "1 subgoal (ID 33)	  	  H : Univalence	  Z : BAut Bool	  oops : negb_baut_bool Z = 1%equiv	  Z' : BAut Bool	  p := merely_path_baut Z Z' : merely (Z = Z')	  ============================	  negb_center_baut_bool Z' = 1	";
             responses[i]=data;
           
 
             i = 74;
-            data = "1 subgoal (ID 34)	  	  H : Univalence	  Z : BAut Bool	  oops : negb_baut_bool Z = 1%equiv	  Z' : BAut Bool	  p : (merely (Z = Z')).(trunctype_type)	  ============================	  negb_center_baut_bool Z' = 1	";
+            data = "1 subgoal (ID 34)	  	  H : Univalence	  Z : BAut Bool	  oops : negb_baut_bool Z = 1%equiv	  Z' : BAut Bool	  p : merely (Z = Z')	  ============================	  negb_center_baut_bool Z' = 1	";
             responses[i]=data;
           
 
@@ -408,27 +408,27 @@
           
 
             i = 78;
-            data = "1 subgoal (ID 417)	  	  H : Univalence	  Z : BAut Bool	  oops : (negb_center_baut_bool Z) ..1 =	         (isequiv_equiv_path Z Z).(equiv_inv) 1%equiv	  ============================	  negb_center_baut_bool Z = 1	";
+            data = "1 subgoal (ID 417)	  	  H : Univalence	  Z : BAut Bool	  oops : (negb_center_baut_bool Z) ..1 = _^-1 1%equiv	  ============================	  negb_center_baut_bool Z = 1	";
             responses[i]=data;
           
 
             i = 79;
-            data = "2 subgoals (ID 467)	  	  H : Univalence	  Z : BAut Bool	  oops : (negb_center_baut_bool Z) ..1 =	         (isequiv_equiv_path Z Z).(equiv_inv) 1%equiv	  ============================	  negb_center_baut_bool Z =	  (equiv_path_sigma_hprop Z Z).(equiv_fun) (negb_center_baut_bool Z) ..1		subgoal 2 (ID 468) is:	 (equiv_path_sigma_hprop Z Z).(equiv_fun) 1 = 1	";
+            data = "2 subgoals (ID 467)	  	  H : Univalence	  Z : BAut Bool	  oops : (negb_center_baut_bool Z) ..1 = _^-1 1%equiv	  ============================	  negb_center_baut_bool Z =	  (equiv_path_sigma_hprop Z Z) (negb_center_baut_bool Z) ..1		subgoal 2 (ID 468) is:	 (equiv_path_sigma_hprop Z Z) 1 = 1	";
             responses[i]=data;
           
 
             i = 80;
-            data = "1 subgoal (ID 467)	  	  H : Univalence	  Z : BAut Bool	  oops : (negb_center_baut_bool Z) ..1 =	         (isequiv_equiv_path Z Z).(equiv_inv) 1%equiv	  ============================	  negb_center_baut_bool Z =	  (equiv_path_sigma_hprop Z Z).(equiv_fun) (negb_center_baut_bool Z) ..1	1 subgoal (ID 480)	  	  H : Univalence	  Z : BAut Bool	  oops : (negb_center_baut_bool Z) ..1 =	         (isequiv_equiv_path Z Z).(equiv_inv) 1%equiv	  ============================	  (equiv_path_sigma_hprop Z Z).(equiv_fun) (negb_center_baut_bool Z) ..1 =	  negb_center_baut_bool Z	";
+            data = "1 subgoal (ID 467)	  	  H : Univalence	  Z : BAut Bool	  oops : (negb_center_baut_bool Z) ..1 = _^-1 1%equiv	  ============================	  negb_center_baut_bool Z =	  (equiv_path_sigma_hprop Z Z) (negb_center_baut_bool Z) ..1	1 subgoal (ID 480)	  	  H : Univalence	  Z : BAut Bool	  oops : (negb_center_baut_bool Z) ..1 = _^-1 1%equiv	  ============================	  (equiv_path_sigma_hprop Z Z) (negb_center_baut_bool Z) ..1 =	  negb_center_baut_bool Z	";
             responses[i]=data;
           
 
             i = 81;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 468)		subgoal 1 (ID 468) is:	 (equiv_path_sigma_hprop Z Z).(equiv_fun) 1 = 1	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 468)		subgoal 1 (ID 468) is:	 (equiv_path_sigma_hprop Z Z) 1 = 1	";
             responses[i]=data;
           
 
             i = 82;
-            data = "1 subgoal (ID 468)	  	  H : Univalence	  Z : BAut Bool	  oops : (negb_center_baut_bool Z) ..1 =	         (isequiv_equiv_path Z Z).(equiv_inv) 1%equiv	  ============================	  (equiv_path_sigma_hprop Z Z).(equiv_fun) 1 = 1	No more subgoals.	";
+            data = "1 subgoal (ID 468)	  	  H : Univalence	  Z : BAut Bool	  oops : (negb_center_baut_bool Z) ..1 = _^-1 1%equiv	  ============================	  (equiv_path_sigma_hprop Z Z) 1 = 1	No more subgoals.	";
             responses[i]=data;
           
 
@@ -1128,7 +1128,7 @@
           
 
             i = 222;
-            data = "1 subgoal (ID 111)	  	  H : Univalence	  t : Bool	  Z : BAut Bool	  m : (merely (point (BAut Bool) = Z)).(trunctype_type)	  ============================	  IsEquiv (equiv_inhab_baut_bool_bool t Z)	";
+            data = "1 subgoal (ID 111)	  	  H : Univalence	  t : Bool	  Z : BAut Bool	  m : merely (point (BAut Bool) = Z)	  ============================	  IsEquiv (equiv_inhab_baut_bool_bool t Z)	";
             responses[i]=data;
           
 
@@ -1148,52 +1148,52 @@
           
 
             i = 226;
-            data = "2 subgoals (ID 258)	  	  H : Univalence	  t : Bool	  ============================	  Sect (fun e : Bool <~> Bool => e.(equiv_fun) t)	    (equiv_inhab_baut_bool_bool t (point (BAut Bool)))		subgoal 2 (ID 259) is:	 Sect (equiv_inhab_baut_bool_bool t (point (BAut Bool)))	   (fun e : Bool <~> Bool => e.(equiv_fun) t)	";
+            data = "2 subgoals (ID 258)	  	  H : Univalence	  t : Bool	  ============================	  Sect (fun e : Bool <~> Bool => e t)	    (equiv_inhab_baut_bool_bool t (point (BAut Bool)))		subgoal 2 (ID 259) is:	 Sect (equiv_inhab_baut_bool_bool t (point (BAut Bool)))	   (fun e : Bool <~> Bool => e t)	";
             responses[i]=data;
           
 
             i = 227;
-            data = "1 subgoal (ID 258)	  	  H : Univalence	  t : Bool	  ============================	  Sect (fun e : Bool <~> Bool => e.(equiv_fun) t)	    (equiv_inhab_baut_bool_bool t (point (BAut Bool)))	1 subgoal (ID 261)	  	  H : Univalence	  t : Bool	  e : Bool <~> Bool	  ============================	  equiv_inhab_baut_bool_bool t (point (BAut Bool)) (e.(equiv_fun) t) = e	";
+            data = "1 subgoal (ID 258)	  	  H : Univalence	  t : Bool	  ============================	  Sect (fun e : Bool <~> Bool => e t)	    (equiv_inhab_baut_bool_bool t (point (BAut Bool)))	1 subgoal (ID 261)	  	  H : Univalence	  t : Bool	  e : Bool <~> Bool	  ============================	  equiv_inhab_baut_bool_bool t (point (BAut Bool)) (e t) = e	";
             responses[i]=data;
           
 
             i = 228;
-            data = "1 subgoal (ID 272)	  	  H : Univalence	  t : Bool	  e : Bool <~> Bool	  ============================	  (equiv_inhab_baut_bool_bool t (point (BAut Bool)) (e.(equiv_fun) t))	  .(equiv_fun) = e.(equiv_fun)	";
+            data = "1 subgoal (ID 272)	  	  H : Univalence	  t : Bool	  e : Bool <~> Bool	  ============================	  equiv_inhab_baut_bool_bool t (point (BAut Bool)) (e t) = e	";
             responses[i]=data;
           
 
             i = 229;
-            data = "1 subgoal (ID 283)	  	  H : Univalence	  t : Bool	  e : Bool <~> Bool	  ============================	  (fun b : Bool =>	   if t	   then if b then e.(equiv_fun) t else negb (e.(equiv_fun) t)	   else if b then negb (e.(equiv_fun) t) else e.(equiv_fun) t) =	  e.(equiv_fun)	";
+            data = "1 subgoal (ID 283)	  	  H : Univalence	  t : Bool	  e : Bool <~> Bool	  ============================	  (fun b : Bool =>	   if t then if b then e t else negb (e t) else if b then negb (e t) else e t) =	  e	";
             responses[i]=data;
           
 
             i = 230;
-            data = "4 subgoals (ID 302)	  	  H : Univalence	  e : Bool <~> Bool	  ============================	  e.(equiv_fun) true = e.(equiv_fun) true		subgoal 2 (ID 303) is:	 negb (e.(equiv_fun) false) = e.(equiv_fun) true	subgoal 3 (ID 307) is:	 negb (e.(equiv_fun) true) = e.(equiv_fun) false	subgoal 4 (ID 308) is:	 e.(equiv_fun) false = e.(equiv_fun) false	";
+            data = "4 subgoals (ID 302)	  	  H : Univalence	  e : Bool <~> Bool	  ============================	  e true = e true		subgoal 2 (ID 303) is:	 negb (e false) = e true	subgoal 3 (ID 307) is:	 negb (e true) = e false	subgoal 4 (ID 308) is:	 e false = e false	";
             responses[i]=data;
           
 
             i = 231;
-            data = "1 subgoal (ID 302)	  	  H : Univalence	  e : Bool <~> Bool	  ============================	  e.(equiv_fun) true = e.(equiv_fun) true	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	4 subgoals (ID 303)		subgoal 1 (ID 303) is:	 negb (e.(equiv_fun) false) = e.(equiv_fun) true	subgoal 2 (ID 307) is:	 negb (e.(equiv_fun) true) = e.(equiv_fun) false	subgoal 3 (ID 308) is:	 e.(equiv_fun) false = e.(equiv_fun) false	subgoal 4 (ID 259) is:	 Sect (equiv_inhab_baut_bool_bool t (point (BAut Bool)))	   (fun e : Bool <~> Bool => e.(equiv_fun) t)	";
+            data = "1 subgoal (ID 302)	  	  H : Univalence	  e : Bool <~> Bool	  ============================	  e true = e true	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	4 subgoals (ID 303)		subgoal 1 (ID 303) is:	 negb (e false) = e true	subgoal 2 (ID 307) is:	 negb (e true) = e false	subgoal 3 (ID 308) is:	 e false = e false	subgoal 4 (ID 259) is:	 Sect (equiv_inhab_baut_bool_bool t (point (BAut Bool)))	   (fun e : Bool <~> Bool => e t)	";
             responses[i]=data;
           
 
             i = 232;
-            data = "1 subgoal (ID 303)	  	  H : Univalence	  e : Bool <~> Bool	  ============================	  negb (e.(equiv_fun) false) = e.(equiv_fun) true	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	3 subgoals (ID 307)		subgoal 1 (ID 307) is:	 negb (e.(equiv_fun) true) = e.(equiv_fun) false	subgoal 2 (ID 308) is:	 e.(equiv_fun) false = e.(equiv_fun) false	subgoal 3 (ID 259) is:	 Sect (equiv_inhab_baut_bool_bool t (point (BAut Bool)))	   (fun e : Bool <~> Bool => e.(equiv_fun) t)	";
+            data = "1 subgoal (ID 303)	  	  H : Univalence	  e : Bool <~> Bool	  ============================	  negb (e false) = e true	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	3 subgoals (ID 307)		subgoal 1 (ID 307) is:	 negb (e true) = e false	subgoal 2 (ID 308) is:	 e false = e false	subgoal 3 (ID 259) is:	 Sect (equiv_inhab_baut_bool_bool t (point (BAut Bool)))	   (fun e : Bool <~> Bool => e t)	";
             responses[i]=data;
           
 
             i = 233;
-            data = "1 subgoal (ID 307)	  	  H : Univalence	  e : Bool <~> Bool	  ============================	  negb (e.(equiv_fun) true) = e.(equiv_fun) false	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	2 subgoals (ID 308)		subgoal 1 (ID 308) is:	 e.(equiv_fun) false = e.(equiv_fun) false	subgoal 2 (ID 259) is:	 Sect (equiv_inhab_baut_bool_bool t (point (BAut Bool)))	   (fun e : Bool <~> Bool => e.(equiv_fun) t)	";
+            data = "1 subgoal (ID 307)	  	  H : Univalence	  e : Bool <~> Bool	  ============================	  negb (e true) = e false	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	2 subgoals (ID 308)		subgoal 1 (ID 308) is:	 e false = e false	subgoal 2 (ID 259) is:	 Sect (equiv_inhab_baut_bool_bool t (point (BAut Bool)))	   (fun e : Bool <~> Bool => e t)	";
             responses[i]=data;
           
 
             i = 234;
-            data = "1 subgoal (ID 308)	  	  H : Univalence	  e : Bool <~> Bool	  ============================	  e.(equiv_fun) false = e.(equiv_fun) false	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 259)		subgoal 1 (ID 259) is:	 Sect (equiv_inhab_baut_bool_bool t (point (BAut Bool)))	   (fun e : Bool <~> Bool => e.(equiv_fun) t)	";
+            data = "1 subgoal (ID 308)	  	  H : Univalence	  e : Bool <~> Bool	  ============================	  e false = e false	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 259)		subgoal 1 (ID 259) is:	 Sect (equiv_inhab_baut_bool_bool t (point (BAut Bool)))	   (fun e : Bool <~> Bool => e t)	";
             responses[i]=data;
           
 
             i = 235;
-            data = "1 subgoal (ID 259)	  	  H : Univalence	  t : Bool	  ============================	  Sect (equiv_inhab_baut_bool_bool t (point (BAut Bool)))	    (fun e : Bool <~> Bool => e.(equiv_fun) t)	1 subgoal (ID 312)	  	  H : Univalence	  t, z : Bool	  ============================	  (equiv_inhab_baut_bool_bool t (point (BAut Bool)) z).(equiv_fun) t = z	";
+            data = "1 subgoal (ID 259)	  	  H : Univalence	  t : Bool	  ============================	  Sect (equiv_inhab_baut_bool_bool t (point (BAut Bool)))	    (fun e : Bool <~> Bool => e t)	1 subgoal (ID 312)	  	  H : Univalence	  t, z : Bool	  ============================	  (equiv_inhab_baut_bool_bool t (point (BAut Bool)) z) t = z	";
             responses[i]=data;
           
 
@@ -1288,7 +1288,7 @@
           
 
             i = 254;
-            data = "1 subgoal (ID 132)	  	  H : Univalence	  t : Bool	  e : Bool <~> Bool	  ============================	  ((equiv_equiv_inhab_baut_bool_bool t (point (BAut Bool)))^-1)%equiv	  .(equiv_fun) e = e.(equiv_fun) t	";
+            data = "1 subgoal (ID 132)	  	  H : Univalence	  t : Bool	  e : Bool <~> Bool	  ============================	  ((equiv_equiv_inhab_baut_bool_bool t (point (BAut Bool)))^-1)%equiv e = e t	";
             responses[i]=data;
           
 
@@ -1298,12 +1298,12 @@
           
 
             i = 256;
-            data = "1 subgoal (ID 149)	  	  H : Univalence	  t : Bool	  e : Bool <~> Bool	  alt := {|	         equiv_fun := equiv_inhab_baut_bool_bool t (point (BAut Bool));	         equiv_isequiv := isequiv_equiv_inhab_baut_bool_bool_lemma t	                            (point (BAut Bool)) (tr 1) |}	   : point (BAut Bool) <~> (Bool <~> point (BAut Bool))	  ============================	  ((equiv_equiv_inhab_baut_bool_bool t (point (BAut Bool)))^-1)%equiv	  .(equiv_fun) e = e.(equiv_fun) t	";
+            data = "1 subgoal (ID 149)	  	  H : Univalence	  t : Bool	  e : Bool <~> Bool	  alt := {|	         equiv_fun := equiv_inhab_baut_bool_bool t (point (BAut Bool));	         equiv_isequiv := isequiv_equiv_inhab_baut_bool_bool_lemma t	                            (point (BAut Bool)) (tr 1) |}	   : point (BAut Bool) <~> (Bool <~> point (BAut Bool))	  ============================	  ((equiv_equiv_inhab_baut_bool_bool t (point (BAut Bool)))^-1)%equiv e = e t	";
             responses[i]=data;
           
 
             i = 257;
-            data = "2 subgoals (ID 155)	  	  H : Univalence	  t : Bool	  e : Bool <~> Bool	  alt := {|	         equiv_fun := equiv_inhab_baut_bool_bool t (point (BAut Bool));	         equiv_isequiv := isequiv_equiv_inhab_baut_bool_bool_lemma t	                            (point (BAut Bool)) (tr 1) |}	   : point (BAut Bool) <~> (Bool <~> point (BAut Bool))	  ============================	  equiv_equiv_inhab_baut_bool_bool t (point (BAut Bool)) = alt		subgoal 2 (ID 157) is:	 ((equiv_equiv_inhab_baut_bool_bool t (point (BAut Bool)))^-1)%equiv	 .(equiv_fun) e = e.(equiv_fun) t	";
+            data = "2 subgoals (ID 155)	  	  H : Univalence	  t : Bool	  e : Bool <~> Bool	  alt := {|	         equiv_fun := equiv_inhab_baut_bool_bool t (point (BAut Bool));	         equiv_isequiv := isequiv_equiv_inhab_baut_bool_bool_lemma t	                            (point (BAut Bool)) (tr 1) |}	   : point (BAut Bool) <~> (Bool <~> point (BAut Bool))	  ============================	  equiv_equiv_inhab_baut_bool_bool t (point (BAut Bool)) = alt		subgoal 2 (ID 157) is:	 ((equiv_equiv_inhab_baut_bool_bool t (point (BAut Bool)))^-1)%equiv e = e t	";
             responses[i]=data;
           
 
@@ -1318,7 +1318,7 @@
           
 
             i = 260;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 157)		subgoal 1 (ID 157) is:	 ((equiv_equiv_inhab_baut_bool_bool t (point (BAut Bool)))^-1)%equiv	 .(equiv_fun) e = e.(equiv_fun) t	1 subgoal (ID 157)	  	  H : Univalence	  t : Bool	  e : Bool <~> Bool	  alt := {|	         equiv_fun := equiv_inhab_baut_bool_bool t (point (BAut Bool));	         equiv_isequiv := isequiv_equiv_inhab_baut_bool_bool_lemma t	                            (point (BAut Bool)) (tr 1) |}	   : point (BAut Bool) <~> (Bool <~> point (BAut Bool))	  p : equiv_equiv_inhab_baut_bool_bool t (point (BAut Bool)) = alt	  ============================	  ((equiv_equiv_inhab_baut_bool_bool t (point (BAut Bool)))^-1)%equiv	  .(equiv_fun) e = e.(equiv_fun) t	No more subgoals.	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 157)		subgoal 1 (ID 157) is:	 ((equiv_equiv_inhab_baut_bool_bool t (point (BAut Bool)))^-1)%equiv e = e t	1 subgoal (ID 157)	  	  H : Univalence	  t : Bool	  e : Bool <~> Bool	  alt := {|	         equiv_fun := equiv_inhab_baut_bool_bool t (point (BAut Bool));	         equiv_isequiv := isequiv_equiv_inhab_baut_bool_bool_lemma t	                            (point (BAut Bool)) (tr 1) |}	   : point (BAut Bool) <~> (Bool <~> point (BAut Bool))	  p : equiv_equiv_inhab_baut_bool_bool t (point (BAut Bool)) = alt	  ============================	  ((equiv_equiv_inhab_baut_bool_bool t (point (BAut Bool)))^-1)%equiv e = e t	No more subgoals.	";
             responses[i]=data;
           
 
@@ -1448,7 +1448,7 @@
           
 
             i = 286;
-            data = "1 subgoal (ID 137)	  	  H : Univalence	  Z : BAut Bool	  W : BAut Bool	  ============================	  (merely ((Z <~> W) = Bool)).(trunctype_type)	";
+            data = "1 subgoal (ID 137)	  	  H : Univalence	  Z : BAut Bool	  W : BAut Bool	  ============================	  merely ((Z <~> W) = Bool)	";
             responses[i]=data;
           
 
@@ -1728,7 +1728,7 @@
           
 
             i = 342;
-            data = "1 subgoal (ID 174)	  	  H : Univalence	  Y : BAut Bool	  Z : BAut Bool	  W : BAut Bool	  e : Y ** Z ** W	  z : Z	  ============================	  Y -> W	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	3 subgoals (ID 176)		subgoal 1 (ID 176) is:	 W -> Y	subgoal 2 (ID 178) is:	 Sect ?g (fun y : Y => (e.(equiv_fun) y).(equiv_fun) z)	subgoal 3 (ID 180) is:	 Sect (fun y : Y => (e.(equiv_fun) y).(equiv_fun) z) ?g	";
+            data = "1 subgoal (ID 174)	  	  H : Univalence	  Y : BAut Bool	  Z : BAut Bool	  W : BAut Bool	  e : Y ** Z ** W	  z : Z	  ============================	  Y -> W	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	3 subgoals (ID 176)		subgoal 1 (ID 176) is:	 W -> Y	subgoal 2 (ID 178) is:	 Sect ?g (fun y : Y => (e y) z)	subgoal 3 (ID 180) is:	 Sect (fun y : Y => (e y) z) ?g	";
             responses[i]=data;
           
 
@@ -1848,82 +1848,82 @@
           
 
             i = 366;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 178)		subgoal 1 (ID 178) is:	 Sect	   (fun w : W =>	    let p := path_baut_bool_inhab W w in	    match p in (_ = y) return (Y ** Z ** y -> y -> Y) with	    | 1 =>	        fun (e0 : Y ** Z ** pt) (w0 : pt) =>	        let p0 := path_baut_bool_inhab Z z in	        match p0 in (_ = y) return (Y ** y ** pt -> y -> Y) with	        | 1 =>	            fun (e1 : Y ** pt ** pt) (z0 : pt) =>	            let s := dec (z0 = w0) in	            match s with	            | inl _ => e1.(equiv_isequiv).(equiv_inv) 1%equiv	            | inr _ => e1.(equiv_isequiv).(equiv_inv) equiv_negb	            end	        end e0 z	    end e w) (fun y : Y => (e.(equiv_fun) y).(equiv_fun) z)	subgoal 2 (ID 180) is:	 Sect (fun y : Y => (e.(equiv_fun) y).(equiv_fun) z)	   (fun w : W =>	    let p := path_baut_bool_inhab W w in	    match p in (_ = y) return (Y ** Z ** y -> y -> Y) with	    | 1 =>	        fun (e0 : Y ** Z ** pt) (w0 : pt) =>	        let p0 := path_baut_bool_inhab Z z in	        match p0 in (_ = y) return (Y ** y ** pt -> y -> Y) with	        | 1 =>	            fun (e1 : Y ** pt ** pt) (z0 : pt) =>	            let s := dec (z0 = w0) in	            match s with	            | inl _ => e1.(equiv_isequiv).(equiv_inv) 1%equiv	            | inr _ => e1.(equiv_isequiv).(equiv_inv) equiv_negb	            end	        end e0 z	    end e w)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 178)		subgoal 1 (ID 178) is:	 Sect	   (fun w : W =>	    let p := path_baut_bool_inhab W w in	    match p in (_ = y) return (Y ** Z ** y -> y -> Y) with	    | 1 =>	        fun (e0 : Y ** Z ** pt) (w0 : pt) =>	        let p0 := path_baut_bool_inhab Z z in	        match p0 in (_ = y) return (Y ** y ** pt -> y -> Y) with	        | 1 =>	            fun (e1 : Y ** pt ** pt) (z0 : pt) =>	            let s := dec (z0 = w0) in	            match s with	            | inl _ => _^-1 1%equiv	            | inr _ => _^-1 equiv_negb	            end	        end e0 z	    end e w) (fun y : Y => (e y) z)	subgoal 2 (ID 180) is:	 Sect (fun y : Y => (e y) z)	   (fun w : W =>	    let p := path_baut_bool_inhab W w in	    match p in (_ = y) return (Y ** Z ** y -> y -> Y) with	    | 1 =>	        fun (e0 : Y ** Z ** pt) (w0 : pt) =>	        let p0 := path_baut_bool_inhab Z z in	        match p0 in (_ = y) return (Y ** y ** pt -> y -> Y) with	        | 1 =>	            fun (e1 : Y ** pt ** pt) (z0 : pt) =>	            let s := dec (z0 = w0) in	            match s with	            | inl _ => _^-1 1%equiv	            | inr _ => _^-1 equiv_negb	            end	        end e0 z	    end e w)	";
             responses[i]=data;
           
 
             i = 367;
-            data = "1 subgoal (ID 178)	  	  H : Univalence	  Y : BAut Bool	  Z : BAut Bool	  W : BAut Bool	  e : Y ** Z ** W	  z : Z	  ============================	  Sect	    (fun w : W =>	     let p := path_baut_bool_inhab W w in	     match p in (_ = y) return (Y ** Z ** y -> y -> Y) with	     | 1 =>	         fun (e0 : Y ** Z ** pt) (w0 : pt) =>	         let p0 := path_baut_bool_inhab Z z in	         match p0 in (_ = y) return (Y ** y ** pt -> y -> Y) with	         | 1 =>	             fun (e1 : Y ** pt ** pt) (z0 : pt) =>	             let s := dec (z0 = w0) in	             match s with	             | inl _ => e1.(equiv_isequiv).(equiv_inv) 1%equiv	             | inr _ => e1.(equiv_isequiv).(equiv_inv) equiv_negb	             end	         end e0 z	     end e w) (fun y : Y => (e.(equiv_fun) y).(equiv_fun) z)	1 subgoal (ID 718)	  	  H : Univalence	  Y : BAut Bool	  Z : BAut Bool	  W : BAut Bool	  e : Y ** Z ** W	  z : Z	  w : W	  ============================	  (e.(equiv_fun)	     (let p := path_baut_bool_inhab W w in	      match p in (_ = y) return (Y ** Z ** y -> y -> Y) with	      | 1 =>	          fun (e0 : Y ** Z ** pt) (w0 : pt) =>	          let p0 := path_baut_bool_inhab Z z in	          match p0 in (_ = y) return (Y ** y ** pt -> y -> Y) with	          | 1 =>	              fun (e1 : Y ** pt ** pt) (z0 : pt) =>	              let s := dec (z0 = w0) in	              match s with	              | inl _ => e1.(equiv_isequiv).(equiv_inv) 1%equiv	              | inr _ => e1.(equiv_isequiv).(equiv_inv) equiv_negb	              end	          end e0 z	      end e w)).(equiv_fun) z = w	";
+            data = "1 subgoal (ID 178)	  	  H : Univalence	  Y : BAut Bool	  Z : BAut Bool	  W : BAut Bool	  e : Y ** Z ** W	  z : Z	  ============================	  Sect	    (fun w : W =>	     let p := path_baut_bool_inhab W w in	     match p in (_ = y) return (Y ** Z ** y -> y -> Y) with	     | 1 =>	         fun (e0 : Y ** Z ** pt) (w0 : pt) =>	         let p0 := path_baut_bool_inhab Z z in	         match p0 in (_ = y) return (Y ** y ** pt -> y -> Y) with	         | 1 =>	             fun (e1 : Y ** pt ** pt) (z0 : pt) =>	             let s := dec (z0 = w0) in	             match s with	             | inl _ => _^-1 1%equiv	             | inr _ => _^-1 equiv_negb	             end	         end e0 z	     end e w) (fun y : Y => (e y) z)	1 subgoal (ID 718)	  	  H : Univalence	  Y : BAut Bool	  Z : BAut Bool	  W : BAut Bool	  e : Y ** Z ** W	  z : Z	  w : W	  ============================	  (e	     (let p := path_baut_bool_inhab W w in	      match p in (_ = y) return (Y ** Z ** y -> y -> Y) with	      | 1 =>	          fun (e0 : Y ** Z ** pt) (w0 : pt) =>	          let p0 := path_baut_bool_inhab Z z in	          match p0 in (_ = y) return (Y ** y ** pt -> y -> Y) with	          | 1 =>	              fun (e1 : Y ** pt ** pt) (z0 : pt) =>	              let s := dec (z0 = w0) in	              match s with	              | inl _ => _^-1 1%equiv	              | inr _ => _^-1 equiv_negb	              end	          end e0 z	      end e w)) z = w	";
             responses[i]=data;
           
 
             i = 368;
-            data = "1 subgoal (ID 731)	  	  H : Univalence	  Y : BAut Bool	  Z : BAut Bool	  e : Y ** Z ** pt	  z : Z	  w : pt	  ============================	  (e.(equiv_fun)	     (let p := 1 in	      match p in (_ = y) return (Y ** Z ** y -> y -> Y) with	      | 1 =>	          fun (e0 : Y ** Z ** pt) (w0 : pt) =>	          let p0 := path_baut_bool_inhab Z z in	          match p0 in (_ = y) return (Y ** y ** pt -> y -> Y) with	          | 1 =>	              fun (e1 : Y ** pt ** pt) (z0 : pt) =>	              let s := dec (z0 = w0) in	              match s with	              | inl _ => e1.(equiv_isequiv).(equiv_inv) 1%equiv	              | inr _ => e1.(equiv_isequiv).(equiv_inv) equiv_negb	              end	          end e0 z	      end e w)).(equiv_fun) z = w	";
+            data = "1 subgoal (ID 731)	  	  H : Univalence	  Y : BAut Bool	  Z : BAut Bool	  e : Y ** Z ** pt	  z : Z	  w : pt	  ============================	  (e	     (let p := 1 in	      match p in (_ = y) return (Y ** Z ** y -> y -> Y) with	      | 1 =>	          fun (e0 : Y ** Z ** pt) (w0 : pt) =>	          let p0 := path_baut_bool_inhab Z z in	          match p0 in (_ = y) return (Y ** y ** pt -> y -> Y) with	          | 1 =>	              fun (e1 : Y ** pt ** pt) (z0 : pt) =>	              let s := dec (z0 = w0) in	              match s with	              | inl _ => _^-1 1%equiv	              | inr _ => _^-1 equiv_negb	              end	          end e0 z	      end e w)) z = w	";
             responses[i]=data;
           
 
             i = 369;
-            data = "1 subgoal (ID 744)	  	  H : Univalence	  Y : BAut Bool	  e : Y ** pt ** pt	  z : pt	  w : pt	  ============================	  (e.(equiv_fun)	     (let p := 1 in	      match p in (_ = y) return (Y ** pt ** y -> y -> Y) with	      | 1 =>	          fun (e0 : Y ** pt ** pt) (w0 : pt) =>	          let p0 := 1 in	          match p0 in (_ = y) return (Y ** y ** pt -> y -> Y) with	          | 1 =>	              fun (e1 : Y ** pt ** pt) (z0 : pt) =>	              let s := dec (z0 = w0) in	              match s with	              | inl _ => e1.(equiv_isequiv).(equiv_inv) 1%equiv	              | inr _ => e1.(equiv_isequiv).(equiv_inv) equiv_negb	              end	          end e0 z	      end e w)).(equiv_fun) z = w	";
+            data = "1 subgoal (ID 744)	  	  H : Univalence	  Y : BAut Bool	  e : Y ** pt ** pt	  z : pt	  w : pt	  ============================	  (e	     (let p := 1 in	      match p in (_ = y) return (Y ** pt ** y -> y -> Y) with	      | 1 =>	          fun (e0 : Y ** pt ** pt) (w0 : pt) =>	          let p0 := 1 in	          match p0 in (_ = y) return (Y ** y ** pt -> y -> Y) with	          | 1 =>	              fun (e1 : Y ** pt ** pt) (z0 : pt) =>	              let s := dec (z0 = w0) in	              match s with	              | inl _ => _^-1 1%equiv	              | inr _ => _^-1 equiv_negb	              end	          end e0 z	      end e w)) z = w	";
             responses[i]=data;
           
 
             i = 370;
-            data = "1 subgoal (ID 745)	  	  H : Univalence	  Y : BAut Bool	  e : Y ** pt ** pt	  z, w : pt	  ============================	  (e.(equiv_fun)	     match dec (z = w) with	     | inl _ => e.(equiv_isequiv).(equiv_inv) 1%equiv	     | inr _ => e.(equiv_isequiv).(equiv_inv) equiv_negb	     end).(equiv_fun) z = w	";
+            data = "1 subgoal (ID 745)	  	  H : Univalence	  Y : BAut Bool	  e : Y ** pt ** pt	  z : pt	  w : pt	  ============================	  (e	     match dec (z = w) with	     | inl _ => _^-1 1%equiv	     | inr _ => _^-1 equiv_negb	     end) z = w	";
             responses[i]=data;
           
 
             i = 371;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 180)		subgoal 1 (ID 180) is:	 Sect (fun y : Y => (e.(equiv_fun) y).(equiv_fun) z)	   (fun w : W =>	    let p := path_baut_bool_inhab W w in	    match p in (_ = y) return (Y ** Z ** y -> y -> Y) with	    | 1 =>	        fun (e0 : Y ** Z ** pt) (w0 : pt) =>	        let p0 := path_baut_bool_inhab Z z in	        match p0 in (_ = y) return (Y ** y ** pt -> y -> Y) with	        | 1 =>	            fun (e1 : Y ** pt ** pt) (z0 : pt) =>	            let s := dec (z0 = w0) in	            match s with	            | inl _ => e1.(equiv_isequiv).(equiv_inv) 1%equiv	            | inr _ => e1.(equiv_isequiv).(equiv_inv) equiv_negb	            end	        end e0 z	    end e w)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 180)		subgoal 1 (ID 180) is:	 Sect (fun y : Y => (e y) z)	   (fun w : W =>	    let p := path_baut_bool_inhab W w in	    match p in (_ = y) return (Y ** Z ** y -> y -> Y) with	    | 1 =>	        fun (e0 : Y ** Z ** pt) (w0 : pt) =>	        let p0 := path_baut_bool_inhab Z z in	        match p0 in (_ = y) return (Y ** y ** pt -> y -> Y) with	        | 1 =>	            fun (e1 : Y ** pt ** pt) (z0 : pt) =>	            let s := dec (z0 = w0) in	            match s with	            | inl _ => _^-1 1%equiv	            | inr _ => _^-1 equiv_negb	            end	        end e0 z	    end e w)	";
             responses[i]=data;
           
 
             i = 372;
-            data = "1 subgoal (ID 180)	  	  H : Univalence	  Y : BAut Bool	  Z : BAut Bool	  W : BAut Bool	  e : Y ** Z ** W	  z : Z	  ============================	  Sect (fun y : Y => (e.(equiv_fun) y).(equiv_fun) z)	    (fun w : W =>	     let p := path_baut_bool_inhab W w in	     match p in (_ = y) return (Y ** Z ** y -> y -> Y) with	     | 1 =>	         fun (e0 : Y ** Z ** pt) (w0 : pt) =>	         let p0 := path_baut_bool_inhab Z z in	         match p0 in (_ = y) return (Y ** y ** pt -> y -> Y) with	         | 1 =>	             fun (e1 : Y ** pt ** pt) (z0 : pt) =>	             let s := dec (z0 = w0) in	             match s with	             | inl _ => e1.(equiv_isequiv).(equiv_inv) 1%equiv	             | inr _ => e1.(equiv_isequiv).(equiv_inv) equiv_negb	             end	         end e0 z	     end e w)	1 subgoal (ID 810)	  	  H : Univalence	  Y : BAut Bool	  Z : BAut Bool	  W : BAut Bool	  e : Y ** Z ** W	  z : Z	  y : Y	  ============================	  (let p := path_baut_bool_inhab W ((e.(equiv_fun) y).(equiv_fun) z) in	   match p in (_ = y0) return (Y ** Z ** y0 -> y0 -> Y) with	   | 1 =>	       fun (e0 : Y ** Z ** pt) (w : pt) =>	       let p0 := path_baut_bool_inhab Z z in	       match p0 in (_ = y0) return (Y ** y0 ** pt -> y0 -> Y) with	       | 1 =>	           fun (e1 : Y ** pt ** pt) (z0 : pt) =>	           let s := dec (z0 = w) in	           match s with	           | inl _ => e1.(equiv_isequiv).(equiv_inv) 1%equiv	           | inr _ => e1.(equiv_isequiv).(equiv_inv) equiv_negb	           end	       end e0 z	   end e ((e.(equiv_fun) y).(equiv_fun) z)) = y	";
+            data = "1 subgoal (ID 180)	  	  H : Univalence	  Y : BAut Bool	  Z : BAut Bool	  W : BAut Bool	  e : Y ** Z ** W	  z : Z	  ============================	  Sect (fun y : Y => (e y) z)	    (fun w : W =>	     let p := path_baut_bool_inhab W w in	     match p in (_ = y) return (Y ** Z ** y -> y -> Y) with	     | 1 =>	         fun (e0 : Y ** Z ** pt) (w0 : pt) =>	         let p0 := path_baut_bool_inhab Z z in	         match p0 in (_ = y) return (Y ** y ** pt -> y -> Y) with	         | 1 =>	             fun (e1 : Y ** pt ** pt) (z0 : pt) =>	             let s := dec (z0 = w0) in	             match s with	             | inl _ => _^-1 1%equiv	             | inr _ => _^-1 equiv_negb	             end	         end e0 z	     end e w)	1 subgoal (ID 810)	  	  H : Univalence	  Y : BAut Bool	  Z : BAut Bool	  W : BAut Bool	  e : Y ** Z ** W	  z : Z	  y : Y	  ============================	  (let p := path_baut_bool_inhab W ((e y) z) in	   match p in (_ = y0) return (Y ** Z ** y0 -> y0 -> Y) with	   | 1 =>	       fun (e0 : Y ** Z ** pt) (w : pt) =>	       let p0 := path_baut_bool_inhab Z z in	       match p0 in (_ = y0) return (Y ** y0 ** pt -> y0 -> Y) with	       | 1 =>	           fun (e1 : Y ** pt ** pt) (z0 : pt) =>	           let s := dec (z0 = w) in	           match s with	           | inl _ => _^-1 1%equiv	           | inr _ => _^-1 equiv_negb	           end	       end e0 z	   end e ((e y) z)) = y	";
             responses[i]=data;
           
 
             i = 373;
-            data = "1 subgoal (ID 822)	  	  H : Univalence	  Z, W : BAut Bool	  e : pt ** Z ** W	  z : Z	  y : pt	  ============================	  (let p := path_baut_bool_inhab W ((e.(equiv_fun) y).(equiv_fun) z) in	   match p in (_ = y0) return (pt ** Z ** y0 -> y0 -> pt) with	   | 1 =>	       fun (e0 : pt ** Z ** pt) (w : pt) =>	       let p0 := path_baut_bool_inhab Z z in	       match p0 in (_ = y0) return (pt ** y0 ** pt -> y0 -> pt) with	       | 1 =>	           fun (e1 : pt ** pt ** pt) (z0 : pt) =>	           let s := dec (z0 = w) in	           match s with	           | inl _ => e1.(equiv_isequiv).(equiv_inv) 1%equiv	           | inr _ => e1.(equiv_isequiv).(equiv_inv) equiv_negb	           end	       end e0 z	   end e ((e.(equiv_fun) y).(equiv_fun) z)) = y	";
+            data = "1 subgoal (ID 822)	  	  H : Univalence	  Z : BAut Bool	  W : BAut Bool	  e : pt ** Z ** W	  z : Z	  y : pt	  ============================	  (let p := path_baut_bool_inhab W ((e y) z) in	   match p in (_ = y0) return (pt ** Z ** y0 -> y0 -> pt) with	   | 1 =>	       fun (e0 : pt ** Z ** pt) (w : pt) =>	       let p0 := path_baut_bool_inhab Z z in	       match p0 in (_ = y0) return (pt ** y0 ** pt -> y0 -> pt) with	       | 1 =>	           fun (e1 : pt ** pt ** pt) (z0 : pt) =>	           let s := dec (z0 = w) in	           match s with	           | inl _ => _^-1 1%equiv	           | inr _ => _^-1 equiv_negb	           end	       end e0 z	   end e ((e y) z)) = y	";
             responses[i]=data;
           
 
             i = 374;
-            data = "1 subgoal (ID 835)	  	  H : Univalence	  W : BAut Bool	  e : pt ** pt ** W	  z : pt	  y : pt	  ============================	  (let p := path_baut_bool_inhab W ((e.(equiv_fun) y).(equiv_fun) z) in	   match p in (_ = y0) return (pt ** pt ** y0 -> y0 -> pt) with	   | 1 =>	       fun (e0 : pt ** pt ** pt) (w : pt) =>	       let p0 := 1 in	       match p0 in (_ = y0) return (pt ** y0 ** pt -> y0 -> pt) with	       | 1 =>	           fun (e1 : pt ** pt ** pt) (z0 : pt) =>	           let s := dec (z0 = w) in	           match s with	           | inl _ => e1.(equiv_isequiv).(equiv_inv) 1%equiv	           | inr _ => e1.(equiv_isequiv).(equiv_inv) equiv_negb	           end	       end e0 z	   end e ((e.(equiv_fun) y).(equiv_fun) z)) = y	";
+            data = "1 subgoal (ID 835)	  	  H : Univalence	  W : BAut Bool	  e : pt ** pt ** W	  z : pt	  y : pt	  ============================	  (let p := path_baut_bool_inhab W ((e y) z) in	   match p in (_ = y0) return (pt ** pt ** y0 -> y0 -> pt) with	   | 1 =>	       fun (e0 : pt ** pt ** pt) (w : pt) =>	       let p0 := 1 in	       match p0 in (_ = y0) return (pt ** y0 ** pt -> y0 -> pt) with	       | 1 =>	           fun (e1 : pt ** pt ** pt) (z0 : pt) =>	           let s := dec (z0 = w) in	           match s with	           | inl _ => _^-1 1%equiv	           | inr _ => _^-1 equiv_negb	           end	       end e0 z	   end e ((e y) z)) = y	";
             responses[i]=data;
           
 
             i = 375;
-            data = "1 subgoal (ID 845)	  	  H : Univalence	  e : pt ** pt ** pt	  z : pt	  y : pt	  ============================	  (let p := 1 in	   match p in (_ = y0) return (pt ** pt ** y0 -> y0 -> pt) with	   | 1 =>	       fun (e0 : pt ** pt ** pt) (w : pt) =>	       let p0 := 1 in	       match p0 in (_ = y0) return (pt ** y0 ** pt -> y0 -> pt) with	       | 1 =>	           fun (e1 : pt ** pt ** pt) (z0 : pt) =>	           let s := dec (z0 = w) in	           match s with	           | inl _ => e1.(equiv_isequiv).(equiv_inv) 1%equiv	           | inr _ => e1.(equiv_isequiv).(equiv_inv) equiv_negb	           end	       end e0 z	   end e ((e.(equiv_fun) y).(equiv_fun) z)) = y	";
+            data = "1 subgoal (ID 845)	  	  H : Univalence	  e : pt ** pt ** pt	  z : pt	  y : pt	  ============================	  (let p := 1 in	   match p in (_ = y0) return (pt ** pt ** y0 -> y0 -> pt) with	   | 1 =>	       fun (e0 : pt ** pt ** pt) (w : pt) =>	       let p0 := 1 in	       match p0 in (_ = y0) return (pt ** y0 ** pt -> y0 -> pt) with	       | 1 =>	           fun (e1 : pt ** pt ** pt) (z0 : pt) =>	           let s := dec (z0 = w) in	           match s with	           | inl _ => _^-1 1%equiv	           | inr _ => _^-1 equiv_negb	           end	       end e0 z	   end e ((e y) z)) = y	";
             responses[i]=data;
           
 
             i = 376;
-            data = "1 subgoal (ID 846)	  	  H : Univalence	  e : pt ** pt ** pt	  z : pt	  y : pt	  ============================	  match dec (z = (e.(equiv_fun) y).(equiv_fun) z) with	  | inl _ => e.(equiv_isequiv).(equiv_inv) 1%equiv	  | inr _ => e.(equiv_isequiv).(equiv_inv) equiv_negb	  end = y	";
+            data = "1 subgoal (ID 846)	  	  H : Univalence	  e : pt ** pt ** pt	  z : pt	  y : pt	  ============================	  match dec (z = (e y) z) with	  | inl _ => _^-1 1%equiv	  | inr _ => _^-1 equiv_negb	  end = y	";
             responses[i]=data;
           
 
             i = 377;
-            data = "4 subgoals (ID 884)	  	  H : Univalence	  e : pt ** pt ** pt	  z : pt	  y : pt	  p : z = (e.(equiv_fun) y).(equiv_fun) z	  q : e.(equiv_fun) y = 1%equiv	  ============================	  1%equiv = e.(equiv_fun) y		subgoal 2 (ID 885) is:	 1%equiv = e.(equiv_fun) y	subgoal 3 (ID 906) is:	 equiv_negb = e.(equiv_fun) y	subgoal 4 (ID 907) is:	 equiv_negb = e.(equiv_fun) y	";
+            data = "4 subgoals (ID 884)	  	  H : Univalence	  e : pt ** pt ** pt	  z : pt	  y : pt	  p : z = (e y) z	  q : e y = 1%equiv	  ============================	  1%equiv = e y		subgoal 2 (ID 885) is:	 1%equiv = e y	subgoal 3 (ID 906) is:	 equiv_negb = e y	subgoal 4 (ID 907) is:	 equiv_negb = e y	";
             responses[i]=data;
           
 
             i = 378;
-            data = "1 subgoal (ID 884)	  	  H : Univalence	  e : pt ** pt ** pt	  z : pt	  y : pt	  p : z = (e.(equiv_fun) y).(equiv_fun) z	  q : e.(equiv_fun) y = 1%equiv	  ============================	  1%equiv = e.(equiv_fun) y	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	3 subgoals (ID 885)		subgoal 1 (ID 885) is:	 1%equiv = e.(equiv_fun) y	subgoal 2 (ID 906) is:	 equiv_negb = e.(equiv_fun) y	subgoal 3 (ID 907) is:	 equiv_negb = e.(equiv_fun) y	";
+            data = "1 subgoal (ID 884)	  	  H : Univalence	  e : pt ** pt ** pt	  z : pt	  y : pt	  p : z = (e y) z	  q : e y = 1%equiv	  ============================	  1%equiv = e y	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	3 subgoals (ID 885)		subgoal 1 (ID 885) is:	 1%equiv = e y	subgoal 2 (ID 906) is:	 equiv_negb = e y	subgoal 3 (ID 907) is:	 equiv_negb = e y	";
             responses[i]=data;
           
 
             i = 379;
-            data = "1 subgoal (ID 885)	  	  H : Univalence	  e : pt ** pt ** pt	  z : pt	  y : pt	  p : z = (e.(equiv_fun) y).(equiv_fun) z	  q : e.(equiv_fun) y = equiv_negb	  ============================	  1%equiv = e.(equiv_fun) y	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	2 subgoals (ID 906)		subgoal 1 (ID 906) is:	 equiv_negb = e.(equiv_fun) y	subgoal 2 (ID 907) is:	 equiv_negb = e.(equiv_fun) y	";
+            data = "1 subgoal (ID 885)	  	  H : Univalence	  e : pt ** pt ** pt	  z : pt	  y : pt	  p : z = (e y) z	  q : e y = equiv_negb	  ============================	  1%equiv = e y	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	2 subgoals (ID 906)		subgoal 1 (ID 906) is:	 equiv_negb = e y	subgoal 2 (ID 907) is:	 equiv_negb = e y	";
             responses[i]=data;
           
 
             i = 380;
-            data = "1 subgoal (ID 906)	  	  H : Univalence	  e : pt ** pt ** pt	  z : pt	  y : pt	  p : z <> (e.(equiv_fun) y).(equiv_fun) z	  q : e.(equiv_fun) y = 1%equiv	  ============================	  equiv_negb = e.(equiv_fun) y	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	1 subgoal (ID 907)		subgoal 1 (ID 907) is:	 equiv_negb = e.(equiv_fun) y	";
+            data = "1 subgoal (ID 906)	  	  H : Univalence	  e : pt ** pt ** pt	  z : pt	  y : pt	  p : z <> (e y) z	  q : e y = 1%equiv	  ============================	  equiv_negb = e y	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	1 subgoal (ID 907)		subgoal 1 (ID 907) is:	 equiv_negb = e y	";
             responses[i]=data;
           
 
             i = 381;
-            data = "1 subgoal (ID 907)	  	  H : Univalence	  e : pt ** pt ** pt	  z : pt	  y : pt	  p : z <> (e.(equiv_fun) y).(equiv_fun) z	  q : e.(equiv_fun) y = equiv_negb	  ============================	  equiv_negb = e.(equiv_fun) y	No more subgoals.	";
+            data = "1 subgoal (ID 907)	  	  H : Univalence	  e : pt ** pt ** pt	  z : pt	  y : pt	  p : z <> (e y) z	  q : e y = equiv_negb	  ============================	  equiv_negb = e y	No more subgoals.	";
             responses[i]=data;
           
 
@@ -1933,7 +1933,7 @@
           
 
             i = 383;
-            data = "1 subgoal (ID 179)	  	  H : Univalence	  Y : BAut Bool	  Z : BAut Bool	  W : BAut Bool	  e : Y ** Z ** W	  f : Y ** W	  ============================	  (merely Y).(trunctype_type) -> Z	";
+            data = "1 subgoal (ID 179)	  	  H : Univalence	  Y : BAut Bool	  Z : BAut Bool	  W : BAut Bool	  e : Y ** Z ** W	  f : Y ** W	  ============================	  merely Y -> Z	";
             responses[i]=data;
           
 
@@ -1943,132 +1943,132 @@
           
 
             i = 385;
-            data = "1 subgoal (ID 195)	  	  H : Univalence	  Y : BAut Bool	  Z : BAut Bool	  W : BAut Bool	  e : Y ** Z ** W	  f : Y ** W	  k := fun y : Y =>	       (e.(equiv_fun) y).(equiv_isequiv).(equiv_inv) (f.(equiv_fun) y)	   : Y -> Z	  ============================	  (merely Y).(trunctype_type) -> Z	";
+            data = "1 subgoal (ID 195)	  	  H : Univalence	  Y : BAut Bool	  Z : BAut Bool	  W : BAut Bool	  e : Y ** Z ** W	  f : Y ** W	  k := fun y : Y => _^-1 (f y) : Y -> Z	  ============================	  merely Y -> Z	";
             responses[i]=data;
           
 
             i = 386;
-            data = "1 subgoal (ID 422)	  	  H : Univalence	  Y : BAut Bool	  Z : BAut Bool	  W : BAut Bool	  e : Y ** Z ** W	  f : Y ** W	  k := fun y : Y =>	       (e.(equiv_fun) y).(equiv_isequiv).(equiv_inv) (f.(equiv_fun) y)	   : Y -> Z	  y1, y2 : Y	  ============================	  k y1 = k y2	";
+            data = "1 subgoal (ID 422)	  	  H : Univalence	  Y : BAut Bool	  Z : BAut Bool	  W : BAut Bool	  e : Y ** Z ** W	  f : Y ** W	  k := fun y : Y => _^-1 (f y) : Y -> Z	  y1, y2 : Y	  ============================	  k y1 = k y2	";
             responses[i]=data;
           
 
             i = 387;
-            data = "1 subgoal (ID 444)	  	  H : Univalence	  Z : BAut Bool	  W : BAut Bool	  e : pt ** Z ** W	  f : pt ** W	  k := fun y : pt =>	       (e.(equiv_fun) y).(equiv_isequiv).(equiv_inv) (f.(equiv_fun) y)	   : pt -> Z	  y1, y2 : pt	  ============================	  k y1 = k y2	";
+            data = "1 subgoal (ID 444)	  	  H : Univalence	  Z : BAut Bool	  W : BAut Bool	  e : pt ** Z ** W	  f : pt ** W	  k := fun y : pt => _^-1 (f y) : pt -> Z	  y1, y2 : pt	  ============================	  k y1 = k y2	";
             responses[i]=data;
           
 
             i = 388;
-            data = "1 subgoal (ID 462)	  	  H : Univalence	  Z : BAut Bool	  e : pt ** Z ** pt	  f : pt ** pt	  k := fun y : pt =>	       (e.(equiv_fun) y).(equiv_isequiv).(equiv_inv) (f.(equiv_fun) y)	   : pt -> Z	  y1, y2 : pt	  ============================	  k y1 = k y2	";
+            data = "1 subgoal (ID 462)	  	  H : Univalence	  Z : BAut Bool	  e : pt ** Z ** pt	  f : pt ** pt	  k := fun y : pt => _^-1 (f y) : pt -> Z	  y1, y2 : pt	  ============================	  k y1 = k y2	";
             responses[i]=data;
           
 
             i = 389;
-            data = "1 subgoal (ID 477)	  	  H : Univalence	  e : pt ** pt ** pt	  f : pt ** pt	  k := fun y : pt =>	       (e.(equiv_fun) y).(equiv_isequiv).(equiv_inv) (f.(equiv_fun) y)	   : pt -> pt	  y1, y2 : pt	  ============================	  k y1 = k y2	";
+            data = "1 subgoal (ID 477)	  	  H : Univalence	  e : pt ** pt ** pt	  f : pt ** pt	  k := fun y : pt => _^-1 (f y) : pt -> pt	  y1, y2 : pt	  ============================	  k y1 = k y2	";
             responses[i]=data;
           
 
             i = 390;
-            data = "2 subgoals (ID 594)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  ============================	  (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) y1 =	  (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) y2		subgoal 2 (ID 595) is:	 (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) (negb y1) =	 (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) (negb y2)	";
+            data = "2 subgoals (ID 594)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  ============================	  _^-1 y1 = _^-1 y2		subgoal 2 (ID 595) is:	 _^-1 (negb y1) = _^-1 (negb y2)	";
             responses[i]=data;
           
 
             i = 391;
-            data = "1 subgoal (ID 594)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  ============================	  (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) y1 =	  (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) y2	";
+            data = "1 subgoal (ID 594)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  ============================	  _^-1 y1 = _^-1 y2	";
             responses[i]=data;
           
 
             i = 392;
-            data = "2 subgoals (ID 1006)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 = y2	  ============================	  (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) y1 =	  (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) y2		subgoal 2 (ID 1007) is:	 (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) y1 =	 (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) y2	1 subgoal (ID 1006)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 = y2	  ============================	  (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) y1 =	  (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) y2	";
+            data = "2 subgoals (ID 1006)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 = y2	  ============================	  _^-1 y1 = _^-1 y2		subgoal 2 (ID 1007) is:	 _^-1 y1 = _^-1 y2	1 subgoal (ID 1006)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 = y2	  ============================	  _^-1 y1 = _^-1 y2	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 subgoals (ID 1007)		subgoal 1 (ID 1007) is:	 _^-1 y1 = _^-1 y2	subgoal 2 (ID 595) is:	 _^-1 (negb y1) = _^-1 (negb y2)	";
             responses[i]=data;
           
 
             i = 393;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 subgoals (ID 1007)		subgoal 1 (ID 1007) is:	 (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) y1 =	 (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) y2	subgoal 2 (ID 595) is:	 (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) (negb y1) =	 (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) (negb y2)	1 subgoal (ID 1007)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  ============================	  (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) y1 =	  (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) y2	4 subgoals (ID 1066)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  q1 : e.(equiv_fun) y1 = 1%equiv	  q2 : e.(equiv_fun) y2 = 1%equiv	  ============================	  (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) y1 =	  (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) y2		subgoal 2 (ID 1067) is:	 (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) y1 =	 (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) y2	subgoal 3 (ID 1090) is:	 (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) y1 =	 (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) y2	subgoal 4 (ID 1091) is:	 (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) y1 =	 (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) y2	";
+            data = "1 subgoal (ID 1007)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  ============================	  _^-1 y1 = _^-1 y2	";
             responses[i]=data;
           
 
             i = 394;
-            data = "1 subgoal (ID 1066)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  q1 : e.(equiv_fun) y1 = 1%equiv	  q2 : e.(equiv_fun) y2 = 1%equiv	  ============================	  (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) y1 =	  (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) y2	";
+            data = "4 subgoals (ID 1066)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  q1 : e y1 = 1%equiv	  q2 : e y2 = 1%equiv	  ============================	  _^-1 y1 = _^-1 y2		subgoal 2 (ID 1067) is:	 _^-1 y1 = _^-1 y2	subgoal 3 (ID 1090) is:	 _^-1 y1 = _^-1 y2	subgoal 4 (ID 1091) is:	 _^-1 y1 = _^-1 y2	1 subgoal (ID 1066)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  q1 : e y1 = 1%equiv	  q2 : e y2 = 1%equiv	  ============================	  _^-1 y1 = _^-1 y2	";
             responses[i]=data;
           
 
             i = 395;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	4 subgoals (ID 1067)		subgoal 1 (ID 1067) is:	 (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) y1 =	 (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) y2	subgoal 2 (ID 1090) is:	 (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) y1 =	 (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) y2	subgoal 3 (ID 1091) is:	 (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) y1 =	 (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) y2	subgoal 4 (ID 595) is:	 (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) (negb y1) =	 (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) (negb y2)	1 subgoal (ID 1067)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  q1 : e.(equiv_fun) y1 = 1%equiv	  q2 : e.(equiv_fun) y2 = equiv_negb	  ============================	  (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) y1 =	  (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) y2	1 subgoal (ID 1716)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  q1 : e.(equiv_fun) y1 = 1%equiv	  q2 : e.(equiv_fun) y2 = equiv_negb	  ============================	  1%equiv.(equiv_isequiv).(equiv_inv) y1 =	  equiv_negb.(equiv_isequiv).(equiv_inv) y2	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	4 subgoals (ID 1067)		subgoal 1 (ID 1067) is:	 _^-1 y1 = _^-1 y2	subgoal 2 (ID 1090) is:	 _^-1 y1 = _^-1 y2	subgoal 3 (ID 1091) is:	 _^-1 y1 = _^-1 y2	subgoal 4 (ID 595) is:	 _^-1 (negb y1) = _^-1 (negb y2)	1 subgoal (ID 1067)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  q1 : e y1 = 1%equiv	  q2 : e y2 = equiv_negb	  ============================	  _^-1 y1 = _^-1 y2	1 subgoal (ID 1716)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  q1 : e y1 = 1%equiv	  q2 : e y2 = equiv_negb	  ============================	  _^-1 y1 = _^-1 y2	";
             responses[i]=data;
           
 
             i = 396;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	3 subgoals (ID 1090)		subgoal 1 (ID 1090) is:	 (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) y1 =	 (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) y2	subgoal 2 (ID 1091) is:	 (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) y1 =	 (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) y2	subgoal 3 (ID 595) is:	 (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) (negb y1) =	 (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) (negb y2)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	3 subgoals (ID 1090)		subgoal 1 (ID 1090) is:	 _^-1 y1 = _^-1 y2	subgoal 2 (ID 1091) is:	 _^-1 y1 = _^-1 y2	subgoal 3 (ID 595) is:	 _^-1 (negb y1) = _^-1 (negb y2)	";
             responses[i]=data;
           
 
             i = 397;
-            data = "1 subgoal (ID 1090)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  q1 : e.(equiv_fun) y1 = equiv_negb	  q2 : e.(equiv_fun) y2 = 1%equiv	  ============================	  (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) y1 =	  (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) y2	1 subgoal (ID 1720)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  q1 : e.(equiv_fun) y1 = equiv_negb	  q2 : e.(equiv_fun) y2 = 1%equiv	  ============================	  equiv_negb.(equiv_isequiv).(equiv_inv) y1 =	  1%equiv.(equiv_isequiv).(equiv_inv) y2	";
+            data = "1 subgoal (ID 1090)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  q1 : e y1 = equiv_negb	  q2 : e y2 = 1%equiv	  ============================	  _^-1 y1 = _^-1 y2	1 subgoal (ID 1720)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  q1 : e y1 = equiv_negb	  q2 : e y2 = 1%equiv	  ============================	  _^-1 y1 = _^-1 y2	";
             responses[i]=data;
           
 
             i = 398;
-            data = "1 subgoal (ID 1744)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  q1 : e.(equiv_fun) y1 = equiv_negb	  q2 : e.(equiv_fun) y2 = 1%equiv	  ============================	  1%equiv.(equiv_isequiv).(equiv_inv) y2 =	  equiv_negb.(equiv_isequiv).(equiv_inv) y1	";
+            data = "1 subgoal (ID 1744)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  q1 : e y1 = equiv_negb	  q2 : e y2 = 1%equiv	  ============================	  _^-1 y2 = _^-1 y1	";
             responses[i]=data;
           
 
             i = 399;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	2 subgoals (ID 1091)		subgoal 1 (ID 1091) is:	 (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) y1 =	 (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) y2	subgoal 2 (ID 595) is:	 (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) (negb y1) =	 (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) (negb y2)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	2 subgoals (ID 1091)		subgoal 1 (ID 1091) is:	 _^-1 y1 = _^-1 y2	subgoal 2 (ID 595) is:	 _^-1 (negb y1) = _^-1 (negb y2)	";
             responses[i]=data;
           
 
             i = 400;
-            data = "1 subgoal (ID 1091)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  q1 : e.(equiv_fun) y1 = equiv_negb	  q2 : e.(equiv_fun) y2 = equiv_negb	  ============================	  (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) y1 =	  (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) y2	";
+            data = "1 subgoal (ID 1091)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  q1 : e y1 = equiv_negb	  q2 : e y2 = equiv_negb	  ============================	  _^-1 y1 = _^-1 y2	";
             responses[i]=data;
           
 
             i = 401;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 595)		subgoal 1 (ID 595) is:	 (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) (negb y1) =	 (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) (negb y2)	1 subgoal (ID 595)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  ============================	  (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) (negb y1) =	  (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) (negb y2)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 595)		subgoal 1 (ID 595) is:	 _^-1 (negb y1) = _^-1 (negb y2)	1 subgoal (ID 595)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  ============================	  _^-1 (negb y1) = _^-1 (negb y2)	";
             responses[i]=data;
           
 
             i = 402;
-            data = "2 subgoals (ID 2786)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 = y2	  ============================	  (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) (negb y1) =	  (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) (negb y2)		subgoal 2 (ID 2787) is:	 (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) (negb y1) =	 (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) (negb y2)	1 subgoal (ID 2786)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 = y2	  ============================	  (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) (negb y1) =	  (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) (negb y2)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 2787)		subgoal 1 (ID 2787) is:	 (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) (negb y1) =	 (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) (negb y2)	";
+            data = "2 subgoals (ID 2786)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 = y2	  ============================	  _^-1 (negb y1) = _^-1 (negb y2)		subgoal 2 (ID 2787) is:	 _^-1 (negb y1) = _^-1 (negb y2)	1 subgoal (ID 2786)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 = y2	  ============================	  _^-1 (negb y1) = _^-1 (negb y2)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 2787)		subgoal 1 (ID 2787) is:	 _^-1 (negb y1) = _^-1 (negb y2)	";
             responses[i]=data;
           
 
             i = 403;
-            data = "1 subgoal (ID 2787)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  ============================	  (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) (negb y1) =	  (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) (negb y2)	4 subgoals (ID 2846)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  q1 : e.(equiv_fun) y1 = 1%equiv	  q2 : e.(equiv_fun) y2 = 1%equiv	  ============================	  (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) (negb y1) =	  (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) (negb y2)		subgoal 2 (ID 2847) is:	 (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) (negb y1) =	 (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) (negb y2)	subgoal 3 (ID 2870) is:	 (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) (negb y1) =	 (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) (negb y2)	subgoal 4 (ID 2871) is:	 (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) (negb y1) =	 (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) (negb y2)	";
+            data = "1 subgoal (ID 2787)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  ============================	  _^-1 (negb y1) = _^-1 (negb y2)	4 subgoals (ID 2846)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  q1 : e y1 = 1%equiv	  q2 : e y2 = 1%equiv	  ============================	  _^-1 (negb y1) = _^-1 (negb y2)		subgoal 2 (ID 2847) is:	 _^-1 (negb y1) = _^-1 (negb y2)	subgoal 3 (ID 2870) is:	 _^-1 (negb y1) = _^-1 (negb y2)	subgoal 4 (ID 2871) is:	 _^-1 (negb y1) = _^-1 (negb y2)	";
             responses[i]=data;
           
 
             i = 404;
-            data = "1 subgoal (ID 2846)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  q1 : e.(equiv_fun) y1 = 1%equiv	  q2 : e.(equiv_fun) y2 = 1%equiv	  ============================	  (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) (negb y1) =	  (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) (negb y2)	";
+            data = "1 subgoal (ID 2846)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  q1 : e y1 = 1%equiv	  q2 : e y2 = 1%equiv	  ============================	  _^-1 (negb y1) = _^-1 (negb y2)	";
             responses[i]=data;
           
 
             i = 405;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	3 subgoals (ID 2847)		subgoal 1 (ID 2847) is:	 (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) (negb y1) =	 (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) (negb y2)	subgoal 2 (ID 2870) is:	 (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) (negb y1) =	 (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) (negb y2)	subgoal 3 (ID 2871) is:	 (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) (negb y1) =	 (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) (negb y2)	1 subgoal (ID 2847)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  q1 : e.(equiv_fun) y1 = 1%equiv	  q2 : e.(equiv_fun) y2 = equiv_negb	  ============================	  (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) (negb y1) =	  (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) (negb y2)	1 subgoal (ID 3496)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  q1 : e.(equiv_fun) y1 = 1%equiv	  q2 : e.(equiv_fun) y2 = equiv_negb	  ============================	  1%equiv.(equiv_isequiv).(equiv_inv) (negb y1) =	  equiv_negb.(equiv_isequiv).(equiv_inv) (negb y2)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	3 subgoals (ID 2847)		subgoal 1 (ID 2847) is:	 _^-1 (negb y1) = _^-1 (negb y2)	subgoal 2 (ID 2870) is:	 _^-1 (negb y1) = _^-1 (negb y2)	subgoal 3 (ID 2871) is:	 _^-1 (negb y1) = _^-1 (negb y2)	1 subgoal (ID 2847)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  q1 : e y1 = 1%equiv	  q2 : e y2 = equiv_negb	  ============================	  _^-1 (negb y1) = _^-1 (negb y2)	1 subgoal (ID 3496)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  q1 : e y1 = 1%equiv	  q2 : e y2 = equiv_negb	  ============================	  _^-1 (negb y1) = _^-1 (negb y2)	";
             responses[i]=data;
           
 
             i = 406;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	2 subgoals (ID 2870)		subgoal 1 (ID 2870) is:	 (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) (negb y1) =	 (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) (negb y2)	subgoal 2 (ID 2871) is:	 (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) (negb y1) =	 (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) (negb y2)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	2 subgoals (ID 2870)		subgoal 1 (ID 2870) is:	 _^-1 (negb y1) = _^-1 (negb y2)	subgoal 2 (ID 2871) is:	 _^-1 (negb y1) = _^-1 (negb y2)	";
             responses[i]=data;
           
 
             i = 407;
-            data = "1 subgoal (ID 2870)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  q1 : e.(equiv_fun) y1 = equiv_negb	  q2 : e.(equiv_fun) y2 = 1%equiv	  ============================	  (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) (negb y1) =	  (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) (negb y2)	1 subgoal (ID 3819)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  q1 : e.(equiv_fun) y1 = equiv_negb	  q2 : e.(equiv_fun) y2 = 1%equiv	  ============================	  equiv_negb.(equiv_isequiv).(equiv_inv) (negb y1) =	  1%equiv.(equiv_isequiv).(equiv_inv) (negb y2)	";
+            data = "1 subgoal (ID 2870)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  q1 : e y1 = equiv_negb	  q2 : e y2 = 1%equiv	  ============================	  _^-1 (negb y1) = _^-1 (negb y2)	1 subgoal (ID 3819)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  q1 : e y1 = equiv_negb	  q2 : e y2 = 1%equiv	  ============================	  _^-1 (negb y1) = _^-1 (negb y2)	";
             responses[i]=data;
           
 
             i = 408;
-            data = "1 subgoal (ID 3843)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  q1 : e.(equiv_fun) y1 = equiv_negb	  q2 : e.(equiv_fun) y2 = 1%equiv	  ============================	  1%equiv.(equiv_isequiv).(equiv_inv) (negb y2) =	  equiv_negb.(equiv_isequiv).(equiv_inv) (negb y1)	";
+            data = "1 subgoal (ID 3843)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  q1 : e y1 = equiv_negb	  q2 : e y2 = 1%equiv	  ============================	  _^-1 (negb y2) = _^-1 (negb y1)	";
             responses[i]=data;
           
 
             i = 409;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	1 subgoal (ID 2871)		subgoal 1 (ID 2871) is:	 (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) (negb y1) =	 (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) (negb y2)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	1 subgoal (ID 2871)		subgoal 1 (ID 2871) is:	 _^-1 (negb y1) = _^-1 (negb y2)	";
             responses[i]=data;
           
 
             i = 410;
-            data = "1 subgoal (ID 2871)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  q1 : e.(equiv_fun) y1 = equiv_negb	  q2 : e.(equiv_fun) y2 = equiv_negb	  ============================	  (e.(equiv_fun) y1).(equiv_isequiv).(equiv_inv) (negb y1) =	  (e.(equiv_fun) y2).(equiv_isequiv).(equiv_inv) (negb y2)	";
+            data = "1 subgoal (ID 2871)	  	  H : Univalence	  e : pt ** pt ** pt	  y1, y2 : pt	  p : y1 <> y2	  q1 : e y1 = equiv_negb	  q2 : e y2 = equiv_negb	  ============================	  _^-1 (negb y1) = _^-1 (negb y2)	";
             responses[i]=data;
           
 
@@ -2113,22 +2113,22 @@
           
 
             i = 419;
-            data = "1 subgoal (ID 241)	  	  H : Univalence	  Y : BAut Bool	  Z : BAut Bool	  W : BAut Bool	  e : Y ** Z ** W	  f : Y ** W	  y : Y	  ============================	  (baut_bool_pairing_ZZ_Z_symm_part1 e	     (baut_bool_pairing_ZZ_Z_symm_lemma e f (merely_inhab_baut_bool Y)))	  .(equiv_fun) y = f.(equiv_fun) y	";
+            data = "1 subgoal (ID 241)	  	  H : Univalence	  Y : BAut Bool	  Z : BAut Bool	  W : BAut Bool	  e : Y ** Z ** W	  f : Y ** W	  y : Y	  ============================	  (baut_bool_pairing_ZZ_Z_symm_part1 e	     (baut_bool_pairing_ZZ_Z_symm_lemma e f (merely_inhab_baut_bool Y))) y =	  f y	";
             responses[i]=data;
           
 
             i = 420;
-            data = "1 subgoal (ID 257)	  	  H : Univalence	  Y : BAut Bool	  Z : BAut Bool	  W : BAut Bool	  e : Y ** Z ** W	  f : Y ** W	  y : Y	  ============================	  (e.(equiv_fun) y).(equiv_fun)	    (baut_bool_pairing_ZZ_Z_symm_lemma e f (merely_inhab_baut_bool Y)) =	  f.(equiv_fun) y	";
+            data = "1 subgoal (ID 257)	  	  H : Univalence	  Y : BAut Bool	  Z : BAut Bool	  W : BAut Bool	  e : Y ** Z ** W	  f : Y ** W	  y : Y	  ============================	  (e y) (baut_bool_pairing_ZZ_Z_symm_lemma e f (merely_inhab_baut_bool Y)) =	  f y	";
             responses[i]=data;
           
 
             i = 421;
-            data = "1 subgoal (ID 288)	  	  H : Univalence	  Y : BAut Bool	  Z : BAut Bool	  W : BAut Bool	  e : Y ** Z ** W	  f : Y ** W	  y : Y	  ============================	  (e.(equiv_fun) y).(equiv_fun)	    (baut_bool_pairing_ZZ_Z_symm_lemma e f (tr y)) = 	  f.(equiv_fun) y	";
+            data = "1 subgoal (ID 288)	  	  H : Univalence	  Y : BAut Bool	  Z : BAut Bool	  W : BAut Bool	  e : Y ** Z ** W	  f : Y ** W	  y : Y	  ============================	  (e y) (baut_bool_pairing_ZZ_Z_symm_lemma e f (tr y)) = f y	";
             responses[i]=data;
           
 
             i = 422;
-            data = "1 subgoal (ID 289)	  	  H : Univalence	  Y, Z, W : BAut Bool	  e : Y ** Z ** W	  f : Y ** W	  y : Y	  ============================	  (e.(equiv_fun) y).(equiv_fun)	    (baut_bool_pairing_ZZ_Z_symm_lemma e f (tr y)) = 	  f.(equiv_fun) y	";
+            data = "1 subgoal (ID 289)	  	  H : Univalence	  Y : BAut Bool	  Z : BAut Bool	  W : BAut Bool	  e : Y ** Z ** W	  f : Y ** W	  y : Y	  ============================	  (e y) (baut_bool_pairing_ZZ_Z_symm_lemma e f (tr y)) = f y	";
             responses[i]=data;
           
 
@@ -2158,7 +2158,7 @@
           
 
             i = 428;
-            data = "1 subgoal (ID 542)	  	  H : Univalence	  Y, Z, W : BAut Bool	  e : Y ** Z ** W	  z : Z	  X : IsHSet Z	  y : Y	  ============================	  baut_bool_pairing_ZZ_Z_symm_lemma e (baut_bool_pairing_ZZ_Z_symm_part1 e z)	    (tr y) = z	";
+            data = "1 subgoal (ID 542)	  	  H : Univalence	  Y : BAut Bool	  Z : BAut Bool	  W : BAut Bool	  e : Y ** Z ** W	  z : Z	  X : IsHSet Z	  y : Y	  ============================	  baut_bool_pairing_ZZ_Z_symm_lemma e (baut_bool_pairing_ZZ_Z_symm_part1 e z)	    (tr y) = z	";
             responses[i]=data;
           
 
@@ -2188,12 +2188,12 @@
           
 
             i = 434;
-            data = "1 subgoal (ID 233)	  	  H : Univalence	  Y, Z, W : BAut Bool	  e : Z ** Y ** W	  z : Z	  ============================	  (baut_bool_pairing_ZZ_Z_symm_map Y Z W	     (baut_bool_pairing_ZZ_Z_symm_map Z Y W e)).(equiv_fun) z =	  e.(equiv_fun) z	";
+            data = "1 subgoal (ID 233)	  	  H : Univalence	  Y, Z, W : BAut Bool	  e : Z ** Y ** W	  z : Z	  ============================	  (baut_bool_pairing_ZZ_Z_symm_map Y Z W	     (baut_bool_pairing_ZZ_Z_symm_map Z Y W e)) z = 	  e z	";
             responses[i]=data;
           
 
             i = 435;
-            data = "1 subgoal (ID 261)	  	  H : Univalence	  Y, Z, W : BAut Bool	  e : Z ** Y ** W	  z : Z	  y : Y	  ============================	  ((baut_bool_pairing_ZZ_Z_symm_map Y Z W	      (baut_bool_pairing_ZZ_Z_symm_map Z Y W e)).(	   equiv_fun) z).(equiv_fun) y = (e.(equiv_fun) z).(equiv_fun) y	";
+            data = "1 subgoal (ID 261)	  	  H : Univalence	  Y, Z, W : BAut Bool	  e : Z ** Y ** W	  z : Z	  y : Y	  ============================	  ((baut_bool_pairing_ZZ_Z_symm_map Y Z W	      (baut_bool_pairing_ZZ_Z_symm_map Z Y W e)) z) y = 	  (e z) y	";
             responses[i]=data;
           
 
@@ -2413,7 +2413,7 @@
           
 
             i = 479;
-            data = "1 subgoal (ID 238)	  	  H : Univalence	  e : BAut Bool <~> BAut Bool	  Z : BAut Bool	  W : BAut Bool	  ============================	  e.(equiv_isequiv).(equiv_inv) Z ** W = Z ** e.(equiv_fun) W	";
+            data = "1 subgoal (ID 238)	  	  H : Univalence	  e : BAut Bool <~> BAut Bool	  Z : BAut Bool	  W : BAut Bool	  ============================	  _^-1 Z ** W = Z ** e W	";
             responses[i]=data;
           
 
@@ -2423,27 +2423,27 @@
           
 
             i = 481;
-            data = "1 subgoal (ID 245)	  	  H : Univalence	  e : BAut Bool <~> BAut Bool	  Z : BAut Bool	  W : BAut Bool	  ============================	  (e.(equiv_isequiv).(equiv_inv) Z <~> W) <~> (Z <~> e.(equiv_fun) W)	";
+            data = "1 subgoal (ID 245)	  	  H : Univalence	  e : BAut Bool <~> BAut Bool	  Z : BAut Bool	  W : BAut Bool	  ============================	  (_^-1 Z <~> W) <~> (Z <~> e W)	";
             responses[i]=data;
           
 
             i = 482;
-            data = "1 subgoal (ID 268)	  	  H : Univalence	  e : BAut Bool <~> BAut Bool	  Z : BAut Bool	  W : BAut Bool	  ============================	  e.(equiv_isequiv).(equiv_inv) Z = W <~> Z = e.(equiv_fun) W	";
+            data = "1 subgoal (ID 268)	  	  H : Univalence	  e : BAut Bool <~> BAut Bool	  Z : BAut Bool	  W : BAut Bool	  ============================	  _^-1 Z = W <~> Z = e W	";
             responses[i]=data;
           
 
             i = 483;
-            data = "2 subgoals (ID 290)	  	  H : Univalence	  e : BAut Bool <~> BAut Bool	  Z : BAut Bool	  W : BAut Bool	  ============================	  Z = e.(equiv_fun) W <~> Z = e.(equiv_fun) W		subgoal 2 (ID 291) is:	 e.(equiv_isequiv).(equiv_inv) Z = W <~> e.(equiv_isequiv).(equiv_inv) Z = W	";
+            data = "2 subgoals (ID 290)	  	  H : Univalence	  e : BAut Bool <~> BAut Bool	  Z : BAut Bool	  W : BAut Bool	  ============================	  Z = e W <~> Z = e W		subgoal 2 (ID 291) is:	 _^-1 Z = W <~> _^-1 Z = W	";
             responses[i]=data;
           
 
             i = 484;
-            data = "1 subgoal (ID 290)	  	  H : Univalence	  e : BAut Bool <~> BAut Bool	  Z : BAut Bool	  W : BAut Bool	  ============================	  Z = e.(equiv_fun) W <~> Z = e.(equiv_fun) W	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 291)		subgoal 1 (ID 291) is:	 e.(equiv_isequiv).(equiv_inv) Z = W <~> e.(equiv_isequiv).(equiv_inv) Z = W	";
+            data = "1 subgoal (ID 290)	  	  H : Univalence	  e : BAut Bool <~> BAut Bool	  Z : BAut Bool	  W : BAut Bool	  ============================	  Z = e W <~> Z = e W	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 291)		subgoal 1 (ID 291) is:	 _^-1 Z = W <~> _^-1 Z = W	";
             responses[i]=data;
           
 
             i = 485;
-            data = "1 subgoal (ID 291)	  	  H : Univalence	  e : BAut Bool <~> BAut Bool	  Z : BAut Bool	  W : BAut Bool	  ============================	  e.(equiv_isequiv).(equiv_inv) Z = W <~> e.(equiv_isequiv).(equiv_inv) Z = W	No more subgoals.	";
+            data = "1 subgoal (ID 291)	  	  H : Univalence	  e : BAut Bool <~> BAut Bool	  Z : BAut Bool	  W : BAut Bool	  ============================	  _^-1 Z = W <~> _^-1 Z = W	No more subgoals.	";
             responses[i]=data;
           
 
@@ -2508,32 +2508,32 @@
           
 
             i = 498;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 247)		subgoal 1 (ID 247) is:	 Sect (fun e : BAut Bool <~> BAut Bool => e.(equiv_isequiv).(equiv_inv) pt)	   (fun Z : BAut Bool =>	    equiv_involution (fun W : BAut Bool => Z ** W)	      (fun W : BAut Bool =>	       (baut_bool_pairing_ZZ_Z Z Z W)^ @	       (ap (fun Y : BAut Bool => Y ** W) (baut_bool_pairing_ZZ Z) @	        baut_bool_pairing_1Z W)))	subgoal 2 (ID 249) is:	 Sect	   (fun Z : BAut Bool =>	    equiv_involution (fun W : BAut Bool => Z ** W)	      (fun W : BAut Bool =>	       (baut_bool_pairing_ZZ_Z Z Z W)^ @	       (ap (fun Y : BAut Bool => Y ** W) (baut_bool_pairing_ZZ Z) @	        baut_bool_pairing_1Z W)))	   (fun e : BAut Bool <~> BAut Bool => e.(equiv_isequiv).(equiv_inv) pt)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 247)		subgoal 1 (ID 247) is:	 Sect (fun e : BAut Bool <~> BAut Bool => _^-1 pt)	   (fun Z : BAut Bool =>	    equiv_involution (fun W : BAut Bool => Z ** W)	      (fun W : BAut Bool =>	       (baut_bool_pairing_ZZ_Z Z Z W)^ @	       (ap (fun Y : BAut Bool => Y ** W) (baut_bool_pairing_ZZ Z) @	        baut_bool_pairing_1Z W)))	subgoal 2 (ID 249) is:	 Sect	   (fun Z : BAut Bool =>	    equiv_involution (fun W : BAut Bool => Z ** W)	      (fun W : BAut Bool =>	       (baut_bool_pairing_ZZ_Z Z Z W)^ @	       (ap (fun Y : BAut Bool => Y ** W) (baut_bool_pairing_ZZ Z) @	        baut_bool_pairing_1Z W)))	   (fun e : BAut Bool <~> BAut Bool => _^-1 pt)	";
             responses[i]=data;
           
 
             i = 499;
-            data = "1 subgoal (ID 247)	  	  H : Univalence	  ============================	  Sect (fun e : BAut Bool <~> BAut Bool => e.(equiv_isequiv).(equiv_inv) pt)	    (fun Z : BAut Bool =>	     equiv_involution (fun W : BAut Bool => Z ** W)	       (fun W : BAut Bool =>	        (baut_bool_pairing_ZZ_Z Z Z W)^ @	        (ap (fun Y : BAut Bool => Y ** W) (baut_bool_pairing_ZZ Z) @	         baut_bool_pairing_1Z W)))	1 subgoal (ID 293)	  	  H : Univalence	  e : BAut Bool <~> BAut Bool	  ============================	  equiv_involution	    (fun W : BAut Bool => e.(equiv_isequiv).(equiv_inv) pt ** W)	    (fun W : BAut Bool =>	     (baut_bool_pairing_ZZ_Z (e.(equiv_isequiv).(equiv_inv) pt)	        (e.(equiv_isequiv).(equiv_inv) pt) W)^ @	     (ap (fun Y : BAut Bool => Y ** W)	        (baut_bool_pairing_ZZ (e.(equiv_isequiv).(equiv_inv) pt)) @	      baut_bool_pairing_1Z W)) = e	";
+            data = "1 subgoal (ID 247)	  	  H : Univalence	  ============================	  Sect (fun e : BAut Bool <~> BAut Bool => _^-1 pt)	    (fun Z : BAut Bool =>	     equiv_involution (fun W : BAut Bool => Z ** W)	       (fun W : BAut Bool =>	        (baut_bool_pairing_ZZ_Z Z Z W)^ @	        (ap (fun Y : BAut Bool => Y ** W) (baut_bool_pairing_ZZ Z) @	         baut_bool_pairing_1Z W)))	1 subgoal (ID 293)	  	  H : Univalence	  e : BAut Bool <~> BAut Bool	  ============================	  equiv_involution (fun W : BAut Bool => _^-1 pt ** W)	    (fun W : BAut Bool =>	     (baut_bool_pairing_ZZ_Z (_^-1 pt) (_^-1 pt) W)^ @	     (ap (fun Y : BAut Bool => Y ** W) (baut_bool_pairing_ZZ (_^-1 pt)) @	      baut_bool_pairing_1Z W)) = e	";
             responses[i]=data;
           
 
             i = 500;
-            data = "1 subgoal (ID 314)	  	  H : Univalence	  e : BAut Bool <~> BAut Bool	  Z : BAut Bool	  ============================	  e.(equiv_isequiv).(equiv_inv) pt ** Z = e.(equiv_fun) Z	";
+            data = "1 subgoal (ID 314)	  	  H : Univalence	  e : BAut Bool <~> BAut Bool	  Z : BAut Bool	  ============================	  _^-1 pt ** Z = e Z	";
             responses[i]=data;
           
 
             i = 501;
-            data = "1 subgoal (ID 322)	  	  H : Univalence	  e : BAut Bool <~> BAut Bool	  Z : BAut Bool	  ============================	  pt ** e.(equiv_fun) Z = e.(equiv_fun) Z	";
+            data = "1 subgoal (ID 322)	  	  H : Univalence	  e : BAut Bool <~> BAut Bool	  Z : BAut Bool	  ============================	  pt ** e Z = e Z	";
             responses[i]=data;
           
 
             i = 502;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 249)		subgoal 1 (ID 249) is:	 Sect	   (fun Z : BAut Bool =>	    equiv_involution (fun W : BAut Bool => Z ** W)	      (fun W : BAut Bool =>	       (baut_bool_pairing_ZZ_Z Z Z W)^ @	       (ap (fun Y : BAut Bool => Y ** W) (baut_bool_pairing_ZZ Z) @	        baut_bool_pairing_1Z W)))	   (fun e : BAut Bool <~> BAut Bool => e.(equiv_isequiv).(equiv_inv) pt)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 249)		subgoal 1 (ID 249) is:	 Sect	   (fun Z : BAut Bool =>	    equiv_involution (fun W : BAut Bool => Z ** W)	      (fun W : BAut Bool =>	       (baut_bool_pairing_ZZ_Z Z Z W)^ @	       (ap (fun Y : BAut Bool => Y ** W) (baut_bool_pairing_ZZ Z) @	        baut_bool_pairing_1Z W)))	   (fun e : BAut Bool <~> BAut Bool => _^-1 pt)	";
             responses[i]=data;
           
 
             i = 503;
-            data = "1 subgoal (ID 249)	  	  H : Univalence	  ============================	  Sect	    (fun Z : BAut Bool =>	     equiv_involution (fun W : BAut Bool => Z ** W)	       (fun W : BAut Bool =>	        (baut_bool_pairing_ZZ_Z Z Z W)^ @	        (ap (fun Y : BAut Bool => Y ** W) (baut_bool_pairing_ZZ Z) @	         baut_bool_pairing_1Z W)))	    (fun e : BAut Bool <~> BAut Bool => e.(equiv_isequiv).(equiv_inv) pt)	1 subgoal (ID 324)	  	  H : Univalence	  Z : BAut Bool	  ============================	  (equiv_involution (fun W : BAut Bool => Z ** W)	     (fun W : BAut Bool =>	      (baut_bool_pairing_ZZ_Z Z Z W)^ @	      (ap (fun Y : BAut Bool => Y ** W) (baut_bool_pairing_ZZ Z) @	       baut_bool_pairing_1Z W))).(equiv_isequiv).(	  equiv_inv) pt = Z	";
+            data = "1 subgoal (ID 249)	  	  H : Univalence	  ============================	  Sect	    (fun Z : BAut Bool =>	     equiv_involution (fun W : BAut Bool => Z ** W)	       (fun W : BAut Bool =>	        (baut_bool_pairing_ZZ_Z Z Z W)^ @	        (ap (fun Y : BAut Bool => Y ** W) (baut_bool_pairing_ZZ Z) @	         baut_bool_pairing_1Z W)))	    (fun e : BAut Bool <~> BAut Bool => _^-1 pt)	1 subgoal (ID 324)	  	  H : Univalence	  Z : BAut Bool	  ============================	  _^-1 pt = Z	";
             responses[i]=data;
           
 
@@ -2623,7 +2623,7 @@
           
 
             i = 521;
-            data = "1 subgoal (ID 248)	  	  H : Univalence	  g : BAut Bool <~> BAut Bool	  W : BAut Bool	  ============================	  ap g.(equiv_fun) (negb_center_baut_bool W) =	  negb_center_baut_bool (g.(equiv_fun) W)	";
+            data = "1 subgoal (ID 248)	  	  H : Univalence	  g : BAut Bool <~> BAut Bool	  W : BAut Bool	  ============================	  ap g (negb_center_baut_bool W) = negb_center_baut_bool (g W)	";
             responses[i]=data;
           
 
@@ -2633,12 +2633,12 @@
           
 
             i = 523;
-            data = "1 subgoal (ID 259)	  	  H : Univalence	  W : BAut Bool	  Z : BAut Bool	  ============================	  ap (equiv_baut_bool_aut_baut_bool.(equiv_fun) Z).(equiv_fun)	    (negb_center_baut_bool W) =	  negb_center_baut_bool	    ((equiv_baut_bool_aut_baut_bool.(equiv_fun) Z).(equiv_fun) W)	";
+            data = "1 subgoal (ID 259)	  	  H : Univalence	  W : BAut Bool	  Z : BAut Bool	  ============================	  ap (equiv_baut_bool_aut_baut_bool Z) (negb_center_baut_bool W) =	  negb_center_baut_bool ((equiv_baut_bool_aut_baut_bool Z) W)	";
             responses[i]=data;
           
 
             i = 524;
-            data = "1 subgoal (ID 260)	  	  H : Univalence	  W, Z : BAut Bool	  ============================	  ap (fun W0 : BAut Bool => Z ** W0) (negb_center_baut_bool W) =	  negb_center_baut_bool (Z ** W)	";
+            data = "1 subgoal (ID 260)	  	  H : Univalence	  W : BAut Bool	  Z : BAut Bool	  ============================	  ap (fun W0 : BAut Bool => Z ** W0) (negb_center_baut_bool W) =	  negb_center_baut_bool (Z ** W)	";
             responses[i]=data;
           
 
@@ -2683,12 +2683,12 @@
           
 
             i = 533;
-            data = "1 subgoal (ID 341)	  	  H : Univalence	  ============================	  {f : forall x : BAut Bool, x = x &	  forall (g : BAut Bool <~> BAut Bool) (x : BAut Bool),	  ap g.(equiv_fun) (f x) = f (g.(equiv_fun) x)}	";
+            data = "1 subgoal (ID 341)	  	  H : Univalence	  ============================	  {f : forall x : BAut Bool, x = x &	  forall (g : BAut Bool <~> BAut Bool) (x : BAut Bool), ap g (f x) = f (g x)}	";
             responses[i]=data;
           
 
             i = 534;
-            data = "1 subgoal (ID 343)	  	  H : Univalence	  ============================	  forall (g : BAut Bool <~> BAut Bool) (x : BAut Bool),	  ap g.(equiv_fun) (negb_center_baut_bool x) =	  negb_center_baut_bool (g.(equiv_fun) x)	";
+            data = "1 subgoal (ID 343)	  	  H : Univalence	  ============================	  forall (g : BAut Bool <~> BAut Bool) (x : BAut Bool),	  ap g (negb_center_baut_bool x) = negb_center_baut_bool (g x)	";
             responses[i]=data;
           
 

@@ -133,7 +133,7 @@
           
 
             i = 23;
-            data = "1 subgoal (ID 11)	  	  U : hProp	  A : Type	  ============================	  (U.(trunctype_type) -> Contr A) <->	  IsEquiv (fun a : A => push (inr a) : join U.(trunctype_type) A)	";
+            data = "1 subgoal (ID 11)	  	  U : hProp	  A : Type	  ============================	  (U -> Contr A) <-> IsEquiv (fun a : A => push (inr a) : join U A)	";
             responses[i]=data;
           
 
@@ -143,122 +143,122 @@
           
 
             i = 25;
-            data = "2 subgoals (ID 13)	  	  U : hProp	  A : Type	  ============================	  (U.(trunctype_type) -> Contr A) -> IsEquiv (fun a : A => push (inr a))		subgoal 2 (ID 14) is:	 IsEquiv (fun a : A => push (inr a)) -> U.(trunctype_type) -> Contr A	";
+            data = "2 subgoals (ID 13)	  	  U : hProp	  A : Type	  ============================	  (U -> Contr A) -> IsEquiv (fun a : A => push (inr a))		subgoal 2 (ID 14) is:	 IsEquiv (fun a : A => push (inr a)) -> U -> Contr A	";
             responses[i]=data;
           
 
             i = 26;
-            data = "1 subgoal (ID 13)	  	  U : hProp	  A : Type	  ============================	  (U.(trunctype_type) -> Contr A) -> IsEquiv (fun a : A => push (inr a))	1 subgoal (ID 15)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  ============================	  IsEquiv (fun a : A => push (inr a))	";
+            data = "1 subgoal (ID 13)	  	  U : hProp	  A : Type	  ============================	  (U -> Contr A) -> IsEquiv (fun a : A => push (inr a))	1 subgoal (ID 15)	  	  U : hProp	  A : Type	  uac : U -> Contr A	  ============================	  IsEquiv (fun a : A => push (inr a))	";
             responses[i]=data;
           
 
             i = 27;
-            data = "3 subgoals (ID 21)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  ============================	  join U.(trunctype_type) A -> A		subgoal 2 (ID 23) is:	 Sect ?g (fun a : A => push (inr a))	subgoal 3 (ID 25) is:	 Sect (fun a : A => push (inr a)) ?g	";
+            data = "3 subgoals (ID 21)	  	  U : hProp	  A : Type	  uac : U -> Contr A	  ============================	  join U A -> A		subgoal 2 (ID 23) is:	 Sect ?g (fun a : A => push (inr a))	subgoal 3 (ID 25) is:	 Sect (fun a : A => push (inr a)) ?g	";
             responses[i]=data;
           
 
             i = 28;
-            data = "1 subgoal (ID 21)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  ============================	  join U.(trunctype_type) A -> A	3 subgoals (ID 32)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  ============================	  U.(trunctype_type) -> A		subgoal 2 (ID 34) is:	 A -> A	subgoal 3 (ID 36) is:	 forall a : U.(trunctype_type) * A, ?pushb (fst a) = ?pushc (snd a)	";
+            data = "1 subgoal (ID 21)	  	  U : hProp	  A : Type	  uac : U -> Contr A	  ============================	  join U A -> A	3 subgoals (ID 32)	  	  U : hProp	  A : Type	  uac : U -> Contr A	  ============================	  U -> A		subgoal 2 (ID 34) is:	 A -> A	subgoal 3 (ID 36) is:	 forall a : U * A, ?pushb (fst a) = ?pushc (snd a)	";
             responses[i]=data;
           
 
             i = 29;
-            data = "1 subgoal (ID 32)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  ============================	  U.(trunctype_type) -> A	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	5 subgoals (ID 34)		subgoal 1 (ID 34) is:	 A -> A	subgoal 2 (ID 36) is:	 forall a : U.(trunctype_type) * A,	 (fun u : U.(trunctype_type) => let i := uac u in i.(center)) (fst a) =	 ?pushc (snd a)	subgoal 3 (ID 23) is:	 Sect	   (pushout_rec A	      (fun u : U.(trunctype_type) => let i := uac u in i.(center)) 	      ?pushc ?pp') (fun a : A => push (inr a))	subgoal 4 (ID 25) is:	 Sect (fun a : A => push (inr a))	   (pushout_rec A	      (fun u : U.(trunctype_type) => let i := uac u in i.(center)) 	      ?pushc ?pp')	subgoal 5 (ID 14) is:	 IsEquiv (fun a : A => push (inr a)) -> U.(trunctype_type) -> Contr A	";
+            data = "1 subgoal (ID 32)	  	  U : hProp	  A : Type	  uac : U -> Contr A	  ============================	  U -> A	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	5 subgoals (ID 34)		subgoal 1 (ID 34) is:	 A -> A	subgoal 2 (ID 36) is:	 forall a : U * A,	 (fun u : U => let i := uac u in center _) (fst a) = ?pushc (snd a)	subgoal 3 (ID 23) is:	 Sect (pushout_rec A (fun u : U => let i := uac u in center _) ?pushc ?pp')	   (fun a : A => push (inr a))	subgoal 4 (ID 25) is:	 Sect (fun a : A => push (inr a))	   (pushout_rec A (fun u : U => let i := uac u in center _) ?pushc ?pp')	subgoal 5 (ID 14) is:	 IsEquiv (fun a : A => push (inr a)) -> U -> Contr A	";
             responses[i]=data;
           
 
             i = 30;
-            data = "1 subgoal (ID 34)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  ============================	  A -> A	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	4 subgoals (ID 36)		subgoal 1 (ID 36) is:	 forall a : U.(trunctype_type) * A,	 (fun u : U.(trunctype_type) => let i := uac u in i.(center)) (fst a) =	 idmap (snd a)	subgoal 2 (ID 23) is:	 Sect	   (pushout_rec A	      (fun u : U.(trunctype_type) => let i := uac u in i.(center)) idmap 	      ?pp') (fun a : A => push (inr a))	subgoal 3 (ID 25) is:	 Sect (fun a : A => push (inr a))	   (pushout_rec A	      (fun u : U.(trunctype_type) => let i := uac u in i.(center)) idmap 	      ?pp')	subgoal 4 (ID 14) is:	 IsEquiv (fun a : A => push (inr a)) -> U.(trunctype_type) -> Contr A	";
+            data = "1 subgoal (ID 34)	  	  U : hProp	  A : Type	  uac : U -> Contr A	  ============================	  A -> A	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	4 subgoals (ID 36)		subgoal 1 (ID 36) is:	 forall a : U * A,	 (fun u : U => let i := uac u in center _) (fst a) = idmap (snd a)	subgoal 2 (ID 23) is:	 Sect (pushout_rec A (fun u : U => let i := uac u in center _) idmap ?pp')	   (fun a : A => push (inr a))	subgoal 3 (ID 25) is:	 Sect (fun a : A => push (inr a))	   (pushout_rec A (fun u : U => let i := uac u in center _) idmap ?pp')	subgoal 4 (ID 14) is:	 IsEquiv (fun a : A => push (inr a)) -> U -> Contr A	";
             responses[i]=data;
           
 
             i = 31;
-            data = "1 subgoal (ID 36)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  ============================	  forall a : U.(trunctype_type) * A,	  (fun u : U.(trunctype_type) => let i := uac u in i.(center)) (fst a) =	  idmap (snd a)	1 subgoal (ID 51)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  u : U.(trunctype_type)	  a : A	  ============================	  (let i := uac (fst (u, a)) in i.(center)) = snd (u, a)	";
+            data = "1 subgoal (ID 36)	  	  U : hProp	  A : Type	  uac : U -> Contr A	  ============================	  forall a : U * A,	  (fun u : U => let i := uac u in center _) (fst a) = idmap (snd a)	1 subgoal (ID 51)	  	  U : hProp	  A : Type	  uac : U -> Contr A	  u : U	  a : A	  ============================	  (let i := uac (fst (u, a)) in center _) = snd (u, a)	";
             responses[i]=data;
           
 
             i = 32;
-            data = "1 subgoal (ID 52)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  u : U.(trunctype_type)	  a : A	  ============================	  (uac u).(center) = a	";
+            data = "1 subgoal (ID 52)	  	  U : hProp	  A : Type	  uac : U -> Contr A	  u : U	  a : A	  ============================	  center _ = a	";
             responses[i]=data;
           
 
             i = 33;
-            data = "1 subgoal (ID 53)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  u : U.(trunctype_type)	  a : A	  i := uac u : Contr A	  ============================	  (uac u).(center) = a	";
+            data = "1 subgoal (ID 53)	  	  U : hProp	  A : Type	  uac : U -> Contr A	  u : U	  a : A	  i := uac u : Contr A	  ============================	  center _ = a	";
             responses[i]=data;
           
 
             i = 34;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	3 subgoals (ID 23)		subgoal 1 (ID 23) is:	 Sect	   (pushout_rec A	      (fun u : U.(trunctype_type) => let i := uac u in i.(center)) idmap	      (fun a0 : U.(trunctype_type) * A =>	       (fun (u : U.(trunctype_type)) (a : A) =>	        let i := uac u in (uac u).(contr) a) a0.(fst) 	         a0.(snd))) (fun a : A => push (inr a))	subgoal 2 (ID 25) is:	 Sect (fun a : A => push (inr a))	   (pushout_rec A	      (fun u : U.(trunctype_type) => let i := uac u in i.(center)) idmap	      (fun a0 : U.(trunctype_type) * A =>	       (fun (u : U.(trunctype_type)) (a : A) =>	        let i := uac u in (uac u).(contr) a) a0.(fst) 	         a0.(snd)))	subgoal 3 (ID 14) is:	 IsEquiv (fun a : A => push (inr a)) -> U.(trunctype_type) -> Contr A	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	3 subgoals (ID 23)		subgoal 1 (ID 23) is:	 Sect	   (pushout_rec A (fun u : U => let i := uac u in center _) idmap	      (fun a0 : U * A =>	       (fun (u : U) (a : A) => let i := uac u in contr a) (fst a0) (snd a0)))	   (fun a : A => push (inr a))	subgoal 2 (ID 25) is:	 Sect (fun a : A => push (inr a))	   (pushout_rec A (fun u : U => let i := uac u in center _) idmap	      (fun a0 : U * A =>	       (fun (u : U) (a : A) => let i := uac u in contr a) (fst a0) (snd a0)))	subgoal 3 (ID 14) is:	 IsEquiv (fun a : A => push (inr a)) -> U -> Contr A	";
             responses[i]=data;
           
 
             i = 35;
-            data = "1 subgoal (ID 23)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  ============================	  Sect	    (pushout_rec A	       (fun u : U.(trunctype_type) => let i := uac u in i.(center)) idmap	       (fun a0 : U.(trunctype_type) * A =>	        (fun (u : U.(trunctype_type)) (a : A) =>	         let i := uac u in (uac u).(contr) a) a0.(fst) 	          a0.(snd))) (fun a : A => push (inr a))	1 subgoal (ID 57)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  z : join U.(trunctype_type) A	  ============================	  push	    (inr	       (pushout_rec A	          (fun u : U.(trunctype_type) => let i := uac u in i.(center)) idmap	          (fun a0 : U.(trunctype_type) * A =>	           let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) z)) = z	";
+            data = "1 subgoal (ID 23)	  	  U : hProp	  A : Type	  uac : U -> Contr A	  ============================	  Sect	    (pushout_rec A (fun u : U => let i := uac u in center _) idmap	       (fun a0 : U * A =>	        (fun (u : U) (a : A) => let i := uac u in contr a) (fst a0) (snd a0)))	    (fun a : A => push (inr a))	1 subgoal (ID 57)	  	  U : hProp	  A : Type	  uac : U -> Contr A	  z : join U A	  ============================	  push	    (inr	       (pushout_rec A (fun u : U => let i := uac u in center _) idmap	          (fun a0 : U * A => let i := uac (fst a0) in contr (snd a0)) z)) = z	";
             responses[i]=data;
           
 
             i = 36;
-            data = "1 subgoal (ID 58)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  z : join U.(trunctype_type) A	  ============================	  (fun j : join U.(trunctype_type) A =>	   push	     (inr	        (pushout_rec A	           (fun u : U.(trunctype_type) => let i := uac u in i.(center)) idmap	           (fun a0 : U.(trunctype_type) * A =>	            let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) = j)	    z	";
+            data = "1 subgoal (ID 58)	  	  U : hProp	  A : Type	  uac : U -> Contr A	  z : join U A	  ============================	  (fun j : join U A =>	   push	     (inr	        (pushout_rec A (fun u : U => let i := uac u in center _) idmap	           (fun a0 : U * A => let i := uac (fst a0) in contr (snd a0)) j)) =	   j) z	";
             responses[i]=data;
           
 
             i = 37;
-            data = "3 subgoals (ID 69)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  z : join U.(trunctype_type) A	  ============================	  forall b : U.(trunctype_type),	  (fun j : join U.(trunctype_type) A =>	   push	     (inr	        (pushout_rec A	           (fun u : U.(trunctype_type) => let i := uac u in i.(center)) idmap	           (fun a0 : U.(trunctype_type) * A =>	            let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) = j)	    (pushl b)		subgoal 2 (ID 71) is:	 forall c : A,	 (fun j : join U.(trunctype_type) A =>	  push	    (inr	       (pushout_rec A	          (fun u : U.(trunctype_type) => let i := uac u in i.(center)) idmap	          (fun a0 : U.(trunctype_type) * A =>	           let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) = j)	   (pushr c)	subgoal 3 (ID 73) is:	 forall a : U.(trunctype_type) * A,	 transport	   (fun j : join U.(trunctype_type) A =>	    push	      (inr	         (pushout_rec A	            (fun u : U.(trunctype_type) => let i := uac u in i.(center))	            idmap	            (fun a0 : U.(trunctype_type) * A =>	             let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) =	    j) (pp a) (?pushb (fst a)) = ?pushc (snd a)	";
+            data = "3 subgoals (ID 69)	  	  U : hProp	  A : Type	  uac : U -> Contr A	  z : join U A	  ============================	  forall b : U,	  (fun j : join U A =>	   push	     (inr	        (pushout_rec A (fun u : U => let i := uac u in center _) idmap	           (fun a0 : U * A => let i := uac (fst a0) in contr (snd a0)) j)) =	   j) (pushl b)		subgoal 2 (ID 71) is:	 forall c : A,	 (fun j : join U A =>	  push	    (inr	       (pushout_rec A (fun u : U => let i := uac u in center _) idmap	          (fun a0 : U * A => let i := uac (fst a0) in contr (snd a0)) j)) = j)	   (pushr c)	subgoal 3 (ID 73) is:	 forall a : U * A,	 transport	   (fun j : join U A =>	    push	      (inr	         (pushout_rec A (fun u : U => let i := uac u in center _) idmap	            (fun a0 : U * A => let i := uac (fst a0) in contr (snd a0)) j)) =	    j) (pp a) (?pushb (fst a)) = ?pushc (snd a)	";
             responses[i]=data;
           
 
             i = 38;
-            data = "1 subgoal (ID 69)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  z : join U.(trunctype_type) A	  ============================	  forall b : U.(trunctype_type),	  (fun j : join U.(trunctype_type) A =>	   push	     (inr	        (pushout_rec A	           (fun u : U.(trunctype_type) => let i := uac u in i.(center)) idmap	           (fun a0 : U.(trunctype_type) * A =>	            let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) = j)	    (pushl b)	1 subgoal (ID 74)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  z : join U.(trunctype_type) A	  u : U.(trunctype_type)	  ============================	  (fun j : join U.(trunctype_type) A =>	   push	     (inr	        (pushout_rec A	           (fun u0 : U.(trunctype_type) => let i := uac u0 in i.(center))	           idmap	           (fun a0 : U.(trunctype_type) * A =>	            let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) = j)	    (pushl u)	";
+            data = "1 subgoal (ID 69)	  	  U : hProp	  A : Type	  uac : U -> Contr A	  z : join U A	  ============================	  forall b : U,	  (fun j : join U A =>	   push	     (inr	        (pushout_rec A (fun u : U => let i := uac u in center _) idmap	           (fun a0 : U * A => let i := uac (fst a0) in contr (snd a0)) j)) =	   j) (pushl b)	1 subgoal (ID 74)	  	  U : hProp	  A : Type	  uac : U -> Contr A	  z : join U A	  u : U	  ============================	  (fun j : join U A =>	   push	     (inr	        (pushout_rec A (fun u0 : U => let i := uac u0 in center _) idmap	           (fun a0 : U * A => let i := uac (fst a0) in contr (snd a0)) j)) =	   j) (pushl u)	";
             responses[i]=data;
           
 
             i = 39;
-            data = "1 subgoal (ID 76)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  z : join U.(trunctype_type) A	  u : U.(trunctype_type)	  i := contr_inhabited_hprop U.(trunctype_type) u : Contr U.(trunctype_type)	  ============================	  (fun j : join U.(trunctype_type) A =>	   push	     (inr	        (pushout_rec A	           (fun u0 : U.(trunctype_type) => let i0 := uac u0 in i0.(center))	           idmap	           (fun a0 : U.(trunctype_type) * A =>	            let i0 := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) =	   j) (pushl u)	";
+            data = "1 subgoal (ID 76)	  	  U : hProp	  A : Type	  uac : U -> Contr A	  z : join U A	  u : U	  i := contr_inhabited_hprop U u : Contr U	  ============================	  (fun j : join U A =>	   push	     (inr	        (pushout_rec A (fun u0 : U => let i0 := uac u0 in center _) idmap	           (fun a0 : U * A => let i0 := uac (fst a0) in contr (snd a0)) j)) =	   j) (pushl u)	";
             responses[i]=data;
           
 
             i = 40;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	4 subgoals (ID 71)		subgoal 1 (ID 71) is:	 forall c : A,	 (fun j : join U.(trunctype_type) A =>	  push	    (inr	       (pushout_rec A	          (fun u : U.(trunctype_type) => let i := uac u in i.(center)) idmap	          (fun a0 : U.(trunctype_type) * A =>	           let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) = j)	   (pushr c)	subgoal 2 (ID 73) is:	 forall a : U.(trunctype_type) * A,	 transport	   (fun j : join U.(trunctype_type) A =>	    push	      (inr	         (pushout_rec A	            (fun u : U.(trunctype_type) => let i := uac u in i.(center))	            idmap	            (fun a0 : U.(trunctype_type) * A =>	             let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) =	    j) (pp a)	   ((fun u : U.(trunctype_type) =>	     let i := contr_inhabited_hprop U.(trunctype_type) u in	     path_contr	       (push	          (inr	             (pushout_rec A	                (fun u0 : U.(trunctype_type) =>	                 let i0 := uac u0 in i0.(center)) idmap	                (fun a0 : U.(trunctype_type) * A =>	                 let i0 := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd))	                (pushl u)))) (pushl u)) (fst a)) = 	 ?pushc (snd a)	subgoal 3 (ID 25) is:	 Sect (fun a : A => push (inr a))	   (pushout_rec A	      (fun u : U.(trunctype_type) => let i := uac u in i.(center)) idmap	      (fun a0 : U.(trunctype_type) * A =>	       (fun (u : U.(trunctype_type)) (a : A) =>	        let i := uac u in (uac u).(contr) a) a0.(fst) 	         a0.(snd)))	subgoal 4 (ID 14) is:	 IsEquiv (fun a : A => push (inr a)) -> U.(trunctype_type) -> Contr A	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	4 subgoals (ID 71)		subgoal 1 (ID 71) is:	 forall c : A,	 (fun j : join U A =>	  push	    (inr	       (pushout_rec A (fun u : U => let i := uac u in center _) idmap	          (fun a0 : U * A => let i := uac (fst a0) in contr (snd a0)) j)) = j)	   (pushr c)	subgoal 2 (ID 73) is:	 forall a : U * A,	 transport	   (fun j : join U A =>	    push	      (inr	         (pushout_rec A (fun u : U => let i := uac u in center _) idmap	            (fun a0 : U * A => let i := uac (fst a0) in contr (snd a0)) j)) =	    j) (pp a)	   ((fun u : U =>	     let i := contr_inhabited_hprop U u in	     path_contr	       (push	          (inr	             (pushout_rec A (fun u0 : U => let i0 := uac u0 in center _)	                idmap	                (fun a0 : U * A => let i0 := uac (fst a0) in contr (snd a0))	                (pushl u)))) (pushl u)) (fst a)) = 	 ?pushc (snd a)	subgoal 3 (ID 25) is:	 Sect (fun a : A => push (inr a))	   (pushout_rec A (fun u : U => let i := uac u in center _) idmap	      (fun a0 : U * A =>	       (fun (u : U) (a : A) => let i := uac u in contr a) (fst a0) (snd a0)))	subgoal 4 (ID 14) is:	 IsEquiv (fun a : A => push (inr a)) -> U -> Contr A	";
             responses[i]=data;
           
 
             i = 41;
-            data = "1 subgoal (ID 71)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  z : join U.(trunctype_type) A	  ============================	  forall c : A,	  (fun j : join U.(trunctype_type) A =>	   push	     (inr	        (pushout_rec A	           (fun u : U.(trunctype_type) => let i := uac u in i.(center)) idmap	           (fun a0 : U.(trunctype_type) * A =>	            let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) = j)	    (pushr c)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	3 subgoals (ID 73)		subgoal 1 (ID 73) is:	 forall a : U.(trunctype_type) * A,	 transport	   (fun j : join U.(trunctype_type) A =>	    push	      (inr	         (pushout_rec A	            (fun u : U.(trunctype_type) => let i := uac u in i.(center))	            idmap	            (fun a0 : U.(trunctype_type) * A =>	             let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) =	    j) (pp a)	   ((fun u : U.(trunctype_type) =>	     let i := contr_inhabited_hprop U.(trunctype_type) u in	     path_contr	       (push	          (inr	             (pushout_rec A	                (fun u0 : U.(trunctype_type) =>	                 let i0 := uac u0 in i0.(center)) idmap	                (fun a0 : U.(trunctype_type) * A =>	                 let i0 := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd))	                (pushl u)))) (pushl u)) (fst a)) = 	 (fun a0 : A => 1) (snd a)	subgoal 2 (ID 25) is:	 Sect (fun a : A => push (inr a))	   (pushout_rec A	      (fun u : U.(trunctype_type) => let i := uac u in i.(center)) idmap	      (fun a0 : U.(trunctype_type) * A =>	       (fun (u : U.(trunctype_type)) (a : A) =>	        let i := uac u in (uac u).(contr) a) a0.(fst) 	         a0.(snd)))	subgoal 3 (ID 14) is:	 IsEquiv (fun a : A => push (inr a)) -> U.(trunctype_type) -> Contr A	";
+            data = "1 subgoal (ID 71)	  	  U : hProp	  A : Type	  uac : U -> Contr A	  z : join U A	  ============================	  forall c : A,	  (fun j : join U A =>	   push	     (inr	        (pushout_rec A (fun u : U => let i := uac u in center _) idmap	           (fun a0 : U * A => let i := uac (fst a0) in contr (snd a0)) j)) =	   j) (pushr c)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	3 subgoals (ID 73)		subgoal 1 (ID 73) is:	 forall a : U * A,	 transport	   (fun j : join U A =>	    push	      (inr	         (pushout_rec A (fun u : U => let i := uac u in center _) idmap	            (fun a0 : U * A => let i := uac (fst a0) in contr (snd a0)) j)) =	    j) (pp a)	   ((fun u : U =>	     let i := contr_inhabited_hprop U u in	     path_contr	       (push	          (inr	             (pushout_rec A (fun u0 : U => let i0 := uac u0 in center _)	                idmap	                (fun a0 : U * A => let i0 := uac (fst a0) in contr (snd a0))	                (pushl u)))) (pushl u)) (fst a)) = 	 (fun a0 : A => 1) (snd a)	subgoal 2 (ID 25) is:	 Sect (fun a : A => push (inr a))	   (pushout_rec A (fun u : U => let i := uac u in center _) idmap	      (fun a0 : U * A =>	       (fun (u : U) (a : A) => let i := uac u in contr a) (fst a0) (snd a0)))	subgoal 3 (ID 14) is:	 IsEquiv (fun a : A => push (inr a)) -> U -> Contr A	";
             responses[i]=data;
           
 
             i = 42;
-            data = "1 subgoal (ID 73)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  z : join U.(trunctype_type) A	  ============================	  forall a : U.(trunctype_type) * A,	  transport	    (fun j : join U.(trunctype_type) A =>	     push	       (inr	          (pushout_rec A	             (fun u : U.(trunctype_type) => let i := uac u in i.(center))	             idmap	             (fun a0 : U.(trunctype_type) * A =>	              let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) =	     j) (pp a)	    ((fun u : U.(trunctype_type) =>	      let i := contr_inhabited_hprop U.(trunctype_type) u in	      path_contr	        (push	           (inr	              (pushout_rec A	                 (fun u0 : U.(trunctype_type) =>	                  let i0 := uac u0 in i0.(center)) idmap	                 (fun a0 : U.(trunctype_type) * A =>	                  let i0 := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd))	                 (pushl u)))) (pushl u)) (fst a)) = 	  (fun a0 : A => 1) (snd a)	1 subgoal (ID 102)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  z : join U.(trunctype_type) A	  u : U.(trunctype_type)	  a : A	  i := contr_inhabited_hprop U.(trunctype_type) u : Contr U.(trunctype_type)	  ============================	  transport	    (fun j : join U.(trunctype_type) A =>	     push	       (inr	          (pushout_rec A	             (fun u0 : U.(trunctype_type) => let i0 := uac u0 in i0.(center))	             idmap	             (fun a0 : U.(trunctype_type) * A =>	              let i0 := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) j)) =	     j) (pp (u, a))	    (let i0 := contr_inhabited_hprop U.(trunctype_type) (fst (u, a)) in	     path_contr	       (push	          (inr	             (pushout_rec A	                (fun u0 : U.(trunctype_type) =>	                 let i1 := uac u0 in i1.(center)) idmap	                (fun a0 : U.(trunctype_type) * A =>	                 let i1 := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd))	                (pushl (fst (u, a)))))) (pushl (fst (u, a)))) = 1	";
+            data = "1 subgoal (ID 73)	  	  U : hProp	  A : Type	  uac : U -> Contr A	  z : join U A	  ============================	  forall a : U * A,	  transport	    (fun j : join U A =>	     push	       (inr	          (pushout_rec A (fun u : U => let i := uac u in center _) idmap	             (fun a0 : U * A => let i := uac (fst a0) in contr (snd a0)) j)) =	     j) (pp a)	    ((fun u : U =>	      let i := contr_inhabited_hprop U u in	      path_contr	        (push	           (inr	              (pushout_rec A (fun u0 : U => let i0 := uac u0 in center _)	                 idmap	                 (fun a0 : U * A => let i0 := uac (fst a0) in contr (snd a0))	                 (pushl u)))) (pushl u)) (fst a)) = 	  (fun a0 : A => 1) (snd a)	1 subgoal (ID 102)	  	  U : hProp	  A : Type	  uac : U -> Contr A	  z : join U A	  u : U	  a : A	  i := contr_inhabited_hprop U u : Contr U	  ============================	  transport	    (fun j : join U A =>	     push	       (inr	          (pushout_rec A (fun u0 : U => let i0 := uac u0 in center _) idmap	             (fun a0 : U * A => let i0 := uac (fst a0) in contr (snd a0)) j)) =	     j) (pp (u, a))	    (let i0 := contr_inhabited_hprop U (fst (u, a)) in	     path_contr	       (push	          (inr	             (pushout_rec A (fun u0 : U => let i1 := uac u0 in center _)	                idmap	                (fun a0 : U * A => let i1 := uac (fst a0) in contr (snd a0))	                (pushl (fst (u, a)))))) (pushl (fst (u, a)))) = 1	";
             responses[i]=data;
           
 
             i = 43;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	2 subgoals (ID 25)		subgoal 1 (ID 25) is:	 Sect (fun a : A => push (inr a))	   (pushout_rec A	      (fun u : U.(trunctype_type) => let i := uac u in i.(center)) idmap	      (fun a0 : U.(trunctype_type) * A =>	       (fun (u : U.(trunctype_type)) (a : A) =>	        let i := uac u in (uac u).(contr) a) a0.(fst) 	         a0.(snd)))	subgoal 2 (ID 14) is:	 IsEquiv (fun a : A => push (inr a)) -> U.(trunctype_type) -> Contr A	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	2 subgoals (ID 25)		subgoal 1 (ID 25) is:	 Sect (fun a : A => push (inr a))	   (pushout_rec A (fun u : U => let i := uac u in center _) idmap	      (fun a0 : U * A =>	       (fun (u : U) (a : A) => let i := uac u in contr a) (fst a0) (snd a0)))	subgoal 2 (ID 14) is:	 IsEquiv (fun a : A => push (inr a)) -> U -> Contr A	";
             responses[i]=data;
           
 
             i = 44;
-            data = "1 subgoal (ID 25)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  ============================	  Sect (fun a : A => push (inr a))	    (pushout_rec A	       (fun u : U.(trunctype_type) => let i := uac u in i.(center)) idmap	       (fun a0 : U.(trunctype_type) * A =>	        (fun (u : U.(trunctype_type)) (a : A) =>	         let i := uac u in (uac u).(contr) a) a0.(fst) 	          a0.(snd)))	1 subgoal (ID 226)	  	  U : hProp	  A : Type	  uac : U.(trunctype_type) -> Contr A	  a : A	  ============================	  pushout_rec A (fun u : U.(trunctype_type) => let i := uac u in i.(center))	    idmap	    (fun a0 : U.(trunctype_type) * A =>	     let i := uac a0.(fst) in (uac a0.(fst)).(contr) a0.(snd)) 	    (push (inr a)) = a	";
+            data = "1 subgoal (ID 25)	  	  U : hProp	  A : Type	  uac : U -> Contr A	  ============================	  Sect (fun a : A => push (inr a))	    (pushout_rec A (fun u : U => let i := uac u in center _) idmap	       (fun a0 : U * A =>	        (fun (u : U) (a : A) => let i := uac u in contr a) (fst a0) (snd a0)))	1 subgoal (ID 226)	  	  U : hProp	  A : Type	  uac : U -> Contr A	  a : A	  ============================	  pushout_rec A (fun u : U => let i := uac u in center _) idmap	    (fun a0 : U * A => let i := uac (fst a0) in contr (snd a0))	    (push (inr a)) = a	";
             responses[i]=data;
           
 
             i = 45;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 14)		subgoal 1 (ID 14) is:	 IsEquiv (fun a : A => push (inr a)) -> U.(trunctype_type) -> Contr A	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 14)		subgoal 1 (ID 14) is:	 IsEquiv (fun a : A => push (inr a)) -> U -> Contr A	";
             responses[i]=data;
           
 
             i = 46;
-            data = "1 subgoal (ID 14)	  	  U : hProp	  A : Type	  ============================	  IsEquiv (fun a : A => push (inr a)) -> U.(trunctype_type) -> Contr A	1 subgoal (ID 229)	  	  U : hProp	  A : Type	  X : IsEquiv (fun a : A => push (inr a))	  u : U.(trunctype_type)	  ============================	  Contr A	";
+            data = "1 subgoal (ID 14)	  	  U : hProp	  A : Type	  ============================	  IsEquiv (fun a : A => push (inr a)) -> U -> Contr A	1 subgoal (ID 229)	  	  U : hProp	  A : Type	  X : IsEquiv (fun a : A => push (inr a))	  u : U	  ============================	  Contr A	";
             responses[i]=data;
           
 
             i = 47;
-            data = "1 subgoal (ID 305)	  	  U : hProp	  A : Type	  X : IsEquiv (fun a : A => push (inr a))	  u : U.(trunctype_type)	  ============================	  Contr (join U.(trunctype_type) A)	";
+            data = "1 subgoal (ID 305)	  	  U : hProp	  A : Type	  X : IsEquiv (fun a : A => push (inr a))	  u : U	  ============================	  Contr (join U A)	";
             responses[i]=data;
           
 
             i = 48;
-            data = "1 subgoal (ID 307)	  	  U : hProp	  A : Type	  X : IsEquiv (fun a : A => push (inr a))	  u : U.(trunctype_type)	  i := contr_inhabited_hprop U.(trunctype_type) u : Contr U.(trunctype_type)	  ============================	  Contr (join U.(trunctype_type) A)	";
+            data = "1 subgoal (ID 307)	  	  U : hProp	  A : Type	  X : IsEquiv (fun a : A => push (inr a))	  u : U	  i := contr_inhabited_hprop U u : Contr U	  ============================	  Contr (join U A)	";
             responses[i]=data;
           
 
@@ -333,12 +333,12 @@
           
 
             i = 63;
-            data = "1 subgoal (ID 9)	  	  O : Modality	  T : Type	  u : O.(unCl).(trunctype_type)	  ============================	  Contr (O_reflector O T)	";
+            data = "1 subgoal (ID 9)	  	  O : Modality	  T : Type	  u : unCl O	  ============================	  Contr (O_reflector O T)	";
             responses[i]=data;
           
 
             i = 64;
-            data = "1 subgoal (ID 13)	  	  O : Modality	  T : Type	  u : O.(unCl).(trunctype_type)	  i := contr_inhabited_hprop O.(unCl).(trunctype_type) u	   : Contr O.(unCl).(trunctype_type)	  ============================	  Contr (O_reflector O T)	";
+            data = "1 subgoal (ID 13)	  	  O : Modality	  T : Type	  u : unCl O	  i := contr_inhabited_hprop (unCl O) u : Contr (unCl O)	  ============================	  Contr (O_reflector O T)	";
             responses[i]=data;
           
 
@@ -368,7 +368,7 @@
           
 
             i = 70;
-            data = "1 subgoal (ID 30)	  	  O : Modality	  T : Type	  U : Type	  T_inO : In O T	  f : T -> U	  feq : IsEquiv f	  u : O.(unCl).(trunctype_type)	  i := T_inO u : Contr T	  ============================	  Contr U	";
+            data = "1 subgoal (ID 30)	  	  O : Modality	  T : Type	  U : Type	  T_inO : In O T	  f : T -> U	  feq : IsEquiv f	  u : unCl O	  i := T_inO u : Contr T	  ============================	  Contr U	";
             responses[i]=data;
           
 
@@ -418,27 +418,27 @@
           
 
             i = 80;
-            data = "3 subgoals (ID 52)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  f : forall a : A, B (to O A a)	  z : O_reflector O A	  ============================	  forall b : O.(unCl).(trunctype_type), B (pushl b)		subgoal 2 (ID 54) is:	 forall c : A, B (pushr c)	subgoal 3 (ID 56) is:	 forall a : O.(unCl).(trunctype_type) * A,	 transport B (pp a) (?pushb (fst a)) = ?pushc (snd a)	";
+            data = "3 subgoals (ID 52)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  f : forall a : A, B (to O A a)	  z : O_reflector O A	  ============================	  forall b : unCl O, B (pushl b)		subgoal 2 (ID 54) is:	 forall c : A, B (pushr c)	subgoal 3 (ID 56) is:	 forall a : unCl O * A, transport B (pp a) (?pushb (fst a)) = ?pushc (snd a)	";
             responses[i]=data;
           
 
             i = 81;
-            data = "1 subgoal (ID 52)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  f : forall a : A, B (to O A a)	  z : O_reflector O A	  ============================	  forall b : O.(unCl).(trunctype_type), B (pushl b)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 54)		subgoal 1 (ID 54) is:	 forall c : A, B (pushr c)	subgoal 2 (ID 56) is:	 forall a : O.(unCl).(trunctype_type) * A,	 transport B (pp a)	   ((fun u : O.(unCl).(trunctype_type) => center (B (pushl u))) (fst a)) =	 ?pushc (snd a)	";
+            data = "1 subgoal (ID 52)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  f : forall a : A, B (to O A a)	  z : O_reflector O A	  ============================	  forall b : unCl O, B (pushl b)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 54)		subgoal 1 (ID 54) is:	 forall c : A, B (pushr c)	subgoal 2 (ID 56) is:	 forall a : unCl O * A,	 transport B (pp a) ((fun u : unCl O => center (B (pushl u))) (fst a)) =	 ?pushc (snd a)	";
             responses[i]=data;
           
 
             i = 82;
-            data = "1 subgoal (ID 54)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  f : forall a : A, B (to O A a)	  z : O_reflector O A	  ============================	  forall c : A, B (pushr c)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 56)		subgoal 1 (ID 56) is:	 forall a : O.(unCl).(trunctype_type) * A,	 transport B (pp a)	   ((fun u : O.(unCl).(trunctype_type) => center (B (pushl u))) (fst a)) =	 (fun a0 : A => f a0) (snd a)	";
+            data = "1 subgoal (ID 54)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  f : forall a : A, B (to O A a)	  z : O_reflector O A	  ============================	  forall c : A, B (pushr c)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 56)		subgoal 1 (ID 56) is:	 forall a : unCl O * A,	 transport B (pp a) ((fun u : unCl O => center (B (pushl u))) (fst a)) =	 (fun a0 : A => f a0) (snd a)	";
             responses[i]=data;
           
 
             i = 83;
-            data = "1 subgoal (ID 56)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  f : forall a : A, B (to O A a)	  z : O_reflector O A	  ============================	  forall a : O.(unCl).(trunctype_type) * A,	  transport B (pp a)	    ((fun u : O.(unCl).(trunctype_type) => center (B (pushl u))) (fst a)) =	  (fun a0 : A => f a0) (snd a)	1 subgoal (ID 65)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  f : forall a : A, B (to O A a)	  z : O_reflector O A	  u : O.(unCl).(trunctype_type)	  a : A	  ============================	  transport B (pp (u, a)) (center (B (pushl (fst (u, a))))) = f (snd (u, a))	";
+            data = "1 subgoal (ID 56)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  f : forall a : A, B (to O A a)	  z : O_reflector O A	  ============================	  forall a : unCl O * A,	  transport B (pp a) ((fun u : unCl O => center (B (pushl u))) (fst a)) =	  (fun a0 : A => f a0) (snd a)	1 subgoal (ID 65)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  f : forall a : A, B (to O A a)	  z : O_reflector O A	  u : unCl O	  a : A	  ============================	  transport B (pp (u, a)) (center (B (pushl (fst (u, a))))) = f (snd (u, a))	";
             responses[i]=data;
           
 
             i = 84;
-            data = "1 subgoal (ID 73)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  f : forall a : A, B (to O A a)	  z : O_reflector O A	  u : O.(unCl).(trunctype_type)	  a : A	  i := B_inO (push (inr a)) u : Contr (B (push (inr a)))	  ============================	  transport B (pp (u, a)) (center (B (pushl (fst (u, a))))) = f (snd (u, a))	";
+            data = "1 subgoal (ID 73)	  	  O : Modality	  A : Type	  B : O_reflector O A -> Type	  B_inO : forall oa : O_reflector O A, In O (B oa)	  f : forall a : A, B (to O A a)	  z : O_reflector O A	  u : unCl O	  a : A	  i := B_inO (push (inr a)) u : Contr (B (push (inr a)))	  ============================	  transport B (pp (u, a)) (center (B (pushl (fst (u, a))))) = f (snd (u, a))	";
             responses[i]=data;
           
 
@@ -553,12 +553,12 @@
           
 
             i = 107;
-            data = "1 subgoal (ID 7)	  	  O : Modality	  X : Type	  ============================	  ClosedModalities.In O X -> (IsNull (acc_gen O)) X	1 subgoal (ID 11)	  	  O : Modality	  X : Type	  X_inO : ClosedModalities.In O X	  u : (Nullification_Modalities.LocRSU_Data.ReflectiveSubuniverses_restriction	         {| unNul := acc_gen O |}).(unLoc).(lgen_indices)	  ============================	  ooExtendableAlong	    ((Nullification_Modalities.LocRSU_Data.ReflectiveSubuniverses_restriction	        {| unNul := acc_gen O |}).(unLoc).(lgenerator) u)	    (fun	       _ : (Nullification_Modalities.LocRSU_Data.ReflectiveSubuniverses_restriction	              {| unNul := acc_gen O |}).(unLoc).(lgen_codomain) u => X)	";
+            data = "1 subgoal (ID 7)	  	  O : Modality	  X : Type	  ============================	  ClosedModalities.In O X -> (IsNull (acc_gen O)) X	1 subgoal (ID 11)	  	  O : Modality	  X : Type	  X_inO : ClosedModalities.In O X	  u : lgen_indices	        (unLoc	           (Nullification_Modalities.LocRSU_Data.ReflectiveSubuniverses_restriction	              {| unNul := acc_gen O |}))	  ============================	  ooExtendableAlong	    ((unLoc	        (Nullification_Modalities.LocRSU_Data.ReflectiveSubuniverses_restriction	           {| unNul := acc_gen O |})) u)	    (fun	       _ : lgen_codomain	             (unLoc	                (Nullification_Modalities.LocRSU_Data.ReflectiveSubuniverses_restriction	                   {| unNul := acc_gen O |})) u => X)	";
             responses[i]=data;
           
 
             i = 108;
-            data = "1 subgoal (ID 12)	  	  O : Modality	  X : Type	  X_inO : ClosedModalities.In O X	  u : (Nullification_Modalities.LocRSU_Data.ReflectiveSubuniverses_restriction	         {| unNul := acc_gen O |}).(unLoc).(lgen_indices)	  i := X_inO u : Contr X	  ============================	  ooExtendableAlong	    ((Nullification_Modalities.LocRSU_Data.ReflectiveSubuniverses_restriction	        {| unNul := acc_gen O |}).(unLoc).(lgenerator) u)	    (fun	       _ : (Nullification_Modalities.LocRSU_Data.ReflectiveSubuniverses_restriction	              {| unNul := acc_gen O |}).(unLoc).(lgen_codomain) u => X)	";
+            data = "1 subgoal (ID 12)	  	  O : Modality	  X : Type	  X_inO : ClosedModalities.In O X	  u : lgen_indices	        (unLoc	           (Nullification_Modalities.LocRSU_Data.ReflectiveSubuniverses_restriction	              {| unNul := acc_gen O |}))	  i := X_inO u : Contr X	  ============================	  ooExtendableAlong	    ((unLoc	        (Nullification_Modalities.LocRSU_Data.ReflectiveSubuniverses_restriction	           {| unNul := acc_gen O |})) u)	    (fun	       _ : lgen_codomain	             (unLoc	                (Nullification_Modalities.LocRSU_Data.ReflectiveSubuniverses_restriction	                   {| unNul := acc_gen O |})) u => X)	";
             responses[i]=data;
           
 
@@ -568,17 +568,17 @@
           
 
             i = 110;
-            data = "1 subgoal (ID 8)	  	  O : Modality	  X : Type	  ============================	  (IsNull (acc_gen O)) X -> ClosedModalities.In O X	1 subgoal (ID 39)	  	  O : Modality	  X : Type	  ext : (IsNull (acc_gen O)) X	  u : O.(unCl).(trunctype_type)	  ============================	  Contr X	";
+            data = "1 subgoal (ID 8)	  	  O : Modality	  X : Type	  ============================	  (IsNull (acc_gen O)) X -> ClosedModalities.In O X	1 subgoal (ID 39)	  	  O : Modality	  X : Type	  ext : (IsNull (acc_gen O)) X	  u : unCl O	  ============================	  Contr X	";
             responses[i]=data;
           
 
             i = 111;
-            data = "1 subgoal (ID 48)	  	  O : Modality	  X : Type	  ext : (IsNull (acc_gen O)) X	  u : O.(unCl).(trunctype_type)	  x : X	  ============================	  ((ext u 1).(fst) Empty_rec).(proj1_sig) tt = x	";
+            data = "1 subgoal (ID 48)	  	  O : Modality	  X : Type	  ext : (IsNull (acc_gen O)) X	  u : unCl O	  x : X	  ============================	  (fst (ext u 1) Empty_rec).1 tt = x	";
             responses[i]=data;
           
 
             i = 112;
-            data = "1 subgoal (ID 49)	  	  O : Modality	  X : Type	  ext : (IsNull (acc_gen O)) X	  u : O.(unCl).(trunctype_type)	  x : X	  ============================	  ((ext u 1).(fst) Empty_rec).(proj1_sig) tt = x	";
+            data = "1 subgoal (ID 49)	  	  O : Modality	  X : Type	  ext : (IsNull (acc_gen O)) X	  u : unCl O	  x : X	  ============================	  (fst (ext u 1) Empty_rec).1 tt = x	";
             responses[i]=data;
           
 
@@ -623,7 +623,7 @@
           
 
             i = 121;
-            data = "1 subgoal (ID 4)	  	  O : Modality	  ============================	  forall i : (acc_gen O).(ngen_indices), IsHProp ((acc_gen O).(ngen_type) i)	";
+            data = "1 subgoal (ID 4)	  	  O : Modality	  ============================	  forall i : ngen_indices (acc_gen O), IsHProp ((acc_gen O) i)	";
             responses[i]=data;
           
 

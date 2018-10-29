@@ -203,7 +203,7 @@
           
 
             i = 37;
-            data = "1 subgoal (ID 39)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  ============================	  x.(num) * x.(den) = x.(num) * x.(den)	";
+            data = "1 subgoal (ID 39)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  ============================	  num x * den x = num x * den x	";
             responses[i]=data;
           
 
@@ -218,7 +218,7 @@
           
 
             i = 40;
-            data = "1 subgoal (ID 44)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x, y : Frac	  ============================	  x.(num) * y.(den) = y.(num) * x.(den) ->	  y.(num) * x.(den) = x.(num) * y.(den)	";
+            data = "1 subgoal (ID 44)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x, y : Frac	  ============================	  num x * den y = num y * den x -> num y * den x = num x * den y	";
             responses[i]=data;
           
 
@@ -233,42 +233,42 @@
           
 
             i = 43;
-            data = "1 subgoal (ID 65)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x, y, z : Frac	  ============================	  x.(num) * y.(den) = y.(num) * x.(den) ->	  y.(num) * z.(den) = z.(num) * y.(den) ->	  x.(num) * z.(den) = z.(num) * x.(den)	";
+            data = "1 subgoal (ID 65)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x, y, z : Frac	  ============================	  num x * den y = num y * den x ->	  num y * den z = num z * den y -> num x * den z = num z * den x	";
             responses[i]=data;
           
 
             i = 44;
-            data = "1 subgoal (ID 67)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x, y, z : Frac	  E1 : x.(num) * y.(den) = y.(num) * x.(den)	  E2 : y.(num) * z.(den) = z.(num) * y.(den)	  ============================	  x.(num) * z.(den) = z.(num) * x.(den)	";
+            data = "1 subgoal (ID 67)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x, y, z : Frac	  E1 : num x * den y = num y * den x	  E2 : num y * den z = num z * den y	  ============================	  num x * den z = num z * den x	";
             responses[i]=data;
           
 
             i = 45;
-            data = "2 subgoals (ID 803)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x, y, z : Frac	  E1 : x.(num) * y.(den) = y.(num) * x.(den)	  E2 : y.(num) * z.(den) = z.(num) * y.(den)	  ============================	  PropHolds (y.(den) <> 0)		subgoal 2 (ID 804) is:	 y.(den) * (x.(num) * z.(den)) = y.(den) * (z.(num) * x.(den))	";
+            data = "2 subgoals (ID 803)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x, y, z : Frac	  E1 : num x * den y = num y * den x	  E2 : num y * den z = num z * den y	  ============================	  PropHolds (den y <> 0)		subgoal 2 (ID 804) is:	 den y * (num x * den z) = den y * (num z * den x)	";
             responses[i]=data;
           
 
             i = 46;
-            data = "1 subgoal (ID 803)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x, y, z : Frac	  E1 : x.(num) * y.(den) = y.(num) * x.(den)	  E2 : y.(num) * z.(den) = z.(num) * y.(den)	  ============================	  PropHolds (y.(den) <> 0)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 804)		subgoal 1 (ID 804) is:	 y.(den) * (x.(num) * z.(den)) = y.(den) * (z.(num) * x.(den))	";
+            data = "1 subgoal (ID 803)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x, y, z : Frac	  E1 : num x * den y = num y * den x	  E2 : num y * den z = num z * den y	  ============================	  PropHolds (den y <> 0)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 804)		subgoal 1 (ID 804) is:	 den y * (num x * den z) = den y * (num z * den x)	";
             responses[i]=data;
           
 
             i = 47;
-            data = "1 subgoal (ID 804)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x, y, z : Frac	  E1 : x.(num) * y.(den) = y.(num) * x.(den)	  E2 : y.(num) * z.(den) = z.(num) * y.(den)	  ============================	  y.(den) * (x.(num) * z.(den)) = y.(den) * (z.(num) * x.(den))	1 subgoal (ID 1533)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x, y, z : Frac	  E1 : x.(num) * y.(den) = y.(num) * x.(den)	  E2 : y.(num) * z.(den) = z.(num) * y.(den)	  ============================	  x.(num) * y.(den) * z.(den) = z.(num) * y.(den) * x.(den)	";
+            data = "1 subgoal (ID 804)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x, y, z : Frac	  E1 : num x * den y = num y * den x	  E2 : num y * den z = num z * den y	  ============================	  den y * (num x * den z) = den y * (num z * den x)	1 subgoal (ID 1533)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x, y, z : Frac	  E1 : num x * den y = num y * den x	  E2 : num y * den z = num z * den y	  ============================	  num x * den y * den z = num z * den y * den x	";
             responses[i]=data;
           
 
             i = 48;
-            data = "1 subgoal (ID 1547)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x, y, z : Frac	  E1 : x.(num) * y.(den) = y.(num) * x.(den)	  E2 : y.(num) * z.(den) = z.(num) * y.(den)	  ============================	  y.(num) * x.(den) * z.(den) = y.(num) * z.(den) * x.(den)	";
+            data = "1 subgoal (ID 1547)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x, y, z : Frac	  E1 : num x * den y = num y * den x	  E2 : num y * den z = num z * den y	  ============================	  num y * den x * den z = num y * den z * den x	";
             responses[i]=data;
           
 
             i = 49;
-            data = "1 subgoal (ID 2019)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x, y, z : Frac	  E1 : x.(num) * y.(den) = y.(num) * x.(den)	  E2 : y.(num) * z.(den) = z.(num) * y.(den)	  ============================	  y.(num) * (x.(den) * z.(den)) = y.(num) * (z.(den) * x.(den))	";
+            data = "1 subgoal (ID 2019)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x, y, z : Frac	  E1 : num x * den y = num y * den x	  E2 : num y * den z = num z * den y	  ============================	  num y * (den x * den z) = num y * (den z * den x)	";
             responses[i]=data;
           
 
             i = 50;
-            data = "1 subgoal (ID 2154)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x, y, z : Frac	  E1 : x.(num) * y.(den) = y.(num) * x.(den)	  E2 : y.(num) * z.(den) = z.(num) * y.(den)	  ============================	  y.(num) * (z.(den) * x.(den)) = y.(num) * (z.(den) * x.(den))	";
+            data = "1 subgoal (ID 2154)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x, y, z : Frac	  E1 : num x * den y = num y * den x	  E2 : num y * den z = num z * den y	  ============================	  num y * (den z * den x) = num y * (den z * den x)	";
             responses[i]=data;
           
 
@@ -298,67 +298,67 @@
           
 
             i = 56;
-            data = "1 subgoal (ID 499)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : q1.(num) * q2.(den) = q2.(num) * q1.(den)	  r1, r2 : Frac	  Er : r1.(num) * r2.(den) = r2.(num) * r1.(den)	  ============================	  (q1 + r1).(num) * (q2 + r2).(den) = (q2 + r2).(num) * (q1 + r1).(den)	";
+            data = "1 subgoal (ID 499)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : num q1 * den q2 = num q2 * den q1	  r1, r2 : Frac	  Er : num r1 * den r2 = num r2 * den r1	  ============================	  num (q1 + r1) * den (q2 + r2) = num (q2 + r2) * den (q1 + r1)	";
             responses[i]=data;
           
 
             i = 57;
-            data = "1 subgoal (ID 500)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : q1.(num) * q2.(den) = q2.(num) * q1.(den)	  r1, r2 : Frac	  Er : r1.(num) * r2.(den) = r2.(num) * r1.(den)	  ============================	  (q1.(num) * r1.(den) + r1.(num) * q1.(den)) * (q2.(den) * r2.(den)) =	  (q2.(num) * r2.(den) + r2.(num) * q2.(den)) * (q1.(den) * r1.(den))	";
+            data = "1 subgoal (ID 500)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : num q1 * den q2 = num q2 * den q1	  r1, r2 : Frac	  Er : num r1 * den r2 = num r2 * den r1	  ============================	  (num q1 * den r1 + num r1 * den q1) * (den q2 * den r2) =	  (num q2 * den r2 + num r2 * den q2) * (den q1 * den r1)	";
             responses[i]=data;
           
 
             i = 58;
-            data = "1 subgoal (ID 745)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : q1.(num) * q2.(den) = q2.(num) * q1.(den)	  r1, r2 : Frac	  Er : r1.(num) * r2.(den) = r2.(num) * r1.(den)	  ============================	  q1.(num) * r1.(den) * (q2.(den) * r2.(den)) +	  r1.(num) * q1.(den) * (q2.(den) * r2.(den)) =	  (q2.(num) * r2.(den) + r2.(num) * q2.(den)) * (q1.(den) * r1.(den))	";
+            data = "1 subgoal (ID 745)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : num q1 * den q2 = num q2 * den q1	  r1, r2 : Frac	  Er : num r1 * den r2 = num r2 * den r1	  ============================	  num q1 * den r1 * (den q2 * den r2) + num r1 * den q1 * (den q2 * den r2) =	  (num q2 * den r2 + num r2 * den q2) * (den q1 * den r1)	";
             responses[i]=data;
           
 
             i = 59;
-            data = "1 subgoal (ID 1234)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : q1.(num) * q2.(den) = q2.(num) * q1.(den)	  r1, r2 : Frac	  Er : r1.(num) * r2.(den) = r2.(num) * r1.(den)	  ============================	  q1.(num) * (r1.(den) * (q2.(den) * r2.(den))) +	  r1.(num) * q1.(den) * (q2.(den) * r2.(den)) =	  (q2.(num) * r2.(den) + r2.(num) * q2.(den)) * (q1.(den) * r1.(den))	";
+            data = "1 subgoal (ID 1234)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : num q1 * den q2 = num q2 * den q1	  r1, r2 : Frac	  Er : num r1 * den r2 = num r2 * den r1	  ============================	  num q1 * (den r1 * (den q2 * den r2)) + num r1 * den q1 * (den q2 * den r2) =	  (num q2 * den r2 + num r2 * den q2) * (den q1 * den r1)	";
             responses[i]=data;
           
 
             i = 60;
-            data = "1 subgoal (ID 2354)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : q1.(num) * q2.(den) = q2.(num) * q1.(den)	  r1, r2 : Frac	  Er : r1.(num) * r2.(den) = r2.(num) * r1.(den)	  ============================	  q1.(num) * (q2.(den) * (r1.(den) * r2.(den))) +	  r1.(num) * q1.(den) * (q2.(den) * r2.(den)) =	  (q2.(num) * r2.(den) + r2.(num) * q2.(den)) * (q1.(den) * r1.(den))	";
+            data = "1 subgoal (ID 2354)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : num q1 * den q2 = num q2 * den q1	  r1, r2 : Frac	  Er : num r1 * den r2 = num r2 * den r1	  ============================	  num q1 * (den q2 * (den r1 * den r2)) + num r1 * den q1 * (den q2 * den r2) =	  (num q2 * den r2 + num r2 * den q2) * (den q1 * den r1)	";
             responses[i]=data;
           
 
             i = 61;
-            data = "1 subgoal (ID 2860)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : q1.(num) * q2.(den) = q2.(num) * q1.(den)	  r1, r2 : Frac	  Er : r1.(num) * r2.(den) = r2.(num) * r1.(den)	  ============================	  q2.(num) * q1.(den) * (r1.(den) * r2.(den)) +	  r1.(num) * q1.(den) * (q2.(den) * r2.(den)) =	  (q2.(num) * r2.(den) + r2.(num) * q2.(den)) * (q1.(den) * r1.(den))	";
+            data = "1 subgoal (ID 2860)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : num q1 * den q2 = num q2 * den q1	  r1, r2 : Frac	  Er : num r1 * den r2 = num r2 * den r1	  ============================	  num q2 * den q1 * (den r1 * den r2) + num r1 * den q1 * (den q2 * den r2) =	  (num q2 * den r2 + num r2 * den q2) * (den q1 * den r1)	";
             responses[i]=data;
           
 
             i = 62;
-            data = "1 subgoal (ID 3969)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : q1.(num) * q2.(den) = q2.(num) * q1.(den)	  r1, r2 : Frac	  Er : r1.(num) * r2.(den) = r2.(num) * r1.(den)	  ============================	  q2.(num) * q1.(den) * (r1.(den) * r2.(den)) +	  r1.(num) * (q1.(den) * r2.(den) * q2.(den)) =	  (q2.(num) * r2.(den) + r2.(num) * q2.(den)) * (q1.(den) * r1.(den))	";
+            data = "1 subgoal (ID 3969)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : num q1 * den q2 = num q2 * den q1	  r1, r2 : Frac	  Er : num r1 * den r2 = num r2 * den r1	  ============================	  num q2 * den q1 * (den r1 * den r2) + num r1 * (den q1 * den r2 * den q2) =	  (num q2 * den r2 + num r2 * den q2) * (den q1 * den r1)	";
             responses[i]=data;
           
 
             i = 63;
-            data = "1 subgoal (ID 5089)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : q1.(num) * q2.(den) = q2.(num) * q1.(den)	  r1, r2 : Frac	  Er : r1.(num) * r2.(den) = r2.(num) * r1.(den)	  ============================	  q2.(num) * q1.(den) * (r1.(den) * r2.(den)) +	  r1.(num) * r2.(den) * (q1.(den) * q2.(den)) =	  (q2.(num) * r2.(den) + r2.(num) * q2.(den)) * (q1.(den) * r1.(den))	";
+            data = "1 subgoal (ID 5089)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : num q1 * den q2 = num q2 * den q1	  r1, r2 : Frac	  Er : num r1 * den r2 = num r2 * den r1	  ============================	  num q2 * den q1 * (den r1 * den r2) + num r1 * den r2 * (den q1 * den q2) =	  (num q2 * den r2 + num r2 * den q2) * (den q1 * den r1)	";
             responses[i]=data;
           
 
             i = 64;
-            data = "1 subgoal (ID 5101)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : q1.(num) * q2.(den) = q2.(num) * q1.(den)	  r1, r2 : Frac	  Er : r1.(num) * r2.(den) = r2.(num) * r1.(den)	  ============================	  q2.(num) * q1.(den) * (r1.(den) * r2.(den)) +	  r2.(num) * r1.(den) * (q1.(den) * q2.(den)) =	  (q2.(num) * r2.(den) + r2.(num) * q2.(den)) * (q1.(den) * r1.(den))	";
+            data = "1 subgoal (ID 5101)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : num q1 * den q2 = num q2 * den q1	  r1, r2 : Frac	  Er : num r1 * den r2 = num r2 * den r1	  ============================	  num q2 * den q1 * (den r1 * den r2) + num r2 * den r1 * (den q1 * den q2) =	  (num q2 * den r2 + num r2 * den q2) * (den q1 * den r1)	";
             responses[i]=data;
           
 
             i = 65;
-            data = "1 subgoal (ID 6210)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : q1.(num) * q2.(den) = q2.(num) * q1.(den)	  r1, r2 : Frac	  Er : r1.(num) * r2.(den) = r2.(num) * r1.(den)	  ============================	  q2.(num) * (q1.(den) * r2.(den) * r1.(den)) +	  r2.(num) * r1.(den) * (q1.(den) * q2.(den)) =	  (q2.(num) * r2.(den) + r2.(num) * q2.(den)) * (q1.(den) * r1.(den))	";
+            data = "1 subgoal (ID 6210)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : num q1 * den q2 = num q2 * den q1	  r1, r2 : Frac	  Er : num r1 * den r2 = num r2 * den r1	  ============================	  num q2 * (den q1 * den r2 * den r1) + num r2 * den r1 * (den q1 * den q2) =	  (num q2 * den r2 + num r2 * den q2) * (den q1 * den r1)	";
             responses[i]=data;
           
 
             i = 66;
-            data = "1 subgoal (ID 7330)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : q1.(num) * q2.(den) = q2.(num) * q1.(den)	  r1, r2 : Frac	  Er : r1.(num) * r2.(den) = r2.(num) * r1.(den)	  ============================	  q2.(num) * r2.(den) * (q1.(den) * r1.(den)) +	  r2.(num) * r1.(den) * (q1.(den) * q2.(den)) =	  (q2.(num) * r2.(den) + r2.(num) * q2.(den)) * (q1.(den) * r1.(den))	";
+            data = "1 subgoal (ID 7330)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : num q1 * den q2 = num q2 * den q1	  r1, r2 : Frac	  Er : num r1 * den r2 = num r2 * den r1	  ============================	  num q2 * den r2 * (den q1 * den r1) + num r2 * den r1 * (den q1 * den q2) =	  (num q2 * den r2 + num r2 * den q2) * (den q1 * den r1)	";
             responses[i]=data;
           
 
             i = 67;
-            data = "1 subgoal (ID 8457)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : q1.(num) * q2.(den) = q2.(num) * q1.(den)	  r1, r2 : Frac	  Er : r1.(num) * r2.(den) = r2.(num) * r1.(den)	  ============================	  q2.(num) * r2.(den) * (q1.(den) * r1.(den)) +	  r2.(num) * (q2.(den) * (r1.(den) * q1.(den))) =	  (q2.(num) * r2.(den) + r2.(num) * q2.(den)) * (q1.(den) * r1.(den))	";
+            data = "1 subgoal (ID 8457)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : num q1 * den q2 = num q2 * den q1	  r1, r2 : Frac	  Er : num r1 * den r2 = num r2 * den r1	  ============================	  num q2 * den r2 * (den q1 * den r1) + num r2 * (den q2 * (den r1 * den q1)) =	  (num q2 * den r2 + num r2 * den q2) * (den q1 * den r1)	";
             responses[i]=data;
           
 
             i = 68;
-            data = "1 subgoal (ID 9080)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : q1.(num) * q2.(den) = q2.(num) * q1.(den)	  r1, r2 : Frac	  Er : r1.(num) * r2.(den) = r2.(num) * r1.(den)	  ============================	  q2.(num) * r2.(den) * (q1.(den) * r1.(den)) +	  r2.(num) * q2.(den) * (q1.(den) * r1.(den)) =	  (q2.(num) * r2.(den) + r2.(num) * q2.(den)) * (q1.(den) * r1.(den))	";
+            data = "1 subgoal (ID 9080)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : num q1 * den q2 = num q2 * den q1	  r1, r2 : Frac	  Er : num r1 * den r2 = num r2 * den r1	  ============================	  num q2 * den r2 * (den q1 * den r1) + num r2 * den q2 * (den q1 * den r1) =	  (num q2 * den r2 + num r2 * den q2) * (den q1 * den r1)	";
             responses[i]=data;
           
 
@@ -383,12 +383,12 @@
           
 
             i = 73;
-            data = "1 subgoal (ID 499)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r : Frac	  ============================	  (q.(num) * r.(den) + r.(num) * q.(den)) * (r.(den) * q.(den)) =	  (r.(num) * q.(den) + q.(num) * r.(den)) * (q.(den) * r.(den))	";
+            data = "1 subgoal (ID 499)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r : Frac	  ============================	  (num q * den r + num r * den q) * (den r * den q) =	  (num r * den q + num q * den r) * (den q * den r)	";
             responses[i]=data;
           
 
             i = 74;
-            data = "1 subgoal (ID 767)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r : Frac	  ============================	  (r.(num) * q.(den) + q.(num) * r.(den)) * (q.(den) * r.(den)) =	  (r.(num) * q.(den) + q.(num) * r.(den)) * (q.(den) * r.(den))	";
+            data = "1 subgoal (ID 767)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r : Frac	  ============================	  (num r * den q + num q * den r) * (den q * den r) =	  (num r * den q + num q * den r) * (den q * den r)	";
             responses[i]=data;
           
 
@@ -413,62 +413,62 @@
           
 
             i = 79;
-            data = "1 subgoal (ID 504)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r, t : Frac	  ============================	  (q.(num) * (r.(den) * t.(den)) +	   (r.(num) * t.(den) + t.(num) * r.(den)) * q.(den)) *	  (q.(den) * r.(den) * t.(den)) =	  ((q.(num) * r.(den) + r.(num) * q.(den)) * t.(den) +	   t.(num) * (q.(den) * r.(den))) * (q.(den) * (r.(den) * t.(den)))	";
+            data = "1 subgoal (ID 504)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r, t : Frac	  ============================	  (num q * (den r * den t) + (num r * den t + num t * den r) * den q) *	  (den q * den r * den t) =	  ((num q * den r + num r * den q) * den t + num t * (den q * den r)) *	  (den q * (den r * den t))	";
             responses[i]=data;
           
 
             i = 80;
-            data = "1 subgoal (ID 508)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r, t : Frac	  ============================	  q.(num) * (r.(den) * t.(den)) +	  (r.(num) * t.(den) + t.(num) * r.(den)) * q.(den) =	  (q.(num) * r.(den) + r.(num) * q.(den)) * t.(den) +	  t.(num) * (q.(den) * r.(den))	";
+            data = "1 subgoal (ID 508)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r, t : Frac	  ============================	  num q * (den r * den t) + (num r * den t + num t * den r) * den q =	  (num q * den r + num r * den q) * den t + num t * (den q * den r)	";
             responses[i]=data;
           
 
             i = 81;
-            data = "1 subgoal (ID 1104)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r, t : Frac	  ============================	  q.(num) * (r.(den) * t.(den)) +	  (r.(num) * t.(den) * q.(den) + t.(num) * r.(den) * q.(den)) =	  (q.(num) * r.(den) + r.(num) * q.(den)) * t.(den) +	  t.(num) * (q.(den) * r.(den))	";
+            data = "1 subgoal (ID 1104)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r, t : Frac	  ============================	  num q * (den r * den t) + (num r * den t * den q + num t * den r * den q) =	  (num q * den r + num r * den q) * den t + num t * (den q * den r)	";
             responses[i]=data;
           
 
             i = 82;
-            data = "1 subgoal (ID 1208)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r, t : Frac	  ============================	  q.(num) * (r.(den) * t.(den)) +	  (r.(num) * t.(den) * q.(den) + t.(num) * r.(den) * q.(den)) =	  q.(num) * r.(den) * t.(den) + r.(num) * q.(den) * t.(den) +	  t.(num) * (q.(den) * r.(den))	";
+            data = "1 subgoal (ID 1208)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r, t : Frac	  ============================	  num q * (den r * den t) + (num r * den t * den q + num t * den r * den q) =	  num q * den r * den t + num r * den q * den t + num t * (den q * den r)	";
             responses[i]=data;
           
 
             i = 83;
-            data = "1 subgoal (ID 1402)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r, t : Frac	  ============================	  q.(num) * (r.(den) * t.(den)) + r.(num) * t.(den) * q.(den) +	  t.(num) * r.(den) * q.(den) =	  q.(num) * r.(den) * t.(den) + r.(num) * q.(den) * t.(den) +	  t.(num) * (q.(den) * r.(den))	";
+            data = "1 subgoal (ID 1402)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r, t : Frac	  ============================	  num q * (den r * den t) + num r * den t * den q + num t * den r * den q =	  num q * den r * den t + num r * den q * den t + num t * (den q * den r)	";
             responses[i]=data;
           
 
             i = 84;
-            data = "3 subgoals (ID 1417)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r, t : Frac	  ============================	  q.(num) * (r.(den) * t.(den)) = q.(num) * r.(den) * t.(den)		subgoal 2 (ID 1418) is:	 r.(num) * t.(den) * q.(den) = r.(num) * q.(den) * t.(den)	subgoal 3 (ID 1413) is:	 t.(num) * r.(den) * q.(den) = t.(num) * (q.(den) * r.(den))	";
+            data = "3 subgoals (ID 1417)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r, t : Frac	  ============================	  num q * (den r * den t) = num q * den r * den t		subgoal 2 (ID 1418) is:	 num r * den t * den q = num r * den q * den t	subgoal 3 (ID 1413) is:	 num t * den r * den q = num t * (den q * den r)	";
             responses[i]=data;
           
 
             i = 85;
-            data = "1 subgoal (ID 1417)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r, t : Frac	  ============================	  q.(num) * (r.(den) * t.(den)) = q.(num) * r.(den) * t.(den)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 1418)		subgoal 1 (ID 1418) is:	 r.(num) * t.(den) * q.(den) = r.(num) * q.(den) * t.(den)	subgoal 2 (ID 1413) is:	 t.(num) * r.(den) * q.(den) = t.(num) * (q.(den) * r.(den))	";
+            data = "1 subgoal (ID 1417)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r, t : Frac	  ============================	  num q * (den r * den t) = num q * den r * den t	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 1418)		subgoal 1 (ID 1418) is:	 num r * den t * den q = num r * den q * den t	subgoal 2 (ID 1413) is:	 num t * den r * den q = num t * (den q * den r)	";
             responses[i]=data;
           
 
             i = 86;
-            data = "1 subgoal (ID 1418)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r, t : Frac	  ============================	  r.(num) * t.(den) * q.(den) = r.(num) * q.(den) * t.(den)	1 subgoal (ID 2619)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r, t : Frac	  ============================	  r.(num) * (t.(den) * q.(den)) = r.(num) * (q.(den) * t.(den))	";
+            data = "1 subgoal (ID 1418)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r, t : Frac	  ============================	  num r * den t * den q = num r * den q * den t	1 subgoal (ID 2619)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r, t : Frac	  ============================	  num r * (den t * den q) = num r * (den q * den t)	";
             responses[i]=data;
           
 
             i = 87;
-            data = "1 subgoal (ID 2724)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r, t : Frac	  ============================	  r.(num) * (q.(den) * t.(den)) = r.(num) * (q.(den) * t.(den))	";
+            data = "1 subgoal (ID 2724)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r, t : Frac	  ============================	  num r * (den q * den t) = num r * (den q * den t)	";
             responses[i]=data;
           
 
             i = 88;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1413)		subgoal 1 (ID 1413) is:	 t.(num) * r.(den) * q.(den) = t.(num) * (q.(den) * r.(den))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1413)		subgoal 1 (ID 1413) is:	 num t * den r * den q = num t * (den q * den r)	";
             responses[i]=data;
           
 
             i = 89;
-            data = "1 subgoal (ID 1413)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r, t : Frac	  ============================	  t.(num) * r.(den) * q.(den) = t.(num) * (q.(den) * r.(den))	No more subgoals.	";
+            data = "1 subgoal (ID 1413)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r, t : Frac	  ============================	  num t * den r * den q = num t * (den q * den r)	";
             responses[i]=data;
           
 
             i = 90;
-            data = "<infomsg>pl_assoc is defined</infomsg>	";
+            data = "No more subgoals.	<infomsg>pl_assoc is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -503,37 +503,37 @@
           
 
             i = 97;
-            data = "1 subgoal (ID 516)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : q1.(num) * q2.(den) = q2.(num) * q1.(den)	  r1, r2 : Frac	  Er : r1.(num) * r2.(den) = r2.(num) * r1.(den)	  ============================	  (q1 * r1).(num) * (q2 * r2).(den) = (q2 * r2).(num) * (q1 * r1).(den)	";
+            data = "1 subgoal (ID 516)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : num q1 * den q2 = num q2 * den q1	  r1, r2 : Frac	  Er : num r1 * den r2 = num r2 * den r1	  ============================	  num (q1 * r1) * den (q2 * r2) = num (q2 * r2) * den (q1 * r1)	";
             responses[i]=data;
           
 
             i = 98;
-            data = "1 subgoal (ID 517)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : q1.(num) * q2.(den) = q2.(num) * q1.(den)	  r1, r2 : Frac	  Er : r1.(num) * r2.(den) = r2.(num) * r1.(den)	  ============================	  q1.(num) * r1.(num) * (q2.(den) * r2.(den)) =	  q2.(num) * r2.(num) * (q1.(den) * r1.(den))	";
+            data = "1 subgoal (ID 517)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : num q1 * den q2 = num q2 * den q1	  r1, r2 : Frac	  Er : num r1 * den r2 = num r2 * den r1	  ============================	  num q1 * num r1 * (den q2 * den r2) = num q2 * num r2 * (den q1 * den r1)	";
             responses[i]=data;
           
 
             i = 99;
-            data = "1 subgoal (ID 1494)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : q1.(num) * q2.(den) = q2.(num) * q1.(den)	  r1, r2 : Frac	  Er : r1.(num) * r2.(den) = r2.(num) * r1.(den)	  ============================	  q1.(num) * (r1.(num) * q2.(den) * r2.(den)) =	  q2.(num) * r2.(num) * (q1.(den) * r1.(den))	";
+            data = "1 subgoal (ID 1494)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : num q1 * den q2 = num q2 * den q1	  r1, r2 : Frac	  Er : num r1 * den r2 = num r2 * den r1	  ============================	  num q1 * (num r1 * den q2 * den r2) = num q2 * num r2 * (den q1 * den r1)	";
             responses[i]=data;
           
 
             i = 100;
-            data = "1 subgoal (ID 2614)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : q1.(num) * q2.(den) = q2.(num) * q1.(den)	  r1, r2 : Frac	  Er : r1.(num) * r2.(den) = r2.(num) * r1.(den)	  ============================	  q1.(num) * q2.(den) * (r1.(num) * r2.(den)) =	  q2.(num) * r2.(num) * (q1.(den) * r1.(den))	";
+            data = "1 subgoal (ID 2614)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : num q1 * den q2 = num q2 * den q1	  r1, r2 : Frac	  Er : num r1 * den r2 = num r2 * den r1	  ============================	  num q1 * den q2 * (num r1 * den r2) = num q2 * num r2 * (den q1 * den r1)	";
             responses[i]=data;
           
 
             i = 101;
-            data = "1 subgoal (ID 2627)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : q1.(num) * q2.(den) = q2.(num) * q1.(den)	  r1, r2 : Frac	  Er : r1.(num) * r2.(den) = r2.(num) * r1.(den)	  ============================	  q2.(num) * q1.(den) * (r2.(num) * r1.(den)) =	  q2.(num) * r2.(num) * (q1.(den) * r1.(den))	";
+            data = "1 subgoal (ID 2627)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : num q1 * den q2 = num q2 * den q1	  r1, r2 : Frac	  Er : num r1 * den r2 = num r2 * den r1	  ============================	  num q2 * den q1 * (num r2 * den r1) = num q2 * num r2 * (den q1 * den r1)	";
             responses[i]=data;
           
 
             i = 102;
-            data = "1 subgoal (ID 3741)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : q1.(num) * q2.(den) = q2.(num) * q1.(den)	  r1, r2 : Frac	  Er : r1.(num) * r2.(den) = r2.(num) * r1.(den)	  ============================	  q2.(num) * (r2.(num) * q1.(den) * r1.(den)) =	  q2.(num) * r2.(num) * (q1.(den) * r1.(den))	";
+            data = "1 subgoal (ID 3741)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : num q1 * den q2 = num q2 * den q1	  r1, r2 : Frac	  Er : num r1 * den r2 = num r2 * den r1	  ============================	  num q2 * (num r2 * den q1 * den r1) = num q2 * num r2 * (den q1 * den r1)	";
             responses[i]=data;
           
 
             i = 103;
-            data = "1 subgoal (ID 4664)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : q1.(num) * q2.(den) = q2.(num) * q1.(den)	  r1, r2 : Frac	  Er : r1.(num) * r2.(den) = r2.(num) * r1.(den)	  ============================	  q2.(num) * (r2.(num) * (q1.(den) * r1.(den))) =	  q2.(num) * (r2.(num) * (q1.(den) * r1.(den)))	";
+            data = "1 subgoal (ID 4664)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q1, q2 : Frac	  Eq : num q1 * den q2 = num q2 * den q1	  r1, r2 : Frac	  Er : num r1 * den r2 = num r2 * den r1	  ============================	  num q2 * (num r2 * (den q1 * den r1)) =	  num q2 * (num r2 * (den q1 * den r1))	";
             responses[i]=data;
           
 
@@ -578,12 +578,12 @@
           
 
             i = 112;
-            data = "1 subgoal (ID 522)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r : Frac	  E : q.(num) * r.(den) = r.(num) * q.(den)	  ============================	  - q.(num) * r.(den) = - r.(num) * q.(den)	";
+            data = "1 subgoal (ID 522)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r : Frac	  E : num q * den r = num r * den q	  ============================	  - num q * den r = - num r * den q	";
             responses[i]=data;
           
 
             i = 113;
-            data = "1 subgoal (ID 708)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r : Frac	  E : q.(num) * r.(den) = r.(num) * q.(den)	  ============================	  - (q.(num) * r.(den)) = - (r.(num) * q.(den))	";
+            data = "1 subgoal (ID 708)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r : Frac	  E : num q * den r = num r * den q	  ============================	  - (num q * den r) = - (num r * den q)	";
             responses[i]=data;
           
 
@@ -598,7 +598,7 @@
           
 
             i = 116;
-            data = "1 subgoal (ID 526)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  ============================	  ~ equiv x 0 <-> x.(num) <> 0	";
+            data = "1 subgoal (ID 526)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  ============================	  ~ equiv x 0 <-> num x <> 0	";
             responses[i]=data;
           
 
@@ -608,42 +608,42 @@
           
 
             i = 118;
-            data = "2 subgoals (ID 536)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  E : ~ equiv x 0	  F : x.(num) = 0	  ============================	  equiv x 0		subgoal 2 (ID 537) is:	 x.(num) = 0	";
+            data = "2 subgoals (ID 536)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  E : ~ equiv x 0	  F : num x = 0	  ============================	  equiv x 0		subgoal 2 (ID 537) is:	 num x = 0	";
             responses[i]=data;
           
 
             i = 119;
-            data = "1 subgoal (ID 536)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  E : ~ equiv x 0	  F : x.(num) = 0	  ============================	  equiv x 0	1 subgoal (ID 538)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  E : ~ equiv x 0	  F : x.(num) = 0	  ============================	  x.(num) * 0.(den) = 0.(num) * x.(den)	";
+            data = "1 subgoal (ID 536)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  E : ~ equiv x 0	  F : num x = 0	  ============================	  equiv x 0	1 subgoal (ID 538)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  E : ~ equiv x 0	  F : num x = 0	  ============================	  num x * den 0 = num 0 * den x	";
             responses[i]=data;
           
 
             i = 120;
-            data = "1 subgoal (ID 539)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  E : ~ equiv x 0	  F : x.(num) = 0	  ============================	  0 * 0.(den) = 0.(num) * x.(den)	";
+            data = "1 subgoal (ID 539)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  E : ~ equiv x 0	  F : num x = 0	  ============================	  0 * den 0 = num 0 * den x	";
             responses[i]=data;
           
 
             i = 121;
-            data = "1 subgoal (ID 540)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  E : ~ equiv x 0	  F : x.(num) = 0	  ============================	  0 * 1 = 0 * x.(den)	";
+            data = "1 subgoal (ID 540)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  E : ~ equiv x 0	  F : num x = 0	  ============================	  0 * 1 = 0 * den x	";
             responses[i]=data;
           
 
             i = 122;
-            data = "1 subgoal (ID 960)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  E : ~ equiv x 0	  F : x.(num) = 0	  ============================	  0 = 0	";
+            data = "1 subgoal (ID 960)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  E : ~ equiv x 0	  F : num x = 0	  ============================	  0 = 0	";
             responses[i]=data;
           
 
             i = 123;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 537)		subgoal 1 (ID 537) is:	 x.(num) = 0	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 537)		subgoal 1 (ID 537) is:	 num x = 0	";
             responses[i]=data;
           
 
             i = 124;
-            data = "1 subgoal (ID 537)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  E : x.(num) <> 0	  F : equiv x 0	  ============================	  x.(num) = 0	1 subgoal (ID 969)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  E : x.(num) <> 0	  F : x.(num) * 1 = 0 * x.(den)	  ============================	  x.(num) = 0	";
+            data = "1 subgoal (ID 537)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  E : num x <> 0	  F : equiv x 0	  ============================	  num x = 0	1 subgoal (ID 969)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  E : num x <> 0	  F : num x * 1 = 0 * den x	  ============================	  num x = 0	";
             responses[i]=data;
           
 
             i = 125;
-            data = "1 subgoal (ID 1396)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  E : x.(num) <> 0	  F : x.(num) = 0	  ============================	  x.(num) = 0	";
+            data = "1 subgoal (ID 1396)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  E : num x <> 0	  F : num x = 0	  ============================	  num x = 0	";
             responses[i]=data;
           
 
@@ -668,12 +668,12 @@
           
 
             i = 130;
-            data = "1 subgoal (ID 537)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  ============================	  (0 * x.(den) + x.(num) * 1) * x.(den) = x.(num) * (1 * x.(den))	";
+            data = "1 subgoal (ID 537)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  ============================	  (0 * den x + num x * 1) * den x = num x * (1 * den x)	";
             responses[i]=data;
           
 
             i = 131;
-            data = "1 subgoal (ID 1203)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  ============================	  x.(num) * x.(den) = x.(num) * x.(den)	";
+            data = "1 subgoal (ID 1203)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  ============================	  num x * den x = num x * den x	";
             responses[i]=data;
           
 
@@ -698,12 +698,12 @@
           
 
             i = 136;
-            data = "1 subgoal (ID 546)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  ============================	  (x.(num) * 1 + 0 * x.(den)) * x.(den) = x.(num) * (x.(den) * 1)	";
+            data = "1 subgoal (ID 546)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  ============================	  (num x * 1 + 0 * den x) * den x = num x * (den x * 1)	";
             responses[i]=data;
           
 
             i = 137;
-            data = "1 subgoal (ID 1206)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  ============================	  x.(num) * x.(den) = x.(num) * x.(den)	";
+            data = "1 subgoal (ID 1206)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  ============================	  num x * den x = num x * den x	";
             responses[i]=data;
           
 
@@ -728,22 +728,22 @@
           
 
             i = 142;
-            data = "1 subgoal (ID 557)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  ============================	  (- x.(num) * x.(den) + x.(num) * x.(den)) * 1 = 0 * (x.(den) * x.(den))	";
+            data = "1 subgoal (ID 557)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  ============================	  (- num x * den x + num x * den x) * 1 = 0 * (den x * den x)	";
             responses[i]=data;
           
 
             i = 143;
-            data = "1 subgoal (ID 887)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  ============================	  - x.(num) * x.(den) + x.(num) * x.(den) = 0	";
+            data = "1 subgoal (ID 887)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  ============================	  - num x * den x + num x * den x = 0	";
             responses[i]=data;
           
 
             i = 144;
-            data = "1 subgoal (ID 1054)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  ============================	  (- x.(num) + x.(num)) * x.(den) = 0	";
+            data = "1 subgoal (ID 1054)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  ============================	  (- num x + num x) * den x = 0	";
             responses[i]=data;
           
 
             i = 145;
-            data = "1 subgoal (ID 1131)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  ============================	  0 * x.(den) = 0	";
+            data = "1 subgoal (ID 1131)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac	  ============================	  0 * den x = 0	";
             responses[i]=data;
           
 
@@ -768,12 +768,12 @@
           
 
             i = 150;
-            data = "1 subgoal (ID 564)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r, t : Frac	  ============================	  q.(num) * (r.(num) * t.(num)) * (q.(den) * r.(den) * t.(den)) =	  q.(num) * r.(num) * t.(num) * (q.(den) * (r.(den) * t.(den)))	";
+            data = "1 subgoal (ID 564)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r, t : Frac	  ============================	  num q * (num r * num t) * (den q * den r * den t) =	  num q * num r * num t * (den q * (den r * den t))	";
             responses[i]=data;
           
 
             i = 151;
-            data = "1 subgoal (ID 1369)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r, t : Frac	  ============================	  q.(num) * r.(num) * t.(num) * (q.(den) * r.(den) * t.(den)) =	  q.(num) * r.(num) * t.(num) * (q.(den) * r.(den) * t.(den))	";
+            data = "1 subgoal (ID 1369)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r, t : Frac	  ============================	  num q * num r * num t * (den q * den r * den t) =	  num q * num r * num t * (den q * den r * den t)	";
             responses[i]=data;
           
 
@@ -803,62 +803,62 @@
           
 
             i = 157;
-            data = "1 subgoal (ID 998)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r : Frac	  E : q.(num) * r.(den) = r.(num) * q.(den)	  ============================	  match decide_rel paths q.(num) 0 with	  | inl _ => 0	  | inr P => {| num := q.(den); den := q.(num); den_ne_0 := P |}	  end.(num) *	  match decide_rel paths r.(num) 0 with	  | inl _ => 0	  | inr P => {| num := r.(den); den := r.(num); den_ne_0 := P |}	  end.(den) =	  match decide_rel paths r.(num) 0 with	  | inl _ => 0	  | inr P => {| num := r.(den); den := r.(num); den_ne_0 := P |}	  end.(num) *	  match decide_rel paths q.(num) 0 with	  | inl _ => 0	  | inr P => {| num := q.(den); den := q.(num); den_ne_0 := P |}	  end.(den)	";
+            data = "1 subgoal (ID 998)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r : Frac	  E : num q * den r = num r * den q	  ============================	  num	    match decide_rel paths (num q) 0 with	    | inl _ => 0	    | inr P => {| num := den q; den := num q; den_ne_0 := P |}	    end *	  den	    match decide_rel paths (num r) 0 with	    | inl _ => 0	    | inr P => {| num := den r; den := num r; den_ne_0 := P |}	    end =	  num	    match decide_rel paths (num r) 0 with	    | inl _ => 0	    | inr P => {| num := den r; den := num r; den_ne_0 := P |}	    end *	  den	    match decide_rel paths (num q) 0 with	    | inl _ => 0	    | inr P => {| num := den q; den := num q; den_ne_0 := P |}	    end	";
             responses[i]=data;
           
 
             i = 158;
-            data = "4 subgoals (ID 1047)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r : Frac	  E : q.(num) * r.(den) = r.(num) * q.(den)	  E1 : q.(num) = 0	  E2 : r.(num) = 0	  ============================	  0 * 1 = 0 * 1		subgoal 2 (ID 1048) is:	 0 * r.(num) = r.(den) * 1	subgoal 3 (ID 1049) is:	 q.(den) * 1 = 0 * q.(num)	subgoal 4 (ID 1050) is:	 q.(den) * r.(num) = r.(den) * q.(num)	";
+            data = "4 subgoals (ID 1047)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r : Frac	  E : num q * den r = num r * den q	  E1 : num q = 0	  E2 : num r = 0	  ============================	  0 * 1 = 0 * 1		subgoal 2 (ID 1048) is:	 0 * num r = den r * 1	subgoal 3 (ID 1049) is:	 den q * 1 = 0 * num q	subgoal 4 (ID 1050) is:	 den q * num r = den r * num q	";
             responses[i]=data;
           
 
             i = 159;
-            data = "1 subgoal (ID 1047)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r : Frac	  E : q.(num) * r.(den) = r.(num) * q.(den)	  E1 : q.(num) = 0	  E2 : r.(num) = 0	  ============================	  0 * 1 = 0 * 1	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	3 subgoals (ID 1048)		subgoal 1 (ID 1048) is:	 0 * r.(num) = r.(den) * 1	subgoal 2 (ID 1049) is:	 q.(den) * 1 = 0 * q.(num)	subgoal 3 (ID 1050) is:	 q.(den) * r.(num) = r.(den) * q.(num)	";
+            data = "1 subgoal (ID 1047)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r : Frac	  E : num q * den r = num r * den q	  E1 : num q = 0	  E2 : num r = 0	  ============================	  0 * 1 = 0 * 1	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	3 subgoals (ID 1048)		subgoal 1 (ID 1048) is:	 0 * num r = den r * 1	subgoal 2 (ID 1049) is:	 den q * 1 = 0 * num q	subgoal 3 (ID 1050) is:	 den q * num r = den r * num q	";
             responses[i]=data;
           
 
             i = 160;
-            data = "1 subgoal (ID 1048)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r : Frac	  E : q.(num) * r.(den) = r.(num) * q.(den)	  E1 : q.(num) = 0	  E2 : r.(num) <> 0	  ============================	  0 * r.(num) = r.(den) * 1	1 subgoal (ID 1286)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r : Frac	  E : 0 = r.(num) * q.(den)	  E1 : q.(num) = 0	  E2 : r.(num) <> 0	  ============================	  0 * r.(num) = r.(den) * 1	";
+            data = "1 subgoal (ID 1048)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r : Frac	  E : num q * den r = num r * den q	  E1 : num q = 0	  E2 : num r <> 0	  ============================	  0 * num r = den r * 1	1 subgoal (ID 1286)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r : Frac	  E : 0 = num r * den q	  E1 : num q = 0	  E2 : num r <> 0	  ============================	  0 * num r = den r * 1	";
             responses[i]=data;
           
 
             i = 161;
-            data = "1 subgoal (ID 1297)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r : Frac	  E : 0 = r.(num) * q.(den)	  E1 : q.(num) = 0	  ============================	  r.(num) = 0	";
+            data = "1 subgoal (ID 1297)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r : Frac	  E : 0 = num r * den q	  E1 : num q = 0	  ============================	  num r = 0	";
             responses[i]=data;
           
 
             i = 162;
-            data = "1 subgoal (ID 2305)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r : Frac	  E : 0 = r.(num) * q.(den)	  E1 : q.(num) = 0	  ============================	  r.(num) * q.(den) = 0 * q.(den)	";
+            data = "1 subgoal (ID 2305)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r : Frac	  E : 0 = num r * den q	  E1 : num q = 0	  ============================	  num r * den q = 0 * den q	";
             responses[i]=data;
           
 
             i = 163;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 1049)		subgoal 1 (ID 1049) is:	 q.(den) * 1 = 0 * q.(num)	subgoal 2 (ID 1050) is:	 q.(den) * r.(num) = r.(den) * q.(num)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 1049)		subgoal 1 (ID 1049) is:	 den q * 1 = 0 * num q	subgoal 2 (ID 1050) is:	 den q * num r = den r * num q	";
             responses[i]=data;
           
 
             i = 164;
-            data = "1 subgoal (ID 1049)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r : Frac	  E : q.(num) * r.(den) = r.(num) * q.(den)	  E1 : q.(num) <> 0	  E2 : r.(num) = 0	  ============================	  q.(den) * 1 = 0 * q.(num)	1 subgoal (ID 2841)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r : Frac	  E : q.(num) * r.(den) = 0	  E1 : q.(num) <> 0	  E2 : r.(num) = 0	  ============================	  q.(den) * 1 = 0 * q.(num)	";
+            data = "1 subgoal (ID 1049)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r : Frac	  E : num q * den r = num r * den q	  E1 : num q <> 0	  E2 : num r = 0	  ============================	  den q * 1 = 0 * num q	1 subgoal (ID 2841)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r : Frac	  E : num q * den r = 0	  E1 : num q <> 0	  E2 : num r = 0	  ============================	  den q * 1 = 0 * num q	";
             responses[i]=data;
           
 
             i = 165;
-            data = "1 subgoal (ID 2852)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r : Frac	  E : q.(num) * r.(den) = 0	  E2 : r.(num) = 0	  ============================	  q.(num) = 0	";
+            data = "1 subgoal (ID 2852)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r : Frac	  E : num q * den r = 0	  E2 : num r = 0	  ============================	  num q = 0	";
             responses[i]=data;
           
 
             i = 166;
-            data = "1 subgoal (ID 3860)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r : Frac	  E : q.(num) * r.(den) = 0	  E2 : r.(num) = 0	  ============================	  q.(num) * r.(den) = 0 * r.(den)	";
+            data = "1 subgoal (ID 3860)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r : Frac	  E : num q * den r = 0	  E2 : num r = 0	  ============================	  num q * den r = 0 * den r	";
             responses[i]=data;
           
 
             i = 167;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1050)		subgoal 1 (ID 1050) is:	 q.(den) * r.(num) = r.(den) * q.(num)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1050)		subgoal 1 (ID 1050) is:	 den q * num r = den r * num q	";
             responses[i]=data;
           
 
             i = 168;
-            data = "1 subgoal (ID 1050)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r : Frac	  E : q.(num) * r.(den) = r.(num) * q.(den)	  E1 : q.(num) <> 0	  E2 : r.(num) <> 0	  ============================	  q.(den) * r.(num) = r.(den) * q.(num)	1 subgoal (ID 4372)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r : Frac	  E : q.(num) * r.(den) = r.(num) * q.(den)	  E1 : q.(num) <> 0	  E2 : r.(num) <> 0	  ============================	  r.(num) * q.(den) = q.(num) * r.(den)	";
+            data = "1 subgoal (ID 1050)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r : Frac	  E : num q * den r = num r * den q	  E1 : num q <> 0	  E2 : num r <> 0	  ============================	  den q * num r = den r * num q	1 subgoal (ID 4372)	  	  H : Funext	  H0 : Univalence	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q, r : Frac	  E : num q * den r = num r * den q	  E1 : num q <> 0	  E2 : num r <> 0	  ============================	  num r * den q = num q * den r	";
             responses[i]=data;
           
 
@@ -938,12 +938,12 @@
           
 
             i = 184;
-            data = "1 subgoal (ID 35)	  	  R1 : Type	  Aplus : Plus R1	  Amult : Mult R1	  Azero : Zero R1	  Aone : One R1	  Anegate : Negate R1	  H : IntegralDomain R1	  H0 : DecidablePaths R1	  R2 : Type	  Aplus0 : Plus R2	  Amult0 : Mult R2	  Azero0 : Zero R2	  Aone0 : One R2	  Anegate0 : Negate R2	  H1 : IntegralDomain R2	  H2 : DecidablePaths R2	  f : R1 -> R2	  SemiRingPreserving0 : SemiRingPreserving f	  Injective0 : Injective f	  x : Frac R1	  ============================	  PropHolds (f x.(den) <> 0)	";
+            data = "1 subgoal (ID 35)	  	  R1 : Type	  Aplus : Plus R1	  Amult : Mult R1	  Azero : Zero R1	  Aone : One R1	  Anegate : Negate R1	  H : IntegralDomain R1	  H0 : DecidablePaths R1	  R2 : Type	  Aplus0 : Plus R2	  Amult0 : Mult R2	  Azero0 : Zero R2	  Aone0 : One R2	  Anegate0 : Negate R2	  H1 : IntegralDomain R2	  H2 : DecidablePaths R2	  f : R1 -> R2	  SemiRingPreserving0 : SemiRingPreserving f	  Injective0 : Injective f	  x : Frac R1	  ============================	  PropHolds (f (den x) <> 0)	";
             responses[i]=data;
           
 
             i = 185;
-            data = "1 subgoal (ID 49)	  	  R1 : Type	  Aplus : Plus R1	  Amult : Mult R1	  Azero : Zero R1	  Aone : One R1	  Anegate : Negate R1	  H : IntegralDomain R1	  H0 : DecidablePaths R1	  R2 : Type	  Aplus0 : Plus R2	  Amult0 : Mult R2	  Azero0 : Zero R2	  Aone0 : One R2	  Anegate0 : Negate R2	  H1 : IntegralDomain R2	  H2 : DecidablePaths R2	  f : R1 -> R2	  SemiRingPreserving0 : SemiRingPreserving f	  Injective0 : Injective f	  x : Frac R1	  ============================	  PropHolds (x.(den) <> 0)	";
+            data = "1 subgoal (ID 49)	  	  R1 : Type	  Aplus : Plus R1	  Amult : Mult R1	  Azero : Zero R1	  Aone : One R1	  Anegate : Negate R1	  H : IntegralDomain R1	  H0 : DecidablePaths R1	  R2 : Type	  Aplus0 : Plus R2	  Amult0 : Mult R2	  Azero0 : Zero R2	  Aone0 : One R2	  Anegate0 : Negate R2	  H1 : IntegralDomain R2	  H2 : DecidablePaths R2	  f : R1 -> R2	  SemiRingPreserving0 : SemiRingPreserving f	  Injective0 : Injective f	  x : Frac R1	  ============================	  PropHolds (den x <> 0)	";
             responses[i]=data;
           
 
@@ -968,12 +968,12 @@
           
 
             i = 190;
-            data = "1 subgoal (ID 44)	  	  R1 : Type	  Aplus : Plus R1	  Amult : Mult R1	  Azero : Zero R1	  Aone : One R1	  Anegate : Negate R1	  H : IntegralDomain R1	  H0 : DecidablePaths R1	  R2 : Type	  Aplus0 : Plus R2	  Amult0 : Mult R2	  Azero0 : Zero R2	  Aone0 : One R2	  Anegate0 : Negate R2	  H1 : IntegralDomain R2	  H2 : DecidablePaths R2	  f : R1 -> R2	  SemiRingPreserving0 : SemiRingPreserving f	  Injective0 : Injective f	  q, r : Frac R1	  E : q.(num) * r.(den) = r.(num) * q.(den)	  ============================	  f q.(num) * f r.(den) = f r.(num) * f q.(den)	";
+            data = "1 subgoal (ID 44)	  	  R1 : Type	  Aplus : Plus R1	  Amult : Mult R1	  Azero : Zero R1	  Aone : One R1	  Anegate : Negate R1	  H : IntegralDomain R1	  H0 : DecidablePaths R1	  R2 : Type	  Aplus0 : Plus R2	  Amult0 : Mult R2	  Azero0 : Zero R2	  Aone0 : One R2	  Anegate0 : Negate R2	  H1 : IntegralDomain R2	  H2 : DecidablePaths R2	  f : R1 -> R2	  SemiRingPreserving0 : SemiRingPreserving f	  Injective0 : Injective f	  q, r : Frac R1	  E : num q * den r = num r * den q	  ============================	  f (num q) * f (den r) = f (num r) * f (den q)	";
             responses[i]=data;
           
 
             i = 191;
-            data = "1 subgoal (ID 70)	  	  R1 : Type	  Aplus : Plus R1	  Amult : Mult R1	  Azero : Zero R1	  Aone : One R1	  Anegate : Negate R1	  H : IntegralDomain R1	  H0 : DecidablePaths R1	  R2 : Type	  Aplus0 : Plus R2	  Amult0 : Mult R2	  Azero0 : Zero R2	  Aone0 : One R2	  Anegate0 : Negate R2	  H1 : IntegralDomain R2	  H2 : DecidablePaths R2	  f : R1 -> R2	  SemiRingPreserving0 : SemiRingPreserving f	  Injective0 : Injective f	  q, r : Frac R1	  E : q.(num) * r.(den) = r.(num) * q.(den)	  ============================	  f (q.(num) * r.(den)) = f (r.(num) * q.(den))	";
+            data = "1 subgoal (ID 70)	  	  R1 : Type	  Aplus : Plus R1	  Amult : Mult R1	  Azero : Zero R1	  Aone : One R1	  Anegate : Negate R1	  H : IntegralDomain R1	  H0 : DecidablePaths R1	  R2 : Type	  Aplus0 : Plus R2	  Amult0 : Mult R2	  Azero0 : Zero R2	  Aone0 : One R2	  Anegate0 : Negate R2	  H1 : IntegralDomain R2	  H2 : DecidablePaths R2	  f : R1 -> R2	  SemiRingPreserving0 : SemiRingPreserving f	  Injective0 : Injective f	  q, r : Frac R1	  E : num q * den r = num r * den q	  ============================	  f (num q * den r) = f (num r * den q)	";
             responses[i]=data;
           
 
@@ -1483,12 +1483,12 @@
           
 
             i = 293;
-            data = "1 subgoal (ID 1905)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac R	  ============================	  1 * x.(num) * x.(den) = x.(num) * (1 * x.(den))	";
+            data = "1 subgoal (ID 1905)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac R	  ============================	  1 * num x * den x = num x * (1 * den x)	";
             responses[i]=data;
           
 
             i = 294;
-            data = "1 subgoal (ID 2249)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac R	  ============================	  x.(num) * x.(den) = x.(num) * x.(den)	";
+            data = "1 subgoal (ID 2249)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac R	  ============================	  num x * den x = num x * den x	";
             responses[i]=data;
           
 
@@ -1513,12 +1513,12 @@
           
 
             i = 299;
-            data = "1 subgoal (ID 2395)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac R	  ============================	  x.(num) * 1 * x.(den) = x.(num) * (x.(den) * 1)	";
+            data = "1 subgoal (ID 2395)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac R	  ============================	  num x * 1 * den x = num x * (den x * 1)	";
             responses[i]=data;
           
 
             i = 300;
-            data = "1 subgoal (ID 2739)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac R	  ============================	  x.(num) * x.(den) = x.(num) * x.(den)	";
+            data = "1 subgoal (ID 2739)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac R	  ============================	  num x * den x = num x * den x	";
             responses[i]=data;
           
 
@@ -1538,12 +1538,12 @@
           
 
             i = 304;
-            data = "1 subgoal (ID 2919)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x, y : Frac R	  ============================	  x.(num) * y.(num) * (y.(den) * x.(den)) =	  y.(num) * x.(num) * (x.(den) * y.(den))	";
+            data = "1 subgoal (ID 2919)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x, y : Frac R	  ============================	  num x * num y * (den y * den x) = num y * num x * (den x * den y)	";
             responses[i]=data;
           
 
             i = 305;
-            data = "1 subgoal (ID 3119)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x, y : Frac R	  ============================	  x.(num) * y.(num) * (x.(den) * y.(den)) =	  x.(num) * y.(num) * (x.(den) * y.(den))	";
+            data = "1 subgoal (ID 3119)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x, y : Frac R	  ============================	  num x * num y * (den x * den y) = num x * num y * (den x * den y)	";
             responses[i]=data;
           
 
@@ -1568,67 +1568,67 @@
           
 
             i = 310;
-            data = "1 subgoal (ID 3337)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  a, b, c : Frac R	  ============================	  a.(num) * (b.(num) * c.(den) + c.(num) * b.(den)) *	  (a.(den) * b.(den) * (a.(den) * c.(den))) =	  (a.(num) * b.(num) * (a.(den) * c.(den)) +	   a.(num) * c.(num) * (a.(den) * b.(den))) * (a.(den) * (b.(den) * c.(den)))	";
+            data = "1 subgoal (ID 3337)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  a, b, c : Frac R	  ============================	  num a * (num b * den c + num c * den b) * (den a * den b * (den a * den c)) =	  (num a * num b * (den a * den c) + num a * num c * (den a * den b)) *	  (den a * (den b * den c))	";
             responses[i]=data;
           
 
             i = 311;
-            data = "1 subgoal (ID 3640)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  a, b, c : Frac R	  ============================	  a.(num) *	  ((b.(num) * c.(den) + c.(num) * b.(den)) *	   (a.(den) * b.(den) * (a.(den) * c.(den)))) =	  (a.(num) * (b.(num) * (a.(den) * c.(den))) +	   a.(num) * (c.(num) * (a.(den) * b.(den)))) *	  (a.(den) * (b.(den) * c.(den)))	";
+            data = "1 subgoal (ID 3640)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  a, b, c : Frac R	  ============================	  num a *	  ((num b * den c + num c * den b) * (den a * den b * (den a * den c))) =	  (num a * (num b * (den a * den c)) + num a * (num c * (den a * den b))) *	  (den a * (den b * den c))	";
             responses[i]=data;
           
 
             i = 312;
-            data = "1 subgoal (ID 3847)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  a, b, c : Frac R	  ============================	  a.(num) *	  ((b.(num) * c.(den) + c.(num) * b.(den)) *	   (a.(den) * b.(den) * (a.(den) * c.(den)))) =	  a.(num) * (b.(num) * (a.(den) * c.(den)) + c.(num) * (a.(den) * b.(den))) *	  (a.(den) * (b.(den) * c.(den)))	";
+            data = "1 subgoal (ID 3847)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  a, b, c : Frac R	  ============================	  num a *	  ((num b * den c + num c * den b) * (den a * den b * (den a * den c))) =	  num a * (num b * (den a * den c) + num c * (den a * den b)) *	  (den a * (den b * den c))	";
             responses[i]=data;
           
 
             i = 313;
-            data = "1 subgoal (ID 3954)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  a, b, c : Frac R	  ============================	  a.(num) *	  ((b.(num) * c.(den) + c.(num) * b.(den)) *	   (a.(den) * b.(den) * (a.(den) * c.(den)))) =	  a.(num) *	  ((b.(num) * (a.(den) * c.(den)) + c.(num) * (a.(den) * b.(den))) *	   (a.(den) * (b.(den) * c.(den))))	";
+            data = "1 subgoal (ID 3954)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  a, b, c : Frac R	  ============================	  num a *	  ((num b * den c + num c * den b) * (den a * den b * (den a * den c))) =	  num a *	  ((num b * (den a * den c) + num c * (den a * den b)) *	   (den a * (den b * den c)))	";
             responses[i]=data;
           
 
             i = 314;
-            data = "1 subgoal (ID 3965)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  a, b, c : Frac R	  ============================	  (b.(num) * c.(den) + c.(num) * b.(den)) *	  (a.(den) * b.(den) * (a.(den) * c.(den))) =	  (b.(num) * (a.(den) * c.(den)) + c.(num) * (a.(den) * b.(den))) *	  (a.(den) * (b.(den) * c.(den)))	";
+            data = "1 subgoal (ID 3965)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  a, b, c : Frac R	  ============================	  (num b * den c + num c * den b) * (den a * den b * (den a * den c)) =	  (num b * (den a * den c) + num c * (den a * den b)) *	  (den a * (den b * den c))	";
             responses[i]=data;
           
 
             i = 315;
-            data = "1 subgoal (ID 4181)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  a, b, c : Frac R	  ============================	  (b.(num) * c.(den) + c.(num) * b.(den)) *	  (b.(den) * a.(den) * (c.(den) * a.(den))) =	  (b.(num) * (c.(den) * a.(den)) + c.(num) * (b.(den) * a.(den))) *	  (a.(den) * (b.(den) * c.(den)))	";
+            data = "1 subgoal (ID 4181)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  a, b, c : Frac R	  ============================	  (num b * den c + num c * den b) * (den b * den a * (den c * den a)) =	  (num b * (den c * den a) + num c * (den b * den a)) *	  (den a * (den b * den c))	";
             responses[i]=data;
           
 
             i = 316;
-            data = "1 subgoal (ID 4401)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  a, b, c : Frac R	  ============================	  (b.(num) * c.(den) + c.(num) * b.(den)) *	  (b.(den) * a.(den) * (c.(den) * a.(den))) =	  (b.(num) * c.(den) * a.(den) + c.(num) * b.(den) * a.(den)) *	  (a.(den) * (b.(den) * c.(den)))	";
+            data = "1 subgoal (ID 4401)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  a, b, c : Frac R	  ============================	  (num b * den c + num c * den b) * (den b * den a * (den c * den a)) =	  (num b * den c * den a + num c * den b * den a) * (den a * (den b * den c))	";
             responses[i]=data;
           
 
             i = 317;
-            data = "1 subgoal (ID 4600)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  a, b, c : Frac R	  ============================	  (b.(num) * c.(den) + c.(num) * b.(den)) *	  (b.(den) * a.(den) * (c.(den) * a.(den))) =	  (b.(num) * c.(den) + c.(num) * b.(den)) * a.(den) *	  (a.(den) * (b.(den) * c.(den)))	";
+            data = "1 subgoal (ID 4600)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  a, b, c : Frac R	  ============================	  (num b * den c + num c * den b) * (den b * den a * (den c * den a)) =	  (num b * den c + num c * den b) * den a * (den a * (den b * den c))	";
             responses[i]=data;
           
 
             i = 318;
-            data = "1 subgoal (ID 4714)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  a, b, c : Frac R	  ============================	  (b.(num) * c.(den) + c.(num) * b.(den)) *	  (b.(den) * a.(den) * (c.(den) * a.(den))) =	  (b.(num) * c.(den) + c.(num) * b.(den)) *	  (a.(den) * (a.(den) * (b.(den) * c.(den))))	";
+            data = "1 subgoal (ID 4714)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  a, b, c : Frac R	  ============================	  (num b * den c + num c * den b) * (den b * den a * (den c * den a)) =	  (num b * den c + num c * den b) * (den a * (den a * (den b * den c)))	";
             responses[i]=data;
           
 
             i = 319;
-            data = "1 subgoal (ID 4732)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  a, b, c : Frac R	  ============================	  b.(den) * a.(den) * (c.(den) * a.(den)) =	  a.(den) * (a.(den) * (b.(den) * c.(den)))	";
+            data = "1 subgoal (ID 4732)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  a, b, c : Frac R	  ============================	  den b * den a * (den c * den a) = den a * (den a * (den b * den c))	";
             responses[i]=data;
           
 
             i = 320;
-            data = "1 subgoal (ID 5035)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  a, b, c : Frac R	  ============================	  a.(den) * (b.(den) * (c.(den) * a.(den))) =	  a.(den) * (a.(den) * (b.(den) * c.(den)))	";
+            data = "1 subgoal (ID 5035)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  a, b, c : Frac R	  ============================	  den a * (den b * (den c * den a)) = den a * (den a * (den b * den c))	";
             responses[i]=data;
           
 
             i = 321;
-            data = "1 subgoal (ID 5044)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  a, b, c : Frac R	  ============================	  b.(den) * (c.(den) * a.(den)) = a.(den) * (b.(den) * c.(den))	";
+            data = "1 subgoal (ID 5044)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  a, b, c : Frac R	  ============================	  den b * (den c * den a) = den a * (den b * den c)	";
             responses[i]=data;
           
 
             i = 322;
-            data = "1 subgoal (ID 5145)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  a, b, c : Frac R	  ============================	  b.(den) * (c.(den) * a.(den)) = b.(den) * c.(den) * a.(den)	";
+            data = "1 subgoal (ID 5145)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  a, b, c : Frac R	  ============================	  den b * (den c * den a) = den b * den c * den a	";
             responses[i]=data;
           
 
@@ -1783,7 +1783,7 @@
           
 
             i = 353;
-            data = "1 subgoal (ID 990)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  ============================	  forall q : Frac R, ' q <> 0 -> q.(num) <> 0	";
+            data = "1 subgoal (ID 990)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  ============================	  forall q : Frac R, ' q <> 0 -> num q <> 0	";
             responses[i]=data;
           
 
@@ -1793,12 +1793,12 @@
           
 
             i = 355;
-            data = "1 subgoal (ID 993)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : ~ equiv q (Frac_inject R 0)	  ============================	  q.(num) <> 0	";
+            data = "1 subgoal (ID 993)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : ~ equiv q (Frac_inject R 0)	  ============================	  num q <> 0	";
             responses[i]=data;
           
 
             i = 356;
-            data = "1 subgoal (ID 999)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : q.(num) <> 0	  ============================	  q.(num) <> 0	";
+            data = "1 subgoal (ID 999)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : num q <> 0	  ============================	  num q <> 0	";
             responses[i]=data;
           
 
@@ -1813,7 +1813,7 @@
           
 
             i = 359;
-            data = "1 subgoal (ID 1028)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  ============================	  forall (q : Frac R) (E : ' q <> 0),	  / ' q =	  ' {|	    num := q.(den);	    den := q.(num);	    den_ne_0 := dec_recip_nonzero_aux q E |}	";
+            data = "1 subgoal (ID 1028)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  ============================	  forall (q : Frac R) (E : ' q <> 0),	  / ' q =	  ' {| num := den q; den := num q; den_ne_0 := dec_recip_nonzero_aux q E |}	";
             responses[i]=data;
           
 
@@ -1823,37 +1823,37 @@
           
 
             i = 361;
-            data = "1 subgoal (ID 1030)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : ' q <> 0	  ============================	  / ' q =	  ' {|	    num := q.(den);	    den := q.(num);	    den_ne_0 := dec_recip_nonzero_aux q E |}	";
+            data = "1 subgoal (ID 1030)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : ' q <> 0	  ============================	  / ' q =	  ' {| num := den q; den := num q; den_ne_0 := dec_recip_nonzero_aux q E |}	";
             responses[i]=data;
           
 
             i = 362;
-            data = "1 subgoal (ID 1033)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : ' q <> 0	  ============================	  equiv (dec_rec R q)	    {|	    num := q.(den);	    den := q.(num);	    den_ne_0 := dec_recip_nonzero_aux q E |}	";
+            data = "1 subgoal (ID 1033)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : ' q <> 0	  ============================	  equiv (dec_rec R q)	    {| num := den q; den := num q; den_ne_0 := dec_recip_nonzero_aux q E |}	";
             responses[i]=data;
           
 
             i = 363;
-            data = "1 subgoal (ID 1035)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : ' q <> 0	  ============================	  (dec_rec R q).(num) * q.(num) = q.(den) * (dec_rec R q).(den)	";
+            data = "1 subgoal (ID 1035)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : ' q <> 0	  ============================	  num (dec_rec R q) * num q = den q * den (dec_rec R q)	";
             responses[i]=data;
           
 
             i = 364;
-            data = "1 subgoal (ID 1036)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : ' q <> 0	  ============================	  match decide_rel paths q.(num) 0 with	  | inl _ => 0	  | inr P => {| num := q.(den); den := q.(num); den_ne_0 := P |}	  end.(num) * q.(num) =	  q.(den) *	  match decide_rel paths q.(num) 0 with	  | inl _ => 0	  | inr P => {| num := q.(den); den := q.(num); den_ne_0 := P |}	  end.(den)	";
+            data = "1 subgoal (ID 1036)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : ' q <> 0	  ============================	  num	    match decide_rel paths (num q) 0 with	    | inl _ => 0	    | inr P => {| num := den q; den := num q; den_ne_0 := P |}	    end * num q =	  den q *	  den	    match decide_rel paths (num q) 0 with	    | inl _ => 0	    | inr P => {| num := den q; den := num q; den_ne_0 := P |}	    end	";
             responses[i]=data;
           
 
             i = 365;
-            data = "1 subgoal (ID 1043)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : q.(num) <> 0	  ============================	  match decide_rel paths q.(num) 0 with	  | inl _ => 0	  | inr P => {| num := q.(den); den := q.(num); den_ne_0 := P |}	  end.(num) * q.(num) =	  q.(den) *	  match decide_rel paths q.(num) 0 with	  | inl _ => 0	  | inr P => {| num := q.(den); den := q.(num); den_ne_0 := P |}	  end.(den)	";
+            data = "1 subgoal (ID 1043)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : num q <> 0	  ============================	  num	    match decide_rel paths (num q) 0 with	    | inl _ => 0	    | inr P => {| num := den q; den := num q; den_ne_0 := P |}	    end * num q =	  den q *	  den	    match decide_rel paths (num q) 0 with	    | inl _ => 0	    | inr P => {| num := den q; den := num q; den_ne_0 := P |}	    end	";
             responses[i]=data;
           
 
             i = 366;
-            data = "1 subgoal (ID 1061)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : q.(num) <> 0	  n : q.(num) <> 0	  ============================	  {| num := q.(den); den := q.(num); den_ne_0 := n |}.(num) * q.(num) =	  q.(den) * {| num := q.(den); den := q.(num); den_ne_0 := n |}.(den)	";
+            data = "1 subgoal (ID 1061)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : num q <> 0	  n : num q <> 0	  ============================	  num {| num := den q; den := num q; den_ne_0 := n |} * num q =	  den q * den {| num := den q; den := num q; den_ne_0 := n |}	";
             responses[i]=data;
           
 
             i = 367;
-            data = "1 subgoal (ID 1068)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E, n : q.(num) <> 0	  ============================	  q.(den) * q.(num) = q.(den) * q.(num)	";
+            data = "1 subgoal (ID 1068)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : num q <> 0	  n : num q <> 0	  ============================	  den q * num q = den q * num q	";
             responses[i]=data;
           
 
@@ -1923,17 +1923,17 @@
           
 
             i = 381;
-            data = "1 subgoal (ID 2200)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac R	  E : ' x <> 0	  ============================	  ' x *	  ' {|	    num := x.(den);	    den := x.(num);	    den_ne_0 := dec_recip_nonzero_aux x E |} = 1	";
+            data = "1 subgoal (ID 2200)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac R	  E : ' x <> 0	  ============================	  ' x *	  ' {| num := den x; den := num x; den_ne_0 := dec_recip_nonzero_aux x E |} =	  1	";
             responses[i]=data;
           
 
             i = 382;
-            data = "1 subgoal (ID 2207)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac R	  E : ' x <> 0	  ============================	  x.(num) * x.(den) * 1 = 1 * (x.(den) * x.(num))	";
+            data = "1 subgoal (ID 2207)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac R	  E : ' x <> 0	  ============================	  num x * den x * 1 = 1 * (den x * num x)	";
             responses[i]=data;
           
 
             i = 383;
-            data = "1 subgoal (ID 2577)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac R	  E : ' x <> 0	  ============================	  x.(num) * x.(den) = x.(den) * x.(num)	";
+            data = "1 subgoal (ID 2577)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x : Frac R	  E : ' x <> 0	  ============================	  num x * den x = den x * num x	";
             responses[i]=data;
           
 
@@ -2033,7 +2033,7 @@
           
 
             i = 403;
-            data = "1 subgoal (ID 1076)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  ============================	  ' q = ' q.(num) / ' q.(den)	";
+            data = "1 subgoal (ID 1076)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  ============================	  ' q = ' num q / ' den q	";
             responses[i]=data;
           
 
@@ -2043,47 +2043,47 @@
           
 
             i = 405;
-            data = "1 subgoal (ID 1079)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  ============================	  equiv q (ml R (Frac_inject R q.(num)) (dec_rec R (Frac_inject R q.(den))))	";
+            data = "1 subgoal (ID 1079)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  ============================	  equiv q (ml R (Frac_inject R (num q)) (dec_rec R (Frac_inject R (den q))))	";
             responses[i]=data;
           
 
             i = 406;
-            data = "1 subgoal (ID 1080)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  ============================	  q.(num) *	  (ml R (Frac_inject R q.(num)) (dec_rec R (Frac_inject R q.(den)))).(den) =	  (ml R (Frac_inject R q.(num)) (dec_rec R (Frac_inject R q.(den)))).(num) *	  q.(den)	";
+            data = "1 subgoal (ID 1080)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  ============================	  num q *	  den (ml R (Frac_inject R (num q)) (dec_rec R (Frac_inject R (den q)))) =	  num (ml R (Frac_inject R (num q)) (dec_rec R (Frac_inject R (den q)))) *	  den q	";
             responses[i]=data;
           
 
             i = 407;
-            data = "1 subgoal (ID 1081)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  ============================	  q.(num) * (1 * (dec_rec R (Frac_inject R q.(den))).(den)) =	  q.(num) * (dec_rec R (Frac_inject R q.(den))).(num) * q.(den)	";
+            data = "1 subgoal (ID 1081)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  ============================	  num q * (1 * den (dec_rec R (Frac_inject R (den q)))) =	  num q * num (dec_rec R (Frac_inject R (den q))) * den q	";
             responses[i]=data;
           
 
             i = 408;
-            data = "1 subgoal (ID 1253)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  ============================	  q.(num) * (dec_rec R (Frac_inject R q.(den))).(den) =	  q.(num) * (dec_rec R (Frac_inject R q.(den))).(num) * q.(den)	";
+            data = "1 subgoal (ID 1253)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  ============================	  num q * den (dec_rec R (Frac_inject R (den q))) =	  num q * num (dec_rec R (Frac_inject R (den q))) * den q	";
             responses[i]=data;
           
 
             i = 409;
-            data = "1 subgoal (ID 1260)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  ============================	  q.(num) *	  match decide_rel paths (Frac_inject R q.(den)).(num) 0 with	  | inl _ => 0	  | inr P =>	      {|	      num := (Frac_inject R q.(den)).(den);	      den := (Frac_inject R q.(den)).(num);	      den_ne_0 := P |}	  end.(den) =	  q.(num) *	  match decide_rel paths (Frac_inject R q.(den)).(num) 0 with	  | inl _ => 0	  | inr P =>	      {|	      num := (Frac_inject R q.(den)).(den);	      den := (Frac_inject R q.(den)).(num);	      den_ne_0 := P |}	  end.(num) * q.(den)	";
+            data = "1 subgoal (ID 1260)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  ============================	  num q *	  den	    match decide_rel paths (num (Frac_inject R (den q))) 0 with	    | inl _ => 0	    | inr P =>	        {|	        num := den (Frac_inject R (den q));	        den := num (Frac_inject R (den q));	        den_ne_0 := P |}	    end =	  num q *	  num	    match decide_rel paths (num (Frac_inject R (den q))) 0 with	    | inl _ => 0	    | inr P =>	        {|	        num := den (Frac_inject R (den q));	        den := num (Frac_inject R (den q));	        den_ne_0 := P |}	    end * den q	";
             responses[i]=data;
           
 
             i = 410;
-            data = "1 subgoal (ID 1261)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  ============================	  q.(num) *	  match decide_rel paths q.(den) 0 with	  | inl _ => 0	  | inr P => {| num := 1; den := q.(den); den_ne_0 := P |}	  end.(den) =	  q.(num) *	  match decide_rel paths q.(den) 0 with	  | inl _ => 0	  | inr P => {| num := 1; den := q.(den); den_ne_0 := P |}	  end.(num) * q.(den)	";
+            data = "1 subgoal (ID 1261)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  ============================	  num q *	  den	    match decide_rel paths (den q) 0 with	    | inl _ => 0	    | inr P => {| num := 1; den := den q; den_ne_0 := P |}	    end =	  num q *	  num	    match decide_rel paths (den q) 0 with	    | inl _ => 0	    | inr P => {| num := 1; den := den q; den_ne_0 := P |}	    end * den q	";
             responses[i]=data;
           
 
             i = 411;
-            data = "2 subgoals (ID 1280)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : q.(den) = 0	  ============================	  q.(num) * 1 = q.(num) * 0 * q.(den)		subgoal 2 (ID 1281) is:	 q.(num) * q.(den) = q.(num) * 1 * q.(den)	";
+            data = "2 subgoals (ID 1280)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : den q = 0	  ============================	  num q * 1 = num q * 0 * den q		subgoal 2 (ID 1281) is:	 num q * den q = num q * 1 * den q	";
             responses[i]=data;
           
 
             i = 412;
-            data = "1 subgoal (ID 1280)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : q.(den) = 0	  ============================	  q.(num) * 1 = q.(num) * 0 * q.(den)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1281)		subgoal 1 (ID 1281) is:	 q.(num) * q.(den) = q.(num) * 1 * q.(den)	";
+            data = "1 subgoal (ID 1280)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : den q = 0	  ============================	  num q * 1 = num q * 0 * den q	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1281)		subgoal 1 (ID 1281) is:	 num q * den q = num q * 1 * den q	";
             responses[i]=data;
           
 
             i = 413;
-            data = "1 subgoal (ID 1281)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : q.(den) <> 0	  ============================	  q.(num) * q.(den) = q.(num) * 1 * q.(den)	1 subgoal (ID 1467)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : q.(den) <> 0	  ============================	  q.(num) * q.(den) = q.(num) * q.(den)	";
+            data = "1 subgoal (ID 1281)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : den q <> 0	  ============================	  num q * den q = num q * 1 * den q	1 subgoal (ID 1467)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : den q <> 0	  ============================	  num q * den q = num q * den q	";
             responses[i]=data;
           
 
@@ -2098,7 +2098,7 @@
           
 
             i = 416;
-            data = "1 subgoal (ID 1113)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  ============================	  / ' q = ' q.(den) / ' q.(num)	";
+            data = "1 subgoal (ID 1113)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  ============================	  / ' q = ' den q / ' num q	";
             responses[i]=data;
           
 
@@ -2108,32 +2108,32 @@
           
 
             i = 418;
-            data = "1 subgoal (ID 1118)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  ============================	  (dec_rec R q).(num) * (1 * (dec_rec R (Frac_inject R q.(num))).(den)) =	  q.(den) * (dec_rec R (Frac_inject R q.(num))).(num) * (dec_rec R q).(den)	";
+            data = "1 subgoal (ID 1118)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  ============================	  num (dec_rec R q) * (1 * den (dec_rec R (Frac_inject R (num q)))) =	  den q * num (dec_rec R (Frac_inject R (num q))) * den (dec_rec R q)	";
             responses[i]=data;
           
 
             i = 419;
-            data = "1 subgoal (ID 1120)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  ============================	  match decide_rel paths q.(num) 0 with	  | inl _ => 0	  | inr P => {| num := q.(den); den := q.(num); den_ne_0 := P |}	  end.(num) *	  (1 *	   match decide_rel paths q.(num) 0 with	   | inl _ => 0	   | inr P => {| num := 1; den := q.(num); den_ne_0 := P |}	   end.(den)) =	  q.(den) *	  match decide_rel paths q.(num) 0 with	  | inl _ => 0	  | inr P => {| num := 1; den := q.(num); den_ne_0 := P |}	  end.(num) *	  match decide_rel paths q.(num) 0 with	  | inl _ => 0	  | inr P => {| num := q.(den); den := q.(num); den_ne_0 := P |}	  end.(den)	";
+            data = "1 subgoal (ID 1120)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  ============================	  num	    match decide_rel paths (num q) 0 with	    | inl _ => 0	    | inr P => {| num := den q; den := num q; den_ne_0 := P |}	    end *	  (1 *	   den	     match decide_rel paths (num q) 0 with	     | inl _ => 0	     | inr P => {| num := 1; den := num q; den_ne_0 := P |}	     end) =	  den q *	  num	    match decide_rel paths (num q) 0 with	    | inl _ => 0	    | inr P => {| num := 1; den := num q; den_ne_0 := P |}	    end *	  den	    match decide_rel paths (num q) 0 with	    | inl _ => 0	    | inr P => {| num := den q; den := num q; den_ne_0 := P |}	    end	";
             responses[i]=data;
           
 
             i = 420;
-            data = "2 subgoals (ID 1139)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : q.(num) = 0	  ============================	  0 * (1 * 1) = q.(den) * 0 * 1		subgoal 2 (ID 1140) is:	 q.(den) * (1 * q.(num)) = q.(den) * 1 * q.(num)	";
+            data = "2 subgoals (ID 1139)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : num q = 0	  ============================	  0 * (1 * 1) = den q * 0 * 1		subgoal 2 (ID 1140) is:	 den q * (1 * num q) = den q * 1 * num q	";
             responses[i]=data;
           
 
             i = 421;
-            data = "1 subgoal (ID 1139)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : q.(num) = 0	  ============================	  0 * (1 * 1) = q.(den) * 0 * 1	1 subgoal (ID 1690)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : q.(num) = 0	  ============================	  0 = 0	";
+            data = "1 subgoal (ID 1139)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : num q = 0	  ============================	  0 * (1 * 1) = den q * 0 * 1	1 subgoal (ID 1690)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : num q = 0	  ============================	  0 = 0	";
             responses[i]=data;
           
 
             i = 422;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1140)		subgoal 1 (ID 1140) is:	 q.(den) * (1 * q.(num)) = q.(den) * 1 * q.(num)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1140)		subgoal 1 (ID 1140) is:	 den q * (1 * num q) = den q * 1 * num q	";
             responses[i]=data;
           
 
             i = 423;
-            data = "1 subgoal (ID 1140)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : q.(num) <> 0	  ============================	  q.(den) * (1 * q.(num)) = q.(den) * 1 * q.(num)	1 subgoal (ID 2067)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : q.(num) <> 0	  ============================	  q.(den) * q.(num) = q.(den) * q.(num)	";
+            data = "1 subgoal (ID 1140)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : num q <> 0	  ============================	  den q * (1 * num q) = den q * 1 * num q	1 subgoal (ID 2067)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  q : Frac R	  E : num q <> 0	  ============================	  den q * num q = den q * num q	";
             responses[i]=data;
           
 
@@ -2243,7 +2243,7 @@
           
 
             i = 445;
-            data = "1 subgoal (ID 1140)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x, y : R	  E : (Frac_inject R x).(num) * (Frac_inject R y).(den) =	      (Frac_inject R y).(num) * (Frac_inject R x).(den)	  ============================	  x = y	";
+            data = "1 subgoal (ID 1140)	  	  H : Funext	  H0 : Univalence	  R : Type	  IsHSet0 : IsHSet R	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  Anegate : Negate R	  H1 : IntegralDomain R	  H2 : DecidablePaths R	  x, y : R	  E : num (Frac_inject R x) * den (Frac_inject R y) =	      num (Frac_inject R y) * den (Frac_inject R x)	  ============================	  x = y	";
             responses[i]=data;
           
 
@@ -2358,12 +2358,12 @@
           
 
             i = 468;
-            data = "1 subgoal (ID 1957)	  	  H : Funext	  H0 : Univalence	  R1 : Type	  Aplus : Plus R1	  Amult : Mult R1	  Azero : Zero R1	  Aone : One R1	  Anegate : Negate R1	  H1 : IntegralDomain R1	  H2 : DecidablePaths R1	  R2 : Type	  Aplus0 : Plus R2	  Amult0 : Mult R2	  Azero0 : Zero R2	  Aone0 : One R2	  Anegate0 : Negate R2	  H3 : IntegralDomain R2	  H4 : DecidablePaths R2	  f : R1 -> R2	  SemiRingPreserving0 : SemiRingPreserving f	  Injective0 : Injective f	  x, y : Frac R1	  ============================	  equiv (Frac.lift f (pl R1 x y)) (pl R2 (Frac.lift f x) (Frac.lift f y))	1 subgoal (ID 1959)	  	  H : Funext	  H0 : Univalence	  R1 : Type	  Aplus : Plus R1	  Amult : Mult R1	  Azero : Zero R1	  Aone : One R1	  Anegate : Negate R1	  H1 : IntegralDomain R1	  H2 : DecidablePaths R1	  R2 : Type	  Aplus0 : Plus R2	  Amult0 : Mult R2	  Azero0 : Zero R2	  Aone0 : One R2	  Anegate0 : Negate R2	  H3 : IntegralDomain R2	  H4 : DecidablePaths R2	  f : R1 -> R2	  SemiRingPreserving0 : SemiRingPreserving f	  Injective0 : Injective f	  x, y : Frac R1	  ============================	  f (x.(num) * y.(den) + y.(num) * x.(den)) * (f x.(den) * f y.(den)) =	  (f x.(num) * f y.(den) + f y.(num) * f x.(den)) * f (x.(den) * y.(den))	";
+            data = "1 subgoal (ID 1957)	  	  H : Funext	  H0 : Univalence	  R1 : Type	  Aplus : Plus R1	  Amult : Mult R1	  Azero : Zero R1	  Aone : One R1	  Anegate : Negate R1	  H1 : IntegralDomain R1	  H2 : DecidablePaths R1	  R2 : Type	  Aplus0 : Plus R2	  Amult0 : Mult R2	  Azero0 : Zero R2	  Aone0 : One R2	  Anegate0 : Negate R2	  H3 : IntegralDomain R2	  H4 : DecidablePaths R2	  f : R1 -> R2	  SemiRingPreserving0 : SemiRingPreserving f	  Injective0 : Injective f	  x, y : Frac R1	  ============================	  equiv (Frac.lift f (pl R1 x y)) (pl R2 (Frac.lift f x) (Frac.lift f y))	1 subgoal (ID 1959)	  	  H : Funext	  H0 : Univalence	  R1 : Type	  Aplus : Plus R1	  Amult : Mult R1	  Azero : Zero R1	  Aone : One R1	  Anegate : Negate R1	  H1 : IntegralDomain R1	  H2 : DecidablePaths R1	  R2 : Type	  Aplus0 : Plus R2	  Amult0 : Mult R2	  Azero0 : Zero R2	  Aone0 : One R2	  Anegate0 : Negate R2	  H3 : IntegralDomain R2	  H4 : DecidablePaths R2	  f : R1 -> R2	  SemiRingPreserving0 : SemiRingPreserving f	  Injective0 : Injective f	  x, y : Frac R1	  ============================	  f (num x * den y + num y * den x) * (f (den x) * f (den y)) =	  (f (num x) * f (den y) + f (num y) * f (den x)) * f (den x * den y)	";
             responses[i]=data;
           
 
             i = 469;
-            data = "1 subgoal (ID 2097)	  	  H : Funext	  H0 : Univalence	  R1 : Type	  Aplus : Plus R1	  Amult : Mult R1	  Azero : Zero R1	  Aone : One R1	  Anegate : Negate R1	  H1 : IntegralDomain R1	  H2 : DecidablePaths R1	  R2 : Type	  Aplus0 : Plus R2	  Amult0 : Mult R2	  Azero0 : Zero R2	  Aone0 : One R2	  Anegate0 : Negate R2	  H3 : IntegralDomain R2	  H4 : DecidablePaths R2	  f : R1 -> R2	  SemiRingPreserving0 : SemiRingPreserving f	  Injective0 : Injective f	  x, y : Frac R1	  ============================	  f ((x.(num) * y.(den) + y.(num) * x.(den)) * (x.(den) * y.(den))) =	  f ((x.(num) * y.(den) + y.(num) * x.(den)) * (x.(den) * y.(den)))	";
+            data = "1 subgoal (ID 2097)	  	  H : Funext	  H0 : Univalence	  R1 : Type	  Aplus : Plus R1	  Amult : Mult R1	  Azero : Zero R1	  Aone : One R1	  Anegate : Negate R1	  H1 : IntegralDomain R1	  H2 : DecidablePaths R1	  R2 : Type	  Aplus0 : Plus R2	  Amult0 : Mult R2	  Azero0 : Zero R2	  Aone0 : One R2	  Anegate0 : Negate R2	  H3 : IntegralDomain R2	  H4 : DecidablePaths R2	  f : R1 -> R2	  SemiRingPreserving0 : SemiRingPreserving f	  Injective0 : Injective f	  x, y : Frac R1	  ============================	  f ((num x * den y + num y * den x) * (den x * den y)) =	  f ((num x * den y + num y * den x) * (den x * den y))	";
             responses[i]=data;
           
 
@@ -2418,12 +2418,12 @@
           
 
             i = 480;
-            data = "1 subgoal (ID 2981)	  	  H : Funext	  H0 : Univalence	  R1 : Type	  Aplus : Plus R1	  Amult : Mult R1	  Azero : Zero R1	  Aone : One R1	  Anegate : Negate R1	  H1 : IntegralDomain R1	  H2 : DecidablePaths R1	  R2 : Type	  Aplus0 : Plus R2	  Amult0 : Mult R2	  Azero0 : Zero R2	  Aone0 : One R2	  Anegate0 : Negate R2	  H3 : IntegralDomain R2	  H4 : DecidablePaths R2	  f : R1 -> R2	  SemiRingPreserving0 : SemiRingPreserving f	  Injective0 : Injective f	  x, y : Frac R1	  ============================	  f (x.(num) * y.(num)) * (f x.(den) * f y.(den)) =	  f x.(num) * f y.(num) * f (x.(den) * y.(den))	";
+            data = "1 subgoal (ID 2981)	  	  H : Funext	  H0 : Univalence	  R1 : Type	  Aplus : Plus R1	  Amult : Mult R1	  Azero : Zero R1	  Aone : One R1	  Anegate : Negate R1	  H1 : IntegralDomain R1	  H2 : DecidablePaths R1	  R2 : Type	  Aplus0 : Plus R2	  Amult0 : Mult R2	  Azero0 : Zero R2	  Aone0 : One R2	  Anegate0 : Negate R2	  H3 : IntegralDomain R2	  H4 : DecidablePaths R2	  f : R1 -> R2	  SemiRingPreserving0 : SemiRingPreserving f	  Injective0 : Injective f	  x, y : Frac R1	  ============================	  f (num x * num y) * (f (den x) * f (den y)) =	  f (num x) * f (num y) * f (den x * den y)	";
             responses[i]=data;
           
 
             i = 481;
-            data = "1 subgoal (ID 3029)	  	  H : Funext	  H0 : Univalence	  R1 : Type	  Aplus : Plus R1	  Amult : Mult R1	  Azero : Zero R1	  Aone : One R1	  Anegate : Negate R1	  H1 : IntegralDomain R1	  H2 : DecidablePaths R1	  R2 : Type	  Aplus0 : Plus R2	  Amult0 : Mult R2	  Azero0 : Zero R2	  Aone0 : One R2	  Anegate0 : Negate R2	  H3 : IntegralDomain R2	  H4 : DecidablePaths R2	  f : R1 -> R2	  SemiRingPreserving0 : SemiRingPreserving f	  Injective0 : Injective f	  x, y : Frac R1	  ============================	  f (x.(num) * y.(num) * (x.(den) * y.(den))) =	  f (x.(num) * y.(num) * (x.(den) * y.(den)))	";
+            data = "1 subgoal (ID 3029)	  	  H : Funext	  H0 : Univalence	  R1 : Type	  Aplus : Plus R1	  Amult : Mult R1	  Azero : Zero R1	  Aone : One R1	  Anegate : Negate R1	  H1 : IntegralDomain R1	  H2 : DecidablePaths R1	  R2 : Type	  Aplus0 : Plus R2	  Amult0 : Mult R2	  Azero0 : Zero R2	  Aone0 : One R2	  Anegate0 : Negate R2	  H3 : IntegralDomain R2	  H4 : DecidablePaths R2	  f : R1 -> R2	  SemiRingPreserving0 : SemiRingPreserving f	  Injective0 : Injective f	  x, y : Frac R1	  ============================	  f (num x * num y * (den x * den y)) = f (num x * num y * (den x * den y))	";
             responses[i]=data;
           
 
@@ -2493,27 +2493,27 @@
           
 
             i = 495;
-            data = "1 subgoal (ID 2107)	  	  H : Funext	  H0 : Univalence	  R1 : Type	  Aplus : Plus R1	  Amult : Mult R1	  Azero : Zero R1	  Aone : One R1	  Anegate : Negate R1	  H1 : IntegralDomain R1	  H2 : DecidablePaths R1	  R2 : Type	  Aplus0 : Plus R2	  Amult0 : Mult R2	  Azero0 : Zero R2	  Aone0 : One R2	  Anegate0 : Negate R2	  H3 : IntegralDomain R2	  H4 : DecidablePaths R2	  f : R1 -> R2	  SemiRingPreserving0 : SemiRingPreserving f	  Injective0 : Injective f	  x, y : Frac R1	  E : f x.(num) * f y.(den) = f y.(num) * f x.(den)	  ============================	  ' x = ' y	";
+            data = "1 subgoal (ID 2107)	  	  H : Funext	  H0 : Univalence	  R1 : Type	  Aplus : Plus R1	  Amult : Mult R1	  Azero : Zero R1	  Aone : One R1	  Anegate : Negate R1	  H1 : IntegralDomain R1	  H2 : DecidablePaths R1	  R2 : Type	  Aplus0 : Plus R2	  Amult0 : Mult R2	  Azero0 : Zero R2	  Aone0 : One R2	  Anegate0 : Negate R2	  H3 : IntegralDomain R2	  H4 : DecidablePaths R2	  f : R1 -> R2	  SemiRingPreserving0 : SemiRingPreserving f	  Injective0 : Injective f	  x, y : Frac R1	  E : f (num x) * f (den y) = f (num y) * f (den x)	  ============================	  ' x = ' y	";
             responses[i]=data;
           
 
             i = 496;
-            data = "1 subgoal (ID 2114)	  	  H : Funext	  H0 : Univalence	  R1 : Type	  Aplus : Plus R1	  Amult : Mult R1	  Azero : Zero R1	  Aone : One R1	  Anegate : Negate R1	  H1 : IntegralDomain R1	  H2 : DecidablePaths R1	  R2 : Type	  Aplus0 : Plus R2	  Amult0 : Mult R2	  Azero0 : Zero R2	  Aone0 : One R2	  Anegate0 : Negate R2	  H3 : IntegralDomain R2	  H4 : DecidablePaths R2	  f : R1 -> R2	  SemiRingPreserving0 : SemiRingPreserving f	  Injective0 : Injective f	  x, y : Frac R1	  E : f x.(num) * f y.(den) = f y.(num) * f x.(den)	  ============================	  equiv x y	";
+            data = "1 subgoal (ID 2114)	  	  H : Funext	  H0 : Univalence	  R1 : Type	  Aplus : Plus R1	  Amult : Mult R1	  Azero : Zero R1	  Aone : One R1	  Anegate : Negate R1	  H1 : IntegralDomain R1	  H2 : DecidablePaths R1	  R2 : Type	  Aplus0 : Plus R2	  Amult0 : Mult R2	  Azero0 : Zero R2	  Aone0 : One R2	  Anegate0 : Negate R2	  H3 : IntegralDomain R2	  H4 : DecidablePaths R2	  f : R1 -> R2	  SemiRingPreserving0 : SemiRingPreserving f	  Injective0 : Injective f	  x, y : Frac R1	  E : f (num x) * f (den y) = f (num y) * f (den x)	  ============================	  equiv x y	";
             responses[i]=data;
           
 
             i = 497;
-            data = "1 subgoal (ID 2115)	  	  H : Funext	  H0 : Univalence	  R1 : Type	  Aplus : Plus R1	  Amult : Mult R1	  Azero : Zero R1	  Aone : One R1	  Anegate : Negate R1	  H1 : IntegralDomain R1	  H2 : DecidablePaths R1	  R2 : Type	  Aplus0 : Plus R2	  Amult0 : Mult R2	  Azero0 : Zero R2	  Aone0 : One R2	  Anegate0 : Negate R2	  H3 : IntegralDomain R2	  H4 : DecidablePaths R2	  f : R1 -> R2	  SemiRingPreserving0 : SemiRingPreserving f	  Injective0 : Injective f	  x, y : Frac R1	  E : f x.(num) * f y.(den) = f y.(num) * f x.(den)	  ============================	  x.(num) * y.(den) = y.(num) * x.(den)	";
+            data = "1 subgoal (ID 2115)	  	  H : Funext	  H0 : Univalence	  R1 : Type	  Aplus : Plus R1	  Amult : Mult R1	  Azero : Zero R1	  Aone : One R1	  Anegate : Negate R1	  H1 : IntegralDomain R1	  H2 : DecidablePaths R1	  R2 : Type	  Aplus0 : Plus R2	  Amult0 : Mult R2	  Azero0 : Zero R2	  Aone0 : One R2	  Anegate0 : Negate R2	  H3 : IntegralDomain R2	  H4 : DecidablePaths R2	  f : R1 -> R2	  SemiRingPreserving0 : SemiRingPreserving f	  Injective0 : Injective f	  x, y : Frac R1	  E : f (num x) * f (den y) = f (num y) * f (den x)	  ============================	  num x * den y = num y * den x	";
             responses[i]=data;
           
 
             i = 498;
-            data = "1 subgoal (ID 2119)	  	  H : Funext	  H0 : Univalence	  R1 : Type	  Aplus : Plus R1	  Amult : Mult R1	  Azero : Zero R1	  Aone : One R1	  Anegate : Negate R1	  H1 : IntegralDomain R1	  H2 : DecidablePaths R1	  R2 : Type	  Aplus0 : Plus R2	  Amult0 : Mult R2	  Azero0 : Zero R2	  Aone0 : One R2	  Anegate0 : Negate R2	  H3 : IntegralDomain R2	  H4 : DecidablePaths R2	  f : R1 -> R2	  SemiRingPreserving0 : SemiRingPreserving f	  Injective0 : Injective f	  x, y : Frac R1	  E : f x.(num) * f y.(den) = f y.(num) * f x.(den)	  ============================	  f (x.(num) * y.(den)) = f (y.(num) * x.(den))	";
+            data = "1 subgoal (ID 2119)	  	  H : Funext	  H0 : Univalence	  R1 : Type	  Aplus : Plus R1	  Amult : Mult R1	  Azero : Zero R1	  Aone : One R1	  Anegate : Negate R1	  H1 : IntegralDomain R1	  H2 : DecidablePaths R1	  R2 : Type	  Aplus0 : Plus R2	  Amult0 : Mult R2	  Azero0 : Zero R2	  Aone0 : One R2	  Anegate0 : Negate R2	  H3 : IntegralDomain R2	  H4 : DecidablePaths R2	  f : R1 -> R2	  SemiRingPreserving0 : SemiRingPreserving f	  Injective0 : Injective f	  x, y : Frac R1	  E : f (num x) * f (den y) = f (num y) * f (den x)	  ============================	  f (num x * den y) = f (num y * den x)	";
             responses[i]=data;
           
 
             i = 499;
-            data = "1 subgoal (ID 2143)	  	  H : Funext	  H0 : Univalence	  R1 : Type	  Aplus : Plus R1	  Amult : Mult R1	  Azero : Zero R1	  Aone : One R1	  Anegate : Negate R1	  H1 : IntegralDomain R1	  H2 : DecidablePaths R1	  R2 : Type	  Aplus0 : Plus R2	  Amult0 : Mult R2	  Azero0 : Zero R2	  Aone0 : One R2	  Anegate0 : Negate R2	  H3 : IntegralDomain R2	  H4 : DecidablePaths R2	  f : R1 -> R2	  SemiRingPreserving0 : SemiRingPreserving f	  Injective0 : Injective f	  x, y : Frac R1	  E : f x.(num) * f y.(den) = f y.(num) * f x.(den)	  ============================	  f x.(num) * f y.(den) = f y.(num) * f x.(den)	";
+            data = "1 subgoal (ID 2143)	  	  H : Funext	  H0 : Univalence	  R1 : Type	  Aplus : Plus R1	  Amult : Mult R1	  Azero : Zero R1	  Aone : One R1	  Anegate : Negate R1	  H1 : IntegralDomain R1	  H2 : DecidablePaths R1	  R2 : Type	  Aplus0 : Plus R2	  Amult0 : Mult R2	  Azero0 : Zero R2	  Aone0 : One R2	  Anegate0 : Negate R2	  H3 : IntegralDomain R2	  H4 : DecidablePaths R2	  f : R1 -> R2	  SemiRingPreserving0 : SemiRingPreserving f	  Injective0 : Injective f	  x, y : Frac R1	  E : f (num x) * f (den y) = f (num y) * f (den x)	  ============================	  f (num x) * f (den y) = f (num y) * f (den x)	";
             responses[i]=data;
           
 

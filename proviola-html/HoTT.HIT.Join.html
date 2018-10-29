@@ -158,47 +158,47 @@
           
 
             i = 28;
-            data = "1 subgoal (ID 28)	  	  A : Type	  B : Type	  Contr0 : Contr A	  ============================	  forall y : join A B, pushl Contr0.(center) = y	";
+            data = "1 subgoal (ID 28)	  	  A : Type	  B : Type	  Contr0 : Contr A	  ============================	  forall y : join A B, pushl (center _) = y	";
             responses[i]=data;
           
 
             i = 29;
-            data = "3 subgoals (ID 40)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  ============================	  forall b : A, pushl Contr0.(center) = pushl b		subgoal 2 (ID 42) is:	 forall c : B, pushl Contr0.(center) = pushr c	subgoal 3 (ID 44) is:	 forall a : A * B,	 transport (paths (pushl Contr0.(center))) (pp a) (?pushb (fst a)) =	 ?pushc (snd a)	";
+            data = "3 subgoals (ID 40)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  ============================	  forall b : A, pushl (center _) = pushl b		subgoal 2 (ID 42) is:	 forall c : B, pushl (center _) = pushr c	subgoal 3 (ID 44) is:	 forall a : A * B,	 transport (paths (pushl (center _))) (pp a) (?pushb (fst a)) =	 ?pushc (snd a)	";
             responses[i]=data;
           
 
             i = 30;
-            data = "1 subgoal (ID 40)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  ============================	  forall b : A, pushl Contr0.(center) = pushl b	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 42)		subgoal 1 (ID 42) is:	 forall c : B, pushl Contr0.(center) = pushr c	subgoal 2 (ID 44) is:	 forall a : A * B,	 transport (paths (pushl Contr0.(center))) (pp a)	   ((fun a0 : A => ap pushl (Contr0.(contr) a0)) (fst a)) = 	 ?pushc (snd a)	";
+            data = "1 subgoal (ID 40)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  ============================	  forall b : A, pushl (center _) = pushl b	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 42)		subgoal 1 (ID 42) is:	 forall c : B, pushl (center _) = pushr c	subgoal 2 (ID 44) is:	 forall a : A * B,	 transport (paths (pushl (center _))) (pp a)	   ((fun a0 : A => ap pushl (contr a0)) (fst a)) = 	 ?pushc (snd a)	";
             responses[i]=data;
           
 
             i = 31;
-            data = "1 subgoal (ID 42)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  ============================	  forall c : B, pushl Contr0.(center) = pushr c	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 44)		subgoal 1 (ID 44) is:	 forall a : A * B,	 transport (paths (pushl Contr0.(center))) (pp a)	   ((fun a0 : A => ap pushl (Contr0.(contr) a0)) (fst a)) =	 (fun b : B => pp (Contr0.(center), b)) (snd a)	";
+            data = "1 subgoal (ID 42)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  ============================	  forall c : B, pushl (center _) = pushr c	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 44)		subgoal 1 (ID 44) is:	 forall a : A * B,	 transport (paths (pushl (center _))) (pp a)	   ((fun a0 : A => ap pushl (contr a0)) (fst a)) =	 (fun b : B => pp (center _, b)) (snd a)	";
             responses[i]=data;
           
 
             i = 32;
-            data = "1 subgoal (ID 44)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  ============================	  forall a : A * B,	  transport (paths (pushl Contr0.(center))) (pp a)	    ((fun a0 : A => ap pushl (Contr0.(contr) a0)) (fst a)) =	  (fun b : B => pp (Contr0.(center), b)) (snd a)	1 subgoal (ID 65)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  a : A	  b : B	  ============================	  transport (paths (pushl Contr0.(center))) (pp (a, b))	    (ap pushl (Contr0.(contr) a)) = pp (Contr0.(center), b)	";
+            data = "1 subgoal (ID 44)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  ============================	  forall a : A * B,	  transport (paths (pushl (center _))) (pp a)	    ((fun a0 : A => ap pushl (contr a0)) (fst a)) =	  (fun b : B => pp (center _, b)) (snd a)	1 subgoal (ID 65)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  a : A	  b : B	  ============================	  transport (paths (pushl (center _))) (pp (a, b)) (ap pushl (contr a)) =	  pp (center _, b)	";
             responses[i]=data;
           
 
             i = 33;
-            data = "1 subgoal (ID 85)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  a : A	  b : B	  ============================	  transport (paths (pushl Contr0.(center))) (pp (a, b))	    (ap pushl (Contr0.(contr) a)) =	  transport (fun a' : A => pushl (fst (a', b)) = pushr (snd (a', b)))	    (Contr0.(contr) a)^ (joinpp A B (a, b))	";
+            data = "1 subgoal (ID 85)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  a : A	  b : B	  ============================	  transport (paths (pushl (center _))) (pp (a, b)) (ap pushl (contr a)) =	  transport (fun a' : A => pushl (fst (a', b)) = pushr (snd (a', b)))	    (contr a)^ (joinpp A B (a, b))	";
             responses[i]=data;
           
 
             i = 34;
-            data = "1 subgoal (ID 108)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  a : A	  b : B	  ============================	  ap pushl (Contr0.(contr) a) @ pp (a, b) =	  ((ap (fun x : A => pushl x) (Contr0.(contr) a)^)^ @ joinpp A B (a, b)) @	  ap (fun _ : A => pushr b) (Contr0.(contr) a)^	";
+            data = "1 subgoal (ID 108)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  a : A	  b : B	  ============================	  ap pushl (contr a) @ pp (a, b) =	  ((ap (fun x : A => pushl x) (contr a)^)^ @ joinpp A B (a, b)) @	  ap (fun _ : A => pushr b) (contr a)^	";
             responses[i]=data;
           
 
             i = 35;
-            data = "1 subgoal (ID 126)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  a : A	  b : B	  ============================	  ap pushl (Contr0.(contr) a) @ pp (a, b) =	  ap (fun x : A => pushl x) (Contr0.(contr) a) @	  (joinpp A B (a, b) @ ap (fun _ : A => pushr b) (Contr0.(contr) a)^)	";
+            data = "1 subgoal (ID 126)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  a : A	  b : B	  ============================	  ap pushl (contr a) @ pp (a, b) =	  ap (fun x : A => pushl x) (contr a) @	  (joinpp A B (a, b) @ ap (fun _ : A => pushr b) (contr a)^)	";
             responses[i]=data;
           
 
             i = 36;
-            data = "1 subgoal (ID 144)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  a : A	  b : B	  ============================	  ap pushl (Contr0.(contr) a) @ pp (a, b) =	  ap (fun x : A => pushl x) (Contr0.(contr) a) @ joinpp A B (a, b)	";
+            data = "1 subgoal (ID 144)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : join A B	  a : A	  b : B	  ============================	  ap pushl (contr a) @ pp (a, b) =	  ap (fun x : A => pushl x) (contr a) @ joinpp A B (a, b)	";
             responses[i]=data;
           
 
@@ -353,7 +353,7 @@
           
 
             i = 67;
-            data = "1 subgoal (ID 36)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  ============================	  join A B <~> (A \/ B).(trunctype_type)	";
+            data = "1 subgoal (ID 36)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  ============================	  join A B <~> (A \/ B)	";
             responses[i]=data;
           
 
@@ -363,17 +363,17 @@
           
 
             i = 69;
-            data = "2 subgoals (ID 83)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  ============================	  join A B -> (A \/ B).(trunctype_type)		subgoal 2 (ID 84) is:	 (A \/ B).(trunctype_type) -> join A B	";
+            data = "2 subgoals (ID 83)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  ============================	  join A B -> A \/ B		subgoal 2 (ID 84) is:	 A \/ B -> join A B	";
             responses[i]=data;
           
 
             i = 70;
-            data = "1 subgoal (ID 83)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  ============================	  join A B -> (A \/ B).(trunctype_type)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 84)		subgoal 1 (ID 84) is:	 (A \/ B).(trunctype_type) -> join A B	";
+            data = "1 subgoal (ID 83)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  ============================	  join A B -> A \/ B	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 84)		subgoal 1 (ID 84) is:	 A \/ B -> join A B	";
             responses[i]=data;
           
 
             i = 71;
-            data = "1 subgoal (ID 84)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  ============================	  (A \/ B).(trunctype_type) -> join A B	No more subgoals.	";
+            data = "1 subgoal (ID 84)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  ============================	  A \/ B -> join A B	No more subgoals.	";
             responses[i]=data;
           
 

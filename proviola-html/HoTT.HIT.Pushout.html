@@ -388,7 +388,7 @@
           
 
             i = 74;
-            data = "1 subgoal (ID 428)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  A' : Type	  B' : Type	  C' : Type	  f' : A' -> B'	  g' : A' -> C'	  eA : A <~> A'	  eB : B <~> B'	  eC : C <~> C'	  p : eB.(equiv_fun) o f == f' o eA.(equiv_fun)	  q : eC.(equiv_fun) o g == g' o eA.(equiv_fun)	  ============================	  pushout f g <~> pushout f' g'	";
+            data = "1 subgoal (ID 428)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  A' : Type	  B' : Type	  C' : Type	  f' : A' -> B'	  g' : A' -> C'	  eA : A <~> A'	  eB : B <~> B'	  eC : C <~> C'	  p : eB o f == f' o eA	  q : eC o g == g' o eA	  ============================	  pushout f g <~> pushout f' g'	";
             responses[i]=data;
           
 
@@ -398,27 +398,27 @@
           
 
             i = 76;
-            data = "2 subgoals (ID 445)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  A' : Type	  B' : Type	  C' : Type	  f' : A' -> B'	  g' : A' -> C'	  eA : A <~> A'	  eB : B <~> B'	  eC : C <~> C'	  p : eB.(equiv_fun) o f == f' o eA.(equiv_fun)	  q : eC.(equiv_fun) o g == g' o eA.(equiv_fun)	  ============================	  (fun x : A => (eB +E eC).(equiv_fun) (inl (f x))) ==	  (fun x : A => inl (f' (eA.(equiv_fun) x)))		subgoal 2 (ID 446) is:	 (fun x : A => (eB +E eC).(equiv_fun) (inr (g x))) ==	 (fun x : A => inr (g' (eA.(equiv_fun) x)))	";
+            data = "2 subgoals (ID 445)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  A' : Type	  B' : Type	  C' : Type	  f' : A' -> B'	  g' : A' -> C'	  eA : A <~> A'	  eB : B <~> B'	  eC : C <~> C'	  p : eB o f == f' o eA	  q : eC o g == g' o eA	  ============================	  (fun x : A => (eB +E eC) (inl (f x))) == (fun x : A => inl (f' (eA x)))		subgoal 2 (ID 446) is:	 (fun x : A => (eB +E eC) (inr (g x))) == (fun x : A => inr (g' (eA x)))	";
             responses[i]=data;
           
 
             i = 77;
-            data = "2 subgoals (ID 447)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  A' : Type	  B' : Type	  C' : Type	  f' : A' -> B'	  g' : A' -> C'	  eA : A <~> A'	  eB : B <~> B'	  eC : C <~> C'	  p : eB.(equiv_fun) o f == f' o eA.(equiv_fun)	  q : eC.(equiv_fun) o g == g' o eA.(equiv_fun)	  ============================	  forall x : A,	  (eB +E eC).(equiv_fun) (inl (f x)) = inl (f' (eA.(equiv_fun) x))		subgoal 2 (ID 448) is:	 forall x : A,	 (eB +E eC).(equiv_fun) (inr (g x)) = inr (g' (eA.(equiv_fun) x))	";
+            data = "2 subgoals (ID 447)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  A' : Type	  B' : Type	  C' : Type	  f' : A' -> B'	  g' : A' -> C'	  eA : A <~> A'	  eB : B <~> B'	  eC : C <~> C'	  p : eB o f == f' o eA	  q : eC o g == g' o eA	  ============================	  forall x : A, (eB +E eC) (inl (f x)) = inl (f' (eA x))		subgoal 2 (ID 448) is:	 forall x : A, (eB +E eC) (inr (g x)) = inr (g' (eA x))	";
             responses[i]=data;
           
 
             i = 78;
-            data = "2 subgoals (ID 455)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  A' : Type	  B' : Type	  C' : Type	  f' : A' -> B'	  g' : A' -> C'	  eA : A <~> A'	  eB : B <~> B'	  eC : C <~> C'	  p : eB.(equiv_fun) o f == f' o eA.(equiv_fun)	  q : eC.(equiv_fun) o g == g' o eA.(equiv_fun)	  x : A	  ============================	  eB.(equiv_fun) (f x) = f' (eA.(equiv_fun) x)		subgoal 2 (ID 458) is:	 eC.(equiv_fun) (g x) = g' (eA.(equiv_fun) x)	";
+            data = "2 subgoals (ID 455)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  A' : Type	  B' : Type	  C' : Type	  f' : A' -> B'	  g' : A' -> C'	  eA : A <~> A'	  eB : B <~> B'	  eC : C <~> C'	  p : eB o f == f' o eA	  q : eC o g == g' o eA	  x : A	  ============================	  eB (f x) = f' (eA x)		subgoal 2 (ID 458) is:	 eC (g x) = g' (eA x)	";
             responses[i]=data;
           
 
             i = 79;
-            data = "1 subgoal (ID 455)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  A' : Type	  B' : Type	  C' : Type	  f' : A' -> B'	  g' : A' -> C'	  eA : A <~> A'	  eB : B <~> B'	  eC : C <~> C'	  p : eB.(equiv_fun) o f == f' o eA.(equiv_fun)	  q : eC.(equiv_fun) o g == g' o eA.(equiv_fun)	  x : A	  ============================	  eB.(equiv_fun) (f x) = f' (eA.(equiv_fun) x)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 458)		subgoal 1 (ID 458) is:	 eC.(equiv_fun) (g x) = g' (eA.(equiv_fun) x)	";
+            data = "1 subgoal (ID 455)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  A' : Type	  B' : Type	  C' : Type	  f' : A' -> B'	  g' : A' -> C'	  eA : A <~> A'	  eB : B <~> B'	  eC : C <~> C'	  p : eB o f == f' o eA	  q : eC o g == g' o eA	  x : A	  ============================	  eB (f x) = f' (eA x)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 458)		subgoal 1 (ID 458) is:	 eC (g x) = g' (eA x)	";
             responses[i]=data;
           
 
             i = 80;
-            data = "1 subgoal (ID 458)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  A' : Type	  B' : Type	  C' : Type	  f' : A' -> B'	  g' : A' -> C'	  eA : A <~> A'	  eB : B <~> B'	  eC : C <~> C'	  p : eB.(equiv_fun) o f == f' o eA.(equiv_fun)	  q : eC.(equiv_fun) o g == g' o eA.(equiv_fun)	  x : A	  ============================	  eC.(equiv_fun) (g x) = g' (eA.(equiv_fun) x)	No more subgoals.	";
+            data = "1 subgoal (ID 458)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  A' : Type	  B' : Type	  C' : Type	  f' : A' -> B'	  g' : A' -> C'	  eA : A <~> A'	  eB : B <~> B'	  eC : C <~> C'	  p : eB o f == f' o eA	  q : eC o g == g' o eA	  x : A	  ============================	  eC (g x) = g' (eA x)	No more subgoals.	";
             responses[i]=data;
           
 
@@ -428,7 +428,7 @@
           
 
             i = 82;
-            data = "1 subgoal (ID 577)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  A' : Type	  B' : Type	  C' : Type	  f' : A' -> B'	  g' : A' -> C'	  eA : A <~> A'	  eB : B <~> B'	  eC : C <~> C'	  p : eB.(equiv_fun) o f == f' o eA.(equiv_fun)	  q : eC.(equiv_fun) o g == g' o eA.(equiv_fun)	  ============================	  forall a : A,	  ap (equiv_pushout eA eB eC p q).(equiv_fun) (pp a) =	  (ap push (ap inl (p a)) @ pp (eA.(equiv_fun) a)) @ ap push (ap inr (q a))^	";
+            data = "1 subgoal (ID 577)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  A' : Type	  B' : Type	  C' : Type	  f' : A' -> B'	  g' : A' -> C'	  eA : A <~> A'	  eB : B <~> B'	  eC : C <~> C'	  p : eB o f == f' o eA	  q : eC o g == g' o eA	  ============================	  forall a : A,	  ap (equiv_pushout eA eB eC p q) (pp a) =	  (ap push (ap inl (p a)) @ pp (eA a)) @ ap push (ap inr (q a))^	";
             responses[i]=data;
           
 

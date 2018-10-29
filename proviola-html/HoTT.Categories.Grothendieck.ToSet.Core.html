@@ -518,7 +518,7 @@
           
 
             i = 100;
-            data = "1 subgoal (ID 3)	  	  H : Funext	  C : PreCategory	  F : Functor C set_cat	  ============================	  {c0 : C.(object) & (F.(object_of) c0).(trunctype_type)} <~> Pair	";
+            data = "1 subgoal (ID 3)	  	  H : Funext	  C : PreCategory	  F : Functor C set_cat	  ============================	  {c0 : C & F c0} <~> Pair	";
             responses[i]=data;
           
 
@@ -543,7 +543,7 @@
           
 
             i = 105;
-            data = "1 subgoal (ID 40)	  	  H : Funext	  C : PreCategory	  F : Functor C set_cat	  s, d, d' : Pair	  m1 : {f : C.(Core.morphism) d.(c) d'.(c) &	       F.(morphism_of) d.(c) d'.(c) f d.(x) = d'.(x)}	  m2 : {f : C.(Core.morphism) s.(c) d.(c) &	       F.(morphism_of) s.(c) d.(c) f s.(x) = d.(x)}	  ============================	  F.(morphism_of) s.(c) d'.(c)	    (C.(compose) s.(c) d.(c) d'.(c) m1.(proj1_sig) m2.(proj1_sig)) 	    s.(x) = d'.(x)	";
+            data = "1 subgoal (ID 40)	  	  H : Funext	  C : PreCategory	  F : Functor C set_cat	  s, d, d' : Pair	  m1 : morphism d d'	  m2 : morphism s d	  ============================	  (F _1 (m1.1 o m2.1)) (x s) = x d'	";
             responses[i]=data;
           
 
@@ -553,22 +553,22 @@
           
 
             i = 107;
-            data = "1 subgoal (ID 73)	  	  H : Funext	  C : PreCategory	  F : Functor C set_cat	  s, d, d' : Pair	  m1 : {f : C.(Core.morphism) d.(c) d'.(c) &	       F.(morphism_of) d.(c) d'.(c) f d.(x) = d'.(x)}	  m2 : {f : C.(Core.morphism) s.(c) d.(c) &	       F.(morphism_of) s.(c) d.(c) f s.(x) = d.(x)}	  ============================	  F.(morphism_of) s.(c) d'.(c)	    (C.(compose) s.(c) d.(c) d'.(c) m1.(proj1_sig) m2.(proj1_sig)) 	    s.(x) = F.(morphism_of) d.(c) d'.(c) m1.(proj1_sig) d.(x)	";
+            data = "1 subgoal (ID 73)	  	  H : Funext	  C : PreCategory	  F : Functor C set_cat	  s, d, d' : Pair	  m1 : morphism d d'	  m2 : morphism s d	  ============================	  (F _1 (m1.1 o m2.1)) (x s) = (F _1 m1.1) (x d)	";
             responses[i]=data;
           
 
             i = 108;
-            data = "1 subgoal (ID 109)	  	  H : Funext	  C : PreCategory	  F : Functor C set_cat	  s, d, d' : Pair	  m1 : {f : C.(Core.morphism) d.(c) d'.(c) &	       F.(morphism_of) d.(c) d'.(c) f d.(x) = d'.(x)}	  m2 : {f : C.(Core.morphism) s.(c) d.(c) &	       F.(morphism_of) s.(c) d.(c) f s.(x) = d.(x)}	  ============================	  F.(morphism_of) s.(c) d'.(c)	    (C.(compose) s.(c) d.(c) d'.(c) m1.(proj1_sig) m2.(proj1_sig)) 	    s.(x) =	  (F _1 m1.(proj1_sig)) (F.(morphism_of) s.(c) d.(c) m2.(proj1_sig) s.(x))	";
+            data = "1 subgoal (ID 109)	  	  H : Funext	  C : PreCategory	  F : Functor C set_cat	  s, d, d' : Pair	  m1 : morphism d d'	  m2 : morphism s d	  ============================	  (F _1 (m1.1 o m2.1)) (x s) = (F _1 m1.1) ((F _1 m2.1) (x s))	";
             responses[i]=data;
           
 
             i = 109;
-            data = "1 subgoal (ID 123)	  	  H : Funext	  C : PreCategory	  F : Functor C set_cat	  s, d, d' : Pair	  m1 : {f : C.(Core.morphism) d.(c) d'.(c) &	       F.(morphism_of) d.(c) d'.(c) f d.(x) = d'.(x)}	  m2 : {f : C.(Core.morphism) s.(c) d.(c) &	       F.(morphism_of) s.(c) d.(c) f s.(x) = d.(x)}	  ============================	  F.(morphism_of) s.(c) d'.(c)	    (C.(compose) s.(c) d.(c) d'.(c) m1.(proj1_sig) m2.(proj1_sig)) 	    s.(x) =	  set_cat.(compose) (F.(object_of) s.(c)) (F.(object_of) d.(c))	    (F.(object_of) d'.(c)) (F _1 m1.(proj1_sig))	    (F.(morphism_of) s.(c) d.(c) m2.(proj1_sig)) s.(x)	";
+            data = "1 subgoal (ID 123)	  	  H : Funext	  C : PreCategory	  F : Functor C set_cat	  s, d, d' : Pair	  m1 : morphism d d'	  m2 : morphism s d	  ============================	  (F _1 (m1.1 o m2.1)) (x s) = (F _1 m1.1 o F _1 m2.1) (x s)	";
             responses[i]=data;
           
 
             i = 110;
-            data = "1 subgoal (ID 128)	  	  H : Funext	  C : PreCategory	  F : Functor C set_cat	  s, d, d' : Pair	  m1 : {f : C.(Core.morphism) d.(c) d'.(c) &	       F.(morphism_of) d.(c) d'.(c) f d.(x) = d'.(x)}	  m2 : {f : C.(Core.morphism) s.(c) d.(c) &	       F.(morphism_of) s.(c) d.(c) f s.(x) = d.(x)}	  ============================	  F.(morphism_of) s.(c) d'.(c)	    (C.(compose) s.(c) d.(c) d'.(c) m1.(proj1_sig) m2.(proj1_sig)) =	  set_cat.(compose) (F.(object_of) s.(c)) (F.(object_of) d.(c))	    (F.(object_of) d'.(c)) (F _1 m1.(proj1_sig))	    (F.(morphism_of) s.(c) d.(c) m2.(proj1_sig))	";
+            data = "1 subgoal (ID 128)	  	  H : Funext	  C : PreCategory	  F : Functor C set_cat	  s, d, d' : Pair	  m1 : morphism d d'	  m2 : morphism s d	  ============================	  F _1 (m1.1 o m2.1) = F _1 m1.1 o F _1 m2.1	";
             responses[i]=data;
           
 
@@ -583,7 +583,7 @@
           
 
             i = 113;
-            data = "1 subgoal (ID 70)	  	  H : Funext	  C : PreCategory	  F : Functor C set_cat	  s, d, d' : Pair	  m1 : {f : C.(Core.morphism) d.(c) d'.(c) &	       F.(morphism_of) d.(c) d'.(c) f d.(x) = d'.(x)}	  m2 : {f : C.(Core.morphism) s.(c) d.(c) &	       F.(morphism_of) s.(c) d.(c) f s.(x) = d.(x)}	  ============================	  {f : C.(Core.morphism) s.(c) d'.(c) &	  F.(morphism_of) s.(c) d'.(c) f s.(x) = d'.(x)}	";
+            data = "1 subgoal (ID 70)	  	  H : Funext	  C : PreCategory	  F : Functor C set_cat	  s, d, d' : Pair	  m1 : morphism d d'	  m2 : morphism s d	  ============================	  morphism s d'	";
             responses[i]=data;
           
 
@@ -593,7 +593,7 @@
           
 
             i = 115;
-            data = "1 subgoal (ID 80)	  	  H : Funext	  C : PreCategory	  F : Functor C set_cat	  s, d, d' : Pair	  m1 : {f : C.(Core.morphism) d.(c) d'.(c) &	       F.(morphism_of) d.(c) d'.(c) f d.(x) = d'.(x)}	  m2 : {f : C.(Core.morphism) s.(c) d.(c) &	       F.(morphism_of) s.(c) d.(c) f s.(x) = d.(x)}	  ============================	  F.(morphism_of) s.(c) d'.(c)	    (C.(compose) s.(c) d.(c) d'.(c) m1.(proj1_sig) m2.(proj1_sig)) 	    s.(x) = d'.(x)	";
+            data = "1 subgoal (ID 80)	  	  H : Funext	  C : PreCategory	  F : Functor C set_cat	  s, d, d' : Pair	  m1 : morphism d d'	  m2 : morphism s d	  ============================	  (F _1 (m1.1 o m2.1)) (x s) = x d'	";
             responses[i]=data;
           
 
@@ -613,7 +613,7 @@
           
 
             i = 119;
-            data = "1 subgoal (ID 87)	  	  H : Funext	  C : PreCategory	  F : Functor C set_cat	  s : Pair	  ============================	  {f : C.(Core.morphism) s.(c) s.(c) &	  F.(morphism_of) s.(c) s.(c) f s.(x) = s.(x)}	";
+            data = "1 subgoal (ID 87)	  	  H : Funext	  C : PreCategory	  F : Functor C set_cat	  s : Pair	  ============================	  morphism s s	";
             responses[i]=data;
           
 
@@ -623,7 +623,7 @@
           
 
             i = 121;
-            data = "1 subgoal (ID 92)	  	  H : Funext	  C : PreCategory	  F : Functor C set_cat	  s : Pair	  ============================	  F.(morphism_of) s.(c) s.(c) (C.(identity) s.(c)) s.(x) = s.(x)	";
+            data = "1 subgoal (ID 92)	  	  H : Funext	  C : PreCategory	  F : Functor C set_cat	  s : Pair	  ============================	  (F _1 1) (x s) = x s	";
             responses[i]=data;
           
 

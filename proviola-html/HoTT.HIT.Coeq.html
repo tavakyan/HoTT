@@ -588,32 +588,32 @@
           
 
             i = 114;
-            data = "2 subgoals (ID 906)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  ============================	  (fun x : B' => H0.(equiv_inv) (f' x)) ==	  (fun x : B' => f (H.(equiv_inv) x))		subgoal 2 (ID 907) is:	 (fun x : B' => H0.(equiv_inv) (g' x)) == (fun x : B' => g (H.(equiv_inv) x))	";
+            data = "2 subgoals (ID 906)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  ============================	  (fun x : B' => _^-1 (f' x)) == (fun x : B' => f (_^-1 x))		subgoal 2 (ID 907) is:	 (fun x : B' => _^-1 (g' x)) == (fun x : B' => g (_^-1 x))	";
             responses[i]=data;
           
 
             i = 115;
-            data = "1 subgoal (ID 906)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  ============================	  (fun x : B' => H0.(equiv_inv) (f' x)) ==	  (fun x : B' => f (H.(equiv_inv) x))	1 subgoal (ID 909)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  H0.(equiv_inv) (f' b) = f (H.(equiv_inv) b)	";
+            data = "1 subgoal (ID 906)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  ============================	  (fun x : B' => _^-1 (f' x)) == (fun x : B' => f (_^-1 x))	1 subgoal (ID 909)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  _^-1 (f' b) = f (_^-1 b)	";
             responses[i]=data;
           
 
             i = 116;
-            data = "1 subgoal (ID 954)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  H0.(equiv_inv) (f' (h (H.(equiv_inv) b))) =	  H0.(equiv_inv) (k (f (H.(equiv_inv) b)))	";
+            data = "1 subgoal (ID 954)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  _^-1 (f' (h (_^-1 b))) = _^-1 (k (f (_^-1 b)))	";
             responses[i]=data;
           
 
             i = 117;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 907)		subgoal 1 (ID 907) is:	 (fun x : B' => H0.(equiv_inv) (g' x)) == (fun x : B' => g (H.(equiv_inv) x))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 907)		subgoal 1 (ID 907) is:	 (fun x : B' => _^-1 (g' x)) == (fun x : B' => g (_^-1 x))	";
             responses[i]=data;
           
 
             i = 118;
-            data = "1 subgoal (ID 907)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  ============================	  (fun x : B' => H0.(equiv_inv) (g' x)) ==	  (fun x : B' => g (H.(equiv_inv) x))	1 subgoal (ID 963)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  H0.(equiv_inv) (g' b) = g (H.(equiv_inv) b)	";
+            data = "1 subgoal (ID 907)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  ============================	  (fun x : B' => _^-1 (g' x)) == (fun x : B' => g (_^-1 x))	1 subgoal (ID 963)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  _^-1 (g' b) = g (_^-1 b)	";
             responses[i]=data;
           
 
             i = 119;
-            data = "1 subgoal (ID 1008)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  H0.(equiv_inv) (g' (h (H.(equiv_inv) b))) =	  H0.(equiv_inv) (k (g (H.(equiv_inv) b)))	";
+            data = "1 subgoal (ID 1008)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  _^-1 (g' (h (_^-1 b))) = _^-1 (k (g (_^-1 b)))	";
             responses[i]=data;
           
 
@@ -643,7 +643,7 @@
           
 
             i = 125;
-            data = "2 subgoals (ID 929)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  ap k	    (ap (fun x : B' => H0.(equiv_inv) (f' x)) (H.(eisretr) b)^	     @' ap k^-1 (p (H.(equiv_inv) b))^	     @' H0.(eissect) (f (H.(equiv_inv) b)))	  @' p (H.(equiv_inv) b)	  @' ap f' (H.(eisretr) b) = H0.(eisretr) (f' b)		subgoal 2 (ID 930) is:	 ap k	   (ap (fun x : B' => H0.(equiv_inv) (g' x)) (H.(eisretr) b)^	    @' ap k^-1 (q (H.(equiv_inv) b))^	    @' H0.(eissect) (g (H.(equiv_inv) b)))	 @' q (H.(equiv_inv) b)	 @' ap g' (H.(eisretr) b) = H0.(eisretr) (g' b)	";
+            data = "2 subgoals (ID 929)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  ap k	    (ap (fun x : B' => _^-1 (f' x)) (eisretr _ b)^	     @' ap k^-1 (p (_^-1 b))^	     @' eissect _ (f (_^-1 b)))	  @' p (_^-1 b)	  @' ap f' (eisretr _ b) = eisretr _ (f' b)		subgoal 2 (ID 930) is:	 ap k	   (ap (fun x : B' => _^-1 (g' x)) (eisretr _ b)^	    @' ap k^-1 (q (_^-1 b))^	    @' eissect _ (g (_^-1 b)))	 @' q (_^-1 b)	 @' ap g' (eisretr _ b) = eisretr _ (g' b)	";
             responses[i]=data;
           
 
@@ -728,37 +728,37 @@
           
 
             i = 142;
-            data = "2 subgoals (ID 943)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  ap k (ap (fun x : B' => H0.(equiv_inv) (f' x)) (H.(eisretr) b)^)	  @' ap k (ap k^-1 (p (H.(equiv_inv) b))^)	  @' H0.(eisretr) (k (f (H.(equiv_inv) b)))	  @' p (H.(equiv_inv) b)	  @' ap f' (H.(eisretr) b) = H0.(eisretr) (f' b)		subgoal 2 (ID 958) is:	 ap k (ap (fun x : B' => H0.(equiv_inv) (g' x)) (H.(eisretr) b)^)	 @' ap k (ap k^-1 (q (H.(equiv_inv) b))^)	 @' H0.(eisretr) (k (g (H.(equiv_inv) b)))	 @' q (H.(equiv_inv) b)	 @' ap g' (H.(eisretr) b) = H0.(eisretr) (g' b)	";
+            data = "2 subgoals (ID 943)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  ap k (ap (fun x : B' => _^-1 (f' x)) (eisretr _ b)^)	  @' ap k (ap k^-1 (p (_^-1 b))^)	  @' eisretr _ (k (f (_^-1 b)))	  @' p (_^-1 b)	  @' ap f' (eisretr _ b) = eisretr _ (f' b)		subgoal 2 (ID 958) is:	 ap k (ap (fun x : B' => _^-1 (g' x)) (eisretr _ b)^)	 @' ap k (ap k^-1 (q (_^-1 b))^)	 @' eisretr _ (k (g (_^-1 b)))	 @' q (_^-1 b)	 @' ap g' (eisretr _ b) = eisretr _ (g' b)	";
             responses[i]=data;
           
 
             i = 143;
-            data = "2 subgoals (ID 964)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  ap k (ap (fun x : B' => H0.(equiv_inv) (f' x)) (H.(eisretr) b)^)	  @' ap (fun x : A' => k (k^-1 x)) (p (H.(equiv_inv) b))^	  @' H0.(eisretr) (k (f (H.(equiv_inv) b)))	  @' p (H.(equiv_inv) b)	  @' ap f' (H.(eisretr) b) = H0.(eisretr) (f' b)		subgoal 2 (ID 974) is:	 ap k (ap (fun x : B' => H0.(equiv_inv) (g' x)) (H.(eisretr) b)^)	 @' ap (fun x : A' => k (k^-1 x)) (q (H.(equiv_inv) b))^	 @' H0.(eisretr) (k (g (H.(equiv_inv) b)))	 @' q (H.(equiv_inv) b)	 @' ap g' (H.(eisretr) b) = H0.(eisretr) (g' b)	";
+            data = "2 subgoals (ID 964)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  ap k (ap (fun x : B' => _^-1 (f' x)) (eisretr _ b)^)	  @' ap (fun x : A' => k (k^-1 x)) (p (_^-1 b))^	  @' eisretr _ (k (f (_^-1 b)))	  @' p (_^-1 b)	  @' ap f' (eisretr _ b) = eisretr _ (f' b)		subgoal 2 (ID 974) is:	 ap k (ap (fun x : B' => _^-1 (g' x)) (eisretr _ b)^)	 @' ap (fun x : A' => k (k^-1 x)) (q (_^-1 b))^	 @' eisretr _ (k (g (_^-1 b)))	 @' q (_^-1 b)	 @' ap g' (eisretr _ b) = eisretr _ (g' b)	";
             responses[i]=data;
           
 
             i = 144;
-            data = "2 subgoals (ID 993)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  ap k (ap (fun x : B' => H0.(equiv_inv) (f' x)) (H.(eisretr) b)^)	  @' H0.(eisretr) (f' (h (H.(equiv_inv) b)))	  @' (p (H.(equiv_inv) b))^	  @' p (H.(equiv_inv) b)	  @' ap f' (H.(eisretr) b) = H0.(eisretr) (f' b)		subgoal 2 (ID 1018) is:	 ap k (ap (fun x : B' => H0.(equiv_inv) (g' x)) (H.(eisretr) b)^)	 @' H0.(eisretr) (g' (h (H.(equiv_inv) b)))	 @' (q (H.(equiv_inv) b))^	 @' q (H.(equiv_inv) b)	 @' ap g' (H.(eisretr) b) = H0.(eisretr) (g' b)	";
+            data = "2 subgoals (ID 993)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  ap k (ap (fun x : B' => _^-1 (f' x)) (eisretr _ b)^)	  @' eisretr _ (f' (h (_^-1 b)))	  @' (p (_^-1 b))^	  @' p (_^-1 b)	  @' ap f' (eisretr _ b) = eisretr _ (f' b)		subgoal 2 (ID 1018) is:	 ap k (ap (fun x : B' => _^-1 (g' x)) (eisretr _ b)^)	 @' eisretr _ (g' (h (_^-1 b)))	 @' (q (_^-1 b))^	 @' q (_^-1 b)	 @' ap g' (eisretr _ b) = eisretr _ (g' b)	";
             responses[i]=data;
           
 
             i = 145;
-            data = "2 subgoals (ID 1035)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  ap k (ap (fun x : B' => H0.(equiv_inv) (f' x)) (H.(eisretr) b)^)	  @' H0.(eisretr) (f' (h (H.(equiv_inv) b)))	  @' ap f' (H.(eisretr) b) = H0.(eisretr) (f' b)		subgoal 2 (ID 1044) is:	 ap k (ap (fun x : B' => H0.(equiv_inv) (g' x)) (H.(eisretr) b)^)	 @' H0.(eisretr) (g' (h (H.(equiv_inv) b)))	 @' ap g' (H.(eisretr) b) = H0.(eisretr) (g' b)	";
+            data = "2 subgoals (ID 1035)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  ap k (ap (fun x : B' => _^-1 (f' x)) (eisretr _ b)^)	  @' eisretr _ (f' (h (_^-1 b)))	  @' ap f' (eisretr _ b) = eisretr _ (f' b)		subgoal 2 (ID 1044) is:	 ap k (ap (fun x : B' => _^-1 (g' x)) (eisretr _ b)^)	 @' eisretr _ (g' (h (_^-1 b)))	 @' ap g' (eisretr _ b) = eisretr _ (g' b)	";
             responses[i]=data;
           
 
             i = 146;
-            data = "2 subgoals (ID 1071)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  ap (fun x : B' => k (H0.(equiv_inv) (f' x))) (H.(eisretr) b)^	  @' H0.(eisretr) (f' (h (H.(equiv_inv) b)))	  @' ap f' (H.(eisretr) b) = H0.(eisretr) (f' b)		subgoal 2 (ID 1116) is:	 ap (fun x : B' => k (H0.(equiv_inv) (g' x))) (H.(eisretr) b)^	 @' H0.(eisretr) (g' (h (H.(equiv_inv) b)))	 @' ap g' (H.(eisretr) b) = H0.(eisretr) (g' b)	";
+            data = "2 subgoals (ID 1071)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  ap (fun x : B' => k (_^-1 (f' x))) (eisretr _ b)^	  @' eisretr _ (f' (h (_^-1 b)))	  @' ap f' (eisretr _ b) = eisretr _ (f' b)		subgoal 2 (ID 1116) is:	 ap (fun x : B' => k (_^-1 (g' x))) (eisretr _ b)^	 @' eisretr _ (g' (h (_^-1 b)))	 @' ap g' (eisretr _ b) = eisretr _ (g' b)	";
             responses[i]=data;
           
 
             i = 147;
-            data = "2 subgoals (ID 1161)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  ap (fun x : A' => k (H0.(equiv_inv) x)) (ap f' (H.(eisretr) b)^)	  @' H0.(eisretr) (f' (h (H.(equiv_inv) b)))	  @' ap f' (H.(eisretr) b) = H0.(eisretr) (f' b)		subgoal 2 (ID 1206) is:	 ap (fun x : A' => k (H0.(equiv_inv) x)) (ap g' (H.(eisretr) b)^)	 @' H0.(eisretr) (g' (h (H.(equiv_inv) b)))	 @' ap g' (H.(eisretr) b) = H0.(eisretr) (g' b)	";
+            data = "2 subgoals (ID 1161)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  ap (fun x : A' => k (_^-1 x)) (ap f' (eisretr _ b)^)	  @' eisretr _ (f' (h (_^-1 b)))	  @' ap f' (eisretr _ b) = eisretr _ (f' b)		subgoal 2 (ID 1206) is:	 ap (fun x : A' => k (_^-1 x)) (ap g' (eisretr _ b)^)	 @' eisretr _ (g' (h (_^-1 b)))	 @' ap g' (eisretr _ b) = eisretr _ (g' b)	";
             responses[i]=data;
           
 
             i = 148;
-            data = "2 subgoals (ID 1248)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  H0.(eisretr) (f' b)	  @' ap f' (H.(eisretr) b)^	  @' ap f' (H.(eisretr) b) = H0.(eisretr) (f' b)		subgoal 2 (ID 1287) is:	 H0.(eisretr) (g' b)	 @' ap g' (H.(eisretr) b)^	 @' ap g' (H.(eisretr) b) = H0.(eisretr) (g' b)	";
+            data = "2 subgoals (ID 1248)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B'	  ============================	  eisretr _ (f' b)	  @' ap f' (eisretr _ b)^	  @' ap f' (eisretr _ b) = eisretr _ (f' b)		subgoal 2 (ID 1287) is:	 eisretr _ (g' b)	 @' ap g' (eisretr _ b)^	 @' ap g' (eisretr _ b) = eisretr _ (g' b)	";
             responses[i]=data;
           
 
@@ -793,47 +793,47 @@
           
 
             i = 155;
-            data = "2 subgoals (ID 940)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  ap H0.(equiv_inv) (p b)	  @' (ap (fun x : B' => H0.(equiv_inv) (f' x)) (H.(eisretr) (h b))^	      @' ap k^-1 (p (H.(equiv_inv) (h b)))^	      @' H0.(eissect) (f (H.(equiv_inv) (h b))))	  @' ap f (H.(eissect) b) = H0.(eissect) (f b)		subgoal 2 (ID 941) is:	 ap H0.(equiv_inv) (q b)	 @' (ap (fun x : B' => H0.(equiv_inv) (g' x)) (H.(eisretr) (h b))^	     @' ap k^-1 (q (H.(equiv_inv) (h b)))^	     @' H0.(eissect) (g (H.(equiv_inv) (h b))))	 @' ap g (H.(eissect) b) = H0.(eissect) (g b)	";
+            data = "2 subgoals (ID 940)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  ap _^-1 (p b)	  @' (ap (fun x : B' => _^-1 (f' x)) (eisretr _ (h b))^	      @' ap k^-1 (p (_^-1 (h b)))^	      @' eissect _ (f (_^-1 (h b))))	  @' ap f (eissect _ b) = eissect _ (f b)		subgoal 2 (ID 941) is:	 ap _^-1 (q b)	 @' (ap (fun x : B' => _^-1 (g' x)) (eisretr _ (h b))^	     @' ap k^-1 (q (_^-1 (h b)))^	     @' eissect _ (g (_^-1 (h b))))	 @' ap g (eissect _ b) = eissect _ (g b)	";
             responses[i]=data;
           
 
             i = 156;
-            data = "2 subgoals (ID 977)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  ap H0.(equiv_inv) (p b)	  @' ap (fun x : B => H0.(equiv_inv) (f' (h x))) (H.(eissect) b)^	  @' ap k^-1 (p (H.(equiv_inv) (h b)))^	  @' H0.(eissect) (f (H.(equiv_inv) (h b)))	  @' ap f (H.(eissect) b) = H0.(eissect) (f b)		subgoal 2 (ID 1019) is:	 ap H0.(equiv_inv) (q b)	 @' ap (fun x : B => H0.(equiv_inv) (g' (h x))) (H.(eissect) b)^	 @' ap k^-1 (q (H.(equiv_inv) (h b)))^	 @' H0.(eissect) (g (H.(equiv_inv) (h b)))	 @' ap g (H.(eissect) b) = H0.(eissect) (g b)	";
+            data = "2 subgoals (ID 977)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  ap _^-1 (p b)	  @' ap (fun x : B => _^-1 (f' (h x))) (eissect _ b)^	  @' ap k^-1 (p (_^-1 (h b)))^	  @' eissect _ (f (_^-1 (h b)))	  @' ap f (eissect _ b) = eissect _ (f b)		subgoal 2 (ID 1019) is:	 ap _^-1 (q b)	 @' ap (fun x : B => _^-1 (g' (h x))) (eissect _ b)^	 @' ap k^-1 (q (_^-1 (h b)))^	 @' eissect _ (g (_^-1 (h b)))	 @' ap g (eissect _ b) = eissect _ (g b)	";
             responses[i]=data;
           
 
             i = 157;
-            data = "2 subgoals (ID 1050)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  ap H0.(equiv_inv) (p b)	  @' ap H0.(equiv_inv) (ap (fun x : B => f' (h x)) (H.(eissect) b)^)	  @' ap k^-1 (p (H.(equiv_inv) (h b)))^	  @' H0.(eissect) (f (H.(equiv_inv) (h b)))	  @' ap f (H.(eissect) b) = H0.(eissect) (f b)		subgoal 2 (ID 1099) is:	 ap H0.(equiv_inv) (q b)	 @' ap H0.(equiv_inv) (ap (fun x : B => g' (h x)) (H.(eissect) b)^)	 @' ap k^-1 (q (H.(equiv_inv) (h b)))^	 @' H0.(eissect) (g (H.(equiv_inv) (h b)))	 @' ap g (H.(eissect) b) = H0.(eissect) (g b)	";
+            data = "2 subgoals (ID 1050)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  ap _^-1 (p b)	  @' ap _^-1 (ap (fun x : B => f' (h x)) (eissect _ b)^)	  @' ap k^-1 (p (_^-1 (h b)))^	  @' eissect _ (f (_^-1 (h b)))	  @' ap f (eissect _ b) = eissect _ (f b)		subgoal 2 (ID 1099) is:	 ap _^-1 (q b)	 @' ap _^-1 (ap (fun x : B => g' (h x)) (eissect _ b)^)	 @' ap k^-1 (q (_^-1 (h b)))^	 @' eissect _ (g (_^-1 (h b)))	 @' ap g (eissect _ b) = eissect _ (g b)	";
             responses[i]=data;
           
 
             i = 158;
-            data = "2 subgoals (ID 1181)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  ap H0.(equiv_inv)	    (p b	     @' (ap (fun x : B => f' (h x)) (H.(eissect) b)^	         @' (p (H.(equiv_inv) (h b)))^))	  @' (H0.(eissect) (f (H.(equiv_inv) (h b)))	      @' ap f (H.(eissect) b)) = H0.(eissect) (f b)		subgoal 2 (ID 1249) is:	 ap H0.(equiv_inv)	   (q b	    @' (ap (fun x : B => g' (h x)) (H.(eissect) b)^	        @' (q (H.(equiv_inv) (h b)))^))	 @' (H0.(eissect) (g (H.(equiv_inv) (h b)))	     @' ap g (H.(eissect) b)) = H0.(eissect) (g b)	";
+            data = "2 subgoals (ID 1181)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  ap _^-1	    (p b	     @' (ap (fun x : B => f' (h x)) (eissect _ b)^	         @' (p (_^-1 (h b)))^))	  @' (eissect _ (f (_^-1 (h b)))	      @' ap f (eissect _ b)) = eissect _ (f b)		subgoal 2 (ID 1249) is:	 ap _^-1	   (q b	    @' (ap (fun x : B => g' (h x)) (eissect _ b)^	        @' (q (_^-1 (h b)))^))	 @' (eissect _ (g (_^-1 (h b)))	     @' ap g (eissect _ b)) = eissect _ (g b)	";
             responses[i]=data;
           
 
             i = 159;
-            data = "2 subgoals (ID 1276)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  ap H0.(equiv_inv)	    (p b	     @' ((p b)^	         @' ap (fun b0 : B => k (f b0)) (H.(eissect) b)^))	  @' (H0.(eissect) (f (H.(equiv_inv) (h b)))	      @' ap f (H.(eissect) b)) = H0.(eissect) (f b)		subgoal 2 (ID 1249) is:	 ap H0.(equiv_inv)	   (q b	    @' (ap (fun x : B => g' (h x)) (H.(eissect) b)^	        @' (q (H.(equiv_inv) (h b)))^))	 @' (H0.(eissect) (g (H.(equiv_inv) (h b)))	     @' ap g (H.(eissect) b)) = H0.(eissect) (g b)	";
+            data = "2 subgoals (ID 1276)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  ap _^-1 (p b	           @' ((p b)^	               @' ap (fun b0 : B => k (f b0)) (eissect _ b)^))	  @' (eissect _ (f (_^-1 (h b)))	      @' ap f (eissect _ b)) = eissect _ (f b)		subgoal 2 (ID 1249) is:	 ap _^-1	   (q b	    @' (ap (fun x : B => g' (h x)) (eissect _ b)^	        @' (q (_^-1 (h b)))^))	 @' (eissect _ (g (_^-1 (h b)))	     @' ap g (eissect _ b)) = eissect _ (g b)	";
             responses[i]=data;
           
 
             i = 160;
-            data = "2 subgoals (ID 1276)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  ap H0.(equiv_inv)	    (p b	     @' ((p b)^	         @' ap (fun b0 : B => k (f b0)) (H.(eissect) b)^))	  @' (H0.(eissect) (f (H.(equiv_inv) (h b)))	      @' ap f (H.(eissect) b)) = H0.(eissect) (f b)		subgoal 2 (ID 1309) is:	 ap H0.(equiv_inv)	   (q b	    @' ((q b)^	        @' ap (fun b0 : B => k (g b0)) (H.(eissect) b)^))	 @' (H0.(eissect) (g (H.(equiv_inv) (h b)))	     @' ap g (H.(eissect) b)) = H0.(eissect) (g b)	";
+            data = "2 subgoals (ID 1276)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  ap _^-1 (p b	           @' ((p b)^	               @' ap (fun b0 : B => k (f b0)) (eissect _ b)^))	  @' (eissect _ (f (_^-1 (h b)))	      @' ap f (eissect _ b)) = eissect _ (f b)		subgoal 2 (ID 1309) is:	 ap _^-1 (q b	          @' ((q b)^	              @' ap (fun b0 : B => k (g b0)) (eissect _ b)^))	 @' (eissect _ (g (_^-1 (h b)))	     @' ap g (eissect _ b)) = eissect _ (g b)	";
             responses[i]=data;
           
 
             i = 161;
-            data = "2 subgoals (ID 1340)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  ap H0.(equiv_inv) (ap (fun b0 : B => k (f b0)) (H.(eissect) b)^)	  @' H0.(eissect) (f (H.(equiv_inv) (h b)))	  @' ap f (H.(eissect) b) = H0.(eissect) (f b)		subgoal 2 (ID 1360) is:	 ap H0.(equiv_inv) (ap (fun b0 : B => k (g b0)) (H.(eissect) b)^)	 @' H0.(eissect) (g (H.(equiv_inv) (h b)))	 @' ap g (H.(eissect) b) = H0.(eissect) (g b)	";
+            data = "2 subgoals (ID 1340)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  ap _^-1 (ap (fun b0 : B => k (f b0)) (eissect _ b)^)	  @' eissect _ (f (_^-1 (h b)))	  @' ap f (eissect _ b) = eissect _ (f b)		subgoal 2 (ID 1360) is:	 ap _^-1 (ap (fun b0 : B => k (g b0)) (eissect _ b)^)	 @' eissect _ (g (_^-1 (h b)))	 @' ap g (eissect _ b) = eissect _ (g b)	";
             responses[i]=data;
           
 
             i = 162;
-            data = "2 subgoals (ID 1433)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  ap (fun x : A => H0.(equiv_inv) (k x)) (ap f (H.(eissect) b)^)	  @' H0.(eissect) (f (H.(equiv_inv) (h b)))	  @' ap f (H.(eissect) b) = H0.(eissect) (f b)		subgoal 2 (ID 1523) is:	 ap (fun x : A => H0.(equiv_inv) (k x)) (ap g (H.(eissect) b)^)	 @' H0.(eissect) (g (H.(equiv_inv) (h b)))	 @' ap g (H.(eissect) b) = H0.(eissect) (g b)	";
+            data = "2 subgoals (ID 1433)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  ap (fun x : A => _^-1 (k x)) (ap f (eissect _ b)^)	  @' eissect _ (f (_^-1 (h b)))	  @' ap f (eissect _ b) = eissect _ (f b)		subgoal 2 (ID 1523) is:	 ap (fun x : A => _^-1 (k x)) (ap g (eissect _ b)^)	 @' eissect _ (g (_^-1 (h b)))	 @' ap g (eissect _ b) = eissect _ (g b)	";
             responses[i]=data;
           
 
             i = 163;
-            data = "2 subgoals (ID 1555)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  H0.(eissect) (f b)	  @' ap f (H.(eissect) b)^	  @' ap f (H.(eissect) b) = H0.(eissect) (f b)		subgoal 2 (ID 1574) is:	 H0.(eissect) (g b)	 @' ap g (H.(eissect) b)^	 @' ap g (H.(eissect) b) = H0.(eissect) (g b)	";
+            data = "2 subgoals (ID 1555)	  	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  H : IsEquiv h	  H0 : IsEquiv k	  p : k o f == f' o h	  q : k o g == g' o h	  b : B	  ============================	  eissect _ (f b)	  @' ap f (eissect _ b)^	  @' ap f (eissect _ b) = eissect _ (f b)		subgoal 2 (ID 1574) is:	 eissect _ (g b)	 @' ap g (eissect _ b)^	 @' ap g (eissect _ b) = eissect _ (g b)	";
             responses[i]=data;
           
 

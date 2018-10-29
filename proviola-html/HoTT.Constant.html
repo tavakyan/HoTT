@@ -418,7 +418,7 @@
           
 
             i = 80;
-            data = "1 subgoal (ID 21)	  	  X : Type	  f : X -> X	  H : WeaklyConstant f	  ============================	  FixedBy f <~> (merely X).(trunctype_type)	";
+            data = "1 subgoal (ID 21)	  	  X : Type	  f : X -> X	  H : WeaklyConstant f	  ============================	  FixedBy f <~> merely X	";
             responses[i]=data;
           
 
@@ -428,17 +428,17 @@
           
 
             i = 82;
-            data = "2 subgoals (ID 35)	  	  X : Type	  f : X -> X	  H : WeaklyConstant f	  ============================	  FixedBy f -> (merely X).(trunctype_type)		subgoal 2 (ID 36) is:	 (merely X).(trunctype_type) -> FixedBy f	";
+            data = "2 subgoals (ID 35)	  	  X : Type	  f : X -> X	  H : WeaklyConstant f	  ============================	  FixedBy f -> merely X		subgoal 2 (ID 36) is:	 merely X -> FixedBy f	";
             responses[i]=data;
           
 
             i = 83;
-            data = "1 subgoal (ID 35)	  	  X : Type	  f : X -> X	  H : WeaklyConstant f	  ============================	  FixedBy f -> (merely X).(trunctype_type)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 36)		subgoal 1 (ID 36) is:	 (merely X).(trunctype_type) -> FixedBy f	";
+            data = "1 subgoal (ID 35)	  	  X : Type	  f : X -> X	  H : WeaklyConstant f	  ============================	  FixedBy f -> merely X	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 36)		subgoal 1 (ID 36) is:	 merely X -> FixedBy f	";
             responses[i]=data;
           
 
             i = 84;
-            data = "1 subgoal (ID 36)	  	  X : Type	  f : X -> X	  H : WeaklyConstant f	  ============================	  (merely X).(trunctype_type) -> FixedBy f	1 subgoal (ID 60)	  	  X : Type	  f : X -> X	  H : WeaklyConstant f	  x : X	  ============================	  FixedBy f	";
+            data = "1 subgoal (ID 36)	  	  X : Type	  f : X -> X	  H : WeaklyConstant f	  ============================	  merely X -> FixedBy f	1 subgoal (ID 60)	  	  X : Type	  f : X -> X	  H : WeaklyConstant f	  x : X	  ============================	  FixedBy f	";
             responses[i]=data;
           
 
@@ -518,7 +518,7 @@
           
 
             i = 100;
-            data = "1 subgoal (ID 25)	  	  X : Type	  H : Collapsible X	  ============================	  (merely X).(trunctype_type) -> X	";
+            data = "1 subgoal (ID 25)	  	  X : Type	  H : Collapsible X	  ============================	  merely X -> X	";
             responses[i]=data;
           
 
@@ -528,7 +528,7 @@
           
 
             i = 102;
-            data = "1 subgoal (ID 57)	  	  X : Type	  H : Collapsible X	  ============================	  FixedBy H.(collapse) -> X	";
+            data = "1 subgoal (ID 57)	  	  X : Type	  H : Collapsible X	  ============================	  FixedBy collapse -> X	";
             responses[i]=data;
           
 
@@ -543,7 +543,7 @@
           
 
             i = 105;
-            data = "1 subgoal (ID 29)	  	  X : Type	  s : (merely X).(trunctype_type) -> X	  ============================	  Collapsible X	";
+            data = "1 subgoal (ID 29)	  	  X : Type	  s : merely X -> X	  ============================	  Collapsible X	";
             responses[i]=data;
           
 
@@ -553,7 +553,7 @@
           
 
             i = 107;
-            data = "1 subgoal (ID 58)	  	  X : Type	  s : (merely X).(trunctype_type) -> X	  x, y : X	  ============================	  s (tr x) = s (tr y)	";
+            data = "1 subgoal (ID 58)	  	  X : Type	  s : merely X -> X	  x, y : X	  ============================	  s (tr x) = s (tr y)	";
             responses[i]=data;
           
 
@@ -753,7 +753,7 @@
           
 
             i = 147;
-            data = "1 subgoal (ID 47)	  	  H : Funext	  X : Type	  Y : Type	  ============================	  {f : X -> Y & ConditionallyConstant f} <~>	  ((merely X).(trunctype_type) -> Y)	";
+            data = "1 subgoal (ID 47)	  	  H : Funext	  X : Type	  Y : Type	  ============================	  {f : X -> Y & ConditionallyConstant f} <~> (merely X -> Y)	";
             responses[i]=data;
           
 
@@ -763,7 +763,7 @@
           
 
             i = 149;
-            data = "1 subgoal (ID 57)	  	  H : Funext	  X : Type	  Y : Type	  ============================	  {b : Trunc (-1) X -> Y & {a : X -> Y & forall x : X, b (tr x) = a x}} <~>	  ((merely X).(trunctype_type) -> Y)	";
+            data = "1 subgoal (ID 57)	  	  H : Funext	  X : Type	  Y : Type	  ============================	  {b : Trunc (-1) X -> Y & {a : X -> Y & forall x : X, b (tr x) = a x}} <~>	  (merely X -> Y)	";
             responses[i]=data;
           
 
@@ -808,12 +808,12 @@
           
 
             i = 158;
-            data = "1 subgoal (ID 76)	  	  X : Type	  Y : Type	  f : X -> Y	  P : Type	  IsHProp0 : IsHProp P	  g : X -> P	  h : P -> Y	  p : h o g == f	  g' := (Trunc_rec g : (merely X).(trunctype_type) -> P)	   : (merely X).(trunctype_type) -> P	  ============================	  ConditionallyConstant f	";
+            data = "1 subgoal (ID 76)	  	  X : Type	  Y : Type	  f : X -> Y	  P : Type	  IsHProp0 : IsHProp P	  g : X -> P	  h : P -> Y	  p : h o g == f	  g' := (Trunc_rec g : merely X -> P) : merely X -> P	  ============================	  ConditionallyConstant f	";
             responses[i]=data;
           
 
             i = 159;
-            data = "1 subgoal (ID 88)	  	  X : Type	  Y : Type	  f : X -> Y	  P : Type	  IsHProp0 : IsHProp P	  g : X -> P	  h : P -> Y	  p : h o g == f	  g' := (Trunc_rec g : (merely X).(trunctype_type) -> P)	   : (merely X).(trunctype_type) -> P	  x : X	  ============================	  h (g' (tr x)) = f x	";
+            data = "1 subgoal (ID 88)	  	  X : Type	  Y : Type	  f : X -> Y	  P : Type	  IsHProp0 : IsHProp P	  g : X -> P	  h : P -> Y	  p : h o g == f	  g' := (Trunc_rec g : merely X -> P) : merely X -> P	  x : X	  ============================	  h (g' (tr x)) = f x	";
             responses[i]=data;
           
 
@@ -868,12 +868,12 @@
           
 
             i = 170;
-            data = "2 subgoals (ID 93)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  P : Type	  Pc : X -> Contr P	  g : X -> P	  h : P -> Y	  p : h o g == f	  ============================	  (merely X).(trunctype_type) -> IsHProp P		subgoal 2 (ID 94) is:	 ConditionallyConstant f	";
+            data = "2 subgoals (ID 93)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  P : Type	  Pc : X -> Contr P	  g : X -> P	  h : P -> Y	  p : h o g == f	  ============================	  merely X -> IsHProp P		subgoal 2 (ID 94) is:	 ConditionallyConstant f	";
             responses[i]=data;
           
 
             i = 171;
-            data = "1 subgoal (ID 93)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  P : Type	  Pc : X -> Contr P	  g : X -> P	  h : P -> Y	  p : h o g == f	  ============================	  (merely X).(trunctype_type) -> IsHProp P	1 subgoal (ID 100)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  P : Type	  Pc : X -> Contr P	  g : X -> P	  h : P -> Y	  p : h o g == f	  ============================	  X -> IsHProp P	";
+            data = "1 subgoal (ID 93)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  P : Type	  Pc : X -> Contr P	  g : X -> P	  h : P -> Y	  p : h o g == f	  ============================	  merely X -> IsHProp P	1 subgoal (ID 100)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  P : Type	  Pc : X -> Contr P	  g : X -> P	  h : P -> Y	  p : h o g == f	  ============================	  X -> IsHProp P	";
             responses[i]=data;
           
 
@@ -898,12 +898,12 @@
           
 
             i = 176;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 94)		subgoal 1 (ID 94) is:	 ConditionallyConstant f	1 subgoal (ID 94)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  P : Type	  Pc : X -> Contr P	  g : X -> P	  h : P -> Y	  p : h o g == f	  X0 : (merely X).(trunctype_type) -> IsHProp P	  ============================	  ConditionallyConstant f	1 subgoal (ID 112)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  P : Type	  Pc : X -> Contr P	  g : X -> P	  h : P -> Y	  p : h o g == f	  X0 : (merely X).(trunctype_type) -> IsHProp P	  g' := (Trunc_ind (fun _ : Trunc (-1) X => P) g	         :	         (merely X).(trunctype_type) -> P) : (merely X).(trunctype_type) -> P	  ============================	  ConditionallyConstant f	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 94)		subgoal 1 (ID 94) is:	 ConditionallyConstant f	1 subgoal (ID 94)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  P : Type	  Pc : X -> Contr P	  g : X -> P	  h : P -> Y	  p : h o g == f	  X0 : merely X -> IsHProp P	  ============================	  ConditionallyConstant f	1 subgoal (ID 112)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  P : Type	  Pc : X -> Contr P	  g : X -> P	  h : P -> Y	  p : h o g == f	  X0 : merely X -> IsHProp P	  g' := (Trunc_ind (fun _ : Trunc (-1) X => P) g : merely X -> P)	   : merely X -> P	  ============================	  ConditionallyConstant f	";
             responses[i]=data;
           
 
             i = 177;
-            data = "1 subgoal (ID 124)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  P : Type	  Pc : X -> Contr P	  g : X -> P	  h : P -> Y	  p : h o g == f	  X0 : (merely X).(trunctype_type) -> IsHProp P	  g' := (Trunc_ind (fun _ : Trunc (-1) X => P) g	         :	         (merely X).(trunctype_type) -> P) : (merely X).(trunctype_type) -> P	  x : X	  ============================	  h (g' (tr x)) = f x	";
+            data = "1 subgoal (ID 124)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  P : Type	  Pc : X -> Contr P	  g : X -> P	  h : P -> Y	  p : h o g == f	  X0 : merely X -> IsHProp P	  g' := (Trunc_ind (fun _ : Trunc (-1) X => P) g : merely X -> P)	   : merely X -> P	  x : X	  ============================	  h (g' (tr x)) = f x	";
             responses[i]=data;
           
 
@@ -953,7 +953,7 @@
           
 
             i = 187;
-            data = "1 subgoal (ID 122)	  	  X : Type	  Y : Type	  f : X -> Y	  H : Collapsible X	  H0 : WeaklyConstant f	  x : X	  ============================	  f (H.(collapse) x) = f x	";
+            data = "1 subgoal (ID 122)	  	  X : Type	  Y : Type	  f : X -> Y	  H : Collapsible X	  H0 : WeaklyConstant f	  x : X	  ============================	  f (collapse x) = f x	";
             responses[i]=data;
           
 
@@ -998,12 +998,12 @@
           
 
             i = 196;
-            data = "2 subgoals (ID 118)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  Ys : X -> IsHSet Y	  H0 : WeaklyConstant f	  ============================	  (merely X).(trunctype_type) -> IsHSet Y		subgoal 2 (ID 120) is:	 ConditionallyConstant f	";
+            data = "2 subgoals (ID 118)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  Ys : X -> IsHSet Y	  H0 : WeaklyConstant f	  ============================	  merely X -> IsHSet Y		subgoal 2 (ID 120) is:	 ConditionallyConstant f	";
             responses[i]=data;
           
 
             i = 197;
-            data = "1 subgoal (ID 118)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  Ys : X -> IsHSet Y	  H0 : WeaklyConstant f	  ============================	  (merely X).(trunctype_type) -> IsHSet Y	1 subgoal (ID 126)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  Ys : X -> IsHSet Y	  H0 : WeaklyConstant f	  ============================	  X -> IsHSet Y	";
+            data = "1 subgoal (ID 118)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  Ys : X -> IsHSet Y	  H0 : WeaklyConstant f	  ============================	  merely X -> IsHSet Y	1 subgoal (ID 126)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  Ys : X -> IsHSet Y	  H0 : WeaklyConstant f	  ============================	  X -> IsHSet Y	";
             responses[i]=data;
           
 
@@ -1013,52 +1013,52 @@
           
 
             i = 199;
-            data = "1 subgoal (ID 120)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  Ys : X -> IsHSet Y	  H0 : WeaklyConstant f	  Ys' : (merely X).(trunctype_type) -> IsHSet Y	  ============================	  ConditionallyConstant f	";
+            data = "1 subgoal (ID 120)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  Ys : X -> IsHSet Y	  H0 : WeaklyConstant f	  Ys' : merely X -> IsHSet Y	  ============================	  ConditionallyConstant f	";
             responses[i]=data;
           
 
             i = 200;
-            data = "4 subgoals (ID 132)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  Ys : X -> IsHSet Y	  H0 : WeaklyConstant f	  Ys' : (merely X).(trunctype_type) -> IsHSet Y	  ============================	  IsHProp (image (-1) f).(intermediate)		subgoal 2 (ID 134) is:	 X -> (image (-1) f).(intermediate)	subgoal 3 (ID 136) is:	 (image (-1) f).(intermediate) -> Y	subgoal 4 (ID 138) is:	 ?h o ?g == f	1 subgoal (ID 132)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  Ys : X -> IsHSet Y	  H0 : WeaklyConstant f	  Ys' : (merely X).(trunctype_type) -> IsHSet Y	  ============================	  IsHProp (image (-1) f).(intermediate)	1 subgoal (ID 547)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  Ys : X -> IsHSet Y	  H0 : WeaklyConstant f	  Ys' : (merely X).(trunctype_type) -> IsHSet Y	  y1 : Y	  p1 : -1 (hfiber f y1)	  y2 : Y	  p2 : -1 (hfiber f y2)	  ============================	  (y1; p1) = (y2; p2)	";
+            data = "4 subgoals (ID 132)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  Ys : X -> IsHSet Y	  H0 : WeaklyConstant f	  Ys' : merely X -> IsHSet Y	  ============================	  IsHProp (image (-1) f)		subgoal 2 (ID 134) is:	 X -> image (-1) f	subgoal 3 (ID 136) is:	 image (-1) f -> Y	subgoal 4 (ID 138) is:	 ?h o ?g == f	1 subgoal (ID 132)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  Ys : X -> IsHSet Y	  H0 : WeaklyConstant f	  Ys' : merely X -> IsHSet Y	  ============================	  IsHProp (image (-1) f)	1 subgoal (ID 547)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  Ys : X -> IsHSet Y	  H0 : WeaklyConstant f	  Ys' : merely X -> IsHSet Y	  y1 : Y	  p1 : -1 (hfiber f y1)	  y2 : Y	  p2 : -1 (hfiber f y2)	  ============================	  (y1; p1) = (y2; p2)	";
             responses[i]=data;
           
 
             i = 201;
-            data = "1 subgoal (ID 603)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  Ys : X -> IsHSet Y	  H0 : WeaklyConstant f	  Ys' : (merely X).(trunctype_type) -> IsHSet Y	  y1 : Y	  p1 : -1 (hfiber f y1)	  y2 : Y	  p2 : -1 (hfiber f y2)	  ============================	  y1 = y2	";
+            data = "1 subgoal (ID 603)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  Ys : X -> IsHSet Y	  H0 : WeaklyConstant f	  Ys' : merely X -> IsHSet Y	  y1 : Y	  p1 : -1 (hfiber f y1)	  y2 : Y	  p2 : -1 (hfiber f y2)	  ============================	  y1 = y2	";
             responses[i]=data;
           
 
             i = 202;
-            data = "1 subgoal (ID 609)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  Ys : X -> IsHSet Y	  H0 : WeaklyConstant f	  Ys' : (merely X).(trunctype_type) -> IsHSet Y	  y1 : Y	  p1 : -1 (hfiber f y1)	  y2 : Y	  p2 : -1 (hfiber f y2)	  X0 : IsHSet Y	  ============================	  y1 = y2	";
+            data = "1 subgoal (ID 609)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  Ys : X -> IsHSet Y	  H0 : WeaklyConstant f	  Ys' : merely X -> IsHSet Y	  y1 : Y	  p1 : -1 (hfiber f y1)	  y2 : Y	  p2 : -1 (hfiber f y2)	  X0 : IsHSet Y	  ============================	  y1 = y2	";
             responses[i]=data;
           
 
             i = 203;
-            data = "1 subgoal (ID 1088)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  Ys : X -> IsHSet Y	  H0 : WeaklyConstant f	  Ys' : (merely X).(trunctype_type) -> IsHSet Y	  y1, y2 : Y	  X0 : IsHSet Y	  p2 : hfiber f y2	  p1 : hfiber f y1	  ============================	  y1 = y2	";
+            data = "1 subgoal (ID 1088)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  Ys : X -> IsHSet Y	  H0 : WeaklyConstant f	  Ys' : merely X -> IsHSet Y	  y1, y2 : Y	  X0 : IsHSet Y	  p2 : hfiber f y2	  p1 : hfiber f y1	  ============================	  y1 = y2	";
             responses[i]=data;
           
 
             i = 204;
-            data = "1 subgoal (ID 1555)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  Ys : X -> IsHSet Y	  H0 : WeaklyConstant f	  Ys' : (merely X).(trunctype_type) -> IsHSet Y	  y1, y2 : Y	  X0 : IsHSet Y	  x2 : X	  q2 : f x2 = y2	  x1 : X	  q1 : f x1 = y1	  ============================	  y1 = y2	";
+            data = "1 subgoal (ID 1555)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  Ys : X -> IsHSet Y	  H0 : WeaklyConstant f	  Ys' : merely X -> IsHSet Y	  y1, y2 : Y	  X0 : IsHSet Y	  x2 : X	  q2 : f x2 = y2	  x1 : X	  q1 : f x1 = y1	  ============================	  y1 = y2	";
             responses[i]=data;
           
 
             i = 205;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	3 subgoals (ID 134)		subgoal 1 (ID 134) is:	 X -> (image (-1) f).(intermediate)	subgoal 2 (ID 136) is:	 (image (-1) f).(intermediate) -> Y	subgoal 3 (ID 138) is:	 ?h o ?g == f	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	3 subgoals (ID 134)		subgoal 1 (ID 134) is:	 X -> image (-1) f	subgoal 2 (ID 136) is:	 image (-1) f -> Y	subgoal 3 (ID 138) is:	 ?h o ?g == f	";
             responses[i]=data;
           
 
             i = 206;
-            data = "1 subgoal (ID 134)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  Ys : X -> IsHSet Y	  H0 : WeaklyConstant f	  Ys' : (merely X).(trunctype_type) -> IsHSet Y	  ============================	  X -> (image (-1) f).(intermediate)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 136)		subgoal 1 (ID 136) is:	 (image (-1) f).(intermediate) -> Y	subgoal 2 (ID 138) is:	 ?h o factor1 (image (-1) f) == f	";
+            data = "1 subgoal (ID 134)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  Ys : X -> IsHSet Y	  H0 : WeaklyConstant f	  Ys' : merely X -> IsHSet Y	  ============================	  X -> image (-1) f	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 136)		subgoal 1 (ID 136) is:	 image (-1) f -> Y	subgoal 2 (ID 138) is:	 ?h o factor1 (image (-1) f) == f	";
             responses[i]=data;
           
 
             i = 207;
-            data = "1 subgoal (ID 136)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  Ys : X -> IsHSet Y	  H0 : WeaklyConstant f	  Ys' : (merely X).(trunctype_type) -> IsHSet Y	  ============================	  (image (-1) f).(intermediate) -> Y	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 138)		subgoal 1 (ID 138) is:	 factor2 (image (-1) f) o factor1 (image (-1) f) == f	";
+            data = "1 subgoal (ID 136)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  Ys : X -> IsHSet Y	  H0 : WeaklyConstant f	  Ys' : merely X -> IsHSet Y	  ============================	  image (-1) f -> Y	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 138)		subgoal 1 (ID 138) is:	 factor2 (image (-1) f) o factor1 (image (-1) f) == f	";
             responses[i]=data;
           
 
             i = 208;
-            data = "1 subgoal (ID 138)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  Ys : X -> IsHSet Y	  H0 : WeaklyConstant f	  Ys' : (merely X).(trunctype_type) -> IsHSet Y	  ============================	  factor2 (image (-1) f) o factor1 (image (-1) f) == f	No more subgoals.	";
+            data = "1 subgoal (ID 138)	  	  H : Funext	  X : Type	  Y : Type	  f : X -> Y	  Ys : X -> IsHSet Y	  H0 : WeaklyConstant f	  Ys' : merely X -> IsHSet Y	  ============================	  factor2 (image (-1) f) o factor1 (image (-1) f) == f	No more subgoals.	";
             responses[i]=data;
           
 
@@ -1198,7 +1198,7 @@
           
 
             i = 236;
-            data = "1 subgoal (ID 158)	  	  H : Funext	  X : Type	  Y : Type	  Ys : X -> IsHSet Y	  ============================	  {f : X -> Y & WeaklyConstant f} <~> ((merely X).(trunctype_type) -> Y)	";
+            data = "1 subgoal (ID 158)	  	  H : Funext	  X : Type	  Y : Type	  Ys : X -> IsHSet Y	  ============================	  {f : X -> Y & WeaklyConstant f} <~> (merely X -> Y)	";
             responses[i]=data;
           
 
@@ -1208,72 +1208,72 @@
           
 
             i = 238;
-            data = "2 subgoals (ID 159)	  	  H : Funext	  X : Type	  Y : Type	  Ys : X -> IsHSet Y	  ============================	  (merely X).(trunctype_type) -> IsHSet Y		subgoal 2 (ID 161) is:	 {f : X -> Y & WeaklyConstant f} <~> ((merely X).(trunctype_type) -> Y)	";
+            data = "2 subgoals (ID 159)	  	  H : Funext	  X : Type	  Y : Type	  Ys : X -> IsHSet Y	  ============================	  merely X -> IsHSet Y		subgoal 2 (ID 161) is:	 {f : X -> Y & WeaklyConstant f} <~> (merely X -> Y)	";
             responses[i]=data;
           
 
             i = 239;
-            data = "1 subgoal (ID 159)	  	  H : Funext	  X : Type	  Y : Type	  Ys : X -> IsHSet Y	  ============================	  (merely X).(trunctype_type) -> IsHSet Y	1 subgoal (ID 167)	  	  H : Funext	  X : Type	  Y : Type	  Ys : X -> IsHSet Y	  ============================	  X -> IsHSet Y	";
+            data = "1 subgoal (ID 159)	  	  H : Funext	  X : Type	  Y : Type	  Ys : X -> IsHSet Y	  ============================	  merely X -> IsHSet Y	1 subgoal (ID 167)	  	  H : Funext	  X : Type	  Y : Type	  Ys : X -> IsHSet Y	  ============================	  X -> IsHSet Y	";
             responses[i]=data;
           
 
             i = 240;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 161)		subgoal 1 (ID 161) is:	 {f : X -> Y & WeaklyConstant f} <~> ((merely X).(trunctype_type) -> Y)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 161)		subgoal 1 (ID 161) is:	 {f : X -> Y & WeaklyConstant f} <~> (merely X -> Y)	";
             responses[i]=data;
           
 
             i = 241;
-            data = "1 subgoal (ID 161)	  	  H : Funext	  X : Type	  Y : Type	  Ys : X -> IsHSet Y	  Ys' : (merely X).(trunctype_type) -> IsHSet Y	  ============================	  {f : X -> Y & WeaklyConstant f} <~> ((merely X).(trunctype_type) -> Y)	3 subgoals (ID 210)	  	  H : Funext	  X : Type	  Y : Type	  Ys : X -> IsHSet Y	  Ys' : (merely X).(trunctype_type) -> IsHSet Y	  g : (merely X).(trunctype_type) -> Y	  ============================	  WeaklyConstant (g o tr)		subgoal 2 (ID 212) is:	 Sect (fun g : (merely X).(trunctype_type) -> Y => (g o tr; ?proj2_sig))	   (fun fc : {x : _ & WeaklyConstant x} => merely_rec_hset fc.(proj1_sig))	subgoal 3 (ID 214) is:	 Sect (fun fc : {x : _ & WeaklyConstant x} => merely_rec_hset fc.(proj1_sig))	   (fun g : (merely X).(trunctype_type) -> Y => (g o tr; ?proj2_sig))	";
+            data = "1 subgoal (ID 161)	  	  H : Funext	  X : Type	  Y : Type	  Ys : X -> IsHSet Y	  Ys' : merely X -> IsHSet Y	  ============================	  {f : X -> Y & WeaklyConstant f} <~> (merely X -> Y)	3 subgoals (ID 210)	  	  H : Funext	  X : Type	  Y : Type	  Ys : X -> IsHSet Y	  Ys' : merely X -> IsHSet Y	  g : merely X -> Y	  ============================	  WeaklyConstant (g o tr)		subgoal 2 (ID 212) is:	 Sect (fun g : merely X -> Y => (g o tr; ?proj2_sig))	   (fun fc : {x : _ & WeaklyConstant x} => merely_rec_hset fc.1)	subgoal 3 (ID 214) is:	 Sect (fun fc : {x : _ & WeaklyConstant x} => merely_rec_hset fc.1)	   (fun g : merely X -> Y => (g o tr; ?proj2_sig))	";
             responses[i]=data;
           
 
             i = 242;
-            data = "1 subgoal (ID 210)	  	  H : Funext	  X : Type	  Y : Type	  Ys : X -> IsHSet Y	  Ys' : (merely X).(trunctype_type) -> IsHSet Y	  g : (merely X).(trunctype_type) -> Y	  ============================	  WeaklyConstant (g o tr)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 212)		subgoal 1 (ID 212) is:	 Sect	   (fun g : (merely X).(trunctype_type) -> Y =>	    (g o tr; fun x y : X => ap g (path_ishprop (tr x) (tr y))))	   (fun fc : {x : _ & WeaklyConstant x} => merely_rec_hset fc.(proj1_sig))	subgoal 2 (ID 214) is:	 Sect (fun fc : {x : _ & WeaklyConstant x} => merely_rec_hset fc.(proj1_sig))	   (fun g : (merely X).(trunctype_type) -> Y =>	    (g o tr; fun x y : X => ap g (path_ishprop (tr x) (tr y))))	";
+            data = "1 subgoal (ID 210)	  	  H : Funext	  X : Type	  Y : Type	  Ys : X -> IsHSet Y	  Ys' : merely X -> IsHSet Y	  g : merely X -> Y	  ============================	  WeaklyConstant (g o tr)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 212)		subgoal 1 (ID 212) is:	 Sect	   (fun g : merely X -> Y =>	    (g o tr; fun x y : X => ap g (path_ishprop (tr x) (tr y))))	   (fun fc : {x : _ & WeaklyConstant x} => merely_rec_hset fc.1)	subgoal 2 (ID 214) is:	 Sect (fun fc : {x : _ & WeaklyConstant x} => merely_rec_hset fc.1)	   (fun g : merely X -> Y =>	    (g o tr; fun x y : X => ap g (path_ishprop (tr x) (tr y))))	";
             responses[i]=data;
           
 
             i = 243;
-            data = "1 subgoal (ID 212)	  	  H : Funext	  X : Type	  Y : Type	  Ys : X -> IsHSet Y	  Ys' : (merely X).(trunctype_type) -> IsHSet Y	  ============================	  Sect	    (fun g : (merely X).(trunctype_type) -> Y =>	     (g o tr; fun x y : X => ap g (path_ishprop (tr x) (tr y))))	    (fun fc : {x : _ & WeaklyConstant x} => merely_rec_hset fc.(proj1_sig))	1 subgoal (ID 283)	  	  H : Funext	  X : Type	  Y : Type	  Ys : X -> IsHSet Y	  Ys' : (merely X).(trunctype_type) -> IsHSet Y	  g : (merely X).(trunctype_type) -> Y	  mx : (merely X).(trunctype_type)	  ============================	  merely_rec_hset	    (fun x : X => g (tr x); fun x y : X => ap g (path_ishprop (tr x) (tr y)))	    .(proj1_sig) mx = g mx	";
+            data = "1 subgoal (ID 212)	  	  H : Funext	  X : Type	  Y : Type	  Ys : X -> IsHSet Y	  Ys' : merely X -> IsHSet Y	  ============================	  Sect	    (fun g : merely X -> Y =>	     (g o tr; fun x y : X => ap g (path_ishprop (tr x) (tr y))))	    (fun fc : {x : _ & WeaklyConstant x} => merely_rec_hset fc.1)	1 subgoal (ID 283)	  	  H : Funext	  X : Type	  Y : Type	  Ys : X -> IsHSet Y	  Ys' : merely X -> IsHSet Y	  g : merely X -> Y	  mx : merely X	  ============================	  merely_rec_hset	    (fun x : X => g (tr x); fun x y : X => ap g (path_ishprop (tr x) (tr y))).1	    mx = g mx	";
             responses[i]=data;
           
 
             i = 244;
-            data = "1 subgoal (ID 285)	  	  H : Funext	  X : Type	  Y : Type	  Ys : X -> IsHSet Y	  Ys' : (merely X).(trunctype_type) -> IsHSet Y	  g : (merely X).(trunctype_type) -> Y	  mx : (merely X).(trunctype_type)	  X0 : IsHSet Y	  ============================	  merely_rec_hset	    (fun x : X => g (tr x); fun x y : X => ap g (path_ishprop (tr x) (tr y)))	    .(proj1_sig) mx = g mx	";
+            data = "1 subgoal (ID 285)	  	  H : Funext	  X : Type	  Y : Type	  Ys : X -> IsHSet Y	  Ys' : merely X -> IsHSet Y	  g : merely X -> Y	  mx : merely X	  X0 : IsHSet Y	  ============================	  merely_rec_hset	    (fun x : X => g (tr x); fun x y : X => ap g (path_ishprop (tr x) (tr y))).1	    mx = g mx	";
             responses[i]=data;
           
 
             i = 245;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 214)		subgoal 1 (ID 214) is:	 Sect (fun fc : {x : _ & WeaklyConstant x} => merely_rec_hset fc.(proj1_sig))	   (fun g : (merely X).(trunctype_type) -> Y =>	    (g o tr; fun x y : X => ap g (path_ishprop (tr x) (tr y))))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 214)		subgoal 1 (ID 214) is:	 Sect (fun fc : {x : _ & WeaklyConstant x} => merely_rec_hset fc.1)	   (fun g : merely X -> Y =>	    (g o tr; fun x y : X => ap g (path_ishprop (tr x) (tr y))))	";
             responses[i]=data;
           
 
             i = 246;
-            data = "1 subgoal (ID 214)	  	  H : Funext	  X : Type	  Y : Type	  Ys : X -> IsHSet Y	  Ys' : (merely X).(trunctype_type) -> IsHSet Y	  ============================	  Sect	    (fun fc : {x : _ & WeaklyConstant x} => merely_rec_hset fc.(proj1_sig))	    (fun g : (merely X).(trunctype_type) -> Y =>	     (g o tr; fun x y : X => ap g (path_ishprop (tr x) (tr y))))	1 subgoal (ID 741)	  	  H : Funext	  X : Type	  Y : Type	  Ys : X -> IsHSet Y	  Ys' : (merely X).(trunctype_type) -> IsHSet Y	  f : X -> Y	  proj2_sig : WeaklyConstant f	  ============================	  (fun x : X => merely_rec_hset (f; proj2_sig).(proj1_sig) (tr x);	  fun x y : X =>	  ap (merely_rec_hset (f; proj2_sig).(proj1_sig))	    (path_ishprop (tr x) (tr y))) = (f; proj2_sig)	";
+            data = "1 subgoal (ID 214)	  	  H : Funext	  X : Type	  Y : Type	  Ys : X -> IsHSet Y	  Ys' : merely X -> IsHSet Y	  ============================	  Sect (fun fc : {x : _ & WeaklyConstant x} => merely_rec_hset fc.1)	    (fun g : merely X -> Y =>	     (g o tr; fun x y : X => ap g (path_ishprop (tr x) (tr y))))	1 subgoal (ID 741)	  	  H : Funext	  X : Type	  Y : Type	  Ys : X -> IsHSet Y	  Ys' : merely X -> IsHSet Y	  f : X -> Y	  proj2_sig : WeaklyConstant f	  ============================	  (fun x : X => merely_rec_hset (f; proj2_sig).1 (tr x);	  fun x y : X =>	  ap (merely_rec_hset (f; proj2_sig).1) (path_ishprop (tr x) (tr y))) =	  (f; proj2_sig)	";
             responses[i]=data;
           
 
             i = 247;
-            data = "2 subgoals (ID 934)	  	  H : Funext	  X : Type	  Y : Type	  Ys : X -> IsHSet Y	  Ys' : (merely X).(trunctype_type) -> IsHSet Y	  f : X -> Y	  proj2_sig : WeaklyConstant f	  ============================	  forall x : X -> Y, IsHProp (WeaklyConstant x)		subgoal 2 (ID 935) is:	 (fun x : X => merely_rec_hset (f; proj2_sig).(proj1_sig) (tr x);	 fun x y : X =>	 ap (merely_rec_hset (f; proj2_sig).(proj1_sig)) (path_ishprop (tr x) (tr y)))	 .(proj1_sig) = (f; proj2_sig).(proj1_sig)	";
+            data = "2 subgoals (ID 934)	  	  H : Funext	  X : Type	  Y : Type	  Ys : X -> IsHSet Y	  Ys' : merely X -> IsHSet Y	  f : X -> Y	  proj2_sig : WeaklyConstant f	  ============================	  forall x : X -> Y, IsHProp (WeaklyConstant x)		subgoal 2 (ID 935) is:	 (fun x : X => merely_rec_hset (f; proj2_sig).1 (tr x);	 fun x y : X =>	 ap (merely_rec_hset (f; proj2_sig).1) (path_ishprop (tr x) (tr y))).1 =	 (f; proj2_sig).1	";
             responses[i]=data;
           
 
             i = 248;
-            data = "1 subgoal (ID 934)	  	  H : Funext	  X : Type	  Y : Type	  Ys : X -> IsHSet Y	  Ys' : (merely X).(trunctype_type) -> IsHSet Y	  f : X -> Y	  proj2_sig : WeaklyConstant f	  ============================	  forall x : X -> Y, IsHProp (WeaklyConstant x)	1 subgoal (ID 939)	  	  H : Funext	  X : Type	  Y : Type	  Ys : X -> IsHSet Y	  Ys' : (merely X).(trunctype_type) -> IsHSet Y	  f : X -> Y	  proj2_sig : WeaklyConstant f	  f' : X -> Y	  w1, w2 : WeaklyConstant f'	  ============================	  w1 = w2	";
+            data = "1 subgoal (ID 934)	  	  H : Funext	  X : Type	  Y : Type	  Ys : X -> IsHSet Y	  Ys' : merely X -> IsHSet Y	  f : X -> Y	  proj2_sig : WeaklyConstant f	  ============================	  forall x : X -> Y, IsHProp (WeaklyConstant x)	1 subgoal (ID 939)	  	  H : Funext	  X : Type	  Y : Type	  Ys : X -> IsHSet Y	  Ys' : merely X -> IsHSet Y	  f : X -> Y	  proj2_sig : WeaklyConstant f	  f' : X -> Y	  w1, w2 : WeaklyConstant f'	  ============================	  w1 = w2	";
             responses[i]=data;
           
 
             i = 249;
-            data = "1 subgoal (ID 951)	  	  H : Funext	  X : Type	  Y : Type	  Ys : X -> IsHSet Y	  Ys' : (merely X).(trunctype_type) -> IsHSet Y	  f : X -> Y	  proj2_sig : WeaklyConstant f	  f' : X -> Y	  w1, w2 : WeaklyConstant f'	  x, y : X	  ============================	  w1 x y = w2 x y	";
+            data = "1 subgoal (ID 951)	  	  H : Funext	  X : Type	  Y : Type	  Ys : X -> IsHSet Y	  Ys' : merely X -> IsHSet Y	  f : X -> Y	  proj2_sig : WeaklyConstant f	  f' : X -> Y	  w1, w2 : WeaklyConstant f'	  x, y : X	  ============================	  w1 x y = w2 x y	";
             responses[i]=data;
           
 
             i = 250;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 935)		subgoal 1 (ID 935) is:	 (fun x : X => merely_rec_hset (f; proj2_sig).(proj1_sig) (tr x);	 fun x y : X =>	 ap (merely_rec_hset (f; proj2_sig).(proj1_sig)) (path_ishprop (tr x) (tr y)))	 .(proj1_sig) = (f; proj2_sig).(proj1_sig)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 935)		subgoal 1 (ID 935) is:	 (fun x : X => merely_rec_hset (f; proj2_sig).1 (tr x);	 fun x y : X =>	 ap (merely_rec_hset (f; proj2_sig).1) (path_ishprop (tr x) (tr y))).1 =	 (f; proj2_sig).1	";
             responses[i]=data;
           
 
             i = 251;
-            data = "1 subgoal (ID 935)	  	  H : Funext	  X : Type	  Y : Type	  Ys : X -> IsHSet Y	  Ys' : (merely X).(trunctype_type) -> IsHSet Y	  f : X -> Y	  proj2_sig : WeaklyConstant f	  ============================	  (fun x : X => merely_rec_hset (f; proj2_sig).(proj1_sig) (tr x);	  fun x y : X =>	  ap (merely_rec_hset (f; proj2_sig).(proj1_sig))	    (path_ishprop (tr x) (tr y))).(proj1_sig) = (f; proj2_sig).(proj1_sig)	No more subgoals.	";
+            data = "1 subgoal (ID 935)	  	  H : Funext	  X : Type	  Y : Type	  Ys : X -> IsHSet Y	  Ys' : merely X -> IsHSet Y	  f : X -> Y	  proj2_sig : WeaklyConstant f	  ============================	  (fun x : X => merely_rec_hset (f; proj2_sig).1 (tr x);	  fun x y : X =>	  ap (merely_rec_hset (f; proj2_sig).1) (path_ishprop (tr x) (tr y))).1 =	  (f; proj2_sig).1	No more subgoals.	";
             responses[i]=data;
           
 

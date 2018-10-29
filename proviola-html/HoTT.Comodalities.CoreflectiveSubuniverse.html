@@ -243,7 +243,7 @@
           
 
             i = 45;
-            data = "1 subgoal (ID 7)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  Y : Type	  X : Type	  inF0 : (F.(inF) Y).(trunctype_type)	  f : Y -> X	  ============================	  Y -> F.(F_coreflector) X	";
+            data = "1 subgoal (ID 7)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  Y : Type	  X : Type	  inF0 : inF F Y	  f : Y -> X	  ============================	  Y -> F X	";
             responses[i]=data;
           
 
@@ -253,7 +253,7 @@
           
 
             i = 47;
-            data = "1 subgoal (ID 17307)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  Y : Type	  X : Type	  inF0 : (F.(inF) Y).(trunctype_type)	  f : Y -> X	  ============================	  IsEquiv (fun (g : Y -> F.(F_coreflector) X) (x : Y) => F.(fromF) X (g x))	";
+            data = "1 subgoal (ID 17307)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  Y : Type	  X : Type	  inF0 : inF F Y	  f : Y -> X	  ============================	  IsEquiv (fun (g : Y -> F X) (x : Y) => fromF F X (g x))	";
             responses[i]=data;
           
 
@@ -268,7 +268,7 @@
           
 
             i = 50;
-            data = "1 subgoal (ID 27)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  Y : Type	  X : Type	  YF : (F.(inF) Y).(trunctype_type)	  f : Y -> X	  ============================	  F.(fromF) X o F_corec YF f == f	";
+            data = "1 subgoal (ID 27)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  Y : Type	  X : Type	  YF : inF F Y	  f : Y -> X	  ============================	  fromF F X o F_corec YF f == f	";
             responses[i]=data;
           
 
@@ -288,7 +288,7 @@
           
 
             i = 54;
-            data = "1 subgoal (ID 58)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  Y : Type	  X : Type	  inF0 : (F.(inF) Y).(trunctype_type)	  g, h : Y -> F.(F_coreflector) X	  p : F.(fromF) X o g == F.(fromF) X o h	  ============================	  g == h	";
+            data = "1 subgoal (ID 58)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  Y : Type	  X : Type	  inF0 : inF F Y	  g, h : Y -> F X	  p : fromF F X o g == fromF F X o h	  ============================	  g == h	";
             responses[i]=data;
           
 
@@ -298,22 +298,22 @@
           
 
             i = 56;
-            data = "1 subgoal (ID 63)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  Y : Type	  X : Type	  inF0 : (F.(inF) Y).(trunctype_type)	  g, h : Y -> F.(F_coreflector) X	  p : F.(fromF) X o g == F.(fromF) X o h	  ============================	  g = h	";
+            data = "1 subgoal (ID 63)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  Y : Type	  X : Type	  inF0 : inF F Y	  g, h : Y -> F X	  p : fromF F X o g == fromF F X o h	  ============================	  g = h	";
             responses[i]=data;
           
 
             i = 57;
-            data = "2 subgoals (ID 21368)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  Y : Type	  X : Type	  inF0 : (F.(inF) Y).(trunctype_type)	  g, h : Y -> F.(F_coreflector) X	  p : F.(fromF) X o g == F.(fromF) X o h	  ============================	  IsEquiv (fun (k : Y -> F.(F_coreflector) X) (x : Y) => F.(fromF) X (k x))		subgoal 2 (ID 21369) is:	 (fun x : Y => F.(fromF) X (g x)) = (fun x : Y => F.(fromF) X (h x))	";
+            data = "2 subgoals (ID 21368)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  Y : Type	  X : Type	  inF0 : inF F Y	  g, h : Y -> F X	  p : fromF F X o g == fromF F X o h	  ============================	  IsEquiv (fun (k : Y -> F X) (x : Y) => fromF F X (k x))		subgoal 2 (ID 21369) is:	 (fun x : Y => fromF F X (g x)) = (fun x : Y => fromF F X (h x))	";
             responses[i]=data;
           
 
             i = 58;
-            data = "1 subgoal (ID 21368)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  Y : Type	  X : Type	  inF0 : (F.(inF) Y).(trunctype_type)	  g, h : Y -> F.(F_coreflector) X	  p : F.(fromF) X o g == F.(fromF) X o h	  ============================	  IsEquiv (fun (k : Y -> F.(F_coreflector) X) (x : Y) => F.(fromF) X (k x))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 21369)		subgoal 1 (ID 21369) is:	 (fun x : Y => F.(fromF) X (g x)) = (fun x : Y => F.(fromF) X (h x))	";
+            data = "1 subgoal (ID 21368)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  Y : Type	  X : Type	  inF0 : inF F Y	  g, h : Y -> F X	  p : fromF F X o g == fromF F X o h	  ============================	  IsEquiv (fun (k : Y -> F X) (x : Y) => fromF F X (k x))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 21369)		subgoal 1 (ID 21369) is:	 (fun x : Y => fromF F X (g x)) = (fun x : Y => fromF F X (h x))	";
             responses[i]=data;
           
 
             i = 59;
-            data = "1 subgoal (ID 21369)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  Y : Type	  X : Type	  inF0 : (F.(inF) Y).(trunctype_type)	  g, h : Y -> F.(F_coreflector) X	  p : F.(fromF) X o g == F.(fromF) X o h	  ============================	  (fun x : Y => F.(fromF) X (g x)) = (fun x : Y => F.(fromF) X (h x))	No more subgoals.	";
+            data = "1 subgoal (ID 21369)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  Y : Type	  X : Type	  inF0 : inF F Y	  g, h : Y -> F X	  p : fromF F X o g == fromF F X o h	  ============================	  (fun x : Y => fromF F X (g x)) = (fun x : Y => fromF F X (h x))	No more subgoals.	";
             responses[i]=data;
           
 
@@ -368,7 +368,7 @@
           
 
             i = 70;
-            data = "1 subgoal (ID 75)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  A : Type	  IsHProp0 : IsHProp A	  ============================	  IsHProp (F.(F_coreflector) A)	";
+            data = "1 subgoal (ID 75)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  A : Type	  IsHProp0 : IsHProp A	  ============================	  IsHProp (F A)	";
             responses[i]=data;
           
 
@@ -378,7 +378,7 @@
           
 
             i = 72;
-            data = "1 subgoal (ID 78)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  A : Type	  IsHProp0 : IsHProp A	  x, y : F.(F_coreflector) A	  ============================	  x = y	";
+            data = "1 subgoal (ID 78)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  A : Type	  IsHProp0 : IsHProp A	  x, y : F A	  ============================	  x = y	";
             responses[i]=data;
           
 
@@ -433,7 +433,7 @@
           
 
             i = 83;
-            data = "1 subgoal (ID 92)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  X : Type	  s : X -> F.(F_coreflector) X	  p : F.(fromF) X o s == idmap	  ============================	  (F.(inF) X).(trunctype_type)	";
+            data = "1 subgoal (ID 92)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  X : Type	  s : X -> F X	  p : fromF F X o s == idmap	  ============================	  inF F X	";
             responses[i]=data;
           
 
@@ -443,22 +443,22 @@
           
 
             i = 85;
-            data = "1 subgoal (ID 547)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  X : Type	  s : X -> F.(F_coreflector) X	  p : F.(fromF) X o s == idmap	  ============================	  IsEquiv (F.(fromF) X)	";
+            data = "1 subgoal (ID 547)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  X : Type	  s : X -> F X	  p : fromF F X o s == idmap	  ============================	  IsEquiv (fromF F X)	";
             responses[i]=data;
           
 
             i = 86;
-            data = "1 subgoal (ID 554)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  X : Type	  s : X -> F.(F_coreflector) X	  p : F.(fromF) X o s == idmap	  ============================	  Sect (F.(fromF) X) s	";
+            data = "1 subgoal (ID 554)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  X : Type	  s : X -> F X	  p : fromF F X o s == idmap	  ============================	  Sect (fromF F X) s	";
             responses[i]=data;
           
 
             i = 87;
-            data = "1 subgoal (ID 567)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  X : Type	  s : X -> F.(F_coreflector) X	  p : F.(fromF) X o s == idmap	  ============================	  s o F.(fromF) X == idmap	";
+            data = "1 subgoal (ID 567)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  X : Type	  s : X -> F X	  p : fromF F X o s == idmap	  ============================	  s o fromF F X == idmap	";
             responses[i]=data;
           
 
             i = 88;
-            data = "1 subgoal (ID 571)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  X : Type	  s : X -> F.(F_coreflector) X	  p : F.(fromF) X o s == idmap	  ============================	  (fun x : F.(F_coreflector) X => F.(fromF) X (s (F.(fromF) X x))) ==	  (fun x : F.(F_coreflector) X => F.(fromF) X x)	";
+            data = "1 subgoal (ID 571)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  X : Type	  s : X -> F X	  p : fromF F X o s == idmap	  ============================	  (fun x : F X => fromF F X (s (fromF F X x))) ==	  (fun x : F X => fromF F X x)	";
             responses[i]=data;
           
 
@@ -583,7 +583,7 @@
           
 
             i = 113;
-            data = "1 subgoal (ID 95)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  X : Type	  ============================	  (F.(inF) X).(trunctype_type) <~> (X -> F.(F_coreflector) Unit)	";
+            data = "1 subgoal (ID 95)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  X : Type	  ============================	  inF F X <~> (X -> F Unit)	";
             responses[i]=data;
           
 
@@ -593,47 +593,47 @@
           
 
             i = 115;
-            data = "2 subgoals (ID 157)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  X : Type	  ============================	  (F.(inF) X).(trunctype_type) -> X -> F.(F_coreflector) Unit		subgoal 2 (ID 158) is:	 (X -> F.(F_coreflector) Unit) -> (F.(inF) X).(trunctype_type)	";
+            data = "2 subgoals (ID 157)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  X : Type	  ============================	  inF F X -> X -> F Unit		subgoal 2 (ID 158) is:	 (X -> F Unit) -> inF F X	";
             responses[i]=data;
           
 
             i = 116;
-            data = "1 subgoal (ID 157)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  X : Type	  ============================	  (F.(inF) X).(trunctype_type) -> X -> F.(F_coreflector) Unit	1 subgoal (ID 159)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  X : Type	  X0 : (F.(inF) X).(trunctype_type)	  ============================	  X -> F.(F_coreflector) Unit	";
+            data = "1 subgoal (ID 157)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  X : Type	  ============================	  inF F X -> X -> F Unit	1 subgoal (ID 159)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  X : Type	  X0 : inF F X	  ============================	  X -> F Unit	";
             responses[i]=data;
           
 
             i = 117;
-            data = "1 subgoal (ID 163)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  X : Type	  X0 : (F.(inF) X).(trunctype_type)	  ============================	  X -> Unit	";
+            data = "1 subgoal (ID 163)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  X : Type	  X0 : inF F X	  ============================	  X -> Unit	";
             responses[i]=data;
           
 
             i = 118;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 158)		subgoal 1 (ID 158) is:	 (X -> F.(F_coreflector) Unit) -> (F.(inF) X).(trunctype_type)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 158)		subgoal 1 (ID 158) is:	 (X -> F Unit) -> inF F X	";
             responses[i]=data;
           
 
             i = 119;
-            data = "1 subgoal (ID 158)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  X : Type	  ============================	  (X -> F.(F_coreflector) Unit) -> (F.(inF) X).(trunctype_type)	1 subgoal (ID 165)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  X : Type	  f : X -> F.(F_coreflector) Unit	  ============================	  (F.(inF) X).(trunctype_type)	";
+            data = "1 subgoal (ID 158)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  X : Type	  ============================	  (X -> F Unit) -> inF F X	1 subgoal (ID 165)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  X : Type	  f : X -> F Unit	  ============================	  inF F X	";
             responses[i]=data;
           
 
             i = 120;
-            data = "2 subgoals (ID 167)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  X : Type	  f : X -> F.(F_coreflector) Unit	  ============================	  X -> F.(F_coreflector) X		subgoal 2 (ID 169) is:	 F.(fromF) X o ?s == idmap	";
+            data = "2 subgoals (ID 167)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  X : Type	  f : X -> F Unit	  ============================	  X -> F X		subgoal 2 (ID 169) is:	 fromF F X o ?s == idmap	";
             responses[i]=data;
           
 
             i = 121;
-            data = "1 subgoal (ID 167)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  X : Type	  f : X -> F.(F_coreflector) Unit	  ============================	  X -> F.(F_coreflector) X	1 subgoal (ID 170)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  X : Type	  f : X -> F.(F_coreflector) Unit	  x : X	  ============================	  F.(F_coreflector) X	";
+            data = "1 subgoal (ID 167)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  X : Type	  f : X -> F Unit	  ============================	  X -> F X	1 subgoal (ID 170)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  X : Type	  f : X -> F Unit	  x : X	  ============================	  F X	";
             responses[i]=data;
           
 
             i = 122;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 169)		subgoal 1 (ID 169) is:	 F.(fromF) X o (fun x : X => F_functor (unit_name x) (f x)) == idmap	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 169)		subgoal 1 (ID 169) is:	 fromF F X o (fun x : X => F_functor (unit_name x) (f x)) == idmap	";
             responses[i]=data;
           
 
             i = 123;
-            data = "1 subgoal (ID 169)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  X : Type	  f : X -> F.(F_coreflector) Unit	  ============================	  F.(fromF) X o (fun x : X => F_functor (unit_name x) (f x)) == idmap	1 subgoal (ID 175)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  X : Type	  f : X -> F.(F_coreflector) Unit	  x : X	  ============================	  F.(fromF) X	    (F_corec (F.(F_inF) Unit) (fun _ : F.(F_coreflector) Unit => x) (f x)) =	  x	";
+            data = "1 subgoal (ID 169)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  X : Type	  f : X -> F Unit	  ============================	  fromF F X o (fun x : X => F_functor (unit_name x) (f x)) == idmap	1 subgoal (ID 175)	  	  H : Univalence	  F : CoreflectiveSubuniverse	  X : Type	  f : X -> F Unit	  x : X	  ============================	  fromF F X (F_corec (F_inF F Unit) (fun _ : F Unit => x) (f x)) = x	";
             responses[i]=data;
           
 
@@ -743,27 +743,27 @@
           
 
             i = 145;
-            data = "1 subgoal (ID 10)	  	  H : Funext	  U : hProp	  ============================	  forall Y X : Type,	  ((fun X0 : Type => BuildhProp (X0 -> U.(trunctype_type))) Y)	  .(trunctype_type) ->	  IsEquiv	    (fun g : Y -> (fun X0 : Type => X0 * U.(trunctype_type)) X =>	     (fun X0 : Type => fst) X o g)	";
+            data = "1 subgoal (ID 10)	  	  H : Funext	  U : hProp	  ============================	  forall Y X : Type,	  (fun X0 : Type => BuildhProp (X0 -> U)) Y ->	  IsEquiv	    (fun g : Y -> (fun X0 : Type => X0 * U) X => (fun X0 : Type => fst) X o g)	";
             responses[i]=data;
           
 
             i = 146;
-            data = "1 subgoal (ID 26658)	  	  H : Funext	  U : hProp	  Y : Type	  X : Type	  YU : Y -> U.(trunctype_type)	  ============================	  IsEquiv (fun (g : Y -> X * U.(trunctype_type)) (x : Y) => (g x).(fst))	";
+            data = "1 subgoal (ID 26658)	  	  H : Funext	  U : hProp	  Y : Type	  X : Type	  YU : Y -> U	  ============================	  IsEquiv (fun (g : Y -> X * U) (x : Y) => fst (g x))	";
             responses[i]=data;
           
 
             i = 147;
-            data = "2 subgoals (ID 26676)	  	  H : Funext	  U : hProp	  Y : Type	  X : Type	  YU : Y -> U.(trunctype_type)	  ============================	  Sect (fun (h : Y -> X) (y : Y) => (h y, YU y))	    (fun (g : Y -> X * U.(trunctype_type)) (x : Y) => (g x).(fst))		subgoal 2 (ID 26677) is:	 Sect (fun (g : Y -> X * U.(trunctype_type)) (x : Y) => (g x).(fst))	   (fun (h : Y -> X) (y : Y) => (h y, YU y))	";
+            data = "2 subgoals (ID 26676)	  	  H : Funext	  U : hProp	  Y : Type	  X : Type	  YU : Y -> U	  ============================	  Sect (fun (h : Y -> X) (y : Y) => (h y, YU y))	    (fun (g : Y -> X * U) (x : Y) => fst (g x))		subgoal 2 (ID 26677) is:	 Sect (fun (g : Y -> X * U) (x : Y) => fst (g x))	   (fun (h : Y -> X) (y : Y) => (h y, YU y))	";
             responses[i]=data;
           
 
             i = 148;
-            data = "1 subgoal (ID 26676)	  	  H : Funext	  U : hProp	  Y : Type	  X : Type	  YU : Y -> U.(trunctype_type)	  ============================	  Sect (fun (h : Y -> X) (y : Y) => (h y, YU y))	    (fun (g : Y -> X * U.(trunctype_type)) (x : Y) => (g x).(fst))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 26677)		subgoal 1 (ID 26677) is:	 Sect (fun (g : Y -> X * U.(trunctype_type)) (x : Y) => (g x).(fst))	   (fun (h : Y -> X) (y : Y) => (h y, YU y))	";
+            data = "1 subgoal (ID 26676)	  	  H : Funext	  U : hProp	  Y : Type	  X : Type	  YU : Y -> U	  ============================	  Sect (fun (h : Y -> X) (y : Y) => (h y, YU y))	    (fun (g : Y -> X * U) (x : Y) => fst (g x))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 26677)		subgoal 1 (ID 26677) is:	 Sect (fun (g : Y -> X * U) (x : Y) => fst (g x))	   (fun (h : Y -> X) (y : Y) => (h y, YU y))	";
             responses[i]=data;
           
 
             i = 149;
-            data = "1 subgoal (ID 26677)	  	  H : Funext	  U : hProp	  Y : Type	  X : Type	  YU : Y -> U.(trunctype_type)	  ============================	  Sect (fun (g : Y -> X * U.(trunctype_type)) (x : Y) => (g x).(fst))	    (fun (h : Y -> X) (y : Y) => (h y, YU y))	1 subgoal (ID 26694)	  	  H : Funext	  U : hProp	  Y : Type	  X : Type	  YU : Y -> U.(trunctype_type)	  h : Y -> X * U.(trunctype_type)	  y : Y	  ============================	  ((h y).(fst), YU y) = h y	";
+            data = "1 subgoal (ID 26677)	  	  H : Funext	  U : hProp	  Y : Type	  X : Type	  YU : Y -> U	  ============================	  Sect (fun (g : Y -> X * U) (x : Y) => fst (g x))	    (fun (h : Y -> X) (y : Y) => (h y, YU y))	1 subgoal (ID 26694)	  	  H : Funext	  U : hProp	  Y : Type	  X : Type	  YU : Y -> U	  h : Y -> X * U	  y : Y	  ============================	  (fst (h y), YU y) = h y	";
             responses[i]=data;
           
 
@@ -838,7 +838,7 @@
           
 
             i = 164;
-            data = "1 subgoal (ID 9)	  	  H : Funext	  U : hProp	  X : Type	  ============================	  O_inverts {| funext_Op := H; unOp := U |} (coOp.(fromF) X)	";
+            data = "1 subgoal (ID 9)	  	  H : Funext	  U : hProp	  X : Type	  ============================	  O_inverts {| funext_Op := H; unOp := U |} (fromF coOp X)	";
             responses[i]=data;
           
 
@@ -848,82 +848,82 @@
           
 
             i = 166;
-            data = "2 subgoals (ID 28)	  	  H : Funext	  U : hProp	  X : Type	  ============================	  Sect	    (fun (ux : {| funext_Op := H; unOp := U |}.(unOp).(trunctype_type) -> X)	       (u : {| funext_Op := H; unOp := U |}.(unOp).(trunctype_type)) =>	     (ux u, u)) (O_functor {| funext_Op := H; unOp := U |} (coOp.(fromF) X))		subgoal 2 (ID 29) is:	 Sect (O_functor {| funext_Op := H; unOp := U |} (coOp.(fromF) X))	   (fun (ux : {| funext_Op := H; unOp := U |}.(unOp).(trunctype_type) -> X)	      (u : {| funext_Op := H; unOp := U |}.(unOp).(trunctype_type)) =>	    (ux u, u))	";
+            data = "2 subgoals (ID 28)	  	  H : Funext	  U : hProp	  X : Type	  ============================	  Sect	    (fun (ux : unOp {| funext_Op := H; unOp := U |} -> X)	       (u : unOp {| funext_Op := H; unOp := U |}) => 	     (ux u, u)) (O_functor {| funext_Op := H; unOp := U |} (fromF coOp X))		subgoal 2 (ID 29) is:	 Sect (O_functor {| funext_Op := H; unOp := U |} (fromF coOp X))	   (fun (ux : unOp {| funext_Op := H; unOp := U |} -> X)	      (u : unOp {| funext_Op := H; unOp := U |}) => 	    (ux u, u))	";
             responses[i]=data;
           
 
             i = 167;
-            data = "1 subgoal (ID 28)	  	  H : Funext	  U : hProp	  X : Type	  ============================	  Sect	    (fun (ux : {| funext_Op := H; unOp := U |}.(unOp).(trunctype_type) -> X)	       (u : {| funext_Op := H; unOp := U |}.(unOp).(trunctype_type)) =>	     (ux u, u)) (O_functor {| funext_Op := H; unOp := U |} (coOp.(fromF) X))	1 subgoal (ID 36)	  	  H : Funext	  U : hProp	  X : Type	  ux : U.(trunctype_type) -> X	  ============================	  O_functor {| funext_Op := H; unOp := U |} fst	    (fun u : U.(trunctype_type) => (ux u, u)) = ux	";
+            data = "1 subgoal (ID 28)	  	  H : Funext	  U : hProp	  X : Type	  ============================	  Sect	    (fun (ux : unOp {| funext_Op := H; unOp := U |} -> X)	       (u : unOp {| funext_Op := H; unOp := U |}) => 	     (ux u, u)) (O_functor {| funext_Op := H; unOp := U |} (fromF coOp X))	1 subgoal (ID 36)	  	  H : Funext	  U : hProp	  X : Type	  ux : U -> X	  ============================	  O_functor {| funext_Op := H; unOp := U |} fst (fun u : U => (ux u, u)) = ux	";
             responses[i]=data;
           
 
             i = 168;
-            data = "1 subgoal (ID 42)	  	  H : Funext	  U : hProp	  X : Type	  ux : U.(trunctype_type) -> X	  u : U.(trunctype_type)	  ============================	  O_functor {| funext_Op := H; unOp := U |} fst	    (fun u0 : U.(trunctype_type) => (ux u0, u0)) u = 	  ux u	";
+            data = "1 subgoal (ID 42)	  	  H : Funext	  U : hProp	  X : Type	  ux : U -> X	  u : U	  ============================	  O_functor {| funext_Op := H; unOp := U |} fst (fun u0 : U => (ux u0, u0)) u =	  ux u	";
             responses[i]=data;
           
 
             i = 169;
-            data = "2 subgoals (ID 67)	  	  H : Funext	  U : hProp	  X : Type	  ux : U.(trunctype_type) -> X	  u : U.(trunctype_type)	  ============================	  O_functor {| funext_Op := H; unOp := U |} fst	    (fun u0 : U.(trunctype_type) => (ux u0, u0)) u =	  O_functor {| funext_Op := H; unOp := U |} fst	    (to {| funext_Op := H; unOp := U |} (X * U.(trunctype_type)) (ux u, u)) u		subgoal 2 (ID 68) is:	 O_functor {| funext_Op := H; unOp := U |} fst	   (to {| funext_Op := H; unOp := U |} (X * U.(trunctype_type)) (ux u, u)) u =	 ux u	";
+            data = "2 subgoals (ID 67)	  	  H : Funext	  U : hProp	  X : Type	  ux : U -> X	  u : U	  ============================	  O_functor {| funext_Op := H; unOp := U |} fst (fun u0 : U => (ux u0, u0)) u =	  O_functor {| funext_Op := H; unOp := U |} fst	    (to {| funext_Op := H; unOp := U |} (X * U) (ux u, u)) u		subgoal 2 (ID 68) is:	 O_functor {| funext_Op := H; unOp := U |} fst	   (to {| funext_Op := H; unOp := U |} (X * U) (ux u, u)) u = 	 ux u	";
             responses[i]=data;
           
 
             i = 170;
-            data = "1 subgoal (ID 67)	  	  H : Funext	  U : hProp	  X : Type	  ux : U.(trunctype_type) -> X	  u : U.(trunctype_type)	  ============================	  O_functor {| funext_Op := H; unOp := U |} fst	    (fun u0 : U.(trunctype_type) => (ux u0, u0)) u =	  O_functor {| funext_Op := H; unOp := U |} fst	    (to {| funext_Op := H; unOp := U |} (X * U.(trunctype_type)) (ux u, u)) u	1 subgoal (ID 89)	  	  H : Funext	  U : hProp	  X : Type	  ux : U.(trunctype_type) -> X	  u, u' : U.(trunctype_type)	  ============================	  (ux u', u') =	  to {| funext_Op := H; unOp := U |} (X * U.(trunctype_type)) (ux u, u) u'	";
+            data = "1 subgoal (ID 67)	  	  H : Funext	  U : hProp	  X : Type	  ux : U -> X	  u : U	  ============================	  O_functor {| funext_Op := H; unOp := U |} fst (fun u0 : U => (ux u0, u0)) u =	  O_functor {| funext_Op := H; unOp := U |} fst	    (to {| funext_Op := H; unOp := U |} (X * U) (ux u, u)) u	1 subgoal (ID 89)	  	  H : Funext	  U : hProp	  X : Type	  ux : U -> X	  u, u' : U	  ============================	  (ux u', u') = to {| funext_Op := H; unOp := U |} (X * U) (ux u, u) u'	";
             responses[i]=data;
           
 
             i = 171;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 68)		subgoal 1 (ID 68) is:	 O_functor {| funext_Op := H; unOp := U |} fst	   (to {| funext_Op := H; unOp := U |} (X * U.(trunctype_type)) (ux u, u)) u =	 ux u	subgoal 2 (ID 29) is:	 Sect (O_functor {| funext_Op := H; unOp := U |} (coOp.(fromF) X))	   (fun (ux : {| funext_Op := H; unOp := U |}.(unOp).(trunctype_type) -> X)	      (u : {| funext_Op := H; unOp := U |}.(unOp).(trunctype_type)) =>	    (ux u, u))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 68)		subgoal 1 (ID 68) is:	 O_functor {| funext_Op := H; unOp := U |} fst	   (to {| funext_Op := H; unOp := U |} (X * U) (ux u, u)) u = 	 ux u	subgoal 2 (ID 29) is:	 Sect (O_functor {| funext_Op := H; unOp := U |} (fromF coOp X))	   (fun (ux : unOp {| funext_Op := H; unOp := U |} -> X)	      (u : unOp {| funext_Op := H; unOp := U |}) => 	    (ux u, u))	";
             responses[i]=data;
           
 
             i = 172;
-            data = "1 subgoal (ID 68)	  	  H : Funext	  U : hProp	  X : Type	  ux : U.(trunctype_type) -> X	  u : U.(trunctype_type)	  ============================	  O_functor {| funext_Op := H; unOp := U |} fst	    (to {| funext_Op := H; unOp := U |} (X * U.(trunctype_type)) (ux u, u)) u =	  ux u	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 29)		subgoal 1 (ID 29) is:	 Sect (O_functor {| funext_Op := H; unOp := U |} (coOp.(fromF) X))	   (fun (ux : {| funext_Op := H; unOp := U |}.(unOp).(trunctype_type) -> X)	      (u : {| funext_Op := H; unOp := U |}.(unOp).(trunctype_type)) =>	    (ux u, u))	";
+            data = "1 subgoal (ID 68)	  	  H : Funext	  U : hProp	  X : Type	  ux : U -> X	  u : U	  ============================	  O_functor {| funext_Op := H; unOp := U |} fst	    (to {| funext_Op := H; unOp := U |} (X * U) (ux u, u)) u = 	  ux u	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 29)		subgoal 1 (ID 29) is:	 Sect (O_functor {| funext_Op := H; unOp := U |} (fromF coOp X))	   (fun (ux : unOp {| funext_Op := H; unOp := U |} -> X)	      (u : unOp {| funext_Op := H; unOp := U |}) => 	    (ux u, u))	";
             responses[i]=data;
           
 
             i = 173;
-            data = "1 subgoal (ID 29)	  	  H : Funext	  U : hProp	  X : Type	  ============================	  Sect (O_functor {| funext_Op := H; unOp := U |} (coOp.(fromF) X))	    (fun (ux : {| funext_Op := H; unOp := U |}.(unOp).(trunctype_type) -> X)	       (u : {| funext_Op := H; unOp := U |}.(unOp).(trunctype_type)) =>	     (ux u, u))	1 subgoal (ID 118)	  	  H : Funext	  U : hProp	  X : Type	  uux : U.(trunctype_type) -> X * U.(trunctype_type)	  ============================	  (fun u : U.(trunctype_type) =>	   (O_functor {| funext_Op := H; unOp := U |} fst uux u, u)) = uux	";
+            data = "1 subgoal (ID 29)	  	  H : Funext	  U : hProp	  X : Type	  ============================	  Sect (O_functor {| funext_Op := H; unOp := U |} (fromF coOp X))	    (fun (ux : unOp {| funext_Op := H; unOp := U |} -> X)	       (u : unOp {| funext_Op := H; unOp := U |}) => 	     (ux u, u))	1 subgoal (ID 118)	  	  H : Funext	  U : hProp	  X : Type	  uux : U -> X * U	  ============================	  (fun u : U => (O_functor {| funext_Op := H; unOp := U |} fst uux u, u)) =	  uux	";
             responses[i]=data;
           
 
             i = 174;
-            data = "1 subgoal (ID 124)	  	  H : Funext	  U : hProp	  X : Type	  uux : U.(trunctype_type) -> X * U.(trunctype_type)	  u : U.(trunctype_type)	  ============================	  (O_functor {| funext_Op := H; unOp := U |} fst uux u, u) = uux u	";
+            data = "1 subgoal (ID 124)	  	  H : Funext	  U : hProp	  X : Type	  uux : U -> X * U	  u : U	  ============================	  (O_functor {| funext_Op := H; unOp := U |} fst uux u, u) = uux u	";
             responses[i]=data;
           
 
             i = 175;
-            data = "1 subgoal (ID 129)	  	  H : Funext	  U : hProp	  X : Type	  uux : U.(trunctype_type) -> X * U.(trunctype_type)	  u : U.(trunctype_type)	  ============================	  O_functor {| funext_Op := H; unOp := U |} fst uux u = (uux u).(fst)	";
+            data = "1 subgoal (ID 129)	  	  H : Funext	  U : hProp	  X : Type	  uux : U -> X * U	  u : U	  ============================	  O_functor {| funext_Op := H; unOp := U |} fst uux u = fst (uux u)	";
             responses[i]=data;
           
 
             i = 176;
-            data = "2 subgoals (ID 160)	  	  H : Funext	  U : hProp	  X : Type	  uux : U.(trunctype_type) -> X * U.(trunctype_type)	  u : U.(trunctype_type)	  ============================	  O_functor {| funext_Op := H; unOp := U |} fst uux u =	  O_functor {| funext_Op := H; unOp := U |} fst	    (to {| funext_Op := H; unOp := U |} (X * U.(trunctype_type))	       ((uux u).(fst), u)) u		subgoal 2 (ID 161) is:	 O_functor {| funext_Op := H; unOp := U |} fst	   (to {| funext_Op := H; unOp := U |} (X * U.(trunctype_type))	      ((uux u).(fst), u)) u = (uux u).(fst)	";
+            data = "2 subgoals (ID 160)	  	  H : Funext	  U : hProp	  X : Type	  uux : U -> X * U	  u : U	  ============================	  O_functor {| funext_Op := H; unOp := U |} fst uux u =	  O_functor {| funext_Op := H; unOp := U |} fst	    (to {| funext_Op := H; unOp := U |} (X * U) (fst (uux u), u)) u		subgoal 2 (ID 161) is:	 O_functor {| funext_Op := H; unOp := U |} fst	   (to {| funext_Op := H; unOp := U |} (X * U) (fst (uux u), u)) u =	 fst (uux u)	";
             responses[i]=data;
           
 
             i = 177;
-            data = "1 subgoal (ID 160)	  	  H : Funext	  U : hProp	  X : Type	  uux : U.(trunctype_type) -> X * U.(trunctype_type)	  u : U.(trunctype_type)	  ============================	  O_functor {| funext_Op := H; unOp := U |} fst uux u =	  O_functor {| funext_Op := H; unOp := U |} fst	    (to {| funext_Op := H; unOp := U |} (X * U.(trunctype_type))	       ((uux u).(fst), u)) u	1 subgoal (ID 175)	  	  H : Funext	  U : hProp	  X : Type	  uux : U.(trunctype_type) -> X * U.(trunctype_type)	  u : U.(trunctype_type)	  u' : {| funext_Op := H; unOp := U |}.(unOp).(trunctype_type)	  ============================	  uux u' =	  to {| funext_Op := H; unOp := U |} (X * U.(trunctype_type))	    ((uux u).(fst), u) u'	";
+            data = "1 subgoal (ID 160)	  	  H : Funext	  U : hProp	  X : Type	  uux : U -> X * U	  u : U	  ============================	  O_functor {| funext_Op := H; unOp := U |} fst uux u =	  O_functor {| funext_Op := H; unOp := U |} fst	    (to {| funext_Op := H; unOp := U |} (X * U) (fst (uux u), u)) u	1 subgoal (ID 175)	  	  H : Funext	  U : hProp	  X : Type	  uux : U -> X * U	  u : U	  u' : unOp {| funext_Op := H; unOp := U |}	  ============================	  uux u' = to {| funext_Op := H; unOp := U |} (X * U) (fst (uux u), u) u'	";
             responses[i]=data;
           
 
             i = 178;
-            data = "2 subgoals (ID 180)	  	  H : Funext	  U : hProp	  X : Type	  uux : U.(trunctype_type) -> X * U.(trunctype_type)	  u : U.(trunctype_type)	  u' : {| funext_Op := H; unOp := U |}.(unOp).(trunctype_type)	  ============================	  (uux u').(fst) = (uux u).(fst)		subgoal 2 (ID 181) is:	 (uux u').(snd) = u	";
+            data = "2 subgoals (ID 180)	  	  H : Funext	  U : hProp	  X : Type	  uux : U -> X * U	  u : U	  u' : unOp {| funext_Op := H; unOp := U |}	  ============================	  fst (uux u') = fst (uux u)		subgoal 2 (ID 181) is:	 snd (uux u') = u	";
             responses[i]=data;
           
 
             i = 179;
-            data = "1 subgoal (ID 180)	  	  H : Funext	  U : hProp	  X : Type	  uux : U.(trunctype_type) -> X * U.(trunctype_type)	  u : U.(trunctype_type)	  u' : {| funext_Op := H; unOp := U |}.(unOp).(trunctype_type)	  ============================	  (uux u').(fst) = (uux u).(fst)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	2 subgoals (ID 181)		subgoal 1 (ID 181) is:	 (uux u').(snd) = u	subgoal 2 (ID 161) is:	 O_functor {| funext_Op := H; unOp := U |} fst	   (to {| funext_Op := H; unOp := U |} (X * U.(trunctype_type))	      ((uux u).(fst), u)) u = (uux u).(fst)	";
+            data = "1 subgoal (ID 180)	  	  H : Funext	  U : hProp	  X : Type	  uux : U -> X * U	  u : U	  u' : unOp {| funext_Op := H; unOp := U |}	  ============================	  fst (uux u') = fst (uux u)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	2 subgoals (ID 181)		subgoal 1 (ID 181) is:	 snd (uux u') = u	subgoal 2 (ID 161) is:	 O_functor {| funext_Op := H; unOp := U |} fst	   (to {| funext_Op := H; unOp := U |} (X * U) (fst (uux u), u)) u =	 fst (uux u)	";
             responses[i]=data;
           
 
             i = 180;
-            data = "1 subgoal (ID 181)	  	  H : Funext	  U : hProp	  X : Type	  uux : U.(trunctype_type) -> X * U.(trunctype_type)	  u : U.(trunctype_type)	  u' : {| funext_Op := H; unOp := U |}.(unOp).(trunctype_type)	  ============================	  (uux u').(snd) = u	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 161)		subgoal 1 (ID 161) is:	 O_functor {| funext_Op := H; unOp := U |} fst	   (to {| funext_Op := H; unOp := U |} (X * U.(trunctype_type))	      ((uux u).(fst), u)) u = (uux u).(fst)	";
+            data = "1 subgoal (ID 181)	  	  H : Funext	  U : hProp	  X : Type	  uux : U -> X * U	  u : U	  u' : unOp {| funext_Op := H; unOp := U |}	  ============================	  snd (uux u') = u	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 161)		subgoal 1 (ID 161) is:	 O_functor {| funext_Op := H; unOp := U |} fst	   (to {| funext_Op := H; unOp := U |} (X * U) (fst (uux u), u)) u =	 fst (uux u)	";
             responses[i]=data;
           
 
             i = 181;
-            data = "1 subgoal (ID 161)	  	  H : Funext	  U : hProp	  X : Type	  uux : U.(trunctype_type) -> X * U.(trunctype_type)	  u : U.(trunctype_type)	  ============================	  O_functor {| funext_Op := H; unOp := U |} fst	    (to {| funext_Op := H; unOp := U |} (X * U.(trunctype_type))	       ((uux u).(fst), u)) u = (uux u).(fst)	No more subgoals.	";
+            data = "1 subgoal (ID 161)	  	  H : Funext	  U : hProp	  X : Type	  uux : U -> X * U	  u : U	  ============================	  O_functor {| funext_Op := H; unOp := U |} fst	    (to {| funext_Op := H; unOp := U |} (X * U) (fst (uux u), u)) u =	  fst (uux u)	No more subgoals.	";
             responses[i]=data;
           
 

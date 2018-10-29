@@ -433,7 +433,7 @@
           
 
             i = 83;
-            data = "1 subgoal (ID 20)	  	  ============================	  forall m : binnat,	  isequiv_binary.(equiv_inv) (Succ m) =	  ((isequiv_binary.(equiv_inv) m).+1)%nat	";
+            data = "1 subgoal (ID 20)	  	  ============================	  forall m : binnat, _^-1 (Succ m) = ((_^-1 m).+1)%nat	";
             responses[i]=data;
           
 
@@ -443,12 +443,12 @@
           
 
             i = 85;
-            data = "1 subgoal (ID 26)	  	  n : nat	  ============================	  isequiv_binary.(equiv_inv) (Succ (binary n)) =	  ((isequiv_binary.(equiv_inv) (binary n)).+1)%nat	";
+            data = "1 subgoal (ID 26)	  	  n : nat	  ============================	  _^-1 (Succ (binary n)) = ((_^-1 (binary n)).+1)%nat	";
             responses[i]=data;
           
 
             i = 86;
-            data = "1 subgoal (ID 27)	  	  n : nat	  ============================	  isequiv_binary.(equiv_inv) (binary n.+1) =	  ((isequiv_binary.(equiv_inv) (binary n)).+1)%nat	";
+            data = "1 subgoal (ID 27)	  	  n : nat	  ============================	  _^-1 (binary n.+1) = ((_^-1 (binary n)).+1)%nat	";
             responses[i]=data;
           
 
@@ -548,7 +548,7 @@
           
 
             i = 106;
-            data = "1 subgoal (ID 61)	  	  m, n : binnat	  ============================	  isequiv_binary.(equiv_inv) m + isequiv_binary.(equiv_inv) n =	  isequiv_binary.(equiv_inv) (m + n)	";
+            data = "1 subgoal (ID 61)	  	  m, n : binnat	  ============================	  _^-1 m + _^-1 n = _^-1 (m + n)	";
             responses[i]=data;
           
 
@@ -558,22 +558,22 @@
           
 
             i = 108;
-            data = "2 focused subgoals	(shelved: 5) (ID 97)	  	  m, n : binnat	  ============================	  isequiv_binary.(equiv_inv) m + isequiv_binary.(equiv_inv) n =	  ?IsEquiv.(equiv_inv)	    (binary (?IsEquiv0.(equiv_inv) m + ?IsEquiv1.(equiv_inv) n))		subgoal 2 (ID 98) is:	 ?IsEquiv.(equiv_inv)	   (binary (?IsEquiv0.(equiv_inv) m + ?IsEquiv1.(equiv_inv) n)) =	 isequiv_binary.(equiv_inv) (m + n)	";
+            data = "2 focused subgoals	(shelved: 5) (ID 97)	  	  m, n : binnat	  ============================	  _^-1 m + _^-1 n = _^-1 (binary (_^-1 m + _^-1 n))		subgoal 2 (ID 98) is:	 _^-1 (binary (_^-1 m + _^-1 n)) = _^-1 (m + n)	";
             responses[i]=data;
           
 
             i = 109;
-            data = "1 focused subgoal	(shelved: 5) (ID 97)	  	  m, n : binnat	  ============================	  isequiv_binary.(equiv_inv) m + isequiv_binary.(equiv_inv) n =	  ?IsEquiv.(equiv_inv)	    (binary (?IsEquiv0.(equiv_inv) m + ?IsEquiv1.(equiv_inv) n))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal	(shelved: 1) (ID 98)		subgoal 1 (ID 98) is:	 ?IsEquiv.(equiv_inv)	   (binary (isequiv_binary.(equiv_inv) m + isequiv_binary.(equiv_inv) n)) =	 isequiv_binary.(equiv_inv) (m + n)	";
+            data = "1 focused subgoal	(shelved: 5) (ID 97)	  	  m, n : binnat	  ============================	  _^-1 m + _^-1 n = _^-1 (binary (_^-1 m + _^-1 n))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal	(shelved: 1) (ID 98)		subgoal 1 (ID 98) is:	 _^-1 (binary (_^-1 m + _^-1 n)) = _^-1 (m + n)	";
             responses[i]=data;
           
 
             i = 110;
-            data = "1 focused subgoal	(shelved: 1) (ID 98)	  	  m, n : binnat	  ============================	  ?IsEquiv.(equiv_inv)	    (binary (isequiv_binary.(equiv_inv) m + isequiv_binary.(equiv_inv) n)) =	  isequiv_binary.(equiv_inv) (m + n)	1 focused subgoal	(shelved: 1) (ID 119)	  	  m, n : binnat	  ============================	  ?IsEquiv.(equiv_inv)	    (binary (isequiv_binary.(equiv_inv) m) +	     binary (isequiv_binary.(equiv_inv) n)) =	  isequiv_binary.(equiv_inv) (m + n)	";
+            data = "1 focused subgoal	(shelved: 1) (ID 98)	  	  m, n : binnat	  ============================	  _^-1 (binary (_^-1 m + _^-1 n)) = _^-1 (m + n)	1 focused subgoal	(shelved: 1) (ID 119)	  	  m, n : binnat	  ============================	  _^-1 (binary (_^-1 m) + binary (_^-1 n)) = _^-1 (m + n)	";
             responses[i]=data;
           
 
             i = 111;
-            data = "1 focused subgoal	(shelved: 1) (ID 130)	  	  m, n : binnat	  ============================	  ?IsEquiv.(equiv_inv) (m + n) = isequiv_binary.(equiv_inv) (m + n)	";
+            data = "1 focused subgoal	(shelved: 1) (ID 130)	  	  m, n : binnat	  ============================	  _^-1 (m + n) = _^-1 (m + n)	";
             responses[i]=data;
           
 
@@ -798,7 +798,7 @@
           
 
             i = 156;
-            data = "1 subgoal (ID 109)	  	  m, n : binnat	  ============================	  isequiv_binary.(equiv_inv) m * isequiv_binary.(equiv_inv) n =	  isequiv_binary.(equiv_inv) (m * n)	";
+            data = "1 subgoal (ID 109)	  	  m, n : binnat	  ============================	  _^-1 m * _^-1 n = _^-1 (m * n)	";
             responses[i]=data;
           
 
@@ -808,22 +808,22 @@
           
 
             i = 158;
-            data = "2 focused subgoals	(shelved: 5) (ID 145)	  	  m, n : binnat	  ============================	  isequiv_binary.(equiv_inv) m * isequiv_binary.(equiv_inv) n =	  ?IsEquiv.(equiv_inv)	    (binary (?IsEquiv0.(equiv_inv) m * ?IsEquiv1.(equiv_inv) n))		subgoal 2 (ID 146) is:	 ?IsEquiv.(equiv_inv)	   (binary (?IsEquiv0.(equiv_inv) m * ?IsEquiv1.(equiv_inv) n)) =	 isequiv_binary.(equiv_inv) (m * n)	";
+            data = "2 focused subgoals	(shelved: 5) (ID 145)	  	  m, n : binnat	  ============================	  _^-1 m * _^-1 n = _^-1 (binary (_^-1 m * _^-1 n))		subgoal 2 (ID 146) is:	 _^-1 (binary (_^-1 m * _^-1 n)) = _^-1 (m * n)	";
             responses[i]=data;
           
 
             i = 159;
-            data = "1 focused subgoal	(shelved: 5) (ID 145)	  	  m, n : binnat	  ============================	  isequiv_binary.(equiv_inv) m * isequiv_binary.(equiv_inv) n =	  ?IsEquiv.(equiv_inv)	    (binary (?IsEquiv0.(equiv_inv) m * ?IsEquiv1.(equiv_inv) n))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal	(shelved: 1) (ID 146)		subgoal 1 (ID 146) is:	 ?IsEquiv.(equiv_inv)	   (binary (isequiv_binary.(equiv_inv) m * isequiv_binary.(equiv_inv) n)) =	 isequiv_binary.(equiv_inv) (m * n)	";
+            data = "1 focused subgoal	(shelved: 5) (ID 145)	  	  m, n : binnat	  ============================	  _^-1 m * _^-1 n = _^-1 (binary (_^-1 m * _^-1 n))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal	(shelved: 1) (ID 146)		subgoal 1 (ID 146) is:	 _^-1 (binary (_^-1 m * _^-1 n)) = _^-1 (m * n)	";
             responses[i]=data;
           
 
             i = 160;
-            data = "1 focused subgoal	(shelved: 1) (ID 146)	  	  m, n : binnat	  ============================	  ?IsEquiv.(equiv_inv)	    (binary (isequiv_binary.(equiv_inv) m * isequiv_binary.(equiv_inv) n)) =	  isequiv_binary.(equiv_inv) (m * n)	1 focused subgoal	(shelved: 1) (ID 167)	  	  m, n : binnat	  ============================	  ?IsEquiv.(equiv_inv)	    (binary (isequiv_binary.(equiv_inv) m) *	     binary (isequiv_binary.(equiv_inv) n)) =	  isequiv_binary.(equiv_inv) (m * n)	";
+            data = "1 focused subgoal	(shelved: 1) (ID 146)	  	  m, n : binnat	  ============================	  _^-1 (binary (_^-1 m * _^-1 n)) = _^-1 (m * n)	1 focused subgoal	(shelved: 1) (ID 167)	  	  m, n : binnat	  ============================	  _^-1 (binary (_^-1 m) * binary (_^-1 n)) = _^-1 (m * n)	";
             responses[i]=data;
           
 
             i = 161;
-            data = "1 focused subgoal	(shelved: 1) (ID 178)	  	  m, n : binnat	  ============================	  ?IsEquiv.(equiv_inv) (m * n) = isequiv_binary.(equiv_inv) (m * n)	";
+            data = "1 focused subgoal	(shelved: 1) (ID 178)	  	  m, n : binnat	  ============================	  _^-1 (m * n) = _^-1 (m * n)	";
             responses[i]=data;
           
 
@@ -1048,37 +1048,37 @@
           
 
             i = 206;
-            data = "7 subgoals (ID 225)	  	  x, y, z : binnat	  ============================	  isequiv_binary.(equiv_inv) (x & (y & z)) =	  isequiv_binary.(equiv_inv) (x & y & z)		subgoal 2 (ID 237) is:	 isequiv_binary.(equiv_inv) (x & mon_unit) = isequiv_binary.(equiv_inv) x	subgoal 3 (ID 249) is:	 isequiv_binary.(equiv_inv) (x & y) = isequiv_binary.(equiv_inv) (y & x)	subgoal 4 (ID 261) is:	 isequiv_binary.(equiv_inv) (x & (y & z)) =	 isequiv_binary.(equiv_inv) (x & y & z)	subgoal 5 (ID 273) is:	 isequiv_binary.(equiv_inv) (x & mon_unit) = isequiv_binary.(equiv_inv) x	subgoal 6 (ID 285) is:	 isequiv_binary.(equiv_inv) (x & y) = isequiv_binary.(equiv_inv) (y & x)	subgoal 7 (ID 297) is:	 isequiv_binary.(equiv_inv) (a * (b + c)) =	 isequiv_binary.(equiv_inv) (a * b + a * c)	";
+            data = "7 subgoals (ID 225)	  	  x, y, z : binnat	  ============================	  _^-1 (x & (y & z)) = _^-1 (x & y & z)		subgoal 2 (ID 237) is:	 _^-1 (x & mon_unit) = _^-1 x	subgoal 3 (ID 249) is:	 _^-1 (x & y) = _^-1 (y & x)	subgoal 4 (ID 261) is:	 _^-1 (x & (y & z)) = _^-1 (x & y & z)	subgoal 5 (ID 273) is:	 _^-1 (x & mon_unit) = _^-1 x	subgoal 6 (ID 285) is:	 _^-1 (x & y) = _^-1 (y & x)	subgoal 7 (ID 297) is:	 _^-1 (a * (b + c)) = _^-1 (a * b + a * c)	";
             responses[i]=data;
           
 
             i = 207;
-            data = "7 subgoals (ID 301)	  	  x, y, z : binnat	  ============================	  isequiv_binary.(equiv_inv) x +	  (isequiv_binary.(equiv_inv) y + isequiv_binary.(equiv_inv) z) =	  isequiv_binary.(equiv_inv) x + isequiv_binary.(equiv_inv) y +	  isequiv_binary.(equiv_inv) z		subgoal 2 (ID 302) is:	 isequiv_binary.(equiv_inv) x + isequiv_binary.(equiv_inv) mon_unit =	 isequiv_binary.(equiv_inv) x	subgoal 3 (ID 304) is:	 isequiv_binary.(equiv_inv) x + isequiv_binary.(equiv_inv) y =	 isequiv_binary.(equiv_inv) y + isequiv_binary.(equiv_inv) x	subgoal 4 (ID 305) is:	 isequiv_binary.(equiv_inv) (a * (b + c)) =	 isequiv_binary.(equiv_inv) (a * b) + isequiv_binary.(equiv_inv) (a * c)	subgoal 5 (ID 261) is:	 isequiv_binary.(equiv_inv) (x & (y & z)) =	 isequiv_binary.(equiv_inv) (x & y & z)	subgoal 6 (ID 273) is:	 isequiv_binary.(equiv_inv) (x & mon_unit) = isequiv_binary.(equiv_inv) x	subgoal 7 (ID 285) is:	 isequiv_binary.(equiv_inv) (x & y) = isequiv_binary.(equiv_inv) (y & x)	";
+            data = "7 subgoals (ID 301)	  	  x, y, z : binnat	  ============================	  _^-1 x + (_^-1 y + _^-1 z) = _^-1 x + _^-1 y + _^-1 z		subgoal 2 (ID 302) is:	 _^-1 x + _^-1 mon_unit = _^-1 x	subgoal 3 (ID 304) is:	 _^-1 x + _^-1 y = _^-1 y + _^-1 x	subgoal 4 (ID 305) is:	 _^-1 (a * (b + c)) = _^-1 (a * b) + _^-1 (a * c)	subgoal 5 (ID 261) is:	 _^-1 (x & (y & z)) = _^-1 (x & y & z)	subgoal 6 (ID 273) is:	 _^-1 (x & mon_unit) = _^-1 x	subgoal 7 (ID 285) is:	 _^-1 (x & y) = _^-1 (y & x)	";
             responses[i]=data;
           
 
             i = 208;
-            data = "7 subgoals (ID 301)	  	  x, y, z : binnat	  ============================	  isequiv_binary.(equiv_inv) x +	  (isequiv_binary.(equiv_inv) y + isequiv_binary.(equiv_inv) z) =	  isequiv_binary.(equiv_inv) x + isequiv_binary.(equiv_inv) y +	  isequiv_binary.(equiv_inv) z		subgoal 2 (ID 302) is:	 isequiv_binary.(equiv_inv) x + isequiv_binary.(equiv_inv) mon_unit =	 isequiv_binary.(equiv_inv) x	subgoal 3 (ID 304) is:	 isequiv_binary.(equiv_inv) x + isequiv_binary.(equiv_inv) y =	 isequiv_binary.(equiv_inv) y + isequiv_binary.(equiv_inv) x	subgoal 4 (ID 306) is:	 isequiv_binary.(equiv_inv) a * isequiv_binary.(equiv_inv) (b + c) =	 isequiv_binary.(equiv_inv) (a * b) + isequiv_binary.(equiv_inv) (a * c)	subgoal 5 (ID 307) is:	 isequiv_binary.(equiv_inv) x * isequiv_binary.(equiv_inv) (y & z) =	 isequiv_binary.(equiv_inv) (x & y & z)	subgoal 6 (ID 308) is:	 isequiv_binary.(equiv_inv) x * isequiv_binary.(equiv_inv) mon_unit =	 isequiv_binary.(equiv_inv) x	subgoal 7 (ID 309) is:	 isequiv_binary.(equiv_inv) x * isequiv_binary.(equiv_inv) y =	 isequiv_binary.(equiv_inv) (y & x)	";
+            data = "7 subgoals (ID 301)	  	  x, y, z : binnat	  ============================	  _^-1 x + (_^-1 y + _^-1 z) = _^-1 x + _^-1 y + _^-1 z		subgoal 2 (ID 302) is:	 _^-1 x + _^-1 mon_unit = _^-1 x	subgoal 3 (ID 304) is:	 _^-1 x + _^-1 y = _^-1 y + _^-1 x	subgoal 4 (ID 306) is:	 _^-1 a * _^-1 (b + c) = _^-1 (a * b) + _^-1 (a * c)	subgoal 5 (ID 307) is:	 _^-1 x * _^-1 (y & z) = _^-1 (x & y & z)	subgoal 6 (ID 308) is:	 _^-1 x * _^-1 mon_unit = _^-1 x	subgoal 7 (ID 309) is:	 _^-1 x * _^-1 y = _^-1 (y & x)	";
             responses[i]=data;
           
 
             i = 209;
-            data = "7 subgoals (ID 301)	  	  x, y, z : binnat	  ============================	  isequiv_binary.(equiv_inv) x +	  (isequiv_binary.(equiv_inv) y + isequiv_binary.(equiv_inv) z) =	  isequiv_binary.(equiv_inv) x + isequiv_binary.(equiv_inv) y +	  isequiv_binary.(equiv_inv) z		subgoal 2 (ID 302) is:	 isequiv_binary.(equiv_inv) x + isequiv_binary.(equiv_inv) mon_unit =	 isequiv_binary.(equiv_inv) x	subgoal 3 (ID 304) is:	 isequiv_binary.(equiv_inv) x + isequiv_binary.(equiv_inv) y =	 isequiv_binary.(equiv_inv) y + isequiv_binary.(equiv_inv) x	subgoal 4 (ID 310) is:	 isequiv_binary.(equiv_inv) a * isequiv_binary.(equiv_inv) (b + c) =	 isequiv_binary.(equiv_inv) a * isequiv_binary.(equiv_inv) b +	 isequiv_binary.(equiv_inv) (a * c)	subgoal 5 (ID 311) is:	 isequiv_binary.(equiv_inv) x *	 (isequiv_binary.(equiv_inv) y * isequiv_binary.(equiv_inv) z) =	 isequiv_binary.(equiv_inv) (x & y & z)	subgoal 6 (ID 312) is:	 isequiv_binary.(equiv_inv) x * isequiv_binary.(equiv_inv) y =	 isequiv_binary.(equiv_inv) y * isequiv_binary.(equiv_inv) x	subgoal 7 (ID 308) is:	 isequiv_binary.(equiv_inv) x * isequiv_binary.(equiv_inv) mon_unit =	 isequiv_binary.(equiv_inv) x	";
+            data = "7 subgoals (ID 301)	  	  x, y, z : binnat	  ============================	  _^-1 x + (_^-1 y + _^-1 z) = _^-1 x + _^-1 y + _^-1 z		subgoal 2 (ID 302) is:	 _^-1 x + _^-1 mon_unit = _^-1 x	subgoal 3 (ID 304) is:	 _^-1 x + _^-1 y = _^-1 y + _^-1 x	subgoal 4 (ID 310) is:	 _^-1 a * _^-1 (b + c) = _^-1 a * _^-1 b + _^-1 (a * c)	subgoal 5 (ID 311) is:	 _^-1 x * (_^-1 y * _^-1 z) = _^-1 (x & y & z)	subgoal 6 (ID 312) is:	 _^-1 x * _^-1 y = _^-1 y * _^-1 x	subgoal 7 (ID 308) is:	 _^-1 x * _^-1 mon_unit = _^-1 x	";
             responses[i]=data;
           
 
             i = 210;
-            data = "7 subgoals (ID 301)	  	  x, y, z : binnat	  ============================	  isequiv_binary.(equiv_inv) x +	  (isequiv_binary.(equiv_inv) y + isequiv_binary.(equiv_inv) z) =	  isequiv_binary.(equiv_inv) x + isequiv_binary.(equiv_inv) y +	  isequiv_binary.(equiv_inv) z		subgoal 2 (ID 302) is:	 isequiv_binary.(equiv_inv) x + isequiv_binary.(equiv_inv) mon_unit =	 isequiv_binary.(equiv_inv) x	subgoal 3 (ID 304) is:	 isequiv_binary.(equiv_inv) x + isequiv_binary.(equiv_inv) y =	 isequiv_binary.(equiv_inv) y + isequiv_binary.(equiv_inv) x	subgoal 4 (ID 313) is:	 isequiv_binary.(equiv_inv) a * isequiv_binary.(equiv_inv) (b + c) =	 isequiv_binary.(equiv_inv) a * isequiv_binary.(equiv_inv) b +	 isequiv_binary.(equiv_inv) a * isequiv_binary.(equiv_inv) c	subgoal 5 (ID 314) is:	 isequiv_binary.(equiv_inv) x *	 (isequiv_binary.(equiv_inv) y * isequiv_binary.(equiv_inv) z) =	 isequiv_binary.(equiv_inv) (x & y) * isequiv_binary.(equiv_inv) z	subgoal 6 (ID 312) is:	 isequiv_binary.(equiv_inv) x * isequiv_binary.(equiv_inv) y =	 isequiv_binary.(equiv_inv) y * isequiv_binary.(equiv_inv) x	subgoal 7 (ID 308) is:	 isequiv_binary.(equiv_inv) x * isequiv_binary.(equiv_inv) mon_unit =	 isequiv_binary.(equiv_inv) x	";
+            data = "7 subgoals (ID 301)	  	  x, y, z : binnat	  ============================	  _^-1 x + (_^-1 y + _^-1 z) = _^-1 x + _^-1 y + _^-1 z		subgoal 2 (ID 302) is:	 _^-1 x + _^-1 mon_unit = _^-1 x	subgoal 3 (ID 304) is:	 _^-1 x + _^-1 y = _^-1 y + _^-1 x	subgoal 4 (ID 313) is:	 _^-1 a * _^-1 (b + c) = _^-1 a * _^-1 b + _^-1 a * _^-1 c	subgoal 5 (ID 314) is:	 _^-1 x * (_^-1 y * _^-1 z) = _^-1 (x & y) * _^-1 z	subgoal 6 (ID 312) is:	 _^-1 x * _^-1 y = _^-1 y * _^-1 x	subgoal 7 (ID 308) is:	 _^-1 x * _^-1 mon_unit = _^-1 x	";
             responses[i]=data;
           
 
             i = 211;
-            data = "7 subgoals (ID 301)	  	  x, y, z : binnat	  ============================	  isequiv_binary.(equiv_inv) x +	  (isequiv_binary.(equiv_inv) y + isequiv_binary.(equiv_inv) z) =	  isequiv_binary.(equiv_inv) x + isequiv_binary.(equiv_inv) y +	  isequiv_binary.(equiv_inv) z		subgoal 2 (ID 302) is:	 isequiv_binary.(equiv_inv) x + isequiv_binary.(equiv_inv) mon_unit =	 isequiv_binary.(equiv_inv) x	subgoal 3 (ID 304) is:	 isequiv_binary.(equiv_inv) x + isequiv_binary.(equiv_inv) y =	 isequiv_binary.(equiv_inv) y + isequiv_binary.(equiv_inv) x	subgoal 4 (ID 315) is:	 isequiv_binary.(equiv_inv) a *	 (isequiv_binary.(equiv_inv) b + isequiv_binary.(equiv_inv) c) =	 isequiv_binary.(equiv_inv) a * isequiv_binary.(equiv_inv) b +	 isequiv_binary.(equiv_inv) a * isequiv_binary.(equiv_inv) c	subgoal 5 (ID 314) is:	 isequiv_binary.(equiv_inv) x *	 (isequiv_binary.(equiv_inv) y * isequiv_binary.(equiv_inv) z) =	 isequiv_binary.(equiv_inv) (x & y) * isequiv_binary.(equiv_inv) z	subgoal 6 (ID 312) is:	 isequiv_binary.(equiv_inv) x * isequiv_binary.(equiv_inv) y =	 isequiv_binary.(equiv_inv) y * isequiv_binary.(equiv_inv) x	subgoal 7 (ID 308) is:	 isequiv_binary.(equiv_inv) x * isequiv_binary.(equiv_inv) mon_unit =	 isequiv_binary.(equiv_inv) x	";
+            data = "7 subgoals (ID 301)	  	  x, y, z : binnat	  ============================	  _^-1 x + (_^-1 y + _^-1 z) = _^-1 x + _^-1 y + _^-1 z		subgoal 2 (ID 302) is:	 _^-1 x + _^-1 mon_unit = _^-1 x	subgoal 3 (ID 304) is:	 _^-1 x + _^-1 y = _^-1 y + _^-1 x	subgoal 4 (ID 315) is:	 _^-1 a * (_^-1 b + _^-1 c) = _^-1 a * _^-1 b + _^-1 a * _^-1 c	subgoal 5 (ID 314) is:	 _^-1 x * (_^-1 y * _^-1 z) = _^-1 (x & y) * _^-1 z	subgoal 6 (ID 312) is:	 _^-1 x * _^-1 y = _^-1 y * _^-1 x	subgoal 7 (ID 308) is:	 _^-1 x * _^-1 mon_unit = _^-1 x	";
             responses[i]=data;
           
 
             i = 212;
-            data = "7 subgoals (ID 301)	  	  x, y, z : binnat	  ============================	  isequiv_binary.(equiv_inv) x +	  (isequiv_binary.(equiv_inv) y + isequiv_binary.(equiv_inv) z) =	  isequiv_binary.(equiv_inv) x + isequiv_binary.(equiv_inv) y +	  isequiv_binary.(equiv_inv) z		subgoal 2 (ID 302) is:	 isequiv_binary.(equiv_inv) x + isequiv_binary.(equiv_inv) mon_unit =	 isequiv_binary.(equiv_inv) x	subgoal 3 (ID 304) is:	 isequiv_binary.(equiv_inv) x + isequiv_binary.(equiv_inv) y =	 isequiv_binary.(equiv_inv) y + isequiv_binary.(equiv_inv) x	subgoal 4 (ID 315) is:	 isequiv_binary.(equiv_inv) a *	 (isequiv_binary.(equiv_inv) b + isequiv_binary.(equiv_inv) c) =	 isequiv_binary.(equiv_inv) a * isequiv_binary.(equiv_inv) b +	 isequiv_binary.(equiv_inv) a * isequiv_binary.(equiv_inv) c	subgoal 5 (ID 316) is:	 isequiv_binary.(equiv_inv) x *	 (isequiv_binary.(equiv_inv) y * isequiv_binary.(equiv_inv) z) =	 isequiv_binary.(equiv_inv) x * isequiv_binary.(equiv_inv) y *	 isequiv_binary.(equiv_inv) z	subgoal 6 (ID 312) is:	 isequiv_binary.(equiv_inv) x * isequiv_binary.(equiv_inv) y =	 isequiv_binary.(equiv_inv) y * isequiv_binary.(equiv_inv) x	subgoal 7 (ID 308) is:	 isequiv_binary.(equiv_inv) x * isequiv_binary.(equiv_inv) mon_unit =	 isequiv_binary.(equiv_inv) x	";
+            data = "7 subgoals (ID 301)	  	  x, y, z : binnat	  ============================	  _^-1 x + (_^-1 y + _^-1 z) = _^-1 x + _^-1 y + _^-1 z		subgoal 2 (ID 302) is:	 _^-1 x + _^-1 mon_unit = _^-1 x	subgoal 3 (ID 304) is:	 _^-1 x + _^-1 y = _^-1 y + _^-1 x	subgoal 4 (ID 315) is:	 _^-1 a * (_^-1 b + _^-1 c) = _^-1 a * _^-1 b + _^-1 a * _^-1 c	subgoal 5 (ID 316) is:	 _^-1 x * (_^-1 y * _^-1 z) = _^-1 x * _^-1 y * _^-1 z	subgoal 6 (ID 312) is:	 _^-1 x * _^-1 y = _^-1 y * _^-1 x	subgoal 7 (ID 308) is:	 _^-1 x * _^-1 mon_unit = _^-1 x	";
             responses[i]=data;
           
 
@@ -1188,12 +1188,12 @@
           
 
             i = 234;
-            data = "1 subgoal (ID 66)	  	  ============================	  CoTransitive apart	1 subgoal (ID 137)	  	  x, y : binnat	  z : x ≶ y	  w : binnat	  ============================	  (x ≶ w \/ w ≶ y).(trunctype_type)	";
+            data = "1 subgoal (ID 66)	  	  ============================	  CoTransitive apart	1 subgoal (ID 137)	  	  x, y : binnat	  z : x ≶ y	  w : binnat	  ============================	  x ≶ w \/ w ≶ y	";
             responses[i]=data;
           
 
             i = 235;
-            data = "1 subgoal (ID 177)	  	  x, y : binnat	  z : x ≶ y	  w : binnat	  ============================	  isequiv_binary.(equiv_inv) x ≶ isequiv_binary.(equiv_inv) y	";
+            data = "1 subgoal (ID 177)	  	  x, y : binnat	  z : x ≶ y	  w : binnat	  ============================	  _^-1 x ≶ _^-1 y	";
             responses[i]=data;
           
 
@@ -1218,12 +1218,12 @@
           
 
             i = 240;
-            data = "1 subgoal (ID 195)	  	  m, n : binnat	  E : ~ m ≶ n	  ============================	  isequiv_binary.(equiv_inv) m = isequiv_binary.(equiv_inv) n	";
+            data = "1 subgoal (ID 195)	  	  m, n : binnat	  E : ~ m ≶ n	  ============================	  _^-1 m = _^-1 n	";
             responses[i]=data;
           
 
             i = 241;
-            data = "1 subgoal (ID 240)	  	  m, n : binnat	  E : ~ m ≶ n	  ============================	  ~ isequiv_binary.(equiv_inv) m ≶ isequiv_binary.(equiv_inv) n	";
+            data = "1 subgoal (ID 240)	  	  m, n : binnat	  E : ~ m ≶ n	  ============================	  ~ _^-1 m ≶ _^-1 n	";
             responses[i]=data;
           
 
@@ -1238,7 +1238,7 @@
           
 
             i = 244;
-            data = "1 subgoal (ID 288)	  	  m, n : binnat	  p : m = n	  ============================	  isequiv_binary.(equiv_inv) m = isequiv_binary.(equiv_inv) n	";
+            data = "1 subgoal (ID 288)	  	  m, n : binnat	  p : m = n	  ============================	  _^-1 m = _^-1 n	";
             responses[i]=data;
           
 
@@ -1273,27 +1273,27 @@
           
 
             i = 251;
-            data = "1 subgoal (ID 71)	  	  ============================	  PseudoSemiRingOrder binnat_lt	5 subgoals (ID 76)	  	  ============================	  PseudoOrder binnat_lt		subgoal 2 (ID 83) is:	 ~ n < m -> {z : binnat & n = m + z}	subgoal 3 (ID 78) is:	 forall z : binnat, StrictOrderEmbedding (plus z)	subgoal 4 (ID 88) is:	 forall x₂ y₂ : binnat,	 m * n ≶ x₂ * y₂ -> (m ≶ x₂ \/ n ≶ y₂).(trunctype_type)	subgoal 5 (ID 90) is:	 PropHolds (0 < m) -> PropHolds (0 < n) -> PropHolds (0 < m * n)	";
+            data = "1 subgoal (ID 71)	  	  ============================	  PseudoSemiRingOrder binnat_lt	5 subgoals (ID 76)	  	  ============================	  PseudoOrder binnat_lt		subgoal 2 (ID 83) is:	 ~ n < m -> {z : binnat & n = m + z}	subgoal 3 (ID 78) is:	 forall z : binnat, StrictOrderEmbedding (plus z)	subgoal 4 (ID 88) is:	 forall x₂ y₂ : binnat, m * n ≶ x₂ * y₂ -> m ≶ x₂ \/ n ≶ y₂	subgoal 5 (ID 90) is:	 PropHolds (0 < m) -> PropHolds (0 < n) -> PropHolds (0 < m * n)	";
             responses[i]=data;
           
 
             i = 252;
-            data = "1 subgoal (ID 76)	  	  ============================	  PseudoOrder binnat_lt	2 subgoals (ID 497)	  	  ============================	  IsApart binnat		subgoal 2 (ID 509) is:	 m < n -> forall z : binnat, (m < z \/ z < n).(trunctype_type)	";
+            data = "1 subgoal (ID 76)	  	  ============================	  PseudoOrder binnat_lt	2 subgoals (ID 497)	  	  ============================	  IsApart binnat		subgoal 2 (ID 509) is:	 m < n -> forall z : binnat, m < z \/ z < n	";
             responses[i]=data;
           
 
             i = 253;
-            data = "1 subgoal (ID 497)	  	  ============================	  IsApart binnat	3 subgoals (ID 791)	  	  m, n : binnat	  ============================	  IsTrunc_internal (-1) (m = n)		subgoal 2 (ID 799) is:	 m ≶ n -> forall z : binnat, (m ≶ z \/ z ≶ n).(trunctype_type)	subgoal 3 (ID 801) is:	 ~ m ≶ n <-> m = n	";
+            data = "1 subgoal (ID 497)	  	  ============================	  IsApart binnat	3 subgoals (ID 791)	  	  m, n : binnat	  ============================	  IsTrunc_internal (-1) (m = n)		subgoal 2 (ID 799) is:	 m ≶ n -> forall z : binnat, m ≶ z \/ z ≶ n	subgoal 3 (ID 801) is:	 ~ m ≶ n <-> m = n	";
             responses[i]=data;
           
 
             i = 254;
-            data = "1 subgoal (ID 791)	  	  m, n : binnat	  ============================	  IsTrunc_internal (-1) (m = n)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet --.	</infomsg>	8 subgoals (ID 799)		subgoal 1 (ID 799) is:	 m ≶ n -> forall z : binnat, (m ≶ z \/ z ≶ n).(trunctype_type)	subgoal 2 (ID 801) is:	 ~ m ≶ n <-> m = n	subgoal 3 (ID 509) is:	 m < n -> forall z : binnat, (m < z \/ z < n).(trunctype_type)	subgoal 4 (ID 83) is:	 ~ n < m -> {z : binnat & n = m + z}	subgoal 5 (ID 78) is:	 forall z : binnat, StrictOrderEmbedding (plus z)	subgoal 6 (ID 88) is:	 forall x₂ y₂ : binnat,	 m * n ≶ x₂ * y₂ -> (m ≶ x₂ \/ n ≶ y₂).(trunctype_type)	subgoal 7 (ID 90) is:	 PropHolds (0 < m) -> PropHolds (0 < n) -> PropHolds (0 < m * n)	subgoal 8 (ID 72) is:	 forall x y : binnat, x ≤ y <-> ~ y < x	";
+            data = "1 subgoal (ID 791)	  	  m, n : binnat	  ============================	  IsTrunc_internal (-1) (m = n)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet --.	</infomsg>	8 subgoals (ID 799)		subgoal 1 (ID 799) is:	 m ≶ n -> forall z : binnat, m ≶ z \/ z ≶ n	subgoal 2 (ID 801) is:	 ~ m ≶ n <-> m = n	subgoal 3 (ID 509) is:	 m < n -> forall z : binnat, m < z \/ z < n	subgoal 4 (ID 83) is:	 ~ n < m -> {z : binnat & n = m + z}	subgoal 5 (ID 78) is:	 forall z : binnat, StrictOrderEmbedding (plus z)	subgoal 6 (ID 88) is:	 forall x₂ y₂ : binnat, m * n ≶ x₂ * y₂ -> m ≶ x₂ \/ n ≶ y₂	subgoal 7 (ID 90) is:	 PropHolds (0 < m) -> PropHolds (0 < n) -> PropHolds (0 < m * n)	subgoal 8 (ID 72) is:	 forall x y : binnat, x ≤ y <-> ~ y < x	";
             responses[i]=data;
           
 
             i = 255;
-            data = "1 subgoal (ID 799)	  	  m, n : binnat	  ============================	  m ≶ n -> forall z : binnat, (m ≶ z \/ z ≶ n).(trunctype_type)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet --.	</infomsg>	7 subgoals (ID 801)		subgoal 1 (ID 801) is:	 ~ m ≶ n <-> m = n	subgoal 2 (ID 509) is:	 m < n -> forall z : binnat, (m < z \/ z < n).(trunctype_type)	subgoal 3 (ID 83) is:	 ~ n < m -> {z : binnat & n = m + z}	subgoal 4 (ID 78) is:	 forall z : binnat, StrictOrderEmbedding (plus z)	subgoal 5 (ID 88) is:	 forall x₂ y₂ : binnat,	 m * n ≶ x₂ * y₂ -> (m ≶ x₂ \/ n ≶ y₂).(trunctype_type)	subgoal 6 (ID 90) is:	 PropHolds (0 < m) -> PropHolds (0 < n) -> PropHolds (0 < m * n)	subgoal 7 (ID 72) is:	 forall x y : binnat, x ≤ y <-> ~ y < x	";
+            data = "1 subgoal (ID 799)	  	  m, n : binnat	  ============================	  m ≶ n -> forall z : binnat, m ≶ z \/ z ≶ n	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet --.	</infomsg>	7 subgoals (ID 801)		subgoal 1 (ID 801) is:	 ~ m ≶ n <-> m = n	subgoal 2 (ID 509) is:	 m < n -> forall z : binnat, m < z \/ z < n	subgoal 3 (ID 83) is:	 ~ n < m -> {z : binnat & n = m + z}	subgoal 4 (ID 78) is:	 forall z : binnat, StrictOrderEmbedding (plus z)	subgoal 5 (ID 88) is:	 forall x₂ y₂ : binnat, m * n ≶ x₂ * y₂ -> m ≶ x₂ \/ n ≶ y₂	subgoal 6 (ID 90) is:	 PropHolds (0 < m) -> PropHolds (0 < n) -> PropHolds (0 < m * n)	subgoal 7 (ID 72) is:	 forall x y : binnat, x ≤ y <-> ~ y < x	";
             responses[i]=data;
           
 
@@ -1303,12 +1303,12 @@
           
 
             i = 257;
-            data = "1 subgoal (ID 1365)	  	  m, n : binnat	  E : ~ m ≶ n	  ============================	  m = n	1 subgoal (ID 1383)	  	  m, n : binnat	  E : ~ m ≶ n	  X : isequiv_binary.(equiv_inv) m = isequiv_binary.(equiv_inv) n	  ============================	  m = n	";
+            data = "1 subgoal (ID 1365)	  	  m, n : binnat	  E : ~ m ≶ n	  ============================	  m = n	1 subgoal (ID 1383)	  	  m, n : binnat	  E : ~ m ≶ n	  X : _^-1 m = _^-1 n	  ============================	  m = n	";
             responses[i]=data;
           
 
             i = 258;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet ++.	</infomsg>	7 subgoals (ID 1366)		subgoal 1 (ID 1366) is:	 ~ m ≶ n	subgoal 2 (ID 509) is:	 m < n -> forall z : binnat, (m < z \/ z < n).(trunctype_type)	subgoal 3 (ID 83) is:	 ~ n < m -> {z : binnat & n = m + z}	subgoal 4 (ID 78) is:	 forall z : binnat, StrictOrderEmbedding (plus z)	subgoal 5 (ID 88) is:	 forall x₂ y₂ : binnat,	 m * n ≶ x₂ * y₂ -> (m ≶ x₂ \/ n ≶ y₂).(trunctype_type)	subgoal 6 (ID 90) is:	 PropHolds (0 < m) -> PropHolds (0 < n) -> PropHolds (0 < m * n)	subgoal 7 (ID 72) is:	 forall x y : binnat, x ≤ y <-> ~ y < x	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet ++.	</infomsg>	7 subgoals (ID 1366)		subgoal 1 (ID 1366) is:	 ~ m ≶ n	subgoal 2 (ID 509) is:	 m < n -> forall z : binnat, m < z \/ z < n	subgoal 3 (ID 83) is:	 ~ n < m -> {z : binnat & n = m + z}	subgoal 4 (ID 78) is:	 forall z : binnat, StrictOrderEmbedding (plus z)	subgoal 5 (ID 88) is:	 forall x₂ y₂ : binnat, m * n ≶ x₂ * y₂ -> m ≶ x₂ \/ n ≶ y₂	subgoal 6 (ID 90) is:	 PropHolds (0 < m) -> PropHolds (0 < n) -> PropHolds (0 < m * n)	subgoal 7 (ID 72) is:	 forall x y : binnat, x ≤ y <-> ~ y < x	";
             responses[i]=data;
           
 
@@ -1318,27 +1318,27 @@
           
 
             i = 260;
-            data = "1 subgoal (ID 1464)	  	  m, n : binnat	  E : m = n	  ============================	  isequiv_binary.(equiv_inv) n = isequiv_binary.(equiv_inv) n	";
+            data = "1 subgoal (ID 1464)	  	  m, n : binnat	  E : m = n	  ============================	  _^-1 n = _^-1 n	";
             responses[i]=data;
           
 
             i = 261;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	6 subgoals (ID 509)		subgoal 1 (ID 509) is:	 m < n -> forall z : binnat, (m < z \/ z < n).(trunctype_type)	subgoal 2 (ID 83) is:	 ~ n < m -> {z : binnat & n = m + z}	subgoal 3 (ID 78) is:	 forall z : binnat, StrictOrderEmbedding (plus z)	subgoal 4 (ID 88) is:	 forall x₂ y₂ : binnat,	 m * n ≶ x₂ * y₂ -> (m ≶ x₂ \/ n ≶ y₂).(trunctype_type)	subgoal 5 (ID 90) is:	 PropHolds (0 < m) -> PropHolds (0 < n) -> PropHolds (0 < m * n)	subgoal 6 (ID 72) is:	 forall x y : binnat, x ≤ y <-> ~ y < x	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	6 subgoals (ID 509)		subgoal 1 (ID 509) is:	 m < n -> forall z : binnat, m < z \/ z < n	subgoal 2 (ID 83) is:	 ~ n < m -> {z : binnat & n = m + z}	subgoal 3 (ID 78) is:	 forall z : binnat, StrictOrderEmbedding (plus z)	subgoal 4 (ID 88) is:	 forall x₂ y₂ : binnat, m * n ≶ x₂ * y₂ -> m ≶ x₂ \/ n ≶ y₂	subgoal 5 (ID 90) is:	 PropHolds (0 < m) -> PropHolds (0 < n) -> PropHolds (0 < m * n)	subgoal 6 (ID 72) is:	 forall x y : binnat, x ≤ y <-> ~ y < x	";
             responses[i]=data;
           
 
             i = 262;
-            data = "1 subgoal (ID 509)	  	  m, n : binnat	  ============================	  m < n -> forall z : binnat, (m < z \/ z < n).(trunctype_type)	1 subgoal (ID 1467)	  	  m, n : binnat	  E : m < n	  k : binnat	  ============================	  (m < k \/ k < n).(trunctype_type)	";
+            data = "1 subgoal (ID 509)	  	  m, n : binnat	  ============================	  m < n -> forall z : binnat, m < z \/ z < n	1 subgoal (ID 1467)	  	  m, n : binnat	  E : m < n	  k : binnat	  ============================	  m < k \/ k < n	";
             responses[i]=data;
           
 
             i = 263;
-            data = "1 subgoal (ID 1524)	  	  m, n : binnat	  E : m < n	  k : binnat	  ============================	  isequiv_binary.(equiv_inv) m < isequiv_binary.(equiv_inv) n	";
+            data = "1 subgoal (ID 1524)	  	  m, n : binnat	  E : m < n	  k : binnat	  ============================	  _^-1 m < _^-1 n	";
             responses[i]=data;
           
 
             i = 264;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	5 subgoals (ID 83)		subgoal 1 (ID 83) is:	 ~ n < m -> {z : binnat & n = m + z}	subgoal 2 (ID 78) is:	 forall z : binnat, StrictOrderEmbedding (plus z)	subgoal 3 (ID 88) is:	 forall x₂ y₂ : binnat,	 m * n ≶ x₂ * y₂ -> (m ≶ x₂ \/ n ≶ y₂).(trunctype_type)	subgoal 4 (ID 90) is:	 PropHolds (0 < m) -> PropHolds (0 < n) -> PropHolds (0 < m * n)	subgoal 5 (ID 72) is:	 forall x y : binnat, x ≤ y <-> ~ y < x	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	5 subgoals (ID 83)		subgoal 1 (ID 83) is:	 ~ n < m -> {z : binnat & n = m + z}	subgoal 2 (ID 78) is:	 forall z : binnat, StrictOrderEmbedding (plus z)	subgoal 3 (ID 88) is:	 forall x₂ y₂ : binnat, m * n ≶ x₂ * y₂ -> m ≶ x₂ \/ n ≶ y₂	subgoal 4 (ID 90) is:	 PropHolds (0 < m) -> PropHolds (0 < n) -> PropHolds (0 < m * n)	subgoal 5 (ID 72) is:	 forall x y : binnat, x ≤ y <-> ~ y < x	";
             responses[i]=data;
           
 
@@ -1348,32 +1348,32 @@
           
 
             i = 266;
-            data = "1 subgoal (ID 1546)	  	  m, n : binnat	  E : ~ n < m	  H : {w : nat &	      isequiv_binary.(equiv_inv) n = isequiv_binary.(equiv_inv) m + w}	  ============================	  {z : binnat & n = m + z}	";
+            data = "1 subgoal (ID 1546)	  	  m, n : binnat	  E : ~ n < m	  H : {w : nat & _^-1 n = _^-1 m + w}	  ============================	  {z : binnat & n = m + z}	";
             responses[i]=data;
           
 
             i = 267;
-            data = "1 subgoal (ID 1615)	  	  m, n : binnat	  E : ~ n < m	  w : nat	  L : isequiv_binary.(equiv_inv) n = isequiv_binary.(equiv_inv) m + w	  ============================	  {z : binnat & n = m + z}	";
+            data = "1 subgoal (ID 1615)	  	  m, n : binnat	  E : ~ n < m	  w : nat	  L : _^-1 n = _^-1 m + w	  ============================	  {z : binnat & n = m + z}	";
             responses[i]=data;
           
 
             i = 268;
-            data = "1 subgoal (ID 1617)	  	  m, n : binnat	  E : ~ n < m	  w : nat	  L : isequiv_binary.(equiv_inv) n = isequiv_binary.(equiv_inv) m + w	  ============================	  n = m + binary w	";
+            data = "1 subgoal (ID 1617)	  	  m, n : binnat	  E : ~ n < m	  w : nat	  L : _^-1 n = _^-1 m + w	  ============================	  n = m + binary w	";
             responses[i]=data;
           
 
             i = 269;
-            data = "1 subgoal (ID 1638)	  	  m, n : binnat	  E : ~ n < m	  w : nat	  L : isequiv_binary.(equiv_inv) n =	      isequiv_binary.(equiv_inv) (m + (isequiv_inverse binary).(equiv_inv) w)	  ============================	  n = m + binary w	";
+            data = "1 subgoal (ID 1638)	  	  m, n : binnat	  E : ~ n < m	  w : nat	  L : _^-1 n = _^-1 (m + _^-1 w)	  ============================	  n = m + binary w	";
             responses[i]=data;
           
 
             i = 270;
-            data = "1 subgoal (ID 1651)	  	  m, n : binnat	  E : ~ n < m	  w : nat	  L : isequiv_binary.(equiv_inv) n =	      isequiv_binary.(equiv_inv) (m + (isequiv_inverse binary).(equiv_inv) w)	  ============================	  isequiv_binary.(equiv_inv) n = isequiv_binary.(equiv_inv) (m + binary w)	";
+            data = "1 subgoal (ID 1651)	  	  m, n : binnat	  E : ~ n < m	  w : nat	  L : _^-1 n = _^-1 (m + _^-1 w)	  ============================	  _^-1 n = _^-1 (m + binary w)	";
             responses[i]=data;
           
 
             i = 271;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	4 subgoals (ID 78)		subgoal 1 (ID 78) is:	 forall z : binnat, StrictOrderEmbedding (plus z)	subgoal 2 (ID 88) is:	 forall x₂ y₂ : binnat,	 m * n ≶ x₂ * y₂ -> (m ≶ x₂ \/ n ≶ y₂).(trunctype_type)	subgoal 3 (ID 90) is:	 PropHolds (0 < m) -> PropHolds (0 < n) -> PropHolds (0 < m * n)	subgoal 4 (ID 72) is:	 forall x y : binnat, x ≤ y <-> ~ y < x	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	4 subgoals (ID 78)		subgoal 1 (ID 78) is:	 forall z : binnat, StrictOrderEmbedding (plus z)	subgoal 2 (ID 88) is:	 forall x₂ y₂ : binnat, m * n ≶ x₂ * y₂ -> m ≶ x₂ \/ n ≶ y₂	subgoal 3 (ID 90) is:	 PropHolds (0 < m) -> PropHolds (0 < n) -> PropHolds (0 < m * n)	subgoal 4 (ID 72) is:	 forall x y : binnat, x ≤ y <-> ~ y < x	";
             responses[i]=data;
           
 
@@ -1383,57 +1383,57 @@
           
 
             i = 273;
-            data = "2 subgoals (ID 1668)	  	  m, k, l : binnat	  E : isequiv_binary.(equiv_inv) k < isequiv_binary.(equiv_inv) l	  ============================	  isequiv_binary.(equiv_inv) (m + k) < isequiv_binary.(equiv_inv) (m + l)		subgoal 2 (ID 1673) is:	 isequiv_binary.(equiv_inv) k < isequiv_binary.(equiv_inv) l	";
+            data = "2 subgoals (ID 1668)	  	  m, k, l : binnat	  E : _^-1 k < _^-1 l	  ============================	  _^-1 (m + k) < _^-1 (m + l)		subgoal 2 (ID 1673) is:	 _^-1 k < _^-1 l	";
             responses[i]=data;
           
 
             i = 274;
-            data = "1 subgoal (ID 1668)	  	  m, k, l : binnat	  E : isequiv_binary.(equiv_inv) k < isequiv_binary.(equiv_inv) l	  ============================	  isequiv_binary.(equiv_inv) (m + k) < isequiv_binary.(equiv_inv) (m + l)	1 subgoal (ID 1675)	  	  m, k, l : binnat	  E : isequiv_binary.(equiv_inv) k < isequiv_binary.(equiv_inv) l	  ============================	  isequiv_binary.(equiv_inv) m + isequiv_binary.(equiv_inv) k <	  isequiv_binary.(equiv_inv) m + isequiv_binary.(equiv_inv) l	";
+            data = "1 subgoal (ID 1668)	  	  m, k, l : binnat	  E : _^-1 k < _^-1 l	  ============================	  _^-1 (m + k) < _^-1 (m + l)	1 subgoal (ID 1675)	  	  m, k, l : binnat	  E : _^-1 k < _^-1 l	  ============================	  _^-1 m + _^-1 k < _^-1 m + _^-1 l	";
             responses[i]=data;
           
 
             i = 275;
-            data = "1 subgoal (ID 1748)	  	  m, k, l : binnat	  E : isequiv_binary.(equiv_inv) k < isequiv_binary.(equiv_inv) l	  ============================	  isequiv_binary.(equiv_inv) k < isequiv_binary.(equiv_inv) l	";
+            data = "1 subgoal (ID 1748)	  	  m, k, l : binnat	  E : _^-1 k < _^-1 l	  ============================	  _^-1 k < _^-1 l	";
             responses[i]=data;
           
 
             i = 276;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	4 subgoals (ID 1673)		subgoal 1 (ID 1673) is:	 isequiv_binary.(equiv_inv) k < isequiv_binary.(equiv_inv) l	subgoal 2 (ID 88) is:	 forall x₂ y₂ : binnat,	 m * n ≶ x₂ * y₂ -> (m ≶ x₂ \/ n ≶ y₂).(trunctype_type)	subgoal 3 (ID 90) is:	 PropHolds (0 < m) -> PropHolds (0 < n) -> PropHolds (0 < m * n)	subgoal 4 (ID 72) is:	 forall x y : binnat, x ≤ y <-> ~ y < x	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	4 subgoals (ID 1673)		subgoal 1 (ID 1673) is:	 _^-1 k < _^-1 l	subgoal 2 (ID 88) is:	 forall x₂ y₂ : binnat, m * n ≶ x₂ * y₂ -> m ≶ x₂ \/ n ≶ y₂	subgoal 3 (ID 90) is:	 PropHolds (0 < m) -> PropHolds (0 < n) -> PropHolds (0 < m * n)	subgoal 4 (ID 72) is:	 forall x y : binnat, x ≤ y <-> ~ y < x	";
             responses[i]=data;
           
 
             i = 277;
-            data = "1 subgoal (ID 1673)	  	  m, k, l : binnat	  E : isequiv_binary.(equiv_inv) (m + k) < isequiv_binary.(equiv_inv) (m + l)	  ============================	  isequiv_binary.(equiv_inv) k < isequiv_binary.(equiv_inv) l	1 subgoal (ID 1751)	  	  m, k, l : binnat	  E : isequiv_binary.(equiv_inv) m + isequiv_binary.(equiv_inv) k <	      isequiv_binary.(equiv_inv) m + isequiv_binary.(equiv_inv) l	  ============================	  isequiv_binary.(equiv_inv) k < isequiv_binary.(equiv_inv) l	";
+            data = "1 subgoal (ID 1673)	  	  m, k, l : binnat	  E : _^-1 (m + k) < _^-1 (m + l)	  ============================	  _^-1 k < _^-1 l	1 subgoal (ID 1751)	  	  m, k, l : binnat	  E : _^-1 m + _^-1 k < _^-1 m + _^-1 l	  ============================	  _^-1 k < _^-1 l	";
             responses[i]=data;
           
 
             i = 278;
-            data = "1 subgoal (ID 1802)	  	  m, k, l : binnat	  E : isequiv_binary.(equiv_inv) m + isequiv_binary.(equiv_inv) k <	      isequiv_binary.(equiv_inv) m + isequiv_binary.(equiv_inv) l	  ============================	  isequiv_binary.(equiv_inv) m + isequiv_binary.(equiv_inv) k <	  isequiv_binary.(equiv_inv) m + isequiv_binary.(equiv_inv) l	";
+            data = "1 subgoal (ID 1802)	  	  m, k, l : binnat	  E : _^-1 m + _^-1 k < _^-1 m + _^-1 l	  ============================	  _^-1 m + _^-1 k < _^-1 m + _^-1 l	";
             responses[i]=data;
           
 
             i = 279;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	3 subgoals (ID 88)		subgoal 1 (ID 88) is:	 forall x₂ y₂ : binnat,	 m * n ≶ x₂ * y₂ -> (m ≶ x₂ \/ n ≶ y₂).(trunctype_type)	subgoal 2 (ID 90) is:	 PropHolds (0 < m) -> PropHolds (0 < n) -> PropHolds (0 < m * n)	subgoal 3 (ID 72) is:	 forall x y : binnat, x ≤ y <-> ~ y < x	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	3 subgoals (ID 88)		subgoal 1 (ID 88) is:	 forall x₂ y₂ : binnat, m * n ≶ x₂ * y₂ -> m ≶ x₂ \/ n ≶ y₂	subgoal 2 (ID 90) is:	 PropHolds (0 < m) -> PropHolds (0 < n) -> PropHolds (0 < m * n)	subgoal 3 (ID 72) is:	 forall x y : binnat, x ≤ y <-> ~ y < x	";
             responses[i]=data;
           
 
             i = 280;
-            data = "1 subgoal (ID 88)	  	  m, n : binnat	  ============================	  forall x₂ y₂ : binnat,	  m * n ≶ x₂ * y₂ -> (m ≶ x₂ \/ n ≶ y₂).(trunctype_type)	1 subgoal (ID 1805)	  	  m, n, k, l : binnat	  E : m * n ≶ k * l	  ============================	  (m ≶ k \/ n ≶ l).(trunctype_type)	";
+            data = "1 subgoal (ID 88)	  	  m, n : binnat	  ============================	  forall x₂ y₂ : binnat, m * n ≶ x₂ * y₂ -> m ≶ x₂ \/ n ≶ y₂	1 subgoal (ID 1805)	  	  m, n, k, l : binnat	  E : m * n ≶ k * l	  ============================	  m ≶ k \/ n ≶ l	";
             responses[i]=data;
           
 
             i = 281;
-            data = "1 subgoal (ID 1881)	  	  m, n, k, l : binnat	  E : m * n ≶ k * l	  ============================	  isequiv_binary.(equiv_inv) m * isequiv_binary.(equiv_inv) n	  ≶ isequiv_binary.(equiv_inv) k * isequiv_binary.(equiv_inv) l	";
+            data = "1 subgoal (ID 1881)	  	  m, n, k, l : binnat	  E : m * n ≶ k * l	  ============================	  _^-1 m * _^-1 n ≶ _^-1 k * _^-1 l	";
             responses[i]=data;
           
 
             i = 282;
-            data = "1 subgoal (ID 1882)	  	  m, n, k, l : binnat	  E : isequiv_binary.(equiv_inv) (m * n) ≶ isequiv_binary.(equiv_inv) (k * l)	  ============================	  isequiv_binary.(equiv_inv) m * isequiv_binary.(equiv_inv) n	  ≶ isequiv_binary.(equiv_inv) k * isequiv_binary.(equiv_inv) l	";
+            data = "1 subgoal (ID 1882)	  	  m, n, k, l : binnat	  E : _^-1 (m * n) ≶ _^-1 (k * l)	  ============================	  _^-1 m * _^-1 n ≶ _^-1 k * _^-1 l	";
             responses[i]=data;
           
 
             i = 283;
-            data = "1 subgoal (ID 1885)	  	  m, n, k, l : binnat	  E : isequiv_binary.(equiv_inv) m * isequiv_binary.(equiv_inv) n	      ≶ isequiv_binary.(equiv_inv) k * isequiv_binary.(equiv_inv) l	  ============================	  isequiv_binary.(equiv_inv) m * isequiv_binary.(equiv_inv) n	  ≶ isequiv_binary.(equiv_inv) k * isequiv_binary.(equiv_inv) l	";
+            data = "1 subgoal (ID 1885)	  	  m, n, k, l : binnat	  E : _^-1 m * _^-1 n ≶ _^-1 k * _^-1 l	  ============================	  _^-1 m * _^-1 n ≶ _^-1 k * _^-1 l	";
             responses[i]=data;
           
 
@@ -1448,12 +1448,12 @@
           
 
             i = 286;
-            data = "1 subgoal (ID 1889)	  	  m, n : binnat	  E : PropHolds (0 < m)	  F : PropHolds (0 < n)	  ============================	  PropHolds	    (isequiv_binary.(equiv_inv) 0 < isequiv_binary.(equiv_inv) (m * n))	";
+            data = "1 subgoal (ID 1889)	  	  m, n : binnat	  E : PropHolds (0 < m)	  F : PropHolds (0 < n)	  ============================	  PropHolds (_^-1 0 < _^-1 (m * n))	";
             responses[i]=data;
           
 
             i = 287;
-            data = "1 subgoal (ID 1890)	  	  m, n : binnat	  E : PropHolds (0 < m)	  F : PropHolds (0 < n)	  ============================	  PropHolds	    (isequiv_binary.(equiv_inv) 0 <	     isequiv_binary.(equiv_inv) m * isequiv_binary.(equiv_inv) n)	";
+            data = "1 subgoal (ID 1890)	  	  m, n : binnat	  E : PropHolds (0 < m)	  F : PropHolds (0 < n)	  ============================	  PropHolds (_^-1 0 < _^-1 m * _^-1 n)	";
             responses[i]=data;
           
 
@@ -1663,7 +1663,7 @@
           
 
             i = 329;
-            data = "1 subgoal (ID 166)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  ============================	  forall m : binnat, toR m = (toR_fromnat ∘ isequiv_binary.(equiv_inv)) m	";
+            data = "1 subgoal (ID 166)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  ============================	  forall m : binnat, toR m = (toR_fromnat ∘ _^-1) m	";
             responses[i]=data;
           
 
@@ -1673,82 +1673,82 @@
           
 
             i = 331;
-            data = "1 subgoal (ID 172)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  n : nat	  ============================	  toR (binary n) = (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary n)	";
+            data = "1 subgoal (ID 172)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  n : nat	  ============================	  toR (binary n) = (toR_fromnat ∘ _^-1) (binary n)	";
             responses[i]=data;
           
 
             i = 332;
-            data = "2 subgoals (ID 176)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  ============================	  toR (binary 0) = (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary 0)		subgoal 2 (ID 179) is:	 toR (binary n.+1) = (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary n.+1)	";
+            data = "2 subgoals (ID 176)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  ============================	  toR (binary 0) = (toR_fromnat ∘ _^-1) (binary 0)		subgoal 2 (ID 179) is:	 toR (binary n.+1) = (toR_fromnat ∘ _^-1) (binary n.+1)	";
             responses[i]=data;
           
 
             i = 333;
-            data = "1 subgoal (ID 176)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  ============================	  toR (binary 0) = (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary 0)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 179)		subgoal 1 (ID 179) is:	 toR (binary n.+1) = (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary n.+1)	";
+            data = "1 subgoal (ID 176)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  ============================	  toR (binary 0) = (toR_fromnat ∘ _^-1) (binary 0)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 179)		subgoal 1 (ID 179) is:	 toR (binary n.+1) = (toR_fromnat ∘ _^-1) (binary n.+1)	";
             responses[i]=data;
           
 
             i = 334;
-            data = "1 subgoal (ID 179)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  n : nat	  IHn : toR (binary n) =	        (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary n)	  ============================	  toR (binary n.+1) =	  (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary n.+1)	2 subgoals (ID 189)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  IHn : toR (binary 0) =	        (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary 0)	  ============================	  toR (binary 1) = (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary 1)		subgoal 2 (ID 193) is:	 toR (binary n.+2) = (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary n.+2)	";
+            data = "1 subgoal (ID 179)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  n : nat	  IHn : toR (binary n) = (toR_fromnat ∘ _^-1) (binary n)	  ============================	  toR (binary n.+1) = (toR_fromnat ∘ _^-1) (binary n.+1)	2 subgoals (ID 189)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  IHn : toR (binary 0) = (toR_fromnat ∘ _^-1) (binary 0)	  ============================	  toR (binary 1) = (toR_fromnat ∘ _^-1) (binary 1)		subgoal 2 (ID 193) is:	 toR (binary n.+2) = (toR_fromnat ∘ _^-1) (binary n.+2)	";
             responses[i]=data;
           
 
             i = 335;
-            data = "1 subgoal (ID 189)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  IHn : toR (binary 0) =	        (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary 0)	  ============================	  toR (binary 1) = (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary 1)	1 subgoal (ID 212)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  IHn : toR (binary 0) =	        (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary 0)	  ============================	  2 * 0 + 1 = 1	";
+            data = "1 subgoal (ID 189)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  IHn : toR (binary 0) = (toR_fromnat ∘ _^-1) (binary 0)	  ============================	  toR (binary 1) = (toR_fromnat ∘ _^-1) (binary 1)	1 subgoal (ID 212)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  IHn : toR (binary 0) = (toR_fromnat ∘ _^-1) (binary 0)	  ============================	  2 * 0 + 1 = 1	";
             responses[i]=data;
           
 
             i = 336;
-            data = "1 subgoal (ID 220)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  IHn : toR (binary 0) =	        (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary 0)	  ============================	  0 + 1 = 1	";
+            data = "1 subgoal (ID 220)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  IHn : toR (binary 0) = (toR_fromnat ∘ _^-1) (binary 0)	  ============================	  0 + 1 = 1	";
             responses[i]=data;
           
 
             i = 337;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 193)		subgoal 1 (ID 193) is:	 toR (binary n.+2) = (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary n.+2)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 193)		subgoal 1 (ID 193) is:	 toR (binary n.+2) = (toR_fromnat ∘ _^-1) (binary n.+2)	";
             responses[i]=data;
           
 
             i = 338;
-            data = "1 subgoal (ID 193)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  n : nat	  IHn : toR (binary n.+1) =	        (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary n.+1)	  ============================	  toR (binary n.+2) =	  (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary n.+2)	1 subgoal (ID 233)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  n : nat	  IHn : toR (binary n.+1) =	        (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary n.+1)	  ============================	  toR	    (Succ	       ((fix binary (n0 : nat) : binnat :=	           match n0 with	           | 0%nat => bzero	           | (n'.+1)%nat => Succ (binary n')	           end) n)) + 1 =	  (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary n.+2)	";
+            data = "1 subgoal (ID 193)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  n : nat	  IHn : toR (binary n.+1) = (toR_fromnat ∘ _^-1) (binary n.+1)	  ============================	  toR (binary n.+2) = (toR_fromnat ∘ _^-1) (binary n.+2)	1 subgoal (ID 233)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  n : nat	  IHn : toR (binary n.+1) = (toR_fromnat ∘ _^-1) (binary n.+1)	  ============================	  toR	    (Succ	       ((fix binary (n0 : nat) : binnat :=	           match n0 with	           | 0%nat => bzero	           | (n'.+1)%nat => Succ (binary n')	           end) n)) + 1 = (toR_fromnat ∘ _^-1) (binary n.+2)	";
             responses[i]=data;
           
 
             i = 339;
-            data = "1 subgoal (ID 234)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  n : nat	  IHn : toR (binary n.+1) =	        (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary n.+1)	  ============================	  (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary n.+1) + 1 =	  (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary n.+2)	";
+            data = "1 subgoal (ID 234)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  n : nat	  IHn : toR (binary n.+1) = (toR_fromnat ∘ _^-1) (binary n.+1)	  ============================	  (toR_fromnat ∘ _^-1) (binary n.+1) + 1 = (toR_fromnat ∘ _^-1) (binary n.+2)	";
             responses[i]=data;
           
 
             i = 340;
-            data = "2 subgoals (ID 268)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  n : nat	  IHn : toR (binary n.+1) =	        (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary n.+1)	  ============================	  (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary n.+1) + 1 =	  toR_fromnat ((isequiv_binary.(equiv_inv) (binary n.+1)).+1)%nat		subgoal 2 (ID 270) is:	 (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary n.+1) + 1 =	 (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary n.+2)	";
+            data = "2 subgoals (ID 268)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  n : nat	  IHn : toR (binary n.+1) = (toR_fromnat ∘ _^-1) (binary n.+1)	  ============================	  (toR_fromnat ∘ _^-1) (binary n.+1) + 1 =	  toR_fromnat ((_^-1 (binary n.+1)).+1)%nat		subgoal 2 (ID 270) is:	 (toR_fromnat ∘ _^-1) (binary n.+1) + 1 = (toR_fromnat ∘ _^-1) (binary n.+2)	";
             responses[i]=data;
           
 
             i = 341;
-            data = "1 subgoal (ID 268)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  n : nat	  IHn : toR (binary n.+1) =	        (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary n.+1)	  ============================	  (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary n.+1) + 1 =	  toR_fromnat ((isequiv_binary.(equiv_inv) (binary n.+1)).+1)%nat	1 subgoal (ID 287)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  n : nat	  IHn : toR (binary n.+1) =	        (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary n.+1)	  ============================	  1 + toR_fromnat (unary' (Succ (binary n))) =	  match unary' (Succ (binary n)) with	  | 0%nat => 1	  | (_.+1)%nat => 1 + toR_fromnat (unary' (Succ (binary n)))	  end	";
+            data = "1 subgoal (ID 268)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  n : nat	  IHn : toR (binary n.+1) = (toR_fromnat ∘ _^-1) (binary n.+1)	  ============================	  (toR_fromnat ∘ _^-1) (binary n.+1) + 1 =	  toR_fromnat ((_^-1 (binary n.+1)).+1)%nat	1 subgoal (ID 287)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  n : nat	  IHn : toR (binary n.+1) = (toR_fromnat ∘ _^-1) (binary n.+1)	  ============================	  1 + toR_fromnat (unary' (Succ (binary n))) =	  match unary' (Succ (binary n)) with	  | 0%nat => 1	  | (_.+1)%nat => 1 + toR_fromnat (unary' (Succ (binary n)))	  end	";
             responses[i]=data;
           
 
             i = 342;
-            data = "1 subgoal (ID 294)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  n : nat	  IHn : toR (binary n.+1) =	        (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary n.+1)	  ============================	  1 + toR_fromnat ((unary' (binary n)).+1)%nat =	  1 + toR_fromnat ((unary' (binary n)).+1)%nat	";
+            data = "1 subgoal (ID 294)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  n : nat	  IHn : toR (binary n.+1) = (toR_fromnat ∘ _^-1) (binary n.+1)	  ============================	  1 + toR_fromnat ((unary' (binary n)).+1)%nat =	  1 + toR_fromnat ((unary' (binary n)).+1)%nat	";
             responses[i]=data;
           
 
             i = 343;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 270)		subgoal 1 (ID 270) is:	 (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary n.+1) + 1 =	 (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary n.+2)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 270)		subgoal 1 (ID 270) is:	 (toR_fromnat ∘ _^-1) (binary n.+1) + 1 = (toR_fromnat ∘ _^-1) (binary n.+2)	";
             responses[i]=data;
           
 
             i = 344;
-            data = "1 subgoal (ID 270)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  n : nat	  IHn : toR (binary n.+1) =	        (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary n.+1)	  L : (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary n.+1) + 1 =	      toR_fromnat ((isequiv_binary.(equiv_inv) (binary n.+1)).+1)%nat	  ============================	  (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary n.+1) + 1 =	  (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary n.+2)	1 subgoal (ID 297)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  n : nat	  IHn : toR (binary n.+1) =	        (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary n.+1)	  ============================	  toR_fromnat ((isequiv_binary.(equiv_inv) (binary n.+1)).+1)%nat =	  (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary n.+2)	";
+            data = "1 subgoal (ID 270)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  n : nat	  IHn : toR (binary n.+1) = (toR_fromnat ∘ _^-1) (binary n.+1)	  L : (toR_fromnat ∘ _^-1) (binary n.+1) + 1 =	      toR_fromnat ((_^-1 (binary n.+1)).+1)%nat	  ============================	  (toR_fromnat ∘ _^-1) (binary n.+1) + 1 = (toR_fromnat ∘ _^-1) (binary n.+2)	1 subgoal (ID 297)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  n : nat	  IHn : toR (binary n.+1) = (toR_fromnat ∘ _^-1) (binary n.+1)	  ============================	  toR_fromnat ((_^-1 (binary n.+1)).+1)%nat =	  (toR_fromnat ∘ _^-1) (binary n.+2)	";
             responses[i]=data;
           
 
             i = 345;
-            data = "1 subgoal (ID 298)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  n : nat	  IHn : toR (binary n.+1) =	        (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary n.+1)	  ============================	  toR_fromnat (isequiv_binary.(equiv_inv) (Succ (binary n.+1))) =	  (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary n.+2)	";
+            data = "1 subgoal (ID 298)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  n : nat	  IHn : toR (binary n.+1) = (toR_fromnat ∘ _^-1) (binary n.+1)	  ============================	  toR_fromnat (_^-1 (Succ (binary n.+1))) =	  (toR_fromnat ∘ _^-1) (binary n.+2)	";
             responses[i]=data;
           
 
             i = 346;
-            data = "1 subgoal (ID 299)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  n : nat	  IHn : toR (binary n.+1) =	        (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary n.+1)	  ============================	  toR_fromnat (isequiv_binary.(equiv_inv) (binary n.+2)) =	  (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (binary n.+2)	";
+            data = "1 subgoal (ID 299)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  n : nat	  IHn : toR (binary n.+1) = (toR_fromnat ∘ _^-1) (binary n.+1)	  ============================	  toR_fromnat (_^-1 (binary n.+2)) = (toR_fromnat ∘ _^-1) (binary n.+2)	";
             responses[i]=data;
           
 
@@ -1793,7 +1793,7 @@
           
 
             i = 355;
-            data = "1 subgoal (ID 195)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  f_preserves_0 : toR 0 = 0	  ============================	  (toR_fromnat ∘ isequiv_binary.(equiv_inv)) 1 = 1	";
+            data = "1 subgoal (ID 195)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  f_preserves_0 : toR 0 = 0	  ============================	  (toR_fromnat ∘ _^-1) 1 = 1	";
             responses[i]=data;
           
 
@@ -1818,17 +1818,17 @@
           
 
             i = 360;
-            data = "1 subgoal (ID 222)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  f_preserves_0 : toR 0 = 0	  f_preserves_1 : toR 1 = 1	  a, a' : binnat	  ============================	  (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (a + a') =	  (toR_fromnat ∘ isequiv_binary.(equiv_inv)) a +	  (toR_fromnat ∘ isequiv_binary.(equiv_inv)) a'	";
+            data = "1 subgoal (ID 222)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  f_preserves_0 : toR 0 = 0	  f_preserves_1 : toR 1 = 1	  a, a' : binnat	  ============================	  (toR_fromnat ∘ _^-1) (a + a') =	  (toR_fromnat ∘ _^-1) a + (toR_fromnat ∘ _^-1) a'	";
             responses[i]=data;
           
 
             i = 361;
-            data = "1 subgoal (ID 223)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  f_preserves_0 : toR 0 = 0	  f_preserves_1 : toR 1 = 1	  a, a' : binnat	  ============================	  toR_fromnat (isequiv_binary.(equiv_inv) (a + a')) =	  toR_fromnat (isequiv_binary.(equiv_inv) a) +	  toR_fromnat (isequiv_binary.(equiv_inv) a')	";
+            data = "1 subgoal (ID 223)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  f_preserves_0 : toR 0 = 0	  f_preserves_1 : toR 1 = 1	  a, a' : binnat	  ============================	  toR_fromnat (_^-1 (a + a')) = toR_fromnat (_^-1 a) + toR_fromnat (_^-1 a')	";
             responses[i]=data;
           
 
             i = 362;
-            data = "1 subgoal (ID 224)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  f_preserves_0 : toR 0 = 0	  f_preserves_1 : toR 1 = 1	  a, a' : binnat	  ============================	  toR_fromnat (isequiv_binary.(equiv_inv) a + isequiv_binary.(equiv_inv) a') =	  toR_fromnat (isequiv_binary.(equiv_inv) a) +	  toR_fromnat (isequiv_binary.(equiv_inv) a')	";
+            data = "1 subgoal (ID 224)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  f_preserves_0 : toR 0 = 0	  f_preserves_1 : toR 1 = 1	  a, a' : binnat	  ============================	  toR_fromnat (_^-1 a + _^-1 a') =	  toR_fromnat (_^-1 a) + toR_fromnat (_^-1 a')	";
             responses[i]=data;
           
 
@@ -1853,17 +1853,17 @@
           
 
             i = 367;
-            data = "1 subgoal (ID 249)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  f_preserves_0 : toR 0 = 0	  f_preserves_1 : toR 1 = 1	  f_preserves_plus : forall a a' : binnat, toR (a + a') = toR a + toR a'	  a, a' : binnat	  ============================	  (toR_fromnat ∘ isequiv_binary.(equiv_inv)) (a * a') =	  (toR_fromnat ∘ isequiv_binary.(equiv_inv)) a *	  (toR_fromnat ∘ isequiv_binary.(equiv_inv)) a'	";
+            data = "1 subgoal (ID 249)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  f_preserves_0 : toR 0 = 0	  f_preserves_1 : toR 1 = 1	  f_preserves_plus : forall a a' : binnat, toR (a + a') = toR a + toR a'	  a, a' : binnat	  ============================	  (toR_fromnat ∘ _^-1) (a * a') =	  (toR_fromnat ∘ _^-1) a * (toR_fromnat ∘ _^-1) a'	";
             responses[i]=data;
           
 
             i = 368;
-            data = "1 subgoal (ID 250)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  f_preserves_0 : toR 0 = 0	  f_preserves_1 : toR 1 = 1	  f_preserves_plus : forall a a' : binnat, toR (a + a') = toR a + toR a'	  a, a' : binnat	  ============================	  toR_fromnat (isequiv_binary.(equiv_inv) (a * a')) =	  toR_fromnat (isequiv_binary.(equiv_inv) a) *	  toR_fromnat (isequiv_binary.(equiv_inv) a')	";
+            data = "1 subgoal (ID 250)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  f_preserves_0 : toR 0 = 0	  f_preserves_1 : toR 1 = 1	  f_preserves_plus : forall a a' : binnat, toR (a + a') = toR a + toR a'	  a, a' : binnat	  ============================	  toR_fromnat (_^-1 (a * a')) = toR_fromnat (_^-1 a) * toR_fromnat (_^-1 a')	";
             responses[i]=data;
           
 
             i = 369;
-            data = "1 subgoal (ID 251)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  f_preserves_0 : toR 0 = 0	  f_preserves_1 : toR 1 = 1	  f_preserves_plus : forall a a' : binnat, toR (a + a') = toR a + toR a'	  a, a' : binnat	  ============================	  toR_fromnat (isequiv_binary.(equiv_inv) a * isequiv_binary.(equiv_inv) a') =	  toR_fromnat (isequiv_binary.(equiv_inv) a) *	  toR_fromnat (isequiv_binary.(equiv_inv) a')	";
+            data = "1 subgoal (ID 251)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  f_preserves_0 : toR 0 = 0	  f_preserves_1 : toR 1 = 1	  f_preserves_plus : forall a a' : binnat, toR (a + a') = toR a + toR a'	  a, a' : binnat	  ============================	  toR_fromnat (_^-1 a * _^-1 a') =	  toR_fromnat (_^-1 a) * toR_fromnat (_^-1 a')	";
             responses[i]=data;
           
 
@@ -1913,7 +1913,7 @@
           
 
             i = 379;
-            data = "1 subgoal (ID 293)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  f_preserves_0 : toR 0 = 0	  f_preserves_1 : toR 1 = 1	  f_preserves_plus : forall a a' : binnat, toR (a + a') = toR a + toR a'	  f_preserves_mult : forall a a' : binnat, toR (a * a') = toR a * toR a'	  h : binnat -> R	  SemiRingPreserving0 : SemiRingPreserving h	  n : nat	  ============================	  toR_fromnat (isequiv_binary.(equiv_inv) (binary n)) = h (binary n)	";
+            data = "1 subgoal (ID 293)	  	  R : Type	  Aplus : Plus R	  Amult : Mult R	  Azero : Zero R	  Aone : One R	  H : SemiRing R	  f_preserves_0 : toR 0 = 0	  f_preserves_1 : toR 1 = 1	  f_preserves_plus : forall a a' : binnat, toR (a + a') = toR a + toR a'	  f_preserves_mult : forall a a' : binnat, toR (a * a') = toR a * toR a'	  h : binnat -> R	  SemiRingPreserving0 : SemiRingPreserving h	  n : nat	  ============================	  toR_fromnat (_^-1 (binary n)) = h (binary n)	";
             responses[i]=data;
           
 
@@ -2188,17 +2188,17 @@
           
 
             i = 434;
-            data = "1 subgoal (ID 21)	  	  z, x, y : binnat	  p : z + x = z + y	  ============================	  isequiv_binary.(equiv_inv) x = isequiv_binary.(equiv_inv) y	";
+            data = "1 subgoal (ID 21)	  	  z, x, y : binnat	  p : z + x = z + y	  ============================	  _^-1 x = _^-1 y	";
             responses[i]=data;
           
 
             i = 435;
-            data = "1 subgoal (ID 32)	  	  z, x, y : binnat	  p : isequiv_binary.(equiv_inv) (z + x) = isequiv_binary.(equiv_inv) (z + y)	  ============================	  isequiv_binary.(equiv_inv) x = isequiv_binary.(equiv_inv) y	";
+            data = "1 subgoal (ID 32)	  	  z, x, y : binnat	  p : _^-1 (z + x) = _^-1 (z + y)	  ============================	  _^-1 x = _^-1 y	";
             responses[i]=data;
           
 
             i = 436;
-            data = "1 subgoal (ID 36)	  	  z, x, y : binnat	  p : isequiv_binary.(equiv_inv) z + isequiv_binary.(equiv_inv) x =	      isequiv_binary.(equiv_inv) z + isequiv_binary.(equiv_inv) y	  ============================	  isequiv_binary.(equiv_inv) x = isequiv_binary.(equiv_inv) y	";
+            data = "1 subgoal (ID 36)	  	  z, x, y : binnat	  p : _^-1 z + _^-1 x = _^-1 z + _^-1 y	  ============================	  _^-1 x = _^-1 y	";
             responses[i]=data;
           
 
@@ -2233,12 +2233,12 @@
           
 
             i = 443;
-            data = "2 subgoals (ID 33)	  	  z : binnat	  E : z = 0 -> Empty	  ============================	  isequiv_binary.(equiv_inv) z <> isequiv_binary.(equiv_inv) 0		subgoal 2 (ID 35) is:	 LeftCancellation mult z	";
+            data = "2 subgoals (ID 33)	  	  z : binnat	  E : z = 0 -> Empty	  ============================	  _^-1 z <> _^-1 0		subgoal 2 (ID 35) is:	 LeftCancellation mult z	";
             responses[i]=data;
           
 
             i = 444;
-            data = "1 subgoal (ID 33)	  	  z : binnat	  E : z = 0 -> Empty	  ============================	  isequiv_binary.(equiv_inv) z <> isequiv_binary.(equiv_inv) 0	1 subgoal (ID 37)	  	  z : binnat	  E : z = 0 -> Empty	  q : isequiv_binary.(equiv_inv) z = isequiv_binary.(equiv_inv) 0	  ============================	  Empty	";
+            data = "1 subgoal (ID 33)	  	  z : binnat	  E : z = 0 -> Empty	  ============================	  _^-1 z <> _^-1 0	1 subgoal (ID 37)	  	  z : binnat	  E : z = 0 -> Empty	  q : _^-1 z = _^-1 0	  ============================	  Empty	";
             responses[i]=data;
           
 
@@ -2253,17 +2253,17 @@
           
 
             i = 447;
-            data = "1 subgoal (ID 35)	  	  z : binnat	  E : z = 0 -> Empty	  H : isequiv_binary.(equiv_inv) z <> isequiv_binary.(equiv_inv) 0	  ============================	  LeftCancellation mult z	1 subgoal (ID 54)	  	  z : binnat	  E : z = 0 -> Empty	  H : isequiv_binary.(equiv_inv) z <> isequiv_binary.(equiv_inv) 0	  x, y : binnat	  p : z * x = z * y	  ============================	  x = y	";
+            data = "1 subgoal (ID 35)	  	  z : binnat	  E : z = 0 -> Empty	  H : _^-1 z <> _^-1 0	  ============================	  LeftCancellation mult z	1 subgoal (ID 54)	  	  z : binnat	  E : z = 0 -> Empty	  H : _^-1 z <> _^-1 0	  x, y : binnat	  p : z * x = z * y	  ============================	  x = y	";
             responses[i]=data;
           
 
             i = 448;
-            data = "1 subgoal (ID 65)	  	  z : binnat	  E : z = 0 -> Empty	  H : isequiv_binary.(equiv_inv) z <> isequiv_binary.(equiv_inv) 0	  x, y : binnat	  p : isequiv_binary.(equiv_inv) (z * x) = isequiv_binary.(equiv_inv) (z * y)	  ============================	  x = y	";
+            data = "1 subgoal (ID 65)	  	  z : binnat	  E : z = 0 -> Empty	  H : _^-1 z <> _^-1 0	  x, y : binnat	  p : _^-1 (z * x) = _^-1 (z * y)	  ============================	  x = y	";
             responses[i]=data;
           
 
             i = 449;
-            data = "1 subgoal (ID 69)	  	  z : binnat	  E : z = 0 -> Empty	  H : isequiv_binary.(equiv_inv) z <> isequiv_binary.(equiv_inv) 0	  x, y : binnat	  p : isequiv_binary.(equiv_inv) z * isequiv_binary.(equiv_inv) x =	      isequiv_binary.(equiv_inv) z * isequiv_binary.(equiv_inv) y	  ============================	  x = y	";
+            data = "1 subgoal (ID 69)	  	  z : binnat	  E : z = 0 -> Empty	  H : _^-1 z <> _^-1 0	  x, y : binnat	  p : _^-1 z * _^-1 x = _^-1 z * _^-1 y	  ============================	  x = y	";
             responses[i]=data;
           
 
@@ -2353,22 +2353,22 @@
           
 
             i = 467;
-            data = "1 subgoal (ID 20)	  	  x, y : binnat	  T := nat_trichotomy (isequiv_binary.(equiv_inv) x)	         (isequiv_binary.(equiv_inv) y)	   : (isequiv_binary.(equiv_inv) x < isequiv_binary.(equiv_inv) y) +	     ((isequiv_binary.(equiv_inv) x = isequiv_binary.(equiv_inv) y) +	      (isequiv_binary.(equiv_inv) y < isequiv_binary.(equiv_inv) x))	  ============================	  (x < y) + ((x = y) + (y < x))	";
+            data = "1 subgoal (ID 20)	  	  x, y : binnat	  T := nat_trichotomy (_^-1 x) (_^-1 y)	   : (_^-1 x < _^-1 y) + ((_^-1 x = _^-1 y) + (_^-1 y < _^-1 x))	  ============================	  (x < y) + ((x = y) + (y < x))	";
             responses[i]=data;
           
 
             i = 468;
-            data = "3 subgoals (ID 28)	  	  x, y : binnat	  l : isequiv_binary.(equiv_inv) x < isequiv_binary.(equiv_inv) y	  ============================	  (x < y) + ((x = y) + (y < x))		subgoal 2 (ID 34) is:	 (x < y) + ((x = y) + (y < x))	subgoal 3 (ID 35) is:	 (x < y) + ((x = y) + (y < x))	";
+            data = "3 subgoals (ID 28)	  	  x, y : binnat	  l : _^-1 x < _^-1 y	  ============================	  (x < y) + ((x = y) + (y < x))		subgoal 2 (ID 34) is:	 (x < y) + ((x = y) + (y < x))	subgoal 3 (ID 35) is:	 (x < y) + ((x = y) + (y < x))	";
             responses[i]=data;
           
 
             i = 469;
-            data = "1 subgoal (ID 28)	  	  x, y : binnat	  l : isequiv_binary.(equiv_inv) x < isequiv_binary.(equiv_inv) y	  ============================	  (x < y) + ((x = y) + (y < x))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 34)		subgoal 1 (ID 34) is:	 (x < y) + ((x = y) + (y < x))	subgoal 2 (ID 35) is:	 (x < y) + ((x = y) + (y < x))	";
+            data = "1 subgoal (ID 28)	  	  x, y : binnat	  l : _^-1 x < _^-1 y	  ============================	  (x < y) + ((x = y) + (y < x))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 34)		subgoal 1 (ID 34) is:	 (x < y) + ((x = y) + (y < x))	subgoal 2 (ID 35) is:	 (x < y) + ((x = y) + (y < x))	";
             responses[i]=data;
           
 
             i = 470;
-            data = "1 subgoal (ID 34)	  	  x, y : binnat	  c : isequiv_binary.(equiv_inv) x = isequiv_binary.(equiv_inv) y	  ============================	  (x < y) + ((x = y) + (y < x))	1 subgoal (ID 41)	  	  x, y : binnat	  c : isequiv_binary.(equiv_inv) x = isequiv_binary.(equiv_inv) y	  ============================	  x = y	";
+            data = "1 subgoal (ID 34)	  	  x, y : binnat	  c : _^-1 x = _^-1 y	  ============================	  (x < y) + ((x = y) + (y < x))	1 subgoal (ID 41)	  	  x, y : binnat	  c : _^-1 x = _^-1 y	  ============================	  x = y	";
             responses[i]=data;
           
 
@@ -2378,7 +2378,7 @@
           
 
             i = 472;
-            data = "1 subgoal (ID 35)	  	  x, y : binnat	  r : isequiv_binary.(equiv_inv) y < isequiv_binary.(equiv_inv) x	  ============================	  (x < y) + ((x = y) + (y < x))	No more subgoals.	";
+            data = "1 subgoal (ID 35)	  	  x, y : binnat	  r : _^-1 y < _^-1 x	  ============================	  (x < y) + ((x = y) + (y < x))	No more subgoals.	";
             responses[i]=data;
           
 
@@ -2928,7 +2928,7 @@
           
 
             i = 582;
-            data = "1 subgoal (ID 96)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  m, n : binnat	  ============================	  isequiv_binary.(equiv_inv) m ∸ isequiv_binary.(equiv_inv) n =	  isequiv_binary.(equiv_inv) (m ∸ n)	";
+            data = "1 subgoal (ID 96)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  m, n : binnat	  ============================	  _^-1 m ∸ _^-1 n = _^-1 (m ∸ n)	";
             responses[i]=data;
           
 
@@ -2938,22 +2938,22 @@
           
 
             i = 584;
-            data = "2 focused subgoals	(shelved: 6) (ID 146)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  m, n : binnat	  ============================	  isequiv_binary.(equiv_inv) m ∸ isequiv_binary.(equiv_inv) n =	  ?IsEquiv.(equiv_inv)	    (binary (?IsEquiv0.(equiv_inv) m ∸ ?IsEquiv1.(equiv_inv) n))		subgoal 2 (ID 147) is:	 ?IsEquiv.(equiv_inv)	   (binary (?IsEquiv0.(equiv_inv) m ∸ ?IsEquiv1.(equiv_inv) n)) =	 isequiv_binary.(equiv_inv) (m ∸ n)	";
+            data = "2 focused subgoals	(shelved: 6) (ID 146)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  m, n : binnat	  ============================	  _^-1 m ∸ _^-1 n = _^-1 (binary (_^-1 m ∸ _^-1 n))		subgoal 2 (ID 147) is:	 _^-1 (binary (_^-1 m ∸ _^-1 n)) = _^-1 (m ∸ n)	";
             responses[i]=data;
           
 
             i = 585;
-            data = "1 focused subgoal	(shelved: 6) (ID 146)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  m, n : binnat	  ============================	  isequiv_binary.(equiv_inv) m ∸ isequiv_binary.(equiv_inv) n =	  ?IsEquiv.(equiv_inv)	    (binary (?IsEquiv0.(equiv_inv) m ∸ ?IsEquiv1.(equiv_inv) n))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal	(shelved: 1) (ID 147)		subgoal 1 (ID 147) is:	 ?IsEquiv.(equiv_inv)	   (binary (isequiv_binary.(equiv_inv) m ∸ isequiv_binary.(equiv_inv) n)) =	 isequiv_binary.(equiv_inv) (m ∸ n)	";
+            data = "1 focused subgoal	(shelved: 6) (ID 146)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  m, n : binnat	  ============================	  _^-1 m ∸ _^-1 n = _^-1 (binary (_^-1 m ∸ _^-1 n))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal	(shelved: 1) (ID 147)		subgoal 1 (ID 147) is:	 _^-1 (binary (_^-1 m ∸ _^-1 n)) = _^-1 (m ∸ n)	";
             responses[i]=data;
           
 
             i = 586;
-            data = "1 focused subgoal	(shelved: 1) (ID 147)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  m, n : binnat	  ============================	  ?IsEquiv.(equiv_inv)	    (binary (isequiv_binary.(equiv_inv) m ∸ isequiv_binary.(equiv_inv) n)) =	  isequiv_binary.(equiv_inv) (m ∸ n)	1 focused subgoal	(shelved: 1) (ID 168)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  m, n : binnat	  ============================	  ?IsEquiv.(equiv_inv)	    (binary (isequiv_binary.(equiv_inv) m)	     ∸ binary (isequiv_binary.(equiv_inv) n)) =	  isequiv_binary.(equiv_inv) (m ∸ n)	";
+            data = "1 focused subgoal	(shelved: 1) (ID 147)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  m, n : binnat	  ============================	  _^-1 (binary (_^-1 m ∸ _^-1 n)) = _^-1 (m ∸ n)	1 focused subgoal	(shelved: 1) (ID 168)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  m, n : binnat	  ============================	  _^-1 (binary (_^-1 m) ∸ binary (_^-1 n)) = _^-1 (m ∸ n)	";
             responses[i]=data;
           
 
             i = 587;
-            data = "1 focused subgoal	(shelved: 1) (ID 179)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  m, n : binnat	  ============================	  ?IsEquiv.(equiv_inv) (m ∸ n) = isequiv_binary.(equiv_inv) (m ∸ n)	";
+            data = "1 focused subgoal	(shelved: 1) (ID 179)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  m, n : binnat	  ============================	  _^-1 (m ∸ n) = _^-1 (m ∸ n)	";
             responses[i]=data;
           
 
@@ -2968,7 +2968,7 @@
           
 
             i = 590;
-            data = "1 subgoal (ID 100)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  unaryminus : forall m n : binnat,	               isequiv_binary.(equiv_inv) m ∸ isequiv_binary.(equiv_inv) n =	               isequiv_binary.(equiv_inv) (m ∸ n)	  ============================	  CutMinusSpec binnat binnat_cut_minus	";
+            data = "1 subgoal (ID 100)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  unaryminus : forall m n : binnat, _^-1 m ∸ _^-1 n = _^-1 (m ∸ n)	  ============================	  CutMinusSpec binnat binnat_cut_minus	";
             responses[i]=data;
           
 
@@ -2978,27 +2978,27 @@
           
 
             i = 592;
-            data = "2 subgoals (ID 102)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  unaryminus : forall m n : binnat,	               isequiv_binary.(equiv_inv) m ∸ isequiv_binary.(equiv_inv) n =	               isequiv_binary.(equiv_inv) (m ∸ n)	  ============================	  forall x y : binnat, y ≤ x -> x ∸ y + y = x		subgoal 2 (ID 103) is:	 forall x y : binnat, x ≤ y -> x ∸ y = 0	";
+            data = "2 subgoals (ID 102)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  unaryminus : forall m n : binnat, _^-1 m ∸ _^-1 n = _^-1 (m ∸ n)	  ============================	  forall x y : binnat, y ≤ x -> x ∸ y + y = x		subgoal 2 (ID 103) is:	 forall x y : binnat, x ≤ y -> x ∸ y = 0	";
             responses[i]=data;
           
 
             i = 593;
-            data = "1 subgoal (ID 102)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  unaryminus : forall m n : binnat,	               isequiv_binary.(equiv_inv) m ∸ isequiv_binary.(equiv_inv) n =	               isequiv_binary.(equiv_inv) (m ∸ n)	  ============================	  forall x y : binnat, y ≤ x -> x ∸ y + y = x	1 subgoal (ID 106)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  unaryminus : forall m n : binnat,	               isequiv_binary.(equiv_inv) m ∸ isequiv_binary.(equiv_inv) n =	               isequiv_binary.(equiv_inv) (m ∸ n)	  m, n : binnat	  E : n ≤ m	  ============================	  m ∸ n + n = m	";
+            data = "1 subgoal (ID 102)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  unaryminus : forall m n : binnat, _^-1 m ∸ _^-1 n = _^-1 (m ∸ n)	  ============================	  forall x y : binnat, y ≤ x -> x ∸ y + y = x	1 subgoal (ID 106)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  unaryminus : forall m n : binnat, _^-1 m ∸ _^-1 n = _^-1 (m ∸ n)	  m, n : binnat	  E : n ≤ m	  ============================	  m ∸ n + n = m	";
             responses[i]=data;
           
 
             i = 594;
-            data = "1 subgoal (ID 118)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  unaryminus : forall m n : binnat,	               isequiv_binary.(equiv_inv) m ∸ isequiv_binary.(equiv_inv) n =	               isequiv_binary.(equiv_inv) (m ∸ n)	  m, n : binnat	  E : n ≤ m	  ============================	  isequiv_binary.(equiv_inv) (m ∸ n + n) = isequiv_binary.(equiv_inv) m	";
+            data = "1 subgoal (ID 118)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  unaryminus : forall m n : binnat, _^-1 m ∸ _^-1 n = _^-1 (m ∸ n)	  m, n : binnat	  E : n ≤ m	  ============================	  _^-1 (m ∸ n + n) = _^-1 m	";
             responses[i]=data;
           
 
             i = 595;
-            data = "1 subgoal (ID 120)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  unaryminus : forall m n : binnat,	               isequiv_binary.(equiv_inv) m ∸ isequiv_binary.(equiv_inv) n =	               isequiv_binary.(equiv_inv) (m ∸ n)	  m, n : binnat	  E : n ≤ m	  ============================	  isequiv_binary.(equiv_inv) m ∸ isequiv_binary.(equiv_inv) n +	  isequiv_binary.(equiv_inv) n = isequiv_binary.(equiv_inv) m	";
+            data = "1 subgoal (ID 120)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  unaryminus : forall m n : binnat, _^-1 m ∸ _^-1 n = _^-1 (m ∸ n)	  m, n : binnat	  E : n ≤ m	  ============================	  _^-1 m ∸ _^-1 n + _^-1 n = _^-1 m	";
             responses[i]=data;
           
 
             i = 596;
-            data = "1 subgoal (ID 124)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  unaryminus : forall m n : binnat,	               isequiv_binary.(equiv_inv) m ∸ isequiv_binary.(equiv_inv) n =	               isequiv_binary.(equiv_inv) (m ∸ n)	  m, n : binnat	  E : n ≤ m	  ============================	  isequiv_binary.(equiv_inv) n ≤ isequiv_binary.(equiv_inv) m	";
+            data = "1 subgoal (ID 124)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  unaryminus : forall m n : binnat, _^-1 m ∸ _^-1 n = _^-1 (m ∸ n)	  m, n : binnat	  E : n ≤ m	  ============================	  _^-1 n ≤ _^-1 m	";
             responses[i]=data;
           
 
@@ -3008,22 +3008,22 @@
           
 
             i = 598;
-            data = "1 subgoal (ID 103)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  unaryminus : forall m n : binnat,	               isequiv_binary.(equiv_inv) m ∸ isequiv_binary.(equiv_inv) n =	               isequiv_binary.(equiv_inv) (m ∸ n)	  ============================	  forall x y : binnat, x ≤ y -> x ∸ y = 0	1 subgoal (ID 127)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  unaryminus : forall m n : binnat,	               isequiv_binary.(equiv_inv) m ∸ isequiv_binary.(equiv_inv) n =	               isequiv_binary.(equiv_inv) (m ∸ n)	  m, n : binnat	  E : m ≤ n	  ============================	  m ∸ n = 0	";
+            data = "1 subgoal (ID 103)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  unaryminus : forall m n : binnat, _^-1 m ∸ _^-1 n = _^-1 (m ∸ n)	  ============================	  forall x y : binnat, x ≤ y -> x ∸ y = 0	1 subgoal (ID 127)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  unaryminus : forall m n : binnat, _^-1 m ∸ _^-1 n = _^-1 (m ∸ n)	  m, n : binnat	  E : m ≤ n	  ============================	  m ∸ n = 0	";
             responses[i]=data;
           
 
             i = 599;
-            data = "1 subgoal (ID 139)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  unaryminus : forall m n : binnat,	               isequiv_binary.(equiv_inv) m ∸ isequiv_binary.(equiv_inv) n =	               isequiv_binary.(equiv_inv) (m ∸ n)	  m, n : binnat	  E : m ≤ n	  ============================	  isequiv_binary.(equiv_inv) (m ∸ n) = isequiv_binary.(equiv_inv) 0	";
+            data = "1 subgoal (ID 139)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  unaryminus : forall m n : binnat, _^-1 m ∸ _^-1 n = _^-1 (m ∸ n)	  m, n : binnat	  E : m ≤ n	  ============================	  _^-1 (m ∸ n) = _^-1 0	";
             responses[i]=data;
           
 
             i = 600;
-            data = "1 subgoal (ID 140)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  unaryminus : forall m n : binnat,	               isequiv_binary.(equiv_inv) m ∸ isequiv_binary.(equiv_inv) n =	               isequiv_binary.(equiv_inv) (m ∸ n)	  m, n : binnat	  E : m ≤ n	  ============================	  isequiv_binary.(equiv_inv) m ∸ isequiv_binary.(equiv_inv) n =	  isequiv_binary.(equiv_inv) 0	";
+            data = "1 subgoal (ID 140)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  unaryminus : forall m n : binnat, _^-1 m ∸ _^-1 n = _^-1 (m ∸ n)	  m, n : binnat	  E : m ≤ n	  ============================	  _^-1 m ∸ _^-1 n = _^-1 0	";
             responses[i]=data;
           
 
             i = 601;
-            data = "1 subgoal (ID 146)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  unaryminus : forall m n : binnat,	               isequiv_binary.(equiv_inv) m ∸ isequiv_binary.(equiv_inv) n =	               isequiv_binary.(equiv_inv) (m ∸ n)	  m, n : binnat	  E : m ≤ n	  ============================	  isequiv_binary.(equiv_inv) m ≤ isequiv_binary.(equiv_inv) n	";
+            data = "1 subgoal (ID 146)	  	  succ_double : forall m : binnat, Succ (double m) = double1 m	  double_succ : forall m : binnat, double (Succ m) = double2 m	  pred_succ : forall m : binnat, Pred (Succ m) = m	  double_pred : forall m : binnat, double (Pred m) = Pred (Pred (double m))	  pred_double2 : forall m : binnat, Pred (double2 m) = double1 m	  pred_double1 : forall m : binnat, Pred (double1 m) = double m	  binnat_minus_zero : forall m : binnat, m ∸ bzero = m	  binnat_zero_minus : forall m : binnat, bzero ∸ m = bzero	  pred_succ_minus : forall m n : binnat, Pred (Succ m ∸ n) = m ∸ n	  double_cases := fun m : binnat =>	                  binnat_rect	                    (fun m0 : binnat =>	                     ((bzero = double m0) + hfiber double2 (double m0))%type)	                    (inl 1%path)	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (double m0; 1%path))	                    (fun (m0 : binnat)	                       (_ : (bzero = double m0) + hfiber double2 (double m0))	                     => inr (Succ (double m0); 1%path)) m	   : forall m : binnat, (bzero = double m) + hfiber double2 (double m)	  binnat_minus_succ : forall m n : binnat, Succ m ∸ Succ n = m ∸ n	  binaryminus : forall x y : nat, binary x ∸ binary y = binary (x ∸ y)	  unaryminus : forall m n : binnat, _^-1 m ∸ _^-1 n = _^-1 (m ∸ n)	  m, n : binnat	  E : m ≤ n	  ============================	  _^-1 m ≤ _^-1 n	";
             responses[i]=data;
           
 

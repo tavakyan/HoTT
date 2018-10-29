@@ -918,7 +918,7 @@
           
 
             i = 180;
-            data = "1 subgoal (ID 9)	  	  S : Type	  S' : Type	  R : S -> S' -> Type	  R' : S -> S' -> Type	  R1 : S -> Type	  R2 : S -> Type	  H : forall x : S, {y : S' & R' x y}	  ============================	  forall z : S, R' z (H z).(proj1_sig)	";
+            data = "1 subgoal (ID 9)	  	  S : Type	  S' : Type	  R : S -> S' -> Type	  R' : S -> S' -> Type	  R1 : S -> Type	  R2 : S -> Type	  H : forall x : S, {y : S' & R' x y}	  ============================	  forall z : S, R' z (proj1_sig (H z))	";
             responses[i]=data;
           
 
@@ -968,22 +968,22 @@
           
 
             i = 190;
-            data = "1 subgoal (ID 18)	  	  X : Type	  R : X -> X -> Type	  H : forall x : X, {y : X & R x y}	  x0 : X	  f := fix f (n : nat) : X :=	         match n with	         | 0 => x0	         | S n' => (H (f n')).(proj1_sig)	         end : nat -> X	  ============================	  {f0 : nat -> X & (f0 0 = x0) * (forall n : nat, R (f0 n) (f0 (S n)))}	";
+            data = "1 subgoal (ID 18)	  	  X : Type	  R : X -> X -> Type	  H : forall x : X, {y : X & R x y}	  x0 : X	  f := fix f (n : nat) : X :=	         match n with	         | 0 => x0	         | S n' => proj1_sig (H (f n'))	         end : nat -> X	  ============================	  {f0 : nat -> X & (f0 0 = x0) * (forall n : nat, R (f0 n) (f0 (S n)))}	";
             responses[i]=data;
           
 
             i = 191;
-            data = "1 subgoal (ID 20)	  	  X : Type	  R : X -> X -> Type	  H : forall x : X, {y : X & R x y}	  x0 : X	  f := fix f (n : nat) : X :=	         match n with	         | 0 => x0	         | S n' => (H (f n')).(proj1_sig)	         end : nat -> X	  ============================	  (f 0 = x0) * (forall n : nat, R (f n) (f (S n)))	";
+            data = "1 subgoal (ID 20)	  	  X : Type	  R : X -> X -> Type	  H : forall x : X, {y : X & R x y}	  x0 : X	  f := fix f (n : nat) : X :=	         match n with	         | 0 => x0	         | S n' => proj1_sig (H (f n'))	         end : nat -> X	  ============================	  (f 0 = x0) * (forall n : nat, R (f n) (f (S n)))	";
             responses[i]=data;
           
 
             i = 192;
-            data = "2 subgoals (ID 22)	  	  X : Type	  R : X -> X -> Type	  H : forall x : X, {y : X & R x y}	  x0 : X	  f := fix f (n : nat) : X :=	         match n with	         | 0 => x0	         | S n' => (H (f n')).(proj1_sig)	         end : nat -> X	  ============================	  f 0 = x0		subgoal 2 (ID 23) is:	 forall n : nat, R (f n) (f (S n))	";
+            data = "2 subgoals (ID 22)	  	  X : Type	  R : X -> X -> Type	  H : forall x : X, {y : X & R x y}	  x0 : X	  f := fix f (n : nat) : X :=	         match n with	         | 0 => x0	         | S n' => proj1_sig (H (f n'))	         end : nat -> X	  ============================	  f 0 = x0		subgoal 2 (ID 23) is:	 forall n : nat, R (f n) (f (S n))	";
             responses[i]=data;
           
 
             i = 193;
-            data = "1 subgoal (ID 23)	  	  X : Type	  R : X -> X -> Type	  H : forall x : X, {y : X & R x y}	  x0 : X	  f := fix f (n : nat) : X :=	         match n with	         | 0 => x0	         | S n' => (H (f n')).(proj1_sig)	         end : nat -> X	  ============================	  forall n : nat, R (f n) (f (S n))	";
+            data = "1 subgoal (ID 23)	  	  X : Type	  R : X -> X -> Type	  H : forall x : X, {y : X & R x y}	  x0 : X	  f := fix f (n : nat) : X :=	         match n with	         | 0 => x0	         | S n' => proj1_sig (H (f n'))	         end : nat -> X	  ============================	  forall n : nat, R (f n) (f (S n))	";
             responses[i]=data;
           
 

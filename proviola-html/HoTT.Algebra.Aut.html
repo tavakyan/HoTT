@@ -343,7 +343,7 @@
           
 
             i = 65;
-            data = "1 subgoal (ID 5)	  	  X : Type	  ============================	  BAut X <~> (image (Tr (-1)) (unit_name X)).(intermediate)	";
+            data = "1 subgoal (ID 5)	  	  X : Type	  ============================	  BAut X <~> image (Tr (-1)) (unit_name X)	";
             responses[i]=data;
           
 
@@ -358,17 +358,17 @@
           
 
             i = 68;
-            data = "1 subgoal (ID 16)	  	  X, Z : Type	  ============================	  Trunc (-1) (Z = X) <~> (Tr (-1)) (hfiber (unit_name X) Z)	";
+            data = "1 subgoal (ID 16)	  	  X : Type	  Z : Type	  ============================	  Trunc (-1) (Z = X) <~> (Tr (-1)) (hfiber (unit_name X) Z)	";
             responses[i]=data;
           
 
             i = 69;
-            data = "1 subgoal (ID 18)	  	  X, Z : Type	  ============================	  Z = X <~> {_ : Unit & X = Z}	";
+            data = "1 subgoal (ID 18)	  	  X : Type	  Z : Type	  ============================	  Z = X <~> {_ : Unit & X = Z}	";
             responses[i]=data;
           
 
             i = 70;
-            data = "1 subgoal (ID 32)	  	  X, Z : Type	  ============================	  Z = X <~> X = Z	";
+            data = "1 subgoal (ID 32)	  	  X : Type	  Z : Type	  ============================	  Z = X <~> X = Z	";
             responses[i]=data;
           
 
@@ -453,17 +453,17 @@
           
 
             i = 87;
-            data = "1 subgoal (ID 530)	  	  X : Type	  ============================	  IsConnected 0	    {|	    pointed_type := {Z : Type & (merely (Z = X)).(trunctype_type)};	    ispointed_type := (X; tr 1) |}.(pointed_type)	";
+            data = "1 subgoal (ID 530)	  	  X : Type	  ============================	  IsConnected 0	    {|	    pointed_type := {Z : Type & merely (Z = X)};	    ispointed_type := (X; tr 1) |}	";
             responses[i]=data;
           
 
             i = 88;
-            data = "1 focused subgoal	(shelved: 1) (ID 2641)	  	  X : Type	  ============================	  IsSurjection	    (unit_name	       (point	          {|	          pointed_type := {Z : Type & (merely (Z = X)).(trunctype_type)};	          ispointed_type := (X; tr 1) |}.(pointed_type)))	";
+            data = "1 focused subgoal	(shelved: 1) (ID 2641)	  	  X : Type	  ============================	  IsSurjection	    (unit_name	       (point	          {|	          pointed_type := {Z : Type & merely (Z = X)};	          ispointed_type := (X; tr 1) |}))	";
             responses[i]=data;
           
 
             i = 89;
-            data = "1 focused subgoal	(shelved: 1) (ID 3296)	  	  X : Type	  c := conn_map_compose (Tr (-1)) (image (Tr (-1)) (unit_name X)).(factor1)	         (equiv_baut_image_unit X).(equiv_isequiv).(equiv_inv)	   : IsConnMap (Tr (-1))	       ((equiv_baut_image_unit X).(equiv_isequiv).(equiv_inv)	        o (image (Tr (-1)) (unit_name X)).(factor1))	  ============================	  IsSurjection	    (unit_name	       (point	          {|	          pointed_type := {Z : Type & (merely (Z = X)).(trunctype_type)};	          ispointed_type := (X; tr 1) |}.(pointed_type)))	";
+            data = "1 focused subgoal	(shelved: 1) (ID 3296)	  	  X : Type	  c := conn_map_compose (Tr (-1)) (factor1 (image (Tr (-1)) (unit_name X)))	         _^-1	   : IsConnMap (Tr (-1)) (_^-1 o factor1 (image (Tr (-1)) (unit_name X)))	  ============================	  IsSurjection	    (unit_name	       (point	          {|	          pointed_type := {Z : Type & merely (Z = X)};	          ispointed_type := (X; tr 1) |}))	";
             responses[i]=data;
           
 

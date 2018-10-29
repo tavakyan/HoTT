@@ -508,7 +508,7 @@
           
 
             i = 98;
-            data = "1 subgoal (ID 135)	  	  x : Bool	  ============================	  ((ap S1_to_Sph1	      (if Sph0_to_Bool (isequiv_Sph0_to_Bool.(equiv_inv) x) then loop else 1))^ @	   1) @ merid (isequiv_Sph0_to_Bool.(equiv_inv) x) = 	  merid South	";
+            data = "1 subgoal (ID 135)	  	  x : Bool	  ============================	  ((ap S1_to_Sph1 (if Sph0_to_Bool (_^-1 x) then loop else 1))^ @ 1) @	  merid (_^-1 x) = merid South	";
             responses[i]=data;
           
 
@@ -1003,12 +1003,12 @@
           
 
             i = 197;
-            data = "1 subgoal (ID 493)	  	  ============================	  (fun y : Susp Empty =>	   ap02 S2_to_Sph2 (Susp_rec surf 1 (Empty_rec (surf = 1)) y) =	   transport (fun x : North = North => x = x) (concat_pV (merid North))	     (ap (fun x : Susp (Susp Empty) => merid x @ (merid North)^)	        (merid y @ (merid South)^))) South	1 subgoal (ID 541)	  	  ============================	  ap02 S2_to_Sph2 (Susp_rec surf 1 (Empty_rec (surf = 1)) South) =	  transport (fun x : North = North => x = x) (concat_pV (merid North))	    (ap (fun x : Susp (Susp Empty) => merid x @ (merid North)^) 1)	";
+            data = "1 subgoal (ID 493)	  	  ============================	  (fun y : Susp Empty =>	   ap02 S2_to_Sph2 (Susp_rec surf 1 (Empty_rec (surf = 1)) y) =	   transport (fun x : North = North => x = x) (concat_pV (merid North))	     (ap (fun x : Susp (Susp Empty) => merid x @ (merid North)^)	        (merid y @ (merid South)^))) South	";
             responses[i]=data;
           
 
             i = 198;
-            data = "1 subgoal (ID 558)	  	  ============================	  ap02 S2_to_Sph2 (Susp_rec surf 1 (Empty_rec (surf = 1)) South) =	  ((concat_pV (merid North))^ @	   ap (fun x : Susp (Susp Empty) => merid x @ (merid North)^) 1) @	  concat_pV (merid North)	";
+            data = "1 subgoal (ID 541)	  	  ============================	  ap02 S2_to_Sph2 (Susp_rec surf 1 (Empty_rec (surf = 1)) South) =	  transport (fun x : North = North => x = x) (concat_pV (merid North))	    (ap (fun x : Susp (Susp Empty) => merid x @ (merid North)^) 1)	1 subgoal (ID 558)	  	  ============================	  ap02 S2_to_Sph2 (Susp_rec surf 1 (Empty_rec (surf = 1)) South) =	  ((concat_pV (merid North))^ @	   ap (fun x : Susp (Susp Empty) => merid x @ (merid North)^) 1) @	  concat_pV (merid North)	";
             responses[i]=data;
           
 
@@ -1138,7 +1138,7 @@
           
 
             i = 224;
-            data = "1 subgoal (ID 63)	  	  allnullhomot_trunc : forall (n : trunc_index) (X : Type),	                       IsTrunc n X ->	                       forall	                       f : match n with	                           | -2 => Empty	                           | _.+1 => Susp (Sphere n)	                           end -> X, NullHomotopy f	  X : Type	  H : Contr X	  f : Empty -> X	  ============================	  forall x : Empty, f x = H.(center)	";
+            data = "1 subgoal (ID 63)	  	  allnullhomot_trunc : forall (n : trunc_index) (X : Type),	                       IsTrunc n X ->	                       forall	                       f : match n with	                           | -2 => Empty	                           | _.+1 => Susp (Sphere n)	                           end -> X, NullHomotopy f	  X : Type	  H : Contr X	  f : Empty -> X	  ============================	  forall x : Empty, f x = center _	";
             responses[i]=data;
           
 

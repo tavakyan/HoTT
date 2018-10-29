@@ -648,7 +648,7 @@
           
 
             i = 126;
-            data = "1 subgoal (ID 3)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  ============================	  {a0 : A.(Core.object) &	  {b0 : B.(Core.object) & C.(morphism) (S.(object_of) a0) (T.(object_of) b0)}} <~>	  object	";
+            data = "1 subgoal (ID 3)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  ============================	  {a0 : A & {b0 : B & morphism C (S a0) (T b0)}} <~> object	";
             responses[i]=data;
           
 
@@ -668,7 +668,7 @@
           
 
             i = 130;
-            data = "1 subgoal (ID 11)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  n : trunc_index	  H : IsTrunc n A.(Core.object)	  H0 : IsTrunc n B.(Core.object)	  H1 : forall s d : C.(Core.object), IsTrunc n (C.(morphism) s d)	  ============================	  IsTrunc n object	";
+            data = "1 subgoal (ID 11)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  n : trunc_index	  H : IsTrunc n A	  H0 : IsTrunc n B	  H1 : forall s d : C, IsTrunc n (morphism C s d)	  ============================	  IsTrunc n object	";
             responses[i]=data;
           
 
@@ -678,7 +678,7 @@
           
 
             i = 132;
-            data = "1 subgoal (ID 14)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  n : trunc_index	  H : IsTrunc n A.(Core.object)	  H0 : IsTrunc n B.(Core.object)	  H1 : forall s d : C.(Core.object), IsTrunc n (C.(morphism) s d)	  ============================	  IsTrunc n	    {a0 : A.(Core.object) &	    {b0 : B.(Core.object) &	    C.(morphism) (S.(object_of) a0) (T.(object_of) b0)}}	";
+            data = "1 subgoal (ID 14)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  n : trunc_index	  H : IsTrunc n A	  H0 : IsTrunc n B	  H1 : forall s d : C, IsTrunc n (morphism C s d)	  ============================	  IsTrunc n {a0 : A & {b0 : B & morphism C (S a0) (T b0)}}	";
             responses[i]=data;
           
 
@@ -693,7 +693,7 @@
           
 
             i = 135;
-            data = "1 subgoal (ID 34)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  x, y : object	  ============================	  forall (Ha : x.(a) = y.(a)) (Hb : x.(b) = y.(b)),	  transport	    (fun X : A.(Core.object) =>	     C.(morphism) (S.(object_of) X) (T.(object_of) y.(b))) Ha	    (transport	       (fun Y : B.(Core.object) =>	        C.(morphism) (S.(object_of) x.(a)) (T.(object_of) Y)) Hb 	       x.(f)) = y.(f) -> x = y	";
+            data = "1 subgoal (ID 34)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  x, y : object	  ============================	  forall (Ha : a x = a y) (Hb : b x = b y),	  transport (fun X : A => morphism C (S X) (T (b y))) Ha	    (transport (fun Y : B => morphism C (S (a x)) (T Y)) Hb (f x)) = 	  f y -> x = y	";
             responses[i]=data;
           
 
@@ -703,7 +703,7 @@
           
 
             i = 137;
-            data = "1 subgoal (ID 50)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  a0 : A.(Core.object)	  b0 : B.(Core.object)	  f0 : C.(morphism) (S.(object_of) a0) (T.(object_of) b0)	  a1 : A.(Core.object)	  b1 : B.(Core.object)	  f1 : C.(morphism) (S.(object_of) a1) (T.(object_of) b1)	  ============================	  forall (Ha : a0 = a1) (Hb : b0 = b1),	  transport	    (fun X : A.(Core.object) =>	     C.(morphism) (S.(object_of) X) (T.(object_of) b1)) Ha	    (transport	       (fun Y : B.(Core.object) =>	        C.(morphism) (S.(object_of) a0) (T.(object_of) Y)) Hb f0) = f1 ->	  {| a := a0; b := b0; f := f0 |} = {| a := a1; b := b1; f := f1 |}	";
+            data = "1 subgoal (ID 50)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  a0 : A	  b0 : B	  f0 : morphism C (S a0) (T b0)	  a1 : A	  b1 : B	  f1 : morphism C (S a1) (T b1)	  ============================	  forall (Ha : a0 = a1) (Hb : b0 = b1),	  transport (fun X : A => morphism C (S X) (T b1)) Ha	    (transport (fun Y : B => morphism C (S a0) (T Y)) Hb f0) = f1 ->	  {| a := a0; b := b0; f := f0 |} = {| a := a1; b := b1; f := f1 |}	";
             responses[i]=data;
           
 
@@ -718,7 +718,7 @@
           
 
             i = 140;
-            data = "1 subgoal (ID 51)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  x, y : object	  Ha : x.(a) = y.(a)	  Hb : x.(b) = y.(b)	  Hf : transport	         (fun X : A.(Core.object) =>	          C.(morphism) (S.(object_of) X) (T.(object_of) y.(b))) Ha	         (transport	            (fun Y : B.(Core.object) =>	             C.(morphism) (S.(object_of) x.(a)) (T.(object_of) Y)) Hb 	            x.(f)) = y.(f)	  ============================	  ap a (path_object' x y Ha Hb Hf) = Ha	";
+            data = "1 subgoal (ID 51)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  x, y : object	  Ha : a x = a y	  Hb : b x = b y	  Hf : transport (fun X : A => morphism C (S X) (T (b y))) Ha	         (transport (fun Y : B => morphism C (S (a x)) (T Y)) Hb (f x)) = 	       f y	  ============================	  ap a (path_object' x y Ha Hb Hf) = Ha	";
             responses[i]=data;
           
 
@@ -728,12 +728,12 @@
           
 
             i = 142;
-            data = "1 subgoal (ID 95)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  a0 : A.(Core.object)	  b0 : B.(Core.object)	  f0 : C.(morphism) (S.(object_of) a0) (T.(object_of) b0)	  a1 : A.(Core.object)	  b1 : B.(Core.object)	  f1 : C.(morphism) (S.(object_of) a1) (T.(object_of) b1)	  Ha : a0 = a1	  Hb : b0 = b1	  Hf : transport	         (fun X : A.(Core.object) =>	          C.(morphism) (S.(object_of) X) (T.(object_of) b1)) Ha	         (transport	            (fun Y : B.(Core.object) =>	             C.(morphism) (S.(object_of) a0) (T.(object_of) Y)) Hb f0) = f1	  ============================	  ap a	    (path_object' {| a := a0; b := b0; f := f0 |}	       {| a := a1; b := b1; f := f1 |} Ha Hb Hf) = Ha	";
+            data = "1 subgoal (ID 95)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  a0 : A	  b0 : B	  f0 : morphism C (S a0) (T b0)	  a1 : A	  b1 : B	  f1 : morphism C (S a1) (T b1)	  Ha : a0 = a1	  Hb : b0 = b1	  Hf : transport (fun X : A => morphism C (S X) (T b1)) Ha	         (transport (fun Y : B => morphism C (S a0) (T Y)) Hb f0) = f1	  ============================	  ap a	    (path_object' {| a := a0; b := b0; f := f0 |}	       {| a := a1; b := b1; f := f1 |} Ha Hb Hf) = Ha	";
             responses[i]=data;
           
 
             i = 143;
-            data = "1 subgoal (ID 128)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  a0 : A.(Core.object)	  b0 : B.(Core.object)	  f0 : C.(morphism) (S.(object_of) a0) (T.(object_of) b0)	  ============================	  1%path = 1%path	";
+            data = "1 subgoal (ID 128)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  a0 : A	  b0 : B	  f0 : morphism C (S a0) (T b0)	  ============================	  1%path = 1%path	";
             responses[i]=data;
           
 
@@ -748,7 +748,7 @@
           
 
             i = 146;
-            data = "1 subgoal (ID 68)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  x, y : object	  Ha : x.(a) = y.(a)	  Hb : x.(b) = y.(b)	  Hf : transport	         (fun X : A.(Core.object) =>	          C.(morphism) (S.(object_of) X) (T.(object_of) y.(b))) Ha	         (transport	            (fun Y : B.(Core.object) =>	             C.(morphism) (S.(object_of) x.(a)) (T.(object_of) Y)) Hb 	            x.(f)) = y.(f)	  ============================	  ap b (path_object' x y Ha Hb Hf) = Hb	";
+            data = "1 subgoal (ID 68)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  x, y : object	  Ha : a x = a y	  Hb : b x = b y	  Hf : transport (fun X : A => morphism C (S X) (T (b y))) Ha	         (transport (fun Y : B => morphism C (S (a x)) (T Y)) Hb (f x)) = 	       f y	  ============================	  ap b (path_object' x y Ha Hb Hf) = Hb	";
             responses[i]=data;
           
 
@@ -758,12 +758,12 @@
           
 
             i = 148;
-            data = "1 subgoal (ID 112)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  a0 : A.(Core.object)	  b0 : B.(Core.object)	  f0 : C.(morphism) (S.(object_of) a0) (T.(object_of) b0)	  a1 : A.(Core.object)	  b1 : B.(Core.object)	  f1 : C.(morphism) (S.(object_of) a1) (T.(object_of) b1)	  Ha : a0 = a1	  Hb : b0 = b1	  Hf : transport	         (fun X : A.(Core.object) =>	          C.(morphism) (S.(object_of) X) (T.(object_of) b1)) Ha	         (transport	            (fun Y : B.(Core.object) =>	             C.(morphism) (S.(object_of) a0) (T.(object_of) Y)) Hb f0) = f1	  ============================	  ap b	    (path_object' {| a := a0; b := b0; f := f0 |}	       {| a := a1; b := b1; f := f1 |} Ha Hb Hf) = Hb	";
+            data = "1 subgoal (ID 112)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  a0 : A	  b0 : B	  f0 : morphism C (S a0) (T b0)	  a1 : A	  b1 : B	  f1 : morphism C (S a1) (T b1)	  Ha : a0 = a1	  Hb : b0 = b1	  Hf : transport (fun X : A => morphism C (S X) (T b1)) Ha	         (transport (fun Y : B => morphism C (S a0) (T Y)) Hb f0) = f1	  ============================	  ap b	    (path_object' {| a := a0; b := b0; f := f0 |}	       {| a := a1; b := b1; f := f1 |} Ha Hb Hf) = Hb	";
             responses[i]=data;
           
 
             i = 149;
-            data = "1 subgoal (ID 145)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  a0 : A.(Core.object)	  b0 : B.(Core.object)	  f0 : C.(morphism) (S.(object_of) a0) (T.(object_of) b0)	  ============================	  1%path = 1%path	";
+            data = "1 subgoal (ID 145)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  a0 : A	  b0 : B	  f0 : morphism C (S a0) (T b0)	  ============================	  1%path = 1%path	";
             responses[i]=data;
           
 
@@ -828,7 +828,7 @@
           
 
             i = 162;
-            data = "1 subgoal (ID 120)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  abf, a'b'f' : object	  ============================	  {g0 : A.(Core.morphism) abf.(a) a'b'f'.(a) &	  {h0 : B.(Core.morphism) abf.(b) a'b'f'.(b) &	  {_	  : C.(compose) (S.(object_of) abf.(a)) (T.(object_of) abf.(b))	      (T.(object_of) a'b'f'.(b)) (T.(morphism_of) abf.(b) a'b'f'.(b) h0)	      abf.(f) =	    C.(compose) (S.(object_of) abf.(a)) (S.(object_of) a'b'f'.(a))	      (T.(object_of) a'b'f'.(b)) a'b'f'.(f)	      (S.(morphism_of) abf.(a) a'b'f'.(a) g0) &	  C.(compose) (S.(object_of) abf.(a)) (S.(object_of) a'b'f'.(a))	    (T.(object_of) a'b'f'.(b)) a'b'f'.(f)	    (S.(morphism_of) abf.(a) a'b'f'.(a) g0) =	  C.(compose) (S.(object_of) abf.(a)) (T.(object_of) abf.(b))	    (T.(object_of) a'b'f'.(b)) (T.(morphism_of) abf.(b) a'b'f'.(b) h0)	    abf.(f)}}} <~> morphism abf a'b'f'	";
+            data = "1 subgoal (ID 120)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  abf, a'b'f' : object	  ============================	  morphism_sig_T' abf a'b'f' <~> morphism abf a'b'f'	";
             responses[i]=data;
           
 
@@ -878,7 +878,7 @@
           
 
             i = 172;
-            data = "1 subgoal (ID 156)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  abf, a'b'f' : object	  ============================	  {g0 : A.(Core.morphism) abf.(a) a'b'f'.(a) &	  {h0 : B.(Core.morphism) abf.(b) a'b'f'.(b) &	  C.(compose) (S.(object_of) abf.(a)) (T.(object_of) abf.(b))	    (T.(object_of) a'b'f'.(b)) (T.(morphism_of) abf.(b) a'b'f'.(b) h0)	    abf.(f) =	  C.(compose) (S.(object_of) abf.(a)) (S.(object_of) a'b'f'.(a))	    (T.(object_of) a'b'f'.(b)) a'b'f'.(f)	    (S.(morphism_of) abf.(a) a'b'f'.(a) g0)}} <~> 	  morphism abf a'b'f'	";
+            data = "1 subgoal (ID 156)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  abf, a'b'f' : object	  ============================	  morphism_sig_T abf a'b'f' <~> morphism abf a'b'f'	";
             responses[i]=data;
           
 
@@ -888,17 +888,17 @@
           
 
             i = 174;
-            data = "1 subgoal (ID 169)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  abf, a'b'f' : object	  ============================	  {g0 : A.(Core.morphism) abf.(a) a'b'f'.(a) &	  {h0 : B.(Core.morphism) abf.(b) a'b'f'.(b) &	  C.(compose) (S.(object_of) abf.(a)) (T.(object_of) abf.(b))	    (T.(object_of) a'b'f'.(b)) (T.(morphism_of) abf.(b) a'b'f'.(b) h0)	    abf.(f) =	  C.(compose) (S.(object_of) abf.(a)) (S.(object_of) a'b'f'.(a))	    (T.(object_of) a'b'f'.(b)) a'b'f'.(f)	    (S.(morphism_of) abf.(a) a'b'f'.(a) g0)}} <~>	  {g0 : A.(Core.morphism) abf.(a) a'b'f'.(a) &	  {h0 : B.(Core.morphism) abf.(b) a'b'f'.(b) &	  {_	  : C.(compose) (S.(object_of) abf.(a)) (T.(object_of) abf.(b))	      (T.(object_of) a'b'f'.(b)) (T.(morphism_of) abf.(b) a'b'f'.(b) h0)	      abf.(f) =	    C.(compose) (S.(object_of) abf.(a)) (S.(object_of) a'b'f'.(a))	      (T.(object_of) a'b'f'.(b)) a'b'f'.(f)	      (S.(morphism_of) abf.(a) a'b'f'.(a) g0) &	  C.(compose) (S.(object_of) abf.(a)) (S.(object_of) a'b'f'.(a))	    (T.(object_of) a'b'f'.(b)) a'b'f'.(f)	    (S.(morphism_of) abf.(a) a'b'f'.(a) g0) =	  C.(compose) (S.(object_of) abf.(a)) (T.(object_of) abf.(b))	    (T.(object_of) a'b'f'.(b)) (T.(morphism_of) abf.(b) a'b'f'.(b) h0)	    abf.(f)}}}	";
+            data = "1 subgoal (ID 169)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  abf, a'b'f' : object	  ============================	  morphism_sig_T abf a'b'f' <~> morphism_sig_T' abf a'b'f'	";
             responses[i]=data;
           
 
             i = 175;
-            data = "1 subgoal (ID 180)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  abf, a'b'f' : object	  a0 : A.(Core.morphism) abf.(a) a'b'f'.(a)	  a1 : B.(Core.morphism) abf.(b) a'b'f'.(b)	  ============================	  C.(compose) (S.(object_of) abf.(a)) (T.(object_of) abf.(b))	    (T.(object_of) a'b'f'.(b)) (T.(morphism_of) abf.(b) a'b'f'.(b) a1)	    abf.(f) =	  C.(compose) (S.(object_of) abf.(a)) (S.(object_of) a'b'f'.(a))	    (T.(object_of) a'b'f'.(b)) a'b'f'.(f)	    (S.(morphism_of) abf.(a) a'b'f'.(a) a0) <~>	  {_	  : C.(compose) (S.(object_of) abf.(a)) (T.(object_of) abf.(b))	      (T.(object_of) a'b'f'.(b)) (T.(morphism_of) abf.(b) a'b'f'.(b) a1)	      abf.(f) =	    C.(compose) (S.(object_of) abf.(a)) (S.(object_of) a'b'f'.(a))	      (T.(object_of) a'b'f'.(b)) a'b'f'.(f)	      (S.(morphism_of) abf.(a) a'b'f'.(a) a0) &	  C.(compose) (S.(object_of) abf.(a)) (S.(object_of) a'b'f'.(a))	    (T.(object_of) a'b'f'.(b)) a'b'f'.(f)	    (S.(morphism_of) abf.(a) a'b'f'.(a) a0) =	  C.(compose) (S.(object_of) abf.(a)) (T.(object_of) abf.(b))	    (T.(object_of) a'b'f'.(b)) (T.(morphism_of) abf.(b) a'b'f'.(b) a1)	    abf.(f)}	";
+            data = "1 subgoal (ID 180)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  abf, a'b'f' : object	  a0 : Core.morphism A (a abf) (a a'b'f')	  a1 : Core.morphism B (b abf) (b a'b'f')	  ============================	  T _1 a1 o f abf = f a'b'f' o S _1 a0 <~>	  {_ : T _1 a1 o f abf = f a'b'f' o S _1 a0 &	  f a'b'f' o S _1 a0 = T _1 a1 o f abf}	";
             responses[i]=data;
           
 
             i = 176;
-            data = "1 subgoal (ID 203)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  abf, a'b'f' : object	  a0 : A.(Core.morphism) abf.(a) a'b'f'.(a)	  a1 : B.(Core.morphism) abf.(b) a'b'f'.(b)	  a2 : C.(compose) (S.(object_of) abf.(a)) (T.(object_of) abf.(b))	         (T.(object_of) a'b'f'.(b)) (T.(morphism_of) abf.(b) a'b'f'.(b) a1)	         abf.(f) =	       C.(compose) (S.(object_of) abf.(a)) (S.(object_of) a'b'f'.(a))	         (T.(object_of) a'b'f'.(b)) a'b'f'.(f)	         (S.(morphism_of) abf.(a) a'b'f'.(a) a0)	  ============================	  Contr	    (C.(compose) (S.(object_of) abf.(a)) (S.(object_of) a'b'f'.(a))	       (T.(object_of) a'b'f'.(b)) a'b'f'.(f)	       (S.(morphism_of) abf.(a) a'b'f'.(a) a0) =	     C.(compose) (S.(object_of) abf.(a)) (T.(object_of) abf.(b))	       (T.(object_of) a'b'f'.(b)) (T.(morphism_of) abf.(b) a'b'f'.(b) a1)	       abf.(f))	";
+            data = "1 subgoal (ID 203)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  abf, a'b'f' : object	  a0 : Core.morphism A (a abf) (a a'b'f')	  a1 : Core.morphism B (b abf) (b a'b'f')	  a2 : T _1 a1 o f abf = f a'b'f' o S _1 a0	  ============================	  Contr (f a'b'f' o S _1 a0 = T _1 a1 o f abf)	";
             responses[i]=data;
           
 
@@ -913,7 +913,7 @@
           
 
             i = 179;
-            data = "1 subgoal (ID 190)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  abf, a'b'f' : object	  n : trunc_index	  H : IsTrunc n (A.(Core.morphism) abf.(a) a'b'f'.(a))	  H0 : IsTrunc n (B.(Core.morphism) abf.(b) a'b'f'.(b))	  H1 : forall (m1 : A.(Core.morphism) abf.(a) a'b'f'.(a))	       (m2 : B.(Core.morphism) abf.(b) a'b'f'.(b)),	       IsTrunc n	         (C.(compose) (S.(object_of) abf.(a)) (T.(object_of) abf.(b))	            (T.(object_of) a'b'f'.(b))	            (T.(morphism_of) abf.(b) a'b'f'.(b) m2) 	            abf.(f) =	          C.(compose) (S.(object_of) abf.(a)) (S.(object_of) a'b'f'.(a))	            (T.(object_of) a'b'f'.(b)) a'b'f'.(f)	            (S.(morphism_of) abf.(a) a'b'f'.(a) m1))	  ============================	  IsTrunc n (morphism abf a'b'f')	";
+            data = "1 subgoal (ID 190)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  abf, a'b'f' : object	  n : trunc_index	  H : IsTrunc n (Core.morphism A (a abf) (a a'b'f'))	  H0 : IsTrunc n (Core.morphism B (b abf) (b a'b'f'))	  H1 : forall (m1 : Core.morphism A (a abf) (a a'b'f'))	       (m2 : Core.morphism B (b abf) (b a'b'f')),	       IsTrunc n (T _1 m2 o f abf = f a'b'f' o S _1 m1)	  ============================	  IsTrunc n (morphism abf a'b'f')	";
             responses[i]=data;
           
 
@@ -923,12 +923,12 @@
           
 
             i = 181;
-            data = "1 subgoal (ID 216)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  abf, a'b'f' : object	  n : trunc_index	  H : IsTrunc n (A.(Core.morphism) abf.(a) a'b'f'.(a))	  H0 : IsTrunc n (B.(Core.morphism) abf.(b) a'b'f'.(b))	  H1 : forall (m1 : A.(Core.morphism) abf.(a) a'b'f'.(a))	       (m2 : B.(Core.morphism) abf.(b) a'b'f'.(b)),	       IsTrunc n	         (C.(compose) (S.(object_of) abf.(a)) (T.(object_of) abf.(b))	            (T.(object_of) a'b'f'.(b))	            (T.(morphism_of) abf.(b) a'b'f'.(b) m2) 	            abf.(f) =	          C.(compose) (S.(object_of) abf.(a)) (S.(object_of) a'b'f'.(a))	            (T.(object_of) a'b'f'.(b)) a'b'f'.(f)	            (S.(morphism_of) abf.(a) a'b'f'.(a) m1))	  X : forall (m1 : A.(Core.morphism) abf.(a) a'b'f'.(a))	      (m2 : B.(Core.morphism) abf.(b) a'b'f'.(b)),	      IsTrunc n	        (C.(compose) (S.(object_of) abf.(a)) (S.(object_of) a'b'f'.(a))	           (T.(object_of) a'b'f'.(b)) a'b'f'.(f)	           (S.(morphism_of) abf.(a) a'b'f'.(a) m1) =	         C.(compose) (S.(object_of) abf.(a)) (T.(object_of) abf.(b))	           (T.(object_of) a'b'f'.(b)) (T.(morphism_of) abf.(b) a'b'f'.(b) m2)	           abf.(f))	  ============================	  IsTrunc n (morphism abf a'b'f')	";
+            data = "1 subgoal (ID 216)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  abf, a'b'f' : object	  n : trunc_index	  H : IsTrunc n (Core.morphism A (a abf) (a a'b'f'))	  H0 : IsTrunc n (Core.morphism B (b abf) (b a'b'f'))	  H1 : forall (m1 : Core.morphism A (a abf) (a a'b'f'))	       (m2 : Core.morphism B (b abf) (b a'b'f')),	       IsTrunc n (T _1 m2 o f abf = f a'b'f' o S _1 m1)	  X : forall (m1 : Core.morphism A (a abf) (a a'b'f'))	      (m2 : Core.morphism B (b abf) (b a'b'f')),	      IsTrunc n (f a'b'f' o S _1 m1 = T _1 m2 o f abf)	  ============================	  IsTrunc n (morphism abf a'b'f')	";
             responses[i]=data;
           
 
             i = 182;
-            data = "1 subgoal (ID 230)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  abf, a'b'f' : object	  n : trunc_index	  H : IsTrunc n (A.(Core.morphism) abf.(a) a'b'f'.(a))	  H0 : IsTrunc n (B.(Core.morphism) abf.(b) a'b'f'.(b))	  H1 : forall (m1 : A.(Core.morphism) abf.(a) a'b'f'.(a))	       (m2 : B.(Core.morphism) abf.(b) a'b'f'.(b)),	       IsTrunc n	         (C.(compose) (S.(object_of) abf.(a)) (T.(object_of) abf.(b))	            (T.(object_of) a'b'f'.(b))	            (T.(morphism_of) abf.(b) a'b'f'.(b) m2) 	            abf.(f) =	          C.(compose) (S.(object_of) abf.(a)) (S.(object_of) a'b'f'.(a))	            (T.(object_of) a'b'f'.(b)) a'b'f'.(f)	            (S.(morphism_of) abf.(a) a'b'f'.(a) m1))	  X : forall (m1 : A.(Core.morphism) abf.(a) a'b'f'.(a))	      (m2 : B.(Core.morphism) abf.(b) a'b'f'.(b)),	      IsTrunc n	        (C.(compose) (S.(object_of) abf.(a)) (S.(object_of) a'b'f'.(a))	           (T.(object_of) a'b'f'.(b)) a'b'f'.(f)	           (S.(morphism_of) abf.(a) a'b'f'.(a) m1) =	         C.(compose) (S.(object_of) abf.(a)) (T.(object_of) abf.(b))	           (T.(object_of) a'b'f'.(b)) (T.(morphism_of) abf.(b) a'b'f'.(b) m2)	           abf.(f))	  ============================	  IsTrunc n	    {g0 : A.(Core.morphism) abf.(a) a'b'f'.(a) &	    {h0 : B.(Core.morphism) abf.(b) a'b'f'.(b) &	    C.(compose) (S.(object_of) abf.(a)) (T.(object_of) abf.(b))	      (T.(object_of) a'b'f'.(b)) (T.(morphism_of) abf.(b) a'b'f'.(b) h0)	      abf.(f) =	    C.(compose) (S.(object_of) abf.(a)) (S.(object_of) a'b'f'.(a))	      (T.(object_of) a'b'f'.(b)) a'b'f'.(f)	      (S.(morphism_of) abf.(a) a'b'f'.(a) g0)}}	";
+            data = "1 subgoal (ID 230)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  abf, a'b'f' : object	  n : trunc_index	  H : IsTrunc n (Core.morphism A (a abf) (a a'b'f'))	  H0 : IsTrunc n (Core.morphism B (b abf) (b a'b'f'))	  H1 : forall (m1 : Core.morphism A (a abf) (a a'b'f'))	       (m2 : Core.morphism B (b abf) (b a'b'f')),	       IsTrunc n (T _1 m2 o f abf = f a'b'f' o S _1 m1)	  X : forall (m1 : Core.morphism A (a abf) (a a'b'f'))	      (m2 : Core.morphism B (b abf) (b a'b'f')),	      IsTrunc n (f a'b'f' o S _1 m1 = T _1 m2 o f abf)	  ============================	  IsTrunc n (morphism_sig_T abf a'b'f')	";
             responses[i]=data;
           
 
@@ -943,7 +943,7 @@
           
 
             i = 185;
-            data = "1 subgoal (ID 211)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  abf, a'b'f' : object	  gh, g'h' : morphism abf a'b'f'	  ============================	  gh.(g) = g'h'.(g) -> gh.(h) = g'h'.(h) -> gh = g'h'	";
+            data = "1 subgoal (ID 211)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  abf, a'b'f' : object	  gh, g'h' : morphism abf a'b'f'	  ============================	  g gh = g g'h' -> h gh = h g'h' -> gh = g'h'	";
             responses[i]=data;
           
 
@@ -953,17 +953,17 @@
           
 
             i = 187;
-            data = "1 subgoal (ID 230)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  abf, a'b'f' : object	  g0 : A.(Core.morphism) abf.(a) a'b'f'.(a)	  h0 : B.(Core.morphism) abf.(b) a'b'f'.(b)	  p0 : C.(compose) (S.(object_of) abf.(a)) (T.(object_of) abf.(b))	         (T.(object_of) a'b'f'.(b)) (T.(morphism_of) abf.(b) a'b'f'.(b) h0)	         abf.(f) =	       C.(compose) (S.(object_of) abf.(a)) (S.(object_of) a'b'f'.(a))	         (T.(object_of) a'b'f'.(b)) a'b'f'.(f)	         (S.(morphism_of) abf.(a) a'b'f'.(a) g0)	  p_sym0 : C.(compose) (S.(object_of) abf.(a)) (S.(object_of) a'b'f'.(a))	             (T.(object_of) a'b'f'.(b)) a'b'f'.(f)	             (S.(morphism_of) abf.(a) a'b'f'.(a) g0) =	           C.(compose) (S.(object_of) abf.(a)) (T.(object_of) abf.(b))	             (T.(object_of) a'b'f'.(b))	             (T.(morphism_of) abf.(b) a'b'f'.(b) h0) 	             abf.(f)	  g1 : A.(Core.morphism) abf.(a) a'b'f'.(a)	  h1 : B.(Core.morphism) abf.(b) a'b'f'.(b)	  p1 : C.(compose) (S.(object_of) abf.(a)) (T.(object_of) abf.(b))	         (T.(object_of) a'b'f'.(b)) (T.(morphism_of) abf.(b) a'b'f'.(b) h1)	         abf.(f) =	       C.(compose) (S.(object_of) abf.(a)) (S.(object_of) a'b'f'.(a))	         (T.(object_of) a'b'f'.(b)) a'b'f'.(f)	         (S.(morphism_of) abf.(a) a'b'f'.(a) g1)	  p_sym1 : C.(compose) (S.(object_of) abf.(a)) (S.(object_of) a'b'f'.(a))	             (T.(object_of) a'b'f'.(b)) a'b'f'.(f)	             (S.(morphism_of) abf.(a) a'b'f'.(a) g1) =	           C.(compose) (S.(object_of) abf.(a)) (T.(object_of) abf.(b))	             (T.(object_of) a'b'f'.(b))	             (T.(morphism_of) abf.(b) a'b'f'.(b) h1) 	             abf.(f)	  ============================	  g0 = g1 ->	  h0 = h1 ->	  {| g := g0; h := h0; p := p0; p_sym := p_sym0 |} =	  {| g := g1; h := h1; p := p1; p_sym := p_sym1 |}	";
+            data = "1 subgoal (ID 230)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  abf, a'b'f' : object	  g0 : Core.morphism A (a abf) (a a'b'f')	  h0 : Core.morphism B (b abf) (b a'b'f')	  p0 : T _1 h0 o f abf = f a'b'f' o S _1 g0	  p_sym0 : f a'b'f' o S _1 g0 = T _1 h0 o f abf	  g1 : Core.morphism A (a abf) (a a'b'f')	  h1 : Core.morphism B (b abf) (b a'b'f')	  p1 : T _1 h1 o f abf = f a'b'f' o S _1 g1	  p_sym1 : f a'b'f' o S _1 g1 = T _1 h1 o f abf	  ============================	  g0 = g1 ->	  h0 = h1 ->	  {| g := g0; h := h0; p := p0; p_sym := p_sym0 |} =	  {| g := g1; h := h1; p := p1; p_sym := p_sym1 |}	";
             responses[i]=data;
           
 
             i = 188;
-            data = "1 subgoal (ID 254)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  abf, a'b'f' : object	  g0 : A.(Core.morphism) abf.(a) a'b'f'.(a)	  h0 : B.(Core.morphism) abf.(b) a'b'f'.(b)	  p0 : C.(compose) (S.(object_of) abf.(a)) (T.(object_of) abf.(b))	         (T.(object_of) a'b'f'.(b)) (T.(morphism_of) abf.(b) a'b'f'.(b) h0)	         abf.(f) =	       C.(compose) (S.(object_of) abf.(a)) (S.(object_of) a'b'f'.(a))	         (T.(object_of) a'b'f'.(b)) a'b'f'.(f)	         (S.(morphism_of) abf.(a) a'b'f'.(a) g0)	  p_sym0 : C.(compose) (S.(object_of) abf.(a)) (S.(object_of) a'b'f'.(a))	             (T.(object_of) a'b'f'.(b)) a'b'f'.(f)	             (S.(morphism_of) abf.(a) a'b'f'.(a) g0) =	           C.(compose) (S.(object_of) abf.(a)) (T.(object_of) abf.(b))	             (T.(object_of) a'b'f'.(b))	             (T.(morphism_of) abf.(b) a'b'f'.(b) h0) 	             abf.(f)	  p1 : C.(compose) (S.(object_of) abf.(a)) (T.(object_of) abf.(b))	         (T.(object_of) a'b'f'.(b)) (T.(morphism_of) abf.(b) a'b'f'.(b) h0)	         abf.(f) =	       C.(compose) (S.(object_of) abf.(a)) (S.(object_of) a'b'f'.(a))	         (T.(object_of) a'b'f'.(b)) a'b'f'.(f)	         (S.(morphism_of) abf.(a) a'b'f'.(a) g0)	  p_sym1 : C.(compose) (S.(object_of) abf.(a)) (S.(object_of) a'b'f'.(a))	             (T.(object_of) a'b'f'.(b)) a'b'f'.(f)	             (S.(morphism_of) abf.(a) a'b'f'.(a) g0) =	           C.(compose) (S.(object_of) abf.(a)) (T.(object_of) abf.(b))	             (T.(object_of) a'b'f'.(b))	             (T.(morphism_of) abf.(b) a'b'f'.(b) h0) 	             abf.(f)	  ============================	  {| g := g0; h := h0; p := p0; p_sym := p_sym0 |} =	  {| g := g0; h := h0; p := p1; p_sym := p_sym1 |}	";
+            data = "1 subgoal (ID 254)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  abf, a'b'f' : object	  g0 : Core.morphism A (a abf) (a a'b'f')	  h0 : Core.morphism B (b abf) (b a'b'f')	  p0 : T _1 h0 o f abf = f a'b'f' o S _1 g0	  p_sym0 : f a'b'f' o S _1 g0 = T _1 h0 o f abf	  p1 : T _1 h0 o f abf = f a'b'f' o S _1 g0	  p_sym1 : f a'b'f' o S _1 g0 = T _1 h0 o f abf	  ============================	  {| g := g0; h := h0; p := p0; p_sym := p_sym0 |} =	  {| g := g0; h := h0; p := p1; p_sym := p_sym1 |}	";
             responses[i]=data;
           
 
             i = 189;
-            data = "2 subgoals (ID 397)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  abf, a'b'f' : object	  g0 : A.(Core.morphism) abf.(a) a'b'f'.(a)	  h0 : B.(Core.morphism) abf.(b) a'b'f'.(b)	  p0 : C.(compose) (S.(object_of) abf.(a)) (T.(object_of) abf.(b))	         (T.(object_of) a'b'f'.(b)) (T.(morphism_of) abf.(b) a'b'f'.(b) h0)	         abf.(f) =	       C.(compose) (S.(object_of) abf.(a)) (S.(object_of) a'b'f'.(a))	         (T.(object_of) a'b'f'.(b)) a'b'f'.(f)	         (S.(morphism_of) abf.(a) a'b'f'.(a) g0)	  p_sym0 : C.(compose) (S.(object_of) abf.(a)) (S.(object_of) a'b'f'.(a))	             (T.(object_of) a'b'f'.(b)) a'b'f'.(f)	             (S.(morphism_of) abf.(a) a'b'f'.(a) g0) =	           C.(compose) (S.(object_of) abf.(a)) (T.(object_of) abf.(b))	             (T.(object_of) a'b'f'.(b))	             (T.(morphism_of) abf.(b) a'b'f'.(b) h0) 	             abf.(f)	  p1 : C.(compose) (S.(object_of) abf.(a)) (T.(object_of) abf.(b))	         (T.(object_of) a'b'f'.(b)) (T.(morphism_of) abf.(b) a'b'f'.(b) h0)	         abf.(f) =	       C.(compose) (S.(object_of) abf.(a)) (S.(object_of) a'b'f'.(a))	         (T.(object_of) a'b'f'.(b)) a'b'f'.(f)	         (S.(morphism_of) abf.(a) a'b'f'.(a) g0)	  p_sym1 : C.(compose) (S.(object_of) abf.(a)) (S.(object_of) a'b'f'.(a))	             (T.(object_of) a'b'f'.(b)) a'b'f'.(f)	             (S.(morphism_of) abf.(a) a'b'f'.(a) g0) =	           C.(compose) (S.(object_of) abf.(a)) (T.(object_of) abf.(b))	             (T.(object_of) a'b'f'.(b))	             (T.(morphism_of) abf.(b) a'b'f'.(b) h0) 	             abf.(f)	  ============================	  p0 = p1		subgoal 2 (ID 320) is:	 p_sym0 = p_sym1	";
+            data = "2 subgoals (ID 397)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  abf, a'b'f' : object	  g0 : Core.morphism A (a abf) (a a'b'f')	  h0 : Core.morphism B (b abf) (b a'b'f')	  p0 : T _1 h0 o f abf = f a'b'f' o S _1 g0	  p_sym0 : f a'b'f' o S _1 g0 = T _1 h0 o f abf	  p1 : T _1 h0 o f abf = f a'b'f' o S _1 g0	  p_sym1 : f a'b'f' o S _1 g0 = T _1 h0 o f abf	  ============================	  p0 = p1		subgoal 2 (ID 320) is:	 p_sym0 = p_sym1	";
             responses[i]=data;
           
 
@@ -1038,7 +1038,7 @@
           
 
             i = 204;
-            data = "1 subgoal (ID 22)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  IsStrictCategory0 : IsHSet A.(Core.object)	  IsStrictCategory1 : IsHSet B.(Core.object)	  ============================	  IsHSet (comma_category S T).(Core.object)	";
+            data = "1 subgoal (ID 22)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  IsStrictCategory0 : IsStrictCategory A	  IsStrictCategory1 : IsStrictCategory B	  ============================	  IsStrictCategory (comma_category S T)	";
             responses[i]=data;
           
 

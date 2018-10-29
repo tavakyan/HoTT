@@ -588,12 +588,12 @@
           
 
             i = 114;
-            data = "2 subgoals (ID 83)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  d : DecidablePaths A	  x, y : B	  e : H.(equiv_inv) x = H.(equiv_inv) y	  ============================	  Decidable (x = y)		subgoal 2 (ID 84) is:	 Decidable (x = y)	";
+            data = "2 subgoals (ID 83)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  d : DecidablePaths A	  x, y : B	  e : _^-1 x = _^-1 y	  ============================	  Decidable (x = y)		subgoal 2 (ID 84) is:	 Decidable (x = y)	";
             responses[i]=data;
           
 
             i = 115;
-            data = "1 subgoal (ID 83)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  d : DecidablePaths A	  x, y : B	  e : H.(equiv_inv) x = H.(equiv_inv) y	  ============================	  Decidable (x = y)	1 subgoal (ID 87)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  d : DecidablePaths A	  x, y : B	  e : H.(equiv_inv) x = H.(equiv_inv) y	  ============================	  x = y	";
+            data = "1 subgoal (ID 83)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  d : DecidablePaths A	  x, y : B	  e : _^-1 x = _^-1 y	  ============================	  Decidable (x = y)	1 subgoal (ID 87)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  d : DecidablePaths A	  x, y : B	  e : _^-1 x = _^-1 y	  ============================	  x = y	";
             responses[i]=data;
           
 
@@ -603,7 +603,7 @@
           
 
             i = 117;
-            data = "1 subgoal (ID 84)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  d : DecidablePaths A	  x, y : B	  ne : H.(equiv_inv) x <> H.(equiv_inv) y	  ============================	  Decidable (x = y)	1 subgoal (ID 113)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  d : DecidablePaths A	  x, y : B	  ne : H.(equiv_inv) x <> H.(equiv_inv) y	  p : x = y	  ============================	  Empty	";
+            data = "1 subgoal (ID 84)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  d : DecidablePaths A	  x, y : B	  ne : _^-1 x <> _^-1 y	  ============================	  Decidable (x = y)	1 subgoal (ID 113)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  d : DecidablePaths A	  x, y : B	  ne : _^-1 x <> _^-1 y	  p : x = y	  ============================	  Empty	";
             responses[i]=data;
           
 
@@ -888,22 +888,22 @@
           
 
             i = 174;
-            data = "2 subgoals (ID 507)	  	  A : Type	  H : PathCollapsible A	  x, y : A	  ============================	  forall p : x = y,	  p = ((path_coll x x).(collapse) 1)^ @ (path_coll x y).(collapse) p		subgoal 2 (ID 509) is:	 IsTrunc_internal (-1) (x = y)	";
+            data = "2 subgoals (ID 507)	  	  A : Type	  H : PathCollapsible A	  x, y : A	  ============================	  forall p : x = y, p = (collapse 1)^ @ collapse p		subgoal 2 (ID 509) is:	 IsTrunc_internal (-1) (x = y)	";
             responses[i]=data;
           
 
             i = 175;
-            data = "1 subgoal (ID 507)	  	  A : Type	  H : PathCollapsible A	  x, y : A	  ============================	  forall p : x = y,	  p = ((path_coll x x).(collapse) 1)^ @ (path_coll x y).(collapse) p	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 509)		subgoal 1 (ID 509) is:	 IsTrunc_internal (-1) (x = y)	1 subgoal (ID 509)	  	  A : Type	  H : PathCollapsible A	  x, y : A	  h : forall p : x = y,	      p = ((path_coll x x).(collapse) 1)^ @ (path_coll x y).(collapse) p	  ============================	  IsTrunc_internal (-1) (x = y)	1 subgoal (ID 531)	  	  A : Type	  H : PathCollapsible A	  x, y : A	  h : forall p : x = y,	      p = ((path_coll x x).(collapse) 1)^ @ (path_coll x y).(collapse) p	  p, q : x = y	  ============================	  p = q	";
+            data = "1 subgoal (ID 507)	  	  A : Type	  H : PathCollapsible A	  x, y : A	  ============================	  forall p : x = y, p = (collapse 1)^ @ collapse p	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 509)		subgoal 1 (ID 509) is:	 IsTrunc_internal (-1) (x = y)	1 subgoal (ID 509)	  	  A : Type	  H : PathCollapsible A	  x, y : A	  h : forall p : x = y, p = (collapse 1)^ @ collapse p	  ============================	  IsTrunc_internal (-1) (x = y)	1 subgoal (ID 531)	  	  A : Type	  H : PathCollapsible A	  x, y : A	  h : forall p : x = y, p = (collapse 1)^ @ collapse p	  p, q : x = y	  ============================	  p = q	";
             responses[i]=data;
           
 
             i = 176;
-            data = "1 subgoal (ID 545)	  	  A : Type	  H : PathCollapsible A	  x, y : A	  h : forall p : x = y,	      p = ((path_coll x x).(collapse) 1)^ @ (path_coll x y).(collapse) p	  p, q : x = y	  ============================	  ((path_coll x x).(collapse) 1)^ @ (path_coll x y).(collapse) p =	  ((path_coll x x).(collapse) 1)^ @ (path_coll x y).(collapse) q	";
+            data = "1 subgoal (ID 545)	  	  A : Type	  H : PathCollapsible A	  x, y : A	  h : forall p : x = y, p = (collapse 1)^ @ collapse p	  p, q : x = y	  ============================	  (collapse 1)^ @ collapse p = (collapse 1)^ @ collapse q	";
             responses[i]=data;
           
 
             i = 177;
-            data = "1 subgoal (ID 550)	  	  A : Type	  H : PathCollapsible A	  x, y : A	  h : forall p : x = y,	      p = ((path_coll x x).(collapse) 1)^ @ (path_coll x y).(collapse) p	  p, q : x = y	  ============================	  (path_coll x y).(collapse) p = (path_coll x y).(collapse) q	";
+            data = "1 subgoal (ID 550)	  	  A : Type	  H : PathCollapsible A	  x, y : A	  h : forall p : x = y, p = (collapse 1)^ @ collapse p	  p, q : x = y	  ============================	  collapse p = collapse q	";
             responses[i]=data;
           
 

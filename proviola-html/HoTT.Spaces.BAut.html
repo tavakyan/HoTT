@@ -193,7 +193,7 @@
           
 
             i = 35;
-            data = "1 subgoal (ID 67)	  	  H : Univalence	  X : Type	  Z, Z' : BAut X	  f : Z <~> Z'	  ============================	  ap (BAut_pr1 X) ((path_baut Z Z').(equiv_fun) f) =	  path_universe f.(equiv_fun)	";
+            data = "1 subgoal (ID 67)	  	  H : Univalence	  X : Type	  Z, Z' : BAut X	  f : Z <~> Z'	  ============================	  ap (BAut_pr1 X) ((path_baut Z Z') f) = path_universe f	";
             responses[i]=data;
           
 
@@ -203,7 +203,7 @@
           
 
             i = 37;
-            data = "1 subgoal (ID 69)	  	  H : Univalence	  X : Type	  Z, Z' : BAut X	  f : Z <~> Z'	  ============================	  ap pr1 (path_sigma_hprop Z Z' (path_universe_uncurried f)) =	  path_universe f.(equiv_fun)	";
+            data = "1 subgoal (ID 69)	  	  H : Univalence	  X : Type	  Z, Z' : BAut X	  f : Z <~> Z'	  ============================	  ap pr1 (path_sigma_hprop Z Z' (path_universe_uncurried f)) =	  path_universe f	";
             responses[i]=data;
           
 
@@ -218,7 +218,7 @@
           
 
             i = 40;
-            data = "1 subgoal (ID 82)	  	  H : Univalence	  X : Type	  Z, Z' : BAut X	  f : Z <~> Z'	  z : Z	  ============================	  transport (fun W : BAut X => W) ((path_baut Z Z').(equiv_fun) f) z =	  f.(equiv_fun) z	";
+            data = "1 subgoal (ID 82)	  	  H : Univalence	  X : Type	  Z, Z' : BAut X	  f : Z <~> Z'	  z : Z	  ============================	  transport (fun W : BAut X => W) ((path_baut Z Z') f) z = f z	";
             responses[i]=data;
           
 
@@ -228,12 +228,12 @@
           
 
             i = 42;
-            data = "1 subgoal (ID 98)	  	  H : Univalence	  X : Type	  Z, Z' : BAut X	  f : Z <~> Z'	  z : Z	  ============================	  transport idmap (ap (BAut_pr1 X) ((path_baut Z Z').(equiv_fun) f)) z =	  f.(equiv_fun) z	";
+            data = "1 subgoal (ID 98)	  	  H : Univalence	  X : Type	  Z, Z' : BAut X	  f : Z <~> Z'	  z : Z	  ============================	  transport idmap (ap (BAut_pr1 X) ((path_baut Z Z') f)) z = f z	";
             responses[i]=data;
           
 
             i = 43;
-            data = "1 subgoal (ID 116)	  	  H : Univalence	  X : Type	  Z, Z' : BAut X	  f : Z <~> Z'	  z : Z	  ============================	  transport idmap (ap (BAut_pr1 X) ((path_baut Z Z').(equiv_fun) f)) z =	  transport idmap (path_universe f.(equiv_fun)) z	";
+            data = "1 subgoal (ID 116)	  	  H : Univalence	  X : Type	  Z, Z' : BAut X	  f : Z <~> Z'	  z : Z	  ============================	  transport idmap (ap (BAut_pr1 X) ((path_baut Z Z') f)) z =	  transport idmap (path_universe f) z	";
             responses[i]=data;
           
 
@@ -353,7 +353,7 @@
           
 
             i = 67;
-            data = "1 subgoal (ID 101)	  	  H : Univalence	  n : trunc_index	  X : Type	  H0 : IsTrunc n.+1 X	  Z : Type	  p : (merely (Z = X)).(trunctype_type)	  W : Type	  q : (merely (W = X)).(trunctype_type)	  ============================	  IsTrunc_internal n.+1 ((Z; p) = (W; q))	";
+            data = "1 subgoal (ID 101)	  	  H : Univalence	  n : trunc_index	  X : Type	  H0 : IsTrunc n.+1 X	  Z : Type	  p : merely (Z = X)	  W : Type	  q : merely (W = X)	  ============================	  IsTrunc_internal n.+1 ((Z; p) = (W; q))	";
             responses[i]=data;
           
 
@@ -528,7 +528,7 @@
           
 
             i = 102;
-            data = "1 subgoal (ID 107)	  	  H : Funext	  n : trunc_index	  X : Type	  H0 : IsTrunc n X	  Z : Type	  p : (merely (Z = X)).(trunctype_type)	  ============================	  IsTrunc n (Z; p)	";
+            data = "1 subgoal (ID 107)	  	  H : Funext	  n : trunc_index	  X : Type	  H0 : IsTrunc n X	  Z : Type	  p : merely (Z = X)	  ============================	  IsTrunc n (Z; p)	";
             responses[i]=data;
           
 
@@ -598,7 +598,7 @@
           
 
             i = 116;
-            data = "1 subgoal (ID 136)	  	  H : Univalence	  X : Type	  A : Type	  Z, W : BAut X	  e : Z <~> W	  ============================	  ap (baut_prod_r X A) ((path_baut Z W).(equiv_fun) e) =	  (path_baut (baut_prod_r X A Z) (baut_prod_r X A W)).(equiv_fun)	    (equiv_functor_prod_r e)	";
+            data = "1 subgoal (ID 136)	  	  H : Univalence	  X : Type	  A : Type	  Z, W : BAut X	  e : Z <~> W	  ============================	  ap (baut_prod_r X A) ((path_baut Z W) e) =	  (path_baut (baut_prod_r X A Z) (baut_prod_r X A W))	    (equiv_functor_prod_r e)	";
             responses[i]=data;
           
 
@@ -833,7 +833,7 @@
           
 
             i = 163;
-            data = "1 subgoal (ID 167)	  	  H : Univalence	  X : Type	  P : Type -> Type	  H0 : forall Z : BAut X, IsHSet (P Z)	  ============================	  {e : P (point (BAut X)) &	  forall g : X <~> X, transport P (path_universe g.(equiv_fun)) e = e} <~>	  (forall Z : BAut X, P Z)	";
+            data = "1 subgoal (ID 167)	  	  H : Univalence	  X : Type	  P : Type -> Type	  H0 : forall Z : BAut X, IsHSet (P Z)	  ============================	  {e : P (point (BAut X)) &	  forall g : X <~> X, transport P (path_universe g) e = e} <~>	  (forall Z : BAut X, P Z)	";
             responses[i]=data;
           
 
@@ -843,7 +843,7 @@
           
 
             i = 165;
-            data = "1 subgoal (ID 177)	  	  H : Univalence	  X : Type	  P : Type -> Type	  H0 : forall Z : BAut X, IsHSet (P Z)	  ============================	  {e : P (point (BAut X)) &	  forall g : X <~> X, transport P (path_universe g.(equiv_fun)) e = e} <~>	  (forall (x : Type) (y : (merely (x = X)).(trunctype_type)), P (x; y))	";
+            data = "1 subgoal (ID 177)	  	  H : Univalence	  X : Type	  P : Type -> Type	  H0 : forall Z : BAut X, IsHSet (P Z)	  ============================	  {e : P (point (BAut X)) &	  forall g : X <~> X, transport P (path_universe g) e = e} <~>	  (forall (x : Type) (y : merely (x = X)), P (x; y))	";
             responses[i]=data;
           
 
@@ -868,7 +868,7 @@
           
 
             i = 170;
-            data = "2 subgoals (ID 587)	  	  H : Univalence	  X : Type	  P : Type -> Type	  H0 : forall Z : BAut X, IsHSet (P Z)	  Z : Type	  ============================	  Z = X -> IsHSet (P Z)		subgoal 2 (ID 588) is:	 {e : P X &	 forall g : X <~> X, transport P (path_universe g.(equiv_fun)) e = e} <~>	 (forall a : Type, {f : a = X -> P a & WeaklyConstant f})	";
+            data = "2 subgoals (ID 587)	  	  H : Univalence	  X : Type	  P : Type -> Type	  H0 : forall Z : BAut X, IsHSet (P Z)	  Z : Type	  ============================	  Z = X -> IsHSet (P Z)		subgoal 2 (ID 588) is:	 {e : P X & forall g : X <~> X, transport P (path_universe g) e = e} <~>	 (forall a : Type, {f : a = X -> P a & WeaklyConstant f})	";
             responses[i]=data;
           
 
@@ -883,7 +883,7 @@
           
 
             i = 173;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 588)		subgoal 1 (ID 588) is:	 {e : P X &	 forall g : X <~> X, transport P (path_universe g.(equiv_fun)) e = e} <~>	 (forall a : Type, {f : a = X -> P a & WeaklyConstant f})	1 subgoal (ID 588)	  	  H : Univalence	  X : Type	  P : Type -> Type	  H0 : forall Z : BAut X, IsHSet (P Z)	  ============================	  {e : P X &	  forall g : X <~> X, transport P (path_universe g.(equiv_fun)) e = e} <~>	  (forall a : Type, {f : a = X -> P a & WeaklyConstant f})	1 subgoal (ID 599)	  	  H : Univalence	  X : Type	  P : Type -> Type	  H0 : forall Z : BAut X, IsHSet (P Z)	  ============================	  {e : P X &	  forall g : X <~> X, transport P (path_universe g.(equiv_fun)) e = e} <~>	  (forall a : Type, {f : a = X -> P a & forall x y : a = X, f x = f y})	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 588)		subgoal 1 (ID 588) is:	 {e : P X & forall g : X <~> X, transport P (path_universe g) e = e} <~>	 (forall a : Type, {f : a = X -> P a & WeaklyConstant f})	1 subgoal (ID 588)	  	  H : Univalence	  X : Type	  P : Type -> Type	  H0 : forall Z : BAut X, IsHSet (P Z)	  ============================	  {e : P X & forall g : X <~> X, transport P (path_universe g) e = e} <~>	  (forall a : Type, {f : a = X -> P a & WeaklyConstant f})	1 subgoal (ID 599)	  	  H : Univalence	  X : Type	  P : Type -> Type	  H0 : forall Z : BAut X, IsHSet (P Z)	  ============================	  {e : P X & forall g : X <~> X, transport P (path_universe g) e = e} <~>	  (forall a : Type, {f : a = X -> P a & forall x y : a = X, f x = f y})	";
             responses[i]=data;
           
 
@@ -908,42 +908,42 @@
           
 
             i = 178;
-            data = "1 subgoal (ID 610)	  	  H : Univalence	  X : Type	  P : Type -> Type	  H0 : forall Z : BAut X, IsHSet (P Z)	  ============================	  {e : P X &	  forall g : X <~> X, transport P (path_universe g.(equiv_fun)) e = e} <~>	  {f : forall x : Type, x = X -> P x &	  forall (x : Type) (x0 y : x = X), f x x0 = f x y}	";
+            data = "1 subgoal (ID 610)	  	  H : Univalence	  X : Type	  P : Type -> Type	  H0 : forall Z : BAut X, IsHSet (P Z)	  ============================	  {e : P X & forall g : X <~> X, transport P (path_universe g) e = e} <~>	  {f : forall x : Type, x = X -> P x &	  forall (x : Type) (x0 y : x = X), f x x0 = f x y}	";
             responses[i]=data;
           
 
             i = 179;
-            data = "1 subgoal (ID 652)	  	  H : Univalence	  X : Type	  P : Type -> Type	  H0 : forall Z : BAut X, IsHSet (P Z)	  ============================	  {e : P X &	  forall g : X <~> X, transport P (path_universe g.(equiv_fun)) e = e} <~>	  {k : forall xy : {x : Type & x = X}, P xy.(proj1_sig) &	  forall (Z : Type) (p q : Z = X), k (Z; p) = k (Z; q)}	";
+            data = "1 subgoal (ID 652)	  	  H : Univalence	  X : Type	  P : Type -> Type	  H0 : forall Z : BAut X, IsHSet (P Z)	  ============================	  {e : P X & forall g : X <~> X, transport P (path_universe g) e = e} <~>	  {k : forall xy : {x : Type & x = X}, P xy.1 &	  forall (Z : Type) (p q : Z = X), k (Z; p) = k (Z; q)}	";
             responses[i]=data;
           
 
             i = 180;
-            data = "1 subgoal (ID 684)	  	  H : Univalence	  X : Type	  P : Type -> Type	  H0 : forall Z : BAut X, IsHSet (P Z)	  ============================	  {e : P X &	  forall g : X <~> X, transport P (path_universe g.(equiv_fun)) e = e} <~>	  {k : forall Zp : {Z : Type & Z = X}, P Zp.(proj1_sig) &	  forall (xy : {Z : Type & Z = X}) (q : xy.(proj1_sig) = X),	  k xy = k (xy.(proj1_sig); q)}	";
+            data = "1 subgoal (ID 684)	  	  H : Univalence	  X : Type	  P : Type -> Type	  H0 : forall Z : BAut X, IsHSet (P Z)	  ============================	  {e : P X & forall g : X <~> X, transport P (path_universe g) e = e} <~>	  {k : forall Zp : {Z : Type & Z = X}, P Zp.1 &	  forall (xy : {Z : Type & Z = X}) (q : xy.1 = X), k xy = k (xy.1; q)}	";
             responses[i]=data;
           
 
             i = 181;
-            data = "1 subgoal (ID 809)	  	  H : Univalence	  X : Type	  P : Type -> Type	  H0 : forall Z : BAut X, IsHSet (P Z)	  ============================	  {e : P X &	  forall g : X <~> X, transport P (path_universe g.(equiv_fun)) e = e} <~>	  {k : forall Zp : {Z : Type & Z = X}, P Zp.(proj1_sig) &	  forall q : X = X, k (X; 1) = k (X; q)}	";
+            data = "1 subgoal (ID 809)	  	  H : Univalence	  X : Type	  P : Type -> Type	  H0 : forall Z : BAut X, IsHSet (P Z)	  ============================	  {e : P X & forall g : X <~> X, transport P (path_universe g) e = e} <~>	  {k : forall Zp : {Z : Type & Z = X}, P Zp.1 &	  forall q : X = X, k (X; 1) = k (X; q)}	";
             responses[i]=data;
           
 
             i = 182;
-            data = "2 subgoals (ID 938)	  	  H : Univalence	  X : Type	  P : Type -> Type	  H0 : forall Z : BAut X, IsHSet (P Z)	  f : P X	  ============================	  forall b : X = X,	  transport P (1%equiv.(equiv_fun) b)^ f = f <~>	  ((equiv_contr_forall (fun Zp : {Z : Type & Z = X} => P Zp.(proj1_sig)))^-1)%equiv	  .(equiv_fun) f (X; 1) =	  ((equiv_contr_forall (fun Zp : {Z : Type & Z = X} => P Zp.(proj1_sig)))^-1)%equiv	  .(equiv_fun) f (X; b)		subgoal 2 (ID 939) is:	 {e : P X &	 forall g : X <~> X, transport P (path_universe g.(equiv_fun)) e = e} <~>	 {e : P X & forall q : X = X, transport P q^ e = e}	";
+            data = "2 subgoals (ID 938)	  	  H : Univalence	  X : Type	  P : Type -> Type	  H0 : forall Z : BAut X, IsHSet (P Z)	  f : P X	  ============================	  forall b : X = X,	  transport P (1%equiv b)^ f = f <~>	  ((equiv_contr_forall (fun Zp : {Z : Type & Z = X} => P Zp.1))^-1)%equiv f	    (X; 1) =	  ((equiv_contr_forall (fun Zp : {Z : Type & Z = X} => P Zp.1))^-1)%equiv f	    (X; b)		subgoal 2 (ID 939) is:	 {e : P X & forall g : X <~> X, transport P (path_universe g) e = e} <~>	 {e : P X & forall q : X = X, transport P q^ e = e}	";
             responses[i]=data;
           
 
             i = 183;
-            data = "1 subgoal (ID 938)	  	  H : Univalence	  X : Type	  P : Type -> Type	  H0 : forall Z : BAut X, IsHSet (P Z)	  f : P X	  ============================	  forall b : X = X,	  transport P (1%equiv.(equiv_fun) b)^ f = f <~>	  ((equiv_contr_forall (fun Zp : {Z : Type & Z = X} => P Zp.(proj1_sig)))^-1)%equiv	  .(equiv_fun) f (X; 1) =	  ((equiv_contr_forall (fun Zp : {Z : Type & Z = X} => P Zp.(proj1_sig)))^-1)%equiv	  .(equiv_fun) f (X; b)	1 subgoal (ID 941)	  	  H : Univalence	  X : Type	  P : Type -> Type	  H0 : forall Z : BAut X, IsHSet (P Z)	  f : P X	  g : X = X	  ============================	  transport P g^ f = f <~>	  f =	  transport (fun Zp : {Z : Type & Z = X} => P Zp.(proj1_sig))	    (path_contr (X; 1) (X; g)) f	";
+            data = "1 subgoal (ID 938)	  	  H : Univalence	  X : Type	  P : Type -> Type	  H0 : forall Z : BAut X, IsHSet (P Z)	  f : P X	  ============================	  forall b : X = X,	  transport P (1%equiv b)^ f = f <~>	  ((equiv_contr_forall (fun Zp : {Z : Type & Z = X} => P Zp.1))^-1)%equiv f	    (X; 1) =	  ((equiv_contr_forall (fun Zp : {Z : Type & Z = X} => P Zp.1))^-1)%equiv f	    (X; b)	1 subgoal (ID 941)	  	  H : Univalence	  X : Type	  P : Type -> Type	  H0 : forall Z : BAut X, IsHSet (P Z)	  f : P X	  g : X = X	  ============================	  transport P g^ f = f <~>	  f =	  transport (fun Zp : {Z : Type & Z = X} => P Zp.1)	    (path_contr (X; 1) (X; g)) f	";
             responses[i]=data;
           
 
             i = 184;
-            data = "1 subgoal (ID 952)	  	  H : Univalence	  X : Type	  P : Type -> Type	  H0 : forall Z : BAut X, IsHSet (P Z)	  f : P X	  g : X = X	  ============================	  transport P g^ f = f <~>	  transport (fun Zp : {Z : Type & Z = X} => P Zp.(proj1_sig))	    (path_contr (X; 1) (X; g)) f = f	";
+            data = "1 subgoal (ID 952)	  	  H : Univalence	  X : Type	  P : Type -> Type	  H0 : forall Z : BAut X, IsHSet (P Z)	  f : P X	  g : X = X	  ============================	  transport P g^ f = f <~>	  transport (fun Zp : {Z : Type & Z = X} => P Zp.1)	    (path_contr (X; 1) (X; g)) f = f	";
             responses[i]=data;
           
 
             i = 185;
-            data = "1 subgoal (ID 956)	  	  H : Univalence	  X : Type	  P : Type -> Type	  H0 : forall Z : BAut X, IsHSet (P Z)	  f : P X	  g : X = X	  ============================	  transport (fun Zp : {Z : Type & Z = X} => P Zp.(proj1_sig))	    (path_contr (X; 1) (X; g)) f = transport P g^ f	";
+            data = "1 subgoal (ID 956)	  	  H : Univalence	  X : Type	  P : Type -> Type	  H0 : forall Z : BAut X, IsHSet (P Z)	  f : P X	  g : X = X	  ============================	  transport (fun Zp : {Z : Type & Z = X} => P Zp.1)	    (path_contr (X; 1) (X; g)) f = transport P g^ f	";
             responses[i]=data;
           
 
@@ -958,17 +958,17 @@
           
 
             i = 188;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 939)		subgoal 1 (ID 939) is:	 {e : P X &	 forall g : X <~> X, transport P (path_universe g.(equiv_fun)) e = e} <~>	 {e : P X & forall q : X = X, transport P q^ e = e}	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 939)		subgoal 1 (ID 939) is:	 {e : P X & forall g : X <~> X, transport P (path_universe g) e = e} <~>	 {e : P X & forall q : X = X, transport P q^ e = e}	";
             responses[i]=data;
           
 
             i = 189;
-            data = "1 subgoal (ID 939)	  	  H : Univalence	  X : Type	  P : Type -> Type	  H0 : forall Z : BAut X, IsHSet (P Z)	  ============================	  {e : P X &	  forall g : X <~> X, transport P (path_universe g.(equiv_fun)) e = e} <~>	  {e : P X & forall q : X = X, transport P q^ e = e}	1 subgoal (ID 1008)	  	  H : Univalence	  X : Type	  P : Type -> Type	  H0 : forall Z : BAut X, IsHSet (P Z)	  e : P X	  ============================	  (forall g : X <~> X, transport P (path_universe g.(equiv_fun)) e = e) <~>	  (forall q : X = X,	   transport P q^ (1%equiv.(equiv_fun) e) = 1%equiv.(equiv_fun) e)	";
+            data = "1 subgoal (ID 939)	  	  H : Univalence	  X : Type	  P : Type -> Type	  H0 : forall Z : BAut X, IsHSet (P Z)	  ============================	  {e : P X & forall g : X <~> X, transport P (path_universe g) e = e} <~>	  {e : P X & forall q : X = X, transport P q^ e = e}	1 subgoal (ID 1008)	  	  H : Univalence	  X : Type	  P : Type -> Type	  H0 : forall Z : BAut X, IsHSet (P Z)	  e : P X	  ============================	  (forall g : X <~> X, transport P (path_universe g) e = e) <~>	  (forall q : X = X, transport P q^ (1%equiv e) = 1%equiv e)	";
             responses[i]=data;
           
 
             i = 190;
-            data = "1 subgoal (ID 1028)	  	  H : Univalence	  X : Type	  P : Type -> Type	  H0 : forall Z : BAut X, IsHSet (P Z)	  e : P X	  ============================	  forall b : X = X,	  transport P	    (path_universe	       (((equiv_path_universe X X)^-1)%equiv.(equiv_fun) b).(equiv_fun)) e =	  e <~> transport P b^ (1%equiv.(equiv_fun) e) = 1%equiv.(equiv_fun) e	";
+            data = "1 subgoal (ID 1028)	  	  H : Univalence	  X : Type	  P : Type -> Type	  H0 : forall Z : BAut X, IsHSet (P Z)	  e : P X	  ============================	  forall b : X = X,	  transport P (path_universe (((equiv_path_universe X X)^-1)%equiv b)) e = e <~>	  transport P b^ (1%equiv e) = 1%equiv e	";
             responses[i]=data;
           
 
@@ -1073,7 +1073,7 @@
           
 
             i = 211;
-            data = "1 subgoal (ID 195)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  ============================	  {f : X <~> X &	  forall g : X <~> X,	  g.(equiv_fun) o f.(equiv_fun) == f.(equiv_fun) o g.(equiv_fun)} <~>	  (forall Z : BAut X, Z = Z)	";
+            data = "1 subgoal (ID 195)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  ============================	  {f : X <~> X & forall g : X <~> X, g o f == f o g} <~>	  (forall Z : BAut X, Z = Z)	";
             responses[i]=data;
           
 
@@ -1083,102 +1083,102 @@
           
 
             i = 213;
-            data = "1 subgoal (ID 252)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  ============================	  {f : X <~> X &	  forall g : X <~> X,	  (fun x : X => g.(equiv_fun) (f.(equiv_fun) x)) ==	  (fun x : X => f.(equiv_fun) (g.(equiv_fun) x))} <~>	  (forall a : {Z : Type & (merely (Z = X)).(trunctype_type)},	   a.(proj1_sig) = a.(proj1_sig))	";
+            data = "1 subgoal (ID 252)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  ============================	  {f : X <~> X &	  forall g : X <~> X, (fun x : X => g (f x)) == (fun x : X => f (g x))} <~>	  (forall a : {Z : Type & merely (Z = X)}, a.1 = a.1)	";
             responses[i]=data;
           
 
             i = 214;
-            data = "1 subgoal (ID 757)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  ============================	  {f : X <~> X &	  forall g : X <~> X,	  (fun x : X => g.(equiv_fun) (f.(equiv_fun) x)) ==	  (fun x : X => f.(equiv_fun) (g.(equiv_fun) x))} <~>	  {e : point (BAut X) = point (BAut X) &	  forall g : X <~> X,	  transport (fun Z : Type => Z = Z) (path_universe g.(equiv_fun)) e = e}	";
+            data = "1 subgoal (ID 757)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  ============================	  {f : X <~> X &	  forall g : X <~> X, (fun x : X => g (f x)) == (fun x : X => f (g x))} <~>	  {e : point (BAut X) = point (BAut X) &	  forall g : X <~> X,	  transport (fun Z : Type => Z = Z) (path_universe g) e = e}	";
             responses[i]=data;
           
 
             i = 215;
-            data = "1 subgoal (ID 758)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  ============================	  {f : X <~> X &	  forall g : X <~> X,	  (fun x : X => g.(equiv_fun) (f.(equiv_fun) x)) ==	  (fun x : X => f.(equiv_fun) (g.(equiv_fun) x))} <~>	  {e : X = X &	  forall g : X <~> X,	  transport (fun Z : Type => Z = Z) (path_universe g.(equiv_fun)) e = e}	";
+            data = "1 subgoal (ID 758)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  ============================	  {f : X <~> X &	  forall g : X <~> X, (fun x : X => g (f x)) == (fun x : X => f (g x))} <~>	  {e : X = X &	  forall g : X <~> X,	  transport (fun Z : Type => Z = Z) (path_universe g) e = e}	";
             responses[i]=data;
           
 
             i = 216;
-            data = "1 subgoal (ID 767)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  f : X <~> X	  ============================	  (forall g : X <~> X,	   (fun x : X => g.(equiv_fun) (f.(equiv_fun) x)) ==	   (fun x : X => f.(equiv_fun) (g.(equiv_fun) x))) <~>	  (forall g : X <~> X,	   transport (fun Z : Type => Z = Z) (path_universe g.(equiv_fun))	     ((equiv_path_universe X X).(equiv_fun) f) =	   (equiv_path_universe X X).(equiv_fun) f)	";
+            data = "1 subgoal (ID 767)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  f : X <~> X	  ============================	  (forall g : X <~> X, (fun x : X => g (f x)) == (fun x : X => f (g x))) <~>	  (forall g : X <~> X,	   transport (fun Z : Type => Z = Z) (path_universe g)	     ((equiv_path_universe X X) f) = (equiv_path_universe X X) f)	";
             responses[i]=data;
           
 
             i = 217;
-            data = "1 subgoal (ID 784)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  f, g : X <~> X	  ============================	  (fun x : X => g.(equiv_fun) (f.(equiv_fun) x)) ==	  (fun x : X => f.(equiv_fun) (g.(equiv_fun) x)) <~>	  transport (fun Z : Type => Z = Z) (path_universe g.(equiv_fun))	    (path_universe_uncurried f) = path_universe_uncurried f	";
+            data = "1 subgoal (ID 784)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  f : X <~> X	  g : X <~> X	  ============================	  (fun x : X => g (f x)) == (fun x : X => f (g x)) <~>	  transport (fun Z : Type => Z = Z) (path_universe g)	    (path_universe_uncurried f) = path_universe_uncurried f	";
             responses[i]=data;
           
 
             i = 218;
-            data = "1 subgoal (ID 804)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  f, g : X <~> X	  ============================	  (fun x : X => g.(equiv_fun) (f.(equiv_fun) x)) =	  (fun x : X => f.(equiv_fun) (g.(equiv_fun) x)) <~>	  transport (fun Z : Type => Z = Z) (path_universe g.(equiv_fun))	    (path_universe_uncurried f) = path_universe_uncurried f	";
+            data = "1 subgoal (ID 804)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  f : X <~> X	  g : X <~> X	  ============================	  (fun x : X => g (f x)) = (fun x : X => f (g x)) <~>	  transport (fun Z : Type => Z = Z) (path_universe g)	    (path_universe_uncurried f) = path_universe_uncurried f	";
             responses[i]=data;
           
 
             i = 219;
-            data = "1 subgoal (ID 826)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  f, g : X <~> X	  ============================	  g oE f = f oE g <~>	  transport (fun Z : Type => Z = Z) (path_universe g.(equiv_fun))	    (path_universe_uncurried f) = path_universe_uncurried f	";
+            data = "1 subgoal (ID 826)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  f : X <~> X	  g : X <~> X	  ============================	  g oE f = f oE g <~>	  transport (fun Z : Type => Z = Z) (path_universe g)	    (path_universe_uncurried f) = path_universe_uncurried f	";
             responses[i]=data;
           
 
             i = 220;
-            data = "1 subgoal (ID 828)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  f : X <~> X	  ============================	  forall g : X <~> X,	  g oE f = f oE g <~>	  transport (fun Z : Type => Z = Z) (path_universe g.(equiv_fun))	    (path_universe_uncurried f) = path_universe_uncurried f	";
+            data = "1 subgoal (ID 828)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  f : X <~> X	  ============================	  forall g : X <~> X,	  g oE f = f oE g <~>	  transport (fun Z : Type => Z = Z) (path_universe g)	    (path_universe_uncurried f) = path_universe_uncurried f	";
             responses[i]=data;
           
 
             i = 221;
-            data = "1 subgoal (ID 840)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  f : X <~> X	  g : X = X	  ============================	  equiv_path X X g oE f = f oE equiv_path X X g <~>	  transport (fun Z : Type => Z = Z)	    (path_universe (equiv_path X X g).(equiv_fun))	    (path_universe_uncurried f) = path_universe_uncurried f	";
+            data = "1 subgoal (ID 840)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  f : X <~> X	  g : X = X	  ============================	  equiv_path X X g oE f = f oE equiv_path X X g <~>	  transport (fun Z : Type => Z = Z) (path_universe (equiv_path X X g))	    (path_universe_uncurried f) = path_universe_uncurried f	";
             responses[i]=data;
           
 
             i = 222;
-            data = "1 subgoal (ID 842)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  g : X = X	  ============================	  forall f : X <~> X,	  equiv_path X X g oE f = f oE equiv_path X X g <~>	  transport (fun Z : Type => Z = Z)	    (path_universe (equiv_path X X g).(equiv_fun))	    (path_universe_uncurried f) = path_universe_uncurried f	";
+            data = "1 subgoal (ID 842)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  g : X = X	  ============================	  forall f : X <~> X,	  equiv_path X X g oE f = f oE equiv_path X X g <~>	  transport (fun Z : Type => Z = Z) (path_universe (equiv_path X X g))	    (path_universe_uncurried f) = path_universe_uncurried f	";
             responses[i]=data;
           
 
             i = 223;
-            data = "1 subgoal (ID 854)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  g : X = X	  f : X = X	  ============================	  equiv_path X X g oE equiv_path X X f = equiv_path X X f oE equiv_path X X g <~>	  transport (fun Z : Type => Z = Z)	    (path_universe (equiv_path X X g).(equiv_fun))	    (path_universe_uncurried (equiv_path X X f)) =	  path_universe_uncurried (equiv_path X X f)	";
+            data = "1 subgoal (ID 854)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  g : X = X	  f : X = X	  ============================	  equiv_path X X g oE equiv_path X X f = equiv_path X X f oE equiv_path X X g <~>	  transport (fun Z : Type => Z = Z) (path_universe (equiv_path X X g))	    (path_universe_uncurried (equiv_path X X f)) =	  path_universe_uncurried (equiv_path X X f)	";
             responses[i]=data;
           
 
             i = 224;
-            data = "1 subgoal (ID 880)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  g : X = X	  f : X = X	  ============================	  equiv_path X X (f @ g) = equiv_path X X f oE equiv_path X X g <~>	  transport (fun Z : Type => Z = Z)	    (path_universe (equiv_path X X g).(equiv_fun))	    (path_universe_uncurried (equiv_path X X f)) =	  path_universe_uncurried (equiv_path X X f)	";
+            data = "1 subgoal (ID 880)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  g : X = X	  f : X = X	  ============================	  equiv_path X X (f @ g) = equiv_path X X f oE equiv_path X X g <~>	  transport (fun Z : Type => Z = Z) (path_universe (equiv_path X X g))	    (path_universe_uncurried (equiv_path X X f)) =	  path_universe_uncurried (equiv_path X X f)	";
             responses[i]=data;
           
 
             i = 225;
-            data = "1 subgoal (ID 909)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  g : X = X	  f : X = X	  ============================	  equiv_path X X (f @ g) = equiv_path X X (g @ f) <~>	  transport (fun Z : Type => Z = Z)	    (path_universe (equiv_path X X g).(equiv_fun))	    (path_universe_uncurried (equiv_path X X f)) =	  path_universe_uncurried (equiv_path X X f)	";
+            data = "1 subgoal (ID 909)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  g : X = X	  f : X = X	  ============================	  equiv_path X X (f @ g) = equiv_path X X (g @ f) <~>	  transport (fun Z : Type => Z = Z) (path_universe (equiv_path X X g))	    (path_universe_uncurried (equiv_path X X f)) =	  path_universe_uncurried (equiv_path X X f)	";
             responses[i]=data;
           
 
             i = 226;
-            data = "1 subgoal (ID 933)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  g : X = X	  f : X = X	  ============================	  f @ g = g @ f <~>	  transport (fun Z : Type => Z = Z)	    (path_universe (equiv_path X X g).(equiv_fun))	    (path_universe_uncurried (equiv_path X X f)) =	  path_universe_uncurried (equiv_path X X f)	";
+            data = "1 subgoal (ID 933)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  g : X = X	  f : X = X	  ============================	  f @ g = g @ f <~>	  transport (fun Z : Type => Z = Z) (path_universe (equiv_path X X g))	    (path_universe_uncurried (equiv_path X X f)) =	  path_universe_uncurried (equiv_path X X f)	";
             responses[i]=data;
           
 
             i = 227;
-            data = "1 subgoal (ID 951)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  g : X = X	  f : X = X	  ============================	  f @ g = g @ f <~>	  ((path_universe (equiv_path X X g).(equiv_fun))^ @	   path_universe_uncurried (equiv_path X X f)) @	  path_universe (equiv_path X X g).(equiv_fun) =	  path_universe_uncurried (equiv_path X X f)	";
+            data = "1 subgoal (ID 951)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  g : X = X	  f : X = X	  ============================	  f @ g = g @ f <~>	  ((path_universe (equiv_path X X g))^ @	   path_universe_uncurried (equiv_path X X f)) @	  path_universe (equiv_path X X g) =	  path_universe_uncurried (equiv_path X X f)	";
             responses[i]=data;
           
 
             i = 228;
-            data = "1 subgoal (ID 973)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  g : X = X	  f : X = X	  ============================	  f @ g = g @ f <~>	  (path_universe (equiv_path X X g).(equiv_fun))^ @	  (path_universe_uncurried (equiv_path X X f) @	   path_universe (equiv_path X X g).(equiv_fun)) =	  path_universe_uncurried (equiv_path X X f)	";
+            data = "1 subgoal (ID 973)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  g : X = X	  f : X = X	  ============================	  f @ g = g @ f <~>	  (path_universe (equiv_path X X g))^ @	  (path_universe_uncurried (equiv_path X X f) @	   path_universe (equiv_path X X g)) =	  path_universe_uncurried (equiv_path X X f)	";
             responses[i]=data;
           
 
             i = 229;
-            data = "1 subgoal (ID 989)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  g : X = X	  f : X = X	  ============================	  f @ g = g @ f <~>	  path_universe_uncurried (equiv_path X X f) @	  path_universe (equiv_path X X g).(equiv_fun) =	  path_universe (equiv_path X X g).(equiv_fun) @	  path_universe_uncurried (equiv_path X X f)	";
+            data = "1 subgoal (ID 989)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  g : X = X	  f : X = X	  ============================	  f @ g = g @ f <~>	  path_universe_uncurried (equiv_path X X f) @	  path_universe (equiv_path X X g) =	  path_universe (equiv_path X X g) @	  path_universe_uncurried (equiv_path X X f)	";
             responses[i]=data;
           
 
             i = 230;
-            data = "2 subgoals (ID 1007)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  g : X = X	  f : X = X	  ============================	  path_universe_uncurried (equiv_path X X f) @	  path_universe (equiv_path X X g).(equiv_fun) = f @ g		subgoal 2 (ID 1008) is:	 g @ f =	 path_universe (equiv_path X X g).(equiv_fun) @	 path_universe_uncurried (equiv_path X X f)	";
+            data = "2 subgoals (ID 1007)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  g : X = X	  f : X = X	  ============================	  path_universe_uncurried (equiv_path X X f) @	  path_universe (equiv_path X X g) = f @ g		subgoal 2 (ID 1008) is:	 g @ f =	 path_universe (equiv_path X X g) @	 path_universe_uncurried (equiv_path X X f)	";
             responses[i]=data;
           
 
             i = 231;
-            data = "1 subgoal (ID 1007)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  g : X = X	  f : X = X	  ============================	  path_universe_uncurried (equiv_path X X f) @	  path_universe (equiv_path X X g).(equiv_fun) = f @ g	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1008)		subgoal 1 (ID 1008) is:	 g @ f =	 path_universe (equiv_path X X g).(equiv_fun) @	 path_universe_uncurried (equiv_path X X f)	";
+            data = "1 subgoal (ID 1007)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  g : X = X	  f : X = X	  ============================	  path_universe_uncurried (equiv_path X X f) @	  path_universe (equiv_path X X g) = f @ g	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1008)		subgoal 1 (ID 1008) is:	 g @ f =	 path_universe (equiv_path X X g) @	 path_universe_uncurried (equiv_path X X f)	";
             responses[i]=data;
           
 
             i = 232;
-            data = "1 subgoal (ID 1008)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  g : X = X	  f : X = X	  ============================	  g @ f =	  path_universe (equiv_path X X g).(equiv_fun) @	  path_universe_uncurried (equiv_path X X f)	No more subgoals.	";
+            data = "1 subgoal (ID 1008)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  g : X = X	  f : X = X	  ============================	  g @ f =	  path_universe (equiv_path X X g) @	  path_universe_uncurried (equiv_path X X f)	No more subgoals.	";
             responses[i]=data;
           
 
@@ -1228,7 +1228,7 @@
           
 
             i = 242;
-            data = "1 subgoal (ID 228)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  ============================	  (center_baut X).(equiv_fun) (1%equiv; fun (g : X <~> X) (x : X) => 1) =	  (fun Z : BAut X => 1)	";
+            data = "1 subgoal (ID 228)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  ============================	  (center_baut X) (1%equiv; fun (g : X <~> X) (x : X) => 1) =	  (fun Z : BAut X => 1)	";
             responses[i]=data;
           
 
@@ -1238,17 +1238,17 @@
           
 
             i = 244;
-            data = "1 subgoal (ID 239)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  Z : BAut X	  ============================	  (center_baut X).(equiv_fun) (1%equiv; fun (g : X <~> X) (x : X) => 1) Z = 1	";
+            data = "1 subgoal (ID 239)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  Z : BAut X	  ============================	  (center_baut X) (1%equiv; fun (g : X <~> X) (x : X) => 1) Z = 1	";
             responses[i]=data;
           
 
             i = 245;
-            data = "1 subgoal (ID 247)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  Z : BAut X	  X0 : IsHSet (Z.(proj1_sig) = Z.(proj1_sig))	  ============================	  (center_baut X).(equiv_fun) (1%equiv; fun (g : X <~> X) (x : X) => 1) Z = 1	";
+            data = "1 subgoal (ID 247)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  Z : BAut X	  X0 : IsHSet (Z.1 = Z.1)	  ============================	  (center_baut X) (1%equiv; fun (g : X <~> X) (x : X) => 1) Z = 1	";
             responses[i]=data;
           
 
             i = 246;
-            data = "1 subgoal (ID 996)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  X0 : IsHSet ((point (BAut X)).(proj1_sig) = (point (BAut X)).(proj1_sig))	  ============================	  (center_baut X).(equiv_fun) (1%equiv; fun (g : X <~> X) (x : X) => 1)	    (point (BAut X)) = 1	";
+            data = "1 subgoal (ID 996)	  	  H : Univalence	  X : Type	  IsHSet0 : IsHSet X	  X0 : IsHSet ((point (BAut X)).1 = (point (BAut X)).1)	  ============================	  (center_baut X) (1%equiv; fun (g : X <~> X) (x : X) => 1) (point (BAut X)) =	  1	";
             responses[i]=data;
           
 
@@ -1338,7 +1338,7 @@
           
 
             i = 264;
-            data = "1 subgoal (ID 246)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  ============================	  {f : forall x : X, x = x &	  forall (g : X <~> X) (x : X), ap g.(equiv_fun) (f x) = f (g.(equiv_fun) x)} <~>	  (forall Z : BAut X, 1 = 1)	";
+            data = "1 subgoal (ID 246)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  ============================	  {f : forall x : X, x = x &	  forall (g : X <~> X) (x : X), ap g (f x) = f (g x)} <~>	  (forall Z : BAut X, 1 = 1)	";
             responses[i]=data;
           
 
@@ -1348,87 +1348,87 @@
           
 
             i = 266;
-            data = "3 subgoals (ID 330)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  Z : {Z : Type & (merely (Z = X)).(trunctype_type)}	  ============================	  1 = (equiv_path_sigma_hprop Z Z).(equiv_fun) 1		subgoal 2 (ID 331) is:	 (equiv_path_sigma_hprop Z Z).(equiv_fun) 1 = 1	subgoal 3 (ID 332) is:	 {f : forall x : X, x = x &	 forall (g : X <~> X) (x : X), ap g.(equiv_fun) (f x) = f (g.(equiv_fun) x)} <~>	 (forall a : {Z : Type & (merely (Z = X)).(trunctype_type)}, 1 = 1)	";
+            data = "3 subgoals (ID 330)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  Z : {Z : Type & merely (Z = X)}	  ============================	  1 = (equiv_path_sigma_hprop Z Z) 1		subgoal 2 (ID 331) is:	 (equiv_path_sigma_hprop Z Z) 1 = 1	subgoal 3 (ID 332) is:	 {f : forall x : X, x = x &	 forall (g : X <~> X) (x : X), ap g (f x) = f (g x)} <~>	 (forall a : {Z : Type & merely (Z = X)}, 1 = 1)	";
             responses[i]=data;
           
 
             i = 267;
-            data = "1 subgoal (ID 330)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  Z : {Z : Type & (merely (Z = X)).(trunctype_type)}	  ============================	  1 = (equiv_path_sigma_hprop Z Z).(equiv_fun) 1	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 subgoals (ID 331)		subgoal 1 (ID 331) is:	 (equiv_path_sigma_hprop Z Z).(equiv_fun) 1 = 1	subgoal 2 (ID 332) is:	 {f : forall x : X, x = x &	 forall (g : X <~> X) (x : X), ap g.(equiv_fun) (f x) = f (g.(equiv_fun) x)} <~>	 (forall a : {Z : Type & (merely (Z = X)).(trunctype_type)}, 1 = 1)	2 subgoals (ID 331)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  Z : {Z : Type & (merely (Z = X)).(trunctype_type)}	  ============================	  (equiv_path_sigma_hprop Z Z).(equiv_fun) 1 = 1		subgoal 2 (ID 332) is:	 {f : forall x : X, x = x &	 forall (g : X <~> X) (x : X), ap g.(equiv_fun) (f x) = f (g.(equiv_fun) x)} <~>	 (forall a : {Z : Type & (merely (Z = X)).(trunctype_type)}, 1 = 1)	1 subgoal (ID 331)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  Z : {Z : Type & (merely (Z = X)).(trunctype_type)}	  ============================	  (equiv_path_sigma_hprop Z Z).(equiv_fun) 1 = 1	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 332)		subgoal 1 (ID 332) is:	 {f : forall x : X, x = x &	 forall (g : X <~> X) (x : X), ap g.(equiv_fun) (f x) = f (g.(equiv_fun) x)} <~>	 (forall a : {Z : Type & (merely (Z = X)).(trunctype_type)}, 1 = 1)	1 subgoal (ID 332)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  ============================	  {f : forall x : X, x = x &	  forall (g : X <~> X) (x : X), ap g.(equiv_fun) (f x) = f (g.(equiv_fun) x)} <~>	  (forall a : {Z : Type & (merely (Z = X)).(trunctype_type)}, 1 = 1)	";
+            data = "1 subgoal (ID 330)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  Z : {Z : Type & merely (Z = X)}	  ============================	  1 = (equiv_path_sigma_hprop Z Z) 1	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 subgoals (ID 331)		subgoal 1 (ID 331) is:	 (equiv_path_sigma_hprop Z Z) 1 = 1	subgoal 2 (ID 332) is:	 {f : forall x : X, x = x &	 forall (g : X <~> X) (x : X), ap g (f x) = f (g x)} <~>	 (forall a : {Z : Type & merely (Z = X)}, 1 = 1)	2 subgoals (ID 331)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  Z : {Z : Type & merely (Z = X)}	  ============================	  (equiv_path_sigma_hprop Z Z) 1 = 1		subgoal 2 (ID 332) is:	 {f : forall x : X, x = x &	 forall (g : X <~> X) (x : X), ap g (f x) = f (g x)} <~>	 (forall a : {Z : Type & merely (Z = X)}, 1 = 1)	1 subgoal (ID 331)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  Z : {Z : Type & merely (Z = X)}	  ============================	  (equiv_path_sigma_hprop Z Z) 1 = 1	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 332)		subgoal 1 (ID 332) is:	 {f : forall x : X, x = x &	 forall (g : X <~> X) (x : X), ap g (f x) = f (g x)} <~>	 (forall a : {Z : Type & merely (Z = X)}, 1 = 1)	1 subgoal (ID 332)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  ============================	  {f : forall x : X, x = x &	  forall (g : X <~> X) (x : X), ap g (f x) = f (g x)} <~>	  (forall a : {Z : Type & merely (Z = X)}, 1 = 1)	";
             responses[i]=data;
           
 
             i = 268;
-            data = "1 subgoal (ID 361)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  ============================	  {f : forall x : X, x = x &	  forall (g : X <~> X) (x : X), ap g.(equiv_fun) (f x) = f (g.(equiv_fun) x)} <~>	  (forall a : {Z : Type & (merely (Z = X)).(trunctype_type)}, 1 = 1)	1 subgoal (ID 1022)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  ============================	  {f : forall x : X, x = x &	  forall (g : X <~> X) (x : X), ap g.(equiv_fun) (f x) = f (g.(equiv_fun) x)} <~>	  {e : 1 = 1 &	  forall g : X <~> X,	  transport (fun Z : Type => 1 = 1) (path_universe g.(equiv_fun)) e = e}	";
+            data = "1 subgoal (ID 361)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  ============================	  {f : forall x : X, x = x &	  forall (g : X <~> X) (x : X), ap g (f x) = f (g x)} <~>	  (forall a : {Z : Type & merely (Z = X)}, 1 = 1)	1 subgoal (ID 1022)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  ============================	  {f : forall x : X, x = x &	  forall (g : X <~> X) (x : X), ap g (f x) = f (g x)} <~>	  {e : 1 = 1 &	  forall g : X <~> X,	  transport (fun Z : Type => 1 = 1) (path_universe g) e = e}	";
             responses[i]=data;
           
 
             i = 269;
-            data = "";
+            data = "2 subgoals (ID 1028)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  ============================	  (forall x : X, x = x) <~> 1 = 1		subgoal 2 (ID 1030) is:	 forall a : forall x : X, x = x,	 (fun f : forall x : X, x = x =>	  forall (g : X <~> X) (x : X), ap g (f x) = f (g x)) a <~>	 (fun e : 1 = 1 =>	  forall g : X <~> X,	  transport (fun Z : Type => 1 = 1) (path_universe g) e = e) 	   (?f a)	";
             responses[i]=data;
           
 
             i = 270;
-            data = "2 subgoals (ID 1028)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  ============================	  (forall x : X, x = x) <~> 1 = 1		subgoal 2 (ID 1030) is:	 forall a : forall x : X, x = x,	 (fun f : forall x : X, x = x =>	  forall (g : X <~> X) (x : X), ap g.(equiv_fun) (f x) = f (g.(equiv_fun) x))	   a <~>	 (fun e : 1 = 1 =>	  forall g : X <~> X,	  transport (fun Z : Type => 1 = 1) (path_universe g.(equiv_fun)) e = e)	   (?f.(equiv_fun) a)	1 subgoal (ID 1028)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  ============================	  (forall x : X, x = x) <~> 1 = 1	1 subgoal (ID 1048)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  ============================	  path_universe 1%equiv.(equiv_fun) = path_universe 1%equiv.(equiv_fun) <~>	  1 = 1	";
+            data = "1 subgoal (ID 1028)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  ============================	  (forall x : X, x = x) <~> 1 = 1	1 subgoal (ID 1048)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  ============================	  path_universe 1%equiv = path_universe 1%equiv <~> 1 = 1	";
             responses[i]=data;
           
 
             i = 271;
-            data = "2 subgoals (ID 1054)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  ============================	  1 = path_universe 1%equiv.(equiv_fun)		subgoal 2 (ID 1055) is:	 path_universe 1%equiv.(equiv_fun) = 1	";
+            data = "2 subgoals (ID 1054)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  ============================	  1 = path_universe 1%equiv		subgoal 2 (ID 1055) is:	 path_universe 1%equiv = 1	";
             responses[i]=data;
           
 
             i = 272;
-            data = "1 subgoal (ID 1054)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  ============================	  1 = path_universe 1%equiv.(equiv_fun)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 1055)		subgoal 1 (ID 1055) is:	 path_universe 1%equiv.(equiv_fun) = 1	subgoal 2 (ID 1030) is:	 forall a : forall x : X, x = x,	 (fun f : forall x : X, x = x =>	  forall (g : X <~> X) (x : X), ap g.(equiv_fun) (f x) = f (g.(equiv_fun) x))	   a <~>	 (fun e : 1 = 1 =>	  forall g : X <~> X,	  transport (fun Z : Type => 1 = 1) (path_universe g.(equiv_fun)) e = e)	   ((equiv_concat_lr path_universe_1^ ?Goal oE equiv_path2_universe 1 1)	    .(equiv_fun) a)	";
+            data = "1 subgoal (ID 1054)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  ============================	  1 = path_universe 1%equiv	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 1055)		subgoal 1 (ID 1055) is:	 path_universe 1%equiv = 1	subgoal 2 (ID 1030) is:	 forall a : forall x : X, x = x,	 (fun f : forall x : X, x = x =>	  forall (g : X <~> X) (x : X), ap g (f x) = f (g x)) a <~>	 (fun e : 1 = 1 =>	  forall g : X <~> X,	  transport (fun Z : Type => 1 = 1) (path_universe g) e = e)	   ((equiv_concat_lr path_universe_1^ ?Goal oE equiv_path2_universe 1 1) a)	";
             responses[i]=data;
           
 
             i = 273;
-            data = "1 subgoal (ID 1055)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  ============================	  path_universe 1%equiv.(equiv_fun) = 1	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 1030)		subgoal 1 (ID 1030) is:	 forall a : forall x : X, x = x,	 (fun f : forall x : X, x = x =>	  forall (g : X <~> X) (x : X), ap g.(equiv_fun) (f x) = f (g.(equiv_fun) x))	   a <~>	 (fun e : 1 = 1 =>	  forall g : X <~> X,	  transport (fun Z : Type => 1 = 1) (path_universe g.(equiv_fun)) e = e)	   ((equiv_concat_lr path_universe_1^ path_universe_1	     oE equiv_path2_universe 1 1).(equiv_fun) a)	1 subgoal (ID 1030)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  ============================	  forall a : forall x : X, x = x,	  (fun f : forall x : X, x = x =>	   forall (g : X <~> X) (x : X), ap g.(equiv_fun) (f x) = f (g.(equiv_fun) x))	    a <~>	  (fun e : 1 = 1 =>	   forall g : X <~> X,	   transport (fun Z : Type => 1 = 1) (path_universe g.(equiv_fun)) e = e)	    ((equiv_concat_lr path_universe_1^ path_universe_1	      oE equiv_path2_universe 1 1).(equiv_fun) a)	1 subgoal (ID 1073)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  f : forall x : X, x = x	  ============================	  (fun f0 : forall x : X, x = x =>	   forall (g : X <~> X) (x : X),	   ap g.(equiv_fun) (f0 x) = f0 (g.(equiv_fun) x)) f <~>	  (fun e : 1 = 1 =>	   forall g : X <~> X,	   transport (fun Z : Type => 1 = 1) (path_universe g.(equiv_fun)) e = e)	    ((equiv_concat_lr path_universe_1^ path_universe_1	      oE equiv_path2_universe 1 1).(equiv_fun) f)	";
+            data = "1 subgoal (ID 1055)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  ============================	  path_universe 1%equiv = 1	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 1030)		subgoal 1 (ID 1030) is:	 forall a : forall x : X, x = x,	 (fun f : forall x : X, x = x =>	  forall (g : X <~> X) (x : X), ap g (f x) = f (g x)) a <~>	 (fun e : 1 = 1 =>	  forall g : X <~> X,	  transport (fun Z : Type => 1 = 1) (path_universe g) e = e)	   ((equiv_concat_lr path_universe_1^ path_universe_1	     oE equiv_path2_universe 1 1) a)	1 subgoal (ID 1030)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  ============================	  forall a : forall x : X, x = x,	  (fun f : forall x : X, x = x =>	   forall (g : X <~> X) (x : X), ap g (f x) = f (g x)) a <~>	  (fun e : 1 = 1 =>	   forall g : X <~> X,	   transport (fun Z : Type => 1 = 1) (path_universe g) e = e)	    ((equiv_concat_lr path_universe_1^ path_universe_1	      oE equiv_path2_universe 1 1) a)	1 subgoal (ID 1073)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  f : forall x : X, x = x	  ============================	  (fun f0 : forall x : X, x = x =>	   forall (g : X <~> X) (x : X), ap g (f0 x) = f0 (g x)) f <~>	  (fun e : 1 = 1 =>	   forall g : X <~> X,	   transport (fun Z : Type => 1 = 1) (path_universe g) e = e)	    ((equiv_concat_lr path_universe_1^ path_universe_1	      oE equiv_path2_universe 1 1) f)	";
             responses[i]=data;
           
 
             i = 274;
-            data = "1 subgoal (ID 1090)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  f : forall x : X, x = x	  g : X <~> X	  ============================	  (forall x : X,	   ap (1%equiv.(equiv_fun) g).(equiv_fun) (f x) =	   f ((1%equiv.(equiv_fun) g).(equiv_fun) x)) <~>	  transport (fun Z : Type => 1 = 1) (path_universe g.(equiv_fun))	    ((equiv_concat_lr path_universe_1^ path_universe_1	      oE equiv_path2_universe 1 1).(equiv_fun) f) =	  (equiv_concat_lr path_universe_1^ path_universe_1	   oE equiv_path2_universe 1 1).(equiv_fun) f	";
+            data = "1 subgoal (ID 1090)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  f : forall x : X, x = x	  g : X <~> X	  ============================	  (forall x : X, ap (1%equiv g) (f x) = f (1%equiv g x)) <~>	  transport (fun Z : Type => 1 = 1) (path_universe g)	    ((equiv_concat_lr path_universe_1^ path_universe_1	      oE equiv_path2_universe 1 1) f) =	  (equiv_concat_lr path_universe_1^ path_universe_1	   oE equiv_path2_universe 1 1) f	";
             responses[i]=data;
           
 
             i = 275;
-            data = "1 subgoal (ID 1114)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  f : forall x : X, x = x	  g : X <~> X	  ============================	  path2_universe (fun x : X => ap (1%equiv.(equiv_fun) g).(equiv_fun) (f x)) =	  path2_universe (fun x : X => f ((1%equiv.(equiv_fun) g).(equiv_fun) x)) <~>	  transport (fun Z : Type => 1 = 1) (path_universe g.(equiv_fun))	    ((equiv_concat_lr path_universe_1^ path_universe_1	      oE equiv_path2_universe 1 1).(equiv_fun) f) =	  (equiv_concat_lr path_universe_1^ path_universe_1	   oE equiv_path2_universe 1 1).(equiv_fun) f	";
+            data = "1 subgoal (ID 1114)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  f : forall x : X, x = x	  g : X <~> X	  ============================	  path2_universe (fun x : X => ap (1%equiv g) (f x)) =	  path2_universe (fun x : X => f (1%equiv g x)) <~>	  transport (fun Z : Type => 1 = 1) (path_universe g)	    ((equiv_concat_lr path_universe_1^ path_universe_1	      oE equiv_path2_universe 1 1) f) =	  (equiv_concat_lr path_universe_1^ path_universe_1	   oE equiv_path2_universe 1 1) f	";
             responses[i]=data;
           
 
             i = 276;
-            data = "1 subgoal (ID 1131)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  f : forall x : X, x = x	  g : X <~> X	  ============================	  path2_universe (fun x : X => ap (1%equiv.(equiv_fun) g).(equiv_fun) (f x)) =	  path2_universe (fun x : X => f ((1%equiv.(equiv_fun) g).(equiv_fun) x)) <~>	  ((concat_1p (path_universe g.(equiv_fun)))^ @	   whiskerR	     ((equiv_concat_lr path_universe_1^ path_universe_1	       oE equiv_path2_universe 1 1).(equiv_fun) f)	     (path_universe g.(equiv_fun))) @ concat_1p (path_universe g.(equiv_fun)) =	  ((concat_p1 (path_universe g.(equiv_fun)))^ @	   whiskerL (path_universe g.(equiv_fun))	     ((equiv_concat_lr path_universe_1^ path_universe_1	       oE equiv_path2_universe 1 1).(equiv_fun) f)) @	  concat_p1 (path_universe g.(equiv_fun))	";
+            data = "1 subgoal (ID 1131)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  f : forall x : X, x = x	  g : X <~> X	  ============================	  path2_universe (fun x : X => ap (1%equiv g) (f x)) =	  path2_universe (fun x : X => f (1%equiv g x)) <~>	  ((concat_1p (path_universe g))^ @	   whiskerR	     ((equiv_concat_lr path_universe_1^ path_universe_1	       oE equiv_path2_universe 1 1) f) (path_universe g)) @	  concat_1p (path_universe g) =	  ((concat_p1 (path_universe g))^ @	   whiskerL (path_universe g)	     ((equiv_concat_lr path_universe_1^ path_universe_1	       oE equiv_path2_universe 1 1) f)) @ concat_p1 (path_universe g)	";
             responses[i]=data;
           
 
             i = 277;
-            data = "1 subgoal (ID 1132)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  f : forall x : X, x = x	  g : X <~> X	  ============================	  path2_universe (fun x : X => ap g.(equiv_fun) (f x)) =	  path2_universe (fun x : X => f (g.(equiv_fun) x)) <~>	  ((concat_1p (path_universe g.(equiv_fun)))^ @	   whiskerR	     ((path_universe_1^ @ (equiv_path2_universe 1 1).(equiv_fun) f) @	      path_universe_1) (path_universe g.(equiv_fun))) @	  concat_1p (path_universe g.(equiv_fun)) =	  ((concat_p1 (path_universe g.(equiv_fun)))^ @	   whiskerL (path_universe g.(equiv_fun))	     ((path_universe_1^ @ (equiv_path2_universe 1 1).(equiv_fun) f) @	      path_universe_1)) @ concat_p1 (path_universe g.(equiv_fun))	";
+            data = "1 subgoal (ID 1132)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  f : forall x : X, x = x	  g : X <~> X	  ============================	  path2_universe (fun x : X => ap g (f x)) =	  path2_universe (fun x : X => f (g x)) <~>	  ((concat_1p (path_universe g))^ @	   whiskerR	     ((path_universe_1^ @ (equiv_path2_universe 1 1) f) @ path_universe_1)	     (path_universe g)) @ concat_1p (path_universe g) =	  ((concat_p1 (path_universe g))^ @	   whiskerL (path_universe g)	     ((path_universe_1^ @ (equiv_path2_universe 1 1) f) @ path_universe_1)) @	  concat_p1 (path_universe g)	";
             responses[i]=data;
           
 
             i = 278;
-            data = "1 subgoal (ID 1135)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  f : 1%equiv.(equiv_fun) == 1%equiv.(equiv_fun)	  g : X <~> X	  ============================	  path2_universe (fun x : X => ap g.(equiv_fun) (f x)) =	  path2_universe (fun x : X => f (g.(equiv_fun) x)) <~>	  ((concat_1p (path_universe g.(equiv_fun)))^ @	   whiskerR	     ((path_universe_1^ @ (equiv_path2_universe 1 1).(equiv_fun) f) @	      path_universe_1) (path_universe g.(equiv_fun))) @	  concat_1p (path_universe g.(equiv_fun)) =	  ((concat_p1 (path_universe g.(equiv_fun)))^ @	   whiskerL (path_universe g.(equiv_fun))	     ((path_universe_1^ @ (equiv_path2_universe 1 1).(equiv_fun) f) @	      path_universe_1)) @ concat_p1 (path_universe g.(equiv_fun))	";
+            data = "1 subgoal (ID 1135)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  f : 1%equiv == 1%equiv	  g : X <~> X	  ============================	  path2_universe (fun x : X => ap g (f x)) =	  path2_universe (fun x : X => f (g x)) <~>	  ((concat_1p (path_universe g))^ @	   whiskerR	     ((path_universe_1^ @ (equiv_path2_universe 1 1) f) @ path_universe_1)	     (path_universe g)) @ concat_1p (path_universe g) =	  ((concat_p1 (path_universe g))^ @	   whiskerL (path_universe g)	     ((path_universe_1^ @ (equiv_path2_universe 1 1) f) @ path_universe_1)) @	  concat_p1 (path_universe g)	";
             responses[i]=data;
           
 
             i = 279;
-            data = "2 subgoals (ID 1145)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  f : 1%equiv.(equiv_fun) == 1%equiv.(equiv_fun)	  g : X <~> X	  ============================	  ((concat_1p (path_universe g.(equiv_fun)))^ @	   whiskerR	     ((path_universe_1^ @ (equiv_path2_universe 1 1).(equiv_fun) f) @	      path_universe_1) (path_universe g.(equiv_fun))) @	  concat_1p (path_universe g.(equiv_fun)) =	  path2_universe (fun x : X => ap g.(equiv_fun) (f x))		subgoal 2 (ID 1146) is:	 path2_universe (fun x : X => f (g.(equiv_fun) x)) =	 ((concat_p1 (path_universe g.(equiv_fun)))^ @	  whiskerL (path_universe g.(equiv_fun))	    ((path_universe_1^ @ (equiv_path2_universe 1 1).(equiv_fun) f) @	     path_universe_1)) @ concat_p1 (path_universe g.(equiv_fun))	";
+            data = "2 subgoals (ID 1145)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  f : 1%equiv == 1%equiv	  g : X <~> X	  ============================	  ((concat_1p (path_universe g))^ @	   whiskerR	     ((path_universe_1^ @ (equiv_path2_universe 1 1) f) @ path_universe_1)	     (path_universe g)) @ concat_1p (path_universe g) =	  path2_universe (fun x : X => ap g (f x))		subgoal 2 (ID 1146) is:	 path2_universe (fun x : X => f (g x)) =	 ((concat_p1 (path_universe g))^ @	  whiskerL (path_universe g)	    ((path_universe_1^ @ (equiv_path2_universe 1 1) f) @ path_universe_1)) @	 concat_p1 (path_universe g)	";
             responses[i]=data;
           
 
             i = 280;
-            data = "1 subgoal (ID 1145)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  f : 1%equiv.(equiv_fun) == 1%equiv.(equiv_fun)	  g : X <~> X	  ============================	  ((concat_1p (path_universe g.(equiv_fun)))^ @	   whiskerR	     ((path_universe_1^ @ (equiv_path2_universe 1 1).(equiv_fun) f) @	      path_universe_1) (path_universe g.(equiv_fun))) @	  concat_1p (path_universe g.(equiv_fun)) =	  path2_universe (fun x : X => ap g.(equiv_fun) (f x))	1 subgoal (ID 1160)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  f : 1%equiv.(equiv_fun) == 1%equiv.(equiv_fun)	  g : X <~> X	  ============================	  ((concat_1p (path_universe g.(equiv_fun)))^ @	   whiskerR	     ((path_universe_1^ @ (equiv_path2_universe 1 1).(equiv_fun) f) @	      path_universe_1) (path_universe g.(equiv_fun))) @	  concat_1p (path_universe g.(equiv_fun)) =	  ((((concat_1p (path_universe g.(equiv_fun)))^ @	     whiskerR path_universe_1^ (path_universe g.(equiv_fun))) @	    whiskerR ((equiv_path2_universe 1 1).(equiv_fun) f)	      (path_universe g.(equiv_fun))) @	   whiskerR path_universe_1 (path_universe g.(equiv_fun))) @	  concat_1p (path_universe g.(equiv_fun))	";
+            data = "1 subgoal (ID 1145)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  f : 1%equiv == 1%equiv	  g : X <~> X	  ============================	  ((concat_1p (path_universe g))^ @	   whiskerR	     ((path_universe_1^ @ (equiv_path2_universe 1 1) f) @ path_universe_1)	     (path_universe g)) @ concat_1p (path_universe g) =	  path2_universe (fun x : X => ap g (f x))	1 subgoal (ID 1160)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  f : 1%equiv == 1%equiv	  g : X <~> X	  ============================	  ((concat_1p (path_universe g))^ @	   whiskerR	     ((path_universe_1^ @ (equiv_path2_universe 1 1) f) @ path_universe_1)	     (path_universe g)) @ concat_1p (path_universe g) =	  ((((concat_1p (path_universe g))^ @	     whiskerR path_universe_1^ (path_universe g)) @	    whiskerR ((equiv_path2_universe 1 1) f) (path_universe g)) @	   whiskerR path_universe_1 (path_universe g)) @ concat_1p (path_universe g)	";
             responses[i]=data;
           
 
             i = 281;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1146)		subgoal 1 (ID 1146) is:	 path2_universe (fun x : X => f (g.(equiv_fun) x)) =	 ((concat_p1 (path_universe g.(equiv_fun)))^ @	  whiskerL (path_universe g.(equiv_fun))	    ((path_universe_1^ @ (equiv_path2_universe 1 1).(equiv_fun) f) @	     path_universe_1)) @ concat_p1 (path_universe g.(equiv_fun))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1146)		subgoal 1 (ID 1146) is:	 path2_universe (fun x : X => f (g x)) =	 ((concat_p1 (path_universe g))^ @	  whiskerL (path_universe g)	    ((path_universe_1^ @ (equiv_path2_universe 1 1) f) @ path_universe_1)) @	 concat_p1 (path_universe g)	";
             responses[i]=data;
           
 
             i = 282;
-            data = "1 subgoal (ID 1146)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  f : 1%equiv.(equiv_fun) == 1%equiv.(equiv_fun)	  g : X <~> X	  ============================	  path2_universe (fun x : X => f (g.(equiv_fun) x)) =	  ((concat_p1 (path_universe g.(equiv_fun)))^ @	   whiskerL (path_universe g.(equiv_fun))	     ((path_universe_1^ @ (equiv_path2_universe 1 1).(equiv_fun) f) @	      path_universe_1)) @ concat_p1 (path_universe g.(equiv_fun))	1 subgoal (ID 1255)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  f : 1%equiv.(equiv_fun) == 1%equiv.(equiv_fun)	  g : X <~> X	  ============================	  ((((concat_p1 (path_universe g.(equiv_fun)))^ @	     whiskerL (path_universe g.(equiv_fun)) path_universe_1^) @	    whiskerL (path_universe g.(equiv_fun))	      ((equiv_path2_universe 1 1).(equiv_fun) f)) @	   whiskerL (path_universe g.(equiv_fun)) path_universe_1) @	  concat_p1 (path_universe g.(equiv_fun)) =	  ((concat_p1 (path_universe g.(equiv_fun)))^ @	   whiskerL (path_universe g.(equiv_fun))	     ((path_universe_1^ @ (equiv_path2_universe 1 1).(equiv_fun) f) @	      path_universe_1)) @ concat_p1 (path_universe g.(equiv_fun))	";
+            data = "1 subgoal (ID 1146)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  f : 1%equiv == 1%equiv	  g : X <~> X	  ============================	  path2_universe (fun x : X => f (g x)) =	  ((concat_p1 (path_universe g))^ @	   whiskerL (path_universe g)	     ((path_universe_1^ @ (equiv_path2_universe 1 1) f) @ path_universe_1)) @	  concat_p1 (path_universe g)	1 subgoal (ID 1255)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : forall Z : BAut X, IsHSet (1 = 1)	  f : 1%equiv == 1%equiv	  g : X <~> X	  ============================	  ((((concat_p1 (path_universe g))^ @	     whiskerL (path_universe g) path_universe_1^) @	    whiskerL (path_universe g) ((equiv_path2_universe 1 1) f)) @	   whiskerL (path_universe g) path_universe_1) @ concat_p1 (path_universe g) =	  ((concat_p1 (path_universe g))^ @	   whiskerL (path_universe g)	     ((path_universe_1^ @ (equiv_path2_universe 1 1) f) @ path_universe_1)) @	  concat_p1 (path_universe g)	";
             responses[i]=data;
           
 
@@ -1483,7 +1483,7 @@
           
 
             i = 293;
-            data = "1 subgoal (ID 271)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  ============================	  (center2_baut X).(equiv_fun)	    (fun x : X => 1; fun (g : X <~> X) (x : X) => 1) = 	  (fun Z : BAut X => 1)	";
+            data = "1 subgoal (ID 271)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  ============================	  (center2_baut X) (fun x : X => 1; fun (g : X <~> X) (x : X) => 1) =	  (fun Z : BAut X => 1)	";
             responses[i]=data;
           
 
@@ -1493,32 +1493,32 @@
           
 
             i = 295;
-            data = "1 subgoal (ID 282)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  Z : BAut X	  ============================	  (center2_baut X).(equiv_fun)	    (fun x : X => 1; fun (g : X <~> X) (x : X) => 1) Z = 1	";
+            data = "1 subgoal (ID 282)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  Z : BAut X	  ============================	  (center2_baut X) (fun x : X => 1; fun (g : X <~> X) (x : X) => 1) Z = 1	";
             responses[i]=data;
           
 
             i = 296;
-            data = "1 subgoal (ID 292)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  Z : BAut X	  X0 : IsHSet (1 = 1)	  ============================	  (center2_baut X).(equiv_fun)	    (fun x : X => 1; fun (g : X <~> X) (x : X) => 1) Z = 1	";
+            data = "1 subgoal (ID 292)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  Z : BAut X	  X0 : IsHSet (1 = 1)	  ============================	  (center2_baut X) (fun x : X => 1; fun (g : X <~> X) (x : X) => 1) Z = 1	";
             responses[i]=data;
           
 
             i = 297;
-            data = "1 subgoal (ID 1293)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : IsHSet (1 = 1)	  ============================	  (center2_baut X).(equiv_fun)	    (fun x : X => 1; fun (g : X <~> X) (x : X) => 1) 	    (point (BAut X)) = 1	";
+            data = "1 subgoal (ID 1293)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : IsHSet (1 = 1)	  ============================	  (center2_baut X) (fun x : X => 1; fun (g : X <~> X) (x : X) => 1)	    (point (BAut X)) = 1	";
             responses[i]=data;
           
 
             i = 298;
-            data = "1 subgoal (ID 1294)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : IsHSet (1 = 1)	  ============================	  ((path_sigma_hprop_1 (X; tr 1))^ @	   ap (path_sigma_hprop (X; tr 1) (X; tr 1))	     ((path_universe_1^ @	       (equiv_path2_universe 1 1).(equiv_fun) (fun x : X => 1)) @	      path_universe_1)) @ path_sigma_hprop_1 (X; tr 1) = 1	";
+            data = "1 subgoal (ID 1294)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : IsHSet (1 = 1)	  ============================	  ((path_sigma_hprop_1 (X; tr 1))^ @	   ap (path_sigma_hprop (X; tr 1) (X; tr 1))	     ((path_universe_1^ @ (equiv_path2_universe 1 1) (fun x : X => 1)) @	      path_universe_1)) @ path_sigma_hprop_1 (X; tr 1) = 1	";
             responses[i]=data;
           
 
             i = 299;
-            data = "1 subgoal (ID 1295)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : IsHSet (1 = 1)	  ============================	  ((path_sigma_hprop_1 (X; tr 1))^ @	   ap (path_sigma_hprop (X; tr 1) (X; tr 1))	     ((path_universe_1^ @	       (equiv_path2_universe 1 1).(equiv_fun) (fun x : X => 1)) @	      path_universe_1)) @ path_sigma_hprop_1 (X; tr 1) = 1	";
+            data = "1 subgoal (ID 1295)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : IsHSet (1 = 1)	  ============================	  ((path_sigma_hprop_1 (X; tr 1))^ @	   ap (path_sigma_hprop (X; tr 1) (X; tr 1))	     ((path_universe_1^ @ (equiv_path2_universe 1 1) (fun x : X => 1)) @	      path_universe_1)) @ path_sigma_hprop_1 (X; tr 1) = 1	";
             responses[i]=data;
           
 
             i = 300;
-            data = "1 subgoal (ID 1296)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : IsHSet (1 = 1)	  ============================	  ((path_sigma_hprop_1 (X; tr 1))^ @	   ap (path_sigma_hprop (X; tr 1) (X; tr 1))	     ((path_universe_1^ @	       (equiv_path2_universe 1 1).(equiv_fun) (fun x : X => 1)) @	      path_universe_1)) @ path_sigma_hprop_1 (X; tr 1) = 1	";
+            data = "1 subgoal (ID 1296)	  	  H : Univalence	  X : Type	  H0 : IsTrunc 1 X	  X0 : IsHSet (1 = 1)	  ============================	  ((path_sigma_hprop_1 (X; tr 1))^ @	   ap (path_sigma_hprop (X; tr 1) (X; tr 1))	     ((path_universe_1^ @ (equiv_path2_universe 1 1) (fun x : X => 1)) @	      path_universe_1)) @ path_sigma_hprop_1 (X; tr 1) = 1	";
             responses[i]=data;
           
 

@@ -158,7 +158,7 @@
           
 
             i = 28;
-            data = "1 subgoal (ID 62)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  f : A -> B	  IsEquiv0 : IsEquiv f	  SemiRingPreserving0 : SemiRingPreserving f	  ============================	  {p : A.(proj1_sig) = B.(proj1_sig) &	  transport (fun T : Type => (Plus T * Mult T * Zero T * One T)%type) p	    A.(proj2_sig) = B.(proj2_sig)}	";
+            data = "1 subgoal (ID 62)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  f : A -> B	  IsEquiv0 : IsEquiv f	  SemiRingPreserving0 : SemiRingPreserving f	  ============================	  {p : A.1 = B.1 &	  transport (fun T : Type => (Plus T * Mult T * Zero T * One T)%type) p A.2 =	  B.2}	";
             responses[i]=data;
           
 
@@ -188,22 +188,22 @@
           
 
             i = 34;
-            data = "4 subgoals (ID 291)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  SemiRingPreserving0 : SemiRingPreserving f	  x, y : TB	  ============================	  f (IsEquiv0.(equiv_inv) x + IsEquiv0.(equiv_inv) y) = x + y		subgoal 2 (ID 316) is:	 f (IsEquiv0.(equiv_inv) x * IsEquiv0.(equiv_inv) y) = x * y	subgoal 3 (ID 328) is:	 f 0 = 0	subgoal 4 (ID 343) is:	 f 1 = 1	";
+            data = "4 subgoals (ID 291)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  SemiRingPreserving0 : SemiRingPreserving f	  x, y : TB	  ============================	  f (_^-1 x + _^-1 y) = x + y		subgoal 2 (ID 316) is:	 f (_^-1 x * _^-1 y) = x * y	subgoal 3 (ID 328) is:	 f 0 = 0	subgoal 4 (ID 343) is:	 f 1 = 1	";
             responses[i]=data;
           
 
             i = 35;
-            data = "1 subgoal (ID 291)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  SemiRingPreserving0 : SemiRingPreserving f	  x, y : TB	  ============================	  f (IsEquiv0.(equiv_inv) x + IsEquiv0.(equiv_inv) y) = x + y	1 subgoal (ID 366)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  SemiRingPreserving0 : SemiRingPreserving f	  x, y : TB	  ============================	  f (IsEquiv0.(equiv_inv) x) + f (IsEquiv0.(equiv_inv) y) = x + y	";
+            data = "1 subgoal (ID 291)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  SemiRingPreserving0 : SemiRingPreserving f	  x, y : TB	  ============================	  f (_^-1 x + _^-1 y) = x + y	1 subgoal (ID 366)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  SemiRingPreserving0 : SemiRingPreserving f	  x, y : TB	  ============================	  f (_^-1 x) + f (_^-1 y) = x + y	";
             responses[i]=data;
           
 
             i = 36;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	3 subgoals (ID 316)		subgoal 1 (ID 316) is:	 f (IsEquiv0.(equiv_inv) x * IsEquiv0.(equiv_inv) y) = x * y	subgoal 2 (ID 328) is:	 f 0 = 0	subgoal 3 (ID 343) is:	 f 1 = 1	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	3 subgoals (ID 316)		subgoal 1 (ID 316) is:	 f (_^-1 x * _^-1 y) = x * y	subgoal 2 (ID 328) is:	 f 0 = 0	subgoal 3 (ID 343) is:	 f 1 = 1	";
             responses[i]=data;
           
 
             i = 37;
-            data = "1 subgoal (ID 316)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  SemiRingPreserving0 : SemiRingPreserving f	  x, y : TB	  ============================	  f (IsEquiv0.(equiv_inv) x * IsEquiv0.(equiv_inv) y) = x * y	1 subgoal (ID 398)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  SemiRingPreserving0 : SemiRingPreserving f	  x, y : TB	  ============================	  f (IsEquiv0.(equiv_inv) x) * f (IsEquiv0.(equiv_inv) y) = x * y	";
+            data = "1 subgoal (ID 316)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  SemiRingPreserving0 : SemiRingPreserving f	  x, y : TB	  ============================	  f (_^-1 x * _^-1 y) = x * y	1 subgoal (ID 398)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  SemiRingPreserving0 : SemiRingPreserving f	  x, y : TB	  ============================	  f (_^-1 x) * f (_^-1 y) = x * y	";
             responses[i]=data;
           
 
@@ -368,7 +368,7 @@
           
 
             i = 70;
-            data = "1 subgoal (ID 88)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  f : A -> B	  IsEquiv0 : IsEquiv f	  Ring0 : Ring A	  Ring1 : Ring B	  SemiRingPreserving0 : SemiRingPreserving f	  ============================	  {p : A.(proj1_sig) = B.(proj1_sig) &	  transport	    (fun T : Type => (Plus T * Mult T * Zero T * One T * Negate T)%type) p	    A.(proj2_sig) = B.(proj2_sig)}	";
+            data = "1 subgoal (ID 88)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  f : A -> B	  IsEquiv0 : IsEquiv f	  Ring0 : Ring A	  Ring1 : Ring B	  SemiRingPreserving0 : SemiRingPreserving f	  ============================	  {p : A.1 = B.1 &	  transport	    (fun T : Type => (Plus T * Mult T * Zero T * One T * Negate T)%type) p	    A.2 = B.2}	";
             responses[i]=data;
           
 
@@ -398,42 +398,42 @@
           
 
             i = 76;
-            data = "5 subgoals (ID 395)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  nA : Negate TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  nB : Negate TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  Ring0 : Ring TA	  Ring1 : Ring TB	  SemiRingPreserving0 : SemiRingPreserving f	  x, y : TB	  ============================	  f (IsEquiv0.(equiv_inv) x + IsEquiv0.(equiv_inv) y) = x + y		subgoal 2 (ID 420) is:	 f (IsEquiv0.(equiv_inv) x * IsEquiv0.(equiv_inv) y) = x * y	subgoal 3 (ID 432) is:	 f 0 = 0	subgoal 4 (ID 447) is:	 f 1 = 1	subgoal 5 (ID 470) is:	 f (- IsEquiv0.(equiv_inv) x) = - x	";
+            data = "5 subgoals (ID 395)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  nA : Negate TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  nB : Negate TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  Ring0 : Ring TA	  Ring1 : Ring TB	  SemiRingPreserving0 : SemiRingPreserving f	  x, y : TB	  ============================	  f (_^-1 x + _^-1 y) = x + y		subgoal 2 (ID 420) is:	 f (_^-1 x * _^-1 y) = x * y	subgoal 3 (ID 432) is:	 f 0 = 0	subgoal 4 (ID 447) is:	 f 1 = 1	subgoal 5 (ID 470) is:	 f (- _^-1 x) = - x	";
             responses[i]=data;
           
 
             i = 77;
-            data = "1 subgoal (ID 395)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  nA : Negate TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  nB : Negate TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  Ring0 : Ring TA	  Ring1 : Ring TB	  SemiRingPreserving0 : SemiRingPreserving f	  x, y : TB	  ============================	  f (IsEquiv0.(equiv_inv) x + IsEquiv0.(equiv_inv) y) = x + y	1 subgoal (ID 490)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  nA : Negate TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  nB : Negate TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  Ring0 : Ring TA	  Ring1 : Ring TB	  SemiRingPreserving0 : SemiRingPreserving f	  x, y : TB	  ============================	  f (IsEquiv0.(equiv_inv) x) + f (IsEquiv0.(equiv_inv) y) = x + y	";
+            data = "1 subgoal (ID 395)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  nA : Negate TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  nB : Negate TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  Ring0 : Ring TA	  Ring1 : Ring TB	  SemiRingPreserving0 : SemiRingPreserving f	  x, y : TB	  ============================	  f (_^-1 x + _^-1 y) = x + y	1 subgoal (ID 490)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  nA : Negate TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  nB : Negate TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  Ring0 : Ring TA	  Ring1 : Ring TB	  SemiRingPreserving0 : SemiRingPreserving f	  x, y : TB	  ============================	  f (_^-1 x) + f (_^-1 y) = x + y	";
             responses[i]=data;
           
 
             i = 78;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	4 subgoals (ID 420)		subgoal 1 (ID 420) is:	 f (IsEquiv0.(equiv_inv) x * IsEquiv0.(equiv_inv) y) = x * y	subgoal 2 (ID 432) is:	 f 0 = 0	subgoal 3 (ID 447) is:	 f 1 = 1	subgoal 4 (ID 470) is:	 f (- IsEquiv0.(equiv_inv) x) = - x	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	4 subgoals (ID 420)		subgoal 1 (ID 420) is:	 f (_^-1 x * _^-1 y) = x * y	subgoal 2 (ID 432) is:	 f 0 = 0	subgoal 3 (ID 447) is:	 f 1 = 1	subgoal 4 (ID 470) is:	 f (- _^-1 x) = - x	";
             responses[i]=data;
           
 
             i = 79;
-            data = "1 subgoal (ID 420)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  nA : Negate TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  nB : Negate TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  Ring0 : Ring TA	  Ring1 : Ring TB	  SemiRingPreserving0 : SemiRingPreserving f	  x, y : TB	  ============================	  f (IsEquiv0.(equiv_inv) x * IsEquiv0.(equiv_inv) y) = x * y	1 subgoal (ID 522)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  nA : Negate TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  nB : Negate TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  Ring0 : Ring TA	  Ring1 : Ring TB	  SemiRingPreserving0 : SemiRingPreserving f	  x, y : TB	  ============================	  f (IsEquiv0.(equiv_inv) x) * f (IsEquiv0.(equiv_inv) y) = x * y	";
+            data = "1 subgoal (ID 420)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  nA : Negate TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  nB : Negate TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  Ring0 : Ring TA	  Ring1 : Ring TB	  SemiRingPreserving0 : SemiRingPreserving f	  x, y : TB	  ============================	  f (_^-1 x * _^-1 y) = x * y	1 subgoal (ID 522)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  nA : Negate TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  nB : Negate TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  Ring0 : Ring TA	  Ring1 : Ring TB	  SemiRingPreserving0 : SemiRingPreserving f	  x, y : TB	  ============================	  f (_^-1 x) * f (_^-1 y) = x * y	";
             responses[i]=data;
           
 
             i = 80;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	3 subgoals (ID 432)		subgoal 1 (ID 432) is:	 f 0 = 0	subgoal 2 (ID 447) is:	 f 1 = 1	subgoal 3 (ID 470) is:	 f (- IsEquiv0.(equiv_inv) x) = - x	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	3 subgoals (ID 432)		subgoal 1 (ID 432) is:	 f 0 = 0	subgoal 2 (ID 447) is:	 f 1 = 1	subgoal 3 (ID 470) is:	 f (- _^-1 x) = - x	";
             responses[i]=data;
           
 
             i = 81;
-            data = "1 subgoal (ID 432)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  nA : Negate TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  nB : Negate TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  Ring0 : Ring TA	  Ring1 : Ring TB	  SemiRingPreserving0 : SemiRingPreserving f	  ============================	  f 0 = 0	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 447)		subgoal 1 (ID 447) is:	 f 1 = 1	subgoal 2 (ID 470) is:	 f (- IsEquiv0.(equiv_inv) x) = - x	";
+            data = "1 subgoal (ID 432)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  nA : Negate TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  nB : Negate TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  Ring0 : Ring TA	  Ring1 : Ring TB	  SemiRingPreserving0 : SemiRingPreserving f	  ============================	  f 0 = 0	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 447)		subgoal 1 (ID 447) is:	 f 1 = 1	subgoal 2 (ID 470) is:	 f (- _^-1 x) = - x	";
             responses[i]=data;
           
 
             i = 82;
-            data = "1 subgoal (ID 447)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  nA : Negate TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  nB : Negate TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  Ring0 : Ring TA	  Ring1 : Ring TB	  SemiRingPreserving0 : SemiRingPreserving f	  ============================	  f 1 = 1	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 470)		subgoal 1 (ID 470) is:	 f (- IsEquiv0.(equiv_inv) x) = - x	";
+            data = "1 subgoal (ID 447)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  nA : Negate TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  nB : Negate TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  Ring0 : Ring TA	  Ring1 : Ring TB	  SemiRingPreserving0 : SemiRingPreserving f	  ============================	  f 1 = 1	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 470)		subgoal 1 (ID 470) is:	 f (- _^-1 x) = - x	";
             responses[i]=data;
           
 
             i = 83;
-            data = "1 subgoal (ID 470)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  nA : Negate TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  nB : Negate TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  Ring0 : Ring TA	  Ring1 : Ring TB	  SemiRingPreserving0 : SemiRingPreserving f	  x : TB	  ============================	  f (- IsEquiv0.(equiv_inv) x) = - x	1 subgoal (ID 582)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  nA : Negate TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  nB : Negate TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  Ring0 : Ring TA	  Ring1 : Ring TB	  SemiRingPreserving0 : SemiRingPreserving f	  x : TB	  ============================	  - f (IsEquiv0.(equiv_inv) x) = - x	";
+            data = "1 subgoal (ID 470)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  nA : Negate TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  nB : Negate TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  Ring0 : Ring TA	  Ring1 : Ring TB	  SemiRingPreserving0 : SemiRingPreserving f	  x : TB	  ============================	  f (- _^-1 x) = - x	1 subgoal (ID 582)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  nA : Negate TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  nB : Negate TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  Ring0 : Ring TA	  Ring1 : Ring TB	  SemiRingPreserving0 : SemiRingPreserving f	  x : TB	  ============================	  - f (_^-1 x) = - x	";
             responses[i]=data;
           
 
