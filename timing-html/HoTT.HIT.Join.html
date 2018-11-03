@@ -38,21 +38,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: Join.v
 Line: 2
-Time: 0.045s">
-<div class="time" style="width: 12.931034482759%"></div>
+Time: 0.049s">
+<div class="time" style="width: 15.264797507788%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
 <div class="code" title="File: Join.v
 Line: 2
 Time: 0.005s">
-<div class="time" style="width: 1.4367816091954%"></div>
+<div class="time" style="width: 1.5576323987539%"></div>
 <pre>
 Require Import HProp HSet.</pre>
 </div>
 <div class="code" title="File: Join.v
 Line: 3
-Time: 0.188s">
-<div class="time" style="width: 54.022988505747%"></div>
+Time: 0.205s">
+<div class="time" style="width: 63.86292834891%"></div>
 <pre>
 Require Import HIT.Pushout HIT.Truncations.</pre>
 </div>
@@ -90,8 +90,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Join.v
 Line: 12
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.31152647975078%"></div>
 <pre>
 
   Definition joinpp A B := @pp (A*B) A B fst snd.</pre>
@@ -127,8 +127,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Join.v
 Line: 19
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.31152647975078%"></div>
 <pre>
     intros y; simple refine (pushout_ind _ _ _ _ _ _ y).</pre>
 </div>
@@ -141,8 +141,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Join.v
 Line: 21
-Time: 0.001s">
-<div class="time" style="width: 0.28735632183908%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> intros a; apply ap, contr.</pre>
 </div>
 <div class="code" title="File: Join.v
@@ -168,34 +168,34 @@ Time: 0s">
 <div class="code" title="File: Join.v
 Line: 23
 Time: 0.002s">
-<div class="time" style="width: 0.57471264367816%"></div>
+<div class="time" style="width: 0.62305295950156%"></div>
 <pre> intros [a b]; cbn.</pre>
 </div>
 <div class="code" title="File: Join.v
 Line: 23
-Time: 0.002s">
-<div class="time" style="width: 0.57471264367816%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.31152647975078%"></div>
 <pre>
       refine ( _ @ apD (fun a' =&gt; joinpp A B (a',b)) (contr a)^).</pre>
 </div>
 <div class="code" title="File: Join.v
 Line: 24
-Time: 0.009s">
-<div class="time" style="width: 2.5862068965517%"></div>
+Time: 0.01s">
+<div class="time" style="width: 3.1152647975078%"></div>
 <pre>
       rewrite transport_paths_r, transport_paths_FlFr; cbn.</pre>
 </div>
 <div class="code" title="File: Join.v
 Line: 25
-Time: 0.013s">
-<div class="time" style="width: 3.735632183908%"></div>
+Time: 0.014s">
+<div class="time" style="width: 4.3613707165109%"></div>
 <pre>
       rewrite ap_V, inv_V, concat_pp_p.</pre>
 </div>
 <div class="code" title="File: Join.v
 Line: 26
 Time: 0.008s">
-<div class="time" style="width: 2.2988505747126%"></div>
+<div class="time" style="width: 2.4922118380062%"></div>
 <pre>
       rewrite ap_const, concat_p1.</pre>
 </div>
@@ -208,8 +208,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Join.v
 Line: 28
-Time: 0.03s">
-<div class="time" style="width: 8.6206896551724%"></div>
+Time: 0.031s">
+<div class="time" style="width: 9.6573208722741%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -237,15 +237,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Join.v
 Line: 33
-Time: 0.001s">
-<div class="time" style="width: 0.28735632183908%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>  
     unfold join; refine (pushout_sym oE _).</pre>
 </div>
 <div class="code" title="File: Join.v
 Line: 34
 Time: 0.002s">
-<div class="time" style="width: 0.57471264367816%"></div>
+<div class="time" style="width: 0.62305295950156%"></div>
 <pre>
     refine (equiv_pushout (equiv_prod_symm A B) 1 1 _ _);
       intros [a b]; reflexivity.</pre>
@@ -253,7 +253,7 @@ Time: 0.002s">
 <div class="code" title="File: Join.v
 Line: 36
 Time: 0.001s">
-<div class="time" style="width: 0.28735632183908%"></div>
+<div class="time" style="width: 0.31152647975078%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -296,7 +296,7 @@ Time: 0s">
 <div class="code" title="File: Join.v
 Line: 43
 Time: 0.047s">
-<div class="time" style="width: 13.505747126437%"></div>
+<div class="time" style="width: 14.641744548287%"></div>
 <pre>
     refine (pushout_rec _ _ _ (fun _ =&gt; path_ishprop _ _)).</pre>
 </div>
@@ -329,7 +329,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: Join.v
 Line: 47
-Time: 0.348s">
+Time: 0.321s">
 <div class="time" style="width: 100%"></div>
 <pre> intros b; refine (trunc_equiv (join B A) (join_sym B A)).</pre>
 </div>
@@ -350,7 +350,7 @@ Time: 0s">
 <div class="code" title="File: Join.v
 Line: 49
 Time: 0.001s">
-<div class="time" style="width: 0.28735632183908%"></div>
+<div class="time" style="width: 0.31152647975078%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -379,8 +379,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Join.v
 Line: 55
-Time: 0.027s">
-<div class="time" style="width: 7.7586206896552%"></div>
+Time: 0.021s">
+<div class="time" style="width: 6.5420560747664%"></div>
 <pre>
     apply equiv_iff_hprop.</pre>
 </div>
@@ -394,7 +394,7 @@ Time: 0s">
 <div class="code" title="File: Join.v
 Line: 57
 Time: 0.002s">
-<div class="time" style="width: 0.57471264367816%"></div>
+<div class="time" style="width: 0.62305295950156%"></div>
 <pre> refine (pushout_rec _ (fun a =&gt; tr (inl a)) (fun b =&gt; tr (inr b)) (fun _ =&gt; path_ishprop _ _)).</pre>
 </div>
 <div class="code" title="File: Join.v
@@ -406,21 +406,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: Join.v
 Line: 58
-Time: 0.03s">
-<div class="time" style="width: 8.6206896551724%"></div>
+Time: 0.024s">
+<div class="time" style="width: 7.4766355140187%"></div>
 <pre> apply Trunc_rec, push.</pre>
 </div>
 <div class="code" title="File: Join.v
 Line: 58
 Time: 0.001s">
-<div class="time" style="width: 0.28735632183908%"></div>
+<div class="time" style="width: 0.31152647975078%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Join.v
 Line: 59
-Time: 0.018s">
-<div class="time" style="width: 5.1724137931034%"></div>
+Time: 0.016s">
+<div class="time" style="width: 4.9844236760125%"></div>
 <pre>
 
 End Join.</pre>
