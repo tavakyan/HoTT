@@ -39,8 +39,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 4
-Time: 0.001s">
-<div class="time" style="width: 50%"></div>
+Time: 0.002s">
+<div class="time" style="width: 100%"></div>
 <pre>Require Export Basics.Notations.</pre>
 </div>
 <div class="code" title="File: Overture.v
@@ -202,8 +202,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 35
-Time: 0.001s">
-<div class="time" style="width: 50%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Class PreOrder {A} (R : relation A) :=
   { PreOrder_Reflexive : Reflexive R | 2 ;
     PreOrder_Transitive : Transitive R | 2 }.</pre>
@@ -751,8 +751,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 150
-Time: 0.002s">
-<div class="time" style="width: 100%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition Compose {A B C : Type} (g : B -&gt; C) (f : A -&gt; B) : A -&gt; C := compose g f.</pre>
 </div>
 <div class="code" title="File: Overture.v
@@ -765,8 +765,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 152
-Time: 0.001s">
-<div class="time" style="width: 50%"></div>
+Time: 0.002s">
+<div class="time" style="width: 100%"></div>
 <pre>Instance iff_compose : Transitive iff | 1
   := fun A B C f g =&gt; (fst g o fst f , snd f o snd g).</pre>
 </div>
@@ -809,8 +809,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 160
-Time: 0.001s">
-<div class="time" style="width: 50%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Instance iff_reflexive : Reflexive iff | 1
   := fun A =&gt; (idmap , idmap).</pre>
 </div>
@@ -1103,8 +1103,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 213
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 50%"></div>
 <pre>Definition inverse {A : Type} {x y : A} (p : x = y) : y = x
   := match p with idpath =&gt; idpath end.</pre>
 </div>
@@ -1169,8 +1169,8 @@ Module Export symmetric_paths := inverseSymmetric inverse.
 </div>
 <div class="code" title="File: Overture.v
 Line: 242
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 50%"></div>
 <pre>Definition concat {A : Type} {x y z : A} (p : x = y) (q : y = z) : x = z :=
   match p, q with idpath, idpath =&gt; idpath end.</pre>
 </div>
@@ -1277,8 +1277,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 266
-Time: 0.001s">
-<div class="time" style="width: 50%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition transport {A : Type} (P : A -&gt; Type) {x y : A} (p : x = y) (u : P x) : P y :=
   match p with idpath =&gt; u end.</pre>
 </div>
@@ -1396,8 +1396,8 @@ Notation "f == g" := (pointwise_paths f g) : type_scope.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 298
-Time: 0.001s">
-<div class="time" style="width: 50%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition apD10 {A} {B:A-&gt;Type} {f g : forall x, B x} (h:f=g)
@@ -1460,8 +1460,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 314
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 50%"></div>
 <pre>
   case h, p; reflexivity.</pre>
 </div>
@@ -1981,8 +1981,8 @@ Definition int_to_trunc_index (v : Decimal.int) : option trunc_index
 </div>
 <div class="code" title="File: Overture.v
 Line: 465
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 50%"></div>
 <pre>
 
 Fixpoint trunc_index_to_little_uint n acc :=
@@ -2036,8 +2036,8 @@ Notation "-1" := (- 1) : trunc_scope.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 484
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 50%"></div>
 <pre>
 
 Fixpoint IsTrunc_internal (n : trunc_index) (A : Type) : Type :=
@@ -2056,8 +2056,8 @@ Arguments IsTrunc_internal n A : simpl nomatch.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 492
-Time: 0.001s">
-<div class="time" style="width: 50%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Class IsTrunc (n : trunc_index) (A : Type) : Type :=
@@ -2304,8 +2304,8 @@ Global Arguments path_forall {_ A%type_scope P} (f g)%function_scope _.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 560
-Time: 0.001s">
-<div class="time" style="width: 50%"></div>
+Time: 0.002s">
+<div class="time" style="width: 100%"></div>
 <pre>
 
 Definition path_forall2 `{Funext} {A B : Type} {P : A -&gt; B -&gt; Type} (f g : forall x y, P x y) :
@@ -2393,8 +2393,8 @@ Scheme Empty_rec := Minimality for Empty Sort Type.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 589
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 50%"></div>
 <pre>
 Definition Empty_rect := Empty_ind.</pre>
 </div>
@@ -2469,8 +2469,8 @@ Typeclasses Opaque complement.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 605
-Time: 0.001s">
-<div class="time" style="width: 50%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Class Irreflexive {A} (R : relation A) :=
@@ -2548,8 +2548,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 624
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 50%"></div>
 <pre>Class IsPointed (A : Type) := point : A.</pre>
 </div>
 <div class="code" title="File: Overture.v
@@ -2562,8 +2562,8 @@ Arguments point A {_}.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 626
-Time: 0.001s">
-<div class="time" style="width: 50%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Record pType :=
@@ -2626,8 +2626,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 646
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 50%"></div>
 <pre>Ltac rapply p :=
   refine p ||
   refine (p _) ||
