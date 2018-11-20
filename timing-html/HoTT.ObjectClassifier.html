@@ -46,15 +46,15 @@ Time: 0.02s">
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 4
-Time: 0.019s">
-<div class="time" style="width: 95%"></div>
+Time: 0.017s">
+<div class="time" style="width: 85%"></div>
 <pre>
 Require Import Types.Universe Types.Sigma Types.Arrow.</pre>
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 5
-Time: 0.018s">
-<div class="time" style="width: 90%"></div>
+Time: 0.02s">
+<div class="time" style="width: 100%"></div>
 <pre>
 Require Import Fibrations HProp EquivalenceVarieties UnivalenceImpliesFunext Pullback.</pre>
 </div>
@@ -134,8 +134,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 20
-Time: 0.004s">
-<div class="time" style="width: 20%"></div>
+Time: 0.003s">
+<div class="time" style="width: 15%"></div>
 <pre>Theorem transport_exp (U V:Type)(w:U&lt;~&gt;V): forall (f:U-&gt;A),
   (transport (fun I:Type =&gt; I-&gt;A) (path_universe w) f) = (f o w^-1).</pre>
 </div>
@@ -169,15 +169,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 25
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 5%"></div>
 <pre>
   by apply transport_path_universe_V.</pre>
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 26
-Time: 0.001s">
-<div class="time" style="width: 5%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -239,8 +239,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 34
-Time: 0.002s">
-<div class="time" style="width: 10%"></div>
+Time: 0.001s">
+<div class="time" style="width: 5%"></div>
 <pre>
   enough (X:{p : I = {a : A &amp; @hfiber I A f a} &amp;
      @transport _ (fun I0 : Type =&gt; I0 -&gt; A) _ _ p f = @pr1 _ _}) by apply (e X)^.</pre>
@@ -317,8 +317,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 45
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 5%"></div>
 <pre>Definition topmap {B} (f:B-&gt;A) (b:B): pType :=
   Build_pType (hfiber f (f b)) (b ; idpath (f b)).</pre>
 </div>
@@ -363,8 +363,8 @@ Defined.</pre>
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 55
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 5%"></div>
 <pre>
 
 Lemma objclasspb_is_fibrantreplacement (P:A-&gt; Type): (sigT P) &lt;~&gt; (Pullback P (@pr1 _ (fun u :Type =&gt; u))).</pre>
@@ -392,8 +392,8 @@ apply isequiv_biinv.</pre>
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 60
-Time: 0.003s">
-<div class="time" style="width: 15%"></div>
+Time: 0.002s">
+<div class="time" style="width: 10%"></div>
 <pre> split; exists (help_objclasspb_is_fibrantreplacement2 P); intros [a p].</pre>
 </div>
 <div class="code" title="File: ObjectClassifier.v
@@ -425,21 +425,21 @@ simpl in p.</pre>
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 63
-Time: 0.004s">
-<div class="time" style="width: 20%"></div>
+Time: 0.003s">
+<div class="time" style="width: 15%"></div>
 <pre> by path_induction.</pre>
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 63
-Time: 0.007s">
-<div class="time" style="width: 35%"></div>
+Time: 0.006s">
+<div class="time" style="width: 30%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 64
-Time: 0.002s">
-<div class="time" style="width: 10%"></div>
+Time: 0.001s">
+<div class="time" style="width: 5%"></div>
 <pre>
 
 End FamPow.</pre>
@@ -535,8 +535,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 83
-Time: 0.004s">
-<div class="time" style="width: 20%"></div>
+Time: 0.003s">
+<div class="time" style="width: 15%"></div>
 <pre> 
 rewrite &lt;- (path_universe_uncurried (@hfiber_fibration A i (pr1 o P))).</pre>
 </div>
@@ -602,8 +602,8 @@ Definition Pfam2pow (F:PFam) (a:A): {X :Type &amp; isP X}:=
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 96
-Time: 0.001s">
-<div class="time" style="width: 5%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Theorem PowisoPFam : (forall a:A, {X :Type &amp; isP X})&lt;~&gt;PFam.</pre>
@@ -617,8 +617,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 99
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 5%"></div>
 <pre>
 apply (equiv_adjointify pow2Pfam Pfam2pow).</pre>
 </div>
@@ -637,8 +637,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 101
-Time: 0.015s">
-<div class="time" style="width: 75%"></div>
+Time: 0.014s">
+<div class="time" style="width: 70%"></div>
 <pre> apply path_sigma_hprop.</pre>
 </div>
 <div class="code" title="File: ObjectClassifier.v
@@ -649,8 +649,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 101
-Time: 0.008s">
-<div class="time" style="width: 40%"></div>
+Time: 0.007s">
+<div class="time" style="width: 35%"></div>
 <pre>
   refine (@eisretr _ _ (FamequivPow A) _ (B;f)).</pre>
 </div>
@@ -695,8 +695,8 @@ Time: 0.005s">
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 105
-Time: 0.002s">
-<div class="time" style="width: 10%"></div>
+Time: 0.001s">
+<div class="time" style="width: 5%"></div>
 <pre>
   apply (ap10 (p (pr1 o P)) a).</pre>
 </div>
@@ -723,8 +723,8 @@ End Subobjectclassifier.</pre>
 </div>
 <div class="code" title="File: ObjectClassifier.v
 Line: 109
-Time: 0.01s">
-<div class="time" style="width: 50%"></div>
+Time: 0.009s">
+<div class="time" style="width: 45%"></div>
 <pre>
 
 End AssumeUnivalence.</pre>

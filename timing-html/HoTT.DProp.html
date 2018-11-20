@@ -40,21 +40,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: DProp.v
 Line: 4
-Time: 0.049s">
-<div class="time" style="width: 18.081180811808%"></div>
+Time: 0.044s">
+<div class="time" style="width: 17.322834645669%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
 <div class="code" title="File: DProp.v
 Line: 4
-Time: 0.01s">
-<div class="time" style="width: 3.690036900369%"></div>
+Time: 0.013s">
+<div class="time" style="width: 5.1181102362205%"></div>
 <pre>
 Require Import TruncType HProp UnivalenceImpliesFunext.</pre>
 </div>
 <div class="code" title="File: DProp.v
 Line: 5
-Time: 0.204s">
-<div class="time" style="width: 75.276752767528%"></div>
+Time: 0.179s">
+<div class="time" style="width: 70.472440944882%"></div>
 <pre>
 Require Import HIT.Truncations.</pre>
 </div>
@@ -81,7 +81,7 @@ Time: 0s">
 <div class="code" title="File: DProp.v
 Line: 13
 Time: 0.001s">
-<div class="time" style="width: 0.3690036900369%"></div>
+<div class="time" style="width: 0.39370078740157%"></div>
 <pre>Record DProp :=
   { dprop_type : Type ;
     ishprop_dprop : Funext -&gt; IsHProp dprop_type ;
@@ -144,8 +144,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: DProp.v
 Line: 39
-Time: 0.002s">
-<div class="time" style="width: 0.7380073800738%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.39370078740157%"></div>
 <pre>Record DHProp :=
   { dhprop_hprop : hProp ;
     dec_dhprop : Decidable dhprop_hprop
@@ -168,8 +168,8 @@ Global Existing Instance dec_dhprop.</pre>
 </div>
 <div class="code" title="File: DProp.v
 Line: 45
-Time: 0.003s">
-<div class="time" style="width: 1.1070110701107%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>
 
 Definition dhprop_to_dprop : DHProp -&gt; DProp
@@ -221,8 +221,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: DProp.v
 Line: 60
-Time: 0.001s">
-<div class="time" style="width: 0.3690036900369%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition dprop_to_bool (P : DProp) : Bool
   := if dec P then true else false.</pre>
 </div>
@@ -278,14 +278,14 @@ Proof.</pre>
 <div class="code" title="File: DProp.v
 Line: 72
 Time: 0.005s">
-<div class="time" style="width: 1.8450184501845%"></div>
+<div class="time" style="width: 1.9685039370079%"></div>
 <pre>
   issig Build_DProp dprop_type ishprop_dprop dec_dprop.</pre>
 </div>
 <div class="code" title="File: DProp.v
 Line: 73
 Time: 0.003s">
-<div class="time" style="width: 1.1070110701107%"></div>
+<div class="time" style="width: 1.1811023622047%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -314,14 +314,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: DProp.v
 Line: 79
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.39370078740157%"></div>
 <pre> destruct Q as [Q hQ dQ].</pre>
 </div>
 <div class="code" title="File: DProp.v
 Line: 79
 Time: 0.001s">
-<div class="time" style="width: 0.3690036900369%"></div>
+<div class="time" style="width: 0.39370078740157%"></div>
 <pre>
   refine (((equiv_ap' issig_dprop^-1 _ _)^-1)
             oE _); cbn.</pre>
@@ -329,7 +329,7 @@ Time: 0.001s">
 <div class="code" title="File: DProp.v
 Line: 81
 Time: 0.003s">
-<div class="time" style="width: 1.1070110701107%"></div>
+<div class="time" style="width: 1.1811023622047%"></div>
 <pre>
   refine ((equiv_ap' (equiv_sigma_assoc _ (fun Xp =&gt; Decidable Xp.1))^-1
                      ((P;hP);dP) ((Q;hQ);dQ))
@@ -337,7 +337,7 @@ Time: 0.003s">
 </div>
 <div class="code" title="File: DProp.v
 Line: 84
-Time: 0.271s">
+Time: 0.254s">
 <div class="time" style="width: 100%"></div>
 <pre>
   refine (equiv_path_sigma_hprop _ _ oE _); cbn.</pre>
@@ -351,8 +351,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: DProp.v
 Line: 86
-Time: 0.011s">
-<div class="time" style="width: 4.0590405904059%"></div>
+Time: 0.01s">
+<div class="time" style="width: 3.9370078740157%"></div>
 <pre> intros [X hX]; exact _.</pre>
 </div>
 <div class="code" title="File: DProp.v
@@ -363,22 +363,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: DProp.v
 Line: 86
-Time: 0.025s">
-<div class="time" style="width: 9.2250922509225%"></div>
+Time: 0.022s">
+<div class="time" style="width: 8.6614173228346%"></div>
 <pre>
   refine (equiv_path_sigma_hprop (P;hP) (Q;hQ)).</pre>
 </div>
 <div class="code" title="File: DProp.v
 Line: 87
 Time: 0.006s">
-<div class="time" style="width: 2.2140221402214%"></div>
+<div class="time" style="width: 2.3622047244094%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: DProp.v
 Line: 88
-Time: 0.001s">
-<div class="time" style="width: 0.3690036900369%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition path_dprop `{Funext} {P Q : DProp}
@@ -409,8 +409,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: DProp.v
 Line: 96
-Time: 0.054s">
-<div class="time" style="width: 19.926199261993%"></div>
+Time: 0.052s">
+<div class="time" style="width: 20.472440944882%"></div>
 <pre>
   refine (trunc_equiv' _ (n := -1) (equiv_path_dprop P Q)).</pre>
 </div>
@@ -473,7 +473,7 @@ Time: 0s">
 <div class="code" title="File: DProp.v
 Line: 105
 Time: 0.004s">
-<div class="time" style="width: 1.4760147601476%"></div>
+<div class="time" style="width: 1.5748031496063%"></div>
 <pre>
     destruct (dec P); symmetry; apply path_dprop, path_universe_uncurried.</pre>
 </div>
@@ -487,7 +487,7 @@ Time: 0s">
 <div class="code" title="File: DProp.v
 Line: 107
 Time: 0.003s">
-<div class="time" style="width: 1.1070110701107%"></div>
+<div class="time" style="width: 1.1811023622047%"></div>
 <pre> apply if_hprop_then_equiv_Unit; [ exact _ | assumption ].</pre>
 </div>
 <div class="code" title="File: DProp.v
@@ -500,20 +500,20 @@ Time: 0s">
 <div class="code" title="File: DProp.v
 Line: 108
 Time: 0.003s">
-<div class="time" style="width: 1.1070110701107%"></div>
+<div class="time" style="width: 1.1811023622047%"></div>
 <pre> apply if_not_hprop_then_equiv_Empty; [ exact _ | assumption ].</pre>
 </div>
 <div class="code" title="File: DProp.v
 Line: 108
 Time: 0.001s">
-<div class="time" style="width: 0.3690036900369%"></div>
+<div class="time" style="width: 0.39370078740157%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: DProp.v
 Line: 109
 Time: 0.005s">
-<div class="time" style="width: 1.8450184501845%"></div>
+<div class="time" style="width: 1.9685039370079%"></div>
 <pre>
 
 Definition equiv_dprop_to_bool `{Univalence}
@@ -534,15 +534,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: DProp.v
 Line: 118
-Time: 0.042s">
-<div class="time" style="width: 15.49815498155%"></div>
+Time: 0.043s">
+<div class="time" style="width: 16.929133858268%"></div>
 <pre>Definition dand (b1 b2 : DProp) : DProp
   := Build_DProp (b1 * b2) _ _.</pre>
 </div>
 <div class="code" title="File: DProp.v
 Line: 119
 Time: 0.055s">
-<div class="time" style="width: 20.29520295203%"></div>
+<div class="time" style="width: 21.653543307087%"></div>
 <pre>
 
 Definition dhand (b1 b2 : DHProp) : DHProp
@@ -550,8 +550,8 @@ Definition dhand (b1 b2 : DHProp) : DHProp
 </div>
 <div class="code" title="File: DProp.v
 Line: 122
-Time: 0.036s">
-<div class="time" style="width: 13.284132841328%"></div>
+Time: 0.035s">
+<div class="time" style="width: 13.779527559055%"></div>
 <pre>
 
 Definition dor (b1 b2 : DProp) : DProp
@@ -559,8 +559,8 @@ Definition dor (b1 b2 : DProp) : DProp
 </div>
 <div class="code" title="File: DProp.v
 Line: 125
-Time: 0.035s">
-<div class="time" style="width: 12.915129151292%"></div>
+Time: 0.032s">
+<div class="time" style="width: 12.59842519685%"></div>
 <pre>
 
 Definition dhor (b1 b2 : DHProp) : DHProp
@@ -568,8 +568,8 @@ Definition dhor (b1 b2 : DHProp) : DHProp
 </div>
 <div class="code" title="File: DProp.v
 Line: 128
-Time: 0.034s">
-<div class="time" style="width: 12.546125461255%"></div>
+Time: 0.03s">
+<div class="time" style="width: 11.811023622047%"></div>
 <pre>
 
 Definition dneg (b : DProp) : DProp
@@ -577,8 +577,8 @@ Definition dneg (b : DProp) : DProp
 </div>
 <div class="code" title="File: DProp.v
 Line: 131
-Time: 0.021s">
-<div class="time" style="width: 7.7490774907749%"></div>
+Time: 0.019s">
+<div class="time" style="width: 7.4803149606299%"></div>
 <pre>
 
 Definition dimpl (b1 b2 : DProp) : DProp
@@ -586,16 +586,16 @@ Definition dimpl (b1 b2 : DProp) : DProp
 </div>
 <div class="code" title="File: DProp.v
 Line: 134
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.009s">
+<div class="time" style="width: 3.5433070866142%"></div>
 <pre>
 
 Infix "&amp;&amp;" := dand : dprop_scope.</pre>
 </div>
 <div class="code" title="File: DProp.v
 Line: 136
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.009s">
+<div class="time" style="width: 3.5433070866142%"></div>
 <pre>
 Infix "&amp;&amp;" := dhand : dhprop_scope.</pre>
 </div>
@@ -677,15 +677,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: DProp.v
 Line: 152
-Time: 0.003s">
-<div class="time" style="width: 1.1070110701107%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>Class IsTrue (P : DProp) :=
   dprop_istrue : P.</pre>
 </div>
 <div class="code" title="File: DProp.v
 Line: 153
 Time: 0.002s">
-<div class="time" style="width: 0.7380073800738%"></div>
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>
 
 Class IsFalse (P : DProp) :=
@@ -703,8 +703,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: DProp.v
 Line: 159
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.003s">
+<div class="time" style="width: 1.1811023622047%"></div>
 <pre>Global Instance true_istrue : IsTrue True := tt.</pre>
 </div>
 <div class="code" title="File: DProp.v
@@ -1015,8 +1015,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: DProp.v
 Line: 219
-Time: 0.044s">
-<div class="time" style="width: 16.236162361624%"></div>
+Time: 0.046s">
+<div class="time" style="width: 18.110236220472%"></div>
 <pre> strip_truncations.</pre>
 </div>
 <div class="code" title="File: DProp.v
@@ -1054,7 +1054,7 @@ Time: 0s">
 <div class="code" title="File: DProp.v
 Line: 221
 Time: 0.001s">
-<div class="time" style="width: 0.3690036900369%"></div>
+<div class="time" style="width: 0.39370078740157%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1077,7 +1077,7 @@ Proof.</pre>
 <div class="code" title="File: DProp.v
 Line: 226
 Time: 0.001s">
-<div class="time" style="width: 0.3690036900369%"></div>
+<div class="time" style="width: 0.39370078740157%"></div>
 <pre>
   exact (tr (inl Q dprop_istrue)).</pre>
 </div>
@@ -1107,7 +1107,7 @@ Proof.</pre>
 <div class="code" title="File: DProp.v
 Line: 232
 Time: 0.001s">
-<div class="time" style="width: 0.3690036900369%"></div>
+<div class="time" style="width: 0.39370078740157%"></div>
 <pre>
   exact (tr (inr P dprop_istrue)).</pre>
 </div>
@@ -1143,8 +1143,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: DProp.v
 Line: 239
-Time: 0.041s">
-<div class="time" style="width: 15.129151291513%"></div>
+Time: 0.038s">
+<div class="time" style="width: 14.96062992126%"></div>
 <pre> strip_truncations.</pre>
 </div>
 <div class="code" title="File: DProp.v
@@ -1189,7 +1189,7 @@ Time: 0s">
 <div class="code" title="File: DProp.v
 Line: 242
 Time: 0.001s">
-<div class="time" style="width: 0.3690036900369%"></div>
+<div class="time" style="width: 0.39370078740157%"></div>
 <pre>
 Defined.</pre>
 </div>
