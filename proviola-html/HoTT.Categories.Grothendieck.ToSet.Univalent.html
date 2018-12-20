@@ -223,12 +223,12 @@
           
 
             i = 41;
-            data = "1 subgoal (ID 121)	  	  H : Univalence	  C : PreCategory	  IsCategory0 : IsCategory C	  F : Functor C set_cat	  s, d : category F	  ============================	  ((issig_pair F)^-1)%equiv s = ((issig_pair F)^-1)%equiv d <~>	  {e : (c s <~=~> c d)%category & (F _1 e) (x s) = x d}	";
+            data = "1 subgoal (ID 121)	  	  H : Univalence	  C : PreCategory	  IsCategory0 : IsCategory C	  F : Functor C set_cat	  s, d : category F	  ============================	  (issig_pair F)^-1 s = (issig_pair F)^-1 d <~>	  {e : (c s <~=~> c d)%category & (F _1 e) (x s) = x d}	";
             responses[i]=data;
           
 
             i = 42;
-            data = "1 subgoal (ID 138)	  	  H : Univalence	  C : PreCategory	  IsCategory0 : IsCategory C	  F : Functor C set_cat	  s, d : category F	  ============================	  {p : (((issig_pair F)^-1)%equiv s).1 = (((issig_pair F)^-1)%equiv d).1 &	  transport (fun c : C => F c) p (((issig_pair F)^-1)%equiv s).2 =	  (((issig_pair F)^-1)%equiv d).2} <~>	  {e : (c s <~=~> c d)%category & (F _1 e) (x s) = x d}	";
+            data = "1 subgoal (ID 138)	  	  H : Univalence	  C : PreCategory	  IsCategory0 : IsCategory C	  F : Functor C set_cat	  s, d : category F	  ============================	  {p	  : Overture.pr1 ((issig_pair F)^-1 s) = Overture.pr1 ((issig_pair F)^-1 d) &	  transport (fun c : C => F c) p (pr2 ((issig_pair F)^-1 s)) =	  pr2 ((issig_pair F)^-1 d)} <~>	  {e : (c s <~=~> c d)%category & (F _1 e) (x s) = x d}	";
             responses[i]=data;
           
 
@@ -278,7 +278,7 @@
           
 
             i = 52;
-            data = "1 subgoal (ID 211)	  	  H : Univalence	  C : PreCategory	  IsCategory0 : IsCategory C	  F : Functor C set_cat	  s : category F	  ============================	  (category_isotoid 1%path).1 = (idtoiso (category F) 1).1	";
+            data = "1 subgoal (ID 211)	  	  H : Univalence	  C : PreCategory	  IsCategory0 : IsCategory C	  F : Functor C set_cat	  s : category F	  ============================	  Overture.pr1 (category_isotoid 1) = Overture.pr1 (idtoiso (category F) 1)	";
             responses[i]=data;
           
 

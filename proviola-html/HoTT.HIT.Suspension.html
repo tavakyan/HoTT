@@ -543,12 +543,12 @@
           
 
             i = 105;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 307)		subgoal 1 (ID 307) is:	 Sect	   (fun X0 : {NS : Y * Y & X -> fst NS = snd NS} =>	    (fun proj1_sig : Y * Y =>	     (fun (N S : Y) (m : X -> fst (N, S) = snd (N, S)) => Susp_rec N S m)	       (fst proj1_sig) (snd proj1_sig)) X0.1 X0.2)	   (fun f : Susp X -> Y => ((f North, f South); fun x : X => ap f (merid x)))	subgoal 2 (ID 309) is:	 Sect	   (fun f : Susp X -> Y => ((f North, f South); fun x : X => ap f (merid x)))	   (fun X0 : {NS : Y * Y & X -> fst NS = snd NS} =>	    (fun proj1_sig : Y * Y =>	     (fun (N S : Y) (m : X -> fst (N, S) = snd (N, S)) => Susp_rec N S m)	       (fst proj1_sig) (snd proj1_sig)) X0.1 X0.2)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 307)		subgoal 1 (ID 307) is:	 Sect	   (fun X0 : {NS : Y * Y & X -> fst NS = snd NS} =>	    (fun proj1_sig : Y * Y =>	     (fun (N S : Y) (m : X -> fst (N, S) = snd (N, S)) => Susp_rec N S m)	       (fst proj1_sig) (snd proj1_sig)) (pr1 X0) (pr2 X0))	   (fun f : Susp X -> Y => ((f North, f South); fun x : X => ap f (merid x)))	subgoal 2 (ID 309) is:	 Sect	   (fun f : Susp X -> Y => ((f North, f South); fun x : X => ap f (merid x)))	   (fun X0 : {NS : Y * Y & X -> fst NS = snd NS} =>	    (fun proj1_sig : Y * Y =>	     (fun (N S : Y) (m : X -> fst (N, S) = snd (N, S)) => Susp_rec N S m)	       (fst proj1_sig) (snd proj1_sig)) (pr1 X0) (pr2 X0))	";
             responses[i]=data;
           
 
             i = 106;
-            data = "1 subgoal (ID 307)	  	  H : Funext	  X : Type	  Y : Type	  ============================	  Sect	    (fun X0 : {NS : Y * Y & X -> fst NS = snd NS} =>	     (fun proj1_sig : Y * Y =>	      (fun (N S : Y) (m : X -> fst (N, S) = snd (N, S)) => Susp_rec N S m)	        (fst proj1_sig) (snd proj1_sig)) X0.1 X0.2)	    (fun f : Susp X -> Y => ((f North, f South); fun x : X => ap f (merid x)))	1 subgoal (ID 330)	  	  H : Funext	  X : Type	  Y : Type	  N, S : Y	  m : X -> fst (N, S) = snd (N, S)	  ============================	  ((Susp_rec N S m North, Susp_rec N S m South);	  fun x : X => ap (Susp_rec N S m) (merid x)) = ((N, S); m)	";
+            data = "1 subgoal (ID 307)	  	  H : Funext	  X : Type	  Y : Type	  ============================	  Sect	    (fun X0 : {NS : Y * Y & X -> fst NS = snd NS} =>	     (fun proj1_sig : Y * Y =>	      (fun (N S : Y) (m : X -> fst (N, S) = snd (N, S)) => Susp_rec N S m)	        (fst proj1_sig) (snd proj1_sig)) (pr1 X0) 	       (pr2 X0))	    (fun f : Susp X -> Y => ((f North, f South); fun x : X => ap f (merid x)))	1 subgoal (ID 330)	  	  H : Funext	  X : Type	  Y : Type	  N, S : Y	  m : X -> fst (N, S) = snd (N, S)	  ============================	  ((Susp_rec N S m North, Susp_rec N S m South);	  fun x : X => ap (Susp_rec N S m) (merid x)) = ((N, S); m)	";
             responses[i]=data;
           
 
@@ -558,12 +558,12 @@
           
 
             i = 108;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 309)		subgoal 1 (ID 309) is:	 Sect	   (fun f : Susp X -> Y => ((f North, f South); fun x : X => ap f (merid x)))	   (fun X0 : {NS : Y * Y & X -> fst NS = snd NS} =>	    (fun proj1_sig : Y * Y =>	     (fun (N S : Y) (m : X -> fst (N, S) = snd (N, S)) => Susp_rec N S m)	       (fst proj1_sig) (snd proj1_sig)) X0.1 X0.2)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 309)		subgoal 1 (ID 309) is:	 Sect	   (fun f : Susp X -> Y => ((f North, f South); fun x : X => ap f (merid x)))	   (fun X0 : {NS : Y * Y & X -> fst NS = snd NS} =>	    (fun proj1_sig : Y * Y =>	     (fun (N S : Y) (m : X -> fst (N, S) = snd (N, S)) => Susp_rec N S m)	       (fst proj1_sig) (snd proj1_sig)) (pr1 X0) (pr2 X0))	";
             responses[i]=data;
           
 
             i = 109;
-            data = "1 subgoal (ID 309)	  	  H : Funext	  X : Type	  Y : Type	  ============================	  Sect	    (fun f : Susp X -> Y => ((f North, f South); fun x : X => ap f (merid x)))	    (fun X0 : {NS : Y * Y & X -> fst NS = snd NS} =>	     (fun proj1_sig : Y * Y =>	      (fun (N S : Y) (m : X -> fst (N, S) = snd (N, S)) => Susp_rec N S m)	        (fst proj1_sig) (snd proj1_sig)) X0.1 X0.2)	1 subgoal (ID 346)	  	  H : Funext	  X : Type	  Y : Type	  f : Susp X -> Y	  ============================	  Susp_rec (f North) (f South) (fun x : X => ap f (merid x)) = f	";
+            data = "1 subgoal (ID 309)	  	  H : Funext	  X : Type	  Y : Type	  ============================	  Sect	    (fun f : Susp X -> Y => ((f North, f South); fun x : X => ap f (merid x)))	    (fun X0 : {NS : Y * Y & X -> fst NS = snd NS} =>	     (fun proj1_sig : Y * Y =>	      (fun (N S : Y) (m : X -> fst (N, S) = snd (N, S)) => Susp_rec N S m)	        (fst proj1_sig) (snd proj1_sig)) (pr1 X0) 	       (pr2 X0))	1 subgoal (ID 346)	  	  H : Funext	  X : Type	  Y : Type	  f : Susp X -> Y	  ============================	  Susp_rec (f North) (f South) (fun x : X => ap f (merid x)) = f	";
             responses[i]=data;
           
 
@@ -648,17 +648,17 @@
           
 
             i = 126;
-            data = "1 subgoal (ID 146)	  	  X : Type	  Z : Type	  f : Susp X -> Z	  n : NullHomotopy (fun x : X => ap f (merid x))	  x : X	  ============================	  transport (fun y : Susp X => f y = f North) (merid x) 1 = (n.1)^	";
+            data = "1 subgoal (ID 146)	  	  X : Type	  Z : Type	  f : Susp X -> Z	  n : NullHomotopy (fun x : X => ap f (merid x))	  x : X	  ============================	  transport (fun y : Susp X => f y = f North) (merid x) 1 = (pr1 n)^	";
             responses[i]=data;
           
 
             i = 127;
-            data = "1 subgoal (ID 163)	  	  X : Type	  Z : Type	  f : Susp X -> Z	  n : NullHomotopy (fun x : X => ap f (merid x))	  x : X	  ============================	  (ap f (merid x))^ @ 1 = (n.1)^	";
+            data = "1 subgoal (ID 163)	  	  X : Type	  Z : Type	  f : Susp X -> Z	  n : NullHomotopy (fun x : X => ap f (merid x))	  x : X	  ============================	  (ap f (merid x))^ @ 1 = (pr1 n)^	";
             responses[i]=data;
           
 
             i = 128;
-            data = "1 subgoal (ID 176)	  	  X : Type	  Z : Type	  f : Susp X -> Z	  n : NullHomotopy (fun x : X => ap f (merid x))	  x : X	  ============================	  ap f (merid x) = n.1	";
+            data = "1 subgoal (ID 176)	  	  X : Type	  Z : Type	  f : Susp X -> Z	  n : NullHomotopy (fun x : X => ap f (merid x))	  x : X	  ============================	  ap f (merid x) = pr1 n	";
             responses[i]=data;
           
 
@@ -683,37 +683,37 @@
           
 
             i = 133;
-            data = "1 subgoal (ID 159)	  	  X : Type	  Z : Type	  H_N, H_S : Z	  f : X -> H_N = H_S	  n : NullHomotopy (Susp_rec H_N H_S f)	  ============================	  forall x : X, f x = n.2 North @ (n.2 South)^	";
+            data = "1 subgoal (ID 159)	  	  X : Type	  Z : Type	  H_N, H_S : Z	  f : X -> H_N = H_S	  n : NullHomotopy (Susp_rec H_N H_S f)	  ============================	  forall x : X, f x = pr2 n North @ (pr2 n South)^	";
             responses[i]=data;
           
 
             i = 134;
-            data = "1 subgoal (ID 160)	  	  X : Type	  Z : Type	  H_N, H_S : Z	  f : X -> H_N = H_S	  n : NullHomotopy (Susp_rec H_N H_S f)	  x : X	  ============================	  f x = n.2 North @ (n.2 South)^	";
+            data = "1 subgoal (ID 160)	  	  X : Type	  Z : Type	  H_N, H_S : Z	  f : X -> H_N = H_S	  n : NullHomotopy (Susp_rec H_N H_S f)	  x : X	  ============================	  f x = pr2 n North @ (pr2 n South)^	";
             responses[i]=data;
           
 
             i = 135;
-            data = "1 subgoal (ID 165)	  	  X : Type	  Z : Type	  H_N, H_S : Z	  f : X -> H_N = H_S	  n : NullHomotopy (Susp_rec H_N H_S f)	  x : X	  ============================	  f x @ n.2 South = n.2 North	";
+            data = "1 subgoal (ID 165)	  	  X : Type	  Z : Type	  H_N, H_S : Z	  f : X -> H_N = H_S	  n : NullHomotopy (Susp_rec H_N H_S f)	  x : X	  ============================	  f x @ pr2 n South = pr2 n North	";
             responses[i]=data;
           
 
             i = 136;
-            data = "2 subgoals (ID 198)	  	  X : Type	  Z : Type	  H_N, H_S : Z	  f : X -> H_N = H_S	  n : NullHomotopy (Susp_rec H_N H_S f)	  x : X	  ============================	  f x @ n.2 South = ap (Susp_rec H_N H_S f) (merid x) @ n.2 South		subgoal 2 (ID 199) is:	 ap (Susp_rec H_N H_S f) (merid x) @ n.2 South = n.2 North	";
+            data = "2 subgoals (ID 198)	  	  X : Type	  Z : Type	  H_N, H_S : Z	  f : X -> H_N = H_S	  n : NullHomotopy (Susp_rec H_N H_S f)	  x : X	  ============================	  f x @ pr2 n South = ap (Susp_rec H_N H_S f) (merid x) @ pr2 n South		subgoal 2 (ID 199) is:	 ap (Susp_rec H_N H_S f) (merid x) @ pr2 n South = pr2 n North	";
             responses[i]=data;
           
 
             i = 137;
-            data = "1 subgoal (ID 199)	  	  X : Type	  Z : Type	  H_N, H_S : Z	  f : X -> H_N = H_S	  n : NullHomotopy (Susp_rec H_N H_S f)	  x : X	  ============================	  ap (Susp_rec H_N H_S f) (merid x) @ n.2 South = n.2 North	";
+            data = "1 subgoal (ID 199)	  	  X : Type	  Z : Type	  H_N, H_S : Z	  f : X -> H_N = H_S	  n : NullHomotopy (Susp_rec H_N H_S f)	  x : X	  ============================	  ap (Susp_rec H_N H_S f) (merid x) @ pr2 n South = pr2 n North	";
             responses[i]=data;
           
 
             i = 138;
-            data = "1 subgoal (ID 231)	  	  X : Type	  Z : Type	  H_N, H_S : Z	  f : X -> H_N = H_S	  n : NullHomotopy (Susp_rec H_N H_S f)	  x : X	  ============================	  n.2 North @ ap (fun _ : Susp X => n.1) (merid x) = n.2 North	";
+            data = "1 subgoal (ID 231)	  	  X : Type	  Z : Type	  H_N, H_S : Z	  f : X -> H_N = H_S	  n : NullHomotopy (Susp_rec H_N H_S f)	  x : X	  ============================	  pr2 n North @ ap (fun _ : Susp X => pr1 n) (merid x) = pr2 n North	";
             responses[i]=data;
           
 
             i = 139;
-            data = "1 subgoal (ID 254)	  	  X : Type	  Z : Type	  H_N, H_S : Z	  f : X -> H_N = H_S	  n : NullHomotopy (Susp_rec H_N H_S f)	  x : X	  ============================	  ap (fun _ : Susp X => n.1) (merid x) = 1	";
+            data = "1 subgoal (ID 254)	  	  X : Type	  Z : Type	  H_N, H_S : Z	  f : X -> H_N = H_S	  n : NullHomotopy (Susp_rec H_N H_S f)	  x : X	  ============================	  ap (fun _ : Susp X => pr1 n) (merid x) = 1	";
             responses[i]=data;
           
 
@@ -983,7 +983,7 @@
           
 
             i = 193;
-            data = "1 subgoal (ID 223)	  	  H : Funext	  A : pType	  B : pType	  ============================	  {NSm : {NS : B * B & A -> fst NS = snd NS} & fst NSm.1 = point B} <~>	  (A ->* loops B)	";
+            data = "1 subgoal (ID 223)	  	  H : Funext	  A : pType	  B : pType	  ============================	  {NSm : {NS : B * B & A -> fst NS = snd NS} & fst (pr1 NSm) = point B} <~>	  (A ->* loops B)	";
             responses[i]=data;
           
 
@@ -1008,7 +1008,7 @@
           
 
             i = 198;
-            data = "1 subgoal (ID 338)	  	  H : Funext	  A : pType	  B : pType	  ============================	  {bq : {a : B & a = point B} & {p : B & A -> bq.1 = p}} <~> (A ->* loops B)	";
+            data = "1 subgoal (ID 338)	  	  H : Funext	  A : pType	  B : pType	  ============================	  {bq : {a : B & a = point B} & {p : B & A -> pr1 bq = p}} <~>	  (A ->* loops B)	";
             responses[i]=data;
           
 
@@ -1018,7 +1018,7 @@
           
 
             i = 200;
-            data = "1 subgoal (ID 656)	  	  H : Funext	  A : pType	  B : pType	  ============================	  {pm : {p : B & A -> point B = p} &	  {q : point B = pm.1 & pm.2 (point A) = q}} <~> (A ->* loops B)	";
+            data = "1 subgoal (ID 656)	  	  H : Funext	  A : pType	  B : pType	  ============================	  {pm : {p : B & A -> point B = p} &	  {q : point B = pr1 pm & pr2 pm (point A) = q}} <~> 	  (A ->* loops B)	";
             responses[i]=data;
           
 
@@ -1033,7 +1033,7 @@
           
 
             i = 203;
-            data = "1 subgoal (ID 731)	  	  H : Funext	  A : pType	  B : pType	  ============================	  {bq : {a : B & point B = a} &	  {p : A -> point B = bq.1 & p (point A) = bq.2}} <~> 	  (A ->* loops B)	";
+            data = "1 subgoal (ID 731)	  	  H : Funext	  A : pType	  B : pType	  ============================	  {bq : {a : B & point B = a} &	  {p : A -> point B = pr1 bq & p (point A) = pr2 bq}} <~> 	  (A ->* loops B)	";
             responses[i]=data;
           
 

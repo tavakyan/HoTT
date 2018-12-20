@@ -273,7 +273,7 @@
           
 
             i = 51;
-            data = "1 subgoal (ID 523)	  	  ua : Univalence_type@{Top.10 Top.11}	  A : Type@{Top.116}	  B : Type@{Top.144}	  ============================	  IsEquiv@{Top.10 Top.10}	    (fun x : {xy : B * B & fst xy = snd xy} => fst@{Top.144 Top.144} x.1)	";
+            data = "1 subgoal (ID 523)	  	  ua : Univalence_type@{Top.10 Top.11}	  A : Type@{Top.116}	  B : Type@{Top.144}	  ============================	  IsEquiv@{Top.10 Top.10}	    (fun x : {xy : B * B & fst xy = snd xy} => fst@{Top.144 Top.144} (pr1 x))	";
             responses[i]=data;
           
 
@@ -298,7 +298,7 @@
           
 
             i = 56;
-            data = "1 subgoal (ID 570)	  	  ua : Univalence_type@{Top.10 Top.11}	  A : Type@{Top.1216}	  B : Type@{Top.1244}	  ============================	  IsEquiv@{Top.10 Top.10}	    (fun x : {xy : B * B & fst xy = snd xy} => snd@{Top.1244 Top.1244} x.1)	";
+            data = "1 subgoal (ID 570)	  	  ua : Univalence_type@{Top.10 Top.11}	  A : Type@{Top.1216}	  B : Type@{Top.1244}	  ============================	  IsEquiv@{Top.10 Top.10}	    (fun x : {xy : B * B & fst xy = snd xy} =>	     snd@{Top.1244 Top.1244} (pr1 x))	";
             responses[i]=data;
           
 
@@ -528,7 +528,7 @@
           
 
             i = 102;
-            data = "1 subgoal (ID 319)	  	  ua : Univalence_type@{Top.10 Top.11}	  A : Type@{Top.2315}	  B : Type@{Top.2332}	  f, g : A -> B	  p : forall x : A, f x = g x	  d := fun x : A => ((f x, f x); 1) : A -> {xy : B * B & fst xy = snd xy}	  e := fun x : A => ((f x, g x); p x) : A -> {xy : B * B & fst xy = snd xy}	  H' := fun (A : Type@{Top.2446}) (B : Type@{Top.2332})	          (x y : A -> {xy : B * B & fst xy = snd xy}) => _^-1	   : forall (A : Type@{Top.2446}) (B : Type@{Top.2332})	     (x y : A -> {xy : B * B & fst xy = snd xy}),	     (fun g : A -> {xy : B * B & fst xy = snd xy} =>	      fst@{Top.2332 Top.2332} o pr1 o g) x =	     (fun g : A -> {xy : B * B & fst xy = snd xy} =>	      fst@{Top.2332 Top.2332} o pr1 o g) y -> x = y	  ============================	  (fun x : A => fst@{Top.2332 Top.2332} (d x).1) =	  (fun x : A => fst@{Top.2332 Top.2332} (e x).1)	";
+            data = "1 subgoal (ID 319)	  	  ua : Univalence_type@{Top.10 Top.11}	  A : Type@{Top.2315}	  B : Type@{Top.2332}	  f, g : A -> B	  p : forall x : A, f x = g x	  d := fun x : A => ((f x, f x); 1) : A -> {xy : B * B & fst xy = snd xy}	  e := fun x : A => ((f x, g x); p x) : A -> {xy : B * B & fst xy = snd xy}	  H' := fun (A : Type@{Top.2446}) (B : Type@{Top.2332})	          (x y : A -> {xy : B * B & fst xy = snd xy}) => _^-1	   : forall (A : Type@{Top.2446}) (B : Type@{Top.2332})	     (x y : A -> {xy : B * B & fst xy = snd xy}),	     (fun g : A -> {xy : B * B & fst xy = snd xy} =>	      fst@{Top.2332 Top.2332} o pr1 o g) x =	     (fun g : A -> {xy : B * B & fst xy = snd xy} =>	      fst@{Top.2332 Top.2332} o pr1 o g) y -> x = y	  ============================	  (fun x : A => fst@{Top.2332 Top.2332} (pr1 (d x))) =	  (fun x : A => fst@{Top.2332 Top.2332} (pr1 (e x)))	";
             responses[i]=data;
           
 
@@ -578,7 +578,7 @@
           
 
             i = 112;
-            data = "@Univalence_implies_FunextNondep@{j jplusone i max j max}	:	Univalence_type@{j jplusone} -> NaiveNondepFunext@{i j max}	     : Univalence_type@{j jplusone} -> NaiveNondepFunext@{i j max}	(* {max i jplusone j} |= j < jplusone	                         j <= max	                         i <= max *)	";
+            data = "@Univalence_implies_FunextNondep@{j jplusone i max j max}	:	Univalence_type@{j jplusone} -> NaiveNondepFunext@{i j max}	     : Univalence_type@{j jplusone} -> NaiveNondepFunext@{i j max}	(* {max i jplusone j} |= Set < jplusone	                         j < jplusone	                         j <= max	                         i <= max *)	";
             responses[i]=data;
           
 

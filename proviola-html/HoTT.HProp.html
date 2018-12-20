@@ -193,12 +193,12 @@
           
 
             i = 35;
-            data = "1 subgoal (ID 69)	  	  H : Funext	  A : Type	  c : Contr A	  c' : {x : A & forall y : A, x = y}	  d' : {x : A & forall y : A, x = y}	  ============================	  transport (fun x : A => forall y : A, x = y) ((contr c'.1)^ @ contr d'.1)	    c'.2 = d'.2	";
+            data = "1 subgoal (ID 69)	  	  H : Funext	  A : Type	  c : Contr A	  c' : {x : A & forall y : A, x = y}	  d' : {x : A & forall y : A, x = y}	  ============================	  transport (fun x : A => forall y : A, x = y)	    ((contr (pr1 c'))^ @ contr (pr1 d')) (pr2 c') = 	  pr2 d'	";
             responses[i]=data;
           
 
             i = 36;
-            data = "1 subgoal (ID 80)	  	  H : Funext	  A : Type	  c : Contr A	  c' : {x : A & forall y : A, x = y}	  d' : {x : A & forall y : A, x = y}	  x : A	  ============================	  transport (fun x0 : A => forall y : A, x0 = y) ((contr c'.1)^ @ contr d'.1)	    c'.2 x = d'.2 x	";
+            data = "1 subgoal (ID 80)	  	  H : Funext	  A : Type	  c : Contr A	  c' : {x : A & forall y : A, x = y}	  d' : {x : A & forall y : A, x = y}	  x : A	  ============================	  transport (fun x0 : A => forall y : A, x0 = y)	    ((contr (pr1 c'))^ @ contr (pr1 d')) (pr2 c') x = 	  pr2 d' x	";
             responses[i]=data;
           
 
@@ -753,7 +753,7 @@
           
 
             i = 147;
-            data = "1 subgoal (ID 87)	  	  X : Type	  Y : Type	  f : X -> Y	  s : forall x1 x2 : X, f x1 = f x2 -> x1 = x2	  H : forall x1 x2 : X, Sect (s x1 x2) (ap f)	  y : Y	  x1 : X	  p1 : f x1 = y	  x2 : X	  p2 : f x2 = y	  ============================	  transport (fun x : X => f x = y) (s x1 x2 (p1 @ p2^)) (x1; p1).2 =	  (x2; p2).2	";
+            data = "1 subgoal (ID 87)	  	  X : Type	  Y : Type	  f : X -> Y	  s : forall x1 x2 : X, f x1 = f x2 -> x1 = x2	  H : forall x1 x2 : X, Sect (s x1 x2) (ap f)	  y : Y	  x1 : X	  p1 : f x1 = y	  x2 : X	  p2 : f x2 = y	  ============================	  transport (fun x : X => f x = y) (s x1 x2 (p1 @ p2^)) (pr2 (x1; p1)) =	  pr2 (x2; p2)	";
             responses[i]=data;
           
 

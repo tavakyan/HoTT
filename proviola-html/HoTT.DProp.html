@@ -513,12 +513,12 @@
           
 
             i = 99;
-            data = "2 subgoals (ID 1141)	  	  H : Funext	  P : Type	  hP : Funext -> IsHProp P	  dP : Decidable P	  Q : Type	  hQ : Funext -> IsHProp Q	  dQ : Decidable Q	  ============================	  forall a : {a : Type & Funext -> IsHProp a}, IsHProp (Decidable a.1)		subgoal 2 (ID 1142) is:	 P = Q <~> (P; hP) = (Q; hQ)	";
+            data = "2 subgoals (ID 1141)	  	  H : Funext	  P : Type	  hP : Funext -> IsHProp P	  dP : Decidable P	  Q : Type	  hQ : Funext -> IsHProp Q	  dQ : Decidable Q	  ============================	  forall a : {a : Type & Funext -> IsHProp a}, IsHProp (Decidable (pr1 a))		subgoal 2 (ID 1142) is:	 P = Q <~> (P; hP) = (Q; hQ)	";
             responses[i]=data;
           
 
             i = 100;
-            data = "1 subgoal (ID 1141)	  	  H : Funext	  P : Type	  hP : Funext -> IsHProp P	  dP : Decidable P	  Q : Type	  hQ : Funext -> IsHProp Q	  dQ : Decidable Q	  ============================	  forall a : {a : Type & Funext -> IsHProp a}, IsHProp (Decidable a.1)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 1142)		subgoal 1 (ID 1142) is:	 P = Q <~> (P; hP) = (Q; hQ)	1 subgoal (ID 1142)	  	  H : Funext	  P : Type	  hP : Funext -> IsHProp P	  dP : Decidable P	  Q : Type	  hQ : Funext -> IsHProp Q	  dQ : Decidable Q	  ============================	  P = Q <~> (P; hP) = (Q; hQ)	No more subgoals.	";
+            data = "1 subgoal (ID 1141)	  	  H : Funext	  P : Type	  hP : Funext -> IsHProp P	  dP : Decidable P	  Q : Type	  hQ : Funext -> IsHProp Q	  dQ : Decidable Q	  ============================	  forall a : {a : Type & Funext -> IsHProp a}, IsHProp (Decidable (pr1 a))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 1142)		subgoal 1 (ID 1142) is:	 P = Q <~> (P; hP) = (Q; hQ)	1 subgoal (ID 1142)	  	  H : Funext	  P : Type	  hP : Funext -> IsHProp P	  dP : Decidable P	  Q : Type	  hQ : Funext -> IsHProp Q	  dQ : Decidable Q	  ============================	  P = Q <~> (P; hP) = (Q; hQ)	No more subgoals.	";
             responses[i]=data;
           
 
@@ -1443,7 +1443,7 @@
           
 
             i = 285;
-            data = "1 subgoal (ID 874)	  	  P : DProp	  Q : DProp	  H : IsTrue P	  H0 : IsFalse Q	  f : (P -> Q)%dprop	  ============================	  Empty	";
+            data = "1 subgoal (ID 874)	  	  P : DProp	  Q : DProp	  H : IsTrue P	  H0 : IsFalse Q	  f : P -> Q	  ============================	  Empty	";
             responses[i]=data;
           
 

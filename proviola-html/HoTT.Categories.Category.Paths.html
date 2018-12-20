@@ -218,7 +218,7 @@
           
 
             i = 40;
-            data = "1 subgoal (ID 51)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  Heq : path_precategory'_T C D	  ============================	  transport	    (fun mor : (fun obj : Type => obj -> obj -> Type) D =>	     forall x : D, mor x x) (Heq.2).1	    (transportD (fun obj : Type => obj -> obj -> Type)	       (fun (obj : Type)	          (mor : (fun obj0 : Type => obj0 -> obj0 -> Type) obj) =>	        forall x : obj, mor x x) Heq.1 (morphism C) identity) = identity	";
+            data = "1 subgoal (ID 51)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  Heq : path_precategory'_T C D	  ============================	  transport	    (fun mor : (fun obj : Type => obj -> obj -> Type) D =>	     forall x : D, mor x x) (pr1 Heq.2)	    (transportD (fun obj : Type => obj -> obj -> Type)	       (fun (obj : Type)	          (mor : (fun obj0 : Type => obj0 -> obj0 -> Type) obj) =>	        forall x : obj, mor x x) (pr1 Heq) (morphism C) identity) = identity	";
             responses[i]=data;
           
 
@@ -233,7 +233,7 @@
           
 
             i = 43;
-            data = "1 subgoal (ID 74)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  proj1_sig : C = D	  proj1_sig0 : transport (fun obj : Type => obj -> obj -> Type) proj1_sig	                 (morphism C) = morphism D	  proj2_sig : transport	                (fun mor : D -> D -> Type =>	                 forall s d d' : D, mor d d' -> mor s d -> mor s d')	                proj1_sig0	                (transportD (fun obj : Type => obj -> obj -> Type)	                   (fun (obj : Type) (mor : obj -> obj -> Type) =>	                    forall s d d' : obj, mor d d' -> mor s d -> mor s d')	                   proj1_sig (morphism C) (@compose C)) = 	              @compose D	  x : D	  ============================	  transport (fun mor : D -> D -> Type => forall x0 : D, mor x0 x0) proj1_sig0	    (transportD (fun obj : Type => obj -> obj -> Type)	       (fun (obj : Type) (mor : obj -> obj -> Type) =>	        forall x0 : obj, mor x0 x0) proj1_sig (morphism C) identity) x =	  1%morphism	";
+            data = "1 subgoal (ID 74)	  	  H : Funext	  C : PreCategory	  D : PreCategory	  proj1_sig : C = D	  proj1_sig0 : transport (fun obj : Type => obj -> obj -> Type) proj1_sig	                 (morphism C) = morphism D	  proj2_sig : transport	                (fun mor : D -> D -> Type =>	                 forall s d d' : D, mor d d' -> mor s d -> mor s d')	                proj1_sig0	                (transportD (fun obj : Type => obj -> obj -> Type)	                   (fun (obj : Type) (mor : obj -> obj -> Type) =>	                    forall s d d' : obj, mor d d' -> mor s d -> mor s d')	                   proj1_sig (morphism C) (@compose C)) = 	              @compose D	  x : D	  ============================	  transport (fun mor : D -> D -> Type => forall x0 : D, mor x0 x0) proj1_sig0	    (transportD (fun obj : Type => obj -> obj -> Type)	       (fun (obj : Type) (mor : obj -> obj -> Type) =>	        forall x0 : obj, mor x0 x0) proj1_sig (morphism C) identity) x = 1	";
             responses[i]=data;
           
 
@@ -268,7 +268,7 @@
           
 
             i = 50;
-            data = "1 subgoal (ID 191)	  	  A : Type	  B : A -> Type	  P : forall x : A, B x -> Type	  Q : forall x : A, B x -> Type	  H : forall (a : A) (b : B a), IsHProp (Q a b)	  x : {a : A & {b : B a & P a b * Q a b}}	  q' : Q x.1 (x.2).1	  ============================	  (x.1; (x.2).1; (fst (x.2).2, q')) = x	";
+            data = "1 subgoal (ID 191)	  	  A : Type	  B : A -> Type	  P : forall x : A, B x -> Type	  Q : forall x : A, B x -> Type	  H : forall (a : A) (b : B a), IsHProp (Q a b)	  x : {a : A & {b : B a & P a b * Q a b}}	  q' : Q (pr1 x) (pr1 x.2)	  ============================	  (pr1 x; pr1 x.2; (fst (pr2 x.2), q')) = x	";
             responses[i]=data;
           
 

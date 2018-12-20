@@ -268,27 +268,27 @@
           
 
             i = 50;
-            data = "1 subgoal (ID 9)	  	  H : Univalence	  Z : BAut cantor	  e : Trunc (-1) (Z.1 = cantor)	  ============================	  merely (Z + cantor = cantor)	";
+            data = "1 subgoal (ID 9)	  	  H : Univalence	  Z : BAut cantor	  e : Trunc (-1) (pr1 Z = cantor)	  ============================	  merely (Z + cantor = cantor)	";
             responses[i]=data;
           
 
             i = 51;
-            data = "1 subgoal (ID 37)	  	  H : Univalence	  Z : BAut cantor	  e : Z.1 = cantor	  ============================	  merely (Z + cantor = cantor)	";
+            data = "1 subgoal (ID 37)	  	  H : Univalence	  Z : BAut cantor	  e : pr1 Z = cantor	  ============================	  merely (Z + cantor = cantor)	";
             responses[i]=data;
           
 
             i = 52;
-            data = "1 subgoal (ID 97)	  	  H : Univalence	  Z : BAut cantor	  e : Z.1 = cantor	  ============================	  Z + cantor = cantor	";
+            data = "1 subgoal (ID 97)	  	  H : Univalence	  Z : BAut cantor	  e : pr1 Z = cantor	  ============================	  Z + cantor = cantor	";
             responses[i]=data;
           
 
             i = 53;
-            data = "1 subgoal (ID 101)	  	  H : Univalence	  Z : BAut cantor	  e : Z.1 = cantor	  ============================	  Z + cantor <~> cantor	";
+            data = "1 subgoal (ID 101)	  	  H : Univalence	  Z : BAut cantor	  e : pr1 Z = cantor	  ============================	  Z + cantor <~> cantor	";
             responses[i]=data;
           
 
             i = 54;
-            data = "1 subgoal (ID 113)	  	  H : Univalence	  Z : BAut cantor	  e : Z.1 = cantor	  ============================	  Z + cantor <~> cantor + cantor	";
+            data = "1 subgoal (ID 113)	  	  H : Univalence	  Z : BAut cantor	  e : pr1 Z = cantor	  ============================	  Z + cantor <~> cantor + cantor	";
             responses[i]=data;
           
 
@@ -443,7 +443,7 @@
           
 
             i = 85;
-            data = "1 subgoal (ID 32)	  	  H : Univalence	  Z, Z' : BAut cantor	  p : Z = Z'	  ============================	  equiv_path (f Z).1 (f Z').1 (ap f p) ..1 = equiv_path Z Z' p ..1 +E 1	";
+            data = "1 subgoal (ID 32)	  	  H : Univalence	  Z, Z' : BAut cantor	  p : Z = Z'	  ============================	  equiv_path (pr1 (f Z)) (pr1 (f Z')) (ap f p) ..1 =	  equiv_path Z Z' p ..1 +E 1	";
             responses[i]=data;
           
 
@@ -453,12 +453,12 @@
           
 
             i = 87;
-            data = "1 subgoal (ID 36)	  	  H : Univalence	  Z : BAut cantor	  ============================	  equiv_path (f Z).1 (f Z).1 (ap f 1) ..1 = equiv_path Z Z 1 ..1 +E 1	";
+            data = "1 subgoal (ID 36)	  	  H : Univalence	  Z : BAut cantor	  ============================	  equiv_path (pr1 (f Z)) (pr1 (f Z)) (ap f 1) ..1 = equiv_path Z Z 1 ..1 +E 1	";
             responses[i]=data;
           
 
             i = 88;
-            data = "1 subgoal (ID 54)	  	  H : Univalence	  Z : BAut cantor	  ============================	  equiv_path (f Z).1 (f Z).1 (ap f 1) ..1 == equiv_path Z Z 1 ..1 +E 1	";
+            data = "1 subgoal (ID 54)	  	  H : Univalence	  Z : BAut cantor	  ============================	  equiv_path (pr1 (f Z)) (pr1 (f Z)) (ap f 1) ..1 ==	  equiv_path Z Z 1 ..1 +E 1	";
             responses[i]=data;
           
 
@@ -473,7 +473,7 @@
           
 
             i = 91;
-            data = "1 subgoal (ID 75)	  	  H : Univalence	  Z, Z' : BAut cantor	  p : Z = Z'	  ============================	  equiv_path (f (f Z)).1 (f (f Z')).1 (ap (f o f) p) ..1 =	  equiv_path Z Z' p ..1 +E 1 +E 1	";
+            data = "1 subgoal (ID 75)	  	  H : Univalence	  Z, Z' : BAut cantor	  p : Z = Z'	  ============================	  equiv_path (pr1 (f (f Z))) (pr1 (f (f Z'))) (ap (f o f) p) ..1 =	  equiv_path Z Z' p ..1 +E 1 +E 1	";
             responses[i]=data;
           
 
@@ -483,12 +483,12 @@
           
 
             i = 93;
-            data = "1 subgoal (ID 79)	  	  H : Univalence	  Z : BAut cantor	  ============================	  equiv_path (f (f Z)).1 (f (f Z)).1	    (ap (fun x : BAut cantor => f (f x)) 1) ..1 =	  equiv_path Z Z 1 ..1 +E 1 +E 1	";
+            data = "1 subgoal (ID 79)	  	  H : Univalence	  Z : BAut cantor	  ============================	  equiv_path (pr1 (f (f Z))) (pr1 (f (f Z)))	    (ap (fun x : BAut cantor => f (f x)) 1) ..1 =	  equiv_path Z Z 1 ..1 +E 1 +E 1	";
             responses[i]=data;
           
 
             i = 94;
-            data = "1 subgoal (ID 97)	  	  H : Univalence	  Z : BAut cantor	  ============================	  equiv_path (f (f Z)).1 (f (f Z)).1	    (ap (fun x : BAut cantor => f (f x)) 1) ..1 ==	  equiv_path Z Z 1 ..1 +E 1 +E 1	";
+            data = "1 subgoal (ID 97)	  	  H : Univalence	  Z : BAut cantor	  ============================	  equiv_path (pr1 (f (f Z))) (pr1 (f (f Z)))	    (ap (fun x : BAut cantor => f (f x)) 1) ..1 ==	  equiv_path Z Z 1 ..1 +E 1 +E 1	";
             responses[i]=data;
           
 
@@ -613,12 +613,12 @@
           
 
             i = 119;
-            data = "1 subgoal (ID 186)	  	  H : Univalence	  Ip : IsPreIdempotent f	  Jp : IsQuasiIdempotent f	  Z, Z' : BAut cantor	  p : Z = Z'	  ============================	  I Z'	  oE equiv_path (f (f Z)).1 (f (f Z')).1	       (ap (fun x : BAut cantor => f (f x)) p) ..1 =	  equiv_path (f Z).1 (f Z').1 (ap f p) ..1 oE I Z	";
+            data = "1 subgoal (ID 186)	  	  H : Univalence	  Ip : IsPreIdempotent f	  Jp : IsQuasiIdempotent f	  Z, Z' : BAut cantor	  p : Z = Z'	  ============================	  I Z'	  oE equiv_path (pr1 (f (f Z))) (pr1 (f (f Z')))	       (ap (fun x : BAut cantor => f (f x)) p) ..1 =	  equiv_path (pr1 (f Z)) (pr1 (f Z')) (ap f p) ..1 oE I Z	";
             responses[i]=data;
           
 
             i = 120;
-            data = "1 subgoal (ID 189)	  	  H : Univalence	  Ip : IsPreIdempotent f	  Jp : IsQuasiIdempotent f	  Z, Z' : BAut cantor	  p : Z = Z'	  ============================	  equiv_path (f (f Z')).1 (f Z').1 (Ip Z') ..1	  oE equiv_path (f (f Z)).1 (f (f Z')).1	       (ap (fun x : BAut cantor => f (f x)) p) ..1 =	  equiv_path (f Z).1 (f Z').1 (ap f p) ..1	  oE equiv_path (f (f Z)).1 (f Z).1 (Ip Z) ..1	";
+            data = "1 subgoal (ID 189)	  	  H : Univalence	  Ip : IsPreIdempotent f	  Jp : IsQuasiIdempotent f	  Z, Z' : BAut cantor	  p : Z = Z'	  ============================	  equiv_path (pr1 (f (f Z'))) (pr1 (f Z')) (Ip Z') ..1	  oE equiv_path (pr1 (f (f Z))) (pr1 (f (f Z')))	       (ap (fun x : BAut cantor => f (f x)) p) ..1 =	  equiv_path (pr1 (f Z)) (pr1 (f Z')) (ap f p) ..1	  oE equiv_path (pr1 (f (f Z))) (pr1 (f Z)) (Ip Z) ..1	";
             responses[i]=data;
           
 
@@ -933,12 +933,12 @@
           
 
             i = 183;
-            data = "1 subgoal (ID 209)	  	  H : Univalence	  Ip : IsPreIdempotent f	  Jp : IsQuasiIdempotent f	  c : cantor	  p : inl (inl (inl c)) = inl (inl (inr c))	  ============================	  is_inr (inl (inl (inr c))) + is_inl_and is_inr (inl (inl (inr c)))	1 subgoal (ID 235)	  	  H : Univalence	  Ip : IsPreIdempotent f	  Jp : IsQuasiIdempotent f	  c : cantor	  p : inl c = inr c	  ============================	  is_inr (inl (inl (inr c))) + is_inl_and is_inr (inl (inl (inr c)))	";
+            data = "1 subgoal (ID 209)	  	  H : Univalence	  Ip : IsPreIdempotent f	  Jp : IsQuasiIdempotent f	  c : cantor	  p : inl (inl (inl c)) = inl (inl (inr c))	  ============================	  is_inr (inl (inl (inr c))) + is_inl_and is_inr (inl (inl (inr c)))	";
             responses[i]=data;
           
 
             i = 184;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	6 subgoals (ID 210)		subgoal 1 (ID 210) is:	 is_inr (inl (inr c)) + is_inl_and is_inr (inl (inr c))	subgoal 2 (ID 211) is:	 is_inr (inr c) + is_inl_and is_inr (inr c)	subgoal 3 (ID 212) is:	 ff_flip (inl (inl (inl c))) = inl (inl (inl c))	subgoal 4 (ID 213) is:	 ff_flip (inl (inl (inr c))) = inl (inl (inr c))	subgoal 5 (ID 214) is:	 ff_flip (inl (inr c)) = inl (inr c)	subgoal 6 (ID 215) is:	 ff_flip (inr c) = inr c	";
+            data = "1 subgoal (ID 235)	  	  H : Univalence	  Ip : IsPreIdempotent f	  Jp : IsQuasiIdempotent f	  c : cantor	  p : inl c = inr c	  ============================	  is_inr (inl (inl (inr c))) + is_inl_and is_inr (inl (inl (inr c)))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	6 subgoals (ID 210)		subgoal 1 (ID 210) is:	 is_inr (inl (inr c)) + is_inl_and is_inr (inl (inr c))	subgoal 2 (ID 211) is:	 is_inr (inr c) + is_inl_and is_inr (inr c)	subgoal 3 (ID 212) is:	 ff_flip (inl (inl (inl c))) = inl (inl (inl c))	subgoal 4 (ID 213) is:	 ff_flip (inl (inl (inr c))) = inl (inl (inr c))	subgoal 5 (ID 214) is:	 ff_flip (inl (inr c)) = inl (inr c)	subgoal 6 (ID 215) is:	 ff_flip (inr c) = inr c	";
             responses[i]=data;
           
 
@@ -1138,7 +1138,7 @@
           
 
             i = 224;
-            data = "1 subgoal (ID 189)	  	  H : Univalence	  Ip : IsPreIdempotent f	  Jp : IsQuasiIdempotent f	  Z : BAut cantor	  ============================	  equiv_path (f (f (f Z))).1 (f (f Z)).1 (ap f (Ip Z)) ..1 =	  equiv_path (Z + cantor + cantor + cantor) (Z + cantor + cantor)	    (Ip (f Z)) ..1	";
+            data = "1 subgoal (ID 189)	  	  H : Univalence	  Ip : IsPreIdempotent f	  Jp : IsQuasiIdempotent f	  Z : BAut cantor	  ============================	  equiv_path (pr1 (f (f (f Z)))) (pr1 (f (f Z))) (ap f (Ip Z)) ..1 =	  equiv_path (Z + cantor + cantor + cantor) (Z + cantor + cantor)	    (Ip (f Z)) ..1	";
             responses[i]=data;
           
 

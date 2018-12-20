@@ -648,7 +648,7 @@
           
 
             i = 126;
-            data = "1 subgoal (ID 3)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  ============================	  {a0 : A & {b0 : B & morphism C (S a0) (T b0)}} <~> object	";
+            data = "1 subgoal (ID 3)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  ============================	  {a0 : A & {b0 : B & morphism C (S _0 a0)%object (T _0 b0)%object}} <~>	  object	";
             responses[i]=data;
           
 
@@ -678,7 +678,7 @@
           
 
             i = 132;
-            data = "1 subgoal (ID 14)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  n : trunc_index	  H : IsTrunc n A	  H0 : IsTrunc n B	  H1 : forall s d : C, IsTrunc n (morphism C s d)	  ============================	  IsTrunc n {a0 : A & {b0 : B & morphism C (S a0) (T b0)}}	";
+            data = "1 subgoal (ID 14)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  n : trunc_index	  H : IsTrunc n A	  H0 : IsTrunc n B	  H1 : forall s d : C, IsTrunc n (morphism C s d)	  ============================	  IsTrunc n	    {a0 : A & {b0 : B & morphism C (S _0 a0)%object (T _0 b0)%object}}	";
             responses[i]=data;
           
 
@@ -693,7 +693,7 @@
           
 
             i = 135;
-            data = "1 subgoal (ID 34)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  x, y : object	  ============================	  forall (Ha : a x = a y) (Hb : b x = b y),	  transport (fun X : A => morphism C (S X) (T (b y))) Ha	    (transport (fun Y : B => morphism C (S (a x)) (T Y)) Hb (f x)) = 	  f y -> x = y	";
+            data = "1 subgoal (ID 34)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  x, y : object	  ============================	  forall (Ha : a x = a y) (Hb : b x = b y),	  transport (fun X : A => morphism C (S _0 X)%object (T _0 (b y))%object) Ha	    (transport (fun Y : B => morphism C (S _0 (a x))%object (T _0 Y)%object)	       Hb (f x)) = f y -> x = y	";
             responses[i]=data;
           
 
@@ -703,7 +703,7 @@
           
 
             i = 137;
-            data = "1 subgoal (ID 50)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  a0 : A	  b0 : B	  f0 : morphism C (S a0) (T b0)	  a1 : A	  b1 : B	  f1 : morphism C (S a1) (T b1)	  ============================	  forall (Ha : a0 = a1) (Hb : b0 = b1),	  transport (fun X : A => morphism C (S X) (T b1)) Ha	    (transport (fun Y : B => morphism C (S a0) (T Y)) Hb f0) = f1 ->	  {| a := a0; b := b0; f := f0 |} = {| a := a1; b := b1; f := f1 |}	";
+            data = "1 subgoal (ID 50)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  a0 : A	  b0 : B	  f0 : morphism C (S _0 a0)%object (T _0 b0)%object	  a1 : A	  b1 : B	  f1 : morphism C (S _0 a1)%object (T _0 b1)%object	  ============================	  forall (Ha : a0 = a1) (Hb : b0 = b1),	  transport (fun X : A => morphism C (S _0 X)%object (T _0 b1)%object) Ha	    (transport (fun Y : B => morphism C (S _0 a0)%object (T _0 Y)%object) Hb	       f0) = f1 ->	  {| a := a0; b := b0; f := f0 |} = {| a := a1; b := b1; f := f1 |}	";
             responses[i]=data;
           
 
@@ -718,7 +718,7 @@
           
 
             i = 140;
-            data = "1 subgoal (ID 51)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  x, y : object	  Ha : a x = a y	  Hb : b x = b y	  Hf : transport (fun X : A => morphism C (S X) (T (b y))) Ha	         (transport (fun Y : B => morphism C (S (a x)) (T Y)) Hb (f x)) = 	       f y	  ============================	  ap a (path_object' x y Ha Hb Hf) = Ha	";
+            data = "1 subgoal (ID 51)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  x, y : object	  Ha : a x = a y	  Hb : b x = b y	  Hf : transport	         (fun X : A => morphism C (S _0 X)%object (T _0 (b y))%object) Ha	         (transport	            (fun Y : B => morphism C (S _0 (a x))%object (T _0 Y)%object) Hb	            (f x)) = f y	  ============================	  ap a (path_object' x y Ha Hb Hf) = Ha	";
             responses[i]=data;
           
 
@@ -728,12 +728,12 @@
           
 
             i = 142;
-            data = "1 subgoal (ID 95)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  a0 : A	  b0 : B	  f0 : morphism C (S a0) (T b0)	  a1 : A	  b1 : B	  f1 : morphism C (S a1) (T b1)	  Ha : a0 = a1	  Hb : b0 = b1	  Hf : transport (fun X : A => morphism C (S X) (T b1)) Ha	         (transport (fun Y : B => morphism C (S a0) (T Y)) Hb f0) = f1	  ============================	  ap a	    (path_object' {| a := a0; b := b0; f := f0 |}	       {| a := a1; b := b1; f := f1 |} Ha Hb Hf) = Ha	";
+            data = "1 subgoal (ID 95)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  a0 : A	  b0 : B	  f0 : morphism C (S _0 a0)%object (T _0 b0)%object	  a1 : A	  b1 : B	  f1 : morphism C (S _0 a1)%object (T _0 b1)%object	  Ha : a0 = a1	  Hb : b0 = b1	  Hf : transport (fun X : A => morphism C (S _0 X)%object (T _0 b1)%object)	         Ha	         (transport	            (fun Y : B => morphism C (S _0 a0)%object (T _0 Y)%object) Hb f0) =	       f1	  ============================	  ap a	    (path_object' {| a := a0; b := b0; f := f0 |}	       {| a := a1; b := b1; f := f1 |} Ha Hb Hf) = Ha	";
             responses[i]=data;
           
 
             i = 143;
-            data = "1 subgoal (ID 128)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  a0 : A	  b0 : B	  f0 : morphism C (S a0) (T b0)	  ============================	  1%path = 1%path	";
+            data = "1 subgoal (ID 128)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  a0 : A	  b0 : B	  f0 : morphism C (S _0 a0)%object (T _0 b0)%object	  ============================	  1 = 1	";
             responses[i]=data;
           
 
@@ -748,7 +748,7 @@
           
 
             i = 146;
-            data = "1 subgoal (ID 68)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  x, y : object	  Ha : a x = a y	  Hb : b x = b y	  Hf : transport (fun X : A => morphism C (S X) (T (b y))) Ha	         (transport (fun Y : B => morphism C (S (a x)) (T Y)) Hb (f x)) = 	       f y	  ============================	  ap b (path_object' x y Ha Hb Hf) = Hb	";
+            data = "1 subgoal (ID 68)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  x, y : object	  Ha : a x = a y	  Hb : b x = b y	  Hf : transport	         (fun X : A => morphism C (S _0 X)%object (T _0 (b y))%object) Ha	         (transport	            (fun Y : B => morphism C (S _0 (a x))%object (T _0 Y)%object) Hb	            (f x)) = f y	  ============================	  ap b (path_object' x y Ha Hb Hf) = Hb	";
             responses[i]=data;
           
 
@@ -758,12 +758,12 @@
           
 
             i = 148;
-            data = "1 subgoal (ID 112)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  a0 : A	  b0 : B	  f0 : morphism C (S a0) (T b0)	  a1 : A	  b1 : B	  f1 : morphism C (S a1) (T b1)	  Ha : a0 = a1	  Hb : b0 = b1	  Hf : transport (fun X : A => morphism C (S X) (T b1)) Ha	         (transport (fun Y : B => morphism C (S a0) (T Y)) Hb f0) = f1	  ============================	  ap b	    (path_object' {| a := a0; b := b0; f := f0 |}	       {| a := a1; b := b1; f := f1 |} Ha Hb Hf) = Hb	";
+            data = "1 subgoal (ID 112)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  a0 : A	  b0 : B	  f0 : morphism C (S _0 a0)%object (T _0 b0)%object	  a1 : A	  b1 : B	  f1 : morphism C (S _0 a1)%object (T _0 b1)%object	  Ha : a0 = a1	  Hb : b0 = b1	  Hf : transport (fun X : A => morphism C (S _0 X)%object (T _0 b1)%object)	         Ha	         (transport	            (fun Y : B => morphism C (S _0 a0)%object (T _0 Y)%object) Hb f0) =	       f1	  ============================	  ap b	    (path_object' {| a := a0; b := b0; f := f0 |}	       {| a := a1; b := b1; f := f1 |} Ha Hb Hf) = Hb	";
             responses[i]=data;
           
 
             i = 149;
-            data = "1 subgoal (ID 145)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  a0 : A	  b0 : B	  f0 : morphism C (S a0) (T b0)	  ============================	  1%path = 1%path	";
+            data = "1 subgoal (ID 145)	  	  A : PreCategory	  B : PreCategory	  C : PreCategory	  S : Functor A C	  T : Functor B C	  a0 : A	  b0 : B	  f0 : morphism C (S _0 a0)%object (T _0 b0)%object	  ============================	  1 = 1	";
             responses[i]=data;
           
 

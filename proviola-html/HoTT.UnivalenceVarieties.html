@@ -228,12 +228,12 @@
           
 
             i = 42;
-            data = "1 subgoal (ID 153)	  	  etop : forall A B : Type, A <~> B -> A = B	  H : forall (A B : Type) (f : A <~> B), equiv_path A B (etop A B f) = f	  A : Type	  ============================	  (fun x : {B : Type & A <~> B} =>	   ((x.1; etop A x.1 x.2).1;	   equiv_path A (x.1; etop A x.1 x.2).1 (x.1; etop A x.1 x.2).2)) == idmap	";
+            data = "1 subgoal (ID 153)	  	  etop : forall A B : Type, A <~> B -> A = B	  H : forall (A B : Type) (f : A <~> B), equiv_path A B (etop A B f) = f	  A : Type	  ============================	  (fun x : {B : Type & A <~> B} =>	   (pr1 (pr1 x; etop A (pr1 x) (pr2 x));	   equiv_path A (pr1 (pr1 x; etop A (pr1 x) (pr2 x)))	     (pr2 (pr1 x; etop A (pr1 x) (pr2 x))))) == idmap	";
             responses[i]=data;
           
 
             i = 43;
-            data = "1 subgoal (ID 159)	  	  etop : forall A B : Type, A <~> B -> A = B	  H : forall (A B : Type) (f : A <~> B), equiv_path A B (etop A B f) = f	  A : Type	  B : Type	  f : A <~> B	  ============================	  (((B; f).1; etop A (B; f).1 (B; f).2).1;	  equiv_path A ((B; f).1; etop A (B; f).1 (B; f).2).1	    ((B; f).1; etop A (B; f).1 (B; f).2).2) = (B; f)	";
+            data = "1 subgoal (ID 159)	  	  etop : forall A B : Type, A <~> B -> A = B	  H : forall (A B : Type) (f : A <~> B), equiv_path A B (etop A B f) = f	  A : Type	  B : Type	  f : A <~> B	  ============================	  (pr1 (pr1 (B; f); etop A (pr1 (B; f)) (pr2 (B; f)));	  equiv_path A (pr1 (pr1 (B; f); etop A (pr1 (B; f)) (pr2 (B; f))))	    (pr2 (pr1 (B; f); etop A (pr1 (B; f)) (pr2 (B; f))))) = 	  (B; f)	";
             responses[i]=data;
           
 

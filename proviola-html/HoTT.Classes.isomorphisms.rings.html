@@ -158,22 +158,22 @@
           
 
             i = 28;
-            data = "1 subgoal (ID 62)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  f : A -> B	  IsEquiv0 : IsEquiv f	  SemiRingPreserving0 : SemiRingPreserving f	  ============================	  {p : A.1 = B.1 &	  transport (fun T : Type => (Plus T * Mult T * Zero T * One T)%type) p A.2 =	  B.2}	";
+            data = "1 subgoal (ID 62)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  f : A -> B	  IsEquiv0 : IsEquiv f	  SemiRingPreserving0 : SemiRingPreserving f	  ============================	  {p : pr1 A = pr1 B &	  transport (fun T : Type => Plus T * Mult T * Zero T * One T) p (pr2 A) =	  pr2 B}	";
             responses[i]=data;
           
 
             i = 29;
-            data = "1 subgoal (ID 132)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  SemiRingPreserving0 : SemiRingPreserving f	  ============================	  {p : TA = TB &	  transport (fun T : Type => (Plus T * Mult T * Zero T * One T)%type) p	    (plA, mlA, zA, uA) = (plB, mlB, zB, uB)}	";
+            data = "1 subgoal (ID 132)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  SemiRingPreserving0 : SemiRingPreserving f	  ============================	  {p : TA = TB &	  transport (fun T : Type => Plus T * Mult T * Zero T * One T) p	    (plA, mlA, zA, uA) = (plB, mlB, zB, uB)}	";
             responses[i]=data;
           
 
             i = 30;
-            data = "1 subgoal (ID 140)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  SemiRingPreserving0 : SemiRingPreserving f	  ============================	  {p : TA = TB &	  transport (fun T : Type => (Plus T * Mult T * Zero T * One T)%type) p	    (plus, mult, 0, 1) = (plus, mult, 0, 1)}	";
+            data = "1 subgoal (ID 140)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  SemiRingPreserving0 : SemiRingPreserving f	  ============================	  {p : TA = TB &	  transport (fun T : Type => Plus T * Mult T * Zero T * One T) p	    (plus, mult, 0, 1) = (plus, mult, 0, 1)}	";
             responses[i]=data;
           
 
             i = 31;
-            data = "1 subgoal (ID 146)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  SemiRingPreserving0 : SemiRingPreserving f	  ============================	  transport (fun T : Type => (Plus T * Mult T * Zero T * One T)%type)	    (path_universe f) (plus, mult, 0, 1) = (plus, mult, 0, 1)	";
+            data = "1 subgoal (ID 146)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  SemiRingPreserving0 : SemiRingPreserving f	  ============================	  transport (fun T : Type => Plus T * Mult T * Zero T * One T)	    (path_universe f) (plus, mult, 0, 1) = (plus, mult, 0, 1)	";
             responses[i]=data;
           
 
@@ -368,22 +368,22 @@
           
 
             i = 70;
-            data = "1 subgoal (ID 88)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  f : A -> B	  IsEquiv0 : IsEquiv f	  Ring0 : Ring A	  Ring1 : Ring B	  SemiRingPreserving0 : SemiRingPreserving f	  ============================	  {p : A.1 = B.1 &	  transport	    (fun T : Type => (Plus T * Mult T * Zero T * One T * Negate T)%type) p	    A.2 = B.2}	";
+            data = "1 subgoal (ID 88)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  f : A -> B	  IsEquiv0 : IsEquiv f	  Ring0 : Ring A	  Ring1 : Ring B	  SemiRingPreserving0 : SemiRingPreserving f	  ============================	  {p : pr1 A = pr1 B &	  transport (fun T : Type => Plus T * Mult T * Zero T * One T * Negate T) p	    (pr2 A) = pr2 B}	";
             responses[i]=data;
           
 
             i = 71;
-            data = "1 subgoal (ID 201)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  nA : Negate TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  nB : Negate TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  Ring0 : Ring TA	  Ring1 : Ring TB	  SemiRingPreserving0 : SemiRingPreserving f	  ============================	  {p : TA = TB &	  transport	    (fun T : Type => (Plus T * Mult T * Zero T * One T * Negate T)%type) p	    (plA, mlA, zA, uA, nA) = (plB, mlB, zB, uB, nB)}	";
+            data = "1 subgoal (ID 201)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  nA : Negate TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  nB : Negate TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  Ring0 : Ring TA	  Ring1 : Ring TB	  SemiRingPreserving0 : SemiRingPreserving f	  ============================	  {p : TA = TB &	  transport (fun T : Type => Plus T * Mult T * Zero T * One T * Negate T) p	    (plA, mlA, zA, uA, nA) = (plB, mlB, zB, uB, nB)}	";
             responses[i]=data;
           
 
             i = 72;
-            data = "1 subgoal (ID 211)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  nA : Negate TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  nB : Negate TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  Ring0 : Ring TA	  Ring1 : Ring TB	  SemiRingPreserving0 : SemiRingPreserving f	  ============================	  {p : TA = TB &	  transport	    (fun T : Type => (Plus T * Mult T * Zero T * One T * Negate T)%type) p	    (plus, mult, 0, 1, negate) = (plus, mult, 0, 1, negate)}	";
+            data = "1 subgoal (ID 211)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  nA : Negate TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  nB : Negate TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  Ring0 : Ring TA	  Ring1 : Ring TB	  SemiRingPreserving0 : SemiRingPreserving f	  ============================	  {p : TA = TB &	  transport (fun T : Type => Plus T * Mult T * Zero T * One T * Negate T) p	    (plus, mult, 0, 1, negate) = (plus, mult, 0, 1, negate)}	";
             responses[i]=data;
           
 
             i = 73;
-            data = "1 subgoal (ID 217)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  nA : Negate TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  nB : Negate TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  Ring0 : Ring TA	  Ring1 : Ring TB	  SemiRingPreserving0 : SemiRingPreserving f	  ============================	  transport	    (fun T : Type => (Plus T * Mult T * Zero T * One T * Negate T)%type)	    (path_universe f) (plus, mult, 0, 1, negate) = 	  (plus, mult, 0, 1, negate)	";
+            data = "1 subgoal (ID 217)	  	  H : Funext	  H0 : Univalence	  A, B : Operations	  TA : Type	  plA : Plus TA	  mlA : Mult TA	  zA : Zero TA	  uA : One TA	  nA : Negate TA	  TB : Type	  plB : Plus TB	  mlB : Mult TB	  zB : Zero TB	  uB : One TB	  nB : Negate TB	  f : TA -> TB	  IsEquiv0 : IsEquiv f	  Ring0 : Ring TA	  Ring1 : Ring TB	  SemiRingPreserving0 : SemiRingPreserving f	  ============================	  transport (fun T : Type => Plus T * Mult T * Zero T * One T * Negate T)	    (path_universe f) (plus, mult, 0, 1, negate) = 	  (plus, mult, 0, 1, negate)	";
             responses[i]=data;
           
 

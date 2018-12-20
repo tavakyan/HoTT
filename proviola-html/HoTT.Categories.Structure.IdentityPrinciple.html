@@ -258,7 +258,7 @@
           
 
             i = 48;
-            data = "1 subgoal (ID 12)	  	  X : PreCategory	  P : NotionOfStructure X	  IsCategory0 : IsCategory X	  H : IsStandardNotionOfStructure P	  StrX := precategory_of_structures P : PreCategory	  xa, yb : StrX	  f : xa <~=~> yb	  ============================	  xa.1 <~=~> yb.1	";
+            data = "1 subgoal (ID 12)	  	  X : PreCategory	  P : NotionOfStructure X	  IsCategory0 : IsCategory X	  H : IsStandardNotionOfStructure P	  StrX := precategory_of_structures P : PreCategory	  xa, yb : StrX	  f : xa <~=~> yb	  ============================	  pr1 xa <~=~> pr1 yb	";
             responses[i]=data;
           
 
@@ -293,7 +293,7 @@
           
 
             i = 55;
-            data = "1 subgoal (ID 26)	  	  X : PreCategory	  P : NotionOfStructure X	  IsCategory0 : IsCategory X	  H : IsStandardNotionOfStructure P	  StrX := precategory_of_structures P : PreCategory	  xa : StrX	  ============================	  sip_isotoid_helper (reflexivity xa) = reflexivity xa.1	";
+            data = "1 subgoal (ID 26)	  	  X : PreCategory	  P : NotionOfStructure X	  IsCategory0 : IsCategory X	  H : IsStandardNotionOfStructure P	  StrX := precategory_of_structures P : PreCategory	  xa : StrX	  ============================	  sip_isotoid_helper (reflexivity xa) = reflexivity (pr1 xa)	";
             responses[i]=data;
           
 
@@ -303,12 +303,12 @@
           
 
             i = 57;
-            data = "1 subgoal (ID 27)	  	  X : PreCategory	  P : NotionOfStructure X	  IsCategory0 : IsCategory X	  H : IsStandardNotionOfStructure P	  StrX := precategory_of_structures P : PreCategory	  xa : StrX	  ============================	  {|	  morphism_isomorphic := PreCategoryOfStructures.f	                           {|	                           morphism_isomorphic := 1;	                           isisomorphism_isomorphic := isisomorphism_identity	                                                 StrX xa |};	  isisomorphism_isomorphic := {|	                              morphism_inverse := PreCategoryOfStructures.f	                                                 _^-1;	                              left_inverse := ap	                                                (PreCategoryOfStructures.f	                                                 (yb:=xa)) left_inverse;	                              right_inverse := ap	                                                 (PreCategoryOfStructures.f	                                                 (yb:=xa)) right_inverse |} |} =	  {|	  morphism_isomorphic := 1;	  isisomorphism_isomorphic := isisomorphism_identity X xa.1 |}	";
+            data = "1 subgoal (ID 27)	  	  X : PreCategory	  P : NotionOfStructure X	  IsCategory0 : IsCategory X	  H : IsStandardNotionOfStructure P	  StrX := precategory_of_structures P : PreCategory	  xa : StrX	  ============================	  {|	  morphism_isomorphic := PreCategoryOfStructures.f	                           {|	                           morphism_isomorphic := 1;	                           isisomorphism_isomorphic := isisomorphism_identity	                                                 StrX xa |};	  isisomorphism_isomorphic := {|	                              morphism_inverse := PreCategoryOfStructures.f	                                                 _^-1;	                              left_inverse := ap	                                                (PreCategoryOfStructures.f	                                                 (yb:=xa)) left_inverse;	                              right_inverse := ap	                                                 (PreCategoryOfStructures.f	                                                 (yb:=xa)) right_inverse |} |} =	  {|	  morphism_isomorphic := 1;	  isisomorphism_isomorphic := isisomorphism_identity X (pr1 xa) |}	";
             responses[i]=data;
           
 
             i = 58;
-            data = "1 subgoal (ID 30)	  	  X : PreCategory	  P : NotionOfStructure X	  IsCategory0 : IsCategory X	  H : IsStandardNotionOfStructure P	  StrX := precategory_of_structures P : PreCategory	  xa : StrX	  ============================	  {|	  morphism_inverse := PreCategoryOfStructures.f _^-1;	  left_inverse := ap (PreCategoryOfStructures.f (yb:=xa)) left_inverse;	  right_inverse := ap (PreCategoryOfStructures.f (yb:=xa)) right_inverse |} =	  isisomorphism_identity X xa.1	";
+            data = "1 subgoal (ID 30)	  	  X : PreCategory	  P : NotionOfStructure X	  IsCategory0 : IsCategory X	  H : IsStandardNotionOfStructure P	  StrX := precategory_of_structures P : PreCategory	  xa : StrX	  ============================	  {|	  morphism_inverse := PreCategoryOfStructures.f _^-1;	  left_inverse := ap (PreCategoryOfStructures.f (yb:=xa)) left_inverse;	  right_inverse := ap (PreCategoryOfStructures.f (yb:=xa)) right_inverse |} =	  isisomorphism_identity X (pr1 xa)	";
             responses[i]=data;
           
 
@@ -368,12 +368,12 @@
           
 
             i = 70;
-            data = "1 subgoal (ID 93)	  	  X : PreCategory	  P : NotionOfStructure X	  IsCategory0 : IsCategory X	  H : IsStandardNotionOfStructure P	  StrX := precategory_of_structures P : PreCategory	  xa, yb : StrX	  f : xa <~=~> yb	  ============================	  transport (fun x : X => P x) ((_^-1)%function (sip_isotoid_helper f)) xa.2 =	  yb.2	";
+            data = "1 subgoal (ID 93)	  	  X : PreCategory	  P : NotionOfStructure X	  IsCategory0 : IsCategory X	  H : IsStandardNotionOfStructure P	  StrX := precategory_of_structures P : PreCategory	  xa, yb : StrX	  f : xa <~=~> yb	  ============================	  transport (fun x : X => P x) (_^-1 (sip_isotoid_helper f)) (pr2 xa) =	  pr2 yb	";
             responses[i]=data;
           
 
             i = 71;
-            data = "1 subgoal (ID 104)	  	  X : PreCategory	  P : NotionOfStructure X	  IsCategory0 : IsCategory X	  H : IsStandardNotionOfStructure P	  StrX := precategory_of_structures P : PreCategory	  xa, yb : StrX	  f : xa <~=~> yb	  ============================	  is_structure_homomorphism P xa.1 yb.1	    (idtoiso X ((_^-1)%function (sip_isotoid_helper f))) xa.2 yb.2 *	  is_structure_homomorphism P yb.1 xa.1 _^-1 yb.2 xa.2	";
+            data = "1 subgoal (ID 104)	  	  X : PreCategory	  P : NotionOfStructure X	  IsCategory0 : IsCategory X	  H : IsStandardNotionOfStructure P	  StrX := precategory_of_structures P : PreCategory	  xa, yb : StrX	  f : xa <~=~> yb	  ============================	  is_structure_homomorphism P (pr1 xa) (pr1 yb)	    (idtoiso X (_^-1 (sip_isotoid_helper f))) (pr2 xa) 	    (pr2 yb) *	  is_structure_homomorphism P (pr1 yb) (pr1 xa) _^-1 (pr2 yb) (pr2 xa)	";
             responses[i]=data;
           
 
@@ -403,27 +403,27 @@
           
 
             i = 77;
-            data = "1 subgoal (ID 124)	  	  X : PreCategory	  P : NotionOfStructure X	  IsCategory0 : IsCategory X	  H : IsStandardNotionOfStructure P	  StrX := precategory_of_structures P : PreCategory	  xa : StrX	  ============================	  ((_^-1)%function (sip_isotoid_helper (reflexivity xa));	  let X0 :=	    fun (x y : X) (p : x = y) (a : P x) (b : P y) => snd (sip_helper p a b)	    in	  X0 xa.1 xa.1 ((_^-1)%function (sip_isotoid_helper (reflexivity xa))) xa.2	    xa.2	    (let H' := eisretr _ (sip_isotoid_helper (reflexivity xa)) in	     transport	       (fun i : xa.1 <~=~> xa.1 =>	        is_structure_homomorphism P xa.1 xa.1 i xa.2 xa.2) H'^	       (PreCategoryOfStructures.h (reflexivity xa)),	    let H' := eisretr _ (sip_isotoid_helper (reflexivity xa)) in	    transport	      (fun i : xa.1 <~=~> xa.1 =>	       is_structure_homomorphism P xa.1 xa.1 _^-1 xa.2 xa.2) H'^	      (PreCategoryOfStructures.h _^-1))) =	  ((reflexivity xa) ..1; (reflexivity xa) ..2)	";
+            data = "1 subgoal (ID 124)	  	  X : PreCategory	  P : NotionOfStructure X	  IsCategory0 : IsCategory X	  H : IsStandardNotionOfStructure P	  StrX := precategory_of_structures P : PreCategory	  xa : StrX	  ============================	  (_^-1 (sip_isotoid_helper (reflexivity xa));	  let X0 :=	    fun (x y : X) (p : x = y) (a : P x) (b : P y) => snd (sip_helper p a b)	    in	  X0 (pr1 xa) (pr1 xa) (_^-1 (sip_isotoid_helper (reflexivity xa))) 	    (pr2 xa) (pr2 xa)	    (let H' := eisretr _ (sip_isotoid_helper (reflexivity xa)) in	     transport	       (fun i : pr1 xa <~=~> pr1 xa =>	        is_structure_homomorphism P (pr1 xa) (pr1 xa) i (pr2 xa) (pr2 xa))	       H'^ (PreCategoryOfStructures.h (reflexivity xa)),	    let H' := eisretr _ (sip_isotoid_helper (reflexivity xa)) in	    transport	      (fun i : pr1 xa <~=~> pr1 xa =>	       is_structure_homomorphism P (pr1 xa) (pr1 xa) _^-1 (pr2 xa) (pr2 xa))	      H'^ (PreCategoryOfStructures.h _^-1))) =	  ((reflexivity xa) ..1; (reflexivity xa) ..2)	";
             responses[i]=data;
           
 
             i = 78;
-            data = "1 subgoal (ID 224)	  	  X : PreCategory	  P : NotionOfStructure X	  IsCategory0 : IsCategory X	  H : IsStandardNotionOfStructure P	  StrX := precategory_of_structures P : PreCategory	  xa : StrX	  ============================	  ((_^-1)%function (sip_isotoid_helper (reflexivity xa));	  let X0 :=	    fun (x y : X) (p : x = y) (a : P x) (b : P y) => snd (sip_helper p a b)	    in	  X0 xa.1 xa.1 ((_^-1)%function (sip_isotoid_helper (reflexivity xa))) xa.2	    xa.2	    (let H' := eisretr _ (sip_isotoid_helper (reflexivity xa)) in	     transport	       (fun i : xa.1 <~=~> xa.1 =>	        is_structure_homomorphism P xa.1 xa.1 i xa.2 xa.2) H'^	       (PreCategoryOfStructures.h (reflexivity xa)),	    let H' := eisretr _ (sip_isotoid_helper (reflexivity xa)) in	    transport	      (fun i : xa.1 <~=~> xa.1 =>	       is_structure_homomorphism P xa.1 xa.1 _^-1 xa.2 xa.2) H'^	      (PreCategoryOfStructures.h _^-1))).1 =	  ((reflexivity xa) ..1; (reflexivity xa) ..2).1	";
+            data = "1 subgoal (ID 224)	  	  X : PreCategory	  P : NotionOfStructure X	  IsCategory0 : IsCategory X	  H : IsStandardNotionOfStructure P	  StrX := precategory_of_structures P : PreCategory	  xa : StrX	  ============================	  pr1	    (_^-1 (sip_isotoid_helper (reflexivity xa));	    let X0 :=	      fun (x y : X) (p : x = y) (a : P x) (b : P y) => snd (sip_helper p a b)	      in	    X0 (pr1 xa) (pr1 xa) (_^-1 (sip_isotoid_helper (reflexivity xa)))	      (pr2 xa) (pr2 xa)	      (let H' := eisretr _ (sip_isotoid_helper (reflexivity xa)) in	       transport	         (fun i : pr1 xa <~=~> pr1 xa =>	          is_structure_homomorphism P (pr1 xa) (pr1 xa) i (pr2 xa) (pr2 xa))	         H'^ (PreCategoryOfStructures.h (reflexivity xa)),	      let H' := eisretr _ (sip_isotoid_helper (reflexivity xa)) in	      transport	        (fun i : pr1 xa <~=~> pr1 xa =>	         is_structure_homomorphism P (pr1 xa) (pr1 xa) _^-1 (pr2 xa) (pr2 xa))	        H'^ (PreCategoryOfStructures.h _^-1))) =	  pr1 ((reflexivity xa) ..1; (reflexivity xa) ..2)	";
             responses[i]=data;
           
 
             i = 79;
-            data = "1 subgoal (ID 225)	  	  X : PreCategory	  P : NotionOfStructure X	  IsCategory0 : IsCategory X	  H : IsStandardNotionOfStructure P	  StrX := precategory_of_structures P : PreCategory	  xa : StrX	  ============================	  (_^-1)%function (sip_isotoid_helper (isomorphic_refl StrX xa)) = 1%path	";
+            data = "1 subgoal (ID 225)	  	  X : PreCategory	  P : NotionOfStructure X	  IsCategory0 : IsCategory X	  H : IsStandardNotionOfStructure P	  StrX := precategory_of_structures P : PreCategory	  xa : StrX	  ============================	  _^-1 (sip_isotoid_helper (isomorphic_refl StrX xa)) = 1	";
             responses[i]=data;
           
 
             i = 80;
-            data = "1 subgoal (ID 247)	  	  X : PreCategory	  P : NotionOfStructure X	  IsCategory0 : IsCategory X	  H : IsStandardNotionOfStructure P	  StrX := precategory_of_structures P : PreCategory	  xa : StrX	  ============================	  (_^-1)%function (sip_isotoid_helper (isomorphic_refl StrX xa)) =	  (_^-1)%function ((_^-1)%function 1%path)	";
+            data = "1 subgoal (ID 247)	  	  X : PreCategory	  P : NotionOfStructure X	  IsCategory0 : IsCategory X	  H : IsStandardNotionOfStructure P	  StrX := precategory_of_structures P : PreCategory	  xa : StrX	  ============================	  _^-1 (sip_isotoid_helper (isomorphic_refl StrX xa)) = _^-1 (_^-1 1)	";
             responses[i]=data;
           
 
             i = 81;
-            data = "1 subgoal (ID 250)	  	  X : PreCategory	  P : NotionOfStructure X	  IsCategory0 : IsCategory X	  H : IsStandardNotionOfStructure P	  StrX := precategory_of_structures P : PreCategory	  xa : StrX	  ============================	  sip_isotoid_helper (isomorphic_refl StrX xa) = (_^-1)%function 1%path	";
+            data = "1 subgoal (ID 250)	  	  X : PreCategory	  P : NotionOfStructure X	  IsCategory0 : IsCategory X	  H : IsStandardNotionOfStructure P	  StrX := precategory_of_structures P : PreCategory	  xa : StrX	  ============================	  sip_isotoid_helper (isomorphic_refl StrX xa) = _^-1 1	";
             responses[i]=data;
           
 
@@ -473,7 +473,7 @@
           
 
             i = 91;
-            data = "1 subgoal (ID 211)	  	  X : PreCategory	  P : NotionOfStructure X	  IsCategory0 : IsCategory X	  H : IsStandardNotionOfStructure P	  StrX := precategory_of_structures P : PreCategory	  xa, yb : StrX	  x : xa <~=~> yb	  ============================	  (sip_isotoid x) ..1 = (_^-1)%function (sip_isotoid_helper x)	";
+            data = "1 subgoal (ID 211)	  	  X : PreCategory	  P : NotionOfStructure X	  IsCategory0 : IsCategory X	  H : IsStandardNotionOfStructure P	  StrX := precategory_of_structures P : PreCategory	  xa, yb : StrX	  x : xa <~=~> yb	  ============================	  (sip_isotoid x) ..1 = _^-1 (sip_isotoid_helper x)	";
             responses[i]=data;
           
 
