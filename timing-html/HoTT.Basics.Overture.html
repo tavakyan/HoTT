@@ -40,7 +40,7 @@ Time: 0s">
 <div class="code" title="File: Overture.v
 Line: 4
 Time: 0.001s">
-<div class="time" style="width: 16.666666666667%"></div>
+<div class="time" style="width: 50%"></div>
 <pre>Require Export Basics.Notations.</pre>
 </div>
 <div class="code" title="File: Overture.v
@@ -167,8 +167,8 @@ Definition relation (A : Type) := A -&gt; A -&gt; Type.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 24
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 50%"></div>
 <pre>
 
 Class Reflexive {A} (R : relation A) :=
@@ -203,7 +203,7 @@ Time: 0s">
 <div class="code" title="File: Overture.v
 Line: 35
 Time: 0.001s">
-<div class="time" style="width: 16.666666666667%"></div>
+<div class="time" style="width: 50%"></div>
 <pre>Class PreOrder {A} (R : relation A) :=
   { PreOrder_Reflexive : Reflexive R | 2 ;
     PreOrder_Transitive : Transitive R | 2 }.</pre>
@@ -702,7 +702,7 @@ Notation "x .2" := (pr2 x) : fibration_scope.</pre>
 <div class="code" title="File: Overture.v
 Line: 138
 Time: 0.001s">
-<div class="time" style="width: 16.666666666667%"></div>
+<div class="time" style="width: 50%"></div>
 <pre>
 
 Definition uncurry {A B C} (f: A -&gt; B -&gt; C) (p: A * B): C := f (fst p) (snd p).</pre>
@@ -765,7 +765,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 152
-Time: 0.006s">
+Time: 0.002s">
 <div class="time" style="width: 100%"></div>
 <pre>Instance iff_compose : Transitive iff | 1
   := fun A B C f g =&gt; (fst g o fst f , snd f o snd g).</pre>
@@ -788,7 +788,7 @@ Time: 0s">
 <div class="code" title="File: Overture.v
 Line: 156
 Time: 0.001s">
-<div class="time" style="width: 16.666666666667%"></div>
+<div class="time" style="width: 50%"></div>
 <pre>Instance iff_inverse : Symmetric iff | 1
   := fun A B f =&gt; (snd f , fst f).</pre>
 </div>
@@ -824,8 +824,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 163
-Time: 0.001s">
-<div class="time" style="width: 16.666666666667%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition composeD {A B C} (g : forall b, C b) (f : A -&gt; B) := fun x : A =&gt; g (f x).</pre>
 </div>
 <div class="code" title="File: Overture.v
@@ -1103,8 +1103,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 213
-Time: 0.005s">
-<div class="time" style="width: 83.333333333333%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition inverse {A : Type} {x y : A} (p : x = y) : y = x
   := match p with idpath =&gt; idpath end.</pre>
 </div>
@@ -1169,8 +1169,8 @@ Module Export symmetric_paths := inverseSymmetric inverse.
 </div>
 <div class="code" title="File: Overture.v
 Line: 242
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 50%"></div>
 <pre>Definition concat {A : Type} {x y z : A} (p : x = y) (q : y = z) : x = z :=
   match p, q with idpath, idpath =&gt; idpath end.</pre>
 </div>
@@ -1277,8 +1277,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 266
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 50%"></div>
 <pre>Definition transport {A : Type} (P : A -&gt; Type) {x y : A} (p : x = y) (u : P x) : P y :=
   match p with idpath =&gt; u end.</pre>
 </div>
@@ -1396,8 +1396,8 @@ Notation "f == g" := (pointwise_paths f g) : type_scope.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 298
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 50%"></div>
 <pre>
 
 Definition apD10 {A} {B:A-&gt;Type} {f g : forall x, B x} (h:f=g)
@@ -1414,8 +1414,8 @@ Global Arguments apD10 {A%type_scope B} {f g}%function_scope h%path_scope _.</pr
 </div>
 <div class="code" title="File: Overture.v
 Line: 304
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 50%"></div>
 <pre>
 
 Definition ap10 {A B} {f g:A-&gt;B} (h:f=g) : f == g
@@ -1461,7 +1461,7 @@ Proof.</pre>
 <div class="code" title="File: Overture.v
 Line: 314
 Time: 0.001s">
-<div class="time" style="width: 16.666666666667%"></div>
+<div class="time" style="width: 50%"></div>
 <pre>
   case h, p; reflexivity.</pre>
 </div>
@@ -1483,7 +1483,7 @@ Global Arguments ap11 {A B}%type_scope {f g}%function_scope h%path_scope {x y} p
 <div class="code" title="File: Overture.v
 Line: 318
 Time: 0.001s">
-<div class="time" style="width: 16.666666666667%"></div>
+<div class="time" style="width: 50%"></div>
 <pre>
 
 Definition ap2 {A B C} (f : A -&gt; B -&gt; C) {x1 x2 y1 y2}:
@@ -1499,7 +1499,7 @@ Proof.</pre>
 <div class="code" title="File: Overture.v
 Line: 322
 Time: 0.001s">
-<div class="time" style="width: 16.666666666667%"></div>
+<div class="time" style="width: 50%"></div>
 <pre>
 intros H1 H2;destruct H1,H2;reflexivity.</pre>
 </div>
@@ -1539,7 +1539,7 @@ Time: 0s">
 <div class="code" title="File: Overture.v
 Line: 331
 Time: 0.002s">
-<div class="time" style="width: 33.333333333333%"></div>
+<div class="time" style="width: 100%"></div>
 <pre>Definition apD {A:Type} {B:A-&gt;Type} (f:forall a:A, B a) {x y:A} (p:x=y):
   p # (f x) = f y
   :=
@@ -1609,7 +1609,7 @@ Time: 0s">
 <div class="code" title="File: Overture.v
 Line: 359
 Time: 0.001s">
-<div class="time" style="width: 16.666666666667%"></div>
+<div class="time" style="width: 50%"></div>
 <pre>Class IsEquiv {A B : Type} (f : A -&gt; B) := BuildIsEquiv {
   equiv_inv : B -&gt; A ;
   eisretr : Sect equiv_inv f;
@@ -1656,8 +1656,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 371
-Time: 0.001s">
-<div class="time" style="width: 16.666666666667%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Record Equiv A B := BuildEquiv {
   equiv_fun : A -&gt; B ;
   equiv_isequiv : IsEquiv equiv_fun
@@ -1739,7 +1739,7 @@ Time: 0s">
 <div class="code" title="File: Overture.v
 Line: 391
 Time: 0.001s">
-<div class="time" style="width: 16.666666666667%"></div>
+<div class="time" style="width: 50%"></div>
 <pre>Definition ap10_equiv {A B : Type} {f g : A &lt;~&gt; B} (h : f = g) : f == g
   := ap10 (ap equiv_fun h).</pre>
 </div>
@@ -1964,8 +1964,8 @@ Coercion nat_to_trunc_index : nat &gt;-&gt; trunc_index.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 454
-Time: 0.002s">
-<div class="time" style="width: 33.333333333333%"></div>
+Time: 0.001s">
+<div class="time" style="width: 50%"></div>
 <pre>
 
 Definition int_to_trunc_index (v : Decimal.int) : option trunc_index
@@ -2103,8 +2103,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 500
-Time: 0.001s">
-<div class="time" style="width: 16.666666666667%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Global Instance istrunc_paths (A : Type) n `{H : IsTrunc n.+1 A} (x y : A)
 : IsTrunc n (x = y)
   := H x y.</pre>
@@ -2155,8 +2155,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 508
-Time: 0.001s">
-<div class="time" style="width: 16.666666666667%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Hint Extern 10 =&gt;
 progress match goal with
            | [ H : forall x y : ?T, IsTrunc ?n (x = y) |- _ ]
@@ -2278,15 +2278,15 @@ Axiom isequiv_apD10 : forall `{Funext} (A : Type) (P : A -&gt; Type) f g, IsEqui
 </div>
 <div class="code" title="File: Overture.v
 Line: 552
-Time: 0.001s">
-<div class="time" style="width: 16.666666666667%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Global Existing Instance isequiv_apD10.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 553
-Time: 0.001s">
-<div class="time" style="width: 16.666666666667%"></div>
+Time: 0.002s">
+<div class="time" style="width: 100%"></div>
 <pre>
 
 Definition path_forall `{Funext} {A : Type} {P : A -&gt; Type} (f g : forall x : A, P x) :
@@ -2305,7 +2305,7 @@ Global Arguments path_forall {_ A%type_scope P} (f g)%function_scope _.</pre>
 <div class="code" title="File: Overture.v
 Line: 560
 Time: 0.002s">
-<div class="time" style="width: 33.333333333333%"></div>
+<div class="time" style="width: 100%"></div>
 <pre>
 
 Definition path_forall2 `{Funext} {A B : Type} {P : A -&gt; B -&gt; Type} (f g : forall x y, P x y) :
@@ -2443,8 +2443,8 @@ Notation "x &lt;&gt; y" := (x &lt;&gt; y :&gt; _) : type_scope.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 597
-Time: 0.001s">
-<div class="time" style="width: 16.666666666667%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition symmetric_neq {A} {x y : A} : x &lt;&gt; y -&gt; y &lt;&gt; x
@@ -2478,8 +2478,8 @@ Class Irreflexive {A} (R : relation A) :=
 </div>
 <div class="code" title="File: Overture.v
 Line: 608
-Time: 0.001s">
-<div class="time" style="width: 16.666666666667%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Class Asymmetric {A} (R : relation A) :=
@@ -2495,8 +2495,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 613
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 50%"></div>
 <pre>Inductive Unit : Type0 :=
     tt : Unit.</pre>
 </div>
@@ -2600,8 +2600,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 639
-Time: 0.001s">
-<div class="time" style="width: 16.666666666667%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition hfiber {A B : Type} (f : A -&gt; B) (y : B) := { x : A &amp; f x = y }.</pre>
 </div>
 <div class="code" title="File: Overture.v
@@ -2804,8 +2804,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 727
-Time: 0.001s">
-<div class="time" style="width: 16.666666666667%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Ltac by_extensionality x :=
   intros;
   match goal with
@@ -2916,8 +2916,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 761
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 50%"></div>
 <pre>Ltac path_induction :=
   intros; repeat progress (
     match goal with
@@ -3124,8 +3124,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 837
-Time: 0.001s">
-<div class="time" style="width: 16.666666666667%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Ltac rel_hnf :=
   idtac;
   match goal with
