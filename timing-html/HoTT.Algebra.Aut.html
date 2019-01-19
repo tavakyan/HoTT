@@ -36,14 +36,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Aut.v
 Line: 1
-Time: 0.048s">
-<div class="time" style="width: 3.1641397495056%"></div>
+Time: 0.044s">
+<div class="time" style="width: 3.125%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
 <div class="code" title="File: Aut.v
 Line: 1
-Time: 0.198s">
-<div class="time" style="width: 13.052076466711%"></div>
+Time: 0.19s">
+<div class="time" style="width: 13.494318181818%"></div>
 <pre>
 Require Import Pointed UnivalenceImpliesFunext Factorization.</pre>
 </div>
@@ -56,22 +56,22 @@ Require Import Modalities.Modality.</pre>
 </div>
 <div class="code" title="File: Aut.v
 Line: 3
-Time: 0.006s">
-<div class="time" style="width: 0.3955174686882%"></div>
+Time: 0.007s">
+<div class="time" style="width: 0.49715909090909%"></div>
 <pre>
 Require Import HIT.Truncations HIT.Connectedness HIT.quotient.</pre>
 </div>
 <div class="code" title="File: Aut.v
 Line: 4
 Time: 0.001s">
-<div class="time" style="width: 0.0659195781147%"></div>
+<div class="time" style="width: 0.071022727272727%"></div>
 <pre>
 Require Import Algebra.ooGroup.</pre>
 </div>
 <div class="code" title="File: Aut.v
 Line: 5
 Time: 0.003s">
-<div class="time" style="width: 0.1977587343441%"></div>
+<div class="time" style="width: 0.21306818181818%"></div>
 <pre>
 Import TrM.</pre>
 </div>
@@ -103,8 +103,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Aut.v
 Line: 14
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.071022727272727%"></div>
 <pre>
   Definition BAut (X : Type) := { Z : Type &amp; merely (Z = X) }.</pre>
 </div>
@@ -125,8 +125,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Aut.v
 Line: 18
-Time: 0.001s">
-<div class="time" style="width: 0.0659195781147%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition equiv_baut_image_unit X
 : BAut X &lt;~&gt; image (Tr -1) (unit_name X).</pre>
 </div>
@@ -146,15 +146,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Aut.v
 Line: 21
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.071022727272727%"></div>
 <pre>
   refine (equiv_functor_sigma' (equiv_idmap Type) _); intros Z; simpl.</pre>
 </div>
 <div class="code" title="File: Aut.v
 Line: 22
-Time: 0.001s">
-<div class="time" style="width: 0.0659195781147%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   apply equiv_O_functor; unfold hfiber.</pre>
 </div>
@@ -175,7 +175,7 @@ Time: 0s">
 <div class="code" title="File: Aut.v
 Line: 25
 Time: 0.003s">
-<div class="time" style="width: 0.1977587343441%"></div>
+<div class="time" style="width: 0.21306818181818%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -202,23 +202,23 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Aut.v
 Line: 29
-Time: 0.343s">
-<div class="time" style="width: 22.610415293342%"></div>
+Time: 0.327s">
+<div class="time" style="width: 23.224431818182%"></div>
 <pre>
   refine (Build_ooGroup
             (Build_pType { Z : Type &amp; merely (Z = X) } (X ; tr 1)) _).</pre>
 </div>
 <div class="code" title="File: Aut.v
 Line: 31
-Time: 1.517s">
+Time: 1.408s">
 <div class="time" style="width: 100%"></div>
 <pre>
   refine (conn_pointed_type (point _)); try exact _.</pre>
 </div>
 <div class="code" title="File: Aut.v
 Line: 32
-Time: 0.288s">
-<div class="time" style="width: 18.984838497034%"></div>
+Time: 0.254s">
+<div class="time" style="width: 18.039772727273%"></div>
 <pre>
   pose (c := conn_map_compose (Tr -1)
                               (factor1 (image (Tr -1) (unit_name X)))
@@ -226,15 +226,15 @@ Time: 0.288s">
 </div>
 <div class="code" title="File: Aut.v
 Line: 35
-Time: 0.071s">
-<div class="time" style="width: 4.6802900461437%"></div>
+Time: 0.058s">
+<div class="time" style="width: 4.1193181818182%"></div>
 <pre>
   refine (conn_map_homotopic _ _ _ _ c); intros []; reflexivity.</pre>
 </div>
 <div class="code" title="File: Aut.v
 Line: 36
 Time: 0.017s">
-<div class="time" style="width: 1.1206328279499%"></div>
+<div class="time" style="width: 1.2073863636364%"></div>
 <pre>
 Defined.</pre>
 </div>

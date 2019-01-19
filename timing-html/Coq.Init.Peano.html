@@ -81,8 +81,8 @@ Local Open Scope identity_scope.</pre>
 </div>
 <div class="code" title="File: Peano.v
 Line: 27
-Time: 0.001s">
-<div class="time" style="width: 10%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Require Import Logic_Type.</pre>
 </div>
@@ -392,8 +392,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Peano.v
 Line: 106
-Time: 0.001s">
-<div class="time" style="width: 10%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   intros n m; induction n; simpl; auto.</pre>
 </div>
@@ -428,8 +428,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Peano.v
 Line: 112
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 10%"></div>
 <pre>
   auto.</pre>
 </div>
@@ -560,8 +560,8 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: Peano.v
 Line: 140
-Time: 0.002s">
-<div class="time" style="width: 20%"></div>
+Time: 0.001s">
+<div class="time" style="width: 10%"></div>
 <pre>
   pattern m at 1 3; elim m; simpl; auto.</pre>
 </div>
@@ -781,8 +781,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Peano.v
 Line: 189
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 10%"></div>
 <pre>
 induction 1; auto.</pre>
 </div>
@@ -801,8 +801,8 @@ Qed.</pre>
 </div>
 <div class="code" title="File: Peano.v
 Line: 191
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 10%"></div>
 <pre>
 
 Theorem le_S_n : forall n m, S n &lt;= S m -&gt; n &lt;= m.</pre>
@@ -823,8 +823,8 @@ intros n m.</pre>
 </div>
 <div class="code" title="File: Peano.v
 Line: 195
-Time: 0.001s">
-<div class="time" style="width: 10%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> exact (le_pred (S n) (S m)).</pre>
 </div>
 <div class="code" title="File: Peano.v
@@ -884,8 +884,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Peano.v
 Line: 206
-Time: 0.001s">
-<div class="time" style="width: 10%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Theorem nat_double_ind :
  forall R:nat -&gt; nat -&gt; Type,
    (forall n:nat, R 0 n) -&gt;
@@ -908,8 +908,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Peano.v
 Line: 212
-Time: 0.002s">
-<div class="time" style="width: 20%"></div>
+Time: 0.001s">
+<div class="time" style="width: 10%"></div>
 <pre>
   destruct m; auto.</pre>
 </div>
@@ -990,8 +990,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Peano.v
 Line: 256
-Time: 0.001s">
-<div class="time" style="width: 10%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Fixpoint nat_iter (n:nat) {A} (f:A-&gt;A) (x:A) : A :=
   match n with
     | O =&gt; x
@@ -1047,8 +1047,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Peano.v
 Line: 271
-Time: 0.004s">
-<div class="time" style="width: 40%"></div>
+Time: 0.003s">
+<div class="time" style="width: 30%"></div>
 <pre>
   induction n; intros; simpl; rewrite ?IHn; trivial.</pre>
 </div>
@@ -1072,8 +1072,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Peano.v
 Line: 277
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 10%"></div>
 <pre>Theorem nat_iter_invariant :
   forall (n:nat) {A} (f:A -&gt; A) (P : A -&gt; Type),
     (forall x, P x -&gt; P (f x)) -&gt;
@@ -1088,8 +1088,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Peano.v
 Line: 281
-Time: 0.003s">
-<div class="time" style="width: 30%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   induction n; simpl; trivial.</pre>
 </div>
@@ -1102,14 +1102,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Peano.v
 Line: 283
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 10%"></div>
 <pre> apply Hf, IHn; trivial.</pre>
 </div>
 <div class="code" title="File: Peano.v
 Line: 283
-Time: 0.001s">
-<div class="time" style="width: 10%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>

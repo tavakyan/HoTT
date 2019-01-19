@@ -38,7 +38,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: EvalIn.v
 Line: 3
-Time: 0.012s">
+Time: 0.011s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import Basics.Overture Basics.PathGroupoids.</pre>
 </div>
@@ -133,16 +133,21 @@ Abort.
 
 (** As an example application, we define a tactic that takes a lemma whose definition is [idpath] and behaves like [rewrite], except that it doesn't insert any transport lemmas like [Overture.internal_paths_rew_r].  In other words, it does a [change], but leverages the pattern-matching and substitution engine of [rewrite] to decide what to [change] into. *)
 
-(** We use a dummy inductive type since [rewrite] acts on the *type* of a hypothesis rather than its body (if any). *)
-Inductive dummy (A:Type) := adummy : dummy A.
-
-</pre>
+(** We use a dummy inductive type since [rewrite] acts on the *type* of a hypothesis rather than its body (if any). *)</pre>
 </div>
 <div class="code" title="File: EvalIn.v
-Line: 50
+Line: 48
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>Ltac rewrite_refl H :=
+<pre>Inductive dummy (A:Type) := adummy : dummy A.</pre>
+</div>
+<div class="code" title="File: EvalIn.v
+Line: 48
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Ltac rewrite_refl H :=
   match goal with
     | [ |- ?X ] =&gt;
       let dX' := eval_in ltac:(fun H' =&gt; rewrite H in H') (adummy X) in
@@ -161,8 +166,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: EvalIn.v
 Line: 59
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 9.0909090909091%"></div>
 <pre>Example rewrite_refl_example {A B : Type} (x : A) (f : A -&gt; B) :
   ap f idpath = idpath :&gt; (f x = f x).</pre>
 </div>
@@ -175,8 +180,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: EvalIn.v
 Line: 61
-Time: 0.001s">
-<div class="time" style="width: 8.3333333333333%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   rewrite ap_1.</pre>
 </div>
@@ -198,20 +203,26 @@ Time: 0s">
    (fun p : f x = f x =&gt; p = 1) 1 (ap_1 x f)) *)
 Abort.
 
-(** And here's what we get with [rewrite_refl]: *)
-Example rewrite_refl_example {A B : Type} (x : A) (f : A -&gt; B) :
+(** And here's what we get with [rewrite_refl]: *)</pre>
+</div>
+<div class="code" title="File: EvalIn.v
+Line: 70
+Time: 0.001s">
+<div class="time" style="width: 9.0909090909091%"></div>
+<pre>Example rewrite_refl_example {A B : Type} (x : A) (f : A -&gt; B) :
   ap f idpath = idpath :&gt; (f x = f x).</pre>
 </div>
 <div class="code" title="File: EvalIn.v
-Line: 72
+Line: 71
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>Proof.</pre>
+<pre>
+Proof.</pre>
 </div>
 <div class="code" title="File: EvalIn.v
 Line: 72
 Time: 0.002s">
-<div class="time" style="width: 16.666666666667%"></div>
+<div class="time" style="width: 18.181818181818%"></div>
 <pre>
   rewrite_refl @ap_1.</pre>
 </div>

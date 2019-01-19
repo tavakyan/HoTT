@@ -30,7 +30,7 @@ pre {
 
 <div class="code" title="File: Tests.v
 Line: 1
-Time: 1.034s">
+Time: 0.998s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import HoTT.</pre>
 </div>
@@ -53,10 +53,11 @@ Check Susp nat : Type0.</pre>
 Line: 4
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>Fail Check Susp Type0 : Type0.</pre>
+<pre>
+Fail Check Susp Type0 : Type0.</pre>
 </div>
 <div class="code" title="File: Tests.v
-Line: 4
+Line: 5
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -66,7 +67,7 @@ Fail Check (fun (P : interval -&gt; Type) (a : P Interval.zero) (b : P Interval.
             =&gt; idpath : interval_ind P a b p = interval_rect P a b p').</pre>
 </div>
 <div class="code" title="File: Tests.v
-Line: 8
+Line: 9
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -74,85 +75,143 @@ Time: 0s">
 Local Open Scope nat_scope.</pre>
 </div>
 <div class="code" title="File: Tests.v
-Line: 10
+Line: 11
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Fail Check Lift nat : Type0.</pre>
 </div>
 <div class="code" title="File: Tests.v
-Line: 11
+Line: 12
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Check 1 : Lift nat.
+Check 1 : Lift nat.</pre>
+</div>
+<div class="code" title="File: Tests.v
+Line: 13
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
 
-Check lift'@{i j}.
-Check lower'@{i j}.
-Check isequiv_lift'@{i j}.
+Check lift'@{i j}.</pre>
+</div>
+<div class="code" title="File: Tests.v
+Line: 15
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Check lower'@{i j}.</pre>
+</div>
+<div class="code" title="File: Tests.v
+Line: 16
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Check isequiv_lift'@{i j}.</pre>
+</div>
+<div class="code" title="File: Tests.v
+Line: 17
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
 
-(** Check that [ispointed_susp] doesn't require just a [Set] *)
-Check (fun A : Type =&gt; _ : IsPointed (Susp A)).
-Check (@ispointed_susp Type).
-Check (@ispointed_susp Set).
+(** Check that [ispointed_susp] doesn't require just a [Set] *)</pre>
+</div>
+<div class="code" title="File: Tests.v
+Line: 19
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Check (fun A : Type =&gt; _ : IsPointed (Susp A)).</pre>
+</div>
+<div class="code" title="File: Tests.v
+Line: 19
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Check (@ispointed_susp Type).</pre>
+</div>
+<div class="code" title="File: Tests.v
+Line: 20
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Check (@ispointed_susp Set).</pre>
+</div>
+<div class="code" title="File: Tests.v
+Line: 21
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
 
-(** Check that nested sigma-type notation didn't get clobbered by surreal cuts *)
-Check ({ l : Unit &amp; { n : Unit &amp; Unit }}).
+(** Check that nested sigma-type notation didn't get clobbered by surreal cuts *)</pre>
+</div>
+<div class="code" title="File: Tests.v
+Line: 23
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Check ({ l : Unit &amp; { n : Unit &amp; Unit }}).</pre>
+</div>
+<div class="code" title="File: Tests.v
+Line: 23
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
 
 (** Regression check issue #744 *)</pre>
 </div>
 <div class="code" title="File: Tests.v
-Line: 26
+Line: 25
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Module Foo (Os : ReflectiveSubuniverses).</pre>
 </div>
 <div class="code" title="File: Tests.v
-Line: 26
-Time: 0.085s">
-<div class="time" style="width: 8.220502901354%"></div>
+Line: 25
+Time: 0.084s">
+<div class="time" style="width: 8.4168336673347%"></div>
 <pre>
   Module Import Os_Theory := ReflectiveSubuniverses_Theory Os.</pre>
 </div>
 <div class="code" title="File: Tests.v
-Line: 27
+Line: 26
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Goal Unit.</pre>
 </div>
 <div class="code" title="File: Tests.v
-Line: 28
+Line: 27
 Time: 0.02s">
-<div class="time" style="width: 1.9342359767892%"></div>
+<div class="time" style="width: 2.0040080160321%"></div>
 <pre>
     let lem' := preconcat_any @to_O_natural_compose in
     pose proof lem' as H.</pre>
 </div>
 <div class="code" title="File: Tests.v
-Line: 30
-Time: 0.175s">
-<div class="time" style="width: 16.924564796905%"></div>
+Line: 29
+Time: 0.167s">
+<div class="time" style="width: 16.733466933868%"></div>
 <pre>
     let test := left_associate_concat_in H in
     pose test.</pre>
 </div>
 <div class="code" title="File: Tests.v
-Line: 32
+Line: 31
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Admitted.</pre>
 </div>
 <div class="code" title="File: Tests.v
-Line: 33
+Line: 32
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 End Foo.</pre>
 </div>
 <div class="code" title="File: Tests.v
-Line: 34
+Line: 33
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -160,24 +219,24 @@ Time: 0s">
 (** Test 1 from issue #754 *)</pre>
 </div>
 <div class="code" title="File: Tests.v
-Line: 36
+Line: 35
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Module Issue754_1.</pre>
 </div>
 <div class="code" title="File: Tests.v
-Line: 36
-Time: 0.001s">
-<div class="time" style="width: 0.096711798839458%"></div>
+Line: 35
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Inductive nat : Type1 :=
   | O : nat
   | S : nat -&gt; nat.</pre>
 </div>
 <div class="code" title="File: Tests.v
-Line: 39
+Line: 38
 Time: 0.001s">
-<div class="time" style="width: 0.096711798839458%"></div>
+<div class="time" style="width: 0.1002004008016%"></div>
 <pre>
   Fixpoint code_nat (m n : nat) {struct m} : DProp.DHProp :=
     match m with
@@ -192,7 +251,7 @@ Time: 0.001s">
     end.</pre>
 </div>
 <div class="code" title="File: Tests.v
-Line: 50
+Line: 49
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -200,28 +259,28 @@ Time: 0s">
   Local Set Warnings Append "-notation-overridden".</pre>
 </div>
 <div class="code" title="File: Tests.v
-Line: 52
+Line: 51
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Notation "x =n y" := (code_nat x y) : nat_scope.</pre>
 </div>
 <div class="code" title="File: Tests.v
-Line: 53
+Line: 52
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Local Set Warnings Append "notation-overridden".</pre>
 </div>
 <div class="code" title="File: Tests.v
-Line: 54
+Line: 53
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Bind Scope nat_scope with nat.</pre>
 </div>
 <div class="code" title="File: Tests.v
-Line: 55
+Line: 54
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -230,7 +289,7 @@ Time: 0s">
       Trunc.trunctype_type (DProp.dhprop_hprop (n =n m)) &lt;~&gt; n = m.</pre>
 </div>
 <div class="code" title="File: Tests.v
-Line: 58
+Line: 57
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -238,49 +297,49 @@ Time: 0s">
   Definition nat_discr `{Funext} {n: nat}: O &lt;&gt; S n.</pre>
 </div>
 <div class="code" title="File: Tests.v
-Line: 60
+Line: 59
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Tests.v
-Line: 61
+Line: 60
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     intro H'.</pre>
 </div>
 <div class="code" title="File: Tests.v
-Line: 62
+Line: 61
 Time: 0.004s">
-<div class="time" style="width: 0.38684719535783%"></div>
+<div class="time" style="width: 0.40080160320641%"></div>
 <pre>
     equiv_induction (@equiv_path_nat O (S n)).</pre>
 </div>
 <div class="code" title="File: Tests.v
-Line: 63
+Line: 62
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     assumption.</pre>
 </div>
 <div class="code" title="File: Tests.v
-Line: 64
+Line: 63
 Time: 0.001s">
-<div class="time" style="width: 0.096711798839458%"></div>
+<div class="time" style="width: 0.1002004008016%"></div>
 <pre>
   Qed.</pre>
 </div>
 <div class="code" title="File: Tests.v
-Line: 65
+Line: 64
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 End Issue754_1.</pre>
 </div>
 <div class="code" title="File: Tests.v
-Line: 67
+Line: 66
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
