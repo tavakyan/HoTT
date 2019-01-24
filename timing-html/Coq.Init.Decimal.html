@@ -57,8 +57,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Decimal.v
 Line: 21
-Time: 0.002s">
-<div class="time" style="width: 28.571428571429%"></div>
+Time: 0.003s">
+<div class="time" style="width: 20%"></div>
 <pre>Inductive uint :=
  | Nil
  | D0 (_:uint)
@@ -104,12 +104,12 @@ Time: 0s">
 Line: 40
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>Inductive int := Pos (d:uint) | Neg (d:uint).</pre>
+<pre>Variant int := Pos (d:uint) | Neg (d:uint).</pre>
 </div>
 <div class="code" title="File: Decimal.v
 Line: 40
-Time: 0.007s">
-<div class="time" style="width: 100%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Delimit Scope dec_uint_scope with uint.</pre>
@@ -123,8 +123,8 @@ Bind Scope dec_uint_scope with uint.</pre>
 </div>
 <div class="code" title="File: Decimal.v
 Line: 43
-Time: 0.001s">
-<div class="time" style="width: 14.285714285714%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Delimit Scope dec_int_scope with int.</pre>
 </div>
@@ -141,6 +141,21 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
+Register uint as num.uint.type.</pre>
+</div>
+<div class="code" title="File: Decimal.v
+Line: 47
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Register int as num.int.type.</pre>
+</div>
+<div class="code" title="File: Decimal.v
+Line: 48
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
 (** This representation favors simplicity over canonicity.
     For normalizing numbers, we need to remove head zero digits,
     and choose our canonical representation of 0 (here [D0 Nil]
@@ -151,9 +166,9 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Decimal.v
-Line: 53
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 56
+Time: 0.001s">
+<div class="time" style="width: 6.6666666666667%"></div>
 <pre>Fixpoint nzhead d :=
   match d with
   | D0 d =&gt; nzhead d
@@ -161,7 +176,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Decimal.v
-Line: 57
+Line: 60
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -171,9 +186,9 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Decimal.v
-Line: 60
-Time: 0.001s">
-<div class="time" style="width: 14.285714285714%"></div>
+Line: 63
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition unorm d :=
   match nzhead d with
   | Nil =&gt; zero
@@ -181,7 +196,7 @@ Time: 0.001s">
   end.</pre>
 </div>
 <div class="code" title="File: Decimal.v
-Line: 64
+Line: 67
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -191,9 +206,9 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Decimal.v
-Line: 67
+Line: 70
 Time: 0.001s">
-<div class="time" style="width: 14.285714285714%"></div>
+<div class="time" style="width: 6.6666666666667%"></div>
 <pre>Definition norm d :=
   match d with
   | Pos d =&gt; Pos (unorm d)
@@ -205,7 +220,7 @@ Time: 0.001s">
   end.</pre>
 </div>
 <div class="code" title="File: Decimal.v
-Line: 75
+Line: 78
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -216,7 +231,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Decimal.v
-Line: 79
+Line: 82
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition opp (d:int) :=
@@ -226,7 +241,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Decimal.v
-Line: 83
+Line: 86
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -237,9 +252,9 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Decimal.v
-Line: 87
-Time: 0.001s">
-<div class="time" style="width: 14.285714285714%"></div>
+Line: 90
+Time: 0.002s">
+<div class="time" style="width: 13.333333333333%"></div>
 <pre>Fixpoint revapp (d d' : uint) :=
   match d with
   | Nil =&gt; d'
@@ -256,7 +271,7 @@ Time: 0.001s">
   end.</pre>
 </div>
 <div class="code" title="File: Decimal.v
-Line: 100
+Line: 103
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -264,7 +279,7 @@ Time: 0s">
 Definition rev d := revapp d Nil.</pre>
 </div>
 <div class="code" title="File: Decimal.v
-Line: 102
+Line: 105
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -272,7 +287,7 @@ Time: 0s">
 Module Little.</pre>
 </div>
 <div class="code" title="File: Decimal.v
-Line: 104
+Line: 107
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -282,9 +297,9 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Decimal.v
-Line: 107
+Line: 110
 Time: 0.001s">
-<div class="time" style="width: 14.285714285714%"></div>
+<div class="time" style="width: 6.6666666666667%"></div>
 <pre>Fixpoint succ d :=
   match d with
   | Nil =&gt; D1 Nil
@@ -301,7 +316,7 @@ Time: 0.001s">
   end.</pre>
 </div>
 <div class="code" title="File: Decimal.v
-Line: 120
+Line: 123
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -311,9 +326,9 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Decimal.v
-Line: 123
-Time: 0.003s">
-<div class="time" style="width: 42.857142857143%"></div>
+Line: 126
+Time: 0.015s">
+<div class="time" style="width: 100%"></div>
 <pre>Fixpoint double d :=
   match d with
   | Nil =&gt; Nil
@@ -345,15 +360,15 @@ with succ_double d :=
   end.</pre>
 </div>
 <div class="code" title="File: Decimal.v
-Line: 151
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 154
+Time: 0.001s">
+<div class="time" style="width: 6.6666666666667%"></div>
 <pre>
 
 End Little.</pre>
 </div>
 <div class="code" title="File: Decimal.v
-Line: 153
+Line: 156
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -364,20 +379,20 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Decimal.v
-Line: 157
+Line: 160
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition uint_of_uint (i:uint) := i.</pre>
 </div>
 <div class="code" title="File: Decimal.v
-Line: 157
+Line: 160
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Definition int_of_int (i:int) := i.</pre>
 </div>
 <div class="code" title="File: Decimal.v
-Line: 159
+Line: 162
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

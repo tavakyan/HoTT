@@ -36,7 +36,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 1
-Time: 0.073s">
+Time: 0.059s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import Category.Core Functor.Core Category.Prod Category.Dual Functor.Prod.Core SetCategory.Core.</pre>
 </div>
@@ -96,10 +96,17 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-Delimit Scope profunctor_scope with profunctor.</pre>
+Declare Scope profunctor_scope.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 11
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Delimit Scope profunctor_scope with profunctor.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 12
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -107,7 +114,7 @@ Time: 0s">
 Section profunctor.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 13
+Line: 14
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -128,20 +135,20 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 28
+Line: 29
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Context `{Funext}.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 28
+Line: 29
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Variables C D : PreCategory.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 29
+Line: 30
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -150,20 +157,20 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 32
+Line: 33
 Time: 0.001s">
-<div class="time" style="width: 1.3698630136986%"></div>
+<div class="time" style="width: 1.6949152542373%"></div>
 <pre>Definition Profunctor := Functor (D^op * C) set_cat.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 32
+Line: 33
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 End profunctor.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 33
+Line: 34
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -171,7 +178,7 @@ Time: 0s">
 Bind Scope profunctor_scope with Profunctor.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 35
+Line: 36
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -179,21 +186,21 @@ Time: 0s">
 Module Export ProfunctorCoreNotations.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 37
+Line: 38
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Notation "x -|-&gt; y" := (Profunctor x y) : type_scope.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 38
+Line: 39
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 End ProfunctorCoreNotations.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 40
+Line: 41
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
