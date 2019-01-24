@@ -36,8 +36,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 1
-Time: 0.008s">
-<div class="time" style="width: 25.806451612903%"></div>
+Time: 0.012s">
+<div class="time" style="width: 35.294117647059%"></div>
 <pre>Require Import Category.Core Functor.Core NaturalTransformation.Core.</pre>
 </div>
 <div class="code" title="File: Core.v
@@ -49,8 +49,8 @@ Require Import Category.Strict.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 2
-Time: 0.025s">
-<div class="time" style="width: 80.645161290323%"></div>
+Time: 0.034s">
+<div class="time" style="width: 100%"></div>
 <pre>
 Require Import Functor.Identity NaturalTransformation.Identity.</pre>
 </div>
@@ -64,14 +64,14 @@ Require Import NaturalTransformation.Paths NaturalTransformation.Composition.Cor
 <div class="code" title="File: Core.v
 Line: 4
 Time: 0.015s">
-<div class="time" style="width: 48.387096774194%"></div>
+<div class="time" style="width: 44.117647058824%"></div>
 <pre>
 Require Import Functor.Paths.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 5
 Time: 0.002s">
-<div class="time" style="width: 6.4516129032258%"></div>
+<div class="time" style="width: 5.8823529411765%"></div>
 <pre>
 Require Import Types.Record Trunc Types.Sigma.</pre>
 </div>
@@ -157,7 +157,7 @@ Time: 0s">
 <div class="code" title="File: Core.v
 Line: 25
 Time: 0.003s">
-<div class="time" style="width: 9.6774193548387%"></div>
+<div class="time" style="width: 8.8235294117647%"></div>
 <pre>Record SectionOfFunctor :=
     {
       section_of_functor_morphism :&gt; Functor D C;
@@ -176,8 +176,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 33
-Time: 0.001s">
-<div class="time" style="width: 3.2258064516129%"></div>
+Time: 0.002s">
+<div class="time" style="width: 5.8823529411765%"></div>
 <pre>
 
   Lemma section_of_functor_sig
@@ -192,8 +192,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 37
-Time: 0.003s">
-<div class="time" style="width: 9.6774193548387%"></div>
+Time: 0.004s">
+<div class="time" style="width: 11.764705882353%"></div>
 <pre>
     issig Build_SectionOfFunctor
           section_of_functor_morphism
@@ -201,8 +201,8 @@ Time: 0.003s">
 </div>
 <div class="code" title="File: Core.v
 Line: 40
-Time: 0.002s">
-<div class="time" style="width: 6.4516129032258%"></div>
+Time: 0.003s">
+<div class="time" style="width: 8.8235294117647%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -238,8 +238,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 47
-Time: 0.017s">
-<div class="time" style="width: 54.838709677419%"></div>
+Time: 0.019s">
+<div class="time" style="width: 55.882352941176%"></div>
 <pre>
     refine (@Build_PreCategory
               SectionOfFunctor
@@ -254,22 +254,22 @@ Time: 0.017s">
 </div>
 <div class="code" title="File: Core.v
 Line: 57
-Time: 0.002s">
-<div class="time" style="width: 6.4516129032258%"></div>
+Time: 0.003s">
+<div class="time" style="width: 8.8235294117647%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 58
 Time: 0.01s">
-<div class="time" style="width: 32.258064516129%"></div>
+<div class="time" style="width: 29.411764705882%"></div>
 <pre>
 End FunctorSectionCategory.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 59
 Time: 0.001s">
-<div class="time" style="width: 3.2258064516129%"></div>
+<div class="time" style="width: 2.9411764705882%"></div>
 <pre>
 
 Global Instance isstrict_category_of_sections `{Funext}
@@ -287,13 +287,13 @@ Proof.</pre>
 <div class="code" title="File: Core.v
 Line: 65
 Time: 0.004s">
-<div class="time" style="width: 12.903225806452%"></div>
+<div class="time" style="width: 11.764705882353%"></div>
 <pre>
   eapply trunc_equiv; [ | apply section_of_functor_sig ].</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 66
-Time: 0.031s">
+Time: 0.034s">
 <div class="time" style="width: 100%"></div>
 <pre>
   typeclasses eauto.</pre>
@@ -301,7 +301,7 @@ Time: 0.031s">
 <div class="code" title="File: Core.v
 Line: 67
 Time: 0.004s">
-<div class="time" style="width: 12.903225806452%"></div>
+<div class="time" style="width: 11.764705882353%"></div>
 <pre>
 Qed.</pre>
 </div>
