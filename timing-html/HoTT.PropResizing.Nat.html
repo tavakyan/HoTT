@@ -39,8 +39,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 3
-Time: 0.05s">
-<div class="time" style="width: 16.129032258065%"></div>
+Time: 0.051s">
+<div class="time" style="width: 16.451612903226%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types UnivalenceImpliesFunext HProp.</pre>
 </div>
 <div class="code" title="File: Nat.v
@@ -113,8 +113,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 28
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
 
   Definition Graph@{} := @sig@{u u} Type@{s} (fun V =&gt; @sig@{u u} (V -&gt; V -&gt; Type@{s}) (fun E =&gt; forall x y, IsHProp (E x y))).</pre>
@@ -173,8 +173,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 46
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>Definition equiv_path_graph0 (A B : Graph)
     : { f : vert A &lt;~&gt; vert B &amp;
             forall x y, edge A x y &lt;-&gt; edge B (f x) (f y) }
@@ -210,15 +210,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 53
-Time: 0.003s">
-<div class="time" style="width: 0.96774193548387%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre>
     rewrite transport_sigma.</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 54
-Time: 0.017s">
-<div class="time" style="width: 5.4838709677419%"></div>
+Time: 0.018s">
+<div class="time" style="width: 5.8064516129032%"></div>
 <pre>
     srefine (equiv_path_sigma_hprop _ _ oE _).</pre>
 </div>
@@ -237,8 +237,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 56
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
     srefine (equiv_functor_forall' (f^-1) _).</pre>
 </div>
@@ -292,36 +292,36 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 63
-Time: 0.006s">
-<div class="time" style="width: 1.9354838709677%"></div>
+Time: 0.007s">
+<div class="time" style="width: 2.258064516129%"></div>
 <pre>
     rewrite !transport_path_universe_V.</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 64
-Time: 0.009s">
-<div class="time" style="width: 2.9032258064516%"></div>
+Time: 0.011s">
+<div class="time" style="width: 3.5483870967742%"></div>
 <pre>
     rewrite !eisretr.</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 65
-Time: 0.001s">
-<div class="time" style="width: 0.32258064516129%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     srefine (equiv_path_universe _ _ oE _).</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 66
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
     srefine (equiv_equiv_iff_hprop _ _).</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 67
-Time: 0.011s">
-<div class="time" style="width: 3.5483870967742%"></div>
+Time: 0.012s">
+<div class="time" style="width: 3.8709677419355%"></div>
 <pre>
   Qed.</pre>
 </div>
@@ -369,8 +369,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 80
-Time: 0.019s">
-<div class="time" style="width: 6.1290322580645%"></div>
+Time: 0.021s">
+<div class="time" style="width: 6.7741935483871%"></div>
 <pre>
     srefine (Build_Graph (sum@{s s} (vert A) Unit) _ _).</pre>
 </div>
@@ -383,8 +383,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 82
-Time: 0.001s">
-<div class="time" style="width: 0.32258064516129%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> intros [x|x] [y|y].</pre>
 </div>
 <div class="code" title="File: Nat.v
@@ -448,8 +448,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 87
-Time: 0.006s">
-<div class="time" style="width: 1.9354838709677%"></div>
+Time: 0.007s">
+<div class="time" style="width: 2.258064516129%"></div>
 <pre> cbn; intros [x|x] [y|y]; exact _.</pre>
 </div>
 <div class="code" title="File: Nat.v
@@ -486,8 +486,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 95
-Time: 0.001s">
-<div class="time" style="width: 0.32258064516129%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     destruct x as [x|x]; exact tt.</pre>
 </div>
@@ -500,8 +500,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 97
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
 
   Definition graph_succ_top_unique@{}
@@ -532,8 +532,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 105
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre> destruct (yt (inr tt)).</pre>
 </div>
 <div class="code" title="File: Nat.v
@@ -585,8 +585,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 116
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
     destruct x as [x|x].</pre>
 </div>
@@ -670,15 +670,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 129
-Time: 0.011s">
-<div class="time" style="width: 3.5483870967742%"></div>
+Time: 0.012s">
+<div class="time" style="width: 3.8709677419355%"></div>
 <pre>
       rewrite &lt;- (eisretr f x).</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 130
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
       apply (fst (e (f^-1 x) (inr tt))).</pre>
 </div>
@@ -741,8 +741,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 140
-Time: 0.001s">
-<div class="time" style="width: 0.32258064516129%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       apply (snd (e (f^-1 (inr tt)) (inl x))) in ed.</pre>
 </div>
@@ -755,8 +755,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 142
-Time: 0.011s">
-<div class="time" style="width: 3.5483870967742%"></div>
+Time: 0.012s">
+<div class="time" style="width: 3.8709677419355%"></div>
 <pre>
       apply moveL_equiv_V in finr.</pre>
 </div>
@@ -826,8 +826,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 153
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
 
     Definition graph_unsucc_equiv_vert@{} : vert A &lt;~&gt; vert B
@@ -866,8 +866,8 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 163
-Time: 0.001s">
-<div class="time" style="width: 0.32258064516129%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre>
       rewrite &lt;- (unfunctor_sum_l_beta f Ha y) in h.</pre>
 </div>
@@ -959,8 +959,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 178
-Time: 0.003s">
-<div class="time" style="width: 0.96774193548387%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.2903225806452%"></div>
 <pre>
       destruct x as [x|x]; destruct y as [y|y]; cbn.</pre>
 </div>
@@ -1025,8 +1025,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 184
-Time: 0.001s">
-<div class="time" style="width: 0.32258064516129%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> intros [f e].</pre>
 </div>
 <div class="code" title="File: Nat.v
@@ -1058,15 +1058,15 @@ Time: 0.004s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 187
-Time: 0.043s">
-<div class="time" style="width: 13.870967741935%"></div>
+Time: 0.041s">
+<div class="time" style="width: 13.225806451613%"></div>
 <pre>
       apply path_sigma_hprop; cbn.</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 188
-Time: 0.003s">
-<div class="time" style="width: 0.96774193548387%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre>
       apply path_equiv, path_arrow; intros [x|[]]; cbn.</pre>
 </div>
@@ -1125,15 +1125,15 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 194
-Time: 0.027s">
-<div class="time" style="width: 8.7096774193548%"></div>
+Time: 0.026s">
+<div class="time" style="width: 8.3870967741935%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 195
-Time: 0.014s">
-<div class="time" style="width: 4.5161290322581%"></div>
+Time: 0.015s">
+<div class="time" style="width: 4.8387096774194%"></div>
 <pre>
 
   Definition graph_succ_path_equiv@{}
@@ -1141,8 +1141,8 @@ Time: 0.014s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 198
-Time: 0.005s">
-<div class="time" style="width: 1.6129032258065%"></div>
+Time: 0.006s">
+<div class="time" style="width: 1.9354838709677%"></div>
 <pre>
 
   Definition graph_unsucc_path@{} (A B : Graph)
@@ -1188,8 +1188,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 215
-Time: 0.15s">
-<div class="time" style="width: 48.387096774194%"></div>
+Time: 0.158s">
+<div class="time" style="width: 50.967741935484%"></div>
 <pre>
     apply trunc_forall.</pre>
 </div>
@@ -1364,8 +1364,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 247
-Time: 0.005s">
-<div class="time" style="width: 1.6129032258065%"></div>
+Time: 0.006s">
+<div class="time" style="width: 1.9354838709677%"></div>
 <pre>
     apply ((graph_succ_path_equiv n.1 m.1)^-1).</pre>
 </div>
@@ -1415,8 +1415,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 256
-Time: 0.118s">
-<div class="time" style="width: 38.064516129032%"></div>
+Time: 0.116s">
+<div class="time" style="width: 37.41935483871%"></div>
 <pre>
     apply Arec; try exact _.</pre>
 </div>
@@ -1449,15 +1449,15 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 260
-Time: 0.001s">
-<div class="time" style="width: 0.32258064516129%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       destruct fe as [f e].</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 261
-Time: 0.002s">
-<div class="time" style="width: 0.64516129032258%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
       equiv_intro (equiv_path_graph graph_zero graph_zero) fe'.</pre>
 </div>
@@ -1477,8 +1477,8 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 264
-Time: 0.037s">
-<div class="time" style="width: 11.935483870968%"></div>
+Time: 0.038s">
+<div class="time" style="width: 12.258064516129%"></div>
 <pre>
       apply path_sigma_hprop, path_equiv@{s s s u}, path_arrow.</pre>
 </div>
@@ -1504,15 +1504,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 267
-Time: 0.004s">
-<div class="time" style="width: 1.2903225806452%"></div>
+Time: 0.006s">
+<div class="time" style="width: 1.9354838709677%"></div>
 <pre>
       refine (contr_equiv (B = B) (graph_succ_path_equiv B B)).</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 268
-Time: 0.005s">
-<div class="time" style="width: 1.6129032258065%"></div>
+Time: 0.006s">
+<div class="time" style="width: 1.9354838709677%"></div>
 <pre>
   Qed.</pre>
 </div>
@@ -1576,8 +1576,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 279
-Time: 0.007s">
-<div class="time" style="width: 2.258064516129%"></div>
+Time: 0.005s">
+<div class="time" style="width: 1.6129032258065%"></div>
 <pre>
     refine (trunc_equiv (n.1 = m.1) (equiv_path_sigma_hprop n m)).</pre>
 </div>
@@ -1620,8 +1620,8 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 287
-Time: 0.01s">
-<div class="time" style="width: 3.2258064516129%"></div>
+Time: 0.008s">
+<div class="time" style="width: 2.5806451612903%"></div>
 <pre>
     exact (f^-1 (inr tt)).</pre>
 </div>
@@ -1885,8 +1885,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 324
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre> path_via n.</pre>
 </div>
 <div class="code" title="File: Nat.v
@@ -1934,8 +1934,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 331
-Time: 0.002s">
-<div class="time" style="width: 0.64516129032258%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.96774193548387%"></div>
 <pre> exact _.</pre>
 </div>
 <div class="code" title="File: Nat.v
@@ -1959,8 +1959,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 332
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
       apply succ_inj;path_via n.</pre>
 </div>
@@ -2030,8 +2030,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 343
-Time: 0.004s">
-<div class="time" style="width: 1.2903225806452%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.96774193548387%"></div>
 <pre>
     srefine (resize_nrec n nrec
              (fun n =&gt; (n = graph_zero) +
@@ -2119,8 +2119,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 354
-Time: 0.002s">
-<div class="time" style="width: 0.64516129032258%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
   Qed.</pre>
 </div>
@@ -2142,8 +2142,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 359
-Time: 0.001s">
-<div class="time" style="width: 0.32258064516129%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     destruct (N_zero_or_succ (graph_succ n ; snrec)) as [H0|[m Hs]].</pre>
 </div>
@@ -2182,8 +2182,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 363
-Time: 0.001s">
-<div class="time" style="width: 0.32258064516129%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       apply graph_unsucc_path in Hs.</pre>
 </div>
@@ -2678,15 +2678,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 457
-Time: 0.017s">
-<div class="time" style="width: 5.4838709677419%"></div>
+Time: 0.018s">
+<div class="time" style="width: 5.8064516129032%"></div>
 <pre>
     intros [x|[x|[]]] [y|[y|[]]];apply iff_reflexive@{u s}.</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 458
-Time: 0.013s">
-<div class="time" style="width: 4.1935483870968%"></div>
+Time: 0.016s">
+<div class="time" style="width: 5.1612903225806%"></div>
 <pre>
   Qed.</pre>
 </div>
@@ -2708,8 +2708,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 463
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.009s">
+<div class="time" style="width: 2.9032258064516%"></div>
 <pre>
     apply equiv_path_graph.</pre>
 </div>
@@ -2722,15 +2722,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 465
-Time: 0.01s">
-<div class="time" style="width: 3.2258064516129%"></div>
+Time: 0.011s">
+<div class="time" style="width: 3.5483870967742%"></div>
 <pre>
     intros [[x|x]|x] [[y|y]|y]; apply iff_reflexive@{u s}.</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 466
-Time: 0.007s">
-<div class="time" style="width: 2.258064516129%"></div>
+Time: 0.008s">
+<div class="time" style="width: 2.5806451612903%"></div>
 <pre>
   Qed.</pre>
 </div>
@@ -2775,15 +2775,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 476
-Time: 0.007s">
-<div class="time" style="width: 2.258064516129%"></div>
+Time: 0.005s">
+<div class="time" style="width: 1.6129032258065%"></div>
 <pre>
     intros [x|[]] [y|[]]; apply iff_reflexive@{u s}.</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 477
-Time: 0.006s">
-<div class="time" style="width: 1.9354838709677%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.96774193548387%"></div>
 <pre>
   Qed.</pre>
 </div>
@@ -3125,8 +3125,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 532
-Time: 0.008s">
-<div class="time" style="width: 2.5806451612903%"></div>
+Time: 0.009s">
+<div class="time" style="width: 2.9032258064516%"></div>
 <pre>
     refine (N_propind _ _ _).</pre>
 </div>
@@ -3139,8 +3139,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 534
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre> intros H; rewrite !N_add_zero_r in H; exact H.</pre>
 </div>
 <div class="code" title="File: Nat.v
@@ -3209,8 +3209,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 544
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
     rewrite H; symmetry.</pre>
 </div>
@@ -3335,8 +3335,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 562
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.01s">
+<div class="time" style="width: 3.2258064516129%"></div>
 <pre>
       apply ap, H.</pre>
 </div>
@@ -3438,8 +3438,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 581
-Time: 0.005s">
-<div class="time" style="width: 1.6129032258065%"></div>
+Time: 0.008s">
+<div class="time" style="width: 2.5806451612903%"></div>
 <pre>
     apply ishprop_sigma_disjoint.</pre>
 </div>
@@ -3558,8 +3558,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 599
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
     srefine ((BuildEquiv _ _ f _);_); cbn.</pre>
 </div>
@@ -3704,8 +3704,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 625
-Time: 0.005s">
-<div class="time" style="width: 1.6129032258065%"></div>
+Time: 0.006s">
+<div class="time" style="width: 1.9354838709677%"></div>
 <pre>
     apply ishprop_sigma_disjoint.</pre>
 </div>
@@ -3732,8 +3732,8 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 629
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
     path_via m.</pre>
 </div>
@@ -3901,8 +3901,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 654
-Time: 0.007s">
-<div class="time" style="width: 2.258064516129%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     assert (HP : IsHProp ((n = m) + (n &lt; m))).</pre>
 </div>
@@ -4495,8 +4495,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 732
-Time: 0.022s">
-<div class="time" style="width: 7.0967741935484%"></div>
+Time: 0.023s">
+<div class="time" style="width: 7.4193548387097%"></div>
 <pre> abstract (intros [[m H]|[]]; cbn;
       [ generalize (N_le_eq_or_lt m n (N_lt_le m n H));
         intros [H0|Hs]; cbn;
@@ -4518,8 +4518,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 743
-Time: 0.014s">
-<div class="time" style="width: 4.5161290322581%"></div>
+Time: 0.015s">
+<div class="time" style="width: 4.8387096774194%"></div>
 <pre> abstract (intros [m H]; cbn;
       generalize (N_le_eq_or_lt m n H);
       intros [H0|Hs]; cbn;
@@ -4610,8 +4610,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 763
-Time: 0.001s">
-<div class="time" style="width: 0.32258064516129%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     reflexivity.</pre>
 </div>
@@ -4808,8 +4808,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 811
-Time: 0.066s">
-<div class="time" style="width: 21.290322580645%"></div>
+Time: 0.069s">
+<div class="time" style="width: 22.258064516129%"></div>
 <pre>
       srefine (trunc_equiv' {f0 : {f : {m : N &amp; m &lt;= zero} -&gt; X &amp;
     (f (zero_seg zero) = x0)} &amp;
@@ -4852,8 +4852,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 819
-Time: 0.015s">
-<div class="time" style="width: 4.8387096774194%"></div>
+Time: 0.014s">
+<div class="time" style="width: 4.5161290322581%"></div>
 <pre>
         cbn; apply equiv_sigma_prod0.</pre>
 </div>
@@ -4866,8 +4866,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 821
-Time: 0.086s">
-<div class="time" style="width: 27.741935483871%"></div>
+Time: 0.087s">
+<div class="time" style="width: 28.064516129032%"></div>
 <pre> refine (@trunc_sigma@{nr nr large nr} _ _ _ _ _).</pre>
 </div>
 <div class="code" title="File: Nat.v
@@ -4905,8 +4905,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 824
-Time: 0.001s">
-<div class="time" style="width: 0.32258064516129%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> intros [g H].</pre>
 </div>
 <div class="code" title="File: Nat.v
@@ -4931,8 +4931,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 826
-Time: 0.076s">
-<div class="time" style="width: 24.516129032258%"></div>
+Time: 0.082s">
+<div class="time" style="width: 26.451612903226%"></div>
 <pre>
               exact (H^ @ ap g (path_ishprop _ _)).</pre>
 </div>
@@ -4998,8 +4998,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 833
-Time: 0.164s">
-<div class="time" style="width: 52.903225806452%"></div>
+Time: 0.173s">
+<div class="time" style="width: 55.806451612903%"></div>
 <pre>
                 apply path_ishprop.</pre>
 </div>
@@ -5058,15 +5058,15 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 839
-Time: 0.006s">
-<div class="time" style="width: 1.9354838709677%"></div>
+Time: 0.007s">
+<div class="time" style="width: 2.258064516129%"></div>
 <pre>
           destruct (N_lt_zero m.1 m.2).</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 840
-Time: 0.021s">
-<div class="time" style="width: 6.7741935483871%"></div>
+Time: 0.022s">
+<div class="time" style="width: 7.0967741935484%"></div>
 <pre>
     Qed.</pre>
 </div>
@@ -5151,8 +5151,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 854
-Time: 0.003s">
-<div class="time" style="width: 0.96774193548387%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
     Defined.</pre>
 </div>
@@ -5243,8 +5243,8 @@ Time: 0.005s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 868
-Time: 0.003s">
-<div class="time" style="width: 0.96774193548387%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.2903225806452%"></div>
 <pre>
     Qed.</pre>
 </div>
@@ -5300,8 +5300,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 877
-Time: 0.007s">
-<div class="time" style="width: 2.258064516129%"></div>
+Time: 0.01s">
+<div class="time" style="width: 3.2258064516129%"></div>
 <pre>
         srefine ((f (zero_seg n) = x0) *
            ((forall (mh : {m:N &amp; m &lt; n}),
@@ -5349,8 +5349,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 884
-Time: 0.011s">
-<div class="time" style="width: 3.5483870967742%"></div>
+Time: 0.009s">
+<div class="time" style="width: 2.9032258064516%"></div>
 <pre>
           cbn.</pre>
 </div>
@@ -5402,8 +5402,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 889
-Time: 0.005s">
-<div class="time" style="width: 1.6129032258065%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.2903225806452%"></div>
 <pre>
             apply path_sigma_hprop; reflexivity.</pre>
 </div>
@@ -5450,8 +5450,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 901
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.32258064516129%"></div>
 <pre>
           apply equiv_functor_prod'.</pre>
 </div>
@@ -5530,8 +5530,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 909
-Time: 0.005s">
-<div class="time" style="width: 1.6129032258065%"></div>
+Time: 0.006s">
+<div class="time" style="width: 1.9354838709677%"></div>
 <pre>
                 apply ap, path_sigma_hprop; reflexivity.</pre>
 </div>
@@ -5710,8 +5710,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 933
-Time: 0.009s">
-<div class="time" style="width: 2.9032258064516%"></div>
+Time: 0.007s">
+<div class="time" style="width: 2.258064516129%"></div>
 <pre>
               match goal with
               | [ |- context[match ?L with | inl _ =&gt; inr tt | inr Hs =&gt; inl (?k; Hs) end] ] =&gt; generalize L
@@ -5752,8 +5752,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 939
-Time: 0.005s">
-<div class="time" style="width: 1.6129032258065%"></div>
+Time: 0.006s">
+<div class="time" style="width: 1.9354838709677%"></div>
 <pre>
                 apply ap, path_sigma_hprop.</pre>
 </div>
@@ -5845,8 +5845,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 948
-Time: 0.008s">
-<div class="time" style="width: 2.5806451612903%"></div>
+Time: 0.009s">
+<div class="time" style="width: 2.9032258064516%"></div>
 <pre>
         exact ((equiv_sigma_contr _)^-1%equiv).</pre>
 </div>
@@ -5858,15 +5858,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 949
-Time: 0.066s">
-<div class="time" style="width: 21.290322580645%"></div>
+Time: 0.063s">
+<div class="time" style="width: 20.322580645161%"></div>
 <pre>
     Defined.</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 950
-Time: 0.054s">
-<div class="time" style="width: 17.41935483871%"></div>
+Time: 0.05s">
+<div class="time" style="width: 16.129032258065%"></div>
 <pre>
     Local Definition partial_Nrec_succ@{}
       := Eval unfold partial_Nrec_succ0 in partial_Nrec_succ0@{nr nr nr nr}.</pre>
@@ -5888,8 +5888,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 955
-Time: 0.035s">
-<div class="time" style="width: 11.290322580645%"></div>
+Time: 0.036s">
+<div class="time" style="width: 11.612903225806%"></div>
 <pre>
       revert n; apply N_propind; try exact _.</pre>
 </div>
@@ -5953,8 +5953,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 966
-Time: 0.009s">
-<div class="time" style="width: 2.9032258064516%"></div>
+Time: 0.01s">
+<div class="time" style="width: 3.2258064516129%"></div>
 <pre>
       exists (fun mh =&gt; f ((equiv_N_segment_succ n)^-1 (inl mh))).</pre>
 </div>
@@ -6006,8 +6006,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 971
-Time: 0.009s">
-<div class="time" style="width: 2.9032258064516%"></div>
+Time: 0.012s">
+<div class="time" style="width: 3.8709677419355%"></div>
 <pre>
         refine (_ @ fs (((equiv_N_segment_lt_succ n)^-1)
                           ((equiv_N_segment n)^-1 (inl mh))) @ _).</pre>
@@ -6150,8 +6150,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 1001
-Time: 0.005s">
-<div class="time" style="width: 1.6129032258065%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.2903225806452%"></div>
 <pre>
         apply ap, path_sigma_hprop; reflexivity.</pre>
 </div>
@@ -6449,8 +6449,8 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 1054
-Time: 0.202s">
-<div class="time" style="width: 65.161290322581%"></div>
+Time: 0.207s">
+<div class="time" style="width: 66.774193548387%"></div>
 <pre>
       abstract (rewrite transport_1;
       apply path_prod;
@@ -6471,8 +6471,8 @@ Time: 0.202s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 1070
-Time: 0.002s">
-<div class="time" style="width: 0.64516129032258%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.96774193548387%"></div>
 <pre>
     Defined.</pre>
 </div>
@@ -6551,8 +6551,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 1084
-Time: 0.152s">
-<div class="time" style="width: 49.032258064516%"></div>
+Time: 0.154s">
+<div class="time" style="width: 49.677419354839%"></div>
 <pre> cbn.</pre>
 </div>
 <div class="code" title="File: Nat.v
@@ -6591,8 +6591,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 1088
-Time: 0.001s">
-<div class="time" style="width: 0.32258064516129%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.64516129032258%"></div>
 <pre>
         rewrite ap_pr1_path_sigma_hprop.</pre>
 </div>
@@ -6655,8 +6655,8 @@ Time: 0.02s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 1098
-Time: 0.014s">
-<div class="time" style="width: 4.5161290322581%"></div>
+Time: 0.012s">
+<div class="time" style="width: 3.8709677419355%"></div>
 <pre>
         rewrite (ap_compose pr1 f).</pre>
 </div>
@@ -6731,8 +6731,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 1108
-Time: 0.058s">
-<div class="time" style="width: 18.709677419355%"></div>
+Time: 0.059s">
+<div class="time" style="width: 19.032258064516%"></div>
 <pre> apply path_contr.</pre>
 </div>
 <div class="code" title="File: Nat.v
@@ -6770,8 +6770,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 1111
-Time: 0.019s">
-<div class="time" style="width: 6.1290322580645%"></div>
+Time: 0.02s">
+<div class="time" style="width: 6.4516129032258%"></div>
 <pre>
           rewrite ap_pr1_path_sigma.</pre>
 </div>
@@ -6784,8 +6784,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 1113
-Time: 0.202s">
-<div class="time" style="width: 65.161290322581%"></div>
+Time: 0.203s">
+<div class="time" style="width: 65.483870967742%"></div>
 <pre>
     Qed.</pre>
 </div>
@@ -6841,8 +6841,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 1122
-Time: 0.034s">
-<div class="time" style="width: 10.967741935484%"></div>
+Time: 0.035s">
+<div class="time" style="width: 11.290322580645%"></div>
 <pre>
 
   End NRec.</pre>

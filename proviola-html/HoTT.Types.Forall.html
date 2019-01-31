@@ -1438,47 +1438,47 @@
           
 
             i = 284;
-            data = "2 subgoals (ID 855)	  	  H : Funext	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  f : A <~> B	  g : forall a : A, P a <~> Q (f a)	  ============================	  Sect (fun (h : forall x : B, Q x) (a : A) => _^-1 (h (f a)))	    (fun (k : forall a : A, P a) (b : B) =>	     transport Q (eisretr _ b) ((g (_^-1 b)) (k (_^-1 b))))		subgoal 2 (ID 856) is:	 Sect	   (fun (k : forall a : A, P a) (b : B) =>	    transport Q (eisretr _ b) ((g (_^-1 b)) (k (_^-1 b))))	   (fun (h : forall x : B, Q x) (a : A) => _^-1 (h (f a)))	";
+            data = "2 subgoals (ID 855)	  	  H : Funext	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  f : A <~> B	  g : forall a : A, P a <~> Q (f a)	  ============================	  Sect (fun (h : forall x : B, Q x) (a : A) => _^-1 (h (f a)))	    (fun (k : forall a : A, P a) (b : B) =>	     transport Q (eisretr _ b) (g (_^-1 b) (k (_^-1 b))))		subgoal 2 (ID 856) is:	 Sect	   (fun (k : forall a : A, P a) (b : B) =>	    transport Q (eisretr _ b) (g (_^-1 b) (k (_^-1 b))))	   (fun (h : forall x : B, Q x) (a : A) => _^-1 (h (f a)))	";
             responses[i]=data;
           
 
             i = 285;
-            data = "1 subgoal (ID 855)	  	  H : Funext	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  f : A <~> B	  g : forall a : A, P a <~> Q (f a)	  ============================	  Sect (fun (h : forall x : B, Q x) (a : A) => _^-1 (h (f a)))	    (fun (k : forall a : A, P a) (b : B) =>	     transport Q (eisretr _ b) ((g (_^-1 b)) (k (_^-1 b))))	1 subgoal (ID 864)	  	  H : Funext	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  f : A <~> B	  g : forall a : A, P a <~> Q (f a)	  h : forall x : B, Q x	  b : B	  ============================	  transport Q (eisretr _ b) ((g (_^-1 b)) (_^-1 (h (f (_^-1 b))))) = h b	";
+            data = "1 subgoal (ID 855)	  	  H : Funext	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  f : A <~> B	  g : forall a : A, P a <~> Q (f a)	  ============================	  Sect (fun (h : forall x : B, Q x) (a : A) => _^-1 (h (f a)))	    (fun (k : forall a : A, P a) (b : B) =>	     transport Q (eisretr _ b) (g (_^-1 b) (k (_^-1 b))))	1 subgoal (ID 864)	  	  H : Funext	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  f : A <~> B	  g : forall a : A, P a <~> Q (f a)	  h : forall x : B, Q x	  b : B	  ============================	  transport Q (eisretr _ b) (g (_^-1 b) (_^-1 (h (f (_^-1 b))))) = h b	";
             responses[i]=data;
           
 
             i = 286;
-            data = "1 subgoal (ID 888)	  	  H : Funext	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  f : A <~> B	  g : forall a : A, P a <~> Q (f a)	  h : forall x : B, Q x	  b : B	  ============================	  transport Q (eisretr _ b) ((g (_^-1 b)) (_^-1 (h (f (_^-1 b))))) =	  transport Q (eisretr _ b) (h (f (_^-1 b)))	";
+            data = "1 subgoal (ID 888)	  	  H : Funext	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  f : A <~> B	  g : forall a : A, P a <~> Q (f a)	  h : forall x : B, Q x	  b : B	  ============================	  transport Q (eisretr _ b) (g (_^-1 b) (_^-1 (h (f (_^-1 b))))) =	  transport Q (eisretr _ b) (h (f (_^-1 b)))	";
             responses[i]=data;
           
 
             i = 287;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 856)		subgoal 1 (ID 856) is:	 Sect	   (fun (k : forall a : A, P a) (b : B) =>	    transport Q (eisretr _ b) ((g (_^-1 b)) (k (_^-1 b))))	   (fun (h : forall x : B, Q x) (a : A) => _^-1 (h (f a)))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 856)		subgoal 1 (ID 856) is:	 Sect	   (fun (k : forall a : A, P a) (b : B) =>	    transport Q (eisretr _ b) (g (_^-1 b) (k (_^-1 b))))	   (fun (h : forall x : B, Q x) (a : A) => _^-1 (h (f a)))	";
             responses[i]=data;
           
 
             i = 288;
-            data = "1 subgoal (ID 856)	  	  H : Funext	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  f : A <~> B	  g : forall a : A, P a <~> Q (f a)	  ============================	  Sect	    (fun (k : forall a : A, P a) (b : B) =>	     transport Q (eisretr _ b) ((g (_^-1 b)) (k (_^-1 b))))	    (fun (h : forall x : B, Q x) (a : A) => _^-1 (h (f a)))	1 subgoal (ID 901)	  	  H : Funext	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  f : A <~> B	  g : forall a : A, P a <~> Q (f a)	  k : forall a : A, P a	  a : A	  ============================	  _^-1 (transport Q (eisretr _ (f a)) ((g (_^-1 (f a))) (k (_^-1 (f a))))) =	  k a	";
+            data = "1 subgoal (ID 856)	  	  H : Funext	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  f : A <~> B	  g : forall a : A, P a <~> Q (f a)	  ============================	  Sect	    (fun (k : forall a : A, P a) (b : B) =>	     transport Q (eisretr _ b) (g (_^-1 b) (k (_^-1 b))))	    (fun (h : forall x : B, Q x) (a : A) => _^-1 (h (f a)))	1 subgoal (ID 901)	  	  H : Funext	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  f : A <~> B	  g : forall a : A, P a <~> Q (f a)	  k : forall a : A, P a	  a : A	  ============================	  _^-1 (transport Q (eisretr _ (f a)) (g (_^-1 (f a)) (k (_^-1 (f a))))) =	  k a	";
             responses[i]=data;
           
 
             i = 289;
-            data = "1 subgoal (ID 925)	  	  H : Funext	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  f : A <~> B	  g : forall a : A, P a <~> Q (f a)	  k : forall a : A, P a	  a : A	  ============================	  _^-1 (transport Q (eisretr _ (f a)) ((g (_^-1 (f a))) (k (_^-1 (f a))))) =	  transport P (eissect _ a) (k (_^-1 (f a)))	";
+            data = "1 subgoal (ID 925)	  	  H : Funext	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  f : A <~> B	  g : forall a : A, P a <~> Q (f a)	  k : forall a : A, P a	  a : A	  ============================	  _^-1 (transport Q (eisretr _ (f a)) (g (_^-1 (f a)) (k (_^-1 (f a))))) =	  transport P (eissect _ a) (k (_^-1 (f a)))	";
             responses[i]=data;
           
 
             i = 290;
-            data = "1 subgoal (ID 930)	  	  H : Funext	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  f : A <~> B	  g : forall a : A, P a <~> Q (f a)	  k : forall a : A, P a	  a : A	  ============================	  transport Q (eisretr _ (f a)) ((g (_^-1 (f a))) (k (_^-1 (f a)))) =	  (g a) (transport P (eissect _ a) (k (_^-1 (f a))))	";
+            data = "1 subgoal (ID 930)	  	  H : Funext	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  f : A <~> B	  g : forall a : A, P a <~> Q (f a)	  k : forall a : A, P a	  a : A	  ============================	  transport Q (eisretr _ (f a)) (g (_^-1 (f a)) (k (_^-1 (f a)))) =	  g a (transport P (eissect _ a) (k (_^-1 (f a))))	";
             responses[i]=data;
           
 
             i = 291;
-            data = "1 subgoal (ID 954)	  	  H : Funext	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  f : A <~> B	  g : forall a : A, P a <~> Q (f a)	  k : forall a : A, P a	  a : A	  ============================	  transport Q (eisretr _ (f a)) ((g (_^-1 (f a))) (k (_^-1 (f a)))) =	  transport (fun a0 : A => Q (f a0)) (eissect _ a)	    ((g (_^-1 (f a))) (k (_^-1 (f a))))	";
+            data = "1 subgoal (ID 954)	  	  H : Funext	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  f : A <~> B	  g : forall a : A, P a <~> Q (f a)	  k : forall a : A, P a	  a : A	  ============================	  transport Q (eisretr _ (f a)) (g (_^-1 (f a)) (k (_^-1 (f a)))) =	  transport (fun a0 : A => Q (f a0)) (eissect _ a)	    (g (_^-1 (f a)) (k (_^-1 (f a))))	";
             responses[i]=data;
           
 
             i = 292;
-            data = "1 subgoal (ID 973)	  	  H : Funext	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  f : A <~> B	  g : forall a : A, P a <~> Q (f a)	  k : forall a : A, P a	  a : A	  ============================	  transport Q (eisretr _ (f a)) ((g (_^-1 (f a))) (k (_^-1 (f a)))) =	  transport Q (ap f (eissect _ a)) ((g (_^-1 (f a))) (k (_^-1 (f a))))	";
+            data = "1 subgoal (ID 973)	  	  H : Funext	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  f : A <~> B	  g : forall a : A, P a <~> Q (f a)	  k : forall a : A, P a	  a : A	  ============================	  transport Q (eisretr _ (f a)) (g (_^-1 (f a)) (k (_^-1 (f a)))) =	  transport Q (ap f (eissect _ a)) (g (_^-1 (f a)) (k (_^-1 (f a))))	";
             responses[i]=data;
           
 
@@ -1493,7 +1493,7 @@
           
 
             i = 295;
-            data = "1 subgoal (ID 835)	  	  H : Funext	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  C : Type	  R : C -> Type	  f0 : A <~> B	  f1 : forall a : A, P a <~> Q (f0 a)	  g0 : B <~> C	  g1 : forall b : B, Q b <~> R (g0 b)	  h : forall a : A, P a	  c : C	  ============================	  (equiv_functor_forall_covariant g0 g1)	    ((equiv_functor_forall_covariant f0 f1) h) c =	  (equiv_functor_forall_covariant (g0 oE f0) (fun a : A => g1 (f0 a) oE f1 a))	    h c	";
+            data = "1 subgoal (ID 835)	  	  H : Funext	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  C : Type	  R : C -> Type	  f0 : A <~> B	  f1 : forall a : A, P a <~> Q (f0 a)	  g0 : B <~> C	  g1 : forall b : B, Q b <~> R (g0 b)	  h : forall a : A, P a	  c : C	  ============================	  equiv_functor_forall_covariant g0 g1	    (equiv_functor_forall_covariant f0 f1 h) c =	  equiv_functor_forall_covariant (g0 oE f0) (fun a : A => g1 (f0 a) oE f1 a)	    h c	";
             responses[i]=data;
           
 
@@ -1503,17 +1503,17 @@
           
 
             i = 297;
-            data = "1 subgoal (ID 836)	  	  H : Funext	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  C : Type	  R : C -> Type	  f0 : A <~> B	  f1 : forall a : A, P a <~> Q (f0 a)	  g0 : B <~> C	  g1 : forall b : B, Q b <~> R (g0 b)	  h : forall a : A, P a	  c : C	  ============================	  transport R (eisretr _ c)	    ((g1 (_^-1 c))	       (transport Q (eisretr _ (_^-1 c))	          ((f1 (_^-1 (_^-1 c))) (h (_^-1 (_^-1 c)))))) =	  transport R (ap g0 (eisretr _ (_^-1 c)) @ eisretr _ c)	    ((g1 (f0 (_^-1 (_^-1 c)))) ((f1 (_^-1 (_^-1 c))) (h (_^-1 (_^-1 c)))))	";
+            data = "1 subgoal (ID 836)	  	  H : Funext	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  C : Type	  R : C -> Type	  f0 : A <~> B	  f1 : forall a : A, P a <~> Q (f0 a)	  g0 : B <~> C	  g1 : forall b : B, Q b <~> R (g0 b)	  h : forall a : A, P a	  c : C	  ============================	  transport R (eisretr _ c)	    (g1 (_^-1 c)	       (transport Q (eisretr _ (_^-1 c))	          (f1 (_^-1 (_^-1 c)) (h (_^-1 (_^-1 c)))))) =	  transport R (ap g0 (eisretr _ (_^-1 c)) @ eisretr _ c)	    (g1 (f0 (_^-1 (_^-1 c))) (f1 (_^-1 (_^-1 c)) (h (_^-1 (_^-1 c)))))	";
             responses[i]=data;
           
 
             i = 298;
-            data = "1 subgoal (ID 846)	  	  H : Funext	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  C : Type	  R : C -> Type	  f0 : A <~> B	  f1 : forall a : A, P a <~> Q (f0 a)	  g0 : B <~> C	  g1 : forall b : B, Q b <~> R (g0 b)	  h : forall a : A, P a	  c : C	  ============================	  transport R (eisretr _ c)	    (transport (fun b : B => R (g0 b)) (eisretr _ (_^-1 c))	       ((g1 (f0 (_^-1 (_^-1 c)))) ((f1 (_^-1 (_^-1 c))) (h (_^-1 (_^-1 c)))))) =	  transport R (ap g0 (eisretr _ (_^-1 c)) @ eisretr _ c)	    ((g1 (f0 (_^-1 (_^-1 c)))) ((f1 (_^-1 (_^-1 c))) (h (_^-1 (_^-1 c)))))	";
+            data = "1 subgoal (ID 846)	  	  H : Funext	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  C : Type	  R : C -> Type	  f0 : A <~> B	  f1 : forall a : A, P a <~> Q (f0 a)	  g0 : B <~> C	  g1 : forall b : B, Q b <~> R (g0 b)	  h : forall a : A, P a	  c : C	  ============================	  transport R (eisretr _ c)	    (transport (fun b : B => R (g0 b)) (eisretr _ (_^-1 c))	       (g1 (f0 (_^-1 (_^-1 c))) (f1 (_^-1 (_^-1 c)) (h (_^-1 (_^-1 c)))))) =	  transport R (ap g0 (eisretr _ (_^-1 c)) @ eisretr _ c)	    (g1 (f0 (_^-1 (_^-1 c))) (f1 (_^-1 (_^-1 c)) (h (_^-1 (_^-1 c)))))	";
             responses[i]=data;
           
 
             i = 299;
-            data = "1 subgoal (ID 864)	  	  H : Funext	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  C : Type	  R : C -> Type	  f0 : A <~> B	  f1 : forall a : A, P a <~> Q (f0 a)	  g0 : B <~> C	  g1 : forall b : B, Q b <~> R (g0 b)	  h : forall a : A, P a	  c : C	  ============================	  transport R (eisretr _ c)	    (transport R (ap g0 (eisretr _ (_^-1 c)))	       ((g1 (f0 (_^-1 (_^-1 c)))) ((f1 (_^-1 (_^-1 c))) (h (_^-1 (_^-1 c)))))) =	  transport R (ap g0 (eisretr _ (_^-1 c)) @ eisretr _ c)	    ((g1 (f0 (_^-1 (_^-1 c)))) ((f1 (_^-1 (_^-1 c))) (h (_^-1 (_^-1 c)))))	";
+            data = "1 subgoal (ID 864)	  	  H : Funext	  A : Type	  P : A -> Type	  B : Type	  Q : B -> Type	  C : Type	  R : C -> Type	  f0 : A <~> B	  f1 : forall a : A, P a <~> Q (f0 a)	  g0 : B <~> C	  g1 : forall b : B, Q b <~> R (g0 b)	  h : forall a : A, P a	  c : C	  ============================	  transport R (eisretr _ c)	    (transport R (ap g0 (eisretr _ (_^-1 c)))	       (g1 (f0 (_^-1 (_^-1 c))) (f1 (_^-1 (_^-1 c)) (h (_^-1 (_^-1 c)))))) =	  transport R (ap g0 (eisretr _ (_^-1 c)) @ eisretr _ c)	    (g1 (f0 (_^-1 (_^-1 c))) (f1 (_^-1 (_^-1 c)) (h (_^-1 (_^-1 c)))))	";
             responses[i]=data;
           
 

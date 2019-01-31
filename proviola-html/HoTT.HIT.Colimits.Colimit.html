@@ -1018,12 +1018,12 @@
           
 
             i = 200;
-            data = "2 subgoals (ID 54)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  C : cocone D Y	  ============================	  forall i : G,	  (postcompose_cocone (cocone_colimit D) (colimit_rec Y C)) i == C i		subgoal 2 (ID 56) is:	 forall (i j : G) (g : G i j) (x : D i),	 qq (postcompose_cocone (cocone_colimit D) (colimit_rec Y C)) i j g x @	 ?eq1 i x = ?eq1 j ((D _f g) x) @ qq C i j g x	";
+            data = "2 subgoals (ID 54)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  C : cocone D Y	  ============================	  forall i : G,	  postcompose_cocone (cocone_colimit D) (colimit_rec Y C) i == C i		subgoal 2 (ID 56) is:	 forall (i j : G) (g : G i j) (x : D i),	 qq (postcompose_cocone (cocone_colimit D) (colimit_rec Y C)) i j g x @	 ?eq1 i x = ?eq1 j ((D _f g) x) @ qq C i j g x	";
             responses[i]=data;
           
 
             i = 201;
-            data = "2 subgoals (ID 59)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  C : cocone D Y	  i : G	  x : D i	  ============================	  (postcompose_cocone (cocone_colimit D) (colimit_rec Y C)) i x = C i x		subgoal 2 (ID 56) is:	 forall (i j : G) (g : G i j) (x : D i),	 qq (postcompose_cocone (cocone_colimit D) (colimit_rec Y C)) i j g x @	 (fun (i0 : G) (x0 : D i0) => ?Goal@{i:=i0; x:=x0}) i x =	 (fun (i0 : G) (x0 : D i0) => ?Goal@{i:=i0; x:=x0}) j ((D _f g) x) @	 qq C i j g x	";
+            data = "2 subgoals (ID 59)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  C : cocone D Y	  i : G	  x : D i	  ============================	  postcompose_cocone (cocone_colimit D) (colimit_rec Y C) i x = C i x		subgoal 2 (ID 56) is:	 forall (i j : G) (g : G i j) (x : D i),	 qq (postcompose_cocone (cocone_colimit D) (colimit_rec Y C)) i j g x @	 (fun (i0 : G) (x0 : D i0) => ?Goal@{i:=i0; x:=x0}) i x =	 (fun (i0 : G) (x0 : D i0) => ?Goal@{i:=i0; x:=x0}) j ((D _f g) x) @	 qq C i j g x	";
             responses[i]=data;
           
 
@@ -1223,7 +1223,7 @@
           
 
             i = 241;
-            data = "2 subgoals (ID 61)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  ============================	  forall i : G, (postcompose_cocone C idmap) i == C i		subgoal 2 (ID 63) is:	 forall (i j : G) (g : G i j) (x : D i),	 qq (postcompose_cocone C idmap) i j g x @ ?eq1 i x =	 ?eq1 j ((D _f g) x) @ qq C i j g x	";
+            data = "2 subgoals (ID 61)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  ============================	  forall i : G, postcompose_cocone C idmap i == C i		subgoal 2 (ID 63) is:	 forall (i j : G) (g : G i j) (x : D i),	 qq (postcompose_cocone C idmap) i j g x @ ?eq1 i x =	 ?eq1 j ((D _f g) x) @ qq C i j g x	";
             responses[i]=data;
           
 
@@ -1253,7 +1253,7 @@
           
 
             i = 247;
-            data = "2 subgoals (ID 96)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X -> Y	  Z : Type	  g : Y -> Z	  C : cocone D X	  ============================	  forall i : G,	  (postcompose_cocone C (g o f)) i ==	  (postcompose_cocone (postcompose_cocone C f) g) i		subgoal 2 (ID 98) is:	 forall (i j : G) (g0 : G i j) (x : D i),	 qq (postcompose_cocone C (g o f)) i j g0 x @ ?eq1 i x =	 ?eq1 j ((D _f g0) x) @	 qq (postcompose_cocone (postcompose_cocone C f) g) i j g0 x	";
+            data = "2 subgoals (ID 96)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X -> Y	  Z : Type	  g : Y -> Z	  C : cocone D X	  ============================	  forall i : G,	  postcompose_cocone C (g o f) i ==	  postcompose_cocone (postcompose_cocone C f) g i		subgoal 2 (ID 98) is:	 forall (i j : G) (g0 : G i j) (x : D i),	 qq (postcompose_cocone C (g o f)) i j g0 x @ ?eq1 i x =	 ?eq1 j ((D _f g0) x) @	 qq (postcompose_cocone (postcompose_cocone C f) g) i j g0 x	";
             responses[i]=data;
           
 
@@ -1478,12 +1478,12 @@
           
 
             i = 292;
-            data = "2 subgoals (ID 116)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  ============================	  forall i : G, (precompose_cocone (diagram_idmap D) C) i == C i		subgoal 2 (ID 118) is:	 forall (i j : G) (g : G i j) (x : D i),	 qq (precompose_cocone (diagram_idmap D) C) i j g x @ ?eq1 i x =	 ?eq1 j ((D _f g) x) @ qq C i j g x	";
+            data = "2 subgoals (ID 116)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  ============================	  forall i : G, precompose_cocone (diagram_idmap D) C i == C i		subgoal 2 (ID 118) is:	 forall (i j : G) (g : G i j) (x : D i),	 qq (precompose_cocone (diagram_idmap D) C) i j g x @ ?eq1 i x =	 ?eq1 j ((D _f g) x) @ qq C i j g x	";
             responses[i]=data;
           
 
             i = 293;
-            data = "2 subgoals (ID 121)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  i : G	  x : D i	  ============================	  (precompose_cocone (diagram_idmap D) C) i x = C i x		subgoal 2 (ID 118) is:	 forall (i j : G) (g : G i j) (x : D i),	 qq (precompose_cocone (diagram_idmap D) C) i j g x @	 (fun (i0 : G) (x0 : D i0) => ?Goal@{i:=i0; x:=x0}) i x =	 (fun (i0 : G) (x0 : D i0) => ?Goal@{i:=i0; x:=x0}) j ((D _f g) x) @	 qq C i j g x	";
+            data = "2 subgoals (ID 121)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  i : G	  x : D i	  ============================	  precompose_cocone (diagram_idmap D) C i x = C i x		subgoal 2 (ID 118) is:	 forall (i j : G) (g : G i j) (x : D i),	 qq (precompose_cocone (diagram_idmap D) C) i j g x @	 (fun (i0 : G) (x0 : D i0) => ?Goal@{i:=i0; x:=x0}) i x =	 (fun (i0 : G) (x0 : D i0) => ?Goal@{i:=i0; x:=x0}) j ((D _f g) x) @	 qq C i j g x	";
             responses[i]=data;
           
 
@@ -1523,12 +1523,12 @@
           
 
             i = 301;
-            data = "2 subgoals (ID 150)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  ============================	  forall i : G,	  (precompose_cocone m1 (precompose_cocone m2 C)) i ==	  (precompose_cocone (diagram_comp m2 m1) C) i		subgoal 2 (ID 152) is:	 forall (i j : G) (g : G i j) (x : D1 i),	 qq (precompose_cocone m1 (precompose_cocone m2 C)) i j g x @ ?eq1 i x =	 ?eq1 j ((D1 _f g) x) @ qq (precompose_cocone (diagram_comp m2 m1) C) i j g x	";
+            data = "2 subgoals (ID 150)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  ============================	  forall i : G,	  precompose_cocone m1 (precompose_cocone m2 C) i ==	  precompose_cocone (diagram_comp m2 m1) C i		subgoal 2 (ID 152) is:	 forall (i j : G) (g : G i j) (x : D1 i),	 qq (precompose_cocone m1 (precompose_cocone m2 C)) i j g x @ ?eq1 i x =	 ?eq1 j ((D1 _f g) x) @ qq (precompose_cocone (diagram_comp m2 m1) C) i j g x	";
             responses[i]=data;
           
 
             i = 302;
-            data = "2 subgoals (ID 155)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  i : G	  x : D1 i	  ============================	  (precompose_cocone m1 (precompose_cocone m2 C)) i x =	  (precompose_cocone (diagram_comp m2 m1) C) i x		subgoal 2 (ID 152) is:	 forall (i j : G) (g : G i j) (x : D1 i),	 qq (precompose_cocone m1 (precompose_cocone m2 C)) i j g x @	 (fun (i0 : G) (x0 : D1 i0) => ?Goal@{i:=i0; x:=x0}) i x =	 (fun (i0 : G) (x0 : D1 i0) => ?Goal@{i:=i0; x:=x0}) j ((D1 _f g) x) @	 qq (precompose_cocone (diagram_comp m2 m1) C) i j g x	";
+            data = "2 subgoals (ID 155)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  i : G	  x : D1 i	  ============================	  precompose_cocone m1 (precompose_cocone m2 C) i x =	  precompose_cocone (diagram_comp m2 m1) C i x		subgoal 2 (ID 152) is:	 forall (i j : G) (g : G i j) (x : D1 i),	 qq (precompose_cocone m1 (precompose_cocone m2 C)) i j g x @	 (fun (i0 : G) (x0 : D1 i0) => ?Goal@{i:=i0; x:=x0}) i x =	 (fun (i0 : G) (x0 : D1 i0) => ?Goal@{i:=i0; x:=x0}) j ((D1 _f g) x) @	 qq (precompose_cocone (diagram_comp m2 m1) C) i j g x	";
             responses[i]=data;
           
 
@@ -1623,12 +1623,12 @@
           
 
             i = 321;
-            data = "2 subgoals (ID 175)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  Y : Type	  f : X -> Y	  C : cocone D2 X	  ============================	  forall i : G,	  (postcompose_cocone (precompose_cocone m C) f) i ==	  (precompose_cocone m (postcompose_cocone C f)) i		subgoal 2 (ID 177) is:	 forall (i j : G) (g : G i j) (x : D1 i),	 qq (postcompose_cocone (precompose_cocone m C) f) i j g x @ ?eq1 i x =	 ?eq1 j ((D1 _f g) x) @	 qq (precompose_cocone m (postcompose_cocone C f)) i j g x	";
+            data = "2 subgoals (ID 175)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  Y : Type	  f : X -> Y	  C : cocone D2 X	  ============================	  forall i : G,	  postcompose_cocone (precompose_cocone m C) f i ==	  precompose_cocone m (postcompose_cocone C f) i		subgoal 2 (ID 177) is:	 forall (i j : G) (g : G i j) (x : D1 i),	 qq (postcompose_cocone (precompose_cocone m C) f) i j g x @ ?eq1 i x =	 ?eq1 j ((D1 _f g) x) @	 qq (precompose_cocone m (postcompose_cocone C f)) i j g x	";
             responses[i]=data;
           
 
             i = 322;
-            data = "1 subgoal (ID 175)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  Y : Type	  f : X -> Y	  C : cocone D2 X	  ============================	  forall i : G,	  (postcompose_cocone (precompose_cocone m C) f) i ==	  (precompose_cocone m (postcompose_cocone C f)) i	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 177)		subgoal 1 (ID 177) is:	 forall (i j : G) (g : G i j) (x : D1 i),	 qq (postcompose_cocone (precompose_cocone m C) f) i j g x @	 (fun (i0 : G) (x0 : D1 i0) => 1) i x =	 (fun (i0 : G) (x0 : D1 i0) => 1) j ((D1 _f g) x) @	 qq (precompose_cocone m (postcompose_cocone C f)) i j g x	";
+            data = "1 subgoal (ID 175)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  Y : Type	  f : X -> Y	  C : cocone D2 X	  ============================	  forall i : G,	  postcompose_cocone (precompose_cocone m C) f i ==	  precompose_cocone m (postcompose_cocone C f) i	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 177)		subgoal 1 (ID 177) is:	 forall (i j : G) (g : G i j) (x : D1 i),	 qq (postcompose_cocone (precompose_cocone m C) f) i j g x @	 (fun (i0 : G) (x0 : D1 i0) => 1) i x =	 (fun (i0 : G) (x0 : D1 i0) => 1) j ((D1 _f g) x) @	 qq (precompose_cocone m (postcompose_cocone C f)) i j g x	";
             responses[i]=data;
           
 

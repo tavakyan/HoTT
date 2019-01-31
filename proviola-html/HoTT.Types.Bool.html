@@ -1003,22 +1003,22 @@
           
 
             i = 197;
-            data = "1 subgoal (ID 101)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1 else equiv_negb : Bool -> Bool <~> Bool	  e1 : Bool <~> Bool	  e2 : Bool <~> Bool	  b : Bool	  ============================	  e1 ((g (f e2)) b) = e2 (e1 b)	";
+            data = "1 subgoal (ID 101)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1 else equiv_negb : Bool -> Bool <~> Bool	  e1 : Bool <~> Bool	  e2 : Bool <~> Bool	  b : Bool	  ============================	  e1 (g (f e2) b) = e2 (e1 b)	";
             responses[i]=data;
           
 
             i = 198;
-            data = "1 subgoal (ID 110)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1 else equiv_negb : Bool -> Bool <~> Bool	  e1 : Bool <~> Bool	  e2 : Bool <~> Bool	  b : Bool	  ============================	  (g (f e1)) ((g (f e2)) b) = e2 (e1 b)	";
+            data = "1 subgoal (ID 110)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1 else equiv_negb : Bool -> Bool <~> Bool	  e1 : Bool <~> Bool	  e2 : Bool <~> Bool	  b : Bool	  ============================	  g (f e1) (g (f e2) b) = e2 (e1 b)	";
             responses[i]=data;
           
 
             i = 199;
-            data = "1 subgoal (ID 124)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1 else equiv_negb : Bool -> Bool <~> Bool	  e1 : Bool <~> Bool	  e2 : Bool <~> Bool	  b : Bool	  ============================	  (g (f e1)) ((g (f e2)) b) = e2 ((g (f e1)) b)	";
+            data = "1 subgoal (ID 124)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1 else equiv_negb : Bool -> Bool <~> Bool	  e1 : Bool <~> Bool	  e2 : Bool <~> Bool	  b : Bool	  ============================	  g (f e1) (g (f e2) b) = e2 (g (f e1) b)	";
             responses[i]=data;
           
 
             i = 200;
-            data = "1 subgoal (ID 136)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1 else equiv_negb : Bool -> Bool <~> Bool	  e1 : Bool <~> Bool	  e2 : Bool <~> Bool	  b : Bool	  ============================	  (g (f e1)) ((g (f e2)) b) = (g (f e2)) ((g (f e1)) b)	";
+            data = "1 subgoal (ID 136)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1 else equiv_negb : Bool -> Bool <~> Bool	  e1 : Bool <~> Bool	  e2 : Bool <~> Bool	  b : Bool	  ============================	  g (f e1) (g (f e2) b) = g (f e2) (g (f e1) b)	";
             responses[i]=data;
           
 
