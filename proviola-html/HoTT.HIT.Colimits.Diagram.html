@@ -303,17 +303,17 @@
           
 
             i = 57;
-            data = "2 subgoals (ID 99)	  	  H : Funext	  G : graph	  D1, D2 : diagram G	  eq1 : forall i : G, D1 i = D2 i	  eq2 : forall (i j : G) (g : G i j) (x : D1 i),	        transport idmap (eq1 j) ((D1 _f g) x) =	        (D2 _f g) (transport idmap (eq1 i) x)	  i : G	  ============================	  D1 i = D2 i		subgoal 2 (ID 93) is:	 transport (fun D' : G -> Type => forall i j : G, G i j -> D' i -> D' j)	   (path_forall D1 D2 (fun i : G => ?Goal)) (diagram1 D1) = 	 diagram1 D2	";
+            data = "1 subgoal (ID 91)	  	  H : Funext	  G : graph	  D1, D2 : diagram G	  eq1 : forall i : G, D1 i = D2 i	  eq2 : forall (i j : G) (g : G i j) (x : D1 i),	        transport idmap (eq1 j) ((D1 _f g) x) =	        (D2 _f g) (transport idmap (eq1 i) x)	  ============================	  D1 = D2	1 subgoal (ID 99)	  	  H : Funext	  G : graph	  D1, D2 : diagram G	  eq1 : forall i : G, D1 i = D2 i	  eq2 : forall (i j : G) (g : G i j) (x : D1 i),	        transport idmap (eq1 j) ((D1 _f g) x) =	        (D2 _f g) (transport idmap (eq1 i) x)	  i : G	  ============================	  D1 i = D2 i	";
             responses[i]=data;
           
 
             i = 58;
-            data = "1 subgoal (ID 93)	  	  H : Funext	  G : graph	  D1, D2 : diagram G	  eq1 : forall i : G, D1 i = D2 i	  eq2 : forall (i j : G) (g : G i j) (x : D1 i),	        transport idmap (eq1 j) ((D1 _f g) x) =	        (D2 _f g) (transport idmap (eq1 i) x)	  ============================	  transport (fun D' : G -> Type => forall i j : G, G i j -> D' i -> D' j)	    (path_forall D1 D2 (fun i : G => eq1 i)) (diagram1 D1) = 	  diagram1 D2	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 93)		subgoal 1 (ID 93) is:	 transport (fun D' : G -> Type => forall i j : G, G i j -> D' i -> D' j)	   (path_forall D1 D2 (fun i : G => eq1 i)) (diagram1 D1) = 	 diagram1 D2	";
             responses[i]=data;
           
 
             i = 59;
-            data = "1 subgoal (ID 123)	  	  H : Funext	  G : graph	  D1, D2 : diagram G	  eq1 : forall i : G, D1 i = D2 i	  eq2 : forall (i j : G) (g : G i j) (x : D1 i),	        transport idmap (eq1 j) ((D1 _f g) x) =	        (D2 _f g) (transport idmap (eq1 i) x)	  i, j : G	  g : G i j	  x : D2 i	  ============================	  transport	    (fun D' : G -> Type => forall i0 j0 : G, G i0 j0 -> D' i0 -> D' j0)	    (path_forall D1 D2 (fun i0 : G => eq1 i0)) (diagram1 D1) i j g x =	  (D2 _f g) x	";
+            data = "1 subgoal (ID 93)	  	  H : Funext	  G : graph	  D1, D2 : diagram G	  eq1 : forall i : G, D1 i = D2 i	  eq2 : forall (i j : G) (g : G i j) (x : D1 i),	        transport idmap (eq1 j) ((D1 _f g) x) =	        (D2 _f g) (transport idmap (eq1 i) x)	  ============================	  transport (fun D' : G -> Type => forall i j : G, G i j -> D' i -> D' j)	    (path_forall D1 D2 (fun i : G => eq1 i)) (diagram1 D1) = 	  diagram1 D2	1 subgoal (ID 123)	  	  H : Funext	  G : graph	  D1, D2 : diagram G	  eq1 : forall i : G, D1 i = D2 i	  eq2 : forall (i j : G) (g : G i j) (x : D1 i),	        transport idmap (eq1 j) ((D1 _f g) x) =	        (D2 _f g) (transport idmap (eq1 i) x)	  i, j : G	  g : G i j	  x : D2 i	  ============================	  transport	    (fun D' : G -> Type => forall i0 j0 : G, G i0 j0 -> D' i0 -> D' j0)	    (path_forall D1 D2 (fun i0 : G => eq1 i0)) (diagram1 D1) i j g x =	  (D2 _f g) x	";
             responses[i]=data;
           
 
@@ -368,7 +368,7 @@
           
 
             i = 70;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 225)		subgoal 1 (ID 225) is:	 (D2 _f g) (transport idmap (eq1 i) (transport idmap (eq1 i)^ x)) =	 (D2 _f g) x	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 225)		subgoal 1 (ID 225) is:	 (D2 _f g) (transport idmap (eq1 i) (transport idmap (eq1 i)^ x)) =	 (D2 _f g) x	";
             responses[i]=data;
           
 
@@ -803,12 +803,12 @@
           
 
             i = 157;
-            data = "1 subgoal (ID 178)	  	  H : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  w_obj : forall i : G, D1 i -> D2 i	  w_comm : forall (i j : G) (g : G i j) (x : D1 i),	           (D2 _f g) (w_obj i x) = w_obj j ((D1 _f g) x)	  is_eq_w : forall i : G, IsEquiv (w_obj i)	  we := fun i : G => {| equiv_fun := w_obj i; equiv_isequiv := is_eq_w i |}	   : forall i : G, D1 i <~> D2 i	  ============================	  forall (i j : G) (g : G i j) (x : D2 i),	  diagram_map_comm	    (diagram_comp {| diagram_map_obj := w_obj; diagram_map_comm := w_comm |}	       (diagram_equiv_inv	          {|	          diag_equiv_map := {|	                            diagram_map_obj := w_obj;	                            diagram_map_comm := w_comm |};	          diag_equiv_isequiv := is_eq_w |})) g x @	  (fun i0 : G => eisretr _) j ((D2 _f g) x) =	  ap (D2 _f g) ((fun i0 : G => eisretr _) i x) @	  diagram_map_comm (diagram_idmap D2) g x	";
+            data = "1 subgoal (ID 176)	  	  H : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  w_obj : forall i : G, D1 i -> D2 i	  w_comm : forall (i j : G) (g : G i j) (x : D1 i),	           (D2 _f g) (w_obj i x) = w_obj j ((D1 _f g) x)	  is_eq_w : forall i : G, IsEquiv (w_obj i)	  we := fun i : G => {| equiv_fun := w_obj i; equiv_isequiv := is_eq_w i |}	   : forall i : G, D1 i <~> D2 i	  ============================	  forall i : G,	  diagram_comp {| diagram_map_obj := w_obj; diagram_map_comm := w_comm |}	    (diagram_equiv_inv	       {|	       diag_equiv_map := {|	                         diagram_map_obj := w_obj;	                         diagram_map_comm := w_comm |};	       diag_equiv_isequiv := is_eq_w |}) i == diagram_idmap D2 i	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 178)		subgoal 1 (ID 178) is:	 forall (i j : G) (g : G i j) (x : D2 i),	 diagram_map_comm	   (diagram_comp {| diagram_map_obj := w_obj; diagram_map_comm := w_comm |}	      (diagram_equiv_inv	         {|	         diag_equiv_map := {|	                           diagram_map_obj := w_obj;	                           diagram_map_comm := w_comm |};	         diag_equiv_isequiv := is_eq_w |})) g x @	 (fun i0 : G => eisretr _) j ((D2 _f g) x) =	 ap (D2 _f g) ((fun i0 : G => eisretr _) i x) @	 diagram_map_comm (diagram_idmap D2) g x	";
             responses[i]=data;
           
 
             i = 158;
-            data = "1 subgoal (ID 183)	  	  H : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  w_obj : forall i : G, D1 i -> D2 i	  w_comm : forall (i j : G) (g : G i j) (x : D1 i),	           (D2 _f g) (w_obj i x) = w_obj j ((D1 _f g) x)	  is_eq_w : forall i : G, IsEquiv (w_obj i)	  we := fun i : G => {| equiv_fun := w_obj i; equiv_isequiv := is_eq_w i |}	   : forall i : G, D1 i <~> D2 i	  ============================	  forall (i j : G) (g : G i j) (x : D2 i),	  comm_square_comp (w_comm i j g)	    (comm_square_inverse (fun x0 : D1 i => w_comm i j g x0)) x @	  eisretr _ ((D2 _f g) x) = ap (D2 _f g) (eisretr _ x) @ 1	";
+            data = "1 subgoal (ID 178)	  	  H : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  w_obj : forall i : G, D1 i -> D2 i	  w_comm : forall (i j : G) (g : G i j) (x : D1 i),	           (D2 _f g) (w_obj i x) = w_obj j ((D1 _f g) x)	  is_eq_w : forall i : G, IsEquiv (w_obj i)	  we := fun i : G => {| equiv_fun := w_obj i; equiv_isequiv := is_eq_w i |}	   : forall i : G, D1 i <~> D2 i	  ============================	  forall (i j : G) (g : G i j) (x : D2 i),	  diagram_map_comm	    (diagram_comp {| diagram_map_obj := w_obj; diagram_map_comm := w_comm |}	       (diagram_equiv_inv	          {|	          diag_equiv_map := {|	                            diagram_map_obj := w_obj;	                            diagram_map_comm := w_comm |};	          diag_equiv_isequiv := is_eq_w |})) g x @	  (fun i0 : G => eisretr _) j ((D2 _f g) x) =	  ap (D2 _f g) ((fun i0 : G => eisretr _) i x) @	  diagram_map_comm (diagram_idmap D2) g x	1 subgoal (ID 183)	  	  H : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  w_obj : forall i : G, D1 i -> D2 i	  w_comm : forall (i j : G) (g : G i j) (x : D1 i),	           (D2 _f g) (w_obj i x) = w_obj j ((D1 _f g) x)	  is_eq_w : forall i : G, IsEquiv (w_obj i)	  we := fun i : G => {| equiv_fun := w_obj i; equiv_isequiv := is_eq_w i |}	   : forall i : G, D1 i <~> D2 i	  ============================	  forall (i j : G) (g : G i j) (x : D2 i),	  comm_square_comp (w_comm i j g)	    (comm_square_inverse (fun x0 : D1 i => w_comm i j g x0)) x @	  eisretr _ ((D2 _f g) x) = ap (D2 _f g) (eisretr _ x) @ 1	";
             responses[i]=data;
           
 
@@ -863,12 +863,12 @@
           
 
             i = 169;
-            data = "1 subgoal (ID 189)	  	  H : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  w_obj : forall i : G, D1 i -> D2 i	  w_comm : forall (i j : G) (g : G i j) (x : D1 i),	           (D2 _f g) (w_obj i x) = w_obj j ((D1 _f g) x)	  is_eq_w : forall i : G, IsEquiv (w_obj i)	  we := fun i : G => {| equiv_fun := w_obj i; equiv_isequiv := is_eq_w i |}	   : forall i : G, D1 i <~> D2 i	  ============================	  forall (i j : G) (g : G i j) (x : D1 i),	  diagram_map_comm	    (diagram_comp	       (diagram_equiv_inv	          {|	          diag_equiv_map := {|	                            diagram_map_obj := w_obj;	                            diagram_map_comm := w_comm |};	          diag_equiv_isequiv := is_eq_w |})	       {| diagram_map_obj := w_obj; diagram_map_comm := w_comm |}) g x @	  (fun i0 : G => eissect _) j ((D1 _f g) x) =	  ap (D1 _f g) ((fun i0 : G => eissect _) i x) @	  diagram_map_comm (diagram_idmap D1) g x	";
+            data = "1 subgoal (ID 187)	  	  H : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  w_obj : forall i : G, D1 i -> D2 i	  w_comm : forall (i j : G) (g : G i j) (x : D1 i),	           (D2 _f g) (w_obj i x) = w_obj j ((D1 _f g) x)	  is_eq_w : forall i : G, IsEquiv (w_obj i)	  we := fun i : G => {| equiv_fun := w_obj i; equiv_isequiv := is_eq_w i |}	   : forall i : G, D1 i <~> D2 i	  ============================	  forall i : G,	  diagram_comp	    (diagram_equiv_inv	       {|	       diag_equiv_map := {|	                         diagram_map_obj := w_obj;	                         diagram_map_comm := w_comm |};	       diag_equiv_isequiv := is_eq_w |})	    {| diagram_map_obj := w_obj; diagram_map_comm := w_comm |} i ==	  diagram_idmap D1 i	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 189)		subgoal 1 (ID 189) is:	 forall (i j : G) (g : G i j) (x : D1 i),	 diagram_map_comm	   (diagram_comp	      (diagram_equiv_inv	         {|	         diag_equiv_map := {|	                           diagram_map_obj := w_obj;	                           diagram_map_comm := w_comm |};	         diag_equiv_isequiv := is_eq_w |})	      {| diagram_map_obj := w_obj; diagram_map_comm := w_comm |}) g x @	 (fun i0 : G => eissect _) j ((D1 _f g) x) =	 ap (D1 _f g) ((fun i0 : G => eissect _) i x) @	 diagram_map_comm (diagram_idmap D1) g x	";
             responses[i]=data;
           
 
             i = 170;
-            data = "1 subgoal (ID 194)	  	  H : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  w_obj : forall i : G, D1 i -> D2 i	  w_comm : forall (i j : G) (g : G i j) (x : D1 i),	           (D2 _f g) (w_obj i x) = w_obj j ((D1 _f g) x)	  is_eq_w : forall i : G, IsEquiv (w_obj i)	  we := fun i : G => {| equiv_fun := w_obj i; equiv_isequiv := is_eq_w i |}	   : forall i : G, D1 i <~> D2 i	  ============================	  forall (i j : G) (g : G i j) (x : D1 i),	  comm_square_comp (comm_square_inverse (fun x0 : D1 i => w_comm i j g x0))	    (w_comm i j g) x @ eissect _ ((D1 _f g) x) =	  ap (D1 _f g) (eissect _ x) @ 1	";
+            data = "1 subgoal (ID 189)	  	  H : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  w_obj : forall i : G, D1 i -> D2 i	  w_comm : forall (i j : G) (g : G i j) (x : D1 i),	           (D2 _f g) (w_obj i x) = w_obj j ((D1 _f g) x)	  is_eq_w : forall i : G, IsEquiv (w_obj i)	  we := fun i : G => {| equiv_fun := w_obj i; equiv_isequiv := is_eq_w i |}	   : forall i : G, D1 i <~> D2 i	  ============================	  forall (i j : G) (g : G i j) (x : D1 i),	  diagram_map_comm	    (diagram_comp	       (diagram_equiv_inv	          {|	          diag_equiv_map := {|	                            diagram_map_obj := w_obj;	                            diagram_map_comm := w_comm |};	          diag_equiv_isequiv := is_eq_w |})	       {| diagram_map_obj := w_obj; diagram_map_comm := w_comm |}) g x @	  (fun i0 : G => eissect _) j ((D1 _f g) x) =	  ap (D1 _f g) ((fun i0 : G => eissect _) i x) @	  diagram_map_comm (diagram_idmap D1) g x	1 subgoal (ID 194)	  	  H : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  w_obj : forall i : G, D1 i -> D2 i	  w_comm : forall (i j : G) (g : G i j) (x : D1 i),	           (D2 _f g) (w_obj i x) = w_obj j ((D1 _f g) x)	  is_eq_w : forall i : G, IsEquiv (w_obj i)	  we := fun i : G => {| equiv_fun := w_obj i; equiv_isequiv := is_eq_w i |}	   : forall i : G, D1 i <~> D2 i	  ============================	  forall (i j : G) (g : G i j) (x : D1 i),	  comm_square_comp (comm_square_inverse (fun x0 : D1 i => w_comm i j g x0))	    (w_comm i j g) x @ eissect _ ((D1 _f g) x) =	  ap (D1 _f g) (eissect _ x) @ 1	";
             responses[i]=data;
           
 
@@ -943,22 +943,22 @@
           
 
             i = 185;
-            data = "2 subgoals (ID 708)	  	  H : Funext	  G : graph	  D1, D2, D3 : diagram G	  m1 : diagram_equiv D1 D2	  m2 : diagram_equiv D2 D3	  i : G	  ============================	  IsEquiv (m1 i)		subgoal 2 (ID 709) is:	 IsEquiv (m2 i)	";
-            responses[i]=data;
-          
-
-            i = 186;
-            data = "1 subgoal (ID 709)	  	  H : Funext	  G : graph	  D1, D2, D3 : diagram G	  m1 : diagram_equiv D1 D2	  m2 : diagram_equiv D2 D3	  i : G	  ============================	  IsEquiv (m2 i)	";
-            responses[i]=data;
-          
-
-            i = 187;
             data = "No more subgoals.	";
             responses[i]=data;
           
 
-            i = 188;
+            i = 186;
             data = "<infomsg>transitive_diagram_equiv is defined</infomsg>	";
+            responses[i]=data;
+          
+
+            i = 187;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 188;
+            data = "";
             responses[i]=data;
           
 
@@ -1013,16 +1013,6 @@
           
 
             i = 199;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 200;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 201;
             data = "";
             responses[i]=data;
           
@@ -1212,7 +1202,7 @@ This file contains the definition of graphs, diagrams, diagram maps and equivale
       " onmouseover="
       mouseover(57, '0_3_15');
       "><br>
-    <span class="id" title="var">funext</span> <span class="id" title="var">i</span>. </span><span class="command" onmouseout="
+    - <span class="id" title="var">funext</span> <span class="id" title="var">i</span>. </span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(58, '0_3_15');
@@ -1221,32 +1211,32 @@ This file contains the definition of graphs, diagrams, diagram maps and equivale
       " onmouseover="
       mouseover(59, '0_3_15');
       "><br>
-    <span class="id" title="var">funext</span> <span class="id" title="var">i</span> <span class="id" title="var">j</span> <span class="id" title="var">g</span> <span class="id" title="var">x</span>.</span><span class="command" onmouseout="
+    - <span class="id" title="var">funext</span> <span class="id" title="var">i</span> <span class="id" title="var">j</span> <span class="id" title="var">g</span> <span class="id" title="var">x</span>.</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(60, '0_3_15');
       "><br>
-    <span class="id" title="tactic">rewrite</span> !<a class="idref" href="HoTT.Types.Forall.html#transport_forall_constant"><span class="id" title="definition">transport_forall_constant</span></a>.</span><span class="command" onmouseout="
+      <span class="id" title="tactic">rewrite</span> !<a class="idref" href="HoTT.Types.Forall.html#transport_forall_constant"><span class="id" title="definition">transport_forall_constant</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(61, '0_3_15');
       "><br>
-    <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Types.Arrow.html#transport_arrow"><span class="id" title="definition">transport_arrow</span></a>.</span><span class="command" onmouseout="
+      <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Types.Arrow.html#transport_arrow"><span class="id" title="definition">transport_arrow</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(62, '0_3_15');
       "><br>
-    <span class="id" title="var">transport_path_forall_hammer</span>.</span><span class="command" onmouseout="
+      <span class="id" title="var">transport_path_forall_hammer</span>.</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(63, '0_3_15');
       "><br>
-    <span class="id" title="tactic">refine</span> (<span class="id" title="var">_</span> <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <span class="id" title="var">eq2</span> <span class="id" title="var">i</span> <span class="id" title="var">j</span> <span class="id" title="var">g</span> (<a class="idref" href="HoTT.Basics.Overture.html#transport"><span class="id" title="definition">transport</span></a> <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><span class="id" title="var">eq1</span> <span class="id" title="var">i</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a> <span class="id" title="var">x</span>) <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
+      <span class="id" title="tactic">refine</span> (<span class="id" title="var">_</span> <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <span class="id" title="var">eq2</span> <span class="id" title="var">i</span> <span class="id" title="var">j</span> <span class="id" title="var">g</span> (<a class="idref" href="HoTT.Basics.Overture.html#transport"><span class="id" title="definition">transport</span></a> <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><span class="id" title="var">eq1</span> <span class="id" title="var">i</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a> <span class="id" title="var">x</span>) <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(64, '0_3_15');
       "><br>
-    - <span class="id" title="var">f_ap</span>. </span><span class="command" onmouseout="
+      + <span class="id" title="var">f_ap</span>. </span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(65, '0_3_15');
@@ -1259,7 +1249,7 @@ This file contains the definition of graphs, diagrams, diagram maps and equivale
       " onmouseover="
       mouseover(67, '0_3_15');
       "><br>
-      <span class="id" title="tactic">rewrite</span> &lt;- <a class="idref" href="HoTT.Types.Forall.html#path_forall_V"><span class="id" title="definition">path_forall_V</span></a>. </span><span class="command" onmouseout="
+        <span class="id" title="tactic">rewrite</span> &lt;- <a class="idref" href="HoTT.Types.Forall.html#path_forall_V"><span class="id" title="definition">path_forall_V</span></a>. </span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(68, '0_3_15');
@@ -1268,7 +1258,7 @@ This file contains the definition of graphs, diagrams, diagram maps and equivale
       " onmouseover="
       mouseover(69, '0_3_15');
       "><br>
-      <span class="id" title="var">transport_path_forall_hammer</span>. </span><span class="command" onmouseout="
+        <span class="id" title="var">transport_path_forall_hammer</span>. </span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(70, '0_3_15');
@@ -1277,7 +1267,7 @@ This file contains the definition of graphs, diagrams, diagram maps and equivale
       " onmouseover="
       mouseover(71, '0_3_15');
       "><br>
-    - <span class="id" title="var">f_ap</span>. </span><span class="command" onmouseout="
+      + <span class="id" title="var">f_ap</span>. </span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(72, '0_3_15');
@@ -1632,16 +1622,17 @@ Inverse, section and retraction of equivalences of diagrams.
       " onmouseover="
       mouseover(157, '0_3_35');
       "><br>
-    <span class="id" title="tactic">exact</span> (<span class="id" title="keyword">fun</span> <span class="id" title="var">i</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="projection">eisretr</span></a> (<span class="id" title="var">we</span> <a class="idref" href="HoTT.HIT.Colimits.Diagram.html#i"><span class="id" title="variable">i</span></a>)). </span><span class="command" onmouseout="
+    - <span class="id" title="tactic">exact</span> (<span class="id" title="keyword">fun</span> <span class="id" title="var">i</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="projection">eisretr</span></a> (<span class="id" title="var">we</span> <a class="idref" href="HoTT.HIT.Colimits.Diagram.html#i"><span class="id" title="variable">i</span></a>)).</span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
       mouseover(158, '0_3_35');
-      "><span class="id" title="tactic">simpl</span>.</span><span class="command" onmouseout="
+      "><br>
+    - <span class="id" title="tactic">simpl</span>.</span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
       mouseover(159, '0_3_35');
       "><br>
-    <span class="id" title="tactic">intros</span> <span class="id" title="var">i</span> <span class="id" title="var">j</span> <span class="id" title="var">f</span> <span class="id" title="var">x</span>. </span><span class="command" onmouseout="
+      <span class="id" title="tactic">intros</span> <span class="id" title="var">i</span> <span class="id" title="var">j</span> <span class="id" title="var">f</span> <span class="id" title="var">x</span>. </span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
       mouseover(160, '0_3_35');
@@ -1650,7 +1641,7 @@ Inverse, section and retraction of equivalences of diagrams.
       " onmouseover="
       mouseover(161, '0_3_35');
       "><br>
-    <span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.HIT.Colimits.CommutativeSquares.html#comm_square_inverse_is_retr"><span class="id" title="lemma">comm_square_inverse_is_retr</span></a> (<span class="id" title="var">we</span> <span class="id" title="var">i</span>) (<span class="id" title="var">we</span> <span class="id" title="var">j</span>) <span class="id" title="var">_</span> <span class="id" title="var">x</span>).</span><span class="command" onmouseout="
+      <span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.HIT.Colimits.CommutativeSquares.html#comm_square_inverse_is_retr"><span class="id" title="lemma">comm_square_inverse_is_retr</span></a> (<span class="id" title="var">we</span> <span class="id" title="var">i</span>) (<span class="id" title="var">we</span> <span class="id" title="var">j</span>) <span class="id" title="var">_</span> <span class="id" title="var">x</span>).</span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
       mouseover(162, '0_3_35');
@@ -1692,16 +1683,17 @@ Inverse, section and retraction of equivalences of diagrams.
       " onmouseover="
       mouseover(169, '0_3_35');
       "><br>
-    <span class="id" title="tactic">exact</span> (<span class="id" title="keyword">fun</span> <span class="id" title="var">i</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#eissect"><span class="id" title="projection">eissect</span></a> (<span class="id" title="var">we</span> <a class="idref" href="HoTT.HIT.Colimits.Diagram.html#i"><span class="id" title="variable">i</span></a>)). </span><span class="command" onmouseout="
+    - <span class="id" title="tactic">exact</span> (<span class="id" title="keyword">fun</span> <span class="id" title="var">i</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#eissect"><span class="id" title="projection">eissect</span></a> (<span class="id" title="var">we</span> <a class="idref" href="HoTT.HIT.Colimits.Diagram.html#i"><span class="id" title="variable">i</span></a>)).</span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
       mouseover(170, '0_3_35');
-      "><span class="id" title="tactic">simpl</span>.</span><span class="command" onmouseout="
+      "><br>
+    - <span class="id" title="tactic">simpl</span>.</span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
       mouseover(171, '0_3_35');
       "><br>
-    <span class="id" title="tactic">intros</span> <span class="id" title="var">i</span> <span class="id" title="var">j</span> <span class="id" title="var">f</span> <span class="id" title="var">x</span>. </span><span class="command" onmouseout="
+      <span class="id" title="tactic">intros</span> <span class="id" title="var">i</span> <span class="id" title="var">j</span> <span class="id" title="var">f</span> <span class="id" title="var">x</span>. </span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
       mouseover(172, '0_3_35');
@@ -1710,7 +1702,7 @@ Inverse, section and retraction of equivalences of diagrams.
       " onmouseover="
       mouseover(173, '0_3_35');
       "><br>
-    <span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.HIT.Colimits.CommutativeSquares.html#comm_square_inverse_is_sect"><span class="id" title="lemma">comm_square_inverse_is_sect</span></a> (<span class="id" title="var">we</span> <span class="id" title="var">i</span>) (<span class="id" title="var">we</span> <span class="id" title="var">j</span>) <span class="id" title="var">_</span> <span class="id" title="var">x</span>).</span><span class="command" onmouseout="
+      <span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.HIT.Colimits.CommutativeSquares.html#comm_square_inverse_is_sect"><span class="id" title="lemma">comm_square_inverse_is_sect</span></a> (<span class="id" title="var">we</span> <span class="id" title="var">i</span>) (<span class="id" title="var">we</span> <span class="id" title="var">j</span>) <span class="id" title="var">_</span> <span class="id" title="var">x</span>).</span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
       mouseover(174, '0_3_35');
@@ -1767,34 +1759,26 @@ The equivalence of diagram is an equivalence relation.  Those instances allows t
       mouseout('0_3_39');
       " onmouseover="
       mouseover(185, '0_3_39');
-      "><span class="id" title="tactic">intros</span> <span class="id" title="var">i</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Equivalences.html#isequiv_compose'"><span class="id" title="definition">isequiv_compose'</span></a>. </span><span class="command" onmouseout="
+      "><span class="id" title="tactic">intros</span> <span class="id" title="var">i</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Equivalences.html#isequiv_compose'"><span class="id" title="definition">isequiv_compose'</span></a>;[<span class="id" title="tactic">apply</span> <span class="id" title="var">m1</span> | <span class="id" title="tactic">apply</span> <span class="id" title="var">m2</span>].</span><span class="command" onmouseout="
       mouseout('0_3_39');
       " onmouseover="
       mouseover(186, '0_3_39');
-      "><span class="id" title="tactic">apply</span> <span class="id" title="var">m1</span>. </span><span class="command" onmouseout="
-      mouseout('0_3_39');
-      " onmouseover="
-      mouseover(187, '0_3_39');
-      "><span class="id" title="tactic">apply</span> <span class="id" title="var">m2</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_39');
-      " onmouseover="
-      mouseover(188, '0_3_39');
       "><br>
   <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_39');
       " onmouseover="
-      mouseover(189, '0_3_39');
+      mouseover(187, '0_3_39');
       "><br>
 <span class="id" title="keyword">End</span> <a class="idref" href="HoTT.HIT.Colimits.Diagram.html#Diagram"><span class="id" title="section">Diagram</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_39');
       " onmouseover="
-      mouseover(190, '0_3_39');
+      mouseover(188, '0_3_39');
       "><br>
 <br>
 <span class="id" title="keyword">Notation</span> <a name="19674d50802deb812a81f7a836f35199"><span class="id" title="notation">"</span></a>D1 ~d~ D2" := (<a class="idref" href="HoTT.HIT.Colimits.Diagram.html#diagram_equiv"><span class="id" title="record">diagram_equiv</span></a> <span class="id" title="var">D1</span> <span class="id" title="var">D2</span>).</span><span class="command" onmouseout="
       mouseout('0_3_39');
       " onmouseover="
-      mouseover(191, '0_3_39');
+      mouseover(189, '0_3_39');
       "><br>
 </span>
 </div>

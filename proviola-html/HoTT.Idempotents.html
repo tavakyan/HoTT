@@ -553,12 +553,12 @@
           
 
             i = 107;
-            data = "1 subgoal (ID 153)	  	  X : Type	  Y : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  f : X -> Y	  g : A -> Y	  p : (fun x : X => g (r x)) == f	  y : Y	  a : A	  q : g a = y	  ============================	  transport (fun x : A => g x = y) (H a)	    (p (s a) @ (((p (s a))^ @ ap g (H a)) @ q)) = q	No more subgoals.	";
+            data = "1 subgoal (ID 153)	  	  X : Type	  Y : Type	  A : Type	  r : X -> A	  s : A -> X	  H : (fun x : A => r (s x)) == idmap	  f : X -> Y	  g : A -> Y	  p : (fun x : X => g (r x)) == f	  y : Y	  a : A	  q : g a = y	  ============================	  transport (fun x : A => g x = y) (H a)	    (p (s a) @ (((p (s a))^ @ ap g (H a)) @ q)) = q	";
             responses[i]=data;
           
 
             i = 108;
-            data = "<infomsg>retractof_hfiber is defined</infomsg>	";
+            data = "No more subgoals.	<infomsg>retractof_hfiber is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -1783,17 +1783,17 @@
           
 
             i = 353;
-            data = "1 subgoal (ID 268)	  	  X : Type	  f : PreIdempotent X	  H : WeaklyConstant f	  ============================	  (fun x : X => (f x; isidem f x)) o pr1 == idmap	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	";
+            data = "1 subgoal (ID 268)	  	  X : Type	  f : PreIdempotent X	  H : WeaklyConstant f	  ============================	  (fun x : X => (f x; isidem f x)) o pr1 == idmap	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 270)		subgoal 1 (ID 270) is:	 (fun R : RetractOf X => retract_idem R == f)	   {|	   retract_type := FixedBy f;	   retract_retr := fun x : X => (f x; isidem f x);	   retract_sect := pr1;	   retract_issect := fun x : FixedBy f =>	                     path_ishprop (f (pr1 x); isidem f (pr1 x)) x |}	";
             responses[i]=data;
           
 
             i = 354;
-            data = "1 subgoal (ID 270)		subgoal 1 (ID 270) is:	 (fun R : RetractOf X => retract_idem R == f)	   {|	   retract_type := FixedBy f;	   retract_retr := fun x : X => (f x; isidem f x);	   retract_sect := pr1;	   retract_issect := fun x : FixedBy f =>	                     path_ishprop (f (pr1 x); isidem f (pr1 x)) x |}	";
+            data = "1 subgoal (ID 270)	  	  X : Type	  f : PreIdempotent X	  H : WeaklyConstant f	  ============================	  (fun R : RetractOf X => retract_idem R == f)	    {|	    retract_type := FixedBy f;	    retract_retr := fun x : X => (f x; isidem f x);	    retract_sect := pr1;	    retract_issect := fun x : FixedBy f =>	                      path_ishprop (f (pr1 x); isidem f (pr1 x)) x |}	1 subgoal (ID 286)	  	  X : Type	  f : PreIdempotent X	  H : WeaklyConstant f	  ============================	  (fun x : X => f x) == f	";
             responses[i]=data;
           
 
             i = 355;
-            data = "1 subgoal (ID 270)	  	  X : Type	  f : PreIdempotent X	  H : WeaklyConstant f	  ============================	  (fun R : RetractOf X => retract_idem R == f)	    {|	    retract_type := FixedBy f;	    retract_retr := fun x : X => (f x; isidem f x);	    retract_sect := pr1;	    retract_issect := fun x : FixedBy f =>	                      path_ishprop (f (pr1 x); isidem f (pr1 x)) x |}	1 subgoal (ID 286)	  	  X : Type	  f : PreIdempotent X	  H : WeaklyConstant f	  ============================	  (fun x : X => f x) == f	No more subgoals.	";
+            data = "No more subgoals.	";
             responses[i]=data;
           
 

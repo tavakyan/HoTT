@@ -268,12 +268,12 @@
           
 
             i = 50;
-            data = "1 subgoal (ID 220)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a' : A'	  ============================	  _^-1 (wB (f (_^-1 a'))) = _^-1 (f' a')	";
+            data = "1 subgoal (ID 219)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a' : A'	  ============================	  f (_^-1 a') = _^-1 (wB (f (_^-1 a')))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 220)		subgoal 1 (ID 220) is:	 _^-1 (wB (f (_^-1 a'))) = _^-1 (f' a')	";
             responses[i]=data;
           
 
             i = 51;
-            data = "1 subgoal (ID 249)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a' : A'	  ============================	  f' (wA (_^-1 a')) = f' a'	";
+            data = "1 subgoal (ID 220)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a' : A'	  ============================	  _^-1 (wB (f (_^-1 a'))) = _^-1 (f' a')	1 subgoal (ID 249)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a' : A'	  ============================	  f' (wA (_^-1 a')) = f' a'	";
             responses[i]=data;
           
 
@@ -383,22 +383,22 @@
           
 
             i = 73;
-            data = "2 subgoals (ID 551)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A	  ============================	  ap f' (eisretr wA (wA a)) = ap (fun x : A => f' (wA x)) (eissect _ a)		subgoal 2 (ID 534) is:	 ap (fun x : A => f' (wA x)) (eissect _ a) @ wf a =	 wf (_^-1 (wA a)) @ ap wB (ap f (eissect _ a))	";
+            data = "1 subgoal (ID 533)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A	  ============================	  ap f' (eisretr wA (wA a)) @ wf a =	  ap (fun x : A => f' (wA x)) (eissect _ a) @ wf a	1 subgoal (ID 551)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A	  ============================	  ap f' (eisretr wA (wA a)) = ap (fun x : A => f' (wA x)) (eissect _ a)	";
             responses[i]=data;
           
 
             i = 74;
-            data = "2 subgoals (ID 574)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A	  ============================	  ap f' (eisretr wA (wA a)) = ap f' (ap wA (eissect _ a))		subgoal 2 (ID 534) is:	 ap (fun x : A => f' (wA x)) (eissect _ a) @ wf a =	 wf (_^-1 (wA a)) @ ap wB (ap f (eissect _ a))	";
+            data = "1 subgoal (ID 574)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A	  ============================	  ap f' (eisretr wA (wA a)) = ap f' (ap wA (eissect _ a))	";
             responses[i]=data;
           
 
             i = 75;
-            data = "1 subgoal (ID 534)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A	  ============================	  ap (fun x : A => f' (wA x)) (eissect _ a) @ wf a =	  wf (_^-1 (wA a)) @ ap wB (ap f (eissect _ a))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 534)		subgoal 1 (ID 534) is:	 ap (fun x : A => f' (wA x)) (eissect _ a) @ wf a =	 wf (_^-1 (wA a)) @ ap wB (ap f (eissect _ a))	";
             responses[i]=data;
           
 
             i = 76;
-            data = "1 subgoal (ID 592)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A	  ============================	  wf (_^-1 (wA a)) @ ap (fun x : A => wB (f x)) (eissect _ a) =	  wf (_^-1 (wA a)) @ ap wB (ap f (eissect _ a))	";
+            data = "1 subgoal (ID 534)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A	  ============================	  ap (fun x : A => f' (wA x)) (eissect _ a) @ wf a =	  wf (_^-1 (wA a)) @ ap wB (ap f (eissect _ a))	1 subgoal (ID 592)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A	  ============================	  wf (_^-1 (wA a)) @ ap (fun x : A => wB (f x)) (eissect _ a) =	  wf (_^-1 (wA a)) @ ap wB (ap f (eissect _ a))	";
             responses[i]=data;
           
 
@@ -488,82 +488,82 @@
           
 
             i = 94;
-            data = "2 subgoals (ID 428)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  (wf (_^-1 a) @ ap wB (eissect wB (f (_^-1 a)))^) @	  ap wB (ap wB^-1 (wf (_^-1 a))^) = (eisretr _ (f' (wA (_^-1 a))))^		subgoal 2 (ID 411) is:	 (eisretr _ (f' (wA (_^-1 a))))^ @ p = ap f' (eisretr _ a)	";
+            data = "1 subgoal (ID 410)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  ((wf (_^-1 a) @ ap wB (eissect wB (f (_^-1 a)))^) @	   ap wB (ap wB^-1 (wf (_^-1 a))^)) @ p = (eisretr _ (f' (wA (_^-1 a))))^ @ p	1 subgoal (ID 428)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  (wf (_^-1 a) @ ap wB (eissect wB (f (_^-1 a)))^) @	  ap wB (ap wB^-1 (wf (_^-1 a))^) = (eisretr _ (f' (wA (_^-1 a))))^	";
             responses[i]=data;
           
 
             i = 95;
-            data = "2 subgoals (ID 433)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  wf (_^-1 a) @ ap wB (eissect wB (f (_^-1 a)))^ =	  (eisretr _ (f' (wA (_^-1 a))))^ @ (ap wB (ap wB^-1 (wf (_^-1 a))^))^		subgoal 2 (ID 411) is:	 (eisretr _ (f' (wA (_^-1 a))))^ @ p = ap f' (eisretr _ a)	";
+            data = "1 subgoal (ID 433)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  wf (_^-1 a) @ ap wB (eissect wB (f (_^-1 a)))^ =	  (eisretr _ (f' (wA (_^-1 a))))^ @ (ap wB (ap wB^-1 (wf (_^-1 a))^))^	";
             responses[i]=data;
           
 
             i = 96;
-            data = "3 subgoals (ID 499)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  wf (_^-1 a) @ ap wB (eissect wB (f (_^-1 a)))^ =	  (eisretr _ (f' (wA (_^-1 a))))^ @	  ap (fun x : B' => wB (_^-1 x)) (wf (_^-1 a))		subgoal 2 (ID 500) is:	 (eisretr _ (f' (wA (_^-1 a))))^ @	 ap (fun x : B' => wB (_^-1 x)) (wf (_^-1 a)) =	 (eisretr _ (f' (wA (_^-1 a))))^ @ (ap wB (ap wB^-1 (wf (_^-1 a))^))^	subgoal 3 (ID 411) is:	 (eisretr _ (f' (wA (_^-1 a))))^ @ p = ap f' (eisretr _ a)	";
+            data = "2 subgoals (ID 499)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  wf (_^-1 a) @ ap wB (eissect wB (f (_^-1 a)))^ =	  (eisretr _ (f' (wA (_^-1 a))))^ @	  ap (fun x : B' => wB (_^-1 x)) (wf (_^-1 a))		subgoal 2 (ID 500) is:	 (eisretr _ (f' (wA (_^-1 a))))^ @	 ap (fun x : B' => wB (_^-1 x)) (wf (_^-1 a)) =	 (eisretr _ (f' (wA (_^-1 a))))^ @ (ap wB (ap wB^-1 (wf (_^-1 a))^))^	";
             responses[i]=data;
           
 
             i = 97;
-            data = "3 subgoals (ID 513)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  wf (_^-1 a) @ (ap wB (eissect wB (f (_^-1 a))))^ =	  (eisretr _ (f' (wA (_^-1 a))))^ @	  ap (fun x : B' => wB (_^-1 x)) (wf (_^-1 a))		subgoal 2 (ID 500) is:	 (eisretr _ (f' (wA (_^-1 a))))^ @	 ap (fun x : B' => wB (_^-1 x)) (wf (_^-1 a)) =	 (eisretr _ (f' (wA (_^-1 a))))^ @ (ap wB (ap wB^-1 (wf (_^-1 a))^))^	subgoal 3 (ID 411) is:	 (eisretr _ (f' (wA (_^-1 a))))^ @ p = ap f' (eisretr _ a)	";
+            data = "1 subgoal (ID 499)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  wf (_^-1 a) @ ap wB (eissect wB (f (_^-1 a)))^ =	  (eisretr _ (f' (wA (_^-1 a))))^ @	  ap (fun x : B' => wB (_^-1 x)) (wf (_^-1 a))	1 subgoal (ID 513)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  wf (_^-1 a) @ (ap wB (eissect wB (f (_^-1 a))))^ =	  (eisretr _ (f' (wA (_^-1 a))))^ @	  ap (fun x : B' => wB (_^-1 x)) (wf (_^-1 a))	";
             responses[i]=data;
           
 
             i = 98;
-            data = "3 subgoals (ID 518)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  wf (_^-1 a) @ (eisretr _ (wB (f (_^-1 a))))^ =	  (eisretr _ (f' (wA (_^-1 a))))^ @	  ap (fun x : B' => wB (_^-1 x)) (wf (_^-1 a))		subgoal 2 (ID 500) is:	 (eisretr _ (f' (wA (_^-1 a))))^ @	 ap (fun x : B' => wB (_^-1 x)) (wf (_^-1 a)) =	 (eisretr _ (f' (wA (_^-1 a))))^ @ (ap wB (ap wB^-1 (wf (_^-1 a))^))^	subgoal 3 (ID 411) is:	 (eisretr _ (f' (wA (_^-1 a))))^ @ p = ap f' (eisretr _ a)	";
+            data = "1 subgoal (ID 518)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  wf (_^-1 a) @ (eisretr _ (wB (f (_^-1 a))))^ =	  (eisretr _ (f' (wA (_^-1 a))))^ @	  ap (fun x : B' => wB (_^-1 x)) (wf (_^-1 a))	";
             responses[i]=data;
           
 
             i = 99;
-            data = "4 subgoals (ID 594)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  wf (_^-1 a) @ (eisretr _ (wB (f (_^-1 a))))^ =	  ap idmap (wf (_^-1 a)) @ (eisretr _ (wB (f (_^-1 a))))^		subgoal 2 (ID 595) is:	 ap idmap (wf (_^-1 a)) @ (eisretr _ (wB (f (_^-1 a))))^ =	 (eisretr _ (f' (wA (_^-1 a))))^ @	 ap (fun x : B' => wB (_^-1 x)) (wf (_^-1 a))	subgoal 3 (ID 500) is:	 (eisretr _ (f' (wA (_^-1 a))))^ @	 ap (fun x : B' => wB (_^-1 x)) (wf (_^-1 a)) =	 (eisretr _ (f' (wA (_^-1 a))))^ @ (ap wB (ap wB^-1 (wf (_^-1 a))^))^	subgoal 4 (ID 411) is:	 (eisretr _ (f' (wA (_^-1 a))))^ @ p = ap f' (eisretr _ a)	";
+            data = "2 subgoals (ID 594)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  wf (_^-1 a) @ (eisretr _ (wB (f (_^-1 a))))^ =	  ap idmap (wf (_^-1 a)) @ (eisretr _ (wB (f (_^-1 a))))^		subgoal 2 (ID 595) is:	 ap idmap (wf (_^-1 a)) @ (eisretr _ (wB (f (_^-1 a))))^ =	 (eisretr _ (f' (wA (_^-1 a))))^ @	 ap (fun x : B' => wB (_^-1 x)) (wf (_^-1 a))	";
             responses[i]=data;
           
 
             i = 100;
-            data = "4 subgoals (ID 602)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  wf (_^-1 a) = ap idmap (wf (_^-1 a))		subgoal 2 (ID 595) is:	 ap idmap (wf (_^-1 a)) @ (eisretr _ (wB (f (_^-1 a))))^ =	 (eisretr _ (f' (wA (_^-1 a))))^ @	 ap (fun x : B' => wB (_^-1 x)) (wf (_^-1 a))	subgoal 3 (ID 500) is:	 (eisretr _ (f' (wA (_^-1 a))))^ @	 ap (fun x : B' => wB (_^-1 x)) (wf (_^-1 a)) =	 (eisretr _ (f' (wA (_^-1 a))))^ @ (ap wB (ap wB^-1 (wf (_^-1 a))^))^	subgoal 4 (ID 411) is:	 (eisretr _ (f' (wA (_^-1 a))))^ @ p = ap f' (eisretr _ a)	";
+            data = "1 subgoal (ID 594)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  wf (_^-1 a) @ (eisretr _ (wB (f (_^-1 a))))^ =	  ap idmap (wf (_^-1 a)) @ (eisretr _ (wB (f (_^-1 a))))^	1 subgoal (ID 602)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  wf (_^-1 a) = ap idmap (wf (_^-1 a))	";
             responses[i]=data;
           
 
             i = 101;
-            data = "4 subgoals (ID 606)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  ap idmap (wf (_^-1 a)) = wf (_^-1 a)		subgoal 2 (ID 595) is:	 ap idmap (wf (_^-1 a)) @ (eisretr _ (wB (f (_^-1 a))))^ =	 (eisretr _ (f' (wA (_^-1 a))))^ @	 ap (fun x : B' => wB (_^-1 x)) (wf (_^-1 a))	subgoal 3 (ID 500) is:	 (eisretr _ (f' (wA (_^-1 a))))^ @	 ap (fun x : B' => wB (_^-1 x)) (wf (_^-1 a)) =	 (eisretr _ (f' (wA (_^-1 a))))^ @ (ap wB (ap wB^-1 (wf (_^-1 a))^))^	subgoal 4 (ID 411) is:	 (eisretr _ (f' (wA (_^-1 a))))^ @ p = ap f' (eisretr _ a)	";
+            data = "1 subgoal (ID 606)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  ap idmap (wf (_^-1 a)) = wf (_^-1 a)	";
             responses[i]=data;
           
 
             i = 102;
-            data = "3 subgoals (ID 595)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  ap idmap (wf (_^-1 a)) @ (eisretr _ (wB (f (_^-1 a))))^ =	  (eisretr _ (f' (wA (_^-1 a))))^ @	  ap (fun x : B' => wB (_^-1 x)) (wf (_^-1 a))		subgoal 2 (ID 500) is:	 (eisretr _ (f' (wA (_^-1 a))))^ @	 ap (fun x : B' => wB (_^-1 x)) (wf (_^-1 a)) =	 (eisretr _ (f' (wA (_^-1 a))))^ @ (ap wB (ap wB^-1 (wf (_^-1 a))^))^	subgoal 3 (ID 411) is:	 (eisretr _ (f' (wA (_^-1 a))))^ @ p = ap f' (eisretr _ a)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	3 subgoals (ID 595)		subgoal 1 (ID 595) is:	 ap idmap (wf (_^-1 a)) @ (eisretr _ (wB (f (_^-1 a))))^ =	 (eisretr _ (f' (wA (_^-1 a))))^ @	 ap (fun x : B' => wB (_^-1 x)) (wf (_^-1 a))	subgoal 2 (ID 500) is:	 (eisretr _ (f' (wA (_^-1 a))))^ @	 ap (fun x : B' => wB (_^-1 x)) (wf (_^-1 a)) =	 (eisretr _ (f' (wA (_^-1 a))))^ @ (ap wB (ap wB^-1 (wf (_^-1 a))^))^	subgoal 3 (ID 411) is:	 (eisretr _ (f' (wA (_^-1 a))))^ @ p = ap f' (eisretr _ a)	";
             responses[i]=data;
           
 
             i = 103;
-            data = "2 subgoals (ID 500)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  (eisretr _ (f' (wA (_^-1 a))))^ @	  ap (fun x : B' => wB (_^-1 x)) (wf (_^-1 a)) =	  (eisretr _ (f' (wA (_^-1 a))))^ @ (ap wB (ap wB^-1 (wf (_^-1 a))^))^		subgoal 2 (ID 411) is:	 (eisretr _ (f' (wA (_^-1 a))))^ @ p = ap f' (eisretr _ a)	";
+            data = "1 subgoal (ID 595)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  ap idmap (wf (_^-1 a)) @ (eisretr _ (wB (f (_^-1 a))))^ =	  (eisretr _ (f' (wA (_^-1 a))))^ @	  ap (fun x : B' => wB (_^-1 x)) (wf (_^-1 a))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 500)		subgoal 1 (ID 500) is:	 (eisretr _ (f' (wA (_^-1 a))))^ @	 ap (fun x : B' => wB (_^-1 x)) (wf (_^-1 a)) =	 (eisretr _ (f' (wA (_^-1 a))))^ @ (ap wB (ap wB^-1 (wf (_^-1 a))^))^	subgoal 2 (ID 411) is:	 (eisretr _ (f' (wA (_^-1 a))))^ @ p = ap f' (eisretr _ a)	";
             responses[i]=data;
           
 
             i = 104;
-            data = "2 subgoals (ID 631)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  ap (fun x : B' => wB (_^-1 x)) (wf (_^-1 a)) =	  (ap wB (ap wB^-1 (wf (_^-1 a))^))^		subgoal 2 (ID 411) is:	 (eisretr _ (f' (wA (_^-1 a))))^ @ p = ap f' (eisretr _ a)	";
+            data = "1 subgoal (ID 500)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  (eisretr _ (f' (wA (_^-1 a))))^ @	  ap (fun x : B' => wB (_^-1 x)) (wf (_^-1 a)) =	  (eisretr _ (f' (wA (_^-1 a))))^ @ (ap wB (ap wB^-1 (wf (_^-1 a))^))^	1 subgoal (ID 631)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  ap (fun x : B' => wB (_^-1 x)) (wf (_^-1 a)) =	  (ap wB (ap wB^-1 (wf (_^-1 a))^))^	";
             responses[i]=data;
           
 
             i = 105;
-            data = "2 subgoals (ID 635)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  ap wB (ap _^-1 (wf (_^-1 a))) = (ap wB (ap wB^-1 (wf (_^-1 a))^))^		subgoal 2 (ID 411) is:	 (eisretr _ (f' (wA (_^-1 a))))^ @ p = ap f' (eisretr _ a)	";
+            data = "1 subgoal (ID 635)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  ap wB (ap _^-1 (wf (_^-1 a))) = (ap wB (ap wB^-1 (wf (_^-1 a))^))^	";
             responses[i]=data;
           
 
             i = 106;
-            data = "2 subgoals (ID 644)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  ap wB (ap _^-1 (wf (_^-1 a))) = ((ap wB (ap wB^-1 (wf (_^-1 a))))^)^		subgoal 2 (ID 411) is:	 (eisretr _ (f' (wA (_^-1 a))))^ @ p = ap f' (eisretr _ a)	";
+            data = "1 subgoal (ID 644)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  ap wB (ap _^-1 (wf (_^-1 a))) = ((ap wB (ap wB^-1 (wf (_^-1 a))))^)^	";
             responses[i]=data;
           
 
             i = 107;
-            data = "2 subgoals (ID 652)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  ((ap wB (ap wB^-1 (wf (_^-1 a))))^)^ = ap wB (ap _^-1 (wf (_^-1 a)))		subgoal 2 (ID 411) is:	 (eisretr _ (f' (wA (_^-1 a))))^ @ p = ap f' (eisretr _ a)	";
+            data = "1 subgoal (ID 652)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  ((ap wB (ap wB^-1 (wf (_^-1 a))))^)^ = ap wB (ap _^-1 (wf (_^-1 a)))	";
             responses[i]=data;
           
 
             i = 108;
-            data = "1 subgoal (ID 411)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  (eisretr _ (f' (wA (_^-1 a))))^ @ p = ap f' (eisretr _ a)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 411)		subgoal 1 (ID 411) is:	 (eisretr _ (f' (wA (_^-1 a))))^ @ p = ap f' (eisretr _ a)	";
             responses[i]=data;
           
 
             i = 109;
-            data = "1 subgoal (ID 660)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  p = eisretr _ (f' (wA (_^-1 a))) @ ap f' (eisretr _ a)	";
+            data = "1 subgoal (ID 411)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  (eisretr _ (f' (wA (_^-1 a))))^ @ p = ap f' (eisretr _ a)	1 subgoal (ID 660)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  p := ap wB (ap _^-1 (ap f' (eisretr _ a))) @ eisretr _ (f' a)	   : wB (_^-1 (f' (wA (_^-1 a)))) = f' a	  ============================	  p = eisretr _ (f' (wA (_^-1 a))) @ ap f' (eisretr _ a)	";
             responses[i]=data;
           
 
@@ -583,12 +583,12 @@
           
 
             i = 113;
-            data = "1 subgoal (ID 718)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  ============================	  eisretr _ (f' (wA (_^-1 a))) @ ap idmap (ap f' (eisretr _ a)) =	  eisretr _ (f' (wA (_^-1 a))) @ ap f' (eisretr _ a)	";
+            data = "1 subgoal (ID 717)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  ============================	  ap (fun x : B' => wB (_^-1 x)) (ap f' (eisretr _ a)) @ eisretr _ (f' a) =	  eisretr _ (f' (wA (_^-1 a))) @ ap idmap (ap f' (eisretr _ a))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 718)		subgoal 1 (ID 718) is:	 eisretr _ (f' (wA (_^-1 a))) @ ap idmap (ap f' (eisretr _ a)) =	 eisretr _ (f' (wA (_^-1 a))) @ ap f' (eisretr _ a)	";
             responses[i]=data;
           
 
             i = 114;
-            data = "1 subgoal (ID 747)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  ============================	  ap idmap (ap f' (eisretr _ a)) = ap f' (eisretr _ a)	";
+            data = "1 subgoal (ID 718)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  ============================	  eisretr _ (f' (wA (_^-1 a))) @ ap idmap (ap f' (eisretr _ a)) =	  eisretr _ (f' (wA (_^-1 a))) @ ap f' (eisretr _ a)	1 subgoal (ID 747)	  	  A : Type	  B : Type	  f : A -> B	  A' : Type	  B' : Type	  f' : A' -> B'	  wA : A <~> A'	  wB : B <~> B'	  wf : f' o wA == wB o f	  a : A'	  ============================	  ap idmap (ap f' (eisretr _ a)) = ap f' (eisretr _ a)	";
             responses[i]=data;
           
 
@@ -776,17 +776,17 @@ Given any commutative square from <span class="inlinecode"><a class="idref" href
       " onmouseover="
       mouseover(50, '0_3_11');
       "><br>
-    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#inverse"><span class="id" title="definition">inverse</span></a>, <a class="idref" href="HoTT.Basics.Overture.html#eissect"><span class="id" title="projection">eissect</span></a>.</span><span class="command" onmouseout="
+  - <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#inverse"><span class="id" title="definition">inverse</span></a>, <a class="idref" href="HoTT.Basics.Overture.html#eissect"><span class="id" title="projection">eissect</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(51, '0_3_11');
       "><br>
-  <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>, (<a class="idref" href="HoTT.Basics.Overture.html#concat"><span class="id" title="definition">concat</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><span class="id" title="keyword">wf</span> <span class="id" title="var">_</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a>).</span><span class="command" onmouseout="
+  - <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>, (<a class="idref" href="HoTT.Basics.Overture.html#concat"><span class="id" title="definition">concat</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><span class="id" title="keyword">wf</span> <span class="id" title="var">_</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(52, '0_3_11');
       "><br>
-  <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>, <a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="projection">eisretr</span></a>.</span><span class="command" onmouseout="
+    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>, <a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="projection">eisretr</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(53, '0_3_11');
@@ -879,7 +879,7 @@ retraction (aka left inverse);
       " onmouseover="
       mouseover(73, '0_3_15');
       "><br>
-    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#whiskerR"><span class="id" title="definition">whiskerR</span></a>. </span><span class="command" onmouseout="
+  - <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#whiskerR"><span class="id" title="definition">whiskerR</span></a>. </span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(74, '0_3_15');
@@ -893,12 +893,12 @@ retraction (aka left inverse);
       " onmouseover="
       mouseover(76, '0_3_15');
       "><br>
-  <span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.Basics.Overture.html#concat"><span class="id" title="definition">concat</span></a> (<a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_Ap"><span class="id" title="definition">concat_Ap</span></a> <span class="id" title="keyword">wf</span> <span class="id" title="var">_</span>)).</span><span class="command" onmouseout="
+  - <span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.Basics.Overture.html#concat"><span class="id" title="definition">concat</span></a> (<a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_Ap"><span class="id" title="definition">concat_Ap</span></a> <span class="id" title="keyword">wf</span> <span class="id" title="var">_</span>)).</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(77, '0_3_15');
       "><br>
-  <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#whiskerL"><span class="id" title="definition">whiskerL</span></a>, (<a class="idref" href="HoTT.Basics.PathGroupoids.html#ap_compose"><span class="id" title="definition">ap_compose</span></a> <span class="id" title="var">f</span> <span class="id" title="var">wB</span>).</span><span class="command" onmouseout="
+    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#whiskerL"><span class="id" title="definition">whiskerL</span></a>, (<a class="idref" href="HoTT.Basics.PathGroupoids.html#ap_compose"><span class="id" title="definition">ap_compose</span></a> <span class="id" title="var">f</span> <span class="id" title="var">wB</span>).</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(78, '0_3_15');
@@ -972,7 +972,7 @@ and similarly, <span class="inlinecode"><a class="idref" href="HoTT.HIT.Colimits
       " onmouseover="
       mouseover(94, '0_3_19');
       "><br>
-  <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#whiskerR"><span class="id" title="definition">whiskerR</span></a>.</span><span class="command" onmouseout="
+  - <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#whiskerR"><span class="id" title="definition">whiskerR</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
       mouseover(95, '0_3_19');
@@ -983,12 +983,12 @@ and similarly, <span class="inlinecode"><a class="idref" href="HoTT.HIT.Colimits
       mouseover(96, '0_3_19');
       "><br>
     <span class="id" title="var">path_via</span> (<a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="projection">eisretr</span></a> <span class="id" title="var">wB</span> (<span class="id" title="var">f'</span> (<span class="id" title="var">wA</span> (<span class="id" title="var">wA</span> <a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">^-1</span></a> <span class="id" title="var">a</span>)))<a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a> <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a><br>
-       <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> (<span class="id" title="var">wB</span> <a class="idref" href="HoTT.Basics.Overture.html#38b1404556adb9f3c135a0fea94b5bdf"><span class="id" title="notation">o</span></a> <span class="id" title="var">wB</span> <a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">^-1</span></a>) (<span class="id" title="keyword">wf</span> ((<span class="id" title="var">wA</span> <a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">^-1</span></a>) <span class="id" title="var">a</span>))).</span><span class="command" onmouseout="
+      <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> (<span class="id" title="var">wB</span> <a class="idref" href="HoTT.Basics.Overture.html#38b1404556adb9f3c135a0fea94b5bdf"><span class="id" title="notation">o</span></a> <span class="id" title="var">wB</span> <a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">^-1</span></a>) (<span class="id" title="keyword">wf</span> ((<span class="id" title="var">wA</span> <a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">^-1</span></a>) <span class="id" title="var">a</span>))).</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
       mouseover(97, '0_3_19');
       "><br>
-      <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#ap_V"><span class="id" title="definition">ap_V</span></a>. </span><span class="command" onmouseout="
+    + <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#ap_V"><span class="id" title="definition">ap_V</span></a>. </span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
       mouseover(98, '0_3_19');
@@ -998,12 +998,12 @@ and similarly, <span class="inlinecode"><a class="idref" href="HoTT.HIT.Colimits
       mouseover(99, '0_3_19');
       "><br>
       <span class="id" title="tactic">transitivity</span> (<a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a> (<span class="id" title="keyword">wf</span> ((<span class="id" title="var">wA</span> <a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">^-1</span></a>) <span class="id" title="var">a</span>))<br>
-        <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="projection">eisretr</span></a> <span class="id" title="var">wB</span> (<span class="id" title="var">wB</span> (<span class="id" title="var">f</span> ((<span class="id" title="var">wA</span> <a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">^-1</span></a>) <span class="id" title="var">a</span>)))<a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a>).</span><span class="command" onmouseout="
+                       <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="projection">eisretr</span></a> <span class="id" title="var">wB</span> (<span class="id" title="var">wB</span> (<span class="id" title="var">f</span> ((<span class="id" title="var">wA</span> <a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">^-1</span></a>) <span class="id" title="var">a</span>)))<a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
       mouseover(100, '0_3_19');
       "><br>
-      <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#whiskerR"><span class="id" title="definition">whiskerR</span></a>. </span><span class="command" onmouseout="
+      × <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#whiskerR"><span class="id" title="definition">whiskerR</span></a>. </span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
       mouseover(101, '0_3_19');
@@ -1016,13 +1016,13 @@ and similarly, <span class="inlinecode"><a class="idref" href="HoTT.HIT.Colimits
       " onmouseover="
       mouseover(103, '0_3_19');
       "><br>
-      <span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_Ap"><span class="id" title="definition">concat_Ap</span></a><br>
-         (<span class="id" title="keyword">fun</span> <span class="id" title="var">b'</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="projection">eisretr</span></a> <span class="id" title="var">wB</span> <a class="idref" href="HoTT.HIT.Colimits.CommutativeSquares.html#b'"><span class="id" title="variable">b'</span></a><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a>) (<span class="id" title="keyword">wf</span> ((<span class="id" title="var">wA</span> <a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">^-1</span></a>) <span class="id" title="var">a</span>)) ).</span><span class="command" onmouseout="
+      × <span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_Ap"><span class="id" title="definition">concat_Ap</span></a><br>
+                 (<span class="id" title="keyword">fun</span> <span class="id" title="var">b'</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="projection">eisretr</span></a> <span class="id" title="var">wB</span> <a class="idref" href="HoTT.HIT.Colimits.CommutativeSquares.html#b'"><span class="id" title="variable">b'</span></a><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a>) (<span class="id" title="keyword">wf</span> ((<span class="id" title="var">wA</span> <a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">^-1</span></a>) <span class="id" title="var">a</span>)) ).</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
       mouseover(104, '0_3_19');
       "><br>
-    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>. </span><span class="command" onmouseout="
+    + <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>. </span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
       mouseover(105, '0_3_19');
@@ -1035,7 +1035,7 @@ and similarly, <span class="inlinecode"><a class="idref" href="HoTT.HIT.Colimits
       " onmouseover="
       mouseover(107, '0_3_19');
       "><br>
-    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#inverse"><span class="id" title="definition">inverse</span></a>. </span><span class="command" onmouseout="
+      <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#inverse"><span class="id" title="definition">inverse</span></a>. </span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
       mouseover(108, '0_3_19');
@@ -1044,7 +1044,7 @@ and similarly, <span class="inlinecode"><a class="idref" href="HoTT.HIT.Colimits
       " onmouseover="
       mouseover(109, '0_3_19');
       "><br>
-  <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#moveR_Vp"><span class="id" title="definition">moveR_Vp</span></a>. </span><span class="command" onmouseout="
+  - <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#moveR_Vp"><span class="id" title="definition">moveR_Vp</span></a>. </span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
       mouseover(110, '0_3_19');
@@ -1057,19 +1057,19 @@ and similarly, <span class="inlinecode"><a class="idref" href="HoTT.HIT.Colimits
       " onmouseover="
       mouseover(112, '0_3_19');
       "><br>
-  <span class="id" title="var">path_via</span> (<a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="projection">eisretr</span></a> <span class="id" title="var">wB</span> (<span class="id" title="var">f'</span> (<span class="id" title="var">wA</span> ((<span class="id" title="var">wA</span> <a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">^-1</span></a>) <span class="id" title="var">a</span>)))<br>
-            <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> <span class="id" title="var">f'</span> (<a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="projection">eisretr</span></a> <span class="id" title="var">wA</span> <span class="id" title="var">a</span>))).</span><span class="command" onmouseout="
+    <span class="id" title="var">path_via</span> (<a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="projection">eisretr</span></a> <span class="id" title="var">wB</span> (<span class="id" title="var">f'</span> (<span class="id" title="var">wA</span> ((<span class="id" title="var">wA</span> <a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">^-1</span></a>) <span class="id" title="var">a</span>)))<br>
+                      <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> <span class="id" title="var">f'</span> (<a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="projection">eisretr</span></a> <span class="id" title="var">wA</span> <span class="id" title="var">a</span>))).</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
       mouseover(113, '0_3_19');
       "><br>
-  <span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_Ap"><span class="id" title="definition">concat_Ap</span></a><br>
-    (<a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="projection">eisretr</span></a> <span class="id" title="var">wB</span>) (<a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> <span class="id" title="var">f'</span> (<a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="projection">eisretr</span></a> <span class="id" title="var">wA</span> <span class="id" title="var">a</span>)) ).</span><span class="command" onmouseout="
+    + <span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_Ap"><span class="id" title="definition">concat_Ap</span></a><br>
+               (<a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="projection">eisretr</span></a> <span class="id" title="var">wB</span>) (<a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> <span class="id" title="var">f'</span> (<a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="projection">eisretr</span></a> <span class="id" title="var">wA</span> <span class="id" title="var">a</span>)) ).</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
       mouseover(114, '0_3_19');
       "><br>
-  <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>. </span><span class="command" onmouseout="
+    + <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>. </span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
       mouseover(115, '0_3_19');

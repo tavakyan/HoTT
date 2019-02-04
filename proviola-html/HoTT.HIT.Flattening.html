@@ -788,37 +788,37 @@
           
 
             i = 154;
-            data = "2 subgoals (ID 240)	  	  H : Univalence	  B : Type	  A : Type	  f, g : B -> A	  C : A -> Type	  D : forall b : B, C (f b) <~> C (g b)	  W' := Coeq f g : Type	  P := Coeq_rec Type C (fun b : B => path_universe (D b)) : W' -> Type	  sWtil := {w : W' & P w} : Type	  scct := fun (a : A) (x : C a) => (coeq a; x) : forall a : A, C a -> sWtil	  sppt := fun (b : B) (y : C (f b)) =>	          path_sigma' P (cp b)	            (transport_path_universe' P (cp b) (D b)	               (Coeq_rec_beta_cp Type C (fun b0 : B => path_universe (D b0))	                  b) y)	   : forall (b : B) (y : C (f b)), scct (f b) y = scct (g b) (D b y)	  ============================	  forall (b : B) (y : C (f b)),	  transport	    (fun w : sWtil =>	     Wtil_rec sWtil scct sppt (sWtil_rec (Wtil A B f g C D) cct ppt w) = w)	    (sppt b y) 1 = 1		subgoal 2 (ID 231) is:	 Sect (Wtil_rec sWtil scct sppt) (sWtil_rec (Wtil A B f g C D) cct ppt)	";
+            data = "1 subgoal (ID 230)	  	  H : Univalence	  B : Type	  A : Type	  f, g : B -> A	  C : A -> Type	  D : forall b : B, C (f b) <~> C (g b)	  W' := Coeq f g : Type	  P := Coeq_rec Type C (fun b : B => path_universe (D b)) : W' -> Type	  sWtil := {w : W' & P w} : Type	  scct := fun (a : A) (x : C a) => (coeq a; x) : forall a : A, C a -> sWtil	  sppt := fun (b : B) (y : C (f b)) =>	          path_sigma' P (cp b)	            (transport_path_universe' P (cp b) (D b)	               (Coeq_rec_beta_cp Type C (fun b0 : B => path_universe (D b0))	                  b) y)	   : forall (b : B) (y : C (f b)), scct (f b) y = scct (g b) (D b y)	  ============================	  Sect (sWtil_rec (Wtil A B f g C D) cct ppt) (Wtil_rec sWtil scct sppt)	1 subgoal (ID 240)	  	  H : Univalence	  B : Type	  A : Type	  f, g : B -> A	  C : A -> Type	  D : forall b : B, C (f b) <~> C (g b)	  W' := Coeq f g : Type	  P := Coeq_rec Type C (fun b : B => path_universe (D b)) : W' -> Type	  sWtil := {w : W' & P w} : Type	  scct := fun (a : A) (x : C a) => (coeq a; x) : forall a : A, C a -> sWtil	  sppt := fun (b : B) (y : C (f b)) =>	          path_sigma' P (cp b)	            (transport_path_universe' P (cp b) (D b)	               (Coeq_rec_beta_cp Type C (fun b0 : B => path_universe (D b0))	                  b) y)	   : forall (b : B) (y : C (f b)), scct (f b) y = scct (g b) (D b y)	  ============================	  forall (b : B) (y : C (f b)),	  transport	    (fun w : sWtil =>	     Wtil_rec sWtil scct sppt (sWtil_rec (Wtil A B f g C D) cct ppt w) = w)	    (sppt b y) 1 = 1	";
             responses[i]=data;
           
 
             i = 155;
-            data = "2 subgoals (ID 242)	  	  H : Univalence	  B : Type	  A : Type	  f, g : B -> A	  C : A -> Type	  D : forall b : B, C (f b) <~> C (g b)	  W' := Coeq f g : Type	  P := Coeq_rec Type C (fun b : B => path_universe (D b)) : W' -> Type	  sWtil := {w : W' & P w} : Type	  scct := fun (a : A) (x : C a) => (coeq a; x) : forall a : A, C a -> sWtil	  sppt := fun (b : B) (y : C (f b)) =>	          path_sigma' P (cp b)	            (transport_path_universe' P (cp b) (D b)	               (Coeq_rec_beta_cp Type C (fun b0 : B => path_universe (D b0))	                  b) y)	   : forall (b : B) (y : C (f b)), scct (f b) y = scct (g b) (D b y)	  b : B	  y : C (f b)	  ============================	  transport	    (fun w : sWtil =>	     Wtil_rec sWtil scct sppt (sWtil_rec (Wtil A B f g C D) cct ppt w) = w)	    (sppt b y) 1 = 1		subgoal 2 (ID 231) is:	 Sect (Wtil_rec sWtil scct sppt) (sWtil_rec (Wtil A B f g C D) cct ppt)	";
+            data = "1 subgoal (ID 242)	  	  H : Univalence	  B : Type	  A : Type	  f, g : B -> A	  C : A -> Type	  D : forall b : B, C (f b) <~> C (g b)	  W' := Coeq f g : Type	  P := Coeq_rec Type C (fun b : B => path_universe (D b)) : W' -> Type	  sWtil := {w : W' & P w} : Type	  scct := fun (a : A) (x : C a) => (coeq a; x) : forall a : A, C a -> sWtil	  sppt := fun (b : B) (y : C (f b)) =>	          path_sigma' P (cp b)	            (transport_path_universe' P (cp b) (D b)	               (Coeq_rec_beta_cp Type C (fun b0 : B => path_universe (D b0))	                  b) y)	   : forall (b : B) (y : C (f b)), scct (f b) y = scct (g b) (D b y)	  b : B	  y : C (f b)	  ============================	  transport	    (fun w : sWtil =>	     Wtil_rec sWtil scct sppt (sWtil_rec (Wtil A B f g C D) cct ppt w) = w)	    (sppt b y) 1 = 1	";
             responses[i]=data;
           
 
             i = 156;
-            data = "2 subgoals (ID 252)	  	  H : Univalence	  B : Type	  A : Type	  f, g : B -> A	  C : A -> Type	  D : forall b : B, C (f b) <~> C (g b)	  W' := Coeq f g : Type	  P := Coeq_rec Type C (fun b : B => path_universe (D b)) : W' -> Type	  sWtil := {w : W' & P w} : Type	  scct := fun (a : A) (x : C a) => (coeq a; x) : forall a : A, C a -> sWtil	  sppt := fun (b : B) (y : C (f b)) =>	          path_sigma' P (cp b)	            (transport_path_universe' P (cp b) (D b)	               (Coeq_rec_beta_cp Type C (fun b0 : B => path_universe (D b0))	                  b) y)	   : forall (b : B) (y : C (f b)), scct (f b) y = scct (g b) (D b y)	  b : B	  y : C (f b)	  ============================	  1 @ sppt b y =	  ap (Wtil_rec sWtil scct sppt)	    (ap (sWtil_rec (Wtil A B f g C D) cct ppt) (sppt b y)) @ 1		subgoal 2 (ID 231) is:	 Sect (Wtil_rec sWtil scct sppt) (sWtil_rec (Wtil A B f g C D) cct ppt)	";
+            data = "1 subgoal (ID 252)	  	  H : Univalence	  B : Type	  A : Type	  f, g : B -> A	  C : A -> Type	  D : forall b : B, C (f b) <~> C (g b)	  W' := Coeq f g : Type	  P := Coeq_rec Type C (fun b : B => path_universe (D b)) : W' -> Type	  sWtil := {w : W' & P w} : Type	  scct := fun (a : A) (x : C a) => (coeq a; x) : forall a : A, C a -> sWtil	  sppt := fun (b : B) (y : C (f b)) =>	          path_sigma' P (cp b)	            (transport_path_universe' P (cp b) (D b)	               (Coeq_rec_beta_cp Type C (fun b0 : B => path_universe (D b0))	                  b) y)	   : forall (b : B) (y : C (f b)), scct (f b) y = scct (g b) (D b y)	  b : B	  y : C (f b)	  ============================	  1 @ sppt b y =	  ap (Wtil_rec sWtil scct sppt)	    (ap (sWtil_rec (Wtil A B f g C D) cct ppt) (sppt b y)) @ 1	";
             responses[i]=data;
           
 
             i = 157;
-            data = "2 subgoals (ID 263)	  	  H : Univalence	  B : Type	  A : Type	  f, g : B -> A	  C : A -> Type	  D : forall b : B, C (f b) <~> C (g b)	  W' := Coeq f g : Type	  P := Coeq_rec Type C (fun b : B => path_universe (D b)) : W' -> Type	  sWtil := {w : W' & P w} : Type	  scct := fun (a : A) (x : C a) => (coeq a; x) : forall a : A, C a -> sWtil	  sppt := fun (b : B) (y : C (f b)) =>	          path_sigma' P (cp b)	            (transport_path_universe' P (cp b) (D b)	               (Coeq_rec_beta_cp Type C (fun b0 : B => path_universe (D b0))	                  b) y)	   : forall (b : B) (y : C (f b)), scct (f b) y = scct (g b) (D b y)	  b : B	  y : C (f b)	  ============================	  sppt b y =	  ap (Wtil_rec sWtil scct sppt)	    (ap (sWtil_rec (Wtil A B f g C D) cct ppt) (sppt b y))		subgoal 2 (ID 231) is:	 Sect (Wtil_rec sWtil scct sppt) (sWtil_rec (Wtil A B f g C D) cct ppt)	";
+            data = "1 subgoal (ID 263)	  	  H : Univalence	  B : Type	  A : Type	  f, g : B -> A	  C : A -> Type	  D : forall b : B, C (f b) <~> C (g b)	  W' := Coeq f g : Type	  P := Coeq_rec Type C (fun b : B => path_universe (D b)) : W' -> Type	  sWtil := {w : W' & P w} : Type	  scct := fun (a : A) (x : C a) => (coeq a; x) : forall a : A, C a -> sWtil	  sppt := fun (b : B) (y : C (f b)) =>	          path_sigma' P (cp b)	            (transport_path_universe' P (cp b) (D b)	               (Coeq_rec_beta_cp Type C (fun b0 : B => path_universe (D b0))	                  b) y)	   : forall (b : B) (y : C (f b)), scct (f b) y = scct (g b) (D b y)	  b : B	  y : C (f b)	  ============================	  sppt b y =	  ap (Wtil_rec sWtil scct sppt)	    (ap (sWtil_rec (Wtil A B f g C D) cct ppt) (sppt b y))	";
             responses[i]=data;
           
 
             i = 158;
-            data = "2 subgoals (ID 267)	  	  H : Univalence	  B : Type	  A : Type	  f, g : B -> A	  C : A -> Type	  D : forall b : B, C (f b) <~> C (g b)	  W' := Coeq f g : Type	  P := Coeq_rec Type C (fun b : B => path_universe (D b)) : W' -> Type	  sWtil := {w : W' & P w} : Type	  scct := fun (a : A) (x : C a) => (coeq a; x) : forall a : A, C a -> sWtil	  sppt := fun (b : B) (y : C (f b)) =>	          path_sigma' P (cp b)	            (transport_path_universe' P (cp b) (D b)	               (Coeq_rec_beta_cp Type C (fun b0 : B => path_universe (D b0))	                  b) y)	   : forall (b : B) (y : C (f b)), scct (f b) y = scct (g b) (D b y)	  b : B	  y : C (f b)	  ============================	  sppt b y = ap (Wtil_rec sWtil scct sppt) (ppt b y)		subgoal 2 (ID 231) is:	 Sect (Wtil_rec sWtil scct sppt) (sWtil_rec (Wtil A B f g C D) cct ppt)	";
+            data = "1 subgoal (ID 267)	  	  H : Univalence	  B : Type	  A : Type	  f, g : B -> A	  C : A -> Type	  D : forall b : B, C (f b) <~> C (g b)	  W' := Coeq f g : Type	  P := Coeq_rec Type C (fun b : B => path_universe (D b)) : W' -> Type	  sWtil := {w : W' & P w} : Type	  scct := fun (a : A) (x : C a) => (coeq a; x) : forall a : A, C a -> sWtil	  sppt := fun (b : B) (y : C (f b)) =>	          path_sigma' P (cp b)	            (transport_path_universe' P (cp b) (D b)	               (Coeq_rec_beta_cp Type C (fun b0 : B => path_universe (D b0))	                  b) y)	   : forall (b : B) (y : C (f b)), scct (f b) y = scct (g b) (D b y)	  b : B	  y : C (f b)	  ============================	  sppt b y = ap (Wtil_rec sWtil scct sppt) (ppt b y)	";
             responses[i]=data;
           
 
             i = 159;
-            data = "1 subgoal (ID 231)	  	  H : Univalence	  B : Type	  A : Type	  f, g : B -> A	  C : A -> Type	  D : forall b : B, C (f b) <~> C (g b)	  W' := Coeq f g : Type	  P := Coeq_rec Type C (fun b : B => path_universe (D b)) : W' -> Type	  sWtil := {w : W' & P w} : Type	  scct := fun (a : A) (x : C a) => (coeq a; x) : forall a : A, C a -> sWtil	  sppt := fun (b : B) (y : C (f b)) =>	          path_sigma' P (cp b)	            (transport_path_universe' P (cp b) (D b)	               (Coeq_rec_beta_cp Type C (fun b0 : B => path_universe (D b0))	                  b) y)	   : forall (b : B) (y : C (f b)), scct (f b) y = scct (g b) (D b y)	  ============================	  Sect (Wtil_rec sWtil scct sppt) (sWtil_rec (Wtil A B f g C D) cct ppt)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 231)		subgoal 1 (ID 231) is:	 Sect (Wtil_rec sWtil scct sppt) (sWtil_rec (Wtil A B f g C D) cct ppt)	";
             responses[i]=data;
           
 
             i = 160;
-            data = "1 subgoal (ID 305)	  	  H : Univalence	  B : Type	  A : Type	  f, g : B -> A	  C : A -> Type	  D : forall b : B, C (f b) <~> C (g b)	  W' := Coeq f g : Type	  P := Coeq_rec Type C (fun b : B => path_universe (D b)) : W' -> Type	  sWtil := {w : W' & P w} : Type	  scct := fun (a : A) (x : C a) => (coeq a; x) : forall a : A, C a -> sWtil	  sppt := fun (b : B) (y : C (f b)) =>	          path_sigma' P (cp b)	            (transport_path_universe' P (cp b) (D b)	               (Coeq_rec_beta_cp Type C (fun b0 : B => path_universe (D b0))	                  b) y)	   : forall (b : B) (y : C (f b)), scct (f b) y = scct (g b) (D b y)	  ============================	  forall (b : B) (y : C (f b)),	  transport	    (fun w : Wtil A B f g C D =>	     sWtil_rec (Wtil A B f g C D) cct ppt (Wtil_rec sWtil scct sppt w) = w)	    (ppt b y) 1 = 1	";
+            data = "1 subgoal (ID 231)	  	  H : Univalence	  B : Type	  A : Type	  f, g : B -> A	  C : A -> Type	  D : forall b : B, C (f b) <~> C (g b)	  W' := Coeq f g : Type	  P := Coeq_rec Type C (fun b : B => path_universe (D b)) : W' -> Type	  sWtil := {w : W' & P w} : Type	  scct := fun (a : A) (x : C a) => (coeq a; x) : forall a : A, C a -> sWtil	  sppt := fun (b : B) (y : C (f b)) =>	          path_sigma' P (cp b)	            (transport_path_universe' P (cp b) (D b)	               (Coeq_rec_beta_cp Type C (fun b0 : B => path_universe (D b0))	                  b) y)	   : forall (b : B) (y : C (f b)), scct (f b) y = scct (g b) (D b y)	  ============================	  Sect (Wtil_rec sWtil scct sppt) (sWtil_rec (Wtil A B f g C D) cct ppt)	1 subgoal (ID 305)	  	  H : Univalence	  B : Type	  A : Type	  f, g : B -> A	  C : A -> Type	  D : forall b : B, C (f b) <~> C (g b)	  W' := Coeq f g : Type	  P := Coeq_rec Type C (fun b : B => path_universe (D b)) : W' -> Type	  sWtil := {w : W' & P w} : Type	  scct := fun (a : A) (x : C a) => (coeq a; x) : forall a : A, C a -> sWtil	  sppt := fun (b : B) (y : C (f b)) =>	          path_sigma' P (cp b)	            (transport_path_universe' P (cp b) (D b)	               (Coeq_rec_beta_cp Type C (fun b0 : B => path_universe (D b0))	                  b) y)	   : forall (b : B) (y : C (f b)), scct (f b) y = scct (g b) (D b y)	  ============================	  forall (b : B) (y : C (f b)),	  transport	    (fun w : Wtil A B f g C D =>	     sWtil_rec (Wtil A B f g C D) cct ppt (Wtil_rec sWtil scct sppt w) = w)	    (ppt b y) 1 = 1	";
             responses[i]=data;
           
 
@@ -1543,7 +1543,7 @@ The two homotopies are completely symmetrical, using the *dependent* eliminators
       " onmouseover="
       mouseover(154, '0_3_47');
       ">
-  <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.Flattening.html#sWtil_ind"><span class="id" title="definition">sWtil_ind</span></a> <span class="id" title="var">_</span> (<span class="id" title="keyword">fun</span> <span class="id" title="var">a</span> <span class="id" title="var">x</span> ⇒ 1) <span class="id" title="var">_</span>). </span><span class="command" onmouseout="
+  - <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.Flattening.html#sWtil_ind"><span class="id" title="definition">sWtil_ind</span></a> <span class="id" title="var">_</span> (<span class="id" title="keyword">fun</span> <span class="id" title="var">a</span> <span class="id" title="var">x</span> ⇒ 1) <span class="id" title="var">_</span>). </span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(155, '0_3_47');
@@ -1552,27 +1552,27 @@ The two homotopies are completely symmetrical, using the *dependent* eliminators
       " onmouseover="
       mouseover(156, '0_3_47');
       "><br>
-  <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Types.Paths.html#dpath_path_FFlr"><span class="id" title="definition">dpath_path_FFlr</span></a>.</span><span class="command" onmouseout="
+    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Types.Paths.html#dpath_path_FFlr"><span class="id" title="definition">dpath_path_FFlr</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(157, '0_3_47');
       "><br>
-  <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_1p"><span class="id" title="definition">concat_1p</span></a>, <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_p1"><span class="id" title="definition">concat_p1</span></a>.</span><span class="command" onmouseout="
+    <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_1p"><span class="id" title="definition">concat_1p</span></a>, <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_p1"><span class="id" title="definition">concat_p1</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(158, '0_3_47');
       "><br>
-  <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.HIT.Flattening.html#sWtil_rec_beta_ppt"><span class="id" title="definition">sWtil_rec_beta_ppt</span></a>.</span><span class="command" onmouseout="
+    <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.HIT.Flattening.html#sWtil_rec_beta_ppt"><span class="id" title="definition">sWtil_rec_beta_ppt</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(159, '0_3_47');
       "><br>
-  <span class="id" title="tactic">by</span> <span class="id" title="tactic">symmetry</span>; <span class="id" title="tactic">apply</span> (@<a class="idref" href="HoTT.HIT.Flattening.html#Wtil_rec_beta_ppt"><span class="id" title="definition">Wtil_rec_beta_ppt</span></a> <a class="idref" href="HoTT.HIT.Flattening.html#AssumeAxioms.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.HIT.Flattening.html#AssumeAxioms.B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.HIT.Flattening.html#AssumeAxioms.f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.HIT.Flattening.html#AssumeAxioms.g"><span class="id" title="variable">g</span></a> <a class="idref" href="HoTT.HIT.Flattening.html#AssumeAxioms.C"><span class="id" title="variable">C</span></a> <a class="idref" href="HoTT.HIT.Flattening.html#AssumeAxioms.D"><span class="id" title="variable">D</span></a>).</span><span class="command" onmouseout="
+      <span class="id" title="tactic">by</span> <span class="id" title="tactic">symmetry</span>; <span class="id" title="tactic">apply</span> (@<a class="idref" href="HoTT.HIT.Flattening.html#Wtil_rec_beta_ppt"><span class="id" title="definition">Wtil_rec_beta_ppt</span></a> <a class="idref" href="HoTT.HIT.Flattening.html#AssumeAxioms.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.HIT.Flattening.html#AssumeAxioms.B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.HIT.Flattening.html#AssumeAxioms.f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.HIT.Flattening.html#AssumeAxioms.g"><span class="id" title="variable">g</span></a> <a class="idref" href="HoTT.HIT.Flattening.html#AssumeAxioms.C"><span class="id" title="variable">C</span></a> <a class="idref" href="HoTT.HIT.Flattening.html#AssumeAxioms.D"><span class="id" title="variable">D</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(160, '0_3_47');
       "><br>
-  <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.Flattening.html#Wtil_ind"><span class="id" title="definition">Wtil_ind</span></a> <span class="id" title="var">_</span> (<span class="id" title="keyword">fun</span> <span class="id" title="var">a</span> <span class="id" title="var">x</span> ⇒ 1) <span class="id" title="var">_</span>). </span><span class="command" onmouseout="
+  - <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.Flattening.html#Wtil_ind"><span class="id" title="definition">Wtil_ind</span></a> <span class="id" title="var">_</span> (<span class="id" title="keyword">fun</span> <span class="id" title="var">a</span> <span class="id" title="var">x</span> ⇒ 1) <span class="id" title="var">_</span>). </span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(161, '0_3_47');
@@ -1581,22 +1581,22 @@ The two homotopies are completely symmetrical, using the *dependent* eliminators
       " onmouseover="
       mouseover(162, '0_3_47');
       "><br>
-  <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Types.Paths.html#dpath_path_FFlr"><span class="id" title="definition">dpath_path_FFlr</span></a>.</span><span class="command" onmouseout="
+    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Types.Paths.html#dpath_path_FFlr"><span class="id" title="definition">dpath_path_FFlr</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(163, '0_3_47');
       "><br>
-  <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_1p"><span class="id" title="definition">concat_1p</span></a>, <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_p1"><span class="id" title="definition">concat_p1</span></a>.</span><span class="command" onmouseout="
+    <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_1p"><span class="id" title="definition">concat_1p</span></a>, <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_p1"><span class="id" title="definition">concat_p1</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(164, '0_3_47');
       "><br>
-  <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.HIT.Flattening.html#Wtil_rec_beta_ppt"><span class="id" title="definition">Wtil_rec_beta_ppt</span></a>.</span><span class="command" onmouseout="
+    <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.HIT.Flattening.html#Wtil_rec_beta_ppt"><span class="id" title="definition">Wtil_rec_beta_ppt</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(165, '0_3_47');
       "><br>
-  <span class="id" title="tactic">by</span> <span class="id" title="tactic">symmetry</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Flattening.html#sWtil_rec_beta_ppt"><span class="id" title="definition">sWtil_rec_beta_ppt</span></a>.</span><span class="command" onmouseout="
+      <span class="id" title="tactic">by</span> <span class="id" title="tactic">symmetry</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Flattening.html#sWtil_rec_beta_ppt"><span class="id" title="definition">sWtil_rec_beta_ppt</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(166, '0_3_47');

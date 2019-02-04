@@ -643,17 +643,17 @@
           
 
             i = 125;
-            data = "2 subgoals (ID 60)	  	  wf : WeakFunext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  ============================	  apD10	    (htpy_ind wf f (fun (g' : forall x : A, B x) (_ : f == g') => f = g') 1 f	       (fun x : A => 1)) = (fun x : A => 1)		subgoal 2 (ID 49) is:	 Sect apD10	   (htpy_ind wf f (fun (g' : forall x : A, B x) (_ : f == g') => f = g') 1 g)	";
+            data = "1 subgoal (ID 48)	  	  wf : WeakFunext	  A : Type	  B : A -> Type	  f, g : forall x : A, B x	  ============================	  Sect	    (htpy_ind wf f (fun (g' : forall x : A, B x) (_ : f == g') => f = g') 1 g)	    apD10	";
             responses[i]=data;
           
 
             i = 126;
-            data = "1 subgoal (ID 49)	  	  wf : WeakFunext	  A : Type	  B : A -> Type	  f, g : forall x : A, B x	  ============================	  Sect apD10	    (htpy_ind wf f (fun (g' : forall x : A, B x) (_ : f == g') => f = g') 1 g)	";
+            data = "1 subgoal (ID 60)	  	  wf : WeakFunext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  ============================	  apD10	    (htpy_ind wf f (fun (g' : forall x : A, B x) (_ : f == g') => f = g') 1 f	       (fun x : A => 1)) = (fun x : A => 1)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 49)		subgoal 1 (ID 49) is:	 Sect apD10	   (htpy_ind wf f (fun (g' : forall x : A, B x) (_ : f == g') => f = g') 1 g)	";
             responses[i]=data;
           
 
             i = 127;
-            data = "1 subgoal (ID 80)	  	  wf : WeakFunext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  ============================	  htpy_ind wf f (fun (g' : forall x : A, B x) (_ : f == g') => f = g') 1 f	    (apD10 1) = 1	";
+            data = "1 subgoal (ID 49)	  	  wf : WeakFunext	  A : Type	  B : A -> Type	  f, g : forall x : A, B x	  ============================	  Sect apD10	    (htpy_ind wf f (fun (g' : forall x : A, B x) (_ : f == g') => f = g') 1 g)	1 subgoal (ID 80)	  	  wf : WeakFunext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  ============================	  htpy_ind wf f (fun (g' : forall x : A, B x) (_ : f == g') => f = g') 1 f	    (apD10 1) = 1	";
             responses[i]=data;
           
 
@@ -1831,7 +1831,7 @@ Now the proof is fairly easy; we can just use the same induction principle on bo
       " onmouseover="
       mouseover(125, '0_3_47');
       "><br>
-  <span class="id" title="var">revert</span> <span class="id" title="var">g</span>; <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.FunextVarieties.html#htpy_ind"><span class="id" title="definition">htpy_ind</span></a> <span class="id" title="keyword">wf</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
+  - <span class="id" title="var">revert</span> <span class="id" title="var">g</span>; <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.FunextVarieties.html#htpy_ind"><span class="id" title="definition">htpy_ind</span></a> <span class="id" title="keyword">wf</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(126, '0_3_47');
@@ -1841,7 +1841,7 @@ Now the proof is fairly easy; we can just use the same induction principle on bo
       " onmouseover="
       mouseover(127, '0_3_47');
       "><br>
-  <span class="id" title="tactic">intros</span> <span class="id" title="var">h</span>; <span class="id" title="tactic">destruct</span> <span class="id" title="var">h</span>.</span><span class="command" onmouseout="
+  - <span class="id" title="tactic">intros</span> <span class="id" title="var">h</span>; <span class="id" title="tactic">destruct</span> <span class="id" title="var">h</span>.</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(128, '0_3_47');

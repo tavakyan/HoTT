@@ -1023,17 +1023,17 @@
           
 
             i = 201;
-            data = "2 subgoals (ID 59)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  C : cocone D Y	  i : G	  x : D i	  ============================	  postcompose_cocone (cocone_colimit D) (colimit_rec Y C) i x = C i x		subgoal 2 (ID 56) is:	 forall (i j : G) (g : G i j) (x : D i),	 qq (postcompose_cocone (cocone_colimit D) (colimit_rec Y C)) i j g x @	 (fun (i0 : G) (x0 : D i0) => ?Goal@{i:=i0; x:=x0}) i x =	 (fun (i0 : G) (x0 : D i0) => ?Goal@{i:=i0; x:=x0}) j ((D _f g) x) @	 qq C i j g x	";
+            data = "1 subgoal (ID 54)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  C : cocone D Y	  ============================	  forall i : G,	  postcompose_cocone (cocone_colimit D) (colimit_rec Y C) i == C i	1 subgoal (ID 59)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  C : cocone D Y	  i : G	  x : D i	  ============================	  postcompose_cocone (cocone_colimit D) (colimit_rec Y C) i x = C i x	";
             responses[i]=data;
           
 
             i = 202;
-            data = "1 subgoal (ID 56)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  C : cocone D Y	  ============================	  forall (i j : G) (g : G i j) (x : D i),	  qq (postcompose_cocone (cocone_colimit D) (colimit_rec Y C)) i j g x @	  (fun (i0 : G) (x0 : D i0) => 1) i x =	  (fun (i0 : G) (x0 : D i0) => 1) j ((D _f g) x) @ qq C i j g x	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 56)		subgoal 1 (ID 56) is:	 forall (i j : G) (g : G i j) (x : D i),	 qq (postcompose_cocone (cocone_colimit D) (colimit_rec Y C)) i j g x @	 (fun (i0 : G) (x0 : D i0) => 1) i x =	 (fun (i0 : G) (x0 : D i0) => 1) j ((D _f g) x) @ qq C i j g x	subgoal 2 (ID 44) is:	 Sect (postcompose_cocone (cocone_colimit D)) (colimit_rec Y)	";
             responses[i]=data;
           
 
             i = 203;
-            data = "1 subgoal (ID 64)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  C : cocone D Y	  i, j : G	  f : G i j	  x : D i	  ============================	  qq (postcompose_cocone (cocone_colimit D) (colimit_rec Y C)) i j f x @	  (fun (i0 : G) (x0 : D i0) => 1) i x =	  (fun (i0 : G) (x0 : D i0) => 1) j ((D _f f) x) @ qq C i j f x	";
+            data = "1 subgoal (ID 56)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  C : cocone D Y	  ============================	  forall (i j : G) (g : G i j) (x : D i),	  qq (postcompose_cocone (cocone_colimit D) (colimit_rec Y C)) i j g x @	  (fun (i0 : G) (x0 : D i0) => 1) i x =	  (fun (i0 : G) (x0 : D i0) => 1) j ((D _f g) x) @ qq C i j g x	1 subgoal (ID 64)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  C : cocone D Y	  i, j : G	  f : G i j	  x : D i	  ============================	  qq (postcompose_cocone (cocone_colimit D) (colimit_rec Y C)) i j f x @	  (fun (i0 : G) (x0 : D i0) => 1) i x =	  (fun (i0 : G) (x0 : D i0) => 1) j ((D _f f) x) @ qq C i j f x	";
             responses[i]=data;
           
 
@@ -1068,17 +1068,17 @@
           
 
             i = 210;
-            data = "2 subgoals (ID 198)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  f : colimit D -> Y	  i : G	  x : D i	  ============================	  (fun w : colimit D =>	   colimit_rec Y (postcompose_cocone (cocone_colimit D) f) w = f w)	    (colim i x)		subgoal 2 (ID 196) is:	 forall (i j : G) (g : G i j) (x : D i),	 transport	   (fun w : colimit D =>	    colimit_rec Y (postcompose_cocone (cocone_colimit D) f) w = f w)	   (colimp i j g x)	   ((fun (i0 : G) (x0 : D i0) => ?Goal@{i:=i0; x:=x0}) j ((D _f g) x)) =	 (fun (i0 : G) (x0 : D i0) => ?Goal@{i:=i0; x:=x0}) i x	";
+            data = "1 subgoal (ID 194)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  f : colimit D -> Y	  ============================	  forall (i : G) (x : D i),	  (fun w : colimit D =>	   colimit_rec Y (postcompose_cocone (cocone_colimit D) f) w = f w)	    (colim i x)	1 subgoal (ID 198)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  f : colimit D -> Y	  i : G	  x : D i	  ============================	  (fun w : colimit D =>	   colimit_rec Y (postcompose_cocone (cocone_colimit D) f) w = f w)	    (colim i x)	";
             responses[i]=data;
           
 
             i = 211;
-            data = "1 subgoal (ID 196)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  f : colimit D -> Y	  ============================	  forall (i j : G) (g : G i j) (x : D i),	  transport	    (fun w : colimit D =>	     colimit_rec Y (postcompose_cocone (cocone_colimit D) f) w = f w)	    (colimp i j g x) ((fun (i0 : G) (x0 : D i0) => 1) j ((D _f g) x)) =	  (fun (i0 : G) (x0 : D i0) => 1) i x	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 196)		subgoal 1 (ID 196) is:	 forall (i j : G) (g : G i j) (x : D i),	 transport	   (fun w : colimit D =>	    colimit_rec Y (postcompose_cocone (cocone_colimit D) f) w = f w)	   (colimp i j g x) ((fun (i0 : G) (x0 : D i0) => 1) j ((D _f g) x)) =	 (fun (i0 : G) (x0 : D i0) => 1) i x	";
             responses[i]=data;
           
 
             i = 212;
-            data = "1 subgoal (ID 203)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  f : colimit D -> Y	  i, j : G	  g : G i j	  x : D i	  ============================	  transport	    (fun w : colimit D =>	     colimit_rec Y (postcompose_cocone (cocone_colimit D) f) w = f w)	    (colimp i j g x) ((fun (i0 : G) (x0 : D i0) => 1) j ((D _f g) x)) =	  (fun (i0 : G) (x0 : D i0) => 1) i x	";
+            data = "1 subgoal (ID 196)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  f : colimit D -> Y	  ============================	  forall (i j : G) (g : G i j) (x : D i),	  transport	    (fun w : colimit D =>	     colimit_rec Y (postcompose_cocone (cocone_colimit D) f) w = f w)	    (colimp i j g x) ((fun (i0 : G) (x0 : D i0) => 1) j ((D _f g) x)) =	  (fun (i0 : G) (x0 : D i0) => 1) i x	1 subgoal (ID 203)	  	  H : Funext	  G : graph	  D : diagram G	  Y : Type	  f : colimit D -> Y	  i, j : G	  g : G i j	  x : D i	  ============================	  transport	    (fun w : colimit D =>	     colimit_rec Y (postcompose_cocone (cocone_colimit D) f) w = f w)	    (colimp i j g x) ((fun (i0 : G) (x0 : D i0) => 1) j ((D _f g) x)) =	  (fun (i0 : G) (x0 : D i0) => 1) i x	";
             responses[i]=data;
           
 
@@ -1228,12 +1228,12 @@
           
 
             i = 242;
-            data = "1 subgoal (ID 63)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  ============================	  forall (i j : G) (g : G i j) (x : D i),	  qq (postcompose_cocone C idmap) i j g x @	  (fun (i0 : G) (x0 : D i0) => 1) i x =	  (fun (i0 : G) (x0 : D i0) => 1) j ((D _f g) x) @ qq C i j g x	";
+            data = "1 subgoal (ID 61)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  ============================	  forall i : G, postcompose_cocone C idmap i == C i	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 63)		subgoal 1 (ID 63) is:	 forall (i j : G) (g : G i j) (x : D i),	 qq (postcompose_cocone C idmap) i j g x @	 (fun (i0 : G) (x0 : D i0) => 1) i x =	 (fun (i0 : G) (x0 : D i0) => 1) j ((D _f g) x) @ qq C i j g x	";
             responses[i]=data;
           
 
             i = 243;
-            data = "No more subgoals.	";
+            data = "1 subgoal (ID 63)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  ============================	  forall (i j : G) (g : G i j) (x : D i),	  qq (postcompose_cocone C idmap) i j g x @	  (fun (i0 : G) (x0 : D i0) => 1) i x =	  (fun (i0 : G) (x0 : D i0) => 1) j ((D _f g) x) @ qq C i j g x	No more subgoals.	";
             responses[i]=data;
           
 
@@ -1258,17 +1258,17 @@
           
 
             i = 248;
-            data = "1 subgoal (ID 98)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X -> Y	  Z : Type	  g : Y -> Z	  C : cocone D X	  ============================	  forall (i j : G) (g0 : G i j) (x : D i),	  qq (postcompose_cocone C (g o f)) i j g0 x @	  (fun (i0 : G) (x0 : D i0) => 1) i x =	  (fun (i0 : G) (x0 : D i0) => 1) j ((D _f g0) x) @	  qq (postcompose_cocone (postcompose_cocone C f) g) i j g0 x	";
+            data = "1 subgoal (ID 96)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X -> Y	  Z : Type	  g : Y -> Z	  C : cocone D X	  ============================	  forall i : G,	  postcompose_cocone C (g o f) i ==	  postcompose_cocone (postcompose_cocone C f) g i	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 98)		subgoal 1 (ID 98) is:	 forall (i j : G) (g0 : G i j) (x : D i),	 qq (postcompose_cocone C (g o f)) i j g0 x @	 (fun (i0 : G) (x0 : D i0) => 1) i x =	 (fun (i0 : G) (x0 : D i0) => 1) j ((D _f g0) x) @	 qq (postcompose_cocone (postcompose_cocone C f) g) i j g0 x	";
             responses[i]=data;
           
 
             i = 249;
-            data = "1 subgoal (ID 109)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X -> Y	  Z : Type	  g : Y -> Z	  C : cocone D X	  i, j : G	  h : G i j	  x : D i	  ============================	  ap (fun x0 : X => g (f x0)) (qq C i j h x) = ap g (ap f (qq C i j h x))	";
+            data = "1 subgoal (ID 98)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X -> Y	  Z : Type	  g : Y -> Z	  C : cocone D X	  ============================	  forall (i j : G) (g0 : G i j) (x : D i),	  qq (postcompose_cocone C (g o f)) i j g0 x @	  (fun (i0 : G) (x0 : D i0) => 1) i x =	  (fun (i0 : G) (x0 : D i0) => 1) j ((D _f g0) x) @	  qq (postcompose_cocone (postcompose_cocone C f) g) i j g0 x	";
             responses[i]=data;
           
 
             i = 250;
-            data = "No more subgoals.	";
+            data = "1 subgoal (ID 109)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X -> Y	  Z : Type	  g : Y -> Z	  C : cocone D X	  i, j : G	  h : G i j	  x : D i	  ============================	  ap (fun x0 : X => g (f x0)) (qq C i j h x) = ap g (ap f (qq C i j h x))	No more subgoals.	";
             responses[i]=data;
           
 
@@ -1403,17 +1403,17 @@
           
 
             i = 277;
-            data = "2 subgoals (ID 106)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  C : cocone D2 X	  i : G	  x : D1 i	  ============================	  X		subgoal 2 (ID 104) is:	 forall (i j : G) (g : G i j) (x : D1 i),	 (fun (i0 : G) (x0 : D1 i0) => ?Goal@{i:=i0; x:=x0}) j ((D1 _f g) x) =	 (fun (i0 : G) (x0 : D1 i0) => ?Goal@{i:=i0; x:=x0}) i x	";
+            data = "1 subgoal (ID 102)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  C : cocone D2 X	  ============================	  forall i : G, D1 i -> X	1 subgoal (ID 106)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  C : cocone D2 X	  i : G	  x : D1 i	  ============================	  X	";
             responses[i]=data;
           
 
             i = 278;
-            data = "1 subgoal (ID 104)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  C : cocone D2 X	  ============================	  forall (i j : G) (g : G i j) (x : D1 i),	  (fun (i0 : G) (x0 : D1 i0) => C i0 (m i0 x0)) j ((D1 _f g) x) =	  (fun (i0 : G) (x0 : D1 i0) => C i0 (m i0 x0)) i x	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 104)		subgoal 1 (ID 104) is:	 forall (i j : G) (g : G i j) (x : D1 i),	 (fun (i0 : G) (x0 : D1 i0) => C i0 (m i0 x0)) j ((D1 _f g) x) =	 (fun (i0 : G) (x0 : D1 i0) => C i0 (m i0 x0)) i x	";
             responses[i]=data;
           
 
             i = 279;
-            data = "1 subgoal (ID 111)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  C : cocone D2 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  C j (m j ((D1 _f g) x)) = C i (m i x)	";
+            data = "1 subgoal (ID 104)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  C : cocone D2 X	  ============================	  forall (i j : G) (g : G i j) (x : D1 i),	  (fun (i0 : G) (x0 : D1 i0) => C i0 (m i0 x0)) j ((D1 _f g) x) =	  (fun (i0 : G) (x0 : D1 i0) => C i0 (m i0 x0)) i x	1 subgoal (ID 111)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  C : cocone D2 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  C j (m j ((D1 _f g) x)) = C i (m i x)	";
             responses[i]=data;
           
 
@@ -1423,22 +1423,22 @@
           
 
             i = 281;
-            data = "2 focused subgoals	(shelved: 1) (ID 155)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  C : cocone D2 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  m j ((D1 _f g) x) = ?y		subgoal 2 (ID 151) is:	 C j ?y = C i (m i x)	";
+            data = "1 focused subgoal	(shelved: 1) (ID 150)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  C : cocone D2 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  C j (m j ((D1 _f g) x)) = ?Goal	1 focused subgoal	(shelved: 1) (ID 155)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  C : cocone D2 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  m j ((D1 _f g) x) = ?y	";
             responses[i]=data;
           
 
             i = 282;
-            data = "2 focused subgoals	(shelved: 1) (ID 187)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  C : cocone D2 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  ?y = m j ((D1 _f g) x)		subgoal 2 (ID 151) is:	 C j ?y = C i (m i x)	";
+            data = "1 focused subgoal	(shelved: 1) (ID 187)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  C : cocone D2 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  ?y = m j ((D1 _f g) x)	";
             responses[i]=data;
           
 
             i = 283;
-            data = "1 subgoal (ID 151)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  C : cocone D2 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  C j ((D2 _f g) (m i x)) = C i (m i x)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 151)		subgoal 1 (ID 151) is:	 C j ((D2 _f g) (m i x)) = C i (m i x)	";
             responses[i]=data;
           
 
             i = 284;
-            data = "No more subgoals.	";
+            data = "1 subgoal (ID 151)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  C : cocone D2 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  C j ((D2 _f g) (m i x)) = C i (m i x)	No more subgoals.	";
             responses[i]=data;
           
 
@@ -1483,17 +1483,17 @@
           
 
             i = 293;
-            data = "2 subgoals (ID 121)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  i : G	  x : D i	  ============================	  precompose_cocone (diagram_idmap D) C i x = C i x		subgoal 2 (ID 118) is:	 forall (i j : G) (g : G i j) (x : D i),	 qq (precompose_cocone (diagram_idmap D) C) i j g x @	 (fun (i0 : G) (x0 : D i0) => ?Goal@{i:=i0; x:=x0}) i x =	 (fun (i0 : G) (x0 : D i0) => ?Goal@{i:=i0; x:=x0}) j ((D _f g) x) @	 qq C i j g x	";
+            data = "1 subgoal (ID 116)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  ============================	  forall i : G, precompose_cocone (diagram_idmap D) C i == C i	1 subgoal (ID 121)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  i : G	  x : D i	  ============================	  precompose_cocone (diagram_idmap D) C i x = C i x	";
             responses[i]=data;
           
 
             i = 294;
-            data = "1 subgoal (ID 118)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  ============================	  forall (i j : G) (g : G i j) (x : D i),	  qq (precompose_cocone (diagram_idmap D) C) i j g x @	  (fun (i0 : G) (x0 : D i0) => 1) i x =	  (fun (i0 : G) (x0 : D i0) => 1) j ((D _f g) x) @ qq C i j g x	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 118)		subgoal 1 (ID 118) is:	 forall (i j : G) (g : G i j) (x : D i),	 qq (precompose_cocone (diagram_idmap D) C) i j g x @	 (fun (i0 : G) (x0 : D i0) => 1) i x =	 (fun (i0 : G) (x0 : D i0) => 1) j ((D _f g) x) @ qq C i j g x	";
             responses[i]=data;
           
 
             i = 295;
-            data = "1 subgoal (ID 127)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  i, j : G	  g : G i j	  x : D i	  ============================	  (1 @ qq C i j g x) @ 1 = 1 @ qq C i j g x	";
+            data = "1 subgoal (ID 118)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  ============================	  forall (i j : G) (g : G i j) (x : D i),	  qq (precompose_cocone (diagram_idmap D) C) i j g x @	  (fun (i0 : G) (x0 : D i0) => 1) i x =	  (fun (i0 : G) (x0 : D i0) => 1) j ((D _f g) x) @ qq C i j g x	1 subgoal (ID 127)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  C : cocone D X	  i, j : G	  g : G i j	  x : D i	  ============================	  (1 @ qq C i j g x) @ 1 = 1 @ qq C i j g x	";
             responses[i]=data;
           
 
@@ -1528,17 +1528,17 @@
           
 
             i = 302;
-            data = "2 subgoals (ID 155)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  i : G	  x : D1 i	  ============================	  precompose_cocone m1 (precompose_cocone m2 C) i x =	  precompose_cocone (diagram_comp m2 m1) C i x		subgoal 2 (ID 152) is:	 forall (i j : G) (g : G i j) (x : D1 i),	 qq (precompose_cocone m1 (precompose_cocone m2 C)) i j g x @	 (fun (i0 : G) (x0 : D1 i0) => ?Goal@{i:=i0; x:=x0}) i x =	 (fun (i0 : G) (x0 : D1 i0) => ?Goal@{i:=i0; x:=x0}) j ((D1 _f g) x) @	 qq (precompose_cocone (diagram_comp m2 m1) C) i j g x	";
+            data = "1 subgoal (ID 150)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  ============================	  forall i : G,	  precompose_cocone m1 (precompose_cocone m2 C) i ==	  precompose_cocone (diagram_comp m2 m1) C i	1 subgoal (ID 155)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  i : G	  x : D1 i	  ============================	  precompose_cocone m1 (precompose_cocone m2 C) i x =	  precompose_cocone (diagram_comp m2 m1) C i x	";
             responses[i]=data;
           
 
             i = 303;
-            data = "1 subgoal (ID 152)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  ============================	  forall (i j : G) (g : G i j) (x : D1 i),	  qq (precompose_cocone m1 (precompose_cocone m2 C)) i j g x @	  (fun (i0 : G) (x0 : D1 i0) => 1) i x =	  (fun (i0 : G) (x0 : D1 i0) => 1) j ((D1 _f g) x) @	  qq (precompose_cocone (diagram_comp m2 m1) C) i j g x	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 152)		subgoal 1 (ID 152) is:	 forall (i j : G) (g : G i j) (x : D1 i),	 qq (precompose_cocone m1 (precompose_cocone m2 C)) i j g x @	 (fun (i0 : G) (x0 : D1 i0) => 1) i x =	 (fun (i0 : G) (x0 : D1 i0) => 1) j ((D1 _f g) x) @	 qq (precompose_cocone (diagram_comp m2 m1) C) i j g x	";
             responses[i]=data;
           
 
             i = 304;
-            data = "1 subgoal (ID 160)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  qq (precompose_cocone m1 (precompose_cocone m2 C)) i j g x @	  (fun (i0 : G) (x0 : D1 i0) => 1) i x =	  (fun (i0 : G) (x0 : D1 i0) => 1) j ((D1 _f g) x) @	  qq (precompose_cocone (diagram_comp m2 m1) C) i j g x	";
+            data = "1 subgoal (ID 152)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  ============================	  forall (i j : G) (g : G i j) (x : D1 i),	  qq (precompose_cocone m1 (precompose_cocone m2 C)) i j g x @	  (fun (i0 : G) (x0 : D1 i0) => 1) i x =	  (fun (i0 : G) (x0 : D1 i0) => 1) j ((D1 _f g) x) @	  qq (precompose_cocone (diagram_comp m2 m1) C) i j g x	1 subgoal (ID 160)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  D3 : diagram G	  m2 : diagram_map D2 D3	  m1 : diagram_map D1 D2	  X : Type	  C : cocone D3 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  qq (precompose_cocone m1 (precompose_cocone m2 C)) i j g x @	  (fun (i0 : G) (x0 : D1 i0) => 1) i x =	  (fun (i0 : G) (x0 : D1 i0) => 1) j ((D1 _f g) x) @	  qq (precompose_cocone (diagram_comp m2 m1) C) i j g x	";
             responses[i]=data;
           
 
@@ -1643,12 +1643,12 @@
           
 
             i = 325;
-            data = "1 subgoal (ID 394)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  Y : Type	  f : X -> Y	  C : cocone D2 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  ap f (ap (C j) (diagram_map_comm m g x)^) @ ap f (qq C i j g (m i x)) =	  ap (fun x0 : D2 j => f (C j x0)) (diagram_map_comm m g x)^ @	  ap f (qq C i j g (m i x))	";
+            data = "1 focused subgoal	(shelved: 1) (ID 393)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  Y : Type	  f : X -> Y	  C : cocone D2 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  ap f (ap (C j) (diagram_map_comm m g x)^ @ qq C i j g (m i x)) = ?Goal	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 394)		subgoal 1 (ID 394) is:	 ap f (ap (C j) (diagram_map_comm m g x)^) @ ap f (qq C i j g (m i x)) =	 ap (fun x0 : D2 j => f (C j x0)) (diagram_map_comm m g x)^ @	 ap f (qq C i j g (m i x))	";
             responses[i]=data;
           
 
             i = 326;
-            data = "1 subgoal (ID 401)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  Y : Type	  f : X -> Y	  C : cocone D2 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  concat (ap f (ap (C j) (diagram_map_comm m g x)^)) =	  concat (ap (fun x0 : D2 j => f (C j x0)) (diagram_map_comm m g x)^)	";
+            data = "1 subgoal (ID 394)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  Y : Type	  f : X -> Y	  C : cocone D2 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  ap f (ap (C j) (diagram_map_comm m g x)^) @ ap f (qq C i j g (m i x)) =	  ap (fun x0 : D2 j => f (C j x0)) (diagram_map_comm m g x)^ @	  ap f (qq C i j g (m i x))	1 subgoal (ID 401)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : diagram_map D1 D2	  X : Type	  Y : Type	  f : X -> Y	  C : cocone D2 X	  i, j : G	  g : G i j	  x : D1 i	  ============================	  concat (ap f (ap (C j) (diagram_map_comm m g x)^)) =	  concat (ap (fun x0 : D2 j => f (C j x0)) (diagram_map_comm m g x)^)	";
             responses[i]=data;
           
 
@@ -1718,12 +1718,12 @@
           
 
             i = 340;
-            data = "1 subgoal (ID 217)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D1 X	  ============================	  precompose_cocone (diagram_comp (diagram_equiv_inv m) m) C = C	";
+            data = "1 focused subgoal	(shelved: 1) (ID 216)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D1 X	  ============================	  precompose_cocone m (precompose_cocone (diagram_equiv_inv m) C) = ?Goal	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 217)		subgoal 1 (ID 217) is:	 precompose_cocone (diagram_comp (diagram_equiv_inv m) m) C = C	subgoal 2 (ID 191) is:	 Sect (precompose_cocone m) (precompose_cocone (diagram_equiv_inv m))	";
             responses[i]=data;
           
 
             i = 341;
-            data = "1 subgoal (ID 225)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D1 X	  ============================	  precompose_cocone (diagram_idmap D1) C = C	";
+            data = "1 subgoal (ID 217)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D1 X	  ============================	  precompose_cocone (diagram_comp (diagram_equiv_inv m) m) C = C	1 subgoal (ID 225)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D1 X	  ============================	  precompose_cocone (diagram_idmap D1) C = C	";
             responses[i]=data;
           
 
@@ -1743,12 +1743,12 @@
           
 
             i = 345;
-            data = "1 subgoal (ID 255)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D2 X	  ============================	  precompose_cocone (diagram_comp m (diagram_equiv_inv m)) C = C	";
+            data = "1 focused subgoal	(shelved: 1) (ID 254)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D2 X	  ============================	  precompose_cocone (diagram_equiv_inv m) (precompose_cocone m C) = ?Goal	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 255)		subgoal 1 (ID 255) is:	 precompose_cocone (diagram_comp m (diagram_equiv_inv m)) C = C	";
             responses[i]=data;
           
 
             i = 346;
-            data = "1 subgoal (ID 263)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D2 X	  ============================	  precompose_cocone (diagram_idmap D2) C = C	";
+            data = "1 subgoal (ID 255)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D2 X	  ============================	  precompose_cocone (diagram_comp m (diagram_equiv_inv m)) C = C	1 subgoal (ID 263)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  X : Type	  C : cocone D2 X	  ============================	  precompose_cocone (diagram_idmap D2) C = C	";
             responses[i]=data;
           
 
@@ -1813,17 +1813,17 @@
           
 
             i = 359;
-            data = "2 focused subgoals	(shelved: 1) (ID 282)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D Y	  ============================	  ?Goal = postcompose_cocone (postcompose_cocone C _^-1) f		subgoal 2 (ID 266) is:	 ?Goal = C	";
+            data = "1 focused subgoal	(shelved: 1) (ID 265)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D Y	  ============================	  postcompose_cocone (postcompose_cocone C _^-1) f = ?Goal	1 focused subgoal	(shelved: 1) (ID 282)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D Y	  ============================	  ?Goal = postcompose_cocone (postcompose_cocone C _^-1) f	";
             responses[i]=data;
           
 
             i = 360;
-            data = "1 subgoal (ID 266)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D Y	  ============================	  postcompose_cocone C (fun x : Y => f (_^-1 x)) = C	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 266)		subgoal 1 (ID 266) is:	 postcompose_cocone C (fun x : Y => f (_^-1 x)) = C	subgoal 2 (ID 221) is:	 Sect (fun C : cocone D X => postcompose_cocone C f)	   (fun C : cocone D Y => postcompose_cocone C _^-1)	";
             responses[i]=data;
           
 
             i = 361;
-            data = "2 focused subgoals	(shelved: 1) (ID 308)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D Y	  ============================	  postcompose_cocone C (fun x : Y => f (_^-1 x)) = ?Goal		subgoal 2 (ID 309) is:	 ?Goal = C	1 subgoal (ID 308)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D Y	  ============================	  postcompose_cocone C (fun x : Y => f (_^-1 x)) = postcompose_cocone C idmap	";
+            data = "1 subgoal (ID 266)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D Y	  ============================	  postcompose_cocone C (fun x : Y => f (_^-1 x)) = C	2 focused subgoals	(shelved: 1) (ID 308)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D Y	  ============================	  postcompose_cocone C (fun x : Y => f (_^-1 x)) = ?Goal		subgoal 2 (ID 309) is:	 ?Goal = C	1 subgoal (ID 308)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D Y	  ============================	  postcompose_cocone C (fun x : Y => f (_^-1 x)) = postcompose_cocone C idmap	";
             responses[i]=data;
           
 
@@ -1848,17 +1848,17 @@
           
 
             i = 366;
-            data = "2 focused subgoals	(shelved: 1) (ID 364)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D X	  ============================	  ?Goal = postcompose_cocone (postcompose_cocone C f) _^-1		subgoal 2 (ID 348) is:	 ?Goal = C	";
+            data = "1 focused subgoal	(shelved: 1) (ID 347)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D X	  ============================	  postcompose_cocone (postcompose_cocone C f) _^-1 = ?Goal	1 focused subgoal	(shelved: 1) (ID 364)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D X	  ============================	  ?Goal = postcompose_cocone (postcompose_cocone C f) _^-1	";
             responses[i]=data;
           
 
             i = 367;
-            data = "1 subgoal (ID 348)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D X	  ============================	  postcompose_cocone C (fun x : X => _^-1 (f x)) = C	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 348)		subgoal 1 (ID 348) is:	 postcompose_cocone C (fun x : X => _^-1 (f x)) = C	";
             responses[i]=data;
           
 
             i = 368;
-            data = "2 focused subgoals	(shelved: 1) (ID 390)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D X	  ============================	  postcompose_cocone C (fun x : X => _^-1 (f x)) = ?Goal		subgoal 2 (ID 391) is:	 ?Goal = C	1 subgoal (ID 390)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D X	  ============================	  postcompose_cocone C (fun x : X => _^-1 (f x)) = postcompose_cocone C idmap	";
+            data = "1 subgoal (ID 348)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D X	  ============================	  postcompose_cocone C (fun x : X => _^-1 (f x)) = C	2 focused subgoals	(shelved: 1) (ID 390)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D X	  ============================	  postcompose_cocone C (fun x : X => _^-1 (f x)) = ?Goal		subgoal 2 (ID 391) is:	 ?Goal = C	1 subgoal (ID 390)	  	  fs : Funext	  G : graph	  D : diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : cocone D X	  ============================	  postcompose_cocone C (fun x : X => _^-1 (f x)) = postcompose_cocone C idmap	";
             responses[i]=data;
           
 
@@ -2333,12 +2333,12 @@
           
 
             i = 463;
-            data = "1 subgoal (ID 115)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone HQ2	    (fun x : Q2 =>	     postcompose_cocone_inv HQ1 (precompose_cocone m HQ2)	       (postcompose_cocone_inv HQ2	          (precompose_cocone (diagram_equiv_inv m) HQ1) x)) =	  postcompose_cocone HQ2 idmap	";
+            data = "1 subgoal (ID 112)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  IsEquiv (postcompose_cocone HQ2)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 115)		subgoal 1 (ID 115) is:	 postcompose_cocone HQ2	   (fun x : Q2 =>	    postcompose_cocone_inv HQ1 (precompose_cocone m HQ2)	      (postcompose_cocone_inv HQ2	         (precompose_cocone (diagram_equiv_inv m) HQ1) x)) =	 postcompose_cocone HQ2 idmap	";
             responses[i]=data;
           
 
             i = 464;
-            data = "2 focused subgoals	(shelved: 1) (ID 384)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone HQ2	    (fun x : Q2 =>	     postcompose_cocone_inv HQ1 (precompose_cocone m HQ2)	       (postcompose_cocone_inv HQ2	          (precompose_cocone (diagram_equiv_inv m) HQ1) x)) = 	  ?Goal		subgoal 2 (ID 385) is:	 ?Goal = postcompose_cocone HQ2 idmap	1 subgoal (ID 384)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone HQ2	    (fun x : Q2 =>	     postcompose_cocone_inv HQ1 (precompose_cocone m HQ2)	       (postcompose_cocone_inv HQ2	          (precompose_cocone (diagram_equiv_inv m) HQ1) x)) = HQ2	";
+            data = "1 subgoal (ID 115)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone HQ2	    (fun x : Q2 =>	     postcompose_cocone_inv HQ1 (precompose_cocone m HQ2)	       (postcompose_cocone_inv HQ2	          (precompose_cocone (diagram_equiv_inv m) HQ1) x)) =	  postcompose_cocone HQ2 idmap	2 focused subgoals	(shelved: 1) (ID 384)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone HQ2	    (fun x : Q2 =>	     postcompose_cocone_inv HQ1 (precompose_cocone m HQ2)	       (postcompose_cocone_inv HQ2	          (precompose_cocone (diagram_equiv_inv m) HQ1) x)) = 	  ?Goal		subgoal 2 (ID 385) is:	 ?Goal = postcompose_cocone HQ2 idmap	1 subgoal (ID 384)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone HQ2	    (fun x : Q2 =>	     postcompose_cocone_inv HQ1 (precompose_cocone m HQ2)	       (postcompose_cocone_inv HQ2	          (precompose_cocone (diagram_equiv_inv m) HQ1) x)) = HQ2	";
             responses[i]=data;
           
 
@@ -2348,12 +2348,12 @@
           
 
             i = 466;
-            data = "1 subgoal (ID 433)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone	    (postcompose_cocone HQ2	       (postcompose_cocone_inv HQ2	          (precompose_cocone (diagram_equiv_inv m) HQ1)))	    (postcompose_cocone_inv HQ1 (precompose_cocone m HQ2)) = HQ2	";
+            data = "1 focused subgoal	(shelved: 1) (ID 432)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone HQ2	    (fun x : Q2 =>	     postcompose_cocone_inv HQ1 (precompose_cocone m HQ2)	       (postcompose_cocone_inv HQ2	          (precompose_cocone (diagram_equiv_inv m) HQ1) x)) = 	  ?Goal	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 433)		subgoal 1 (ID 433) is:	 postcompose_cocone	   (postcompose_cocone HQ2	      (postcompose_cocone_inv HQ2	         (precompose_cocone (diagram_equiv_inv m) HQ1)))	   (postcompose_cocone_inv HQ1 (precompose_cocone m HQ2)) = HQ2	";
             responses[i]=data;
           
 
             i = 467;
-            data = "1 subgoal (ID 439)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone	    (postcompose_cocone HQ2	       (_^-1 (precompose_cocone (diagram_equiv_inv m) HQ1)))	    (_^-1 (precompose_cocone m HQ2)) = HQ2	";
+            data = "1 subgoal (ID 433)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone	    (postcompose_cocone HQ2	       (postcompose_cocone_inv HQ2	          (precompose_cocone (diagram_equiv_inv m) HQ1)))	    (postcompose_cocone_inv HQ1 (precompose_cocone m HQ2)) = HQ2	1 subgoal (ID 439)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone	    (postcompose_cocone HQ2	       (_^-1 (precompose_cocone (diagram_equiv_inv m) HQ1)))	    (_^-1 (precompose_cocone m HQ2)) = HQ2	";
             responses[i]=data;
           
 
@@ -2418,12 +2418,12 @@
           
 
             i = 480;
-            data = "1 subgoal (ID 129)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone HQ1	    (fun x : Q1 =>	     postcompose_cocone_inv HQ2 (precompose_cocone (diagram_equiv_inv m) HQ1)	       (postcompose_cocone_inv HQ1 (precompose_cocone m HQ2) x)) =	  postcompose_cocone HQ1 idmap	";
+            data = "1 subgoal (ID 126)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  IsEquiv (postcompose_cocone HQ1)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 129)		subgoal 1 (ID 129) is:	 postcompose_cocone HQ1	   (fun x : Q1 =>	    postcompose_cocone_inv HQ2 (precompose_cocone (diagram_equiv_inv m) HQ1)	      (postcompose_cocone_inv HQ1 (precompose_cocone m HQ2) x)) =	 postcompose_cocone HQ1 idmap	";
             responses[i]=data;
           
 
             i = 481;
-            data = "2 focused subgoals	(shelved: 1) (ID 398)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone HQ1	    (fun x : Q1 =>	     postcompose_cocone_inv HQ2 (precompose_cocone (diagram_equiv_inv m) HQ1)	       (postcompose_cocone_inv HQ1 (precompose_cocone m HQ2) x)) = 	  ?Goal		subgoal 2 (ID 399) is:	 ?Goal = postcompose_cocone HQ1 idmap	1 subgoal (ID 398)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone HQ1	    (fun x : Q1 =>	     postcompose_cocone_inv HQ2 (precompose_cocone (diagram_equiv_inv m) HQ1)	       (postcompose_cocone_inv HQ1 (precompose_cocone m HQ2) x)) = HQ1	";
+            data = "1 subgoal (ID 129)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone HQ1	    (fun x : Q1 =>	     postcompose_cocone_inv HQ2 (precompose_cocone (diagram_equiv_inv m) HQ1)	       (postcompose_cocone_inv HQ1 (precompose_cocone m HQ2) x)) =	  postcompose_cocone HQ1 idmap	2 focused subgoals	(shelved: 1) (ID 398)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone HQ1	    (fun x : Q1 =>	     postcompose_cocone_inv HQ2 (precompose_cocone (diagram_equiv_inv m) HQ1)	       (postcompose_cocone_inv HQ1 (precompose_cocone m HQ2) x)) = 	  ?Goal		subgoal 2 (ID 399) is:	 ?Goal = postcompose_cocone HQ1 idmap	1 subgoal (ID 398)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone HQ1	    (fun x : Q1 =>	     postcompose_cocone_inv HQ2 (precompose_cocone (diagram_equiv_inv m) HQ1)	       (postcompose_cocone_inv HQ1 (precompose_cocone m HQ2) x)) = HQ1	";
             responses[i]=data;
           
 
@@ -2433,12 +2433,12 @@
           
 
             i = 483;
-            data = "1 subgoal (ID 447)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone	    (postcompose_cocone HQ1	       (postcompose_cocone_inv HQ1 (precompose_cocone m HQ2)))	    (postcompose_cocone_inv HQ2 (precompose_cocone (diagram_equiv_inv m) HQ1)) =	  HQ1	";
+            data = "1 focused subgoal	(shelved: 1) (ID 446)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone HQ1	    (fun x : Q1 =>	     postcompose_cocone_inv HQ2 (precompose_cocone (diagram_equiv_inv m) HQ1)	       (postcompose_cocone_inv HQ1 (precompose_cocone m HQ2) x)) = 	  ?Goal	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 447)		subgoal 1 (ID 447) is:	 postcompose_cocone	   (postcompose_cocone HQ1	      (postcompose_cocone_inv HQ1 (precompose_cocone m HQ2)))	   (postcompose_cocone_inv HQ2 (precompose_cocone (diagram_equiv_inv m) HQ1)) =	 HQ1	";
             responses[i]=data;
           
 
             i = 484;
-            data = "1 subgoal (ID 453)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone	    (postcompose_cocone HQ1 (_^-1 (precompose_cocone m HQ2)))	    (_^-1 (precompose_cocone (diagram_equiv_inv m) HQ1)) = HQ1	";
+            data = "1 subgoal (ID 447)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone	    (postcompose_cocone HQ1	       (postcompose_cocone_inv HQ1 (precompose_cocone m HQ2)))	    (postcompose_cocone_inv HQ2 (precompose_cocone (diagram_equiv_inv m) HQ1)) =	  HQ1	1 subgoal (ID 453)	  	  fs : Funext	  G : graph	  D1 : diagram G	  D2 : diagram G	  m : D1 ~d~ D2	  Q1 : Type	  HQ1 : is_colimit D1 Q1	  Q2 : Type	  HQ2 : is_colimit D2 Q2	  ============================	  postcompose_cocone	    (postcompose_cocone HQ1 (_^-1 (precompose_cocone m HQ2)))	    (_^-1 (precompose_cocone (diagram_equiv_inv m) HQ1)) = HQ1	";
             responses[i]=data;
           
 
@@ -3171,7 +3171,7 @@ And we can now show that the HIT is actually a colimit.
       " onmouseover="
       mouseover(201, '0_3_35');
       "><br>
-    <span class="id" title="tactic">intros</span> <span class="id" title="var">i</span> <span class="id" title="var">x</span>. </span><span class="command" onmouseout="
+    + <span class="id" title="tactic">intros</span> <span class="id" title="var">i</span> <span class="id" title="var">x</span>. </span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
       mouseover(202, '0_3_35');
@@ -3180,7 +3180,7 @@ And we can now show that the HIT is actually a colimit.
       " onmouseover="
       mouseover(203, '0_3_35');
       "><br>
-    <span class="id" title="tactic">intros</span> <span class="id" title="var">i</span> <span class="id" title="var">j</span> <span class="id" title="var">f</span> <span class="id" title="var">x</span>. </span><span class="command" onmouseout="
+    + <span class="id" title="tactic">intros</span> <span class="id" title="var">i</span> <span class="id" title="var">j</span> <span class="id" title="var">f</span> <span class="id" title="var">x</span>. </span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
       mouseover(204, '0_3_35');
@@ -3193,7 +3193,7 @@ And we can now show that the HIT is actually a colimit.
       " onmouseover="
       mouseover(206, '0_3_35');
       "><br>
-    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#colimit_rec_beta_colimp"><span class="id" title="definition">colimit_rec_beta_colimp</span></a>.</span><span class="command" onmouseout="
+      <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#colimit_rec_beta_colimp"><span class="id" title="definition">colimit_rec_beta_colimp</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
       mouseover(207, '0_3_35');
@@ -3212,7 +3212,7 @@ And we can now show that the HIT is actually a colimit.
       " onmouseover="
       mouseover(210, '0_3_35');
       "><br>
-    <span class="id" title="tactic">intros</span> <span class="id" title="var">i</span> <span class="id" title="var">x</span>. </span><span class="command" onmouseout="
+    + <span class="id" title="tactic">intros</span> <span class="id" title="var">i</span> <span class="id" title="var">x</span>. </span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
       mouseover(211, '0_3_35');
@@ -3221,7 +3221,7 @@ And we can now show that the HIT is actually a colimit.
       " onmouseover="
       mouseover(212, '0_3_35');
       "><br>
-    <span class="id" title="tactic">intros</span> <span class="id" title="var">i</span> <span class="id" title="var">j</span> <span class="id" title="var">g</span> <span class="id" title="var">x</span>. </span><span class="command" onmouseout="
+    + <span class="id" title="tactic">intros</span> <span class="id" title="var">i</span> <span class="id" title="var">j</span> <span class="id" title="var">g</span> <span class="id" title="var">x</span>. </span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
       mouseover(213, '0_3_35');
@@ -3230,12 +3230,12 @@ And we can now show that the HIT is actually a colimit.
       " onmouseover="
       mouseover(214, '0_3_35');
       "><br>
-    <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Types.Paths.html#transport_paths_FlFr"><span class="id" title="definition">transport_paths_FlFr</span></a>.</span><span class="command" onmouseout="
+      <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Types.Paths.html#transport_paths_FlFr"><span class="id" title="definition">transport_paths_FlFr</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
       mouseover(215, '0_3_35');
       "><br>
-    <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#colimit_rec_beta_colimp"><span class="id" title="definition">colimit_rec_beta_colimp</span></a>. </span><span class="command" onmouseout="
+      <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#colimit_rec_beta_colimp"><span class="id" title="definition">colimit_rec_beta_colimp</span></a>. </span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
       mouseover(216, '0_3_35');
@@ -3316,12 +3316,12 @@ And we can now show that the HIT is actually a colimit.
       " onmouseover="
       mouseover(242, '0_3_43');
       "><br>
-    <span class="id" title="tactic">intros</span> <span class="id" title="var">i</span> <span class="id" title="var">x</span>; <span class="id" title="tactic">reflexivity</span>.</span><span class="command" onmouseout="
+    - <span class="id" title="tactic">intros</span> <span class="id" title="var">i</span> <span class="id" title="var">x</span>; <span class="id" title="tactic">reflexivity</span>.</span><span class="command" onmouseout="
       mouseout('0_3_43');
       " onmouseover="
       mouseover(243, '0_3_43');
       "><br>
-    <span class="id" title="tactic">intros</span> <span class="id" title="var">i</span> <span class="id" title="var">j</span> <span class="id" title="var">g</span> <span class="id" title="var">x</span>; <span class="id" title="tactic">simpl</span>; <span class="id" title="var">hott_simpl</span>.</span><span class="command" onmouseout="
+    - <span class="id" title="tactic">intros</span> <span class="id" title="var">i</span> <span class="id" title="var">j</span> <span class="id" title="var">g</span> <span class="id" title="var">x</span>; <span class="id" title="tactic">simpl</span>; <span class="id" title="var">hott_simpl</span>.</span><span class="command" onmouseout="
       mouseout('0_3_43');
       " onmouseover="
       mouseover(244, '0_3_43');
@@ -3350,12 +3350,12 @@ And we can now show that the HIT is actually a colimit.
       " onmouseover="
       mouseover(248, '0_3_43');
       "><br>
-    <span class="id" title="tactic">intros</span> <span class="id" title="var">i</span> <span class="id" title="var">x</span>; <span class="id" title="tactic">reflexivity</span>.</span><span class="command" onmouseout="
+    - <span class="id" title="tactic">intros</span> <span class="id" title="var">i</span> <span class="id" title="var">x</span>; <span class="id" title="tactic">reflexivity</span>.</span><span class="command" onmouseout="
       mouseout('0_3_43');
       " onmouseover="
       mouseover(249, '0_3_43');
       "><br>
-    <span class="id" title="tactic">intros</span> <span class="id" title="var">i</span> <span class="id" title="var">j</span> <span class="id" title="var">h</span> <span class="id" title="var">x</span>; <span class="id" title="tactic">simpl</span>; <span class="id" title="var">hott_simpl</span>. </span><span class="command" onmouseout="
+    - <span class="id" title="tactic">intros</span> <span class="id" title="var">i</span> <span class="id" title="var">j</span> <span class="id" title="var">h</span> <span class="id" title="var">x</span>; <span class="id" title="tactic">simpl</span>; <span class="id" title="var">hott_simpl</span>. </span><span class="command" onmouseout="
       mouseout('0_3_43');
       " onmouseover="
       mouseover(250, '0_3_43');
@@ -3407,7 +3407,7 @@ And we can now show that the HIT is actually a colimit.
       " onmouseover="
       mouseover(277, '0_3_47');
       "><br>
-    <span class="id" title="tactic">intros</span> <span class="id" title="var">i</span> <span class="id" title="var">x</span>. </span><span class="command" onmouseout="
+    - <span class="id" title="tactic">intros</span> <span class="id" title="var">i</span> <span class="id" title="var">x</span>. </span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(278, '0_3_47');
@@ -3416,16 +3416,17 @@ And we can now show that the HIT is actually a colimit.
       " onmouseover="
       mouseover(279, '0_3_47');
       "><br>
-    <span class="id" title="tactic">intros</span> <span class="id" title="var">i</span> <span class="id" title="var">j</span> <span class="id" title="var">g</span> <span class="id" title="var">x</span>; <span class="id" title="tactic">simpl</span>.</span><span class="command" onmouseout="
+    - <span class="id" title="tactic">intros</span> <span class="id" title="var">i</span> <span class="id" title="var">j</span> <span class="id" title="var">g</span> <span class="id" title="var">x</span>; <span class="id" title="tactic">simpl</span>.</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(280, '0_3_47');
       "><br>
-    <span class="id" title="var">etransitivity</span>. </span><span class="command" onmouseout="
+      <span class="id" title="var">etransitivity</span>.</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(281, '0_3_47');
-      "><span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>. </span><span class="command" onmouseout="
+      "><br>
+      + <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>. </span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(282, '0_3_47');
@@ -3433,11 +3434,12 @@ And we can now show that the HIT is actually a colimit.
       mouseout('0_3_47');
       " onmouseover="
       mouseover(283, '0_3_47');
-      "><span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Colimits.Diagram.html#diagram_map_comm"><span class="id" title="projection">diagram_map_comm</span></a>. </span><span class="command" onmouseout="
+      "><span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Colimits.Diagram.html#diagram_map_comm"><span class="id" title="projection">diagram_map_comm</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(284, '0_3_47');
-      "><span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#qq"><span class="id" title="projection">qq</span></a>.</span><span class="command" onmouseout="
+      "><br>
+      + <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#qq"><span class="id" title="projection">qq</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(285, '0_3_47');
@@ -3476,15 +3478,16 @@ Identity and associativity for the precomposition of a cocone with a diagram map
       " onmouseover="
       mouseover(293, '0_3_51');
       "><br>
-    <span class="id" title="tactic">intros</span> <span class="id" title="var">i</span> <span class="id" title="var">x</span>. </span><span class="command" onmouseout="
+    - <span class="id" title="tactic">intros</span> <span class="id" title="var">i</span> <span class="id" title="var">x</span>. </span><span class="command" onmouseout="
       mouseout('0_3_51');
       " onmouseover="
       mouseover(294, '0_3_51');
-      "><span class="id" title="tactic">reflexivity</span>. </span><span class="command" onmouseout="
+      "><span class="id" title="tactic">reflexivity</span>.</span><span class="command" onmouseout="
       mouseout('0_3_51');
       " onmouseover="
       mouseover(295, '0_3_51');
-      "><span class="id" title="tactic">intros</span>; <span class="id" title="tactic">simpl</span>. </span><span class="command" onmouseout="
+      "><br>
+    - <span class="id" title="tactic">intros</span>; <span class="id" title="tactic">simpl</span>. </span><span class="command" onmouseout="
       mouseout('0_3_51');
       " onmouseover="
       mouseover(296, '0_3_51');
@@ -3522,7 +3525,7 @@ Identity and associativity for the precomposition of a cocone with a diagram map
       " onmouseover="
       mouseover(302, '0_3_51');
       "><br>
-    <span class="id" title="tactic">intros</span> <span class="id" title="var">i</span> <span class="id" title="var">x</span>. </span><span class="command" onmouseout="
+    - <span class="id" title="tactic">intros</span> <span class="id" title="var">i</span> <span class="id" title="var">x</span>. </span><span class="command" onmouseout="
       mouseout('0_3_51');
       " onmouseover="
       mouseover(303, '0_3_51');
@@ -3531,7 +3534,7 @@ Identity and associativity for the precomposition of a cocone with a diagram map
       " onmouseover="
       mouseover(304, '0_3_51');
       "><br>
-    <span class="id" title="tactic">intros</span> <span class="id" title="var">i</span> <span class="id" title="var">j</span> <span class="id" title="var">g</span> <span class="id" title="var">x</span>. </span><span class="command" onmouseout="
+    - <span class="id" title="tactic">intros</span> <span class="id" title="var">i</span> <span class="id" title="var">j</span> <span class="id" title="var">g</span> <span class="id" title="var">x</span>. </span><span class="command" onmouseout="
       mouseout('0_3_51');
       " onmouseover="
       mouseover(305, '0_3_51');
@@ -3544,7 +3547,7 @@ Identity and associativity for the precomposition of a cocone with a diagram map
       " onmouseover="
       mouseover(307, '0_3_51');
       "><br>
-    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap10"><span class="id" title="definition">ap10</span></a>. </span><span class="command" onmouseout="
+      <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap10"><span class="id" title="definition">ap10</span></a>. </span><span class="command" onmouseout="
       mouseout('0_3_51');
       " onmouseover="
       mouseover(308, '0_3_51');
@@ -3557,7 +3560,7 @@ Identity and associativity for the precomposition of a cocone with a diagram map
       " onmouseover="
       mouseover(310, '0_3_51');
       "><br>
-    <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#inv_pp"><span class="id" title="definition">inv_pp</span></a>. </span><span class="command" onmouseout="
+      <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#inv_pp"><span class="id" title="definition">inv_pp</span></a>. </span><span class="command" onmouseout="
       mouseout('0_3_51');
       " onmouseover="
       mouseover(311, '0_3_51');
@@ -3621,15 +3624,17 @@ Associativity of a precomposition and a postcomposition.
       " onmouseover="
       mouseover(324, '0_3_55');
       "><br>
-      <span class="id" title="var">etransitivity</span>. </span><span class="command" onmouseout="
+      <span class="id" title="var">etransitivity</span>.</span><span class="command" onmouseout="
       mouseout('0_3_55');
       " onmouseover="
       mouseover(325, '0_3_55');
-      "><span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#ap_pp"><span class="id" title="definition">ap_pp</span></a>. </span><span class="command" onmouseout="
+      "><br>
+      + <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#ap_pp"><span class="id" title="definition">ap_pp</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_55');
       " onmouseover="
       mouseover(326, '0_3_55');
-      "><span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap10"><span class="id" title="definition">ap10</span></a>. </span><span class="command" onmouseout="
+      "><br>
+      + <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap10"><span class="id" title="definition">ap10</span></a>. </span><span class="command" onmouseout="
       mouseout('0_3_55');
       " onmouseover="
       mouseover(327, '0_3_55');
@@ -3638,7 +3643,7 @@ Associativity of a precomposition and a postcomposition.
       " onmouseover="
       mouseover(328, '0_3_55');
       "><br>
-      <span class="id" title="tactic">symmetry</span>. </span><span class="command" onmouseout="
+        <span class="id" title="tactic">symmetry</span>. </span><span class="command" onmouseout="
       mouseout('0_3_55');
       " onmouseover="
       mouseover(329, '0_3_55');
@@ -3687,16 +3692,17 @@ The precomposition with a diagram equivalence is an equivalence.
       mouseout('0_3_59');
       " onmouseover="
       mouseover(339, '0_3_59');
-      "><span class="id" title="var">etransitivity</span>. </span><span class="command" onmouseout="
+      "><span class="id" title="var">etransitivity</span>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
       mouseover(340, '0_3_59');
-      "><span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#precompose_cocone_comp"><span class="id" title="definition">precompose_cocone_comp</span></a>.</span><span class="command" onmouseout="
+      "><br>
+      + <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#precompose_cocone_comp"><span class="id" title="definition">precompose_cocone_comp</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
       mouseover(341, '0_3_59');
       "><br>
-      <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.HIT.Colimits.Diagram.html#diagram_inv_is_retraction"><span class="id" title="lemma">diagram_inv_is_retraction</span></a>. </span><span class="command" onmouseout="
+      + <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.HIT.Colimits.Diagram.html#diagram_inv_is_retraction"><span class="id" title="lemma">diagram_inv_is_retraction</span></a>. </span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
       mouseover(342, '0_3_59');
@@ -3709,16 +3715,17 @@ The precomposition with a diagram equivalence is an equivalence.
       mouseout('0_3_59');
       " onmouseover="
       mouseover(344, '0_3_59');
-      "><span class="id" title="var">etransitivity</span>. </span><span class="command" onmouseout="
+      "><span class="id" title="var">etransitivity</span>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
       mouseover(345, '0_3_59');
-      "><span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#precompose_cocone_comp"><span class="id" title="definition">precompose_cocone_comp</span></a>.</span><span class="command" onmouseout="
+      "><br>
+      + <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#precompose_cocone_comp"><span class="id" title="definition">precompose_cocone_comp</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
       mouseover(346, '0_3_59');
       "><br>
-      <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.HIT.Colimits.Diagram.html#diagram_inv_is_section"><span class="id" title="lemma">diagram_inv_is_section</span></a>. </span><span class="command" onmouseout="
+      + <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.HIT.Colimits.Diagram.html#diagram_inv_is_section"><span class="id" title="lemma">diagram_inv_is_section</span></a>. </span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
       mouseover(347, '0_3_59');
@@ -3771,11 +3778,12 @@ The postcomposition with an equivalence is an equivalence.
       mouseout('0_3_63');
       " onmouseover="
       mouseover(358, '0_3_63');
-      "><span class="id" title="var">etransitivity</span>. </span><span class="command" onmouseout="
+      "><span class="id" title="var">etransitivity</span>.</span><span class="command" onmouseout="
       mouseout('0_3_63');
       " onmouseover="
       mouseover(359, '0_3_63');
-      "><span class="id" title="tactic">symmetry</span>. </span><span class="command" onmouseout="
+      "><br>
+      + <span class="id" title="tactic">symmetry</span>. </span><span class="command" onmouseout="
       mouseout('0_3_63');
       " onmouseover="
       mouseover(360, '0_3_63');
@@ -3784,7 +3792,7 @@ The postcomposition with an equivalence is an equivalence.
       " onmouseover="
       mouseover(361, '0_3_63');
       "><br>
-      <span class="id" title="var">etransitivity</span>. 2:<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#postcompose_cocone_identity"><span class="id" title="definition">postcompose_cocone_identity</span></a>. </span><span class="command" onmouseout="
+      + <span class="id" title="var">etransitivity</span>. 2:<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#postcompose_cocone_identity"><span class="id" title="definition">postcompose_cocone_identity</span></a>. </span><span class="command" onmouseout="
       mouseout('0_3_63');
       " onmouseover="
       mouseover(362, '0_3_63');
@@ -3793,7 +3801,7 @@ The postcomposition with an equivalence is an equivalence.
       " onmouseover="
       mouseover(363, '0_3_63');
       "><br>
-      <span class="id" title="var">funext</span> <span class="id" title="var">x</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="projection">eisretr</span></a>.</span><span class="command" onmouseout="
+        <span class="id" title="var">funext</span> <span class="id" title="var">x</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="projection">eisretr</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_63');
       " onmouseover="
       mouseover(364, '0_3_63');
@@ -3802,11 +3810,12 @@ The postcomposition with an equivalence is an equivalence.
       mouseout('0_3_63');
       " onmouseover="
       mouseover(365, '0_3_63');
-      "><span class="id" title="var">etransitivity</span>. </span><span class="command" onmouseout="
+      "><span class="id" title="var">etransitivity</span>.</span><span class="command" onmouseout="
       mouseout('0_3_63');
       " onmouseover="
       mouseover(366, '0_3_63');
-      "><span class="id" title="tactic">symmetry</span>. </span><span class="command" onmouseout="
+      "><br>
+      + <span class="id" title="tactic">symmetry</span>. </span><span class="command" onmouseout="
       mouseout('0_3_63');
       " onmouseover="
       mouseover(367, '0_3_63');
@@ -3815,7 +3824,7 @@ The postcomposition with an equivalence is an equivalence.
       " onmouseover="
       mouseover(368, '0_3_63');
       "><br>
-      <span class="id" title="var">etransitivity</span>. 2:<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#postcompose_cocone_identity"><span class="id" title="definition">postcompose_cocone_identity</span></a>. </span><span class="command" onmouseout="
+      + <span class="id" title="var">etransitivity</span>. 2:<span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#postcompose_cocone_identity"><span class="id" title="definition">postcompose_cocone_identity</span></a>. </span><span class="command" onmouseout="
       mouseout('0_3_63');
       " onmouseover="
       mouseover(369, '0_3_63');
@@ -3824,7 +3833,7 @@ The postcomposition with an equivalence is an equivalence.
       " onmouseover="
       mouseover(370, '0_3_63');
       "><br>
-      <span class="id" title="var">funext</span> <span class="id" title="var">x</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#eissect"><span class="id" title="projection">eissect</span></a>.</span><span class="command" onmouseout="
+        <span class="id" title="var">funext</span> <span class="id" title="var">x</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#eissect"><span class="id" title="projection">eissect</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_63');
       " onmouseover="
       mouseover(371, '0_3_63');
@@ -4154,30 +4163,32 @@ And this map commutes with diagram map.
       " onmouseover="
       mouseover(462, '0_3_87');
       "><br>
-    <span class="id" title="tactic">simple</span> <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Types.Paths.html#equiv_inj"><span class="id" title="definition">equiv_inj</span></a> (<a class="idref" href="HoTT.HIT.Colimits.Colimit.html#postcompose_cocone"><span class="id" title="definition">postcompose_cocone</span></a> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#FunctorialityColimit.HQ2"><span class="id" title="variable">HQ2</span></a>) <span class="id" title="var">_</span>). </span><span class="command" onmouseout="
+    <span class="id" title="tactic">simple</span> <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Types.Paths.html#equiv_inj"><span class="id" title="definition">equiv_inj</span></a> (<a class="idref" href="HoTT.HIT.Colimits.Colimit.html#postcompose_cocone"><span class="id" title="definition">postcompose_cocone</span></a> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#FunctorialityColimit.HQ2"><span class="id" title="variable">HQ2</span></a>) <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_87');
       " onmouseover="
       mouseover(463, '0_3_87');
-      "><span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#FunctorialityColimit.HQ2"><span class="id" title="variable">HQ2</span></a>.</span><span class="command" onmouseout="
+      "><br>
+    - <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#FunctorialityColimit.HQ2"><span class="id" title="variable">HQ2</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_87');
       " onmouseover="
       mouseover(464, '0_3_87');
       "><br>
-    <span class="id" title="var">etransitivity</span>. 2:<span class="id" title="tactic">symmetry</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#postcompose_cocone_identity"><span class="id" title="definition">postcompose_cocone_identity</span></a>.</span><span class="command" onmouseout="
+    - <span class="id" title="var">etransitivity</span>. 2:<span class="id" title="tactic">symmetry</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#postcompose_cocone_identity"><span class="id" title="definition">postcompose_cocone_identity</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_87');
       " onmouseover="
       mouseover(465, '0_3_87');
       "><br>
-    <span class="id" title="var">etransitivity</span>. </span><span class="command" onmouseout="
+      <span class="id" title="var">etransitivity</span>.</span><span class="command" onmouseout="
       mouseout('0_3_87');
       " onmouseover="
       mouseover(466, '0_3_87');
-      "><span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#postcompose_cocone_comp"><span class="id" title="definition">postcompose_cocone_comp</span></a>.</span><span class="command" onmouseout="
+      "><br>
+      + <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#postcompose_cocone_comp"><span class="id" title="definition">postcompose_cocone_comp</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_87');
       " onmouseover="
       mouseover(467, '0_3_87');
       "><br>
-    <span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#postcompose_cocone_inv"><span class="id" title="definition">postcompose_cocone_inv</span></a>. </span><span class="command" onmouseout="
+      + <span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#postcompose_cocone_inv"><span class="id" title="definition">postcompose_cocone_inv</span></a>. </span><span class="command" onmouseout="
       mouseout('0_3_87');
       " onmouseover="
       mouseover(468, '0_3_87');
@@ -4186,7 +4197,7 @@ And this map commutes with diagram map.
       " onmouseover="
       mouseover(469, '0_3_87');
       "><br>
-    <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#precompose_postcompose_cocone"><span class="id" title="definition">precompose_postcompose_cocone</span></a>. </span><span class="command" onmouseout="
+        <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#precompose_postcompose_cocone"><span class="id" title="definition">precompose_postcompose_cocone</span></a>. </span><span class="command" onmouseout="
       mouseout('0_3_87');
       " onmouseover="
       mouseover(470, '0_3_87');
@@ -4195,7 +4206,7 @@ And this map commutes with diagram map.
       " onmouseover="
       mouseover(471, '0_3_87');
       "><br>
-    <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#precompose_cocone_comp"><span class="id" title="definition">precompose_cocone_comp</span></a>. </span><span class="command" onmouseout="
+        <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#precompose_cocone_comp"><span class="id" title="definition">precompose_cocone_comp</span></a>. </span><span class="command" onmouseout="
       mouseout('0_3_87');
       " onmouseover="
       mouseover(472, '0_3_87');
@@ -4204,7 +4215,7 @@ And this map commutes with diagram map.
       " onmouseover="
       mouseover(473, '0_3_87');
       "><br>
-    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#precompose_cocone_identity"><span class="id" title="definition">precompose_cocone_identity</span></a>.</span><span class="command" onmouseout="
+        <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#precompose_cocone_identity"><span class="id" title="definition">precompose_cocone_identity</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_87');
       " onmouseover="
       mouseover(474, '0_3_87');
@@ -4236,30 +4247,32 @@ And this map commutes with diagram map.
       " onmouseover="
       mouseover(479, '0_3_87');
       "><br>
-    <span class="id" title="tactic">simple</span> <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Types.Paths.html#equiv_inj"><span class="id" title="definition">equiv_inj</span></a> (<a class="idref" href="HoTT.HIT.Colimits.Colimit.html#postcompose_cocone"><span class="id" title="definition">postcompose_cocone</span></a> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#FunctorialityColimit.HQ1"><span class="id" title="variable">HQ1</span></a>) <span class="id" title="var">_</span>). </span><span class="command" onmouseout="
+    <span class="id" title="tactic">simple</span> <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Types.Paths.html#equiv_inj"><span class="id" title="definition">equiv_inj</span></a> (<a class="idref" href="HoTT.HIT.Colimits.Colimit.html#postcompose_cocone"><span class="id" title="definition">postcompose_cocone</span></a> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#FunctorialityColimit.HQ1"><span class="id" title="variable">HQ1</span></a>) <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_87');
       " onmouseover="
       mouseover(480, '0_3_87');
-      "><span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#FunctorialityColimit.HQ1"><span class="id" title="variable">HQ1</span></a>.</span><span class="command" onmouseout="
+      "><br>
+    - <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#FunctorialityColimit.HQ1"><span class="id" title="variable">HQ1</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_87');
       " onmouseover="
       mouseover(481, '0_3_87');
       "><br>
-    <span class="id" title="var">etransitivity</span>. 2:<span class="id" title="tactic">symmetry</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#postcompose_cocone_identity"><span class="id" title="definition">postcompose_cocone_identity</span></a>.</span><span class="command" onmouseout="
+    - <span class="id" title="var">etransitivity</span>. 2:<span class="id" title="tactic">symmetry</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#postcompose_cocone_identity"><span class="id" title="definition">postcompose_cocone_identity</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_87');
       " onmouseover="
       mouseover(482, '0_3_87');
       "><br>
-    <span class="id" title="var">etransitivity</span>. </span><span class="command" onmouseout="
+      <span class="id" title="var">etransitivity</span>.</span><span class="command" onmouseout="
       mouseout('0_3_87');
       " onmouseover="
       mouseover(483, '0_3_87');
-      "><span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#postcompose_cocone_comp"><span class="id" title="definition">postcompose_cocone_comp</span></a>.</span><span class="command" onmouseout="
+      "><br>
+      + <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#postcompose_cocone_comp"><span class="id" title="definition">postcompose_cocone_comp</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_87');
       " onmouseover="
       mouseover(484, '0_3_87');
       "><br>
-    <span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#postcompose_cocone_inv"><span class="id" title="definition">postcompose_cocone_inv</span></a>. </span><span class="command" onmouseout="
+      + <span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#postcompose_cocone_inv"><span class="id" title="definition">postcompose_cocone_inv</span></a>. </span><span class="command" onmouseout="
       mouseout('0_3_87');
       " onmouseover="
       mouseover(485, '0_3_87');
@@ -4268,7 +4281,7 @@ And this map commutes with diagram map.
       " onmouseover="
       mouseover(486, '0_3_87');
       "><br>
-    <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#precompose_postcompose_cocone"><span class="id" title="definition">precompose_postcompose_cocone</span></a>. </span><span class="command" onmouseout="
+        <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#precompose_postcompose_cocone"><span class="id" title="definition">precompose_postcompose_cocone</span></a>. </span><span class="command" onmouseout="
       mouseout('0_3_87');
       " onmouseover="
       mouseover(487, '0_3_87');
@@ -4277,7 +4290,7 @@ And this map commutes with diagram map.
       " onmouseover="
       mouseover(488, '0_3_87');
       "><br>
-    <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#precompose_cocone_comp"><span class="id" title="definition">precompose_cocone_comp</span></a>. </span><span class="command" onmouseout="
+        <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#precompose_cocone_comp"><span class="id" title="definition">precompose_cocone_comp</span></a>. </span><span class="command" onmouseout="
       mouseout('0_3_87');
       " onmouseover="
       mouseover(489, '0_3_87');
@@ -4286,7 +4299,7 @@ And this map commutes with diagram map.
       " onmouseover="
       mouseover(490, '0_3_87');
       "><br>
-    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#precompose_cocone_identity"><span class="id" title="definition">precompose_cocone_identity</span></a>.</span><span class="command" onmouseout="
+        <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#precompose_cocone_identity"><span class="id" title="definition">precompose_cocone_identity</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_87');
       " onmouseover="
       mouseover(491, '0_3_87');

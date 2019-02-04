@@ -228,17 +228,17 @@
           
 
             i = 42;
-            data = "2 subgoals (ID 51)	  	  H : Funext	  A : Type	  K : axiomK A	  x : A	  x' : x = x	  X : Contr (x = x)	  ============================	  axiomK_hset hset_axiomK x x' = K x x'		subgoal 2 (ID 50) is:	 Contr (x = x)	";
+            data = "1 subgoal (ID 49)	  	  H : Funext	  A : Type	  K : axiomK A	  x : A	  x' : x = x	  ============================	  Contr (x = x) -> axiomK_hset hset_axiomK x x' = K x x'	1 subgoal (ID 51)	  	  H : Funext	  A : Type	  K : axiomK A	  x : A	  x' : x = x	  X : Contr (x = x)	  ============================	  axiomK_hset hset_axiomK x x' = K x x'	";
             responses[i]=data;
           
 
             i = 43;
-            data = "1 subgoal (ID 50)	  	  H : Funext	  A : Type	  K : axiomK A	  x : A	  x' : x = x	  ============================	  Contr (x = x)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 50)		subgoal 1 (ID 50) is:	 Contr (x = x)	subgoal 2 (ID 20) is:	 Sect axiomK_hset (@hset_axiomK A)	";
             responses[i]=data;
           
 
             i = 44;
-            data = "1 subgoal (ID 88)	  	  H : Funext	  A : Type	  K : axiomK A	  x : A	  x' : x = x	  ============================	  forall y : x = x, 1 = y	";
+            data = "1 subgoal (ID 50)	  	  H : Funext	  A : Type	  K : axiomK A	  x : A	  x' : x = x	  ============================	  Contr (x = x)	1 subgoal (ID 88)	  	  H : Funext	  A : Type	  K : axiomK A	  x : A	  x' : x = x	  ============================	  forall y : x = x, 1 = y	";
             responses[i]=data;
           
 
@@ -1006,11 +1006,12 @@ A type is a set if and only if it satisfies Axiom K.
       " onmouseover="
       mouseover(41, '0_3_11');
       "><br>
-    <span class="id" title="tactic">cut</span> (<a class="idref" href="HoTT.Basics.Overture.html#Contr"><span class="id" title="abbreviation">Contr</span></a> (<span class="id" title="var">x</span><a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a><span class="id" title="var">x</span>)). </span><span class="command" onmouseout="
+    <span class="id" title="tactic">cut</span> (<a class="idref" href="HoTT.Basics.Overture.html#Contr"><span class="id" title="abbreviation">Contr</span></a> (<span class="id" title="var">x</span><a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a><span class="id" title="var">x</span>)).</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(42, '0_3_11');
-      "><span class="id" title="tactic">intro</span>. </span><span class="command" onmouseout="
+      "><br>
+    + <span class="id" title="tactic">intro</span>. </span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(43, '0_3_11');
@@ -1019,7 +1020,7 @@ A type is a set if and only if it satisfies Axiom K.
       " onmouseover="
       mouseover(44, '0_3_11');
       "><br>
-    <span class="id" title="tactic">∃</span> 1. </span><span class="command" onmouseout="
+    + <span class="id" title="tactic">∃</span> 1. </span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(45, '0_3_11');

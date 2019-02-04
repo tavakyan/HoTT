@@ -148,17 +148,17 @@
           
 
             i = 26;
-            data = "2 subgoals (ID 106)	  	  X : Type	  P : Susp X -> Type	  H_N : P North	  H_S : P South	  H_merid : forall x : X, transport P (merid x) H_N = H_S	  ============================	  forall c : Unit, P (pushr c)		subgoal 2 (ID 108) is:	 forall a : X,	 transport P (pp a) (Unit_ind H_N (const tt a)) = ?pushc (const tt a)	";
+            data = "1 subgoal (ID 104)	  	  X : Type	  P : Susp X -> Type	  H_N : P North	  H_S : P South	  H_merid : forall x : X, transport P (merid x) H_N = H_S	  ============================	  forall b : Unit, P (pushl b)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 106)		subgoal 1 (ID 106) is:	 forall c : Unit, P (pushr c)	subgoal 2 (ID 108) is:	 forall a : X,	 transport P (pp a) (Unit_ind H_N (const tt a)) = ?pushc (const tt a)	";
             responses[i]=data;
           
 
             i = 27;
-            data = "1 subgoal (ID 108)	  	  X : Type	  P : Susp X -> Type	  H_N : P North	  H_S : P South	  H_merid : forall x : X, transport P (merid x) H_N = H_S	  ============================	  forall a : X,	  transport P (pp a) (Unit_ind H_N (const tt a)) = Unit_ind H_S (const tt a)	";
+            data = "1 subgoal (ID 106)	  	  X : Type	  P : Susp X -> Type	  H_N : P North	  H_S : P South	  H_merid : forall x : X, transport P (merid x) H_N = H_S	  ============================	  forall c : Unit, P (pushr c)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 108)		subgoal 1 (ID 108) is:	 forall a : X,	 transport P (pp a) (Unit_ind H_N (const tt a)) = Unit_ind H_S (const tt a)	";
             responses[i]=data;
           
 
             i = 28;
-            data = "No more subgoals.	";
+            data = "1 subgoal (ID 108)	  	  X : Type	  P : Susp X -> Type	  H_N : P North	  H_S : P South	  H_merid : forall x : X, transport P (merid x) H_N = H_S	  ============================	  forall a : X,	  transport P (pp a) (Unit_ind H_N (const tt a)) = Unit_ind H_S (const tt a)	No more subgoals.	";
             responses[i]=data;
           
 
@@ -288,12 +288,12 @@
           
 
             i = 54;
-            data = "1 subgoal (ID 132)	  	  X : Type	  Y : Type	  H_N, H_S : Y	  H_merid : X -> H_N = H_S	  x : X	  ============================	  apD (Susp_rec H_N H_S H_merid) (merid x) =	  transport_const (merid x) H_N @ H_merid x	";
+            data = "1 subgoal (ID 131)	  	  X : Type	  Y : Type	  H_N, H_S : Y	  H_merid : X -> H_N = H_S	  x : X	  ============================	  transport_const (merid x) H_N @ ap (Susp_rec H_N H_S H_merid) (merid x) =	  apD (Susp_rec H_N H_S H_merid) (merid x)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 132)		subgoal 1 (ID 132) is:	 apD (Susp_rec H_N H_S H_merid) (merid x) =	 transport_const (merid x) H_N @ H_merid x	";
             responses[i]=data;
           
 
             i = 55;
-            data = "No more subgoals.	";
+            data = "1 subgoal (ID 132)	  	  X : Type	  Y : Type	  H_N, H_S : Y	  H_merid : X -> H_N = H_S	  x : X	  ============================	  apD (Susp_rec H_N H_S H_merid) (merid x) =	  transport_const (merid x) H_N @ H_merid x	No more subgoals.	";
             responses[i]=data;
           
 
@@ -733,12 +733,12 @@
           
 
             i = 143;
-            data = "1 subgoal (ID 269)	  	  X : Type	  Z : Type	  H_N, H_S : Z	  f : X -> H_N = H_S	  n : NullHomotopy (Susp_rec H_N H_S f)	  x : X	  ============================	  ap (Susp_rec H_N H_S f) (merid x) @ pr2 n South = pr2 n North	";
+            data = "1 subgoal (ID 268)	  	  X : Type	  Z : Type	  H_N, H_S : Z	  f : X -> H_N = H_S	  n : NullHomotopy (Susp_rec H_N H_S f)	  x : X	  ============================	  f x @ pr2 n South = ap (Susp_rec H_N H_S f) (merid x) @ pr2 n South	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 269)		subgoal 1 (ID 269) is:	 ap (Susp_rec H_N H_S f) (merid x) @ pr2 n South = pr2 n North	";
             responses[i]=data;
           
 
             i = 144;
-            data = "1 subgoal (ID 301)	  	  X : Type	  Z : Type	  H_N, H_S : Z	  f : X -> H_N = H_S	  n : NullHomotopy (Susp_rec H_N H_S f)	  x : X	  ============================	  pr2 n North @ ap (fun _ : Susp X => pr1 n) (merid x) = pr2 n North	";
+            data = "1 subgoal (ID 269)	  	  X : Type	  Z : Type	  H_N, H_S : Z	  f : X -> H_N = H_S	  n : NullHomotopy (Susp_rec H_N H_S f)	  x : X	  ============================	  ap (Susp_rec H_N H_S f) (merid x) @ pr2 n South = pr2 n North	1 subgoal (ID 301)	  	  X : Type	  Z : Type	  H_N, H_S : Z	  f : X -> H_N = H_S	  n : NullHomotopy (Susp_rec H_N H_S f)	  x : X	  ============================	  pr2 n North @ ap (fun _ : Susp X => pr1 n) (merid x) = pr2 n North	";
             responses[i]=data;
           
 
@@ -1922,17 +1922,17 @@
       " onmouseover="
       mouseover(26, '0_3_7');
       "><br>
-  <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Basics.Overture.html#Unit_ind"><span class="id" title="definition">Unit_ind</span></a> <span class="id" title="var">H_N</span>).</span><span class="command" onmouseout="
+  - <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Basics.Overture.html#Unit_ind"><span class="id" title="definition">Unit_ind</span></a> <span class="id" title="var">H_N</span>).</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(27, '0_3_7');
       "><br>
-  <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Basics.Overture.html#Unit_ind"><span class="id" title="definition">Unit_ind</span></a> <span class="id" title="var">H_S</span>).</span><span class="command" onmouseout="
+  - <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Basics.Overture.html#Unit_ind"><span class="id" title="definition">Unit_ind</span></a> <span class="id" title="var">H_S</span>).</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(28, '0_3_7');
       "><br>
-  <span class="id" title="tactic">exact</span> (<span class="id" title="var">H_merid</span>).</span><span class="command" onmouseout="
+  - <span class="id" title="tactic">exact</span> (<span class="id" title="var">H_merid</span>).</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(29, '0_3_7');
@@ -2066,12 +2066,12 @@ We want to allow the user to forget that we've defined suspension in this way.
       " onmouseover="
       mouseover(54, '0_3_11');
       "><br>
-  <span class="id" title="tactic">symmetry</span>; <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Basics.PathGroupoids.html#apD_const"><span class="id" title="lemma">apD_const</span></a> (<a class="idref" href="HoTT.HIT.Suspension.html#Susp_rec"><span class="id" title="definition">Susp_rec</span></a> <span class="id" title="var">H_N</span> <span class="id" title="var">H_S</span> <span class="id" title="var">H_merid</span>) <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
+  - <span class="id" title="tactic">symmetry</span>; <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Basics.PathGroupoids.html#apD_const"><span class="id" title="lemma">apD_const</span></a> (<a class="idref" href="HoTT.HIT.Suspension.html#Susp_rec"><span class="id" title="definition">Susp_rec</span></a> <span class="id" title="var">H_N</span> <span class="id" title="var">H_S</span> <span class="id" title="var">H_merid</span>) <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(55, '0_3_11');
       "><br>
-  <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.Suspension.html#Susp_ind_beta_merid"><span class="id" title="definition">Susp_ind_beta_merid</span></a> (<span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> : <a class="idref" href="HoTT.HIT.Suspension.html#Susp"><span class="id" title="definition">Susp</span></a> <span class="id" title="var">X</span> ⇒ <span class="id" title="var">Y</span>) <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
+  - <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.HIT.Suspension.html#Susp_ind_beta_merid"><span class="id" title="definition">Susp_ind_beta_merid</span></a> (<span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> : <a class="idref" href="HoTT.HIT.Suspension.html#Susp"><span class="id" title="definition">Susp</span></a> <span class="id" title="var">X</span> ⇒ <span class="id" title="var">Y</span>) <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(56, '0_3_11');
@@ -2429,17 +2429,17 @@ We want to allow the user to forget that we've defined suspension in this way.
       " onmouseover="
       mouseover(143, '0_3_23');
       "><br>
-  <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#whiskerR"><span class="id" title="definition">whiskerR</span></a>, <a class="idref" href="HoTT.Basics.Overture.html#inverse"><span class="id" title="definition">inverse</span></a>, <a class="idref" href="HoTT.HIT.Suspension.html#Susp_rec_beta_merid"><span class="id" title="definition">Susp_rec_beta_merid</span></a>.</span><span class="command" onmouseout="
+  - <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#whiskerR"><span class="id" title="definition">whiskerR</span></a>, <a class="idref" href="HoTT.Basics.Overture.html#inverse"><span class="id" title="definition">inverse</span></a>, <a class="idref" href="HoTT.HIT.Suspension.html#Susp_rec_beta_merid"><span class="id" title="definition">Susp_rec_beta_merid</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
       mouseover(144, '0_3_23');
       "><br>
-  <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_Ap"><span class="id" title="definition">concat_Ap</span></a> <span class="id" title="var">n</span><a class="idref" href="HoTT.Basics.Overture.html#dec9bdefe956e49d73ffc4a7400937db"><span class="id" title="notation">.2</span></a> (<a class="idref" href="HoTT.HIT.Suspension.html#merid"><span class="id" title="definition">merid</span></a> <span class="id" title="var">x</span>) <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
+  - <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_Ap"><span class="id" title="definition">concat_Ap</span></a> <span class="id" title="var">n</span><a class="idref" href="HoTT.Basics.Overture.html#dec9bdefe956e49d73ffc4a7400937db"><span class="id" title="notation">.2</span></a> (<a class="idref" href="HoTT.HIT.Suspension.html#merid"><span class="id" title="definition">merid</span></a> <span class="id" title="var">x</span>) <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
       mouseover(145, '0_3_23');
       "><br>
-  <span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.Basics.PathGroupoids.html#concatR"><span class="id" title="abbreviation">concatR</span></a> (<a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_p1"><span class="id" title="definition">concat_p1</span></a> <span class="id" title="var">_</span>)), <a class="idref" href="HoTT.Basics.PathGroupoids.html#whiskerL"><span class="id" title="definition">whiskerL</span></a>. </span><span class="command" onmouseout="
+    <span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.Basics.PathGroupoids.html#concatR"><span class="id" title="abbreviation">concatR</span></a> (<a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_p1"><span class="id" title="definition">concat_p1</span></a> <span class="id" title="var">_</span>)), <a class="idref" href="HoTT.Basics.PathGroupoids.html#whiskerL"><span class="id" title="definition">whiskerL</span></a>. </span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
       mouseover(146, '0_3_23');

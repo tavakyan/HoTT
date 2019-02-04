@@ -363,22 +363,22 @@
           
 
             i = 69;
-            data = "2 subgoals (ID 87)	  	  H : Univalence	  n : trunc_index	  A : Type	  B : Type	  f : A -> B	  H0 : IsConnMap n f	  P : B -> Type	  HP : forall b : B, IsTrunc n (P b)	  d : forall a : A, P (f a)	  ============================	  forall y : ExtensionAlong f P d, extension_conn_map_elim n f P d = y		subgoal 2 (ID 56) is:	 IsTrunc m'.+1 (ExtensionAlong f P d)	";
+            data = "1 subgoal (ID 43)	  	  H : Univalence	  n : trunc_index	  A : Type	  B : Type	  f : A -> B	  H0 : IsConnMap n f	  P : B -> Type	  HP : forall b : B, IsTrunc n (P b)	  d : forall a : A, P (f a)	  ============================	  Contr (ExtensionAlong f P d)	1 subgoal (ID 87)	  	  H : Univalence	  n : trunc_index	  A : Type	  B : Type	  f : A -> B	  H0 : IsConnMap n f	  P : B -> Type	  HP : forall b : B, IsTrunc n (P b)	  d : forall a : A, P (f a)	  ============================	  forall y : ExtensionAlong f P d, extension_conn_map_elim n f P d = y	";
             responses[i]=data;
           
 
             i = 70;
-            data = "2 subgoals (ID 88)	  	  H : Univalence	  n : trunc_index	  A : Type	  B : Type	  f : A -> B	  H0 : IsConnMap n f	  P : B -> Type	  HP : forall b : B, IsTrunc n (P b)	  d : forall a : A, P (f a)	  y : ExtensionAlong f P d	  ============================	  extension_conn_map_elim n f P d = y		subgoal 2 (ID 56) is:	 IsTrunc m'.+1 (ExtensionAlong f P d)	";
+            data = "1 subgoal (ID 88)	  	  H : Univalence	  n : trunc_index	  A : Type	  B : Type	  f : A -> B	  H0 : IsConnMap n f	  P : B -> Type	  HP : forall b : B, IsTrunc n (P b)	  d : forall a : A, P (f a)	  y : ExtensionAlong f P d	  ============================	  extension_conn_map_elim n f P d = y	";
             responses[i]=data;
           
 
             i = 71;
-            data = "1 subgoal (ID 56)	  	  H : Univalence	  m', n : trunc_index	  A : Type	  B : Type	  f : A -> B	  H0 : IsConnMap n f	  IH : forall P : B -> Type,	       (forall b : B, IsTrunc (m' -2+ n) (P b)) ->	       forall d : forall a : A, P (f a), IsTrunc m' (ExtensionAlong f P d)	  P : B -> Type	  HP : forall b : B, IsTrunc (m' -2+ n).+1 (P b)	  d : forall a : A, P (f a)	  ============================	  IsTrunc m'.+1 (ExtensionAlong f P d)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 56)		subgoal 1 (ID 56) is:	 IsTrunc m'.+1 (ExtensionAlong f P d)	";
             responses[i]=data;
           
 
             i = 72;
-            data = "1 subgoal (ID 109)	  	  H : Univalence	  m', n : trunc_index	  A : Type	  B : Type	  f : A -> B	  H0 : IsConnMap n f	  IH : forall P : B -> Type,	       (forall b : B, IsTrunc (m' -2+ n) (P b)) ->	       forall d : forall a : A, P (f a), IsTrunc m' (ExtensionAlong f P d)	  P : B -> Type	  HP : forall b : B, IsTrunc (m' -2+ n).+1 (P b)	  d : forall a : A, P (f a)	  e, e' : ExtensionAlong f P d	  ============================	  IsTrunc_internal m' (e = e')	";
+            data = "1 subgoal (ID 56)	  	  H : Univalence	  m', n : trunc_index	  A : Type	  B : Type	  f : A -> B	  H0 : IsConnMap n f	  IH : forall P : B -> Type,	       (forall b : B, IsTrunc (m' -2+ n) (P b)) ->	       forall d : forall a : A, P (f a), IsTrunc m' (ExtensionAlong f P d)	  P : B -> Type	  HP : forall b : B, IsTrunc (m' -2+ n).+1 (P b)	  d : forall a : A, P (f a)	  ============================	  IsTrunc m'.+1 (ExtensionAlong f P d)	1 subgoal (ID 109)	  	  H : Univalence	  m', n : trunc_index	  A : Type	  B : Type	  f : A -> B	  H0 : IsConnMap n f	  IH : forall P : B -> Type,	       (forall b : B, IsTrunc (m' -2+ n) (P b)) ->	       forall d : forall a : A, P (f a), IsTrunc m' (ExtensionAlong f P d)	  P : B -> Type	  HP : forall b : B, IsTrunc (m' -2+ n).+1 (P b)	  d : forall a : A, P (f a)	  e, e' : ExtensionAlong f P d	  ============================	  IsTrunc_internal m' (e = e')	";
             responses[i]=data;
           
 
@@ -1153,37 +1153,37 @@
           
 
             i = 227;
-            data = "3 subgoals (ID 84)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected m.+1 A	  B : Type	  b0 : B	  H1 : IsConnected n.+1 B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m -2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  ============================	  IsConnMap m (unit_name a0)		subgoal 2 (ID 85) is:	 forall b : A,	 In m (ExtensionAlong (unit_name b0) (P b) (unit_name (f_b0 b)))	subgoal 3 (ID 81) is:	 {f : forall (a : A) (b : B), P a b &	 {e_a0 : forall b : B, f a0 b = f_a0 b &	 {e_b0 : forall a : A, f a b0 = f_b0 a & e_b0 a0 = e_a0 b0 @ f_a0b0}}}	";
+            data = "1 subgoal (ID 79)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected m.+1 A	  B : Type	  b0 : B	  H1 : IsConnected n.+1 B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m -2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  ============================	  ExtensionAlong (unit_name a0)	    (fun a : A => ExtensionAlong (unit_name b0) (P a) (unit_name (f_b0 a)))	    (unit_name (f_a0; unit_name f_a0b0))	2 subgoals (ID 84)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected m.+1 A	  B : Type	  b0 : B	  H1 : IsConnected n.+1 B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m -2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  ============================	  IsConnMap m (unit_name a0)		subgoal 2 (ID 85) is:	 forall b : A,	 In m (ExtensionAlong (unit_name b0) (P b) (unit_name (f_b0 b)))	";
             responses[i]=data;
           
 
             i = 228;
-            data = "2 subgoals (ID 85)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected m.+1 A	  B : Type	  b0 : B	  H1 : IsConnected n.+1 B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m -2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  ============================	  forall b : A,	  In m (ExtensionAlong (unit_name b0) (P b) (unit_name (f_b0 b)))		subgoal 2 (ID 81) is:	 {f : forall (a : A) (b : B), P a b &	 {e_a0 : forall b : B, f a0 b = f_a0 b &	 {e_b0 : forall a : A, f a b0 = f_b0 a & e_b0 a0 = e_a0 b0 @ f_a0b0}}}	";
+            data = "1 subgoal (ID 84)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected m.+1 A	  B : Type	  b0 : B	  H1 : IsConnected n.+1 B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m -2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  ============================	  IsConnMap m (unit_name a0)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 85)		subgoal 1 (ID 85) is:	 forall b : A,	 In m (ExtensionAlong (unit_name b0) (P b) (unit_name (f_b0 b)))	subgoal 2 (ID 81) is:	 {f : forall (a : A) (b : B), P a b &	 {e_a0 : forall b : B, f a0 b = f_a0 b &	 {e_b0 : forall a : A, f a b0 = f_b0 a & e_b0 a0 = e_a0 b0 @ f_a0b0}}}	";
             responses[i]=data;
           
 
             i = 229;
-            data = "2 subgoals (ID 90)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected m.+1 A	  B : Type	  b0 : B	  H1 : IsConnected n.+1 B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m -2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  a : A	  ============================	  In m (ExtensionAlong (unit_name b0) (P a) (unit_name (f_b0 a)))		subgoal 2 (ID 81) is:	 {f : forall (a : A) (b : B), P a b &	 {e_a0 : forall b : B, f a0 b = f_a0 b &	 {e_b0 : forall a : A, f a b0 = f_b0 a & e_b0 a0 = e_a0 b0 @ f_a0b0}}}	";
+            data = "1 subgoal (ID 85)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected m.+1 A	  B : Type	  b0 : B	  H1 : IsConnected n.+1 B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m -2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  ============================	  forall b : A,	  In m (ExtensionAlong (unit_name b0) (P b) (unit_name (f_b0 b)))	1 subgoal (ID 90)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected m.+1 A	  B : Type	  b0 : B	  H1 : IsConnected n.+1 B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m -2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  a : A	  ============================	  In m (ExtensionAlong (unit_name b0) (P a) (unit_name (f_b0 a)))	";
             responses[i]=data;
           
 
             i = 230;
-            data = "3 subgoals (ID 95)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected m.+1 A	  B : Type	  b0 : B	  H1 : IsConnected n.+1 B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m -2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  a : A	  ============================	  IsConnMap n (unit_name b0)		subgoal 2 (ID 96) is:	 forall b : B, IsTrunc (m -2+ n) (P a b)	subgoal 3 (ID 81) is:	 {f : forall (a : A) (b : B), P a b &	 {e_a0 : forall b : B, f a0 b = f_a0 b &	 {e_b0 : forall a : A, f a b0 = f_b0 a & e_b0 a0 = e_a0 b0 @ f_a0b0}}}	";
+            data = "2 subgoals (ID 95)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected m.+1 A	  B : Type	  b0 : B	  H1 : IsConnected n.+1 B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m -2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  a : A	  ============================	  IsConnMap n (unit_name b0)		subgoal 2 (ID 96) is:	 forall b : B, IsTrunc (m -2+ n) (P a b)	";
             responses[i]=data;
           
 
             i = 231;
-            data = "2 subgoals (ID 96)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected m.+1 A	  B : Type	  b0 : B	  H1 : IsConnected n.+1 B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m -2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  a : A	  ============================	  forall b : B, IsTrunc (m -2+ n) (P a b)		subgoal 2 (ID 81) is:	 {f : forall (a : A) (b : B), P a b &	 {e_a0 : forall b : B, f a0 b = f_a0 b &	 {e_b0 : forall a : A, f a b0 = f_b0 a & e_b0 a0 = e_a0 b0 @ f_a0b0}}}	";
+            data = "1 subgoal (ID 95)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected m.+1 A	  B : Type	  b0 : B	  H1 : IsConnected n.+1 B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m -2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  a : A	  ============================	  IsConnMap n (unit_name b0)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	2 subgoals (ID 96)		subgoal 1 (ID 96) is:	 forall b : B, IsTrunc (m -2+ n) (P a b)	subgoal 2 (ID 81) is:	 {f : forall (a : A) (b : B), P a b &	 {e_a0 : forall b : B, f a0 b = f_a0 b &	 {e_b0 : forall a : A, f a b0 = f_b0 a & e_b0 a0 = e_a0 b0 @ f_a0b0}}}	";
             responses[i]=data;
           
 
             i = 232;
-            data = "1 subgoal (ID 81)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected m.+1 A	  B : Type	  b0 : B	  H1 : IsConnected n.+1 B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m -2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  goal_as_extension : ExtensionAlong (unit_name a0)	                        (fun a : A =>	                         ExtensionAlong (unit_name b0) 	                           (P a) (unit_name (f_b0 a)))	                        (unit_name (f_a0; unit_name f_a0b0))	  ============================	  {f : forall (a : A) (b : B), P a b &	  {e_a0 : forall b : B, f a0 b = f_a0 b &	  {e_b0 : forall a : A, f a b0 = f_b0 a & e_b0 a0 = e_a0 b0 @ f_a0b0}}}	";
+            data = "1 subgoal (ID 96)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected m.+1 A	  B : Type	  b0 : B	  H1 : IsConnected n.+1 B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m -2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  a : A	  ============================	  forall b : B, IsTrunc (m -2+ n) (P a b)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 81)		subgoal 1 (ID 81) is:	 {f : forall (a : A) (b : B), P a b &	 {e_a0 : forall b : B, f a0 b = f_a0 b &	 {e_b0 : forall a : A, f a b0 = f_b0 a & e_b0 a0 = e_a0 b0 @ f_a0b0}}}	";
             responses[i]=data;
           
 
             i = 233;
-            data = "1 subgoal (ID 105)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected m.+1 A	  B : Type	  b0 : B	  H1 : IsConnected n.+1 B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m -2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  f_eb : forall y : A,	         ExtensionAlong (unit_name b0) (P y) (unit_name (f_b0 y))	  name_ea_eab : Unit -> f_eb a0 = (f_a0; unit_name f_a0b0)	  ============================	  {f : forall (a : A) (b : B), P a b &	  {e_a0 : forall b : B, f a0 b = f_a0 b &	  {e_b0 : forall a : A, f a b0 = f_b0 a & e_b0 a0 = e_a0 b0 @ f_a0b0}}}	";
+            data = "1 subgoal (ID 81)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected m.+1 A	  B : Type	  b0 : B	  H1 : IsConnected n.+1 B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m -2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  goal_as_extension : ExtensionAlong (unit_name a0)	                        (fun a : A =>	                         ExtensionAlong (unit_name b0) 	                           (P a) (unit_name (f_b0 a)))	                        (unit_name (f_a0; unit_name f_a0b0))	  ============================	  {f : forall (a : A) (b : B), P a b &	  {e_a0 : forall b : B, f a0 b = f_a0 b &	  {e_b0 : forall a : A, f a b0 = f_b0 a & e_b0 a0 = e_a0 b0 @ f_a0b0}}}	1 subgoal (ID 105)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected m.+1 A	  B : Type	  b0 : B	  H1 : IsConnected n.+1 B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m -2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  f_eb : forall y : A,	         ExtensionAlong (unit_name b0) (P y) (unit_name (f_b0 y))	  name_ea_eab : Unit -> f_eb a0 = (f_a0; unit_name f_a0b0)	  ============================	  {f : forall (a : A) (b : B), P a b &	  {e_a0 : forall b : B, f a0 b = f_a0 b &	  {e_b0 : forall a : A, f a b0 = f_b0 a & e_b0 a0 = e_a0 b0 @ f_a0b0}}}	";
             responses[i]=data;
           
 
@@ -1551,12 +1551,12 @@ This lemma is most useful via corollaries like the wedge-inclusion, the wiggly w
       " onmouseover="
       mouseover(69, '0_3_15');
       "><br>
-  <span class="id" title="tactic">∃</span> (<a class="idref" href="HoTT.HIT.Truncations.html#TrM.RSU.extension_conn_map_elim"><span class="id" title="lemma">extension_conn_map_elim</span></a> <span class="id" title="var">n</span> <span class="id" title="var">f</span> <span class="id" title="var">P</span> <span class="id" title="var">d</span>).</span><span class="command" onmouseout="
+  - <span class="id" title="tactic">∃</span> (<a class="idref" href="HoTT.HIT.Truncations.html#TrM.RSU.extension_conn_map_elim"><span class="id" title="lemma">extension_conn_map_elim</span></a> <span class="id" title="var">n</span> <span class="id" title="var">f</span> <span class="id" title="var">P</span> <span class="id" title="var">d</span>).</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(70, '0_3_15');
       "><br>
-  <span class="id" title="tactic">intros</span> <span class="id" title="var">y</span>. </span><span class="command" onmouseout="
+    <span class="id" title="tactic">intros</span> <span class="id" title="var">y</span>. </span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(71, '0_3_15');
@@ -1565,7 +1565,7 @@ This lemma is most useful via corollaries like the wedge-inclusion, the wiggly w
       " onmouseover="
       mouseover(72, '0_3_15');
       "><br>
-  <span class="id" title="tactic">intros</span> <span class="id" title="var">e</span> <span class="id" title="var">e'</span>. </span><span class="command" onmouseout="
+  - <span class="id" title="tactic">intros</span> <span class="id" title="var">e</span> <span class="id" title="var">e'</span>. </span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(73, '0_3_15');
@@ -2127,72 +2127,72 @@ Once again, we believe that the type of the conclusion is an hprop (though we do
       " onmouseover="
       mouseover(227, '0_3_47');
       "><br>
-    <span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.HIT.Truncations.html#TrM.RSU.extension_conn_map_elim"><span class="id" title="lemma">extension_conn_map_elim</span></a> <a class="idref" href="HoTT.HIT.Connectedness.html#Wedge_Incl_Conn.m"><span class="id" title="variable">m</span></a>).</span><span class="command" onmouseout="
+  - <span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.HIT.Truncations.html#TrM.RSU.extension_conn_map_elim"><span class="id" title="lemma">extension_conn_map_elim</span></a> <a class="idref" href="HoTT.HIT.Connectedness.html#Wedge_Incl_Conn.m"><span class="id" title="variable">m</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(228, '0_3_47');
       "><br>
-      <span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.HIT.Connectedness.html#conn_point_incl"><span class="id" title="definition">conn_point_incl</span></a> <a class="idref" href="HoTT.HIT.Connectedness.html#Wedge_Incl_Conn.a0"><span class="id" title="variable">a0</span></a>).</span><span class="command" onmouseout="
+    + <span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.HIT.Connectedness.html#conn_point_incl"><span class="id" title="definition">conn_point_incl</span></a> <a class="idref" href="HoTT.HIT.Connectedness.html#Wedge_Incl_Conn.a0"><span class="id" title="variable">a0</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(229, '0_3_47');
       "><br>
-    <span class="id" title="tactic">intros</span> <span class="id" title="var">a</span>.</span><span class="command" onmouseout="
+    + <span class="id" title="tactic">intros</span> <span class="id" title="var">a</span>.</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(230, '0_3_47');
       "><br>
-    <span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.HIT.Connectedness.html#istrunc_extension_along_conn"><span class="id" title="lemma">istrunc_extension_along_conn</span></a> (<span class="id" title="var">n</span> := <a class="idref" href="HoTT.HIT.Connectedness.html#Wedge_Incl_Conn.n"><span class="id" title="variable">n</span></a>)).</span><span class="command" onmouseout="
+      <span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.HIT.Connectedness.html#istrunc_extension_along_conn"><span class="id" title="lemma">istrunc_extension_along_conn</span></a> (<span class="id" title="var">n</span> := <a class="idref" href="HoTT.HIT.Connectedness.html#Wedge_Incl_Conn.n"><span class="id" title="variable">n</span></a>)).</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(231, '0_3_47');
       "><br>
-      <span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.HIT.Connectedness.html#conn_point_incl"><span class="id" title="definition">conn_point_incl</span></a> <a class="idref" href="HoTT.HIT.Connectedness.html#Wedge_Incl_Conn.b0"><span class="id" title="variable">b0</span></a>).</span><span class="command" onmouseout="
+      × <span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.HIT.Connectedness.html#conn_point_incl"><span class="id" title="definition">conn_point_incl</span></a> <a class="idref" href="HoTT.HIT.Connectedness.html#Wedge_Incl_Conn.b0"><span class="id" title="variable">b0</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(232, '0_3_47');
       "><br>
-    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Connectedness.html#Wedge_Incl_Conn.HP"><span class="id" title="variable">HP</span></a>.</span><span class="command" onmouseout="
+      × <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Connectedness.html#Wedge_Incl_Conn.HP"><span class="id" title="variable">HP</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(233, '0_3_47');
       "><br>
-  <span class="id" title="tactic">destruct</span> <span class="id" title="var">goal_as_extension</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">f_eb</span> <span class="id" title="var">name_ea_eab</span>].</span><span class="command" onmouseout="
+  - <span class="id" title="tactic">destruct</span> <span class="id" title="var">goal_as_extension</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">f_eb</span> <span class="id" title="var">name_ea_eab</span>].</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(234, '0_3_47');
       "><br>
-  <span class="id" title="tactic">assert</span> (<span class="id" title="var">ea_eab</span> := <span class="id" title="var">name_ea_eab</span> <a class="idref" href="HoTT.Basics.Overture.html#tt"><span class="id" title="constructor">tt</span></a>); <span class="id" title="tactic">clear</span> <span class="id" title="var">name_ea_eab</span>.</span><span class="command" onmouseout="
+    <span class="id" title="tactic">assert</span> (<span class="id" title="var">ea_eab</span> := <span class="id" title="var">name_ea_eab</span> <a class="idref" href="HoTT.Basics.Overture.html#tt"><span class="id" title="constructor">tt</span></a>); <span class="id" title="tactic">clear</span> <span class="id" title="var">name_ea_eab</span>.</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(235, '0_3_47');
       "><br>
-  <span class="id" title="tactic">∃</span> (<span class="id" title="keyword">fun</span> <span class="id" title="var">a</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#pr1"><span class="id" title="abbreviation">pr1</span></a> (<span class="id" title="var">f_eb</span> <a class="idref" href="HoTT.HIT.Connectedness.html#a"><span class="id" title="variable">a</span></a>)).</span><span class="command" onmouseout="
+    <span class="id" title="tactic">∃</span> (<span class="id" title="keyword">fun</span> <span class="id" title="var">a</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#pr1"><span class="id" title="abbreviation">pr1</span></a> (<span class="id" title="var">f_eb</span> <a class="idref" href="HoTT.HIT.Connectedness.html#a"><span class="id" title="variable">a</span></a>)).</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(236, '0_3_47');
       "><br>
-  <span class="id" title="tactic">∃</span> (<span class="id" title="keyword">fun</span> <span class="id" title="var">b</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#apD10"><span class="id" title="definition">apD10</span></a> (<span class="id" title="var">ea_eab</span> ..<a class="idref" href="HoTT.Types.Sigma.html#0214da69f75b0ea1f1455ef6ab703923"><span class="id" title="notation">1</span></a>) <a class="idref" href="HoTT.HIT.Connectedness.html#b"><span class="id" title="variable">b</span></a>).</span><span class="command" onmouseout="
+    <span class="id" title="tactic">∃</span> (<span class="id" title="keyword">fun</span> <span class="id" title="var">b</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#apD10"><span class="id" title="definition">apD10</span></a> (<span class="id" title="var">ea_eab</span> ..<a class="idref" href="HoTT.Types.Sigma.html#0214da69f75b0ea1f1455ef6ab703923"><span class="id" title="notation">1</span></a>) <a class="idref" href="HoTT.HIT.Connectedness.html#b"><span class="id" title="variable">b</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(237, '0_3_47');
       "><br>
-  <span class="id" title="tactic">∃</span> (<span class="id" title="keyword">fun</span> <span class="id" title="var">a</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#pr2"><span class="id" title="abbreviation">pr2</span></a> (<span class="id" title="var">f_eb</span> <a class="idref" href="HoTT.HIT.Connectedness.html#a"><span class="id" title="variable">a</span></a>) <a class="idref" href="HoTT.Basics.Overture.html#tt"><span class="id" title="constructor">tt</span></a>).</span><span class="command" onmouseout="
+    <span class="id" title="tactic">∃</span> (<span class="id" title="keyword">fun</span> <span class="id" title="var">a</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#pr2"><span class="id" title="abbreviation">pr2</span></a> (<span class="id" title="var">f_eb</span> <a class="idref" href="HoTT.HIT.Connectedness.html#a"><span class="id" title="variable">a</span></a>) <a class="idref" href="HoTT.Basics.Overture.html#tt"><span class="id" title="constructor">tt</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(238, '0_3_47');
       "><br>
-  <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#moveL_Mp"><span class="id" title="definition">moveL_Mp</span></a>.</span><span class="command" onmouseout="
+    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#moveL_Mp"><span class="id" title="definition">moveL_Mp</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(239, '0_3_47');
       "><br>
-  <span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.Basics.PathGroupoids.html#concatR"><span class="id" title="abbreviation">concatR</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#apD10"><span class="id" title="definition">apD10</span></a> (<span class="id" title="var">ea_eab</span> ..<a class="idref" href="HoTT.Types.Sigma.html#ec199ae10437549631e20531f3bbafd3"><span class="id" title="notation">2</span></a>) <a class="idref" href="HoTT.Basics.Overture.html#tt"><span class="id" title="constructor">tt</span></a>)).</span><span class="command" onmouseout="
+    <span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.Basics.PathGroupoids.html#concatR"><span class="id" title="abbreviation">concatR</span></a> (<a class="idref" href="HoTT.Basics.Overture.html#apD10"><span class="id" title="definition">apD10</span></a> (<span class="id" title="var">ea_eab</span> ..<a class="idref" href="HoTT.Types.Sigma.html#ec199ae10437549631e20531f3bbafd3"><span class="id" title="notation">2</span></a>) <a class="idref" href="HoTT.Basics.Overture.html#tt"><span class="id" title="constructor">tt</span></a>)).</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(240, '0_3_47');
       "><br>
-  <span class="id" title="tactic">set</span> (<span class="id" title="var">ea</span> := <span class="id" title="var">ea_eab</span> ..<a class="idref" href="HoTT.Types.Sigma.html#0214da69f75b0ea1f1455ef6ab703923"><span class="id" title="notation">1</span></a>). </span><span class="command" onmouseout="
+    <span class="id" title="tactic">set</span> (<span class="id" title="var">ea</span> := <span class="id" title="var">ea_eab</span> ..<a class="idref" href="HoTT.Types.Sigma.html#0214da69f75b0ea1f1455ef6ab703923"><span class="id" title="notation">1</span></a>). </span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(241, '0_3_47');
@@ -2209,7 +2209,7 @@ Once again, we believe that the type of the conclusion is an hprop (though we do
       " onmouseover="
       mouseover(244, '0_3_47');
       "><br>
-  <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Types.Arrow.html#transport_arrow"><span class="id" title="definition">transport_arrow</span></a>. </span><span class="command" onmouseout="
+    <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Types.Arrow.html#transport_arrow"><span class="id" title="definition">transport_arrow</span></a>. </span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(245, '0_3_47');
@@ -2222,7 +2222,7 @@ Once again, we believe that the type of the conclusion is an hprop (though we do
       " onmouseover="
       mouseover(247, '0_3_47');
       "><br>
-  <span class="id" title="tactic">exact</span> 1%<span class="id" title="var">path</span>.</span><span class="command" onmouseout="
+    <span class="id" title="tactic">exact</span> 1%<span class="id" title="var">path</span>.</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(248, '0_3_47');

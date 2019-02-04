@@ -198,12 +198,12 @@
           
 
             i = 36;
-            data = "1 subgoal (ID 125)	  	  A : Type	  B : Type	  f, g : A -> B	  p : forall x : A, f x = g x	  x : A	  ============================	  (p x)^ @ p x = ((p x)^ @ 1) @ p x	";
+            data = "1 subgoal (ID 124)	  	  A : Type	  B : Type	  f, g : A -> B	  p : forall x : A, f x = g x	  x : A	  ============================	  1 = (p x)^ @ p x	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 125)		subgoal 1 (ID 125) is:	 (p x)^ @ p x = ((p x)^ @ 1) @ p x	";
             responses[i]=data;
           
 
             i = 37;
-            data = "1 subgoal (ID 150)	  	  A : Type	  B : Type	  f, g : A -> B	  p : forall x : A, f x = g x	  x : A	  ============================	  (p x)^ = (p x)^ @ 1	";
+            data = "1 subgoal (ID 125)	  	  A : Type	  B : Type	  f, g : A -> B	  p : forall x : A, f x = g x	  x : A	  ============================	  (p x)^ @ p x = ((p x)^ @ 1) @ p x	1 subgoal (ID 150)	  	  A : Type	  B : Type	  f, g : A -> B	  p : forall x : A, f x = g x	  x : A	  ============================	  (p x)^ = (p x)^ @ 1	";
             responses[i]=data;
           
 
@@ -248,17 +248,17 @@
           
 
             i = 46;
-            data = "2 subgoals (ID 154)	  	  A : Type	  f : A -> A	  p : forall x : A, f x = x	  x : A	  ============================	  (p x)^ @ 1 = (p x)^		subgoal 2 (ID 147) is:	 (p x)^ @ p x = 1	";
+            data = "1 subgoal (ID 146)	  	  A : Type	  f : A -> A	  p : forall x : A, f x = x	  x : A	  ============================	  ((p x)^ @ 1) @ p x = (p x)^ @ p x	1 subgoal (ID 154)	  	  A : Type	  f : A -> A	  p : forall x : A, f x = x	  x : A	  ============================	  (p x)^ @ 1 = (p x)^	";
             responses[i]=data;
           
 
             i = 47;
-            data = "1 subgoal (ID 147)	  	  A : Type	  f : A -> A	  p : forall x : A, f x = x	  x : A	  ============================	  (p x)^ @ p x = 1	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 147)		subgoal 1 (ID 147) is:	 (p x)^ @ p x = 1	";
             responses[i]=data;
           
 
             i = 48;
-            data = "No more subgoals.	";
+            data = "1 subgoal (ID 147)	  	  A : Type	  f : A -> A	  p : forall x : A, f x = x	  x : A	  ============================	  (p x)^ @ p x = 1	No more subgoals.	";
             responses[i]=data;
           
 
@@ -283,12 +283,12 @@
           
 
             i = 53;
-            data = "1 subgoal (ID 174)	  	  A : Type	  f : A -> A	  p : forall x : A, idmap x = f x	  x, y : A	  q : x = y	  ============================	  conjp p (ap idmap q) = conjp p q	";
+            data = "1 subgoal (ID 173)	  	  A : Type	  f : A -> A	  p : forall x : A, idmap x = f x	  x, y : A	  q : x = y	  ============================	  ap f q = conjp p (ap idmap q)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 174)		subgoal 1 (ID 174) is:	 conjp p (ap idmap q) = conjp p q	";
             responses[i]=data;
           
 
             i = 54;
-            data = "No more subgoals.	";
+            data = "1 subgoal (ID 174)	  	  A : Type	  f : A -> A	  p : forall x : A, idmap x = f x	  x, y : A	  q : x = y	  ============================	  conjp p (ap idmap q) = conjp p q	No more subgoals.	";
             responses[i]=data;
           
 
@@ -498,16 +498,17 @@ Several lemmas about conjugation. Does this actually get used?
       " onmouseover="
       mouseover(35, '0_3_15');
       "><br>
-  <span class="id" title="tactic">transitivity</span> (<a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><span class="id" title="var">p</span> <span class="id" title="var">x</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a> <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <span class="id" title="var">p</span> <span class="id" title="var">x</span>). </span><span class="command" onmouseout="
+  <span class="id" title="tactic">transitivity</span> (<a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><span class="id" title="var">p</span> <span class="id" title="var">x</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a> <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <span class="id" title="var">p</span> <span class="id" title="var">x</span>).</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(36, '0_3_15');
-      "><span class="id" title="tactic">symmetry</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_Vp"><span class="id" title="definition">concat_Vp</span></a>.</span><span class="command" onmouseout="
+      "><br>
+  - <span class="id" title="tactic">symmetry</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_Vp"><span class="id" title="definition">concat_Vp</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(37, '0_3_15');
       "><br>
-  <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#whiskerR"><span class="id" title="definition">whiskerR</span></a>. </span><span class="command" onmouseout="
+  - <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#whiskerR"><span class="id" title="definition">whiskerR</span></a>. </span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(38, '0_3_15');
@@ -546,11 +547,12 @@ Several lemmas about conjugation. Does this actually get used?
       " onmouseover="
       mouseover(45, '0_3_15');
       "><br>
-  <span class="id" title="tactic">transitivity</span> (<a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><span class="id" title="var">p</span> <span class="id" title="var">x</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a> <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <span class="id" title="var">p</span> <span class="id" title="var">x</span>). </span><span class="command" onmouseout="
+  <span class="id" title="tactic">transitivity</span> (<a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><span class="id" title="var">p</span> <span class="id" title="var">x</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a> <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <span class="id" title="var">p</span> <span class="id" title="var">x</span>).</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(46, '0_3_15');
-      "><span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#whiskerR"><span class="id" title="definition">whiskerR</span></a>. </span><span class="command" onmouseout="
+      "><br>
+  - <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#whiskerR"><span class="id" title="definition">whiskerR</span></a>. </span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(47, '0_3_15');
@@ -559,7 +561,7 @@ Several lemmas about conjugation. Does this actually get used?
       " onmouseover="
       mouseover(48, '0_3_15');
       "><br>
-  <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_Vp"><span class="id" title="definition">concat_Vp</span></a>.</span><span class="command" onmouseout="
+  - <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#concat_Vp"><span class="id" title="definition">concat_Vp</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(49, '0_3_15');
@@ -586,11 +588,12 @@ Several lemmas about conjugation. Does this actually get used?
       " onmouseover="
       mouseover(53, '0_3_15');
       "><br>
-  <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Conjugation.html#ap_to_conjp"><span class="id" title="lemma">ap_to_conjp</span></a>. </span><span class="command" onmouseout="
+  - <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Conjugation.html#ap_to_conjp"><span class="id" title="lemma">ap_to_conjp</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(54, '0_3_15');
-      "><span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#ap_idmap"><span class="id" title="definition">ap_idmap</span></a>.</span><span class="command" onmouseout="
+      "><br>
+  - <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Basics.PathGroupoids.html#ap_idmap"><span class="id" title="definition">ap_idmap</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(55, '0_3_15');

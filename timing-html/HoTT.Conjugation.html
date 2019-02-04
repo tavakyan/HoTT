@@ -130,8 +130,8 @@ Qed.</pre>
 </div>
 <div class="code" title="File: Conjugation.v
 Line: 21
-Time: 0.001s">
-<div class="time" style="width: 5.5555555555556%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Lemma ap_to_conjp {A B : Type} {f g : A -&gt; B} (p : forall x, f x = g x) {x y : A} (q : x = y) :
@@ -146,8 +146,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Conjugation.v
 Line: 25
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 5.5555555555556%"></div>
 <pre>
   destruct q.</pre>
 </div>
@@ -172,143 +172,182 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Conjugation.v
 Line: 27
-Time: 0.001s">
-<div class="time" style="width: 5.5555555555556%"></div>
-<pre> symmetry; apply concat_Vp.</pre>
-</div>
-<div class="code" title="File: Conjugation.v
-Line: 27
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  apply whiskerR.</pre>
+  -</pre>
 </div>
 <div class="code" title="File: Conjugation.v
 Line: 28
-Time: 0.001s">
-<div class="time" style="width: 5.5555555555556%"></div>
-<pre>  symmetry; apply concat_p1.</pre>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> symmetry; apply concat_Vp.</pre>
 </div>
 <div class="code" title="File: Conjugation.v
 Line: 28
-Time: 0.001s">
-<div class="time" style="width: 5.5555555555556%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
+  -</pre>
+</div>
+<div class="code" title="File: Conjugation.v
+Line: 29
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> apply whiskerR.</pre>
+</div>
+<div class="code" title="File: Conjugation.v
+Line: 29
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>  symmetry; apply concat_p1.</pre>
 </div>
 <div class="code" title="File: Conjugation.v
 Line: 29
 Time: 0.001s">
 <div class="time" style="width: 5.5555555555556%"></div>
 <pre>
-
-Lemma conjp_ap {A : Type} {f : A -&gt; A} (p : forall x, f x = x) {x y : A} (q : x = y) :
-  conjp p (ap f q) = q.</pre>
+Qed.</pre>
 </div>
 <div class="code" title="File: Conjugation.v
-Line: 32
+Line: 30
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Proof.</pre>
+
+Lemma conjp_ap {A : Type} {f : A -&gt; A} (p : forall x, f x = x) {x y : A} (q : x = y) :
+  conjp p (ap f q) = q.</pre>
 </div>
 <div class="code" title="File: Conjugation.v
 Line: 33
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  destruct q.</pre>
+Proof.</pre>
 </div>
 <div class="code" title="File: Conjugation.v
 Line: 34
+Time: 0.001s">
+<div class="time" style="width: 5.5555555555556%"></div>
+<pre>
+  destruct q.</pre>
+</div>
+<div class="code" title="File: Conjugation.v
+Line: 35
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>  unfold conjp.</pre>
 </div>
 <div class="code" title="File: Conjugation.v
-Line: 34
+Line: 35
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>  simpl.</pre>
 </div>
 <div class="code" title="File: Conjugation.v
-Line: 34
+Line: 35
 Time: 0.001s">
 <div class="time" style="width: 5.5555555555556%"></div>
 <pre>
   transitivity ((p x)^ @ p x).</pre>
 </div>
 <div class="code" title="File: Conjugation.v
-Line: 35
+Line: 36
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  -</pre>
+</div>
+<div class="code" title="File: Conjugation.v
+Line: 37
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply whiskerR.</pre>
 </div>
 <div class="code" title="File: Conjugation.v
-Line: 35
+Line: 37
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>  apply concat_p1.</pre>
 </div>
 <div class="code" title="File: Conjugation.v
-Line: 35
+Line: 37
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  apply concat_Vp.</pre>
+  -</pre>
 </div>
 <div class="code" title="File: Conjugation.v
-Line: 36
+Line: 38
 Time: 0s">
 <div class="time" style="width: 0%"></div>
+<pre> apply concat_Vp.</pre>
+</div>
+<div class="code" title="File: Conjugation.v
+Line: 38
+Time: 0.001s">
+<div class="time" style="width: 5.5555555555556%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: Conjugation.v
-Line: 37
-Time: 0.001s">
-<div class="time" style="width: 5.5555555555556%"></div>
+Line: 39
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Lemma ap1_to_conjp {A : Type} {f : A -&gt; A} (p : forall x, idmap x = f x) {x y : A} (q : x = y) :
   ap f q = conjp p q.</pre>
 </div>
 <div class="code" title="File: Conjugation.v
-Line: 40
+Line: 42
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Conjugation.v
-Line: 41
+Line: 43
 Time: 0.001s">
 <div class="time" style="width: 5.5555555555556%"></div>
 <pre>
   transitivity (conjp p (ap idmap q)).</pre>
 </div>
 <div class="code" title="File: Conjugation.v
-Line: 42
+Line: 44
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  apply ap_to_conjp.</pre>
+  -</pre>
 </div>
 <div class="code" title="File: Conjugation.v
-Line: 43
+Line: 45
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>  apply ap; apply ap_idmap.</pre>
+<pre> apply ap_to_conjp.</pre>
 </div>
 <div class="code" title="File: Conjugation.v
-Line: 43
+Line: 45
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  -</pre>
+</div>
+<div class="code" title="File: Conjugation.v
+Line: 46
+Time: 0.001s">
+<div class="time" style="width: 5.5555555555556%"></div>
+<pre> apply ap; apply ap_idmap.</pre>
+</div>
+<div class="code" title="File: Conjugation.v
+Line: 46
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Conjugation.v
-Line: 45
+Line: 48
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

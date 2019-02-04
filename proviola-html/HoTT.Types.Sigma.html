@@ -1458,12 +1458,12 @@
           
 
             i = 288;
-            data = "1 subgoal (ID 822)	  	  A : Type	  P : A -> Type	  u, v : {x : _ & P x}	  ============================	  Sect (path_sigma_uncurried_contra P u v)	    (fun r : u = v =>	     match	       r in (_ = s)	       return {p : pr1 u = pr1 s & pr2 u = transport P p^ (pr2 s)}	     with	     | 1 => (1; 1)	     end)	";
+            data = "1 subgoal (ID 821)	  	  A : Type	  P : A -> Type	  u, v : {x : _ & P x}	  ============================	  Sect	    (fun r : u = v =>	     match	       r in (_ = s)	       return {p : pr1 u = pr1 s & pr2 u = transport P p^ (pr2 s)}	     with	     | 1 => (1; 1)	     end) (path_sigma_uncurried_contra P u v)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 822)		subgoal 1 (ID 822) is:	 Sect (path_sigma_uncurried_contra P u v)	   (fun r : u = v =>	    match	      r in (_ = s)	      return {p : pr1 u = pr1 s & pr2 u = transport P p^ (pr2 s)}	    with	    | 1 => (1; 1)	    end)	";
             responses[i]=data;
           
 
             i = 289;
-            data = "1 subgoal (ID 852)	  	  A : Type	  P : A -> Type	  proj1_sig : A	  proj2_sig : P proj1_sig	  proj1_sig0 : A	  proj2_sig0 : P proj1_sig0	  p : pr1 (proj1_sig; proj2_sig) = pr1 (proj1_sig0; proj2_sig0)	  q : pr2 (proj1_sig; proj2_sig) =	      transport P p^ (pr2 (proj1_sig0; proj2_sig0))	  ============================	  match	    path_sigma_uncurried_contra P (proj1_sig; proj2_sig)	      (proj1_sig0; proj2_sig0) (p; q) in (_ = s)	    return	      {p0 : pr1 (proj1_sig; proj2_sig) = pr1 s &	      pr2 (proj1_sig; proj2_sig) = transport P p0^ (pr2 s)}	  with	  | 1 => (1; 1)	  end = (p; q)	";
+            data = "1 subgoal (ID 822)	  	  A : Type	  P : A -> Type	  u, v : {x : _ & P x}	  ============================	  Sect (path_sigma_uncurried_contra P u v)	    (fun r : u = v =>	     match	       r in (_ = s)	       return {p : pr1 u = pr1 s & pr2 u = transport P p^ (pr2 s)}	     with	     | 1 => (1; 1)	     end)	1 subgoal (ID 852)	  	  A : Type	  P : A -> Type	  proj1_sig : A	  proj2_sig : P proj1_sig	  proj1_sig0 : A	  proj2_sig0 : P proj1_sig0	  p : pr1 (proj1_sig; proj2_sig) = pr1 (proj1_sig0; proj2_sig0)	  q : pr2 (proj1_sig; proj2_sig) =	      transport P p^ (pr2 (proj1_sig0; proj2_sig0))	  ============================	  match	    path_sigma_uncurried_contra P (proj1_sig; proj2_sig)	      (proj1_sig0; proj2_sig0) (p; q) in (_ = s)	    return	      {p0 : pr1 (proj1_sig; proj2_sig) = pr1 s &	      pr2 (proj1_sig; proj2_sig) = transport P p0^ (pr2 s)}	  with	  | 1 => (1; 1)	  end = (p; q)	";
             responses[i]=data;
           
 
@@ -3911,12 +3911,12 @@ This lets us identify the path space of a sigma-type, up to equivalence.
       " onmouseover="
       mouseover(288, '0_3_47');
       "><br>
-    <span class="id" title="tactic">by</span> <span class="id" title="tactic">intro</span> <span class="id" title="var">r</span>; <span class="id" title="tactic">induction</span> <span class="id" title="var">r</span>; <span class="id" title="tactic">destruct</span> <span class="id" title="var">u</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">u1</span> <span class="id" title="var">u2</span>]; <span class="id" title="tactic">reflexivity</span>.</span><span class="command" onmouseout="
+- <span class="id" title="tactic">by</span> <span class="id" title="tactic">intro</span> <span class="id" title="var">r</span>; <span class="id" title="tactic">induction</span> <span class="id" title="var">r</span>; <span class="id" title="tactic">destruct</span> <span class="id" title="var">u</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">u1</span> <span class="id" title="var">u2</span>]; <span class="id" title="tactic">reflexivity</span>.</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(289, '0_3_47');
       "><br>
-  <span class="id" title="tactic">destruct</span> <span class="id" title="var">u</span>, <span class="id" title="var">v</span>; <span class="id" title="tactic">intros</span> [<span class="id" title="var">p</span> <span class="id" title="var">q</span>].</span><span class="command" onmouseout="
+- <span class="id" title="tactic">destruct</span> <span class="id" title="var">u</span>, <span class="id" title="var">v</span>; <span class="id" title="tactic">intros</span> [<span class="id" title="var">p</span> <span class="id" title="var">q</span>].</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(290, '0_3_47');

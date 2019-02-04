@@ -228,12 +228,12 @@
           
 
             i = 42;
-            data = "1 subgoal (ID 7)	  	  H : Funext	  G : graph	  D : diagram G	  A : Type	  ============================	  forall i j : G,	  G i j -> (fun i0 : G => A * D i0) i -> (fun i0 : G => A * D i0) j	";
+            data = "1 subgoal (ID 5)	  	  H : Funext	  G : graph	  D : diagram G	  A : Type	  ============================	  G -> Type	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 7)		subgoal 1 (ID 7) is:	 forall i j : G,	 G i j -> (fun i0 : G => A * D i0) i -> (fun i0 : G => A * D i0) j	";
             responses[i]=data;
           
 
             i = 43;
-            data = "1 subgoal (ID 13)	  	  H : Funext	  G : graph	  D : diagram G	  A : Type	  i, j : G	  f : G i j	  x : A * D i	  ============================	  A * D j	";
+            data = "1 subgoal (ID 7)	  	  H : Funext	  G : graph	  D : diagram G	  A : Type	  ============================	  forall i j : G,	  G i j -> (fun i0 : G => A * D i0) i -> (fun i0 : G => A * D i0) j	1 subgoal (ID 13)	  	  H : Funext	  G : graph	  D : diagram G	  A : Type	  i, j : G	  f : G i j	  x : A * D i	  ============================	  A * D j	";
             responses[i]=data;
           
 
@@ -268,12 +268,12 @@
           
 
             i = 50;
-            data = "1 subgoal (ID 35)	  	  H : Funext	  G : graph	  D : diagram G	  A : Type	  ============================	  forall (i j : G) (g : G i j) (x : {_ : A & D i}),	  (fst	     ((fun i0 : G =>	       let X := fun A0 B : Type => equiv_fun (equiv_sigma_prod0 A0 B) in	       X A (D i0)) i x),	  (D _f g)	    (snd	       ((fun i0 : G =>	         let X := fun A0 B : Type => equiv_fun (equiv_sigma_prod0 A0 B) in	         X A (D i0)) i x))) =	  (fun i0 : G =>	   let X := fun A0 B : Type => equiv_fun (equiv_sigma_prod0 A0 B) in	   X A (D i0)) j (pr1 x; (D _f g) (pr2 x))	";
+            data = "1 subgoal (ID 34)	  	  H : Funext	  G : graph	  D : diagram G	  A : Type	  ============================	  forall i : G, {_ : A & D i} -> A * D i	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 35)		subgoal 1 (ID 35) is:	 forall (i j : G) (g : G i j) (x : {_ : A & D i}),	 (fst	    ((fun i0 : G =>	      let X := fun A0 B : Type => equiv_fun (equiv_sigma_prod0 A0 B) in	      X A (D i0)) i x),	 (D _f g)	   (snd	      ((fun i0 : G =>	        let X := fun A0 B : Type => equiv_fun (equiv_sigma_prod0 A0 B) in	        X A (D i0)) i x))) =	 (fun i0 : G =>	  let X := fun A0 B : Type => equiv_fun (equiv_sigma_prod0 A0 B) in	  X A (D i0)) j (pr1 x; (D _f g) (pr2 x))	subgoal 2 (ID 8) is:	 forall i : G,	 IsEquiv	   ({|	    diagram_map_obj := fun i0 : G =>	                       let X :=	                         fun A0 B : Type =>	                         equiv_fun (equiv_sigma_prod0 A0 B) in	                       X A (D i0);	    diagram_map_comm := ?Goal0 |} i)	";
             responses[i]=data;
           
 
             i = 51;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 8)		subgoal 1 (ID 8) is:	 forall i : G,	 IsEquiv	   ({|	    diagram_map_obj := fun i0 : G =>	                       let X :=	                         fun A0 B : Type =>	                         equiv_fun (equiv_sigma_prod0 A0 B) in	                       X A (D i0);	    diagram_map_comm := fun (i0 j : G) (g : G i0 j) (x : {_ : A & D i0}) => 1 |}	      i)	";
+            data = "1 subgoal (ID 35)	  	  H : Funext	  G : graph	  D : diagram G	  A : Type	  ============================	  forall (i j : G) (g : G i j) (x : {_ : A & D i}),	  (fst	     ((fun i0 : G =>	       let X := fun A0 B : Type => equiv_fun (equiv_sigma_prod0 A0 B) in	       X A (D i0)) i x),	  (D _f g)	    (snd	       ((fun i0 : G =>	         let X := fun A0 B : Type => equiv_fun (equiv_sigma_prod0 A0 B) in	         X A (D i0)) i x))) =	  (fun i0 : G =>	   let X := fun A0 B : Type => equiv_fun (equiv_sigma_prod0 A0 B) in	   X A (D i0)) j (pr1 x; (D _f g) (pr2 x))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 8)		subgoal 1 (ID 8) is:	 forall i : G,	 IsEquiv	   ({|	    diagram_map_obj := fun i0 : G =>	                       let X :=	                         fun A0 B : Type =>	                         equiv_fun (equiv_sigma_prod0 A0 B) in	                       X A (D i0);	    diagram_map_comm := fun (i0 j : G) (g : G i0 j) (x : {_ : A & D i0}) => 1 |}	      i)	";
             responses[i]=data;
           
 
@@ -308,22 +308,22 @@
           
 
             i = 58;
-            data = "1 subgoal (ID 17)	  	  H : Funext	  G : graph	  D : diagram G	  A : Type	  Q : Type	  HQ : is_colimit D Q	  ============================	  is_colimit prod_diag {_ : A & Q}	";
+            data = "1 focused subgoal	(shelved: 1) (ID 16)	  	  H : Funext	  G : graph	  D : diagram G	  A : Type	  Q : Type	  HQ : is_colimit D Q	  ============================	  ?Q <~> A * Q	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 17)		subgoal 1 (ID 17) is:	 is_colimit prod_diag {_ : A & Q}	";
             responses[i]=data;
           
 
             i = 59;
-            data = "2 focused subgoals	(shelved: 1) (ID 22)	  	  H : Funext	  G : graph	  D : diagram G	  A : Type	  Q : Type	  HQ : is_colimit D Q	  ============================	  prod_diag ~d~ ?D2		subgoal 2 (ID 23) is:	 is_colimit ?D2 {_ : A & Q}	";
+            data = "1 subgoal (ID 17)	  	  H : Funext	  G : graph	  D : diagram G	  A : Type	  Q : Type	  HQ : is_colimit D Q	  ============================	  is_colimit prod_diag {_ : A & Q}	2 focused subgoals	(shelved: 1) (ID 22)	  	  H : Funext	  G : graph	  D : diagram G	  A : Type	  Q : Type	  HQ : is_colimit D Q	  ============================	  prod_diag ~d~ ?D2		subgoal 2 (ID 23) is:	 is_colimit ?D2 {_ : A & Q}	";
             responses[i]=data;
           
 
             i = 60;
-            data = "1 subgoal (ID 23)	  	  H : Funext	  G : graph	  D : diagram G	  A : Type	  Q : Type	  HQ : is_colimit D Q	  ============================	  is_colimit (sigma_diag (fun _ : A => D)) {_ : A & Q}	";
+            data = "1 focused subgoal	(shelved: 1) (ID 22)	  	  H : Funext	  G : graph	  D : diagram G	  A : Type	  Q : Type	  HQ : is_colimit D Q	  ============================	  prod_diag ~d~ ?D2	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 23)		subgoal 1 (ID 23) is:	 is_colimit (sigma_diag (fun _ : A => D)) {_ : A & Q}	";
             responses[i]=data;
           
 
             i = 61;
-            data = "No more subgoals.	";
+            data = "1 subgoal (ID 23)	  	  H : Funext	  G : graph	  D : diagram G	  A : Type	  Q : Type	  HQ : is_colimit D Q	  ============================	  is_colimit (sigma_diag (fun _ : A => D)) {_ : A & Q}	No more subgoals.	";
             responses[i]=data;
           
 
@@ -474,12 +474,12 @@
       " onmouseover="
       mouseover(42, '0_3_7');
       "><br>
-    <span class="id" title="tactic">exact</span> (<span class="id" title="keyword">fun</span> <span class="id" title="var">i</span> ⇒ <a class="idref" href="HoTT.HIT.Colimits.Colimit_Prod.html#ColimitProd.A"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Datatypes.html#11c698c8685bb8ab1cf725545c085ac4"><span class="id" title="notation">×</span></a> <a class="idref" href="Coq.Init.Datatypes.html#11c698c8685bb8ab1cf725545c085ac4"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.HIT.Colimits.Colimit_Prod.html#ColimitProd.D"><span class="id" title="variable">D</span></a> <a class="idref" href="HoTT.HIT.Colimits.Colimit_Prod.html#i"><span class="id" title="variable">i</span></a><a class="idref" href="Coq.Init.Datatypes.html#11c698c8685bb8ab1cf725545c085ac4"><span class="id" title="notation">)</span></a>).</span><span class="command" onmouseout="
+    - <span class="id" title="tactic">exact</span> (<span class="id" title="keyword">fun</span> <span class="id" title="var">i</span> ⇒ <a class="idref" href="HoTT.HIT.Colimits.Colimit_Prod.html#ColimitProd.A"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Datatypes.html#11c698c8685bb8ab1cf725545c085ac4"><span class="id" title="notation">×</span></a> <a class="idref" href="Coq.Init.Datatypes.html#11c698c8685bb8ab1cf725545c085ac4"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.HIT.Colimits.Colimit_Prod.html#ColimitProd.D"><span class="id" title="variable">D</span></a> <a class="idref" href="HoTT.HIT.Colimits.Colimit_Prod.html#i"><span class="id" title="variable">i</span></a><a class="idref" href="Coq.Init.Datatypes.html#11c698c8685bb8ab1cf725545c085ac4"><span class="id" title="notation">)</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(43, '0_3_7');
       "><br>
-    <span class="id" title="tactic">simpl</span>; <span class="id" title="tactic">intros</span> <span class="id" title="var">i</span> <span class="id" title="var">j</span> <span class="id" title="var">f</span> <span class="id" title="var">x</span>. </span><span class="command" onmouseout="
+    - <span class="id" title="tactic">simpl</span>; <span class="id" title="tactic">intros</span> <span class="id" title="var">i</span> <span class="id" title="var">j</span> <span class="id" title="var">f</span> <span class="id" title="var">x</span>. </span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(44, '0_3_7');
@@ -515,12 +515,12 @@
       " onmouseover="
       mouseover(50, '0_3_7');
       "><br>
-      <span class="id" title="tactic">intro</span> <span class="id" title="var">i</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Types.Sigma.html#equiv_sigma_prod0"><span class="id" title="definition">equiv_sigma_prod0</span></a>.</span><span class="command" onmouseout="
+      + <span class="id" title="tactic">intro</span> <span class="id" title="var">i</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Types.Sigma.html#equiv_sigma_prod0"><span class="id" title="definition">equiv_sigma_prod0</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(51, '0_3_7');
       "><br>
-      <span class="id" title="tactic">reflexivity</span>.</span><span class="command" onmouseout="
+      + <span class="id" title="tactic">reflexivity</span>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(52, '0_3_7');
@@ -557,22 +557,22 @@
       " onmouseover="
       mouseover(58, '0_3_7');
       "><br>
-    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Types.Sigma.html#equiv_sigma_prod0"><span class="id" title="definition">equiv_sigma_prod0</span></a>.</span><span class="command" onmouseout="
+    - <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Types.Sigma.html#equiv_sigma_prod0"><span class="id" title="definition">equiv_sigma_prod0</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(59, '0_3_7');
       "><br>
-    <span class="id" title="tactic">eapply</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#precompose_equiv_is_colimit"><span class="id" title="definition">precompose_equiv_is_colimit</span></a>.</span><span class="command" onmouseout="
+    - <span class="id" title="tactic">eapply</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit.html#precompose_equiv_is_colimit"><span class="id" title="definition">precompose_equiv_is_colimit</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(60, '0_3_7');
       "><br>
-    <span class="id" title="tactic">symmetry</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit_Prod.html#diagram_equiv_prod_sigma"><span class="id" title="definition">diagram_equiv_prod_sigma</span></a>.</span><span class="command" onmouseout="
+      + <span class="id" title="tactic">symmetry</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit_Prod.html#diagram_equiv_prod_sigma"><span class="id" title="definition">diagram_equiv_prod_sigma</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(61, '0_3_7');
       "><br>
-    <span class="id" title="tactic">by</span> <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit_Sigma.html#is_colimit_sigma"><span class="id" title="lemma">is_colimit_sigma</span></a>.</span><span class="command" onmouseout="
+      + <span class="id" title="tactic">by</span> <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.HIT.Colimits.Colimit_Sigma.html#is_colimit_sigma"><span class="id" title="lemma">is_colimit_sigma</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(62, '0_3_7');
