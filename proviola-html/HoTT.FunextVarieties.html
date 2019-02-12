@@ -643,12 +643,12 @@
           
 
             i = 125;
-            data = "1 subgoal (ID 48)	  	  wf : WeakFunext	  A : Type	  B : A -> Type	  f, g : forall x : A, B x	  ============================	  Sect	    (htpy_ind wf f (fun (g' : forall x : A, B x) (_ : f == g') => f = g') 1 g)	    apD10	";
+            data = "1 subgoal (ID 48)	  	  wf : WeakFunext	  A : Type	  B : A -> Type	  f, g : forall x : A, B x	  ============================	  Sect	    (htpy_ind wf f (fun (g' : forall x : A, B x) (_ : f == g') => f = g') 1 g)	    apD10	1 subgoal (ID 60)	  	  wf : WeakFunext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  ============================	  apD10	    (htpy_ind wf f (fun (g' : forall x : A, B x) (_ : f == g') => f = g') 1 f	       (fun x : A => 1)) = (fun x : A => 1)	";
             responses[i]=data;
           
 
             i = 126;
-            data = "1 subgoal (ID 60)	  	  wf : WeakFunext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  ============================	  apD10	    (htpy_ind wf f (fun (g' : forall x : A, B x) (_ : f == g') => f = g') 1 f	       (fun x : A => 1)) = (fun x : A => 1)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 49)		subgoal 1 (ID 49) is:	 Sect apD10	   (htpy_ind wf f (fun (g' : forall x : A, B x) (_ : f == g') => f = g') 1 g)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 49)		subgoal 1 (ID 49) is:	 Sect apD10	   (htpy_ind wf f (fun (g' : forall x : A, B x) (_ : f == g') => f = g') 1 g)	";
             responses[i]=data;
           
 
@@ -1028,12 +1028,12 @@
           
 
             i = 202;
-            data = "1 subgoal (ID 125)	  	  nf : NaiveNondepFunext	  X : Type	  P : X -> Type	  H : forall x : X, Contr (P x)	  T := hfiber (equiv_postcompose_from_NaiveNondepFunext nf (equiv_pr1 P))	         idmap : Type	  ============================	  Contr T	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 127)		subgoal 1 (ID 127) is:	 Contr (forall x : X, P x)	1 subgoal (ID 127)	  	  nf : NaiveNondepFunext	  X : Type	  P : X -> Type	  H : forall x : X, Contr (P x)	  T := hfiber (equiv_postcompose_from_NaiveNondepFunext nf (equiv_pr1 P))	         idmap : Type	  X1 : Contr T	  ============================	  Contr (forall x : X, P x)	";
+            data = "1 subgoal (ID 125)	  	  nf : NaiveNondepFunext	  X : Type	  P : X -> Type	  H : forall x : X, Contr (P x)	  T := hfiber (equiv_postcompose_from_NaiveNondepFunext nf (equiv_pr1 P))	         idmap : Type	  ============================	  Contr T	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 127)		subgoal 1 (ID 127) is:	 Contr (forall x : X, P x)	";
             responses[i]=data;
           
 
             i = 203;
-            data = "No more subgoals.	<infomsg>NaiveNondepFunext_implies_WeakFunext is defined</infomsg>	";
+            data = "1 subgoal (ID 127)	  	  nf : NaiveNondepFunext	  X : Type	  P : X -> Type	  H : forall x : X, Contr (P x)	  T := hfiber (equiv_postcompose_from_NaiveNondepFunext nf (equiv_pr1 P))	         idmap : Type	  X1 : Contr T	  ============================	  Contr (forall x : X, P x)	No more subgoals.	<infomsg>NaiveNondepFunext_implies_WeakFunext is defined</infomsg>	";
             responses[i]=data;
           
 
