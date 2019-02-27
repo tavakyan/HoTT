@@ -1,0 +1,370 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>HoTT.Classes.interfaces.ua_algebra</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library HoTT.Classes.interfaces.ua_algebra</h1>
+
+<div class="code">
+</div>
+
+<div class="doc">
+This file defines <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Algebra"><span class="id" title="record">Algebra</span></a></span>. 
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Export</span><br/>
+&nbsp;&nbsp;<a class="idref" href="Coq.Unicode.Utf8.html#"><span class="id" title="library">Coq.Unicode.Utf8</span></a><br/>
+&nbsp;&nbsp;<a class="idref" href="HoTT.Classes.implementations.ne_list.html#"><span class="id" title="library">HoTT.Classes.implementations.ne_list</span></a><br/>
+&nbsp;&nbsp;<a class="idref" href="HoTT.Classes.implementations.family_prod.html#"><span class="id" title="library">HoTT.Classes.implementations.family_prod</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span><br/>
+&nbsp;&nbsp;<a class="idref" href="HoTT.Basics.Overture.html#"><span class="id" title="library">HoTT.Basics.Overture</span></a><br/>
+&nbsp;&nbsp;<a class="idref" href="HoTT.Types.Record.html#"><span class="id" title="library">HoTT.Types.Record</span></a><br/>
+&nbsp;&nbsp;<a class="idref" href="HoTT.Types.Sigma.html#"><span class="id" title="library">HoTT.Types.Sigma</span></a><br/>
+&nbsp;&nbsp;<a class="idref" href="HoTT.Types.Arrow.html#"><span class="id" title="library">HoTT.Types.Arrow</span></a><br/>
+&nbsp;&nbsp;<a class="idref" href="HoTT.Types.Forall.html#"><span class="id" title="library">HoTT.Types.Forall</span></a><br/>
+&nbsp;&nbsp;<a class="idref" href="HoTT.Types.Universe.html#"><span class="id" title="library">HoTT.Types.Universe</span></a><br/>
+&nbsp;&nbsp;<a class="idref" href="HoTT.HSet.html#"><span class="id" title="library">HoTT.HSet</span></a><br/>
+&nbsp;&nbsp;<a class="idref" href="HoTT.Classes.interfaces.abstract_algebra.html#"><span class="id" title="library">HoTT.Classes.interfaces.abstract_algebra</span></a><br/>
+&nbsp;&nbsp;<a class="idref" href="HoTT.Classes.implementations.list.html#"><span class="id" title="library">HoTT.Classes.implementations.list</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Import</span> <span class="id" title="var">ne_list.notations</span>.<br/>
+
+<br/>
+<span class="id" title="var">Declare</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">Algebra_scope</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Delimit</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">Algebra_scope</span> <span class="id" title="keyword">with</span> <span class="id" title="var">Algebra</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Open</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">Algebra_scope</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a name="SymbolType_internal"><span class="id" title="definition">SymbolType_internal</span></a> : <span class="id" title="keyword">Type</span> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span> := <a class="idref" href="HoTT.Classes.implementations.ne_list.html#ne_list.notations.ne_list"><span class="id" title="abbreviation">ne_list</span></a>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+A <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Signature"><span class="id" title="record">Signature</span></a></span> is used to characterise <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Algebra"><span class="id" title="record">Algebra</span></a></span>s. In particular
+    a signature specifies which operations (functions) an algebra for
+    the signature is expected to provide. A signature consists of
+<ul class="doclist">
+<li> A type of <span class="inlinecode"><span class="id" title="keyword">Sort</span></span>s. An algebra for the signature must provide
+      a type for each <span class="inlinecode"><a class="idref" href="HoTT.Categories.Cat.Morphisms.html#iso_lemmas.s"><span class="id" title="variable">s</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><span class="id" title="keyword">Sort</span></span>.
+
+</li>
+<li> A type of function symbols <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Symbol"><span class="id" title="projection">Symbol</span></a></span>. For each function symbol
+      <span class="inlinecode"><a class="idref" href="Coq.Init.Nat.html#u"><span class="id" title="variable">u</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Symbol"><span class="id" title="projection">Symbol</span></a></span>, an algebra for the signature must provide a
+      corresponding operation.
+
+</li>
+<li> The field <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#symbol_types"><span class="id" title="projection">symbol_types</span></a></span> <span class="inlinecode">σ</span> <span class="inlinecode"><a class="idref" href="Coq.Init.Nat.html#u"><span class="id" title="variable">u</span></a></span> indicates which type the operation
+      corresponding to <span class="inlinecode"><a class="idref" href="Coq.Init.Nat.html#u"><span class="id" title="variable">u</span></a></span> should have. 
+</li>
+</ul>
+
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Record</span> <a name="Signature"><span class="id" title="record">Signature</span></a> : <span class="id" title="keyword">Type</span> := <a name="BuildSignature"><span class="id" title="constructor">BuildSignature</span></a><br/>
+&nbsp;&nbsp;{ <a name="Sort"><span class="id" title="projection">Sort</span></a> : <span class="id" title="keyword">Type</span><br/>
+&nbsp;&nbsp;; <a name="Symbol"><span class="id" title="projection">Symbol</span></a> : <span class="id" title="keyword">Type</span><br/>
+&nbsp;&nbsp;; <a name="symbol_types"><span class="id" title="projection">symbol_types</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Symbol"><span class="id" title="method">Symbol</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#SymbolType_internal"><span class="id" title="definition">SymbolType_internal</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Sort"><span class="id" title="method">Sort</span></a> }.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+We have this implicit coercion allowing us to use a signature
+    <span class="inlinecode">σ:<a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Signature"><span class="id" title="record">Signature</span></a></span> as a map <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Symbol"><span class="id" title="projection">Symbol</span></a></span> <span class="inlinecode">σ</span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#SymbolType"><span class="id" title="definition">SymbolType</span></a></span> <span class="inlinecode">σ</span>
+    (see <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#SymbolType"><span class="id" title="definition">SymbolType</span></a></span> below). 
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Global</span> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#symbol_types"><span class="id" title="projection">Coercion</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#symbol_types"><span class="id" title="projection">symbol_types</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#symbol_types"><span class="id" title="projection">:</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#symbol_types"><span class="id" title="projection">Signature</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#symbol_types"><span class="id" title="projection">&gt;-&gt;</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#symbol_types"><span class="id" title="projection">Funclass</span></a>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+A single sorted <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Signature"><span class="id" title="record">Signature</span></a></span> is a signature with <span class="inlinecode"><span class="id" title="keyword">Sort</span></span> <span class="inlinecode">=</span> <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Unit"><span class="id" title="inductive">Unit</span></a></span>. 
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a name="BuildSingleSortedSignature"><span class="id" title="definition">BuildSingleSortedSignature</span></a> (<span class="id" title="var">sym</span> : <span class="id" title="keyword">Type</span>) (<span class="id" title="var">arities</span> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#sym"><span class="id" title="variable">sym</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <a class="idref" href="Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>)<br/>
+&nbsp;&nbsp;: <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Signature"><span class="id" title="record">Signature</span></a><br/>
+&nbsp;&nbsp;:= <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#BuildSignature"><span class="id" title="constructor">BuildSignature</span></a> <a class="idref" href="HoTT.Basics.Overture.html#Unit"><span class="id" title="inductive">Unit</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#sym"><span class="id" title="variable">sym</span></a> (<a class="idref" href="HoTT.Classes.implementations.ne_list.html#ne_list.replicate_Sn"><span class="id" title="definition">ne_list.replicate_Sn</span></a> <a class="idref" href="HoTT.Basics.Overture.html#tt"><span class="id" title="constructor">tt</span></a> <a class="idref" href="HoTT.Basics.Overture.html#38b1404556adb9f3c135a0fea94b5bdf"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#arities"><span class="id" title="variable">arities</span></a>).<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+Let <span class="inlinecode">σ:<a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Signature"><span class="id" title="record">Signature</span></a></span>. For each symbol <span class="inlinecode"><a class="idref" href="Coq.Init.Nat.html#u"><span class="id" title="variable">u</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Symbol"><span class="id" title="projection">Symbol</span></a></span> <span class="inlinecode">σ</span>, <span class="inlinecode">σ</span> <span class="inlinecode"><a class="idref" href="Coq.Init.Nat.html#u"><span class="id" title="variable">u</span></a></span>
+    associates <span class="inlinecode"><a class="idref" href="Coq.Init.Nat.html#u"><span class="id" title="variable">u</span></a></span> to a <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#SymbolType"><span class="id" title="definition">SymbolType</span></a></span> <span class="inlinecode">σ</span>. This represents the required
+    type of the algebra operation corresponding to <span class="inlinecode"><a class="idref" href="Coq.Init.Nat.html#u"><span class="id" title="variable">u</span></a></span>. 
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a name="SymbolType"><span class="id" title="definition">SymbolType</span></a> (σ : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Signature"><span class="id" title="record">Signature</span></a>) : <span class="id" title="keyword">Type</span> := <a class="idref" href="HoTT.Classes.implementations.ne_list.html#ne_list.notations.ne_list"><span class="id" title="abbreviation">ne_list</span></a> (<a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Sort"><span class="id" title="projection">Sort</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#3122c41ebe889f745cb9bbe1c92165c3"><span class="id" title="variable">σ</span></a>).<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+For <span class="inlinecode"><a class="idref" href="HoTT.Categories.Cat.Morphisms.html#iso_lemmas.s"><span class="id" title="variable">s</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#SymbolType"><span class="id" title="definition">SymbolType</span></a></span> <span class="inlinecode">σ</span>, <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#cod_symboltype"><span class="id" title="definition">cod_symboltype</span></a></span> <span class="inlinecode">σ</span> is the codomain of the
+    symbol type <span class="inlinecode"><a class="idref" href="HoTT.Categories.Cat.Morphisms.html#iso_lemmas.s"><span class="id" title="variable">s</span></a></span>. 
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a name="cod_symboltype"><span class="id" title="definition">cod_symboltype</span></a> {σ} : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#SymbolType"><span class="id" title="definition">SymbolType</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#3122c41ebe889f745cb9bbe1c92165c3"><span class="id" title="variable">σ</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Sort"><span class="id" title="projection">Sort</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#3122c41ebe889f745cb9bbe1c92165c3"><span class="id" title="variable">σ</span></a><br/>
+&nbsp;&nbsp;:= <a class="idref" href="HoTT.Classes.implementations.ne_list.html#ne_list.last"><span class="id" title="definition">ne_list.last</span></a>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+For <span class="inlinecode"><a class="idref" href="HoTT.Categories.Cat.Morphisms.html#iso_lemmas.s"><span class="id" title="variable">s</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#SymbolType"><span class="id" title="definition">SymbolType</span></a></span> <span class="inlinecode">σ</span>, <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#cod_symboltype"><span class="id" title="definition">cod_symboltype</span></a></span> <span class="inlinecode">σ</span> is the domain of the
+    symbol type <span class="inlinecode"><a class="idref" href="HoTT.Categories.Cat.Morphisms.html#iso_lemmas.s"><span class="id" title="variable">s</span></a></span>. 
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a name="dom_symboltype"><span class="id" title="definition">dom_symboltype</span></a> {σ} : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#SymbolType"><span class="id" title="definition">SymbolType</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#3122c41ebe889f745cb9bbe1c92165c3"><span class="id" title="variable">σ</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <a class="idref" href="Coq.Init.Datatypes.html#list"><span class="id" title="inductive">list</span></a> (<a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Sort"><span class="id" title="projection">Sort</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#3122c41ebe889f745cb9bbe1c92165c3"><span class="id" title="variable">σ</span></a>)<br/>
+&nbsp;&nbsp;:= <a class="idref" href="HoTT.Classes.implementations.ne_list.html#ne_list.front"><span class="id" title="definition">ne_list.front</span></a>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+For <span class="inlinecode"><a class="idref" href="HoTT.Categories.Cat.Morphisms.html#iso_lemmas.s"><span class="id" title="variable">s</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#SymbolType"><span class="id" title="definition">SymbolType</span></a></span> <span class="inlinecode">σ</span>, <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#cod_symboltype"><span class="id" title="definition">cod_symboltype</span></a></span> <span class="inlinecode">σ</span> is the arity of the
+    symbol type <span class="inlinecode"><a class="idref" href="HoTT.Categories.Cat.Morphisms.html#iso_lemmas.s"><span class="id" title="variable">s</span></a></span>. That is the number <span class="inlinecode"><a class="idref" href="Coq.Init.Peano.html#n"><span class="id" title="variable">n</span></a>:<a class="idref" href="HoTT.Tests.html#Issue754_1.nat"><span class="id" title="inductive">nat</span></a></span> of arguments of the
+    <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#SymbolType"><span class="id" title="definition">SymbolType</span></a></span> <span class="inlinecode">σ</span>. 
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a name="arity_symboltype"><span class="id" title="definition">arity_symboltype</span></a> {σ} : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#SymbolType"><span class="id" title="definition">SymbolType</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#3122c41ebe889f745cb9bbe1c92165c3"><span class="id" title="variable">σ</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <a class="idref" href="Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a><br/>
+&nbsp;&nbsp;:= <a class="idref" href="HoTT.Classes.implementations.list.html#length"><span class="id" title="definition">length</span></a> <a class="idref" href="HoTT.Basics.Overture.html#38b1404556adb9f3c135a0fea94b5bdf"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#dom_symboltype"><span class="id" title="definition">dom_symboltype</span></a>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+An <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Algebra"><span class="id" title="record">Algebra</span></a></span> must provide a family of <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Carriers"><span class="id" title="abbreviation">Carriers</span></a></span> <span class="inlinecode">σ</span> indexed by
+    <span class="inlinecode"><span class="id" title="keyword">Sort</span></span> <span class="inlinecode">σ</span>. These carriers are the "objects" (types) of the algebra. 
+</div>
+<div class="code">
+
+<br/>
+
+<br/>
+<span class="id" title="keyword">Notation</span> <a name="Carriers"><span class="id" title="abbreviation">Carriers</span></a> σ := (<a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Sort"><span class="id" title="projection">Sort</span></a> σ <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>).<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+The function <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Operation"><span class="id" title="definition">Operation</span></a></span> maps a family of carriers <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Carriers"><span class="id" title="abbreviation">Carriers</span></a></span> <span class="inlinecode">σ</span>
+    and <span class="inlinecode"><a class="idref" href="HoTT.Basics.PathGroupoids.html#w"><span class="id" title="variable">w</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#SymbolType"><span class="id" title="definition">SymbolType</span></a></span> <span class="inlinecode">σ</span> to the corresponding function type.
+
+<div class="paragraph"> </div>
+
+    <tt>
+      Operation A [:s1; s2; ...; sn; t:] = A s1 → A s2 → ... → A sn → A t
+    </tt>
+<div class="paragraph"> </div>
+
+    where <span class="inlinecode">[:<a class="idref" href="HoTT.Classes.orders.sum.html#s1"><span class="id" title="variable">s1</span></a>;</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.orders.sum.html#s2"><span class="id" title="variable">s2</span></a>;</span> <span class="inlinecode">...;</span> <span class="inlinecode"><span class="id" title="var">sn</span>;</span> <span class="inlinecode"><a class="idref" href="Coq.Init.Nat.html#t"><span class="id" title="definition">t</span></a>:]</span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#SymbolType"><span class="id" title="definition">SymbolType</span></a></span> <span class="inlinecode">σ</span> is a symbol type
+    with domain <span class="inlinecode">[<a class="idref" href="HoTT.Classes.orders.sum.html#s1"><span class="id" title="variable">s1</span></a>;</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.orders.sum.html#s2"><span class="id" title="variable">s2</span></a>;</span> <span class="inlinecode">...;</span> <span class="inlinecode"><span class="id" title="var">sn</span>]</span> and codomain <span class="inlinecode"><a class="idref" href="Coq.Init.Nat.html#t"><span class="id" title="definition">t</span></a></span>. 
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Fixpoint</span> <a name="Operation"><span class="id" title="definition">Operation</span></a> {σ} (<span class="id" title="var">A</span> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Carriers"><span class="id" title="abbreviation">Carriers</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#3122c41ebe889f745cb9bbe1c92165c3"><span class="id" title="variable">σ</span></a>) (<span class="id" title="var">w</span> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#SymbolType"><span class="id" title="definition">SymbolType</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#3122c41ebe889f745cb9bbe1c92165c3"><span class="id" title="variable">σ</span></a>) : <span class="id" title="keyword">Type</span><br/>
+&nbsp;&nbsp;:= <span class="id" title="keyword">match</span> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#w"><span class="id" title="variable">w</span></a> <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <a class="idref" href="HoTT.Classes.implementations.ne_list.html#ee22de0dcbfc7276e0428d092ee5aa94"><span class="id" title="notation">[:</span></a><span class="id" title="var">s</span><a class="idref" href="HoTT.Classes.implementations.ne_list.html#ee22de0dcbfc7276e0428d092ee5aa94"><span class="id" title="notation">:]</span></a> ⇒ <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#A"><span class="id" title="variable">A</span></a> <span class="id" title="var">s</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id" title="var">s</span> <a class="idref" href="HoTT.Classes.implementations.ne_list.html#41bceaa75941bf46f1425e087e951fa0"><span class="id" title="notation">:::</span></a> <span class="id" title="var">w'</span> ⇒ <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#A"><span class="id" title="variable">A</span></a> <span class="id" title="var">s</span> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Operation"><span class="id" title="definition">Operation</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#A"><span class="id" title="variable">A</span></a> <span class="id" title="var">w'</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">end</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Global Instance</span> <a name="trunc_operation"><span class="id" title="instance">trunc_operation</span></a> `{<a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="class">Funext</span></a>} {σ : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Signature"><span class="id" title="record">Signature</span></a>}<br/>
+&nbsp;&nbsp;(<span class="id" title="var">A</span> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Carriers"><span class="id" title="abbreviation">Carriers</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#3122c41ebe889f745cb9bbe1c92165c3"><span class="id" title="variable">σ</span></a>) {<span class="id" title="var">n</span>} `{!<a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <span class="id" title="var">s</span><a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Basics.Overture.html#IsTrunc"><span class="id" title="class">IsTrunc</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#n"><span class="id" title="variable">n</span></a> (<a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#s"><span class="id" title="variable">s</span></a>)} (<span class="id" title="var">w</span> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#SymbolType"><span class="id" title="definition">SymbolType</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#3122c41ebe889f745cb9bbe1c92165c3"><span class="id" title="variable">σ</span></a>)<br/>
+&nbsp;&nbsp;: <a class="idref" href="HoTT.Basics.Overture.html#IsTrunc"><span class="id" title="class">IsTrunc</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#n"><span class="id" title="variable">n</span></a> (<a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Operation"><span class="id" title="definition">Operation</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#w"><span class="id" title="variable">w</span></a>).<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">induction</span> <span class="id" title="var">w</span>; <span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.Basics.Trunc.html#istrunc_trunctype_type"><span class="id" title="projection">istrunc_trunctype_type</span></a> (<a class="idref" href="HoTT.Basics.Trunc.html#BuildTruncType"><span class="id" title="constructor">BuildTruncType</span></a> <span class="id" title="var">n</span> <span class="id" title="var">_</span>)).<br/>
+<span class="id" title="keyword">Defined</span>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+Uncurry of an <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Operation"><span class="id" title="definition">Operation</span></a></span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Basics.PathGroupoids.html#w"><span class="id" title="variable">w</span></a></span>, such that
+
+<div class="paragraph"> </div>
+
+    <tt>
+      ap_operation f (x1,x2,...,xn) = f x1 x2 ... xn
+    </tt>
+<div class="paragraph"> </div>
+
+
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Fixpoint</span> <a name="ap_operation"><span class="id" title="definition">ap_operation</span></a> {σ} {<span class="id" title="var">A</span> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Carriers"><span class="id" title="abbreviation">Carriers</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#3122c41ebe889f745cb9bbe1c92165c3"><span class="id" title="variable">σ</span></a>} {<span class="id" title="var">w</span> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#SymbolType"><span class="id" title="definition">SymbolType</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#3122c41ebe889f745cb9bbe1c92165c3"><span class="id" title="variable">σ</span></a>}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;: <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Operation"><span class="id" title="definition">Operation</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#w"><span class="id" title="variable">w</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HoTT.Classes.implementations.family_prod.html#FamilyProd"><span class="id" title="definition">FamilyProd</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#A"><span class="id" title="variable">A</span></a> (<a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#dom_symboltype"><span class="id" title="definition">dom_symboltype</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#w"><span class="id" title="variable">w</span></a>) <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#A"><span class="id" title="variable">A</span></a> (<a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#cod_symboltype"><span class="id" title="definition">cod_symboltype</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#w"><span class="id" title="variable">w</span></a>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;:= <span class="id" title="keyword">match</span> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#w"><span class="id" title="variable">w</span></a> <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <a class="idref" href="HoTT.Classes.implementations.ne_list.html#ee22de0dcbfc7276e0428d092ee5aa94"><span class="id" title="notation">[:</span></a><span class="id" title="var">s</span><a class="idref" href="HoTT.Classes.implementations.ne_list.html#ee22de0dcbfc7276e0428d092ee5aa94"><span class="id" title="notation">:]</span></a> ⇒ <a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">λ</span></a> <span class="id" title="var">f</span> <span class="id" title="var">_</span><a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#f"><span class="id" title="variable">f</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id" title="var">s</span> <a class="idref" href="HoTT.Classes.implementations.ne_list.html#41bceaa75941bf46f1425e087e951fa0"><span class="id" title="notation">:::</span></a> <span class="id" title="var">w'</span> ⇒ <a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">λ</span></a> <span class="id" title="var">f</span> '<a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">(</span></a><span class="id" title="var">x</span><a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">,</span></a> <span class="id" title="var">l</span><a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">)</span></a><a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#ap_operation"><span class="id" title="definition">ap_operation</span></a> (<a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#x"><span class="id" title="variable">x</span></a>) <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#l"><span class="id" title="variable">l</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">end</span>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+Funext for uncurried <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Operation"><span class="id" title="definition">Operation</span></a></span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Basics.PathGroupoids.html#w"><span class="id" title="variable">w</span></a></span>. If
+
+<div class="paragraph"> </div>
+
+    <tt>
+      ap_operation f (x1,x2,...,xn) = ap_operation g (x1,x2,...,xn)
+    </tt>
+<div class="paragraph"> </div>
+
+    for all <span class="inlinecode">(<a class="idref" href="HoTT.Categories.Category.Morphisms.html#associativity_composition.x1"><span class="id" title="variable">x1</span></a>,<a class="idref" href="HoTT.Categories.Category.Morphisms.html#associativity_composition.x2"><span class="id" title="variable">x2</span></a>,...,<span class="id" title="var">xn</span>)</span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.orders.sum.html#s1"><span class="id" title="variable">s1</span></a></span> <span class="inlinecode">×</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.orders.sum.html#s2"><span class="id" title="variable">s2</span></a></span> <span class="inlinecode">×</span> <span class="inlinecode">...</span> <span class="inlinecode">×</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode"><span class="id" title="var">sn</span></span>, then <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode">=</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.g"><span class="id" title="variable">g</span></a></span>. 
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Fixpoint</span> <a name="path_forall_ap_operation"><span class="id" title="definition">path_forall_ap_operation</span></a> `{<a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="class">Funext</span></a>} {σ : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Signature"><span class="id" title="record">Signature</span></a>}<br/>
+&nbsp;&nbsp;{<span class="id" title="var">A</span> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Carriers"><span class="id" title="abbreviation">Carriers</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#3122c41ebe889f745cb9bbe1c92165c3"><span class="id" title="variable">σ</span></a>} {<span class="id" title="var">w</span> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#SymbolType"><span class="id" title="definition">SymbolType</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#3122c41ebe889f745cb9bbe1c92165c3"><span class="id" title="variable">σ</span></a>}<br/>
+&nbsp;&nbsp;: <a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">(</span></a><span class="id" title="var">f</span> <span class="id" title="var">g</span> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Operation"><span class="id" title="definition">Operation</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#w"><span class="id" title="variable">w</span></a><a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">),</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">(</span></a><a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <span class="id" title="var">a</span> : <a class="idref" href="HoTT.Classes.implementations.family_prod.html#FamilyProd"><span class="id" title="definition">FamilyProd</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#A"><span class="id" title="variable">A</span></a> (<a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#dom_symboltype"><span class="id" title="definition">dom_symboltype</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#w"><span class="id" title="variable">w</span></a>)<a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">,</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#ap_operation"><span class="id" title="definition">ap_operation</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#a"><span class="id" title="variable">a</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#ap_operation"><span class="id" title="definition">ap_operation</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#g"><span class="id" title="variable">g</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#a"><span class="id" title="variable">a</span></a><a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">)</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#g"><span class="id" title="variable">g</span></a><br/>
+&nbsp;&nbsp;:= <span class="id" title="keyword">match</span> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#w"><span class="id" title="variable">w</span></a> <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <a class="idref" href="HoTT.Classes.implementations.ne_list.html#ee22de0dcbfc7276e0428d092ee5aa94"><span class="id" title="notation">[:</span></a><span class="id" title="var">s</span><a class="idref" href="HoTT.Classes.implementations.ne_list.html#ee22de0dcbfc7276e0428d092ee5aa94"><span class="id" title="notation">:]</span></a> ⇒ <a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">λ</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">(</span></a><span class="id" title="var">f</span> <span class="id" title="var">g</span> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#A"><span class="id" title="variable">A</span></a> <span class="id" title="var">s</span>) <span class="id" title="var">p</span><a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="HoTT.Basics.Overture.html#tt"><span class="id" title="constructor">tt</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id" title="var">s</span> <a class="idref" href="HoTT.Classes.implementations.ne_list.html#41bceaa75941bf46f1425e087e951fa0"><span class="id" title="notation">:::</span></a> <span class="id" title="var">w'</span> ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">λ</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">(</span></a><span class="id" title="var">f</span> <span class="id" title="var">g</span> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#A"><span class="id" title="variable">A</span></a> <span class="id" title="var">s</span> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Operation"><span class="id" title="definition">Operation</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#A"><span class="id" title="variable">A</span></a> <span class="id" title="var">w'</span>) <span class="id" title="var">p</span><a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">,</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HoTT.Basics.Overture.html#path_forall"><span class="id" title="definition">path_forall</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#g"><span class="id" title="variable">g</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">λ</span></a> <span class="id" title="var">x</span><a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#path_forall_ap_operation"><span class="id" title="definition">path_forall_ap_operation</span></a> (<a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#x"><span class="id" title="variable">x</span></a>) (<a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#g"><span class="id" title="variable">g</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#x"><span class="id" title="variable">x</span></a>) (<a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">λ</span></a> <span class="id" title="var">a</span><a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#x"><span class="id" title="variable">x</span></a><a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">,</span></a><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#a"><span class="id" title="variable">a</span></a><a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">)</span></a>))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">end</span>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+An <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Algebra"><span class="id" title="record">Algebra</span></a></span> <span class="inlinecode">σ</span> for a signature <span class="inlinecode">σ</span> consists of a family <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#carriers"><span class="id" title="projection">carriers</span></a></span> <span class="inlinecode">:</span>
+    <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Carriers"><span class="id" title="abbreviation">Carriers</span></a></span> <span class="inlinecode">σ</span> indexed by the sorts <span class="inlinecode"><a class="idref" href="HoTT.Categories.Cat.Morphisms.html#iso_lemmas.s"><span class="id" title="variable">s</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><span class="id" title="keyword">Sort</span></span> <span class="inlinecode">σ</span>, and for each symbol
+    <span class="inlinecode"><a class="idref" href="Coq.Init.Nat.html#u"><span class="id" title="variable">u</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Symbol"><span class="id" title="projection">Symbol</span></a></span> <span class="inlinecode">σ</span>, an operation of type <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Operation"><span class="id" title="definition">Operation</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#carriers"><span class="id" title="projection">carriers</span></a></span> <span class="inlinecode">(σ</span> <span class="inlinecode"><a class="idref" href="Coq.Init.Nat.html#u"><span class="id" title="variable">u</span></a>)</span>,
+    where <span class="inlinecode">σ</span> <span class="inlinecode"><a class="idref" href="Coq.Init.Nat.html#u"><span class="id" title="variable">u</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#SymbolType"><span class="id" title="definition">SymbolType</span></a></span> <span class="inlinecode">σ</span> is the symbol type of <span class="inlinecode"><a class="idref" href="Coq.Init.Nat.html#u"><span class="id" title="variable">u</span></a></span>. 
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Record</span> <a name="Algebra"><span class="id" title="record">Algebra</span></a> {σ : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Signature"><span class="id" title="record">Signature</span></a>} : <span class="id" title="keyword">Type</span> := <a name="BuildAlgebra"><span class="id" title="constructor">BuildAlgebra</span></a><br/>
+&nbsp;&nbsp;{ <a name="carriers"><span class="id" title="projection">carriers</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Carriers"><span class="id" title="abbreviation">Carriers</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#3122c41ebe889f745cb9bbe1c92165c3"><span class="id" title="variable">σ</span></a><br/>
+&nbsp;&nbsp;; <a name="operations"><span class="id" title="projection">operations</span></a> : <a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">(</span></a><span class="id" title="var">u</span> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Symbol"><span class="id" title="projection">Symbol</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#3122c41ebe889f745cb9bbe1c92165c3"><span class="id" title="variable">σ</span></a><a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">),</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Operation"><span class="id" title="definition">Operation</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#carriers"><span class="id" title="method">carriers</span></a> (<a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#3122c41ebe889f745cb9bbe1c92165c3"><span class="id" title="variable">σ</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#u"><span class="id" title="variable">u</span></a>) }.<br/>
+
+<br/>
+<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Algebra"><span class="id" title="record">Algebra</span></a> : <span class="id" title="tactic">clear</span> <span class="id" title="var">implicits</span>.<br/>
+
+<br/>
+<span class="id" title="var">Arguments</span> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#BuildAlgebra"><span class="id" title="constructor">BuildAlgebra</span></a> {σ} <span class="id" title="var">carriers</span> <span class="id" title="var">operations</span>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+We have a convenient implicit coercion from an algebra to the
+    family of carriers. 
+</div>
+<div class="code">
+<span class="id" title="keyword">Global</span> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#carriers"><span class="id" title="projection">Coercion</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#carriers"><span class="id" title="projection">carriers</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#carriers"><span class="id" title="projection">:</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#carriers"><span class="id" title="projection">Algebra</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#carriers"><span class="id" title="projection">&gt;-&gt;</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#carriers"><span class="id" title="projection">Funclass</span></a>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+To find a path between two algebras <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.B"><span class="id" title="variable">B</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Algebra"><span class="id" title="record">Algebra</span></a></span> <span class="inlinecode">σ</span> it suffices
+    to find a path between the carriers and the operations. 
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Lemma</span> <a name="path_algebra"><span class="id" title="lemma">path_algebra</span></a> {σ : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Signature"><span class="id" title="record">Signature</span></a>} (<span class="id" title="var">A</span> <span class="id" title="var">B</span> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Algebra"><span class="id" title="record">Algebra</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#3122c41ebe889f745cb9bbe1c92165c3"><span class="id" title="variable">σ</span></a>)<br/>
+&nbsp;&nbsp;(<span class="id" title="var">p</span> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#carriers"><span class="id" title="projection">carriers</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#carriers"><span class="id" title="projection">carriers</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#B"><span class="id" title="variable">B</span></a>)<br/>
+&nbsp;&nbsp;(<span class="id" title="var">q</span> : <a class="idref" href="HoTT.Basics.Overture.html#transport"><span class="id" title="definition">transport</span></a> (<a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">λ</span></a> <span class="id" title="var">X</span><a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">,</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <span class="id" title="var">u</span><a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Operation"><span class="id" title="definition">Operation</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#X"><span class="id" title="variable">X</span></a> (<a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#3122c41ebe889f745cb9bbe1c92165c3"><span class="id" title="variable">σ</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#u"><span class="id" title="variable">u</span></a>)) <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#p"><span class="id" title="variable">p</span></a> (<a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#operations"><span class="id" title="projection">operations</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#A"><span class="id" title="variable">A</span></a>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#operations"><span class="id" title="projection">operations</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#B"><span class="id" title="variable">B</span></a>)<br/>
+&nbsp;&nbsp;: <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#B"><span class="id" title="variable">B</span></a>.<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">destruct</span> <span class="id" title="var">A</span>,<span class="id" title="var">B</span>. <span class="id" title="tactic">simpl</span> <span class="id" title="tactic">in</span> ×. <span class="id" title="tactic">by</span> <span class="id" title="var">path_induction</span>.<br/>
+<span class="id" title="keyword">Defined</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Class</span> <a name="IsTruncAlgebra"><span class="id" title="record">IsTruncAlgebra</span></a> (<span class="id" title="var">n</span> : <a class="idref" href="HoTT.Basics.Overture.html#trunc_index"><span class="id" title="inductive">trunc_index</span></a>) {σ : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Signature"><span class="id" title="record">Signature</span></a>} (<span class="id" title="var">A</span> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Algebra"><span class="id" title="record">Algebra</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#3122c41ebe889f745cb9bbe1c92165c3"><span class="id" title="variable">σ</span></a>)<br/>
+&nbsp;&nbsp;:= <a name="trunc_carriers_algebra"><span class="id" title="projection">trunc_carriers_algebra</span></a> : <a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">(</span></a><span class="id" title="var">s</span> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Sort"><span class="id" title="projection">Sort</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#3122c41ebe889f745cb9bbe1c92165c3"><span class="id" title="variable">σ</span></a><a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">),</span></a> <a class="idref" href="HoTT.Basics.Overture.html#IsTrunc"><span class="id" title="class">IsTrunc</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#n"><span class="id" title="variable">n</span></a> (<a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#s"><span class="id" title="variable">s</span></a>).<br/>
+
+<br/>
+<span class="id" title="keyword">Global</span> <span class="id" title="var">Existing</span> <span class="id" title="keyword">Instance</span> <span class="id" title="var">trunc_carriers_algebra</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Notation</span> <a name="IsHSetAlgebra"><span class="id" title="abbreviation">IsHSetAlgebra</span></a> := (<a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#IsTruncAlgebra"><span class="id" title="class">IsTruncAlgebra</span></a> 0).<br/>
+
+<br/>
+<span class="id" title="keyword">Module</span> <a name="algebra_notations"><span class="id" title="module">algebra_notations</span></a>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+Given <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Algebra"><span class="id" title="record">Algebra</span></a></span> <span class="inlinecode">σ</span> and function symbol <span class="inlinecode"><a class="idref" href="Coq.Init.Nat.html#u"><span class="id" title="variable">u</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Symbol"><span class="id" title="projection">Symbol</span></a></span> <span class="inlinecode">σ</span>, we use
+    the notation <span class="inlinecode"><a class="idref" href="Coq.Init.Nat.html#u"><span class="id" title="variable">u</span></a></span> <span class="inlinecode">^^</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> to refer to the corresponding algebra
+    operation of type <span class="inlinecode"><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Operation"><span class="id" title="definition">Operation</span></a></span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode">(σ</span> <span class="inlinecode"><a class="idref" href="Coq.Init.Nat.html#u"><span class="id" title="variable">u</span></a>)</span>. 
+</div>
+<div class="code">
+
+<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Global</span> <span class="id" title="keyword">Notation</span> "u ^^ A" := (<a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#operations"><span class="id" title="projection">operations</span></a> <span class="id" title="var">A</span> <span class="id" title="var">u</span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 60, <span class="id" title="keyword">no</span> <span class="id" title="keyword">associativity</span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <span class="id" title="var">Algebra_scope</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">End</span> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#algebra_notations"><span class="id" title="module">algebra_notations</span></a>.<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://coq.inria.fr/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

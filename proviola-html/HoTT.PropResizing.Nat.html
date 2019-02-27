@@ -3253,17 +3253,17 @@
           
 
             i = 647;
-            data = "1 subgoal (ID 382)	  	  UA : Univalence	  PR : PropResizing	  n : N	  ============================	  Sect	    (fun X : {m : N & m < n} + Unit =>	     match X with	     | inl mH => (pr1 mH; N_lt_le (pr1 mH) n (pr2 mH))	     | inr _ => (n; reflexivity n)	     end)	    (fun mH : {m : N & m <= n} =>	     let s := N_le_eq_or_lt (pr1 mH) n (pr2 mH) in	     match s with	     | inl _ => inr tt	     | inr Hs => inl (pr1 mH; Hs)	     end)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 384)		subgoal 1 (ID 384) is:	 Sect	   (fun mH : {m : N & m <= n} =>	    let s := N_le_eq_or_lt (pr1 mH) n (pr2 mH) in	    match s with	    | inl _ => inr tt	    | inr Hs => inl (pr1 mH; Hs)	    end)	   (fun X : {m : N & m < n} + Unit =>	    match X with	    | inl mH => (pr1 mH; N_lt_le (pr1 mH) n (pr2 mH))	    | inr _ => (n; reflexivity n)	    end)	";
+            data = "1 subgoal (ID 382)	  	  UA : Univalence	  PR : PropResizing	  n : N	  ============================	  Sect	    (fun X : {m : N & m < n} + Unit =>	     match X with	     | inl mH => (pr1 mH; N_lt_le (pr1 mH) n (pr2 mH))	     | inr _ => (n; reflexivity n)	     end)	    (fun mH : {m : N & m <= n} =>	     let s := N_le_eq_or_lt (pr1 mH) n (pr2 mH) in	     match s with	     | inl _ => inr tt	     | inr Hs => inl (pr1 mH; Hs)	     end)	";
             responses[i]=data;
           
 
             i = 648;
-            data = "1 subgoal (ID 384)	  	  UA : Univalence	  PR : PropResizing	  n : N	  ============================	  Sect	    (fun mH : {m : N & m <= n} =>	     let s := N_le_eq_or_lt (pr1 mH) n (pr2 mH) in	     match s with	     | inl _ => inr tt	     | inr Hs => inl (pr1 mH; Hs)	     end)	    (fun X : {m : N & m < n} + Unit =>	     match X with	     | inl mH => (pr1 mH; N_lt_le (pr1 mH) n (pr2 mH))	     | inr _ => (n; reflexivity n)	     end)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 384)		subgoal 1 (ID 384) is:	 Sect	   (fun mH : {m : N & m <= n} =>	    let s := N_le_eq_or_lt (pr1 mH) n (pr2 mH) in	    match s with	    | inl _ => inr tt	    | inr Hs => inl (pr1 mH; Hs)	    end)	   (fun X : {m : N & m < n} + Unit =>	    match X with	    | inl mH => (pr1 mH; N_lt_le (pr1 mH) n (pr2 mH))	    | inr _ => (n; reflexivity n)	    end)	1 subgoal (ID 384)	  	  UA : Univalence	  PR : PropResizing	  n : N	  ============================	  Sect	    (fun mH : {m : N & m <= n} =>	     let s := N_le_eq_or_lt (pr1 mH) n (pr2 mH) in	     match s with	     | inl _ => inr tt	     | inr Hs => inl (pr1 mH; Hs)	     end)	    (fun X : {m : N & m < n} + Unit =>	     match X with	     | inl mH => (pr1 mH; N_lt_le (pr1 mH) n (pr2 mH))	     | inr _ => (n; reflexivity n)	     end)	No more subgoals.	";
             responses[i]=data;
           
 
             i = 649;
-            data = "No more subgoals.	<infomsg>equiv_N_segment is defined</infomsg>	";
+            data = "<infomsg>equiv_N_segment is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -3633,12 +3633,12 @@
           
 
             i = 723;
-            data = "1 subgoal (ID 471)	  	  UA : Univalence	  PR : PropResizing	  X : Type	  x0 : X	  xs : X -> X	  ============================	  Contr	    {f0 : {f : {m : N & m <= zero} -> X & f (zero_seg zero) = x0} &	    forall mh : {m : N & m < zero},	    pr1 f0 (succ_seg zero mh) = xs (pr1 f0 (_^-1 (inl mh)))}	";
+            data = "1 subgoal (ID 471)	  	  UA : Univalence	  PR : PropResizing	  X : Type	  x0 : X	  xs : X -> X	  ============================	  Contr	    {f0 : {f : {m : N & m <= zero} -> X & f (zero_seg zero) = x0} &	    forall mh : {m : N & m < zero},	    pr1 f0 (succ_seg zero mh) = xs (pr1 f0 (_^-1 (inl mh)))}	2 subgoals (ID 2367)	  	  UA : Univalence	  PR : PropResizing	  X : Type	  x0 : X	  xs : X -> X	  ============================	  Contr {f : {m : N & m <= zero} -> X & f (zero_seg zero) = x0}		subgoal 2 (ID 2368) is:	 forall a : {f : {m : N & m <= zero} -> X & f (zero_seg zero) = x0},	 Contr	   (forall mh : {m : N & m < zero},	    pr1 a (succ_seg zero mh) = xs (pr1 a (_^-1 (inl mh))))	";
             responses[i]=data;
           
 
             i = 724;
-            data = "2 subgoals (ID 2367)	  	  UA : Univalence	  PR : PropResizing	  X : Type	  x0 : X	  xs : X -> X	  ============================	  Contr {f : {m : N & m <= zero} -> X & f (zero_seg zero) = x0}		subgoal 2 (ID 2368) is:	 forall a : {f : {m : N & m <= zero} -> X & f (zero_seg zero) = x0},	 Contr	   (forall mh : {m : N & m < zero},	    pr1 a (succ_seg zero mh) = xs (pr1 a (_^-1 (inl mh))))	1 subgoal (ID 2367)	  	  UA : Univalence	  PR : PropResizing	  X : Type	  x0 : X	  xs : X -> X	  ============================	  Contr {f : {m : N & m <= zero} -> X & f (zero_seg zero) = x0}	2 subgoals (ID 2372)	  	  UA : Univalence	  PR : PropResizing	  X : Type	  x0 : X	  xs : X -> X	  ============================	  {f : {m : N & m <= zero} -> X & f (zero_seg zero) = x0}		subgoal 2 (ID 2374) is:	 forall y : {f : {m : N & m <= zero} -> X & f (zero_seg zero) = x0},	 ?center = y	";
+            data = "1 subgoal (ID 2367)	  	  UA : Univalence	  PR : PropResizing	  X : Type	  x0 : X	  xs : X -> X	  ============================	  Contr {f : {m : N & m <= zero} -> X & f (zero_seg zero) = x0}	2 subgoals (ID 2372)	  	  UA : Univalence	  PR : PropResizing	  X : Type	  x0 : X	  xs : X -> X	  ============================	  {f : {m : N & m <= zero} -> X & f (zero_seg zero) = x0}		subgoal 2 (ID 2374) is:	 forall y : {f : {m : N & m <= zero} -> X & f (zero_seg zero) = x0},	 ?center = y	";
             responses[i]=data;
           
 
@@ -3888,12 +3888,12 @@
           
 
             i = 774;
-            data = "2 subgoals (ID 484)	  	  UA : Univalence	  PR : PropResizing	  X : Type	  x0 : X	  xs : X -> X	  n : N	  ============================	  forall a : ({m : N & m <= n} -> X) * X,	  (fun X0 : ({m : N & m <= n} -> X) * X =>	   (fun (f : {m : N & m <= n} -> X) (xsn : X) =>	    (f (zero_seg n) = x0) *	    ((forall mh : {m : N & m < n}, f (succ_seg n mh) = xs (f (_^-1 (inl mh)))) *	     (xsn = xs (f (refl_seg n))))) (fst X0) (snd X0)) a <~>	  (fun f : {m : N & m <= succ n} -> X =>	   (f (zero_seg (succ n)) = x0) *	   (forall mh : {m : N & m < succ n},	    f (succ_seg (succ n) mh) = xs (f (_^-1 (inl mh)))))	    (equiv_N_segment_succ_maps n a)		subgoal 2 (ID 486) is:	 {f : {m : N & m <= n} -> X &	 (f (zero_seg n) = x0) *	 (forall mh : {m : N & m < n}, f (succ_seg n mh) = xs (f (_^-1 (inl mh))))} <~>	 {X0 : ({m : N & m <= n} -> X) * X &	 (fun (f : {m : N & m <= n} -> X) (xsn : X) =>	  (f (zero_seg n) = x0) *	  ((forall mh : {m : N & m < n}, f (succ_seg n mh) = xs (f (_^-1 (inl mh)))) *	   (xsn = xs (f (refl_seg n))))) (fst X0) (snd X0)}	1 subgoal (ID 484)	  	  UA : Univalence	  PR : PropResizing	  X : Type	  x0 : X	  xs : X -> X	  n : N	  ============================	  forall a : ({m : N & m <= n} -> X) * X,	  (fun X0 : ({m : N & m <= n} -> X) * X =>	   (fun (f : {m : N & m <= n} -> X) (xsn : X) =>	    (f (zero_seg n) = x0) *	    ((forall mh : {m : N & m < n}, f (succ_seg n mh) = xs (f (_^-1 (inl mh)))) *	     (xsn = xs (f (refl_seg n))))) (fst X0) (snd X0)) a <~>	  (fun f : {m : N & m <= succ n} -> X =>	   (f (zero_seg (succ n)) = x0) *	   (forall mh : {m : N & m < succ n},	    f (succ_seg (succ n) mh) = xs (f (_^-1 (inl mh)))))	    (equiv_N_segment_succ_maps n a)	1 subgoal (ID 521)	  	  UA : Univalence	  PR : PropResizing	  X : Type	  x0 : X	  xs : X -> X	  n : N	  f : {m : N & m <= n} -> X	  xsn : X	  ============================	  (f (zero_seg n) = x0) *	  ((forall mh : {m : N & m < n}, f (succ_seg n mh) = xs (f (_^-1 (inl mh)))) *	   (xsn = xs (f (refl_seg n)))) <~>	  (equiv_N_segment_succ_maps n (f, xsn) (zero_seg (succ n)) = x0) *	  (forall mh : {m : N & m < succ n},	   equiv_N_segment_succ_maps n (f, xsn) (succ_seg (succ n) mh) =	   xs (equiv_N_segment_succ_maps n (f, xsn) (_^-1 (inl mh))))	";
+            data = "2 subgoals (ID 484)	  	  UA : Univalence	  PR : PropResizing	  X : Type	  x0 : X	  xs : X -> X	  n : N	  ============================	  forall a : ({m : N & m <= n} -> X) * X,	  (fun X0 : ({m : N & m <= n} -> X) * X =>	   (fun (f : {m : N & m <= n} -> X) (xsn : X) =>	    (f (zero_seg n) = x0) *	    ((forall mh : {m : N & m < n}, f (succ_seg n mh) = xs (f (_^-1 (inl mh)))) *	     (xsn = xs (f (refl_seg n))))) (fst X0) (snd X0)) a <~>	  (fun f : {m : N & m <= succ n} -> X =>	   (f (zero_seg (succ n)) = x0) *	   (forall mh : {m : N & m < succ n},	    f (succ_seg (succ n) mh) = xs (f (_^-1 (inl mh)))))	    (equiv_N_segment_succ_maps n a)		subgoal 2 (ID 486) is:	 {f : {m : N & m <= n} -> X &	 (f (zero_seg n) = x0) *	 (forall mh : {m : N & m < n}, f (succ_seg n mh) = xs (f (_^-1 (inl mh))))} <~>	 {X0 : ({m : N & m <= n} -> X) * X &	 (fun (f : {m : N & m <= n} -> X) (xsn : X) =>	  (f (zero_seg n) = x0) *	  ((forall mh : {m : N & m < n}, f (succ_seg n mh) = xs (f (_^-1 (inl mh)))) *	   (xsn = xs (f (refl_seg n))))) (fst X0) (snd X0)}	";
             responses[i]=data;
           
 
             i = 775;
-            data = "2 subgoals (ID 526)	  	  UA : Univalence	  PR : PropResizing	  X : Type	  x0 : X	  xs : X -> X	  n : N	  f : {m : N & m <= n} -> X	  xsn : X	  ============================	  f (zero_seg n) = x0 <~>	  equiv_N_segment_succ_maps n (f, xsn) (zero_seg (succ n)) = x0		subgoal 2 (ID 527) is:	 (forall mh : {m : N & m < n}, f (succ_seg n mh) = xs (f (_^-1 (inl mh)))) *	 (xsn = xs (f (refl_seg n))) <~>	 (forall mh : {m : N & m < succ n},	  equiv_N_segment_succ_maps n (f, xsn) (succ_seg (succ n) mh) =	  xs (equiv_N_segment_succ_maps n (f, xsn) (_^-1 (inl mh))))	";
+            data = "1 subgoal (ID 484)	  	  UA : Univalence	  PR : PropResizing	  X : Type	  x0 : X	  xs : X -> X	  n : N	  ============================	  forall a : ({m : N & m <= n} -> X) * X,	  (fun X0 : ({m : N & m <= n} -> X) * X =>	   (fun (f : {m : N & m <= n} -> X) (xsn : X) =>	    (f (zero_seg n) = x0) *	    ((forall mh : {m : N & m < n}, f (succ_seg n mh) = xs (f (_^-1 (inl mh)))) *	     (xsn = xs (f (refl_seg n))))) (fst X0) (snd X0)) a <~>	  (fun f : {m : N & m <= succ n} -> X =>	   (f (zero_seg (succ n)) = x0) *	   (forall mh : {m : N & m < succ n},	    f (succ_seg (succ n) mh) = xs (f (_^-1 (inl mh)))))	    (equiv_N_segment_succ_maps n a)	1 subgoal (ID 521)	  	  UA : Univalence	  PR : PropResizing	  X : Type	  x0 : X	  xs : X -> X	  n : N	  f : {m : N & m <= n} -> X	  xsn : X	  ============================	  (f (zero_seg n) = x0) *	  ((forall mh : {m : N & m < n}, f (succ_seg n mh) = xs (f (_^-1 (inl mh)))) *	   (xsn = xs (f (refl_seg n)))) <~>	  (equiv_N_segment_succ_maps n (f, xsn) (zero_seg (succ n)) = x0) *	  (forall mh : {m : N & m < succ n},	   equiv_N_segment_succ_maps n (f, xsn) (succ_seg (succ n) mh) =	   xs (equiv_N_segment_succ_maps n (f, xsn) (_^-1 (inl mh))))	2 subgoals (ID 526)	  	  UA : Univalence	  PR : PropResizing	  X : Type	  x0 : X	  xs : X -> X	  n : N	  f : {m : N & m <= n} -> X	  xsn : X	  ============================	  f (zero_seg n) = x0 <~>	  equiv_N_segment_succ_maps n (f, xsn) (zero_seg (succ n)) = x0		subgoal 2 (ID 527) is:	 (forall mh : {m : N & m < n}, f (succ_seg n mh) = xs (f (_^-1 (inl mh)))) *	 (xsn = xs (f (refl_seg n))) <~>	 (forall mh : {m : N & m < succ n},	  equiv_N_segment_succ_maps n (f, xsn) (succ_seg (succ n) mh) =	  xs (equiv_N_segment_succ_maps n (f, xsn) (_^-1 (inl mh))))	";
             responses[i]=data;
           
 
@@ -4153,12 +4153,12 @@
           
 
             i = 827;
-            data = "No more subgoals.	<infomsg>partial_Nrec_succ0 is defined</infomsg>	";
+            data = "No more subgoals.	";
             responses[i]=data;
           
 
             i = 828;
-            data = "<infomsg>partial_Nrec_succ is defined</infomsg>	";
+            data = "<infomsg>partial_Nrec_succ0 is defined</infomsg>	<infomsg>partial_Nrec_succ is defined</infomsg>	";
             responses[i]=data;
           
 
