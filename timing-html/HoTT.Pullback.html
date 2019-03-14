@@ -67,8 +67,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pullback.v
 Line: 8
-Time: 0.001s">
-<div class="time" style="width: 1.4084507042254%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition Pullback {A B C} (f : B -&gt; A) (g : C -&gt; A)
   := { b : B &amp; { c : C &amp; f b = g c }}.</pre>
 </div>
@@ -97,8 +97,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pullback.v
 Line: 14
-Time: 0.001s">
-<div class="time" style="width: 1.4084507042254%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Definition pullback_pr2 {A B C} {f : B -&gt; A} {g : C -&gt; A}
 : Pullback f g -&gt; C := (fun z =&gt; z.2.1).</pre>
@@ -122,8 +122,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pullback.v
 Line: 21
-Time: 0.003s">
-<div class="time" style="width: 4.2253521126761%"></div>
+Time: 0.002s">
+<div class="time" style="width: 2.8169014084507%"></div>
 <pre>Definition pullback_corec {A B C D}
            {f : A -&gt; B} {g : C -&gt; D} {h : A -&gt; C} {k : B -&gt; D}
            (p : k o f == g o h)
@@ -154,8 +154,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Pullback.v
 Line: 29
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.4084507042254%"></div>
 <pre>
   refine (_ oE equiv_sigma_symm (fun b c =&gt; f b = g c)).</pre>
 </div>
@@ -197,8 +197,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pullback.v
 Line: 36
-Time: 0.001s">
-<div class="time" style="width: 1.4084507042254%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition equiv_pullback_unit_prod (A B : Type)
 : Pullback (@const A Unit tt) (@const B Unit tt) &lt;~&gt; A * B.</pre>
 </div>
@@ -270,8 +270,8 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: Pullback.v
 Line: 43
-Time: 0.001s">
-<div class="time" style="width: 1.4084507042254%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     apply (path_sigma' _ 1); simpl.</pre>
 </div>
@@ -306,8 +306,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pullback.v
 Line: 49
-Time: 0.003s">
-<div class="time" style="width: 4.2253521126761%"></div>
+Time: 0.002s">
+<div class="time" style="width: 2.8169014084507%"></div>
 <pre>Definition IsPullback {A B C D}
            {f : A -&gt; B} {g : C -&gt; D} {h : A -&gt; C} {k : B -&gt; D}
            (p : k o f == g o h)
@@ -425,8 +425,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pullback.v
 Line: 78
-Time: 0.001s">
-<div class="time" style="width: 1.4084507042254%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition pullback_along' {A B C} (g : C -&gt; A) (f : B -&gt; A)
 : Pullback f g -&gt; C
   := fun z =&gt; z.2.1.</pre>
@@ -472,8 +472,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pullback.v
 Line: 89
-Time: 0.001s">
-<div class="time" style="width: 1.4084507042254%"></div>
+Time: 0.002s">
+<div class="time" style="width: 2.8169014084507%"></div>
 <pre>
   refine (_ oE (equiv_sigma_assoc (fun b' =&gt; {c : C &amp; f b' = g c})
                                  (fun x =&gt; (g^*' f) x = c))^-1).</pre>
@@ -521,8 +521,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Pullback.v
 Line: 102
-Time: 0.005s">
-<div class="time" style="width: 7.0422535211268%"></div>
+Time: 0.004s">
+<div class="time" style="width: 5.6338028169014%"></div>
 <pre>
   refine (_ oE equiv_contr_sigma _).</pre>
 </div>
@@ -550,8 +550,8 @@ Section Functor_Pullback.</pre>
 </div>
 <div class="code" title="File: Pullback.v
 Line: 107
-Time: 0.003s">
-<div class="time" style="width: 4.2253521126761%"></div>
+Time: 0.004s">
+<div class="time" style="width: 5.6338028169014%"></div>
 <pre>
 
   Context {A1 B1 C1 A2 B2 C2}
@@ -619,8 +619,8 @@ Time: 0.003s">
 </div>
 <div class="code" title="File: Pullback.v
 Line: 128
-Time: 0.005s">
-<div class="time" style="width: 7.0422535211268%"></div>
+Time: 0.004s">
+<div class="time" style="width: 5.6338028169014%"></div>
 <pre>
     refine (_ oE (equiv_transport (fun x =&gt; hfiber (functor_sigma l _) x) _ _
                                  (transport_sigma' e1^ (c2; e2)))).</pre>
@@ -648,16 +648,16 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: Pullback.v
 Line: 133
-Time: 0.007s">
-<div class="time" style="width: 9.8591549295775%"></div>
+Time: 0.006s">
+<div class="time" style="width: 8.4507042253521%"></div>
 <pre>
     refine (_ oE (equiv_transport (hfiber (fun e0 =&gt; (p b1 @ ap h e0) @ (q c1)^)) _ _
                                  (ap (fun e =&gt; e3^ # e) (transport_paths_Fl e1^ e2)))).</pre>
 </div>
 <div class="code" title="File: Pullback.v
 Line: 135
-Time: 0.005s">
-<div class="time" style="width: 7.0422535211268%"></div>
+Time: 0.004s">
+<div class="time" style="width: 5.6338028169014%"></div>
 <pre>
     refine (_ oE (equiv_transport (hfiber (fun e0 =&gt; (p b1 @ ap h e0) @ (q c1)^)) _ _
                                  (transport_paths_Fr e3^ _))).</pre>
@@ -671,8 +671,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Pullback.v
 Line: 138
-Time: 0.003s">
-<div class="time" style="width: 4.2253521126761%"></div>
+Time: 0.002s">
+<div class="time" style="width: 2.8169014084507%"></div>
 <pre>
     refine (equiv_concat_l (transport_sigma' e2 _) _ oE _); simpl.</pre>
 </div>
@@ -755,8 +755,8 @@ Time: 0.071s">
 </div>
 <div class="code" title="File: Pullback.v
 Line: 150
-Time: 0.066s">
-<div class="time" style="width: 92.957746478873%"></div>
+Time: 0.065s">
+<div class="time" style="width: 91.549295774648%"></div>
 <pre>
 
 End Functor_Pullback.</pre>

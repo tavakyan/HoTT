@@ -1783,12 +1783,12 @@
           
 
             i = 353;
-            data = "1 subgoal (ID 268)	  	  X : Type	  f : PreIdempotent X	  H : WeaklyConstant f	  ============================	  (fun x : X => (f x; isidem f x)) o pr1 == idmap	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 270)		subgoal 1 (ID 270) is:	 (fun R : RetractOf X => retract_idem R == f)	   {|	   retract_type := FixedBy f;	   retract_retr := fun x : X => (f x; isidem f x);	   retract_sect := pr1;	   retract_issect := fun x : FixedBy f =>	                     path_ishprop (f (pr1 x); isidem f (pr1 x)) x |}	";
+            data = "1 subgoal (ID 268)	  	  X : Type	  f : PreIdempotent X	  H : WeaklyConstant f	  ============================	  (fun x : X => (f x; isidem f x)) o pr1 == idmap	";
             responses[i]=data;
           
 
             i = 354;
-            data = "1 subgoal (ID 270)	  	  X : Type	  f : PreIdempotent X	  H : WeaklyConstant f	  ============================	  (fun R : RetractOf X => retract_idem R == f)	    {|	    retract_type := FixedBy f;	    retract_retr := fun x : X => (f x; isidem f x);	    retract_sect := pr1;	    retract_issect := fun x : FixedBy f =>	                      path_ishprop (f (pr1 x); isidem f (pr1 x)) x |}	1 subgoal (ID 286)	  	  X : Type	  f : PreIdempotent X	  H : WeaklyConstant f	  ============================	  (fun x : X => f x) == f	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 270)		subgoal 1 (ID 270) is:	 (fun R : RetractOf X => retract_idem R == f)	   {|	   retract_type := FixedBy f;	   retract_retr := fun x : X => (f x; isidem f x);	   retract_sect := pr1;	   retract_issect := fun x : FixedBy f =>	                     path_ishprop (f (pr1 x); isidem f (pr1 x)) x |}	1 subgoal (ID 270)	  	  X : Type	  f : PreIdempotent X	  H : WeaklyConstant f	  ============================	  (fun R : RetractOf X => retract_idem R == f)	    {|	    retract_type := FixedBy f;	    retract_retr := fun x : X => (f x; isidem f x);	    retract_sect := pr1;	    retract_issect := fun x : FixedBy f =>	                      path_ishprop (f (pr1 x); isidem f (pr1 x)) x |}	1 subgoal (ID 286)	  	  X : Type	  f : PreIdempotent X	  H : WeaklyConstant f	  ============================	  (fun x : X => f x) == f	";
             responses[i]=data;
           
 
@@ -1923,12 +1923,12 @@
           
 
             i = 381;
-            data = "1 subgoal (ID 277)	  	  X : Type	  f : PreIdempotent X	  ss : forall x : X, Collapsible (f x = x)	  ============================	  (fun x : X =>	   (f x; collapse (isidem f x); wconst (collapse (isidem f x)) (isidem f x)))	  o pr1 == idmap	";
+            data = "1 subgoal (ID 277)	  	  X : Type	  f : PreIdempotent X	  ss : forall x : X, Collapsible (f x = x)	  ============================	  (fun x : X =>	   (f x; collapse (isidem f x); wconst (collapse (isidem f x)) (isidem f x)))	  o pr1 == idmap	1 subgoal (ID 304)	  	  X : Type	  f : PreIdempotent X	  ss : forall x : X, Collapsible (f x = x)	  x : X	  p : f x = x	  q : collapse p = p	  ============================	  (f x; collapse (isidem f x); wconst (collapse (isidem f x)) (isidem f x)) =	  (x; p; q)	";
             responses[i]=data;
           
 
             i = 382;
-            data = "1 subgoal (ID 304)	  	  X : Type	  f : PreIdempotent X	  ss : forall x : X, Collapsible (f x = x)	  x : X	  p : f x = x	  q : collapse p = p	  ============================	  (f x; collapse (isidem f x); wconst (collapse (isidem f x)) (isidem f x)) =	  (x; p; q)	1 subgoal (ID 309)	  	  X : Type	  f : PreIdempotent X	  ss : forall x : X, Collapsible (f x = x)	  x : X	  p : f x = x	  q : collapse p = p	  ============================	  transport (fun x0 : X => FixedBy collapse) p	    (pr2	       (f x; collapse (isidem f x);	       wconst (collapse (isidem f x)) (isidem f x))) = 	  pr2 (x; p; q)	";
+            data = "1 subgoal (ID 309)	  	  X : Type	  f : PreIdempotent X	  ss : forall x : X, Collapsible (f x = x)	  x : X	  p : f x = x	  q : collapse p = p	  ============================	  transport (fun x0 : X => FixedBy collapse) p	    (pr2	       (f x; collapse (isidem f x);	       wconst (collapse (isidem f x)) (isidem f x))) = 	  pr2 (x; p; q)	";
             responses[i]=data;
           
 
@@ -3168,12 +3168,12 @@
           
 
             i = 630;
-            data = "1 subgoal (ID 512)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a : split_idem	  a' := (fun n : nat => f (a n.+1); fun n : nat => ap f (pr2 a n.+1))	   : split_idem	  n : nat	  ============================	  ap f (ap f (pr2 a n.+1)) @ I (a n.+1) =	  ap f (I (a n.+2)) @ ap f (pr2 a n.+1)	";
+            data = "1 subgoal (ID 512)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a : split_idem	  a' := (fun n : nat => f (a n.+1); fun n : nat => ap f (pr2 a n.+1))	   : split_idem	  n : nat	  ============================	  ap f (ap f (pr2 a n.+1)) @ I (a n.+1) =	  ap f (I (a n.+2)) @ ap f (pr2 a n.+1)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 513)		subgoal 1 (ID 513) is:	 f (pr1 a n.+1) = pr1 a n	subgoal 2 (ID 514) is:	 ap f (pr2 a n.+1) @ ?Goal = ap f ?Goal@{n:=n.+1} @ pr2 a n	";
             responses[i]=data;
           
 
             i = 631;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 513)		subgoal 1 (ID 513) is:	 f (pr1 a n.+1) = pr1 a n	subgoal 2 (ID 514) is:	 ap f (pr2 a n.+1) @ ?Goal = ap f ?Goal@{n:=n.+1} @ pr2 a n	1 subgoal (ID 513)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a : split_idem	  a' := (fun n : nat => f (a n.+1); fun n : nat => ap f (pr2 a n.+1))	   : split_idem	  n : nat	  ============================	  f (pr1 a n.+1) = pr1 a n	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 514)		subgoal 1 (ID 514) is:	 ap f (pr2 a n.+1) @ pr2 a n = ap f (pr2 a n.+1) @ pr2 a n	";
+            data = "1 subgoal (ID 513)	  	  H : Funext	  X : Type	  f : X -> X	  H0 : IsPreIdempotent f	  H1 : IsQuasiIdempotent f	  I := isidem f : forall x : X, f (f x) = f x	  J := isidem2 f : forall x : X, ap f (I x) = I (f x)	  a : split_idem	  a' := (fun n : nat => f (a n.+1); fun n : nat => ap f (pr2 a n.+1))	   : split_idem	  n : nat	  ============================	  f (pr1 a n.+1) = pr1 a n	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 514)		subgoal 1 (ID 514) is:	 ap f (pr2 a n.+1) @ pr2 a n = ap f (pr2 a n.+1) @ pr2 a n	";
             responses[i]=data;
           
 
