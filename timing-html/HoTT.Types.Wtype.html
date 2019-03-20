@@ -39,14 +39,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Wtype.v
 Line: 3
-Time: 0.018s">
-<div class="time" style="width: 11.464968152866%"></div>
+Time: 0.019s">
+<div class="time" style="width: 12.101910828025%"></div>
 <pre>Require Import HoTT.Basics.</pre>
 </div>
 <div class="code" title="File: Wtype.v
 Line: 3
-Time: 0.013s">
-<div class="time" style="width: 8.2802547770701%"></div>
+Time: 0.014s">
+<div class="time" style="width: 8.9171974522293%"></div>
 <pre>
 Require Import Types.Forall Types.Sigma Types.Paths Types.Unit.</pre>
 </div>
@@ -164,8 +164,8 @@ Defined.</pre>
 </div>
 <div class="code" title="File: Wtype.v
 Line: 25
-Time: 0.01s">
-<div class="time" style="width: 6.3694267515924%"></div>
+Time: 0.007s">
+<div class="time" style="width: 4.4585987261147%"></div>
 <pre>
 
 Definition path_wtype_inv {A B} {u v : W A B} (pq : u = v)
@@ -188,8 +188,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Wtype.v
 Line: 36
-Time: 0.007s">
-<div class="time" style="width: 4.4585987261147%"></div>
+Time: 0.008s">
+<div class="time" style="width: 5.0955414012739%"></div>
 <pre>Definition eisretr_path_wtype {A B} {z z' : W A B}
 : Sect (@path_wtype_inv _ _ z z') (path_wtype z z')
   := fun p =&gt; match p as p in (_ = z') return
@@ -220,8 +220,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Wtype.v
 Line: 50
-Time: 0.007s">
-<div class="time" style="width: 4.4585987261147%"></div>
+Time: 0.008s">
+<div class="time" style="width: 5.0955414012739%"></div>
 <pre>
   intro r; destruct z, z'; set (pq := (path_sigma_uncurried _ _ _)^-1 r).</pre>
 </div>
@@ -234,15 +234,15 @@ Time: 0.007s">
 </div>
 <div class="code" title="File: Wtype.v
 Line: 52
-Time: 0.025s">
-<div class="time" style="width: 15.923566878981%"></div>
+Time: 0.024s">
+<div class="time" style="width: 15.286624203822%"></div>
 <pre>
   destruct pq as [p q]; cbn in p; destruct p; cbn in q; destruct q.</pre>
 </div>
 <div class="code" title="File: Wtype.v
 Line: 53
-Time: 0.001s">
-<div class="time" style="width: 0.63694267515924%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   exact idpath.</pre>
 </div>
@@ -322,8 +322,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Wtype.v
 Line: 73
-Time: 0.001s">
-<div class="time" style="width: 0.63694267515924%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   generalize dependent A; intros A B ac; intros z; induction z as [a w].</pre>
 </div>
