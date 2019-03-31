@@ -63,7 +63,7 @@
           
 
             i = 9;
-            data = "<infomsg>	Ambiguous paths: [pointed_equiv_equiv; equiv_fun] : pEquiv >-> Funclass	</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
@@ -78,7 +78,7 @@
           
 
             i = 12;
-            data = "<infomsg>	Ambiguous paths: [dhprop_to_dprop; dprop_type] : DHProp >-> Sortclass	</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
@@ -103,7 +103,7 @@
           
 
             i = 17;
-            data = "1 subgoal (ID 2)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  ============================	  SgOp Pi	";
+            data = "1 subgoal (ID 15)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  ============================	  SgOp Pi	";
             responses[i]=data;
           
 
@@ -113,22 +113,22 @@
           
 
             i = 19;
-            data = "1 subgoal (ID 5)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  a, b : Pi	  ============================	  Pi	";
+            data = "1 subgoal (ID 18)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  a, b : Pi	  ============================	  Pi	";
             responses[i]=data;
           
 
             i = 20;
-            data = "1 subgoal (ID 143)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  b, a : iterated_loops n X	  ============================	  Pi	";
+            data = "1 subgoal (ID 156)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  b, a : iterated_loops n X	  ============================	  Pi	";
             responses[i]=data;
           
 
             i = 21;
-            data = "1 subgoal (ID 305)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  b, a : iterated_loops n X	  ============================	  iterated_loops n X	";
+            data = "1 subgoal (ID 318)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  b, a : iterated_loops n X	  ============================	  iterated_loops n X	";
             responses[i]=data;
           
 
             i = 22;
-            data = "1 subgoal (ID 343)	  	  n : nat	  X : Type	  H : IsPointed X	  n0 : nat	  gt : 0 < n0.+1	  b, a : iterated_loops n0.+1 X	  ============================	  iterated_loops n0.+1 X	";
+            data = "1 subgoal (ID 356)	  	  n : nat	  X : Type	  H : IsPointed X	  n0 : nat	  gt : 0 < n0.+1	  b, a : iterated_loops n0.+1 X	  ============================	  iterated_loops n0.+1 X	";
             responses[i]=data;
           
 
@@ -143,7 +143,7 @@
           
 
             i = 25;
-            data = "1 subgoal (ID 4)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  ============================	  Associative PiOp	";
+            data = "1 subgoal (ID 17)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  ============================	  Associative PiOp	";
             responses[i]=data;
           
 
@@ -153,27 +153,27 @@
           
 
             i = 27;
-            data = "1 subgoal (ID 8)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x, y, z : Pi	  ============================	  PiOp x (PiOp y z) = PiOp (PiOp x y) z	";
+            data = "1 subgoal (ID 21)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x, y, z : Pi	  ============================	  PiOp x (PiOp y z) = PiOp (PiOp x y) z	";
             responses[i]=data;
           
 
             i = 28;
-            data = "1 subgoal (ID 626)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  z, y, x : iterated_loops n X	  ============================	  PiOp (tr x) (PiOp (tr y) (tr z)) = PiOp (PiOp (tr x) (tr y)) (tr z)	";
+            data = "1 subgoal (ID 639)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  z, y, x : iterated_loops n X	  ============================	  PiOp (tr x) (PiOp (tr y) (tr z)) = PiOp (PiOp (tr x) (tr y)) (tr z)	";
             responses[i]=data;
           
 
             i = 29;
-            data = "1 subgoal (ID 785)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  z, y, x : iterated_loops n X	  ============================	  tr	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 ->	          iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	     with	     | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                           end	     | n0.+1 =>	         fun (gt0 : Unit)	           (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	         => match gt0 with	            | tt => a @ b	            end	     end gt	       (match	          n as n0	          return	            (match n0 with	             | 0 => 1	             | _.+1 => 0	             end =n 0 ->	             iterated_loops n0 X ->	             iterated_loops n0 X -> iterated_loops n0 X)	        with	        | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                              end	        | n0.+1 =>	            fun (gt0 : Unit)	              (b	               a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	            => match gt0 with	               | tt => a @ b	               end	        end gt z y) x) =	  tr	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 ->	          iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	     with	     | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                           end	     | n0.+1 =>	         fun (gt0 : Unit)	           (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	         => match gt0 with	            | tt => a @ b	            end	     end gt z	       (match	          n as n0	          return	            (match n0 with	             | 0 => 1	             | _.+1 => 0	             end =n 0 ->	             iterated_loops n0 X ->	             iterated_loops n0 X -> iterated_loops n0 X)	        with	        | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                              end	        | n0.+1 =>	            fun (gt0 : Unit)	              (b	               a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	            => match gt0 with	               | tt => a @ b	               end	        end gt y x))	";
+            data = "1 subgoal (ID 798)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  z, y, x : iterated_loops n X	  ============================	  tr	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 ->	          iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	     with	     | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                           end	     | n0.+1 =>	         fun (gt0 : Unit)	           (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	         => match gt0 with	            | tt => a @ b	            end	     end gt	       (match	          n as n0	          return	            (match n0 with	             | 0 => 1	             | _.+1 => 0	             end =n 0 ->	             iterated_loops n0 X ->	             iterated_loops n0 X -> iterated_loops n0 X)	        with	        | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                              end	        | n0.+1 =>	            fun (gt0 : Unit)	              (b	               a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	            => match gt0 with	               | tt => a @ b	               end	        end gt z y) x) =	  tr	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 ->	          iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	     with	     | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                           end	     | n0.+1 =>	         fun (gt0 : Unit)	           (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	         => match gt0 with	            | tt => a @ b	            end	     end gt z	       (match	          n as n0	          return	            (match n0 with	             | 0 => 1	             | _.+1 => 0	             end =n 0 ->	             iterated_loops n0 X ->	             iterated_loops n0 X -> iterated_loops n0 X)	        with	        | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                              end	        | n0.+1 =>	            fun (gt0 : Unit)	              (b	               a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	            => match gt0 with	               | tt => a @ b	               end	        end gt y x))	";
             responses[i]=data;
           
 
             i = 30;
-            data = "1 subgoal (ID 788)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  z, y, x : iterated_loops n X	  ============================	  match	    n as n0	    return	      (match n0 with	       | 0 => 1	       | _.+1 => 0	       end =n 0 ->	       iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	  with	  | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                        end	  | n0.+1 =>	      fun (gt0 : Unit)	        (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X)) =>	      match gt0 with	      | tt => a @ b	      end	  end gt	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 ->	          iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	     with	     | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                           end	     | n0.+1 =>	         fun (gt0 : Unit)	           (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	         => match gt0 with	            | tt => a @ b	            end	     end gt z y) x =	  match	    n as n0	    return	      (match n0 with	       | 0 => 1	       | _.+1 => 0	       end =n 0 ->	       iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	  with	  | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                        end	  | n0.+1 =>	      fun (gt0 : Unit)	        (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X)) =>	      match gt0 with	      | tt => a @ b	      end	  end gt z	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 ->	          iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	     with	     | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                           end	     | n0.+1 =>	         fun (gt0 : Unit)	           (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	         => match gt0 with	            | tt => a @ b	            end	     end gt y x)	";
+            data = "1 subgoal (ID 801)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  z, y, x : iterated_loops n X	  ============================	  match	    n as n0	    return	      (match n0 with	       | 0 => 1	       | _.+1 => 0	       end =n 0 ->	       iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	  with	  | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                        end	  | n0.+1 =>	      fun (gt0 : Unit)	        (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X)) =>	      match gt0 with	      | tt => a @ b	      end	  end gt	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 ->	          iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	     with	     | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                           end	     | n0.+1 =>	         fun (gt0 : Unit)	           (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	         => match gt0 with	            | tt => a @ b	            end	     end gt z y) x =	  match	    n as n0	    return	      (match n0 with	       | 0 => 1	       | _.+1 => 0	       end =n 0 ->	       iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	  with	  | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                        end	  | n0.+1 =>	      fun (gt0 : Unit)	        (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X)) =>	      match gt0 with	      | tt => a @ b	      end	  end gt z	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 ->	          iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	     with	     | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                           end	     | n0.+1 =>	         fun (gt0 : Unit)	           (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	         => match gt0 with	            | tt => a @ b	            end	     end gt y x)	";
             responses[i]=data;
           
 
             i = 31;
-            data = "1 subgoal (ID 831)	  	  n : nat	  X : Type	  H : IsPointed X	  n0 : nat	  gt : 0 < n0.+1	  z, y, x : iterated_loops n0.+1 X	  ============================	  x @ (y @ z) = (x @ y) @ z	";
+            data = "1 subgoal (ID 844)	  	  n : nat	  X : Type	  H : IsPointed X	  n0 : nat	  gt : 0 < n0.+1	  z, y, x : iterated_loops n0.+1 X	  ============================	  x @ (y @ z) = (x @ y) @ z	";
             responses[i]=data;
           
 
@@ -188,7 +188,7 @@
           
 
             i = 34;
-            data = "1 subgoal (ID 5)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  ============================	  Pi	";
+            data = "1 subgoal (ID 18)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  ============================	  Pi	";
             responses[i]=data;
           
 
@@ -198,12 +198,12 @@
           
 
             i = 36;
-            data = "1 subgoal (ID 10)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  ============================	  iterated_loops n X	";
+            data = "1 subgoal (ID 23)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  ============================	  iterated_loops n X	";
             responses[i]=data;
           
 
             i = 37;
-            data = "1 subgoal (ID 40)	  	  n : nat	  X : Type	  H : IsPointed X	  n0 : nat	  gt : 0 < n0.+1	  ============================	  iterated_loops n0.+1 X	";
+            data = "1 subgoal (ID 53)	  	  n : nat	  X : Type	  H : IsPointed X	  n0 : nat	  gt : 0 < n0.+1	  ============================	  iterated_loops n0.+1 X	";
             responses[i]=data;
           
 
@@ -218,7 +218,7 @@
           
 
             i = 40;
-            data = "1 subgoal (ID 8)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  ============================	  LeftIdentity PiOp PiUnit	";
+            data = "1 subgoal (ID 21)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  ============================	  LeftIdentity PiOp PiUnit	";
             responses[i]=data;
           
 
@@ -228,27 +228,27 @@
           
 
             i = 42;
-            data = "1 subgoal (ID 10)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : Pi	  ============================	  PiOp PiUnit x = x	";
+            data = "1 subgoal (ID 23)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : Pi	  ============================	  PiOp PiUnit x = x	";
             responses[i]=data;
           
 
             i = 43;
-            data = "1 subgoal (ID 135)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  PiOp PiUnit (tr x) = tr x	";
+            data = "1 subgoal (ID 148)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  PiOp PiUnit (tr x) = tr x	";
             responses[i]=data;
           
 
             i = 44;
-            data = "1 subgoal (ID 182)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  tr	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 ->	          iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	     with	     | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                           end	     | n0.+1 =>	         fun (gt0 : Unit)	           (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	         => match gt0 with	            | tt => a @ b	            end	     end gt x	       (match	          n as n0	          return	            (match n0 with	             | 0 => 1	             | _.+1 => 0	             end =n 0 -> iterated_loops n0 X)	        with	        | 0 => fun gt0 : Empty => match gt0 return X with	                                  end	        | n0.+1 => fun gt0 : Unit => match gt0 with	                                     | tt => 1	                                     end	        end gt)) = tr x	";
+            data = "1 subgoal (ID 195)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  tr	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 ->	          iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	     with	     | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                           end	     | n0.+1 =>	         fun (gt0 : Unit)	           (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	         => match gt0 with	            | tt => a @ b	            end	     end gt x	       (match	          n as n0	          return	            (match n0 with	             | 0 => 1	             | _.+1 => 0	             end =n 0 -> iterated_loops n0 X)	        with	        | 0 => fun gt0 : Empty => match gt0 return X with	                                  end	        | n0.+1 => fun gt0 : Unit => match gt0 with	                                     | tt => 1	                                     end	        end gt)) = tr x	";
             responses[i]=data;
           
 
             i = 45;
-            data = "1 subgoal (ID 185)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  match	    n as n0	    return	      (match n0 with	       | 0 => 1	       | _.+1 => 0	       end =n 0 ->	       iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	  with	  | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                        end	  | n0.+1 =>	      fun (gt0 : Unit)	        (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X)) =>	      match gt0 with	      | tt => a @ b	      end	  end gt x	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 -> iterated_loops n0 X)	     with	     | 0 => fun gt0 : Empty => match gt0 return X with	                               end	     | n0.+1 => fun gt0 : Unit => match gt0 with	                                  | tt => 1	                                  end	     end gt) = x	";
+            data = "1 subgoal (ID 198)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  match	    n as n0	    return	      (match n0 with	       | 0 => 1	       | _.+1 => 0	       end =n 0 ->	       iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	  with	  | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                        end	  | n0.+1 =>	      fun (gt0 : Unit)	        (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X)) =>	      match gt0 with	      | tt => a @ b	      end	  end gt x	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 -> iterated_loops n0 X)	     with	     | 0 => fun gt0 : Empty => match gt0 return X with	                               end	     | n0.+1 => fun gt0 : Unit => match gt0 with	                                  | tt => 1	                                  end	     end gt) = x	";
             responses[i]=data;
           
 
             i = 46;
-            data = "1 subgoal (ID 220)	  	  n : nat	  X : Type	  H : IsPointed X	  n0 : nat	  gt : 0 < n0.+1	  x : iterated_loops n0.+1 X	  ============================	  1 @ x = x	";
+            data = "1 subgoal (ID 233)	  	  n : nat	  X : Type	  H : IsPointed X	  n0 : nat	  gt : 0 < n0.+1	  x : iterated_loops n0.+1 X	  ============================	  1 @ x = x	";
             responses[i]=data;
           
 
@@ -263,7 +263,7 @@
           
 
             i = 49;
-            data = "1 subgoal (ID 11)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  ============================	  RightIdentity PiOp PiUnit	";
+            data = "1 subgoal (ID 24)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  ============================	  RightIdentity PiOp PiUnit	";
             responses[i]=data;
           
 
@@ -273,27 +273,27 @@
           
 
             i = 51;
-            data = "1 subgoal (ID 13)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : Pi	  ============================	  PiOp x PiUnit = x	";
+            data = "1 subgoal (ID 26)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : Pi	  ============================	  PiOp x PiUnit = x	";
             responses[i]=data;
           
 
             i = 52;
-            data = "1 subgoal (ID 138)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  PiOp (tr x) PiUnit = tr x	";
+            data = "1 subgoal (ID 151)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  PiOp (tr x) PiUnit = tr x	";
             responses[i]=data;
           
 
             i = 53;
-            data = "1 subgoal (ID 185)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  tr	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 ->	          iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	     with	     | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                           end	     | n0.+1 =>	         fun (gt0 : Unit)	           (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	         => match gt0 with	            | tt => a @ b	            end	     end gt	       (match	          n as n0	          return	            (match n0 with	             | 0 => 1	             | _.+1 => 0	             end =n 0 -> iterated_loops n0 X)	        with	        | 0 => fun gt0 : Empty => match gt0 return X with	                                  end	        | n0.+1 => fun gt0 : Unit => match gt0 with	                                     | tt => 1	                                     end	        end gt) x) = tr x	";
+            data = "1 subgoal (ID 198)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  tr	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 ->	          iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	     with	     | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                           end	     | n0.+1 =>	         fun (gt0 : Unit)	           (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	         => match gt0 with	            | tt => a @ b	            end	     end gt	       (match	          n as n0	          return	            (match n0 with	             | 0 => 1	             | _.+1 => 0	             end =n 0 -> iterated_loops n0 X)	        with	        | 0 => fun gt0 : Empty => match gt0 return X with	                                  end	        | n0.+1 => fun gt0 : Unit => match gt0 with	                                     | tt => 1	                                     end	        end gt) x) = tr x	";
             responses[i]=data;
           
 
             i = 54;
-            data = "1 subgoal (ID 188)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  match	    n as n0	    return	      (match n0 with	       | 0 => 1	       | _.+1 => 0	       end =n 0 ->	       iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	  with	  | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                        end	  | n0.+1 =>	      fun (gt0 : Unit)	        (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X)) =>	      match gt0 with	      | tt => a @ b	      end	  end gt	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 -> iterated_loops n0 X)	     with	     | 0 => fun gt0 : Empty => match gt0 return X with	                               end	     | n0.+1 => fun gt0 : Unit => match gt0 with	                                  | tt => 1	                                  end	     end gt) x = x	";
+            data = "1 subgoal (ID 201)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  match	    n as n0	    return	      (match n0 with	       | 0 => 1	       | _.+1 => 0	       end =n 0 ->	       iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	  with	  | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                        end	  | n0.+1 =>	      fun (gt0 : Unit)	        (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X)) =>	      match gt0 with	      | tt => a @ b	      end	  end gt	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 -> iterated_loops n0 X)	     with	     | 0 => fun gt0 : Empty => match gt0 return X with	                               end	     | n0.+1 => fun gt0 : Unit => match gt0 with	                                  | tt => 1	                                  end	     end gt) x = x	";
             responses[i]=data;
           
 
             i = 55;
-            data = "1 subgoal (ID 223)	  	  n : nat	  X : Type	  H : IsPointed X	  n0 : nat	  gt : 0 < n0.+1	  x : iterated_loops n0.+1 X	  ============================	  x @ 1 = x	";
+            data = "1 subgoal (ID 236)	  	  n : nat	  X : Type	  H : IsPointed X	  n0 : nat	  gt : 0 < n0.+1	  x : iterated_loops n0.+1 X	  ============================	  x @ 1 = x	";
             responses[i]=data;
           
 
@@ -308,7 +308,7 @@
           
 
             i = 58;
-            data = "1 subgoal (ID 12)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  ============================	  Pi -> Pi	";
+            data = "1 subgoal (ID 25)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  ============================	  Pi -> Pi	";
             responses[i]=data;
           
 
@@ -318,22 +318,22 @@
           
 
             i = 60;
-            data = "1 subgoal (ID 13)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  a : Pi	  ============================	  Pi	";
+            data = "1 subgoal (ID 26)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  a : Pi	  ============================	  Pi	";
             responses[i]=data;
           
 
             i = 61;
-            data = "1 subgoal (ID 54)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  a : iterated_loops n X	  ============================	  Pi	";
+            data = "1 subgoal (ID 67)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  a : iterated_loops n X	  ============================	  Pi	";
             responses[i]=data;
           
 
             i = 62;
-            data = "1 subgoal (ID 160)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  a : iterated_loops n X	  ============================	  iterated_loops n X	";
+            data = "1 subgoal (ID 173)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  a : iterated_loops n X	  ============================	  iterated_loops n X	";
             responses[i]=data;
           
 
             i = 63;
-            data = "1 subgoal (ID 194)	  	  n : nat	  X : Type	  H : IsPointed X	  n0 : nat	  gt : 0 < n0.+1	  a : iterated_loops n0.+1 X	  ============================	  iterated_loops n0.+1 X	";
+            data = "1 subgoal (ID 207)	  	  n : nat	  X : Type	  H : IsPointed X	  n0 : nat	  gt : 0 < n0.+1	  a : iterated_loops n0.+1 X	  ============================	  iterated_loops n0.+1 X	";
             responses[i]=data;
           
 
@@ -348,7 +348,7 @@
           
 
             i = 66;
-            data = "1 subgoal (ID 16)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  ============================	  LeftInverse PiOp PiInverse PiUnit	";
+            data = "1 subgoal (ID 29)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  ============================	  LeftInverse PiOp PiInverse PiUnit	";
             responses[i]=data;
           
 
@@ -358,27 +358,27 @@
           
 
             i = 68;
-            data = "1 subgoal (ID 18)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : Pi	  ============================	  PiOp (PiInverse x) x = PiUnit	";
+            data = "1 subgoal (ID 31)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : Pi	  ============================	  PiOp (PiInverse x) x = PiUnit	";
             responses[i]=data;
           
 
             i = 69;
-            data = "1 subgoal (ID 143)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  PiOp (PiInverse (tr x)) (tr x) = PiUnit	";
+            data = "1 subgoal (ID 156)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  PiOp (PiInverse (tr x)) (tr x) = PiUnit	";
             responses[i]=data;
           
 
             i = 70;
-            data = "1 subgoal (ID 190)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  tr	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 ->	          iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	     with	     | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                           end	     | n0.+1 =>	         fun (gt0 : Unit)	           (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	         => match gt0 with	            | tt => a @ b	            end	     end gt x	       (match	          n as n0	          return	            (match n0 with	             | 0 => 1	             | _.+1 => 0	             end =n 0 -> iterated_loops n0 X -> iterated_loops n0 X)	        with	        | 0 => fun (gt0 : Empty) (_ : X) => match gt0 return X with	                                            end	        | n0.+1 =>	            fun (gt0 : Unit)	              (a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	            => match gt0 with	               | tt => a^	               end	        end gt x)) = PiUnit	";
+            data = "1 subgoal (ID 203)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  tr	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 ->	          iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	     with	     | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                           end	     | n0.+1 =>	         fun (gt0 : Unit)	           (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	         => match gt0 with	            | tt => a @ b	            end	     end gt x	       (match	          n as n0	          return	            (match n0 with	             | 0 => 1	             | _.+1 => 0	             end =n 0 -> iterated_loops n0 X -> iterated_loops n0 X)	        with	        | 0 => fun (gt0 : Empty) (_ : X) => match gt0 return X with	                                            end	        | n0.+1 =>	            fun (gt0 : Unit)	              (a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	            => match gt0 with	               | tt => a^	               end	        end gt x)) = PiUnit	";
             responses[i]=data;
           
 
             i = 71;
-            data = "1 subgoal (ID 193)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  match	    n as n0	    return	      (match n0 with	       | 0 => 1	       | _.+1 => 0	       end =n 0 ->	       iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	  with	  | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                        end	  | n0.+1 =>	      fun (gt0 : Unit)	        (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X)) =>	      match gt0 with	      | tt => a @ b	      end	  end gt x	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 -> iterated_loops n0 X -> iterated_loops n0 X)	     with	     | 0 => fun (gt0 : Empty) (_ : X) => match gt0 return X with	                                         end	     | n0.+1 =>	         fun (gt0 : Unit)	           (a : point (iterated_loops n0 X) = point (iterated_loops n0 X)) =>	         match gt0 with	         | tt => a^	         end	     end gt x) =	  (let n0 := n in	   match n0 as n1 return (0 < n1 -> iterated_loops n1 X) with	   | 0 =>	       fun gt0 : 0 < 0 =>	       let t := gt0 in match t return (iterated_loops 0 X) with	                       end	   | n1.+1 =>	       fun gt0 : 0 < n1.+1 => let t := gt0 in match t with	                                              | tt => 1	                                              end	   end gt)	";
+            data = "1 subgoal (ID 206)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  match	    n as n0	    return	      (match n0 with	       | 0 => 1	       | _.+1 => 0	       end =n 0 ->	       iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	  with	  | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                        end	  | n0.+1 =>	      fun (gt0 : Unit)	        (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X)) =>	      match gt0 with	      | tt => a @ b	      end	  end gt x	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 -> iterated_loops n0 X -> iterated_loops n0 X)	     with	     | 0 => fun (gt0 : Empty) (_ : X) => match gt0 return X with	                                         end	     | n0.+1 =>	         fun (gt0 : Unit)	           (a : point (iterated_loops n0 X) = point (iterated_loops n0 X)) =>	         match gt0 with	         | tt => a^	         end	     end gt x) =	  (let n0 := n in	   match n0 as n1 return (0 < n1 -> iterated_loops n1 X) with	   | 0 =>	       fun gt0 : 0 < 0 =>	       let t := gt0 in match t return (iterated_loops 0 X) with	                       end	   | n1.+1 =>	       fun gt0 : 0 < n1.+1 => let t := gt0 in match t with	                                              | tt => 1	                                              end	   end gt)	";
             responses[i]=data;
           
 
             i = 72;
-            data = "1 subgoal (ID 228)	  	  n : nat	  X : Type	  H : IsPointed X	  n0 : nat	  gt : 0 < n0.+1	  x : iterated_loops n0.+1 X	  ============================	  x^ @ x =	  (let n1 := n0.+1 in	   match n1 as n2 return (0 < n2 -> iterated_loops n2 X) with	   | 0 =>	       fun gt0 : 0 < 0 =>	       let t := gt0 in match t return (iterated_loops 0 X) with	                       end	   | n2.+1 =>	       fun gt0 : 0 < n2.+1 => let t := gt0 in match t with	                                              | tt => 1	                                              end	   end tt)	";
+            data = "1 subgoal (ID 241)	  	  n : nat	  X : Type	  H : IsPointed X	  n0 : nat	  gt : 0 < n0.+1	  x : iterated_loops n0.+1 X	  ============================	  x^ @ x =	  (let n1 := n0.+1 in	   match n1 as n2 return (0 < n2 -> iterated_loops n2 X) with	   | 0 =>	       fun gt0 : 0 < 0 =>	       let t := gt0 in match t return (iterated_loops 0 X) with	                       end	   | n2.+1 =>	       fun gt0 : 0 < n2.+1 => let t := gt0 in match t with	                                              | tt => 1	                                              end	   end tt)	";
             responses[i]=data;
           
 
@@ -393,7 +393,7 @@
           
 
             i = 75;
-            data = "1 subgoal (ID 20)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  ============================	  RightInverse PiOp PiInverse PiUnit	";
+            data = "1 subgoal (ID 33)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  ============================	  RightInverse PiOp PiInverse PiUnit	";
             responses[i]=data;
           
 
@@ -403,27 +403,27 @@
           
 
             i = 77;
-            data = "1 subgoal (ID 22)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : Pi	  ============================	  PiOp x (PiInverse x) = PiUnit	";
+            data = "1 subgoal (ID 35)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : Pi	  ============================	  PiOp x (PiInverse x) = PiUnit	";
             responses[i]=data;
           
 
             i = 78;
-            data = "1 subgoal (ID 147)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  PiOp (tr x) (PiInverse (tr x)) = PiUnit	";
+            data = "1 subgoal (ID 160)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  PiOp (tr x) (PiInverse (tr x)) = PiUnit	";
             responses[i]=data;
           
 
             i = 79;
-            data = "1 subgoal (ID 194)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  tr	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 ->	          iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	     with	     | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                           end	     | n0.+1 =>	         fun (gt0 : Unit)	           (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	         => match gt0 with	            | tt => a @ b	            end	     end gt	       (match	          n as n0	          return	            (match n0 with	             | 0 => 1	             | _.+1 => 0	             end =n 0 -> iterated_loops n0 X -> iterated_loops n0 X)	        with	        | 0 => fun (gt0 : Empty) (_ : X) => match gt0 return X with	                                            end	        | n0.+1 =>	            fun (gt0 : Unit)	              (a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	            => match gt0 with	               | tt => a^	               end	        end gt x) x) = PiUnit	";
+            data = "1 subgoal (ID 207)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  tr	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 ->	          iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	     with	     | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                           end	     | n0.+1 =>	         fun (gt0 : Unit)	           (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	         => match gt0 with	            | tt => a @ b	            end	     end gt	       (match	          n as n0	          return	            (match n0 with	             | 0 => 1	             | _.+1 => 0	             end =n 0 -> iterated_loops n0 X -> iterated_loops n0 X)	        with	        | 0 => fun (gt0 : Empty) (_ : X) => match gt0 return X with	                                            end	        | n0.+1 =>	            fun (gt0 : Unit)	              (a : point (iterated_loops n0 X) = point (iterated_loops n0 X))	            => match gt0 with	               | tt => a^	               end	        end gt x) x) = PiUnit	";
             responses[i]=data;
           
 
             i = 80;
-            data = "1 subgoal (ID 197)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  match	    n as n0	    return	      (match n0 with	       | 0 => 1	       | _.+1 => 0	       end =n 0 ->	       iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	  with	  | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                        end	  | n0.+1 =>	      fun (gt0 : Unit)	        (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X)) =>	      match gt0 with	      | tt => a @ b	      end	  end gt	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 -> iterated_loops n0 X -> iterated_loops n0 X)	     with	     | 0 => fun (gt0 : Empty) (_ : X) => match gt0 return X with	                                         end	     | n0.+1 =>	         fun (gt0 : Unit)	           (a : point (iterated_loops n0 X) = point (iterated_loops n0 X)) =>	         match gt0 with	         | tt => a^	         end	     end gt x) x =	  (let n0 := n in	   match n0 as n1 return (0 < n1 -> iterated_loops n1 X) with	   | 0 =>	       fun gt0 : 0 < 0 =>	       let t := gt0 in match t return (iterated_loops 0 X) with	                       end	   | n1.+1 =>	       fun gt0 : 0 < n1.+1 => let t := gt0 in match t with	                                              | tt => 1	                                              end	   end gt)	";
+            data = "1 subgoal (ID 210)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  x : iterated_loops n X	  ============================	  match	    n as n0	    return	      (match n0 with	       | 0 => 1	       | _.+1 => 0	       end =n 0 ->	       iterated_loops n0 X -> iterated_loops n0 X -> iterated_loops n0 X)	  with	  | 0 => fun (gt0 : Empty) (_ _ : X) => match gt0 return X with	                                        end	  | n0.+1 =>	      fun (gt0 : Unit)	        (b a : point (iterated_loops n0 X) = point (iterated_loops n0 X)) =>	      match gt0 with	      | tt => a @ b	      end	  end gt	    (match	       n as n0	       return	         (match n0 with	          | 0 => 1	          | _.+1 => 0	          end =n 0 -> iterated_loops n0 X -> iterated_loops n0 X)	     with	     | 0 => fun (gt0 : Empty) (_ : X) => match gt0 return X with	                                         end	     | n0.+1 =>	         fun (gt0 : Unit)	           (a : point (iterated_loops n0 X) = point (iterated_loops n0 X)) =>	         match gt0 with	         | tt => a^	         end	     end gt x) x =	  (let n0 := n in	   match n0 as n1 return (0 < n1 -> iterated_loops n1 X) with	   | 0 =>	       fun gt0 : 0 < 0 =>	       let t := gt0 in match t return (iterated_loops 0 X) with	                       end	   | n1.+1 =>	       fun gt0 : 0 < n1.+1 => let t := gt0 in match t with	                                              | tt => 1	                                              end	   end gt)	";
             responses[i]=data;
           
 
             i = 81;
-            data = "1 subgoal (ID 232)	  	  n : nat	  X : Type	  H : IsPointed X	  n0 : nat	  gt : 0 < n0.+1	  x : iterated_loops n0.+1 X	  ============================	  x @ x^ =	  (let n1 := n0.+1 in	   match n1 as n2 return (0 < n2 -> iterated_loops n2 X) with	   | 0 =>	       fun gt0 : 0 < 0 =>	       let t := gt0 in match t return (iterated_loops 0 X) with	                       end	   | n2.+1 =>	       fun gt0 : 0 < n2.+1 => let t := gt0 in match t with	                                              | tt => 1	                                              end	   end tt)	";
+            data = "1 subgoal (ID 245)	  	  n : nat	  X : Type	  H : IsPointed X	  n0 : nat	  gt : 0 < n0.+1	  x : iterated_loops n0.+1 X	  ============================	  x @ x^ =	  (let n1 := n0.+1 in	   match n1 as n2 return (0 < n2 -> iterated_loops n2 X) with	   | 0 =>	       fun gt0 : 0 < 0 =>	       let t := gt0 in match t return (iterated_loops 0 X) with	                       end	   | n2.+1 =>	       fun gt0 : 0 < n2.+1 => let t := gt0 in match t with	                                              | tt => 1	                                              end	   end tt)	";
             responses[i]=data;
           
 
@@ -438,7 +438,7 @@
           
 
             i = 84;
-            data = "1 subgoal (ID 21)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  ============================	  Group Pi	";
+            data = "1 subgoal (ID 34)	  	  n : nat	  X : Type	  H : IsPointed X	  gt : 0 < n	  ============================	  Group Pi	";
             responses[i]=data;
           
 

@@ -39,8 +39,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Trunc.v
 Line: 3
-Time: 0.012s">
-<div class="time" style="width: 92.307692307692%"></div>
+Time: 0.014s">
+<div class="time" style="width: 100%"></div>
 <pre>Require Import Overture PathGroupoids Contractible Equivalences.</pre>
 </div>
 <div class="code" title="File: Trunc.v
@@ -249,8 +249,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Trunc.v
 Line: 45
-Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   simple_induction n n' IH;
     intros [ | m'] Hmn A ? .</pre>
@@ -328,7 +328,7 @@ Time: 0s">
 <div class="code" title="File: Trunc.v
 Line: 51
 Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>intros x y; apply (IH m');
                      auto with typeclass_instances.</pre>
 </div>
@@ -367,8 +367,8 @@ Definition trunc_hprop {n} {A} `{IsHProp A} : IsTrunc n.+2 A
 </div>
 <div class="code" title="File: Trunc.v
 Line: 60
-Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition trunc_hset {n} {A} `{IsHSet A} : IsTrunc n.+3 A
@@ -470,21 +470,21 @@ Time: 0s">
 <div class="code" title="File: Trunc.v
 Line: 78
 Time: 0.013s">
-<div class="time" style="width: 100%"></div>
+<div class="time" style="width: 92.857142857143%"></div>
 <pre>
     exact (IH (f^-1 x = f^-1 y) (H (f^-1 x) (f^-1 y)) (x = y) ((ap (f^-1))^-1) _).</pre>
 </div>
 <div class="code" title="File: Trunc.v
 Line: 79
-Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: Trunc.v
 Line: 80
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>
 
 Definition trunc_equiv' A {B} (f : A &lt;~&gt; B) `{IsTrunc n A}
@@ -503,8 +503,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Trunc.v
 Line: 87
-Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Class IsTruncMap (n : trunc_index) {X Y : Type} (f : X -&gt; Y) :=
   istruncmap_fiber : forall y:Y, IsTrunc n (hfiber f y).</pre>
 </div>
@@ -830,8 +830,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Trunc.v
 Line: 148
-Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition isequiv_iff_hprop `{IsHProp A} `{IsHProp B}
   (f : A -&gt; B) (g : B -&gt; A)
 : IsEquiv f.</pre>
@@ -883,8 +883,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Trunc.v
 Line: 159
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>
   apply (equiv_adjointify (fst fg) (snd fg));
     intros ?; apply path_ishprop.</pre>
@@ -898,8 +898,8 @@ Defined.</pre>
 </div>
 <div class="code" title="File: Trunc.v
 Line: 162
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>
 
 Definition equiv_iff_hprop `{IsHProp A} `{IsHProp B}

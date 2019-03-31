@@ -408,12 +408,12 @@
           
 
             i = 78;
-            data = "1 subgoal (ID 226)	  	  funext : Funext	  univalence : Univalence	  A : Type	  B : Type	  H : Closeness A	  H0 : Closeness B	  H1 : forall (e : Q+) (x y : A), IsHProp (close e x y)	  H2 : forall (e : Q+) (x y : B), IsHProp (close e x y)	  Rounded0 : Rounded A	  Rounded1 : Rounded B	  e : Q+	  u, v : A * B	  ============================	  close e u v -> merely {d : Q+ & {d' : Q+ & (e = d + d') * close d u v}}	1 subgoal (ID 248)	  	  funext : Funext	  univalence : Univalence	  A : Type	  B : Type	  H : Closeness A	  H0 : Closeness B	  H1 : forall (e : Q+) (x y : A), IsHProp (close e x y)	  H2 : forall (e : Q+) (x y : B), IsHProp (close e x y)	  Rounded0 : Rounded A	  Rounded1 : Rounded B	  e : Q+	  u, v : A * B	  E0 : merely {d : Q+ & {d' : Q+ & (e = d + d') * close d (fst u) (fst v)}}	  E0' : merely {d : Q+ & {d' : Q+ & (e = d + d') * close d (snd u) (snd v)}}	  ============================	  merely {d : Q+ & {d' : Q+ & (e = d + d') * close d u v}}	";
+            data = "1 subgoal (ID 226)	  	  funext : Funext	  univalence : Univalence	  A : Type	  B : Type	  H : Closeness A	  H0 : Closeness B	  H1 : forall (e : Q+) (x y : A), IsHProp (close e x y)	  H2 : forall (e : Q+) (x y : B), IsHProp (close e x y)	  Rounded0 : Rounded A	  Rounded1 : Rounded B	  e : Q+	  u, v : A * B	  ============================	  close e u v -> merely {d : Q+ & {d' : Q+ & (e = d + d') * close d u v}}	";
             responses[i]=data;
           
 
             i = 79;
-            data = "1 subgoal (ID 332)	  	  funext : Funext	  univalence : Univalence	  A : Type	  B : Type	  H : Closeness A	  H0 : Closeness B	  H1 : forall (e : Q+) (x y : A), IsHProp (close e x y)	  H2 : forall (e : Q+) (x y : B), IsHProp (close e x y)	  Rounded0 : Rounded A	  Rounded1 : Rounded B	  e : Q+	  u, v : A * B	  E0' : merely {d : Q+ & {d' : Q+ & (e = d + d') * close d (snd u) (snd v)}}	  d1, d1' : Q+	  E1 : e = d1 + d1'	  E2 : close d1 (fst u) (fst v)	  ============================	  merely {d : Q+ & {d' : Q+ & (e = d + d') * close d u v}}	";
+            data = "1 subgoal (ID 248)	  	  funext : Funext	  univalence : Univalence	  A : Type	  B : Type	  H : Closeness A	  H0 : Closeness B	  H1 : forall (e : Q+) (x y : A), IsHProp (close e x y)	  H2 : forall (e : Q+) (x y : B), IsHProp (close e x y)	  Rounded0 : Rounded A	  Rounded1 : Rounded B	  e : Q+	  u, v : A * B	  E0 : merely {d : Q+ & {d' : Q+ & (e = d + d') * close d (fst u) (fst v)}}	  E0' : merely {d : Q+ & {d' : Q+ & (e = d + d') * close d (snd u) (snd v)}}	  ============================	  merely {d : Q+ & {d' : Q+ & (e = d + d') * close d u v}}	1 subgoal (ID 332)	  	  funext : Funext	  univalence : Univalence	  A : Type	  B : Type	  H : Closeness A	  H0 : Closeness B	  H1 : forall (e : Q+) (x y : A), IsHProp (close e x y)	  H2 : forall (e : Q+) (x y : B), IsHProp (close e x y)	  Rounded0 : Rounded A	  Rounded1 : Rounded B	  e : Q+	  u, v : A * B	  E0' : merely {d : Q+ & {d' : Q+ & (e = d + d') * close d (snd u) (snd v)}}	  d1, d1' : Q+	  E1 : e = d1 + d1'	  E2 : close d1 (fst u) (fst v)	  ============================	  merely {d : Q+ & {d' : Q+ & (e = d + d') * close d u v}}	";
             responses[i]=data;
           
 
@@ -648,12 +648,12 @@
           
 
             i = 126;
-            data = "1 subgoal (ID 209)	  	  funext : Funext	  univalence : Univalence	  A : Type	  B : Type	  Bclose : Closeness B	  PreMetric0 : PreMetric B	  ============================	  forall e : Q+, Reflexive (close e)	";
+            data = "1 subgoal (ID 209)	  	  funext : Funext	  univalence : Univalence	  A : Type	  B : Type	  Bclose : Closeness B	  PreMetric0 : PreMetric B	  ============================	  forall e : Q+, Reflexive (close e)	2 subgoals (ID 503)	  	  funext : Funext	  univalence : Univalence	  A : Type	  B : Type	  Bclose : Closeness B	  PreMetric0 : PreMetric B	  e : Q+	  f : A -> B	  ============================	  e = e / 2 + e / 2		subgoal 2 (ID 504) is:	 forall x : A, close (e / 2) (f x) (f x)	";
             responses[i]=data;
           
 
             i = 127;
-            data = "2 subgoals (ID 503)	  	  funext : Funext	  univalence : Univalence	  A : Type	  B : Type	  Bclose : Closeness B	  PreMetric0 : PreMetric B	  e : Q+	  f : A -> B	  ============================	  e = e / 2 + e / 2		subgoal 2 (ID 504) is:	 forall x : A, close (e / 2) (f x) (f x)	1 subgoal (ID 503)	  	  funext : Funext	  univalence : Univalence	  A : Type	  B : Type	  Bclose : Closeness B	  PreMetric0 : PreMetric B	  e : Q+	  f : A -> B	  ============================	  e = e / 2 + e / 2	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	5 subgoals (ID 504)		subgoal 1 (ID 504) is:	 forall x : A, close (e / 2) (f x) (f x)	subgoal 2 (ID 210) is:	 forall e : Q+, Symmetric (close e)	subgoal 3 (ID 211) is:	 Separated (A -> B)	subgoal 4 (ID 212) is:	 Triangular (A -> B)	subgoal 5 (ID 213) is:	 Rounded (A -> B)	";
+            data = "1 subgoal (ID 503)	  	  funext : Funext	  univalence : Univalence	  A : Type	  B : Type	  Bclose : Closeness B	  PreMetric0 : PreMetric B	  e : Q+	  f : A -> B	  ============================	  e = e / 2 + e / 2	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	5 subgoals (ID 504)		subgoal 1 (ID 504) is:	 forall x : A, close (e / 2) (f x) (f x)	subgoal 2 (ID 210) is:	 forall e : Q+, Symmetric (close e)	subgoal 3 (ID 211) is:	 Separated (A -> B)	subgoal 4 (ID 212) is:	 Triangular (A -> B)	subgoal 5 (ID 213) is:	 Rounded (A -> B)	";
             responses[i]=data;
           
 
@@ -2628,12 +2628,12 @@
           
 
             i = 522;
-            data = "1 subgoal (ID 233)	  	  funext : Funext	  univalence : Univalence	  e : Q+	  x, y : Q	  E : abs (x - y) < ' e	  ============================	  abs (- x - - y) < ' e	1 subgoal (ID 291)	  	  funext : Funext	  univalence : Univalence	  e : Q+	  x, y : Q	  E : abs (x - y) < ' e	  ============================	  abs (x - y) < ' e	";
+            data = "1 subgoal (ID 233)	  	  funext : Funext	  univalence : Univalence	  e : Q+	  x, y : Q	  E : abs (x - y) < ' e	  ============================	  abs (- x - - y) < ' e	";
             responses[i]=data;
           
 
             i = 523;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 239)		subgoal 1 (ID 239) is:	 abs (x - y) < ' e	";
+            data = "1 subgoal (ID 291)	  	  funext : Funext	  univalence : Univalence	  e : Q+	  x, y : Q	  E : abs (x - y) < ' e	  ============================	  abs (x - y) < ' e	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 239)		subgoal 1 (ID 239) is:	 abs (x - y) < ' e	";
             responses[i]=data;
           
 
@@ -3028,12 +3028,12 @@
           
 
             i = 602;
-            data = "1 subgoal (ID 265)	  	  funext : Funext	  univalence : Univalence	  e : Q+	  q, r : Q	  ============================	  merely {d : Q+ & {d' : Q+ & (e = d + d') * close d q r}} -> close e q r	";
+            data = "1 subgoal (ID 265)	  	  funext : Funext	  univalence : Univalence	  e : Q+	  q, r : Q	  ============================	  merely {d : Q+ & {d' : Q+ & (e = d + d') * close d q r}} -> close e q r	1 subgoal (ID 1779)	  	  funext : Funext	  univalence : Univalence	  e : Q+	  q, r : Q	  ============================	  {d : Q+ & {d' : Q+ & (e = d + d') * close d q r}} -> close e q r	";
             responses[i]=data;
           
 
             i = 603;
-            data = "1 subgoal (ID 1779)	  	  funext : Funext	  univalence : Univalence	  e : Q+	  q, r : Q	  ============================	  {d : Q+ & {d' : Q+ & (e = d + d') * close d q r}} -> close e q r	1 subgoal (ID 1792)	  	  funext : Funext	  univalence : Univalence	  e : Q+	  q, r : Q	  d, d' : Q+	  He : e = d + d'	  xi : close d q r	  ============================	  close e q r	";
+            data = "1 subgoal (ID 1792)	  	  funext : Funext	  univalence : Univalence	  e : Q+	  q, r : Q	  d, d' : Q+	  He : e = d + d'	  xi : close d q r	  ============================	  close e q r	";
             responses[i]=data;
           
 
@@ -3323,12 +3323,12 @@
           
 
             i = 661;
-            data = "1 subgoal (ID 709)	  	  funext : Funext	  univalence : Univalence	  s : Q	  e : Q+	  q, r : Q	  E1 : s ≤ q	  E2 : r ≤ s	  ============================	  abs (s - r) ≤ abs (q - r)	";
+            data = "1 subgoal (ID 709)	  	  funext : Funext	  univalence : Univalence	  s : Q	  e : Q+	  q, r : Q	  E1 : s ≤ q	  E2 : r ≤ s	  ============================	  abs (s - r) ≤ abs (q - r)	1 subgoal (ID 1998)	  	  funext : Funext	  univalence : Univalence	  s : Q	  e : Q+	  q, r : Q	  E1 : s ≤ q	  E2 : r ≤ s	  ============================	  abs (s - r) ≤ q - r	";
             responses[i]=data;
           
 
             i = 662;
-            data = "1 subgoal (ID 1998)	  	  funext : Funext	  univalence : Univalence	  s : Q	  e : Q+	  q, r : Q	  E1 : s ≤ q	  E2 : r ≤ s	  ============================	  abs (s - r) ≤ q - r	1 subgoal (ID 2705)	  	  funext : Funext	  univalence : Univalence	  s : Q	  e : Q+	  q, r : Q	  E1 : s ≤ q	  E2 : r ≤ s	  ============================	  s - r ≤ q - r	";
+            data = "1 subgoal (ID 2705)	  	  funext : Funext	  univalence : Univalence	  s : Q	  e : Q+	  q, r : Q	  E1 : s ≤ q	  E2 : r ≤ s	  ============================	  s - r ≤ q - r	";
             responses[i]=data;
           
 
