@@ -1163,12 +1163,12 @@
           
 
             i = 229;
-            data = "1 subgoal (ID 212)	  	  n, m : nat	  e : Fin n + Unit <~> Fin m + Unit	  y : Fin m	  p : e (inr tt) = inl y	  p' : _^-1 (inl y) = inr tt	  ============================	  {b : Fin n <~> Fin m & fin_equiv' n m (inl y, b) == e}	3 subgoals (ID 231)	  	  n, m : nat	  e : Fin n + Unit <~> Fin m + Unit	  y : Fin m	  p : e (inr tt) = inl y	  p' : _^-1 (inl y) = inr tt	  ============================	  forall a : Fin n, is_inl ((fin_transpose_last_with m (inl y) oE e) (inl a))		subgoal 2 (ID 233) is:	 forall b : Unit, is_inr ((fin_transpose_last_with m (inl y) oE e) (inr b))	subgoal 3 (ID 235) is:	 (fun b : Fin n <~> Fin m => fin_equiv' n m (inl y, b) == e)	   (equiv_unfunctor_sum_l (fin_transpose_last_with m (inl y) oE e) ?Ha ?Hb)	";
+            data = "1 subgoal (ID 212)	  	  n, m : nat	  e : Fin n + Unit <~> Fin m + Unit	  y : Fin m	  p : e (inr tt) = inl y	  p' : _^-1 (inl y) = inr tt	  ============================	  {b : Fin n <~> Fin m & fin_equiv' n m (inl y, b) == e}	";
             responses[i]=data;
           
 
             i = 230;
-            data = "1 subgoal (ID 231)	  	  n, m : nat	  e : Fin n + Unit <~> Fin m + Unit	  y : Fin m	  p : e (inr tt) = inl y	  p' : _^-1 (inl y) = inr tt	  ============================	  forall a : Fin n, is_inl ((fin_transpose_last_with m (inl y) oE e) (inl a))	1 subgoal (ID 236)	  	  n, m : nat	  e : Fin n + Unit <~> Fin m + Unit	  y : Fin m	  p : e (inr tt) = inl y	  p' : _^-1 (inl y) = inr tt	  a : Fin n	  ============================	  is_inl ((fin_transpose_last_with m (inl y) oE e) (inl a))	";
+            data = "3 subgoals (ID 231)	  	  n, m : nat	  e : Fin n + Unit <~> Fin m + Unit	  y : Fin m	  p : e (inr tt) = inl y	  p' : _^-1 (inl y) = inr tt	  ============================	  forall a : Fin n, is_inl ((fin_transpose_last_with m (inl y) oE e) (inl a))		subgoal 2 (ID 233) is:	 forall b : Unit, is_inr ((fin_transpose_last_with m (inl y) oE e) (inr b))	subgoal 3 (ID 235) is:	 (fun b : Fin n <~> Fin m => fin_equiv' n m (inl y, b) == e)	   (equiv_unfunctor_sum_l (fin_transpose_last_with m (inl y) oE e) ?Ha ?Hb)	1 subgoal (ID 231)	  	  n, m : nat	  e : Fin n + Unit <~> Fin m + Unit	  y : Fin m	  p : e (inr tt) = inl y	  p' : _^-1 (inl y) = inr tt	  ============================	  forall a : Fin n, is_inl ((fin_transpose_last_with m (inl y) oE e) (inl a))	1 subgoal (ID 236)	  	  n, m : nat	  e : Fin n + Unit <~> Fin m + Unit	  y : Fin m	  p : e (inr tt) = inl y	  p' : _^-1 (inl y) = inr tt	  a : Fin n	  ============================	  is_inl ((fin_transpose_last_with m (inl y) oE e) (inl a))	";
             responses[i]=data;
           
 
@@ -3943,12 +3943,12 @@
           
 
             i = 785;
-            data = "1 subgoal (ID 2067)	  	  X : Type	  Y : X -> Type	  H : Finite X	  H0 : forall x : X, Finite (Y x)	  n : nat	  Y' : Fin n.+1 -> Type	  X0 : forall x : Fin n.+1, Finite (Y' x)	  IH : forall Y' : Fin n -> Type,	       (forall x : Fin n, Finite (Y' x)) -> Finite {x : _ & Y' x}	  ============================	  Finite {b : Unit & Y' (inr b)}	";
+            data = "1 subgoal (ID 2067)	  	  X : Type	  Y : X -> Type	  H : Finite X	  H0 : forall x : X, Finite (Y x)	  n : nat	  Y' : Fin n.+1 -> Type	  X0 : forall x : Fin n.+1, Finite (Y' x)	  IH : forall Y' : Fin n -> Type,	       (forall x : Fin n, Finite (Y' x)) -> Finite {x : _ & Y' x}	  ============================	  Finite {b : Unit & Y' (inr b)}	No more subgoals.	";
             responses[i]=data;
           
 
             i = 786;
-            data = "No more subgoals.	<infomsg>finite_sigma is defined</infomsg>	";
+            data = "<infomsg>finite_sigma is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -5198,12 +5198,12 @@
           
 
             i = 1036;
-            data = "1 subgoal (ID 3909)	  	  H : Funext	  X : Type	  Y : Type	  n : nat	  f : X -> Y	  X0 : MapIn (-1)%trunc f	  IHn : forall (m : nat) (g : Fin n -> Fin m), MapIn (-1)%trunc g -> n <= m	  m : nat	  g : Fin n.+1 -> Fin m.+1	  X1 : MapIn (-1)%trunc g	  i : isinj g	  h := _^-1 o g : Fin n.+1 -> Fin m.+1	  X2 : MapIn (-1)%trunc h	  a : Fin n	  b : Fin m	  p : g (inl a) = inl b	  ============================	  is_inl (h (inl a))	";
+            data = "1 subgoal (ID 3909)	  	  H : Funext	  X : Type	  Y : Type	  n : nat	  f : X -> Y	  X0 : MapIn (-1)%trunc f	  IHn : forall (m : nat) (g : Fin n -> Fin m), MapIn (-1)%trunc g -> n <= m	  m : nat	  g : Fin n.+1 -> Fin m.+1	  X1 : MapIn (-1)%trunc g	  i : isinj g	  h := _^-1 o g : Fin n.+1 -> Fin m.+1	  X2 : MapIn (-1)%trunc h	  a : Fin n	  b : Fin m	  p : g (inl a) = inl b	  ============================	  is_inl (h (inl a))	2 subgoals (ID 3920)	  	  H : Funext	  X : Type	  Y : Type	  n : nat	  f : X -> Y	  X0 : MapIn (-1)%trunc f	  IHn : forall (m : nat) (g : Fin n -> Fin m), MapIn (-1)%trunc g -> n <= m	  m : nat	  g : Fin n.+1 -> Fin m.+1	  X1 : MapIn (-1)%trunc g	  i : isinj g	  h := _^-1 o g : Fin n.+1 -> Fin m.+1	  X2 : MapIn (-1)%trunc h	  a : Fin n	  b : Fin m	  p : g (inl a) = inl b	  ============================	  g (inl a) <> g (inr tt)		subgoal 2 (ID 3922) is:	 is_inl (h (inl a))	";
             responses[i]=data;
           
 
             i = 1037;
-            data = "2 subgoals (ID 3920)	  	  H : Funext	  X : Type	  Y : Type	  n : nat	  f : X -> Y	  X0 : MapIn (-1)%trunc f	  IHn : forall (m : nat) (g : Fin n -> Fin m), MapIn (-1)%trunc g -> n <= m	  m : nat	  g : Fin n.+1 -> Fin m.+1	  X1 : MapIn (-1)%trunc g	  i : isinj g	  h := _^-1 o g : Fin n.+1 -> Fin m.+1	  X2 : MapIn (-1)%trunc h	  a : Fin n	  b : Fin m	  p : g (inl a) = inl b	  ============================	  g (inl a) <> g (inr tt)		subgoal 2 (ID 3922) is:	 is_inl (h (inl a))	1 subgoal (ID 3920)	  	  H : Funext	  X : Type	  Y : Type	  n : nat	  f : X -> Y	  X0 : MapIn (-1)%trunc f	  IHn : forall (m : nat) (g : Fin n -> Fin m), MapIn (-1)%trunc g -> n <= m	  m : nat	  g : Fin n.+1 -> Fin m.+1	  X1 : MapIn (-1)%trunc g	  i : isinj g	  h := _^-1 o g : Fin n.+1 -> Fin m.+1	  X2 : MapIn (-1)%trunc h	  a : Fin n	  b : Fin m	  p : g (inl a) = inl b	  ============================	  g (inl a) <> g (inr tt)	1 subgoal (ID 3924)	  	  H : Funext	  X : Type	  Y : Type	  n : nat	  f : X -> Y	  X0 : MapIn (-1)%trunc f	  IHn : forall (m : nat) (g : Fin n -> Fin m), MapIn (-1)%trunc g -> n <= m	  m : nat	  g : Fin n.+1 -> Fin m.+1	  X1 : MapIn (-1)%trunc g	  i : isinj g	  h := _^-1 o g : Fin n.+1 -> Fin m.+1	  X2 : MapIn (-1)%trunc h	  a : Fin n	  b : Fin m	  p : g (inl a) = inl b	  r : g (inl a) = g (inr tt)	  ============================	  Empty	";
+            data = "1 subgoal (ID 3920)	  	  H : Funext	  X : Type	  Y : Type	  n : nat	  f : X -> Y	  X0 : MapIn (-1)%trunc f	  IHn : forall (m : nat) (g : Fin n -> Fin m), MapIn (-1)%trunc g -> n <= m	  m : nat	  g : Fin n.+1 -> Fin m.+1	  X1 : MapIn (-1)%trunc g	  i : isinj g	  h := _^-1 o g : Fin n.+1 -> Fin m.+1	  X2 : MapIn (-1)%trunc h	  a : Fin n	  b : Fin m	  p : g (inl a) = inl b	  ============================	  g (inl a) <> g (inr tt)	1 subgoal (ID 3924)	  	  H : Funext	  X : Type	  Y : Type	  n : nat	  f : X -> Y	  X0 : MapIn (-1)%trunc f	  IHn : forall (m : nat) (g : Fin n -> Fin m), MapIn (-1)%trunc g -> n <= m	  m : nat	  g : Fin n.+1 -> Fin m.+1	  X1 : MapIn (-1)%trunc g	  i : isinj g	  h := _^-1 o g : Fin n.+1 -> Fin m.+1	  X2 : MapIn (-1)%trunc h	  a : Fin n	  b : Fin m	  p : g (inl a) = inl b	  r : g (inl a) = g (inr tt)	  ============================	  Empty	";
             responses[i]=data;
           
 
@@ -5288,12 +5288,12 @@
           
 
             i = 1054;
-            data = "1 subgoal (ID 4137)	  	  H : Funext	  X : Type	  Y : Type	  n : nat	  f : X -> Y	  X0 : MapIn (-1)%trunc f	  IHn : forall (m : nat) (g : Fin n -> Fin m), MapIn (-1)%trunc g -> n <= m	  m : nat	  g : Fin n.+1 -> Fin m.+1	  X1 : MapIn (-1)%trunc g	  i : isinj g	  h := _^-1 o g : Fin n.+1 -> Fin m.+1	  X2 : MapIn (-1)%trunc h	  Ha : forall a : Fin n, is_inl (h (inl a))	  ============================	  h (inr tt) = inr tt	1 subgoal (ID 4183)	  	  H : Funext	  X : Type	  Y : Type	  n : nat	  f : X -> Y	  X0 : MapIn (-1)%trunc f	  IHn : forall (m : nat) (g : Fin n -> Fin m), MapIn (-1)%trunc g -> n <= m	  m : nat	  g : Fin n.+1 -> Fin m.+1	  X1 : MapIn (-1)%trunc g	  i : isinj g	  h := _^-1 o g : Fin n.+1 -> Fin m.+1	  X2 : MapIn (-1)%trunc h	  Ha : forall a : Fin n, is_inl (h (inl a))	  ============================	  fin_transpose_last_with m (g (inr tt)) (inr tt) = g (inr tt)	";
+            data = "1 subgoal (ID 4137)	  	  H : Funext	  X : Type	  Y : Type	  n : nat	  f : X -> Y	  X0 : MapIn (-1)%trunc f	  IHn : forall (m : nat) (g : Fin n -> Fin m), MapIn (-1)%trunc g -> n <= m	  m : nat	  g : Fin n.+1 -> Fin m.+1	  X1 : MapIn (-1)%trunc g	  i : isinj g	  h := _^-1 o g : Fin n.+1 -> Fin m.+1	  X2 : MapIn (-1)%trunc h	  Ha : forall a : Fin n, is_inl (h (inl a))	  ============================	  h (inr tt) = inr tt	";
             responses[i]=data;
           
 
             i = 1055;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 subgoals (ID 4139)		subgoal 1 (ID 4139) is:	 is_inr (h (inr tt))	subgoal 2 (ID 4127) is:	 n.+1 <= m.+1	1 subgoal (ID 4139)	  	  H : Funext	  X : Type	  Y : Type	  n : nat	  f : X -> Y	  X0 : MapIn (-1)%trunc f	  IHn : forall (m : nat) (g : Fin n -> Fin m), MapIn (-1)%trunc g -> n <= m	  m : nat	  g : Fin n.+1 -> Fin m.+1	  X1 : MapIn (-1)%trunc g	  i : isinj g	  h := _^-1 o g : Fin n.+1 -> Fin m.+1	  X2 : MapIn (-1)%trunc h	  Ha : forall a : Fin n, is_inl (h (inl a))	  q : h (inr tt) = inr tt	  ============================	  is_inr (h (inr tt))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 4127)		subgoal 1 (ID 4127) is:	 n.+1 <= m.+1	1 subgoal (ID 4127)	  	  H : Funext	  X : Type	  Y : Type	  n : nat	  f : X -> Y	  X0 : MapIn (-1)%trunc f	  IHn : forall (m : nat) (g : Fin n -> Fin m), MapIn (-1)%trunc g -> n <= m	  m : nat	  g : Fin n.+1 -> Fin m.+1	  X1 : MapIn (-1)%trunc g	  i : isinj g	  h := _^-1 o g : Fin n.+1 -> Fin m.+1	  X2 : MapIn (-1)%trunc h	  Ha : forall a : Fin n, is_inl (h (inl a))	  Hb : forall b : Unit, is_inr (h (inr b))	  ============================	  n.+1 <= m.+1	No more subgoals.	";
+            data = "1 subgoal (ID 4183)	  	  H : Funext	  X : Type	  Y : Type	  n : nat	  f : X -> Y	  X0 : MapIn (-1)%trunc f	  IHn : forall (m : nat) (g : Fin n -> Fin m), MapIn (-1)%trunc g -> n <= m	  m : nat	  g : Fin n.+1 -> Fin m.+1	  X1 : MapIn (-1)%trunc g	  i : isinj g	  h := _^-1 o g : Fin n.+1 -> Fin m.+1	  X2 : MapIn (-1)%trunc h	  Ha : forall a : Fin n, is_inl (h (inl a))	  ============================	  fin_transpose_last_with m (g (inr tt)) (inr tt) = g (inr tt)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 subgoals (ID 4139)		subgoal 1 (ID 4139) is:	 is_inr (h (inr tt))	subgoal 2 (ID 4127) is:	 n.+1 <= m.+1	1 subgoal (ID 4139)	  	  H : Funext	  X : Type	  Y : Type	  n : nat	  f : X -> Y	  X0 : MapIn (-1)%trunc f	  IHn : forall (m : nat) (g : Fin n -> Fin m), MapIn (-1)%trunc g -> n <= m	  m : nat	  g : Fin n.+1 -> Fin m.+1	  X1 : MapIn (-1)%trunc g	  i : isinj g	  h := _^-1 o g : Fin n.+1 -> Fin m.+1	  X2 : MapIn (-1)%trunc h	  Ha : forall a : Fin n, is_inl (h (inl a))	  q : h (inr tt) = inr tt	  ============================	  is_inr (h (inr tt))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 4127)		subgoal 1 (ID 4127) is:	 n.+1 <= m.+1	1 subgoal (ID 4127)	  	  H : Funext	  X : Type	  Y : Type	  n : nat	  f : X -> Y	  X0 : MapIn (-1)%trunc f	  IHn : forall (m : nat) (g : Fin n -> Fin m), MapIn (-1)%trunc g -> n <= m	  m : nat	  g : Fin n.+1 -> Fin m.+1	  X1 : MapIn (-1)%trunc g	  i : isinj g	  h := _^-1 o g : Fin n.+1 -> Fin m.+1	  X2 : MapIn (-1)%trunc h	  Ha : forall a : Fin n, is_inl (h (inl a))	  Hb : forall b : Unit, is_inr (h (inr b))	  ============================	  n.+1 <= m.+1	No more subgoals.	";
             responses[i]=data;
           
 
@@ -5578,12 +5578,12 @@
           
 
             i = 1112;
-            data = "1 subgoal (ID 2310)	  	  H : Funext	  X : Type	  H0 : Finite X	  e : nat -> X	  er := fun (n : nat) (k : Fin n) => e (nat_fin n k)	   : forall n : nat, Fin n -> X	  n : nat	  IH : IsEmbedding (er n)	  ============================	  IsEmbedding (er n.+1) + {n0 : nat & {k : nat & e n0 = e (n0 + k).+1}}	2 subgoals (ID 2341)	  	  H : Funext	  X : Type	  H0 : Finite X	  e : nat -> X	  er := fun (n : nat) (k : Fin n) => e (nat_fin n k)	   : forall n : nat, Fin n -> X	  n : nat	  IH : IsEmbedding (er n)	  k : Fin n	  p : er n k = er n.+1 (inr tt)	  ============================	  IsEmbedding (er n.+1) + {n0 : nat & {k0 : nat & e n0 = e (n0 + k0).+1}}		subgoal 2 (ID 2342) is:	 IsEmbedding (er n.+1) + {n0 : nat & {k : nat & e n0 = e (n0 + k).+1}}	";
+            data = "1 subgoal (ID 2310)	  	  H : Funext	  X : Type	  H0 : Finite X	  e : nat -> X	  er := fun (n : nat) (k : Fin n) => e (nat_fin n k)	   : forall n : nat, Fin n -> X	  n : nat	  IH : IsEmbedding (er n)	  ============================	  IsEmbedding (er n.+1) + {n0 : nat & {k : nat & e n0 = e (n0 + k).+1}}	";
             responses[i]=data;
           
 
             i = 1113;
-            data = "1 subgoal (ID 2341)	  	  H : Funext	  X : Type	  H0 : Finite X	  e : nat -> X	  er := fun (n : nat) (k : Fin n) => e (nat_fin n k)	   : forall n : nat, Fin n -> X	  n : nat	  IH : IsEmbedding (er n)	  k : Fin n	  p : er n k = er n.+1 (inr tt)	  ============================	  IsEmbedding (er n.+1) + {n0 : nat & {k0 : nat & e n0 = e (n0 + k0).+1}}	1 subgoal (ID 2344)	  	  H : Funext	  X : Type	  H0 : Finite X	  e : nat -> X	  er := fun (n : nat) (k : Fin n) => e (nat_fin n k)	   : forall n : nat, Fin n -> X	  n : nat	  IH : IsEmbedding (er n)	  k : Fin n	  p : er n k = er n.+1 (inr tt)	  ============================	  {n0 : nat & {k0 : nat & e n0 = e (n0 + k0).+1}}	";
+            data = "2 subgoals (ID 2341)	  	  H : Funext	  X : Type	  H0 : Finite X	  e : nat -> X	  er := fun (n : nat) (k : Fin n) => e (nat_fin n k)	   : forall n : nat, Fin n -> X	  n : nat	  IH : IsEmbedding (er n)	  k : Fin n	  p : er n k = er n.+1 (inr tt)	  ============================	  IsEmbedding (er n.+1) + {n0 : nat & {k0 : nat & e n0 = e (n0 + k0).+1}}		subgoal 2 (ID 2342) is:	 IsEmbedding (er n.+1) + {n0 : nat & {k : nat & e n0 = e (n0 + k).+1}}	1 subgoal (ID 2341)	  	  H : Funext	  X : Type	  H0 : Finite X	  e : nat -> X	  er := fun (n : nat) (k : Fin n) => e (nat_fin n k)	   : forall n : nat, Fin n -> X	  n : nat	  IH : IsEmbedding (er n)	  k : Fin n	  p : er n k = er n.+1 (inr tt)	  ============================	  IsEmbedding (er n.+1) + {n0 : nat & {k0 : nat & e n0 = e (n0 + k0).+1}}	1 subgoal (ID 2344)	  	  H : Funext	  X : Type	  H0 : Finite X	  e : nat -> X	  er := fun (n : nat) (k : Fin n) => e (nat_fin n k)	   : forall n : nat, Fin n -> X	  n : nat	  IH : IsEmbedding (er n)	  k : Fin n	  p : er n k = er n.+1 (inr tt)	  ============================	  {n0 : nat & {k0 : nat & e n0 = e (n0 + k0).+1}}	";
             responses[i]=data;
           
 
@@ -5728,12 +5728,12 @@
           
 
             i = 1142;
-            data = "1 subgoal (ID 2311)	  	  H : Funext	  X : Type	  H0 : Finite X	  e : nat -> X	  er := fun (n : nat) (k : Fin n) => e (nat_fin n k)	   : forall n : nat, Fin n -> X	  p : IsEmbedding (er (fcard _).+1)	  ============================	  {n : nat & {k : nat & e n = e (n + k).+1}}	1 subgoal (ID 2326)	  	  H : Funext	  X : Type	  H0 : Finite X	  e : nat -> X	  er := fun (n : nat) (k : Fin n) => e (nat_fin n k)	   : forall n : nat, Fin n -> X	  p : IsEmbedding (er (fcard _).+1)	  q : (fcard _).+1 <= fcard _	  ============================	  {n : nat & {k : nat & e n = e (n + k).+1}}	";
+            data = "1 subgoal (ID 2311)	  	  H : Funext	  X : Type	  H0 : Finite X	  e : nat -> X	  er := fun (n : nat) (k : Fin n) => e (nat_fin n k)	   : forall n : nat, Fin n -> X	  p : IsEmbedding (er (fcard _).+1)	  ============================	  {n : nat & {k : nat & e n = e (n + k).+1}}	";
             responses[i]=data;
           
 
             i = 1143;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 2312)		subgoal 1 (ID 2312) is:	 {n : nat & {k : nat & e n = e (n + k).+1}}	";
+            data = "1 subgoal (ID 2326)	  	  H : Funext	  X : Type	  H0 : Finite X	  e : nat -> X	  er := fun (n : nat) (k : Fin n) => e (nat_fin n k)	   : forall n : nat, Fin n -> X	  p : IsEmbedding (er (fcard _).+1)	  q : (fcard _).+1 <= fcard _	  ============================	  {n : nat & {k : nat & e n = e (n + k).+1}}	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 2312)		subgoal 1 (ID 2312) is:	 {n : nat & {k : nat & e n = e (n + k).+1}}	";
             responses[i]=data;
           
 
